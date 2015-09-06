@@ -1,0 +1,21 @@
+$theme-blue: (
+  darker:  #002e55,
+  dark:    #003e74,
+  primary: #004e8f,
+  light:   #005dab,
+  lighter: #0072cf,
+  pale:    #68ace5,
+  paler:   #d2e4f3,
+);
+
+$theme-turqouise: (
+  darker:  #003a41,
+  dark:    #106470,
+  primary: #0c5963,
+  light:   #1e7680,
+  lighter: #28828a,
+  pale:    #91b9a4,
+  paler:   #d2f3e1,
+);
+
+$theme: $theme-turqouise;

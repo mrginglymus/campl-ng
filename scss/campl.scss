@@ -6,6 +6,7 @@
 
  // Core variables and mixins
 @import "variables";
+@import "themes";
 @import "../lib/bootstrap/scss/mixins";
 
 // // Reset and dependencies
@@ -57,4 +58,7 @@
 @import "../lib/font-awesome/scss/font-awesome";
 
 // CamPL-ng components
-@import "global_header"
+@import "global_header";
+@import "page_header";
+@import "subtitle";
+@import "horizontal_breadcrumb";

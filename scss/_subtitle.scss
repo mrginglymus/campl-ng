@@ -1,0 +1,7 @@
+.page-header .subtitle {
+  background-color: map-get($theme, light);
+  
+  &> div > div {
+    padding: 20px;
+  }
+}

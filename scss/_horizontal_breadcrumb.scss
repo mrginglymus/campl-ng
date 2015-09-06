@@ -1,0 +1,30 @@
+.tertiary-navigation {
+  border-left: 1px solid #e4e4e4;
+  border-right: 1px solid #e4e4e4;
+  padding-left:0px;
+  padding-right:0px;
+  margin-top: -50px;
+  padding-bottom: 50px;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAM0lEQVQYV2NkQAM3P3/7r87LxYgsDBLDEMCmCCQGV4jLJJhGsEJCikBqGIlRBFY4nDwDAIeHT431w+WIAAAAAElFTkSuQmCC);
+
+  .nav-pills .nav-item {
+    background-color: #fafafa;
+    border-bottom: 1px solid #e4e4e4;
+    margin-top: 0px !important;
+    @include hover-focus {
+      background-color: #efefef;
+    }
+    
+    .nav-link {
+      color: #999999;
+      
+      &:after {
+        @include fa-icon();
+        content: $fa-var-angle-up;
+        float:right;
+        font-size: 1.5em;
+      }
+    }
+  }
+
+}

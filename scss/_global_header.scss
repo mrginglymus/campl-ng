@@ -44,6 +44,12 @@
       @include hover-focus {
         color: #5a5a5a;
       }
+      
+      &[aria-expanded="true"] {
+        background-color: #171717;
+        margin-bottom: -1px;
+        padding-bottom: 26px;
+      }
     }
 
     .open > .nav-link,
@@ -63,7 +69,7 @@
 
 .global-header-drawer {
   background-color: #171717;
-  color: #cecece;
+  color: #ffffff;
   border-top: 1px solid #3f3f3f;
   font-size: 0.85rem;
   .container {
@@ -72,37 +78,57 @@
   
   .row {
     
+    [class*='col-'] {
+      padding-right: 0;
+      padding-left: 0;
+    }
+    
     & div {
       border-left: 1px solid #323232;
     }
   
     &:first-child {
       border-bottom: 1px solid #323232;
+      &> div > .list-unstyled {
+        padding: 10px 20px 20px 20px;
+      }
+      
     }
   }
   
   .global-header-close {
     background-color: #000000;
+    padding: 20px 0px 7px 12px !important;
+    span:after {
+      content: "×";
+      font-family: $font-family-monospace;
+    }
+    a {
+      color: #ffffff;
+    }
   }
   
   
   
   div > .list-unstyled {
-    padding: 20px;
-    &> li > a {
-      font-weight: 600;
+    padding: 0px 20px 20px 20px;
+    &> li {
+      padding-top:10px;
+      &> a {
+        font-weight: 600;
+      }
     }
     
     li:before {
       @include fa-icon();
-      content: $fa-var-chevron-right;
+      content: $fa-var-angle-right;
     }
   }
   
   .list-unstyled {
     margin: 0;
-    a {
-      color: #cecece;
+    li, li a {
+      color: #ffffff;
     }
     
     .list-unstyled {
@@ -110,6 +136,13 @@
       li {
         padding: 8px 0px;
       }
+    }
+  }
+  
+  .list-separated li {
+    padding: 15px 0px;
+    &:not(:last-child) {
+      border-bottom:1px solid #323232;
     }
   }
 }

@@ -1,0 +1,56 @@
+.page-header {
+  background-color: map-get($theme, dark);
+  
+  .breadcrumb {
+  
+    font-size: 12px;
+  
+    a {
+      color: #ffffff;
+      @include hover-focus {
+        text-decoration: none;
+      }
+      .fa-home {
+        color: map-get($theme, lighter);
+      }
+    }
+  }
+  
+  .navbar-local {
+    background-color: map-get($theme, primary);
+    
+    padding: 0;
+    
+    .nav-item {
+      @include hover-focus {
+        background-color: map-get($theme, darker);
+      }
+      margin-left: 0;
+      background-color: map-get($theme, lighter);
+      &.active {
+        background-color: map-get($theme, primary);
+      }
+    }
+    
+    .nav-link {
+      color: #ffffff;
+      padding: 10px 20px;
+    }
+    
+    .dropdown-menu {
+      background-color: map-get($theme, darker);
+      margin-top: -1px;
+      padding: 0px;
+      
+      a {
+        border-top: 1px solid map-get($theme, dark);
+        padding: 10px;
+        @include hover-focus {
+          background-color: map-get($theme, primary);
+        }
+        color: #ffffff;
+      }
+    }
+  }
+  
+}
