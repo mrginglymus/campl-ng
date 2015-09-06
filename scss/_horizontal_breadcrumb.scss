@@ -26,5 +26,27 @@
       }
     }
   }
+  
+  &> .list-unstyled {
+    border-bottom: 1px solid #e4e4e4;
+    background-color: #ffffff;
+    padding: 5px 20px;
+    &> li > a {
+      color: #171717;
+      font-weight:bold;
+    }
+    li {
+      padding: 10px 0px;
+    }
+    .list-unstyled li {
+      a {
+        padding-left: 15px;
+      }
+      &:before {
+        @include fa-icon();
+        content: $fa-var-angle-right;
+      }
+    }
+  }
 
 }

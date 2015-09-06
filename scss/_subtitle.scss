@@ -4,4 +4,8 @@
   &> div > div {
     padding: 20px;
   }
+  z-index:0;
+  position:relative;
+  margin-bottom:-50px;
+  overflow:auto;
 }
