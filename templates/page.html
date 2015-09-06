@@ -25,17 +25,17 @@
 	<a class="sr-only" href="http://www.websupport.cam.ac.uk/Project-Light/template-variants/sub-section-with-left-navigation.html#primary-nav">skip to primary navigation</a>
 	<a class="sr-only" href="http://www.websupport.cam.ac.uk/Project-Light/template-variants/sub-section-with-left-navigation.html#content">skip to content</a>
 
-    <nav class="navbar navbar-dark">
+    <nav class="navbar navbar-global-header">
       <div class="container">
         <a href="http://www.cam.ac.uk/" class="navbar-brand">
           <img alt="University of Cambridge" src="./page_files/main-logo-small.png">
         </a>
         <ul class="nav navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="#campl-study" data-toggle="collapse" data-target="#campl-study">Study at Cambridge</a>
+            <a class="nav-link collapsed" href="#campl-study" data-toggle="collapse" data-target="#campl-study">Study at Cambridge</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#campl-about" data-toggle="collapse" data-target="#campl-about">About the University</a>
+            <a class="nav-link collapsed" href="#campl-about" data-toggle="collapse" data-target="#campl-about">About the University</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="http://www.cam.ac.uk/research">Research at Cambridge</a>
@@ -44,37 +44,43 @@
       </div>
     </nav>
     <!-- Begin campl-study drawer -->
-    <div class="collapse" id="campl-study">
+    <div class="collapse global-header-drawer" id="campl-study">
       <div class="container">
         <div class="row">
           <div class="col-md-10">
-            <a href="">Study at Cambridge</a>
+            <ul class="list-unstyled">
+              <li>
+                <a href="">Study at Cambridge</a>
+              </li>
+            </ul>
           </div>
-          <div class="col-md-2">
+          <div class="col-md-2 global-header-close">
             <a href="#campl-study" data-toggle="collapse" data-target="#campl-study">Close</a>
           </div>
         </div>
         <div class="row">
           <!-- Begin Undergraduate Drawer -->
           <div class="col-md-4">
-            <ul>
+            <ul class="list-unstyled">
               <li>
                 <a href="">Undergraduate</a>
-              </li>
-              <li>
-                <a href="">Courses</a>
-              </li>
-              <li>
-                <a href="">Applying</a>
-              </li>
-              <li>
-                <a href="">Events and open days</a>
-              </li>
-              <li>
-                <a href="">Fees and finance</a>
-              </li>
-              <li>
-                <a href="">Student blogs and videos</a>
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="">Courses</a>
+                  </li>
+                  <li>
+                    <a href="">Applying</a>
+                  </li>
+                  <li>
+                    <a href="">Events and open days</a>
+                  </li>
+                  <li>
+                    <a href="">Fees and finance</a>
+                  </li>
+                  <li>
+                    <a href="">Student blogs and videos</a>
+                  </li>
+                </ul>
               </li>
             </ul>
           </div>
@@ -82,24 +88,26 @@
         
           <!-- Begin Graduate Drawer -->
           <div class="col-md-4">
-            <ul>
+            <ul class="list-unstyled">
               <li>
                 <a href="">Graduate</a>
-              </li>
-              <li>
-                <a href="">Why Cambridge</a>
-              </li>
-              <li>
-                <a href="">Course Directory</a>
-              </li>
-              <li>
-                <a href="">How to apply</a>
-              </li>
-              <li>
-                <a href="">Fees and funding</a>
-              </li>
-              <li>
-                <a href="">Frequently asked questions</a>
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="">Why Cambridge</a>
+                  </li>
+                  <li>
+                    <a href="">Course Directory</a>
+                  </li>
+                  <li>
+                    <a href="">How to apply</a>
+                  </li>
+                  <li>
+                    <a href="">Fees and funding</a>
+                  </li>
+                  <li>
+                    <a href="">Frequently asked questions</a>
+                  </li>
+                </ul>
               </li>
             </ul>
           </div>
