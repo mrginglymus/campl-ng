@@ -1,7 +1,6 @@
-
-.local-footer {
-  background-color: map-get($theme, dark);
-  
+.global-footer {
+  background-color: #171717;
+  color: #ffffff;
   padding: 20px 0;
   
   [class*='col-']:not(:last-of-type) {
@@ -13,17 +12,9 @@
   }
   
   a {
+    color: #ffffff;
     @include hover-focus {
       text-decoration: none;
     }
   }
-  
-  h3 a {
-    color: #91b9a4;
-  }
-  
-  li a {
-    color: #ffffff;
-  }
-  
 }
