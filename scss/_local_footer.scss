@@ -1,0 +1,9 @@
+
+.local-footer {
+  background-color: map-get($theme, dark);
+  
+  [class*='col-']:not(:last-of-type) {
+    border-right: 1px solid white;
+  }
+  
+}
