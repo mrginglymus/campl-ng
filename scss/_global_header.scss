@@ -92,6 +92,11 @@
     &> li > a {
       font-weight: 600;
     }
+    
+    li:before {
+      @include fa-icon();
+      content: $fa-var-chevron-right;
+    }
   }
   
   .list-unstyled {
