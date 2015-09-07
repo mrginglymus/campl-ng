@@ -1,10 +1,15 @@
 .page-header {
   background-color: map-get($theme, dark);
   
+  p.title {
+    font-size: 40px;
+    color: #ffffff;
+    font-weight: 100;
+  }
+  
   .breadcrumb {
   
-    font-size: 12px;
-  
+    padding: 0;
     a {
       color: #ffffff;
       @include hover-focus {
