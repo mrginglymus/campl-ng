@@ -18,12 +18,19 @@
     }
   }
   
-  h3 a {
-    color: #91b9a4;
+  h3 {
+    padding-bottom: 10px;
+    a {
+      font-size: 1.16rem;
+      color: #91b9a4;
+    }
   }
   
-  li a {
-    color: #ffffff;
+  li {
+    padding-bottom: 5px;
+    a {
+      color: #ffffff;
+    }
   }
   
 }

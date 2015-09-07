@@ -11,6 +11,10 @@
     background-repeat-x: no-repeat;
   }
   
+  h3 {
+    font-size: 1.16rem;
+  }
+  
   a {
     color: #ffffff;
     @include hover-focus {
