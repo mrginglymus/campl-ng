@@ -1,2 +1,4 @@
 .sass-cache
 .ruby-version
+local_settings.py
+*.pyc

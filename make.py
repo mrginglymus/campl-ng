@@ -3,8 +3,8 @@
 import os
 import shutil
 
-RELEASE_DIR = '/var/www/html/demo/campl-ng'
-RELEASE_URL = '/demo/campl-ng'
+from local_settings import RELEASE_DIR, RELEASE_URL
+
 
 def make_css():
 
@@ -23,11 +23,11 @@ def make_html():
   import codecs
 
   menu = [
-    ('About', 'demo.html'),
-    ('Page Layouts', (
-      ('Subsection with navigation', 'layouts/subnav.html'),
-      ('Subsection without navigation', 'layouts/subnonav.html'),
-      ('Subsection without right column', 'layouts/subnocol.html'),
+    ('About', 'demo.html', None),
+    ('Page Layouts', 'layouts/overview.html', (
+      ('Subsection with navigation', 'layouts/subnav.html', None),
+      ('Subsection without navigation', 'layouts/subnonav.html', None),
+      ('Subsection without right column', 'layouts/subnocol.html', None),
     )),
   ]
   
@@ -37,21 +37,29 @@ def make_html():
   }
 
   env = Environment(loader=FileSystemLoader('templates'))
-
-  def render_node(title, node):
-    if not isinstance(node, str):
-      for t, n in node:
-        render_node(t, n)
-    else:
-      template = env.get_template(node)
-      dest = os.path.join('dist', node)
-      if not os.path.exists(os.path.dirname(dest)):
-        os.makedirs(os.path.dirname(dest))
-      with codecs.open(dest, 'wb', 'utf-8') as fh:
-        fh.write(template.render(**base_context))
   
-  for title, node in menu:
-    render_node(title, node)
+  def render_node(title, page, node, breadcrumb):
+    breadcrumb.append((title, page))
+    template = env.get_template(page)
+    context = base_context
+    context['breadcrumb'] = breadcrumb
+    context['title'] = title
+    dest = os.path.join('dist', page)
+    if not os.path.exists(os.path.dirname(dest)):
+      os.makedirs(os.path.dirname(dest))
+    with codecs.open(dest, 'wb', 'utf-8') as fh:
+      fh.write(template.render(**base_context))
+    if node:
+      for t, n, p in node:
+        render_node(t, n, p, breadcrumb)
+    breadcrumb.pop()
+  
+  
+  
+  
+  for title, page, node in menu:
+    breadcrumb = []
+    render_node(title, page, node, breadcrumb)
 
 
 def deploy():
@@ -67,7 +75,7 @@ parser.add_argument('mode', nargs='*', default=['all'])
 
 args = parser.parse_args()
 
-if 'all' in args:
+if 'all' in args.mode:
   make_js()
   make_css()
   make_html()
@@ -75,12 +83,15 @@ if 'all' in args:
   
 if 'html' in args.mode:
   make_html()
+  deploy()
 
 if 'css' in args.mode:
   make_css()
+  deploy()
 
 if 'js' in args.mode:
   make_js()
+  deploy()
   
 if 'deploy' in args.mode:
   deploy()
