@@ -2,3 +2,4 @@
 .ruby-version
 local_settings.py
 *.pyc
+gh-pages/
