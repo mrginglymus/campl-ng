@@ -14,6 +14,23 @@ def make_html():
 
   import codecs
 
+  menu = [
+    ('About Us', 'demo.html'),
+    ('Prospective Students', (
+      ('Step 1 - Why Cambridge', 'demo.html'),
+      ('Step 2 - Studying at Cambridge', 'demo.html'),
+      ('Step 3 - How to apply', 'demo.html'),
+      ('Step 4 - I\'ve applied - What Next?', 'demo.html'),
+      ('Frequently Asked Questions', 'demo.html'),
+      ('Site Map', 'demo.html'),
+    )),
+  ]
+  
+  
+  base_context = {
+    'menu': menu,
+  }
+
   env = Environment(loader=FileSystemLoader('templates'))
 
   template = env.get_template('demo.html')
@@ -21,7 +38,7 @@ def make_html():
   build_file = os.path.join('dist', 'demo.html')
 
   with codecs.open(build_file, 'wb', 'utf-8') as fh:
-    fh.write(template.render(**{}))
+    fh.write(template.render(**base_context))
 
 import argparse
 
