@@ -36,6 +36,9 @@ def make_html():
       ('Forms', 'core_elements/forms.html', None),
       ('Lists', 'core_elements/lists.html', None),
     )),
+    ('In Page Components', None, (
+      ('Tables', 'components/inpage/tables.html', None),
+    )),
   ]
   
   base_context = {

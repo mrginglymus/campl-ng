@@ -58,3 +58,11 @@ h2 {
   line-height:1rem;
   verticle-align:middle;
 }
+
+.secondary-cta:after {
+  @include fa-icon();
+  content: $fa-var-angle-right;
+  font-size:1.5rem;
+  line-height:1rem;
+  padding-left:0.5rem;
+}

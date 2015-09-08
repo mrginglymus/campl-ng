@@ -1,0 +1,17 @@
+.vertical-teaser {
+  background: #fff;
+  .vertical-teaser-heading {
+    padding: 20px;
+    a {
+      color: #171717;
+      font-weight: 700;
+      font-size: 1.417rem;
+    }
+  }
+  .vertical-teaser-image img {
+    width: 100%;
+  }
+  .vertical-teaser-text {
+    padding: 15px;
+  }
+}

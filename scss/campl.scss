@@ -5,8 +5,8 @@
  */
 
  // Core variables and mixins
-@import "variables";
 @import "themes";
+@import "variables";
 @import "../lib/bootstrap/scss/mixins";
 
 // // Reset and dependencies
@@ -67,3 +67,6 @@
 @import "sidebar";
 @import "local_footer";
 @import "global_footer";
+@import "lists";
+@import "teasers";
+@import "tables";

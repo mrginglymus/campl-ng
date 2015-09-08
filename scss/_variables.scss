@@ -204,11 +204,11 @@ $table-cell-padding:            .75rem !default;
 $table-sm-cell-padding:         .3rem !default;
 
 $table-bg:                      transparent !default;
-$table-bg-accent:               #f9f9f9 !default;
-$table-bg-hover:                #f5f5f5 !default;
+$table-bg-accent:               map-get($theme, paler) !default;
+$table-bg-hover:                #e4e4e4 !default;
 $table-bg-active:               $table-bg-hover !default;
 
-$table-border-color:            $gray-lighter !default;
+$table-border-color:            #e4e4e4 !default;
 
 
 // Buttons
