@@ -6673,6 +6673,8 @@ a.bg-danger:focus, a.bg-danger:hover {
     font-size: 1.16rem; }
     .tertiary-navigation > .list-unstyled > li > a {
       font-weight: bold; }
+    .tertiary-navigation > .list-unstyled > li > span {
+      font-weight: bold; }
     .tertiary-navigation > .list-unstyled > li:first-child > a {
       color: #171717; }
     .tertiary-navigation > .list-unstyled > li:not(:first-child) {

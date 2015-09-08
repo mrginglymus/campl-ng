@@ -41,7 +41,9 @@
             {{ title }}
           </a>
           <div class="dropdown-menu">
+            {% if page %}
             <a href="{{ ROOT_URL }}/{{ page }}" class="dropdown-item">{{ title }} - Overview</a>
+            {% endif %}
             {% for title, page, node in node %}
               <a href="{{ ROOT_URL }}/{{ page }}" class="dropdown-item">{{ title }}</a>
             {% endfor %}

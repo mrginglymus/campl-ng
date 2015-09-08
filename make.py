@@ -30,6 +30,11 @@ def make_html():
       ('Subsection without navigation', 'layouts/subnonav.html', None),
       ('Subsection without right column', 'layouts/subnocol.html', None),
     )),
+    ('Core Elements', None, (
+      ('Typography', 'core_elements/typography.html', None),
+      ('Links & Buttons', 'core_elements/links_and_buttons.html', None),
+      ('Forms', 'core_elements/forms.html', None),
+    )),
   ]
   
   base_context = {
@@ -42,15 +47,16 @@ def make_html():
   
   def render_node(title, page, node, breadcrumb):
     breadcrumb.append((title, page, node))
-    template = env.get_template(page)
-    context = base_context
-    context['breadcrumb'] = breadcrumb
-    context['title'] = title
-    dest = os.path.join('dist', page)
-    if not os.path.exists(os.path.dirname(dest)):
-      os.makedirs(os.path.dirname(dest))
-    with codecs.open(dest, 'wb', 'utf-8') as fh:
-      fh.write(template.render(**base_context))
+    if page:
+      template = env.get_template(page)
+      context = base_context
+      context['breadcrumb'] = breadcrumb
+      context['title'] = title
+      dest = os.path.join('dist', page)
+      if not os.path.exists(os.path.dirname(dest)):
+        os.makedirs(os.path.dirname(dest))
+      with codecs.open(dest, 'wb', 'utf-8') as fh:
+        fh.write(template.render(**base_context))
     if node:
       for t, n, p in node:
         render_node(t, n, p, breadcrumb)

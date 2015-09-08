@@ -1,0 +1,38 @@
+{% extends 'layouts/subnav.html' %}
+
+{% block content %}
+<h2>Inline links</h2>
+<p><a href="">consectetur adipisicing elit</a></p>
+  
+<h3>Links with icons</h3>
+<p><a href="" class="campl-icon-link"><span class="campl-icon campl-print-icon"></span>Print icon</a></p>
+<p><a href="" class="campl-icon-link"><span class="campl-icon campl-lock-icon"></span>Locked document icon</a></p>
+<p><a href="" class="campl-icon-link"><span class="campl-icon campl-help-icon"></span>Help icon</a></p>
+<p><a href="" class="campl-icon-link"><span class="campl-icon campl-info-icon"></span>Information icon</a></p>
+<p><a href="" class="campl-icon-link"><span class="campl-icon campl-excel-icon"></span>Excel icon</a></p>
+<p><a href="" class="campl-icon-link"><span class="campl-icon campl-pdf-icon"></span>PDF icon</a></p>
+<p><a href="" class="campl-icon-link"><span class="campl-icon campl-word-icon"></span>Word Document icon</a></p>
+
+<p>External link</p>
+<p><a href="http://www.google.com">Lorem ipsum dolor sit amet</a></p>
+
+<h3>Links within body text</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, <a href=""><span class="campl-icon campl-excel-icon"></span>Ut enim ad minim veniam sed do eiusmod</a> tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <a href="http://www.google.com">Lorem ipsum dolor sit amet</a> ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis <a href="">consectetur adipisicing elit</a> in voluptate velit esse.</p>
+
+
+<h2>Primary call to action</h2>
+<p><a href="#" class="campl-primary-cta">Read more</a></p>
+
+<p><a href="" class="campl-btn-download-vcard campl-primary-cta" ><span class="campl-download-arrow">Download vCard</span></a>
+
+<h2>Secondary call to action</h2>
+<p><a href="" class="campl-secondary-cta">View all news</a></p>
+
+<h2>Primary and secondary form buttons</h2>
+<div class="campl-form-actions">
+  <button type="button" class="btn">Button</button>
+  <button type="reset" class="btn">Reset</button>
+  <button class="btn">Cancel</button>
+  <button type="submit" class="btn btn-primary-cta">Submit</button>
+</div>
+{% endblock %}

@@ -40,6 +40,9 @@
     &> li > a {
       font-weight:bold;
     }
+    &> li > span {
+      font-weight:bold;
+    }
     &> li:first-child > a {
       color: #171717;
     }

@@ -248,7 +248,13 @@
         
           
           <li class="active">
-            Page Layouts
+            Core Elements
+          </li>
+          
+        
+          
+          <li class="active">
+            Forms
           </li>
           
         
@@ -272,7 +278,7 @@
         
       
         
-        <li class="nav-item active dropdown">
+        <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
             Page Layouts
           </a>
@@ -292,7 +298,7 @@
         
       
         
-        <li class="nav-item dropdown">
+        <li class="nav-item active dropdown">
           <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
             Core Elements
           </a>
@@ -321,7 +327,7 @@
     <div class="col-md-9 col-md-offset-3">
     
       <div>
-        <h1>Page Layouts</h1>
+        <h1>Forms</h1>
       </div>
     </div>
   </div>
@@ -349,6 +355,8 @@
     
       
     
+      
+    
   </ul>
   
   
@@ -356,7 +364,7 @@
     
     <li>
       
-      <a href="/demo/campl-ng/layouts/overview.html">Page Layouts</a>
+      <span>Core Elements</span>
       
       
         <ul class="list-unstyled">
@@ -364,7 +372,7 @@
           
           <li>
             
-            <a href="/demo/campl-ng/layouts/subnav.html">Subsection with navigation</a>
+            <a href="/demo/campl-ng/core_elements/typography.html">Typography</a>
             
           </li>
           
@@ -372,17 +380,13 @@
           
           <li>
             
-            <a href="/demo/campl-ng/layouts/subnonav.html">Subsection without navigation</a>
+            <a href="/demo/campl-ng/core_elements/links_and_buttons.html">Links & Buttons</a>
             
           </li>
           
         
           
-          <li>
-            
-            <a href="/demo/campl-ng/layouts/subnocol.html">Subsection without right column</a>
-            
-          </li>
+          <li><span>Forms</span></li>
           
         
         </ul>
@@ -396,11 +400,11 @@
     
     
     
-    
-    
     <li>
-      <a href="/demo/campl-ng/None">Core Elements</a>
+      <a href="/demo/campl-ng/layouts/overview.html">Page Layouts</a>
     </li>
+    
+    
     
     
   </ul>
@@ -409,8 +413,270 @@
         <div class="col-md-6 main-content">
           <div class="content-padding">
             
-  <h2>Hello</h2>
-  <p>There are three key page layouts...</p>
+
+<form action="">
+<fieldset>
+  <legend>Standard form elements</legend>
+  <div class="campl-control-group">
+      <label for="input">Input</label>
+      <div class="campl-controls">
+          <input id="input" type="text" value="Basic input" />
+      </div>
+    </div>
+
+  <div class="campl-control-group">
+      <label for="textarea">Textarea</label>
+      <div class="campl-controls">
+          <textarea rows="3" id="textarea" cols=""></textarea>
+      </div>
+    </div>
+
+  <div class="campl-control-group">
+      <label for="select">Select</label>
+      <div class="campl-controls">
+          <select id="select">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="campl-control-group">
+      <label class="control-label" for="optionsCheckboxList">Checkboxes</label>
+      <div class="campl-controls">
+        <label class="campl-checkbox">
+          <input type="checkbox" name="optionsCheckboxList1" value="option1" />
+          Option one 
+        </label>
+        <label class="campl-checkbox">
+          <input type="checkbox" name="optionsCheckboxList2" value="option2" />
+          Option two 
+        </label>
+        <label class="campl-checkbox">
+          <input type="checkbox" name="optionsCheckboxList3" value="option3" />
+          Option three 
+        </label>
+        </div>
+    </div>
+  
+    <div class="campl-control-group">
+        <label class="control-label" for="inlineCheckboxes">Inline checkboxes</label>
+        <div class="campl-controls">
+          <label class="campl-checkbox inline">
+            <input type="checkbox" id="inlineCheckbox1" value="option1" /> 1
+          </label>
+          <label class="campl-checkbox inline">
+            <input type="checkbox" id="inlineCheckbox2" value="option2" /> 2
+          </label>
+          <label class="campl-checkbox inline">
+            <input type="checkbox" id="inlineCheckbox3" value="option3" /> 3
+          </label>
+        </div>
+    </div>
+    
+    
+    <div class="campl-control-group">
+        <label class="control-label">Radio buttons</label>
+        <div class="campl-controls">
+          <label class="campl-radio">
+            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1"  />
+            Option one
+          </label>
+          <label class="campl-radio">
+            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" />
+            Option two 
+          </label>
+        </div>
+    </div>
+    <span class="campl-help-block">This is an example of guidance text to give supplementary information to the user about completion of the form.</span>
+    <div class="campl-form-actions">
+    <button type="button" class="campl-btn">Button</button>
+    <button type="reset" class="campl-btn">Reset</button>
+    <button class="campl-btn">Cancel</button>
+      <button type="submit" class="campl-btn campl-primary-cta">Submit</button>
+      
+    </div>
+
+  </fieldset>
+</form>
+
+<form action="">
+  <fieldset>
+    <legend>Form field variants</legend>
+    <div class="campl-control-group">
+        <label for="block-input">Block level input</label>
+        <div class="campl-controls">
+            <input id="block-input" type="text" value="Stretching to fill container" class="campl-input-block-level" />
+        </div>
+      </div>
+    <div class="campl-control-group">
+        <label for="campl-input-mini">Input mini</label>
+        <div class="campl-controls">
+            <input id="campl-input-mini" type="text" value="Mini" class="campl-input-mini" />
+        </div>
+      </div>
+    <div class="campl-control-group">
+        <label for="campl-input-small">Input small</label>
+        <div class="campl-controls">
+            <input id="campl-input-small" type="text" value="Small" class="campl-input-small" />
+        </div>
+      </div>
+    <div class="campl-control-group">
+        <label for="campl-input-medium">Input medium</label>
+        <div class="campl-controls">
+            <input id="campl-input-medium" type="text" value="Medium" class="campl-input-medium" />
+        </div>
+      </div>
+
+    <div class="campl-control-group">
+        <label for="campl-input-large">Input large</label>
+        <div class="campl-controls">
+            <input id="campl-input-large" type="text" value="Large" class="campl-input-large" />
+        </div>
+      </div>
+
+    <div class="campl-control-group">
+        <label for="campl-input-xlarge">Input extra large</label>
+        <div class="campl-controls">
+            <input id="campl-input-xlarge" type="text" value="X large" class="campl-input-xlarge" />
+        </div>
+      </div>
+
+  </fieldset>
+</form>
+
+  
+<form action="">
+  <fieldset>
+    <legend>Form field action states</legend>
+    
+    <div class="campl-control-group">
+        <label class="control-label" for="disabledInput">Disabled input</label>
+        <div class="campl-controls">
+            <input class=" disabled" id="disabledInput" type="text" placeholder="Disabled input here…" disabled="disabled" />
+        </div>
+      </div>
+  
+      <div class="campl-control-group">
+        <label class="control-label" for="optionsdisabledCheckbox2">Disabled checkbox</label>
+        <div class="campl-controls">
+          <label class="campl-checkbox">
+            <input type="checkbox" id="optionsdisabledCheckbox2" value="option1" disabled="disabled" />
+            This is a disabled checkbox
+          </label>
+        </div>
+      </div>
+    
+     <div class="campl-control-group">
+        <label class="control-label">Uneditable input</label>
+        <div class="campl-controls">
+          <span class="campl-uneditable-input">Some value here</span>
+        </div>
+      </div>
+    
+    <div class="campl-control-group">
+        <label for="Uneditabletextarea">Uneditable textarea</label>
+        <div class="campl-controls">
+          <textarea id="Uneditabletextarea"  disabled="disabled" class="campl-uneditable-textarea"  cols="" rows="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</textarea>
+        </div>
+      </div>
+  
+    <div class="campl-control-group">
+        <label for="Invalidinput">Invalid input</label>
+        <div class="campl-controls">
+            <input type="email" name="email" rel="required" id="Invalidinput" value="xyz"/>
+        </div>
+      </div>
+  
+    <div class="campl-control-group">
+        <label for="readinput">Read only input</label>
+        <div class="campl-controls">
+            <input type='text' id="readinput" value="xyz" readonly='readonly'/>
+        </div>
+      </div>
+
+    <div class="campl-form-actions">
+      <button type="button" class="campl-btn disabled" disabled="disabled">Disabled Button</button>
+    </div>
+
+  </fieldset>
+</form>
+<form action="">
+  <fieldset>
+    <legend>Form state Visual indicators</legend>
+    
+      <div class="campl-control-group campl-warning">
+        <label class="control-label" for="inputWarning">Input with warning</label>
+        <div class="campl-controls">
+          <input type="text" id="inputWarning" />
+          <span class="campl-help-block">Something may have gone wrong</span>
+        </div>
+      </div>
+    
+    
+      <div class="campl-control-group campl-warning">
+          <label for="textareaWarning">textarea</label>
+          <div class="campl-controls">
+              <textarea rows="3" id="textareaWarning"  cols=""></textarea>
+          </div>
+        </div>
+
+      <div class="campl-control-group campl-warning">
+          <label for="selectWarning">select</label>
+          <div class="campl-controls">
+              <select id="selectWarning">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="campl-control-group campl-warning">
+          <label class="control-label" for="optionsCheckboxListWarning">Checkboxes</label>
+          <div class="campl-controls">
+            <label class="campl-checkbox">
+              <input type="checkbox" name="optionsCheckboxList1Warning" value="option1" />
+              Option one 
+            </label>
+        </div>
+        </div>
+    
+      <div class="campl-control-group campl-warning">
+          <label class="control-label">Radio buttons</label>
+          <div class="campl-controls">
+            <label class="campl-radio">
+              <input type="radio" name="optionsRadios" id="optionsRadios1Warning" value="option1"  />
+              Option one
+            </label>
+        </div>
+        </div>
+    
+    
+      <hr />
+    
+      <div class="campl-control-group campl-error">
+        <label class="control-label" for="inputError">Input with error</label>
+        <div class="campl-controls">
+          <input type="text" id="inputError" />
+          <span class="campl-help-block">Please correct the error</span>
+        </div>
+      </div>
+      <div class="campl-control-group campl-success">
+        <label class="control-label" for="inputSuccess">Input with success</label>
+        <div class="campl-controls">
+          <input type="text" id="inputSuccess" />
+          <span class="campl-help-block">This is a success message</span>
+        </div>
+      </div>
+  </fieldset>
+</form>
+
 
           </div>
         </div>
