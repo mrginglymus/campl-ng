@@ -6,9 +6,7 @@ def make_css():
 
   from subprocess import call
 
-  with open(os.path.join('dist', 'css', 'campl.css'), 'wb') as fh:
-
-    call(['sass', 'scss/campl.scss'], stdout=fh)
+  call(['sass', 'scss/campl.scss', 'dist/css/campl.css'])
 
 def make_html():
 
