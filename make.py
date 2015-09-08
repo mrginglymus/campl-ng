@@ -34,6 +34,7 @@ def make_html():
       ('Typography', 'core_elements/typography.html', None),
       ('Links & Buttons', 'core_elements/links_and_buttons.html', None),
       ('Forms', 'core_elements/forms.html', None),
+      ('Lists', 'core_elements/lists.html', None),
     )),
   ]
   

@@ -254,7 +254,7 @@
         
           
           <li class="active">
-            Forms
+            Lists
           </li>
           
         
@@ -329,7 +329,7 @@
     <div class="col-md-9 col-md-offset-3">
     
       <div>
-        <h1>Forms</h1>
+        <h1>Lists</h1>
       </div>
     </div>
   </div>
@@ -388,15 +388,15 @@
           
         
           
-          <li><span>Forms</span></li>
+          <li>
+            
+            <a href="/campl-ng/core_elements/forms.html">Forms</a>
+            
+          </li>
           
         
           
-          <li>
-            
-            <a href="/campl-ng/core_elements/lists.html">Lists</a>
-            
-          </li>
+          <li><span>Lists</span></li>
           
         
         </ul>
@@ -428,245 +428,68 @@
           <div class="content-padding">
             
 
-<form action="">
-  <legend>Standard form elements</legend>
-  <fieldset class="form-group">
-    <label for="input">Input</label>
-    <input id="input" class="form-control" type="text" value="Basic input" />
-  </fieldset>
+<h6>Unordered list</h6>	
+<ul>
+  <li>Unordered list</li>
+  <li>list item 2</li>
+  <li>list item 3</li>
+</ul>
+<h6>Nested list</h6>	
+<ul>
+  <li>Unordered list</li>
+  <li>list item 2
+    <ul>
+      <li>Unordered list</li>
+      <li>list item 2
+        <ul>
+          <li>Unordered list</li>
+          <li>list item 2
+            <ul>
+              <li>Unordered list</li>
+              <li>list item 2</li>
+              <li>list item 3</li>
+            </ul>
+          </li>
+          <li>list item 3</li>
+        </ul>
+      </li>
+      <li>list item 3</li>
+    </ul>
+  </li>
+  <li>list item 3</li>
+</ul>
 
-  <fieldset class="form-group">
-    <label for="textarea">Textarea</label>
-    <textarea rows="3" id="textarea" cols="" class="form-control"></textarea>
-  </fieldset>
-  
-  
-  <fieldset class="form-group">
-    <label for="select">Select</label>
-    <select id="select" class="form-control">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-  </fieldset>
+<h6>Ordered list</h6>	
+<ol>
+  <li>Ordered list</li>
+  <li>list item 2</li>
+  <li>list item 3</li>
+</ol>
 
-  <label>Checkboxes</label>
-  <fieldset class="form-group">
-    <div class="checkbox">
-      <label>
-        <input type="checkbox"> Option one
-      </label>
-    </div>
-    <div class="checkbox">
-      <label>
-        <input type="checkbox"> Option two
-      </label>
-    </div>
-    <div class="checkbox">
-      <label>
-        <input type="checkbox"> Option three
-      </label>
-    </div>
-  </fieldset>
-  
-  <label>Inline Checkboxes</label>
-  <fieldset class="form-group">
-    <div class="checkbox-inline">
-      <label>
-        <input type="checkbox"> 1
-      </label>
-    </div>
-    <div class="checkbox-inline">
-      <label>
-        <input type="checkbox"> 2
-      </label>
-    </div>
-    <div class="checkbox-inline">
-      <label>
-        <input type="checkbox"> 3
-      </label>
-    </div>
-  </fieldset>
-
-  <label>Radio Buttons</label>
-  <fieldset class="form-group">
-    <div class="radio-inline">
-      <label>
-        <input name="radio" type="radio"> Option one
-      </label>
-    </div>
-    <div class="radio-inline">
-      <label>
-        <input name="radio" type="radio"> Option two
-      </label>
-    </div>
-  </fieldset>
-
-  <p class="text-muted">This is an example of guidance text to give supplementary information to the user about completion of the form.</p>
-  
-  <button type="button" class="btn btn-secondary">Button</button>
-  <button type="reset" class="btn btn-secondary">Reset</button>
-  <button class="btn btn-secondary">Cancel</button>
-  <button type="submit" class="btn btn-primary btn-cta">Submit</button>
-      
-
-</form>
-
-<form action="">
-  <legend>Form field variants</legend>
-  <fieldset class="form-group">
-    <label for="block-input">Block level input</label>
-    <input id="block-input" type="text" class="form-control" value="Stretching to fill container" />
-  </fieldset>
-  
-  
-  <div class="row">
-    <fieldset class="form-group col-xs-2">
-      <label for="campl-input-mini">Input mini</label>
-      <input id="campl-input-mini" type="text" value="Mini" class="form-control" />
-    </fieldset>
-  </div>
-  
-  <div class="row">
-    <fieldset class="form-group col-xs-3">
-      <label for="campl-input-small">Input small</label>
-      <input id="campl-input-small" type="text" value="Mini" class="form-control" />
-    </fieldset>
-  </div>
-  
-  <div class="row">
-    <fieldset class="form-group col-xs-4">
-      <label for="campl-input-medium">Input medium</label>
-      <input id="campl-input-medium" type="text" value="Mini" class="form-control" />
-    </fieldset>
-  </div>
-  
-  <div class="row">
-    <fieldset class="form-group col-xs-6">
-      <label for="campl-input-large">Input large</label>
-      <input id="campl-input-large" type="text" value="Mini" class="form-control" />
-    </fieldset>
-  </div>
-
-  <div class="row">
-    <fieldset class="form-group col-xs-8">
-      <label for="campl-input-xlarge">Input extra large</label>
-      <input id="campl-input-xlarge" type="text" value="Mini" class="form-control" />
-    </fieldset>
-  </div>
-</form>
-
-  
-<form action="">
-  <legend>Form field action states</legend>
-  
-  <fieldset class="form-group">
-    <label for="disabledInput">Disabled input</label>
-    <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here…" disabled>
-  </fieldset>
-  
-  <label>Disabled checkbox</label>
-  <fieldset class="form-group">
-    <div class="checkbox">
-      <label>
-        <input type="checkbox" disabled> This is a disabled checkbox
-      </label>
-    </div>
-  </fieldset>
-  
-  <div class="form-group">
-    <label>Uneditable input</label>
-    <div class="form-control">Some value here</div>
-  </div>
-  
-  <fieldset class="form-group">
-    <label>Uneditable textarea</label>
-    <textarea class="form-control" disabled>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</textarea>
-  </fieldset>
-  
-  <fieldset class="form-group">
-    <label for="readinput">Disabled input</label>
-    <input class="form-control" id="readinput" type="text" value="xyz" readonly>
-  </fieldset>
-  
-
-  <button type="button" class="btn btn-secondary" disabled>Disabled Button</button>
-
-  </fieldset>
-</form>
-
-
-<form action="">
-  <legend>Form state Visual indicators</legend>
-  <div class="form-group has-warning">
-    <label class="control-label" for="inputWarning">Input with warning</label>
-    <input type="text" class="form-control" id="inputwarning">
-    <span class="text-help">Something my havve gone wrong</span>
-  </div>
-  
-    
-    
-      <div class="campl-control-group campl-warning">
-          <label for="textareaWarning">textarea</label>
-          <div class="campl-controls">
-              <textarea rows="3" id="textareaWarning"  cols=""></textarea>
-          </div>
-        </div>
-
-      <div class="campl-control-group campl-warning">
-          <label for="selectWarning">select</label>
-          <div class="campl-controls">
-              <select id="selectWarning">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="campl-control-group campl-warning">
-          <label class="control-label" for="optionsCheckboxListWarning">Checkboxes</label>
-          <div class="campl-controls">
-            <label class="campl-checkbox">
-              <input type="checkbox" name="optionsCheckboxList1Warning" value="option1" />
-              Option one 
-            </label>
-        </div>
-        </div>
-    
-      <div class="campl-control-group campl-warning">
-          <label class="control-label">Radio buttons</label>
-          <div class="campl-controls">
-            <label class="campl-radio">
-              <input type="radio" name="optionsRadios" id="optionsRadios1Warning" value="option1"  />
-              Option one
-            </label>
-        </div>
-        </div>
-    
-    
-      <hr />
-    
-      <div class="campl-control-group campl-error">
-        <label class="control-label" for="inputError">Input with error</label>
-        <div class="campl-controls">
-          <input type="text" id="inputError" />
-          <span class="campl-help-block">Please correct the error</span>
-        </div>
-      </div>
-      <div class="campl-control-group campl-success">
-        <label class="control-label" for="inputSuccess">Input with success</label>
-        <div class="campl-controls">
-          <input type="text" id="inputSuccess" />
-          <span class="campl-help-block">This is a success message</span>
-        </div>
-      </div>
-  </fieldset>
-</form>
+<h6>Uppercase Roman</h6>	
+<ol style="list-style-type: upper-roman;">
+  <li>Ordered list</li>
+  <li>list item 2</li>
+  <li>list item 3</li>
+</ol>
+<h6>Lowercase Roman</h6>	
+<ol style="list-style-type: lower-roman;">
+  <li>Ordered list</li>
+  <li>list item 2</li>
+  <li>list item 3</li>
+</ol>
+<h6>Uppercase alphabetical</h6>	
+<ol style="list-style-type: upper-alpha;">
+  <li>Ordered list</li>
+  <li>list item 2</li>
+  <li>list item 3</li>
+</ol>
+<h6>Lowercase alphabetical</h6>	
+<ol style="list-style-type: lower-alpha;">
+  <li>Ordered list</li>
+  <li>list item 2</li>
+  <li>list item 3</li>
+</ol>
 
 
           </div>

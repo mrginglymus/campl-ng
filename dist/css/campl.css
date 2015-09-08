@@ -406,16 +406,16 @@ h2, .h2 {
   font-size: 1.58rem; }
 
 h3, .h3 {
-  font-size: 1.75rem; }
+  font-size: 1.416rem; }
 
 h4, .h4 {
-  font-size: 1.5rem; }
-
-h5, .h5 {
   font-size: 1.25rem; }
 
+h5, .h5 {
+  font-size: 1.167rem; }
+
 h6, .h6 {
-  font-size: 1rem; }
+  font-size: 1.083rem; }
 
 .lead {
   font-size: 1.25rem;
