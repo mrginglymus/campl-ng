@@ -31,9 +31,9 @@
         background-color: map-get($theme, darker);
       }
       margin-left: 0;
-      background-color: map-get($theme, lighter);
+      background-color: map-get($theme, primary);
       &.active {
-        background-color: map-get($theme, primary);
+        background-color: map-get($theme, lighter);
       }
     }
     

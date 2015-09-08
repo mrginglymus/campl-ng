@@ -5,6 +5,7 @@ import shutil
 
 from local_settings import RELEASE_DIR, RELEASE_URL
 
+SITE_NAME = 'Campl-NG'
 
 def make_css():
 
@@ -34,12 +35,13 @@ def make_html():
   base_context = {
     'menu': menu,
     'ROOT_URL': RELEASE_URL,
+    'SITE_NAME': SITE_NAME,
   }
 
   env = Environment(loader=FileSystemLoader('templates'))
   
   def render_node(title, page, node, breadcrumb):
-    breadcrumb.append((title, page))
+    breadcrumb.append((title, page, node))
     template = env.get_template(page)
     context = base_context
     context['breadcrumb'] = breadcrumb

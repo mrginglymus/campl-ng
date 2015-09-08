@@ -19,8 +19,10 @@
         {% include 'side_menu.html' %}
         {% endif %}
         <div class="col-md-{{ content_columns }} main-content">
-          {% block content %}
-          {% endblock %}
+          <div class="content-padding">
+            {% block content %}
+            {% endblock %}
+          </div>
         </div>
         {% if sidebar %}
         {% include 'sidebar.html' %}

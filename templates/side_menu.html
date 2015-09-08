@@ -1,23 +1,47 @@
 <div class="col-md-3 tertiary-navigation">
   <ul class="nav nav-pills nav-stacked">
     <li class="nav-item">
-      <a class="nav-link" href="">Graduate Admissions</a>
+      <a class="nav-link" href="{{ ROOT_URL }}">{{ SITE_NAME }}</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="">Prospective Students</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="">Step 2: Studying at Cambridge</a>
-    </li>
+    {% if breadcrumb|length == 1 %}
+    {% set LOOP_UNTIL = 1 %}
+    {% elif breadcrumb[-1][2] %}
+    {% set LOOP_UNTIL = 1  %}
+    {% else %}
+    {% set LOOP_UNTIL = 2 %}
+    {% endif %}
+    {% for title, page, node in breadcrumb %}
+      {% if loop.revindex > LOOP_UNTIL %}
+      <li class="nav-item">
+        <a class="nav-link" href="{{ ROOT_URL }}/{{ page }}">{{ title }}</a>
+      </li>
+      {% endif %}
+    {% endfor %}
   </ul>
+  
+  
   <ul class="list-unstyled">
-    <li> 
-      <a href="">Qualifications Directory</a>
-      <ul class="list-unstyled">
-        <li><a href="">Courses by Title/Subject</a></li>
-        <li><a href="">Courses by Department/Faculty/Institute</a></li>
-        <li><a href="">Glossary of Awards</a></li>
-      </ul>
+    {% set penbread = breadcrumb[-LOOP_UNTIL] %}
+    <li>
+      <a href="{{ ROOT_URL }}/{{ penbread[1] }}">{{ penbread[0] }}</a>
+      {% if penbread[2] %}
+        <ul class="list-unstyled">
+        {% for title, page, node in penbread[2] %}
+          {% if title == breadcrumb[-1][0] %}
+          <li><span>{{ title }}</span></li>
+          {% else %}
+          <li><a href="{{ ROOT_URL }}/{{ page }}">{{ title }}</a></li>
+          {% endif %}
+        {% endfor %}
+        </ul>
+      {% endif %}
     </li>
+    {% for title, page, node in menu %}
+    {% if title != penbread[0] %}
+    <li>
+      <a href="{{ ROOT_URL }}/{{ page }}">{{ title }}</a>
+    </li>
+    {% endif %}
+    {% endfor %}
   </ul>
 </div>

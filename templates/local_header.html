@@ -7,10 +7,10 @@
         <li>
           <a href="#"><span class="fa fa-home">&nbsp;</span></a>
         </li>
-        {% for title, node in breadcrumb %}
-          {% if node and not loop.last %}
+        {% for title, page, node in breadcrumb %}
+          {% if page and not loop.last %}
           <li>
-            <a href="{{ ROOT_URL }}/{{ node }}">{{ title }}</a>
+            <a href="{{ ROOT_URL }}/{{ page }}">{{ title }}</a>
           </li>
           {% else %}
           <li class="active">
@@ -23,7 +23,7 @@
     {% endif %}
     <!-- end breadcrumbs -->
     <div>
-      <p class="title">Graduate Admissions</p>
+      <p class="title">{{ SITE_NAME }}</p>
     </div>
   </div>
 </div>
@@ -32,11 +32,11 @@
     <ul class="nav navbar-nav">
       {% for title, page, node in menu %}
         {% if not node %}
-        <li class="nav-item">
+        <li class="nav-item{% if title==breadcrumb[0][0] %} active{% endif %}">
           <a class="nav-link" href="{{ ROOT_URL }}/{{ page }}">{{ title }}</a>
         </li>
         {% else %}
-        <li class="nav-item dropdown">
+        <li class="nav-item{% if title==breadcrumb[0][0] %} active{% endif %} dropdown">
           <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
             {{ title }}
           </a>
