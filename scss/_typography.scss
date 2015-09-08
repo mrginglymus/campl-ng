@@ -43,3 +43,18 @@ h1 {
 h2 {
   color: map-get($theme, dark);
 }
+
+.btn-cta {
+  font-weight: normal;
+}
+
+.btn-cta:after {
+  @include fa-icon();
+  content: $fa-var-angle-right;
+  float:right;
+  position:relative;
+  left:5px;
+  font-size:2rem;
+  line-height:1rem;
+  verticle-align:middle;
+}

@@ -61,7 +61,7 @@ $enable-grid-classes:       true !default;
 $spacer:                     1rem !default;
 $spacer-x:                   $spacer !default;
 $spacer-y:                   $spacer !default;
-$border-width:               .0625rem !default;
+$border-width:               .0833rem !default;
 
 
 // Body
@@ -217,15 +217,15 @@ $table-border-color:            $gray-lighter !default;
 
 $btn-padding-x:                  1rem !default;
 $btn-padding-y:                  .375rem !default;
-$btn-font-weight:                normal !default;
+$btn-font-weight:                600 !default;
 
 $btn-primary-color:              #fff !default;
-$btn-primary-bg:                 $brand-primary !default;
+$btn-primary-bg:                 #171717 !default;
 $btn-primary-border:             $btn-primary-bg !default;
 
-$btn-secondary-color:            $gray-dark !default;
-$btn-secondary-bg:               #fff !default;
-$btn-secondary-border:           #ccc !default;
+$btn-secondary-color:            #000 !default;
+$btn-secondary-bg:               #e4e4e4 !default;
+$btn-secondary-border:           #999 !default;
 
 $btn-info-color:                 #fff !default;
 $btn-info-bg:                    $brand-info !default;
