@@ -1,0 +1,25 @@
+<nav class="navbar navbar-local container">
+  <ul class="nav navbar-nav">
+    {% for title, page, node in menu %}
+      {% if not node %}
+      <li class="nav-item{% if title==breadcrumb[0][0] %} active{% endif %}">
+        <a class="nav-link" href="{{ ROOT_URL }}/{{ page }}">{{ title }}</a>
+      </li>
+      {% else %}
+      <li class="nav-item{% if title==breadcrumb[0][0] %} active{% endif %} dropdown">
+        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+          {{ title }}
+        </a>
+        <div class="dropdown-menu">
+          {% if page %}
+          <a href="{{ ROOT_URL }}/{{ page }}" class="dropdown-item">{{ title }} - Overview</a>
+          {% endif %}
+          {% for title, page, node in node %}
+            <a href="{{ ROOT_URL }}/{{ page }}" class="dropdown-item">{{ title }}</a>
+          {% endfor %}
+        </div>
+      </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</nav>

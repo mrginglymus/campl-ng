@@ -1,0 +1,20 @@
+{% if breadcrumb %}
+<div>
+  <ol class="breadcrumb">
+    <li>
+      <a href="#"><span class="fa fa-home">&nbsp;</span></a>
+    </li>
+    {% for title, page, node in breadcrumb %}
+      {% if page and not loop.last %}
+      <li>
+        <a href="{{ ROOT_URL }}/{{ page }}">{{ title }}</a>
+      </li>
+      {% else %}
+      <li class="active">
+        {{ title }}
+      </li>
+      {% endif %}
+    {% endfor %}
+  </ol>
+</div>
+{% endif %}

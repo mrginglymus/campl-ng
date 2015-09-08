@@ -2,8 +2,8 @@
 
 
 {% block body %}
-  {% include 'global_header.html' %}
-  {% include 'local_header.html' %}
+  {% include 'components/header/global_header.html' %}
+  {% include 'components/header/local_header.html' %}
   {% set content_columns = 12 %}
   {% if side_menu %}
     {% set content_columns = content_columns - 3 %}
@@ -16,7 +16,7 @@
     <div class="content container">
       <div class="row">
         {% if side_menu %}
-        {% include 'side_menu.html' %}
+        {% include 'components/navigation/side_menu.html' %}
         {% endif %}
         <div class="col-md-{{ content_columns }} main-content">
           <div class="content-padding">
@@ -25,13 +25,13 @@
           </div>
         </div>
         {% if sidebar %}
-        {% include 'sidebar.html' %}
+        {% include 'components/sidebar.html' %}
         {% endif %}
       </div>
     </div>
   </div>
   
-  {% include 'local_footer.html' %}
-  {% include 'global_footer.html' %}
+  {% include 'components/footer/local_footer.html' %}
+  {% include 'components/footer/global_footer.html' %}
         
 {% endblock %}
