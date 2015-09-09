@@ -1,17 +1,14 @@
 <div id="front-page-carousel" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner" role="listbox">
-    <div class="carousel-item active">
-      <img src="{{ ROOT_URL }}/img/carousel-1.png" alt="first-slide">
-      <div class="carousel-caption">
-        <span>Blah blah</span>
+    {% for image, link, caption in carousel %}
+      <div class="carousel-item{% if loop.first %} active{% endif %}"</div>
+        <img src="{{ ROOT_URL }}/img/{{ image }}">
+        <div class="carousel-caption">
+          <span>{{ caption }}</span>
+          <span class="carousel-page">{{ loop.index }} of {{ carousel|length }}</span>
+        </div>
       </div>
-    </div>
-    <div class="carousel-item">
-      <img src="{{ ROOT_URL }}/img/carousel-2.png" alt="first-slide">
-    </div>
-    <div class="carousel-item">
-      <img src="{{ ROOT_URL }}/img/carousel-3.png" alt="first-slide">
-    </div>
+    {% endfor %}
   </div>
   <a class="left carousel-control" href="#front-page-carousel" role="button" data-slide="prev">
     <span class="fa fa-angle-left" aria-hidden="true"></span>

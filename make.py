@@ -69,9 +69,17 @@ def make_html():
         render_node(t, n, p, breadcrumb)
     breadcrumb.pop()
   
+  
+  CAROUSEL = [
+    ('carousel-1.png', RELEASE_URL, 'Lorem ipsum'),
+    ('carousel-2.png', RELEASE_URL, 'Lorem ipsum'),
+    ('carousel-3.png', RELEASE_URL, 'Lorem ipsum'),
+  ]
+  
   template = env.get_template(HOME_PAGE)
   context = base_context
   context['breadcrumb'] = []
+  context['carousel'] = CAROUSEL
   dest = os.path.join('dist', 'index.html')
   with codecs.open(dest, 'wb', 'utf-8') as fh:
     fh.write(template.render(**context))
