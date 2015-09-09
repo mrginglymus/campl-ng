@@ -3,6 +3,10 @@
   background-color:black;
   padding: 0;
   
+  .container {
+    padding: 0px;
+  }
+  
   .navbar-brand {
     color: $navbar-dark-active-color;
     
@@ -70,6 +74,7 @@
 }
 
 .global-header-drawer {
+  font-family: $font-family-sans-serif-extra;
   background-color: #171717;
   color: #ffffff;
   border-top: 1px solid #3f3f3f;
@@ -99,19 +104,23 @@
   }
   
   .global-header-close {
+    font-family: $font-family-sans-serif;
     background-color: #000000;
-    padding: 20px 0px 7px 12px !important;
     font-size: 1rem;
     font-weight: 600;
-    span:before {
+    
+    /*span:before {
       content: "×";
       font-family: $font-family-monospace;
       float:right;
       margin-right:10px;
       font-size:2rem;
-    }
+    }*/
     a {
+      padding: 21px 15px;
+      height: 57px;
       color: #ffffff;
+      display:block;
     }
   }
   
