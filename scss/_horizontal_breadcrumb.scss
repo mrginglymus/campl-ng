@@ -1,3 +1,5 @@
+@import "compass/css3/images";
+
 .tertiary-navigation {
   border-left: 1px solid #e4e4e4;
   border-right: 1px solid #e4e4e4;
@@ -5,7 +7,7 @@
   padding-right:0px;
   margin-top: -50px;
   padding-bottom: 50px;
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAM0lEQVQYV2NkQAM3P3/7r87LxYgsDBLDEMCmCCQGV4jLJJhGsEJCikBqGIlRBFY4nDwDAIeHT431w+WIAAAAAElFTkSuQmCC);
+  @include background(url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAM0lEQVQYV2NkQAM3P3/7r87LxYgsDBLDEMCmCCQGV4jLJJhGsEJCikBqGIlRBFY4nDwDAIeHT431w+WIAAAAAElFTkSuQmCC));
 
   font-family: $font-family-sans-serif-extra;
   

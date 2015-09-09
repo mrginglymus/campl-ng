@@ -11,7 +11,7 @@ def make_css():
 
   from subprocess import call
 
-  call(['sass', 'scss/campl.scss', 'dist/css/campl.css'])
+  call(['sass', '--compass', 'scss/campl.scss', 'dist/css/campl.css'])
 
 def make_js():
 

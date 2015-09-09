@@ -1,3 +1,4 @@
+@import "compass/css3/images";
 
 .local-footer {
   background-color: map-get($theme, dark);
@@ -5,11 +6,7 @@
   padding: 20px 0;
   
   [class*='col-']:not(:last-of-type) {
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAADCAYAAABS3WWCAAAAFElEQVQIW2P8//9/PSMDAwMDmAAALHsDgGM05VYAAAAASUVORK5CYII=);
-    background-position-x: 100%;
-    background-position-y: 0px;
-    background-repeat-y: repeat;
-    background-repeat-x: no-repeat;
+    @include background(url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAADCAYAAABS3WWCAAAAFElEQVQIW2P8//9/PSMDAwMDmAAALHsDgGM05VYAAAAASUVORK5CYII=) 100% 0 repeat-y);
   }
   
   a {
