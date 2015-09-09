@@ -20,6 +20,9 @@
         {% include 'components/navigation/side_menu.html' %}
         {% endif %}
         <div class="col-md-{{ content_columns }} main-content">
+          {% if image %}
+            <img src="{{ ROOT_URL }}/img/{{ image }}">
+          {% endif %}
           <div class="content-padding">
             {% block content %}
             {% endblock %}

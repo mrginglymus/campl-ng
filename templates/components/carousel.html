@@ -2,9 +2,19 @@
   <div class="carousel-inner" role="listbox">
     {% for image, link, caption in carousel %}
       <div class="carousel-item{% if loop.first %} active{% endif %}"</div>
+        {% if link %}
+        <a href="{{ link }}">
         <img src="{{ ROOT_URL }}/img/{{ image }}">
+        </a>
+        {% else %}
+        <img src="{{ ROOT_URL }}/img/{{ image }}">
+        {% endif %}
         <div class="carousel-caption">
+          {% if link %}
+          <a href="{{ link }}">{{ caption }}</a>
+          {% else %}
           <span>{{ caption }}</span>
+          {% endif %}
           <span class="carousel-page">{{ loop.index }} of {{ carousel|length }}</span>
         </div>
       </div>

@@ -30,7 +30,7 @@
       {% endif %}
       {% if penbread[2] %}
         <ul class="list-unstyled">
-        {% for title, page, node in penbread[2] %}
+        {% for title, page, context, node in penbread[2] %}
           {% if title == breadcrumb[-1][0] %}
           <li><span>{{ title }}</span></li>
           {% else %}
@@ -46,7 +46,7 @@
         </ul>
       {% endif %}
     </li>
-    {% for title, page, node in menu %}
+    {% for title, page, context, node in menu %}
     {% if title != penbread[0] %}
     <li>
       {% if page %}

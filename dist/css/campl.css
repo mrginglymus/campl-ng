@@ -6879,6 +6879,7 @@ h1, h2, h3, h4, h5, h6 {
     right: 51px; }
 
 .carousel-caption {
+  font-family: "myriad-pro-n3", "myriad-pro", myriad, verdana, Arial, sans-serif;
   bottom: 0;
   right: 102px;
   left: 20px;
@@ -6889,7 +6890,13 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 19px;
   line-height: 25px;
   padding-right: 40px; }
+  .carousel-caption a {
+    color: #fff; }
+    .carousel-caption a:focus, .carousel-caption a:hover {
+      text-decoration: none; }
   .carousel-caption .carousel-page {
+    font-family: verdana, Arial, sans-serif;
+    line-height: 18px;
     position: absolute;
     right: 16px;
     bottom: 16px;

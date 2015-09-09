@@ -3,7 +3,7 @@
     <li class="nav-item">
       <a class="nav-link" href="{{ ROOT_URL }}">Home</a>
     </li>
-    {% for title, page, node in menu %}
+    {% for title, page, context, node in menu %}
       {% if not node %}
       <li class="nav-item{% if breadcrumb and title==breadcrumb[0][0] %} active{% endif %}">
         <a class="nav-link" href="{{ ROOT_URL }}/{{ page }}">{{ title }}</a>
@@ -17,7 +17,7 @@
           {% if page %}
           <a href="{{ ROOT_URL }}/{{ page }}" class="dropdown-item">{{ title }} - Overview</a>
           {% endif %}
-          {% for title, page, node in node %}
+          {% for title, page, context, node in node %}
             <a href="{{ ROOT_URL }}/{{ page }}" class="dropdown-item">{{ title }}</a>
           {% endfor %}
         </div>

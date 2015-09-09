@@ -26,20 +26,20 @@ def make_html():
   HOME_PAGE = 'layouts/frontpage.html'
   
   menu = [
-    ('About', 'demo.html', None),
-    ('Page Layouts', 'layouts/overview.html', (
-      ('Subsection with navigation', 'layouts/subnav.html', None),
-      ('Subsection without navigation', 'layouts/subnonav.html', None),
-      ('Subsection without right column', 'layouts/subnocol.html', None),
+    ('About', 'demo.html', {'image': 'placeholder.jpg'}, None),
+    ('Page Layouts', 'layouts/overview.html', None, (
+      ('Subsection with navigation', 'layouts/subnav.html', None, None),
+      ('Subsection without navigation', 'layouts/subnonav.html', None, None),
+      ('Subsection without right column', 'layouts/subnocol.html', None, None),
     )),
-    ('Core Elements', None, (
-      ('Typography', 'core_elements/typography.html', None),
-      ('Links & Buttons', 'core_elements/links_and_buttons.html', None),
-      ('Forms', 'core_elements/forms.html', None),
-      ('Lists', 'core_elements/lists.html', None),
+    ('Core Elements', None, None, (
+      ('Typography', 'core_elements/typography.html', None, None),
+      ('Links & Buttons', 'core_elements/links_and_buttons.html', None, None),
+      ('Forms', 'core_elements/forms.html', None, None),
+      ('Lists', 'core_elements/lists.html', None, None),
     )),
-    ('In Page Components', None, (
-      ('Tables', 'components/inpage/tables.html', None),
+    ('In Page Components', None, None, (
+      ('Tables', 'components/inpage/tables.html', None, None),
     )),
   ]
   
@@ -52,11 +52,12 @@ def make_html():
 
   env = Environment(loader=FileSystemLoader('templates'))
   
-  def render_node(title, page, node, breadcrumb):
+  def render_node(title, page, context, node, breadcrumb):
     breadcrumb.append((title, page, node))
     if page:
       template = env.get_template(page)
-      context = base_context
+      context = context or {}
+      context.update(base_context)
       context['breadcrumb'] = breadcrumb
       context['title'] = title
       dest = os.path.join('dist', page)
@@ -65,8 +66,8 @@ def make_html():
       with codecs.open(dest, 'wb', 'utf-8') as fh:
         fh.write(template.render(**context))
     if node:
-      for t, n, p in node:
-        render_node(t, n, p, breadcrumb)
+      for t, p, c, n in node:
+        render_node(t, p, c, n, breadcrumb)
     breadcrumb.pop()
   
   
@@ -85,9 +86,9 @@ def make_html():
     fh.write(template.render(**context))
   
   
-  for title, page, node in menu:
+  for title, page, context, node in menu:
     breadcrumb = []
-    render_node(title, page, node, breadcrumb)
+    render_node(title, page, context, node, breadcrumb)
 
 
 def deploy():
