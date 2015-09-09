@@ -12,8 +12,9 @@
     <!-- CSS : implied media="all" -->
     <link rel="stylesheet" href="{{ ROOT_URL }}/css/campl.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="{{ ROOT_URL }}/js/bootstrap.js"></script>
-    <script type="text/javascript" src="{{ ROOT_URL }}/js/menu.js"></script>
+    {% for src, dst in JS %}
+    <script type="text/javascript" src="{{ ROOT_URL }}/js/{{ dst }}"></script>
+    {% endfor %}
     <script type="text/javascript" src="//use.typekit.com/hyb5bko.js"></script>
     <script type="text/javascript">
       try {

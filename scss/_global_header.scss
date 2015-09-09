@@ -51,7 +51,7 @@
         color: #5a5a5a;
       }
       
-      &:not(.collapsed) {
+      &[data-toggle="collapse"]:not(.collapsed) {
         background-color: #171717;
         margin-bottom: -1px;
         padding-bottom: 26px;

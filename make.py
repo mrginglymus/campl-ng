@@ -7,6 +7,11 @@ from local_settings import RELEASE_DIR, RELEASE_URL
 
 SITE_NAME = 'Campl-NG'
 
+JS = (
+  ('lib/bootstrap/dist/js/bootstrap.js', 'bootstrap.js'),
+  ('js/menu.js', 'menu.js'),
+)
+
 def make_css():
 
   from subprocess import call
@@ -15,8 +20,8 @@ def make_css():
 
 def make_js():
 
-  shutil.copy('lib/bootstrap/dist/js/bootstrap.js', 'dist/js/bootstrap.js')
-  shutil.copy('js/menu.js', 'dist/js/menu.js')
+  for src, dst in JS:
+    shutil.copy(src, os.path.join('dist', 'js', dst))
   
 def make_html():
 
@@ -49,6 +54,7 @@ def make_html():
     'ROOT_URL': RELEASE_URL,
     'SITE_NAME': SITE_NAME,
     'HOME_PAGE': HOME_PAGE,
+    'JS': JS,
   }
 
   env = Environment(loader=FileSystemLoader('templates'))
