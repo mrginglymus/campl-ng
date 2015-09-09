@@ -16,6 +16,7 @@ def make_css():
 def make_js():
 
   shutil.copy('lib/bootstrap/dist/js/bootstrap.js', 'dist/js/bootstrap.js')
+  shutil.copy('js/menu.js', 'dist/js/menu.js')
   
 def make_html():
 
