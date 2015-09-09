@@ -2,7 +2,10 @@
 <div>
   <ol class="breadcrumb">
     <li>
-      <a href="#"><span class="fa fa-home">&nbsp;</span></a>
+      <a href="http://www.cam.ac.uk/"><span class="fa fa-home">&nbsp;</span></a>
+    </li>
+    <li>
+      <a href="{{ ROOT_URL }}/">{{ SITE_NAME }}</a>
     </li>
     {% for title, page, node in breadcrumb %}
       {% if page and not loop.last %}

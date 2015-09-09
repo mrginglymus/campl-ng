@@ -1,0 +1,30 @@
+.carousel-control {
+  background-color: map-get($theme, lighter);
+  background-image: none !important;
+  height: 50px;
+  width: 50px;
+  top: auto;
+
+  &:hover {
+    opacity: 1;
+    background-color: map-get($theme, primary);
+  }
+  
+  &.left {
+    left: auto;
+    right: 51px;
+  }
+}
+
+.carousel-caption {
+  bottom: 0;
+  right: 102px;
+  left: 20px;
+  padding: 12px 16px 13px;
+  background-color: rgba(0,0,0,0.7);
+  text-align:left;
+  font-weight: 300;
+  font-size: 19px;
+  line-height: 25px;
+  padding-right: 40px;
+}

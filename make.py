@@ -22,7 +22,9 @@ def make_html():
   from jinja2 import FileSystemLoader, Environment
 
   import codecs
-
+  
+  HOME_PAGE = 'layouts/frontpage.html'
+  
   menu = [
     ('About', 'demo.html', None),
     ('Page Layouts', 'layouts/overview.html', (
@@ -45,6 +47,7 @@ def make_html():
     'menu': menu,
     'ROOT_URL': RELEASE_URL,
     'SITE_NAME': SITE_NAME,
+    'HOME_PAGE': HOME_PAGE,
   }
 
   env = Environment(loader=FileSystemLoader('templates'))
@@ -60,13 +63,18 @@ def make_html():
       if not os.path.exists(os.path.dirname(dest)):
         os.makedirs(os.path.dirname(dest))
       with codecs.open(dest, 'wb', 'utf-8') as fh:
-        fh.write(template.render(**base_context))
+        fh.write(template.render(**context))
     if node:
       for t, n, p in node:
         render_node(t, n, p, breadcrumb)
     breadcrumb.pop()
   
-  
+  template = env.get_template(HOME_PAGE)
+  context = base_context
+  context['breadcrumb'] = []
+  dest = os.path.join('dist', 'index.html')
+  with codecs.open(dest, 'wb', 'utf-8') as fh:
+    fh.write(template.render(**context))
   
   
   for title, page, node in menu:

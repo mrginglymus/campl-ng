@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block body %}
+{% include 'components/header/global_header.html' %}
+{% include 'components/header/local_header.html' %}
+  <div class="content container">
+    <div class="row">
+      <div class="col-md-9 main-content">
+        {% include 'components/carousel.html' %}
+        <div class="content-padding">
+          {% block content %}
+          {% endblock %}
+        </div>
+      </div>
+      {% include 'components/sidebar/sidebar.html' %}
+    </div>
+  </div>
+{% include 'components/footer/local_footer.html' %}
+{% include 'components/footer/global_footer.html' %}
+{% endblock %}
