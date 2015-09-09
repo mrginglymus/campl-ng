@@ -1,0 +1,10 @@
+{% macro show_code() %}
+
+  {{ caller() }}
+  <br>
+  <pre>
+    <code class="html">
+      {{- caller()|e -}}
+    </code>
+  </pre>
+{% endmacro %}

@@ -58,11 +58,7 @@
 @import "../lib/font-awesome/scss/font-awesome";
 
 // CamPL-ng components
-@import "global_header";
-@import "local_header";
-@import "subtitle";
-@import "horizontal_breadcrumb";
-@import "layout";
+@import "nav";
 @import "typography";
 @import "sidebar";
 @import "local_footer";
@@ -71,3 +67,8 @@
 @import "teasers";
 @import "tables";
 @import "carousel";
+@import "global_header";
+@import "local_header";
+@import "subtitle";
+@import "horizontal_breadcrumb";
+@import "layout";

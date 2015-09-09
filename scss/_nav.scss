@@ -1,0 +1,40 @@
+.nav.nav-tabs.nav-inpage {
+  border-bottom: 2px solid map-get($theme, lighter);
+  padding-left: 20px;
+  .nav-item {
+    margin-bottom: 0px;
+    
+    .nav-link {
+      border:none;
+    }
+    
+  }
+}
+
+
+.nav.nav-inpage {
+  .nav-item {
+    .nav-link {
+      font-size: 19px;
+      font-weight: 200;
+      padding: 8px 12px;
+      line-height: 18px;
+    }
+    &:not(.disabled) .nav-link {
+      color: map-get($theme, lighter);
+      
+      &:not(.active):hover {
+        background-color: #eee;
+        color: map-get($theme, lighter);
+      }
+      
+      &.active {
+        background-color: map-get($theme, lighter);
+        color: #fff;
+      }
+    }
+    &.disabled .nav-link {
+      color: #777;
+    }
+  }
+}

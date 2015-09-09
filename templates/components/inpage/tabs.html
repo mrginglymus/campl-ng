@@ -1,0 +1,43 @@
+{% extends 'layouts/subnav.html' %}
+
+{% import 'macros.html' as macros %}
+
+{% block content %}
+<h2>As Links</h2>
+{% call macros.show_code() %}
+<ul class="nav nav-tabs nav-inpage">
+  <li class="nav-item">
+    <a href="" class="nav-link active">Active</a>
+  </li>
+  <li class="nav-item">
+    <a href="" class="nav-link">Link</a>
+  </li>
+  <li class="nav-item">
+    <a href="" class="nav-link">Another link</a>
+  </li>
+  <li class="nav-item disabled">
+    <a href="" class="nav-link">Disabled</a>
+  </li>
+</ul>
+{% endcall %}
+
+<h2>As JS</h2>
+{% call macros.show_code() %}
+<ul class="nav nav-tabs nav-inpage" role="tablist">
+  <li class="nav-item">
+    <a href="#tab1" class="nav-link active" role="tab" data-toggle="tab">Active</a>
+  </li>
+  <li class="nav-item">
+    <a href="#tab2" class="nav-link" role="tab" data-toggle="tab">Link</a>
+  </li>
+  <li class="nav-item">
+    <a href="#tab3" class="nav-link" role="tab" data-toggle="tab">Another Link</a>
+  </li>
+</ul>
+<div class="tab-content">
+  <div role="tabpanel" class="tab-pane active" id="tab1"><p>Tab 1 content</p></div>
+  <div role="tabpanel" class="tab-pane" id="tab2"><p>Tab 2 content</p></div>
+  <div role="tabpanel" class="tab-pane" id="tab3"><p>Tab 3 content</p></div>
+</div>
+{% endcall %}
+{% endblock %}

@@ -9,7 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500italic,700,700italic,900,900italic,500' rel='stylesheet' type='text/css'>
 
-    <!-- CSS : implied media="all" -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
     <link rel="stylesheet" href="/campl-ng/css/campl.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     
@@ -24,6 +25,7 @@
       } catch (e) {
       }
     </script>
+    <script>hljs.initHighlightingOnLoad();</script>
   </head>
   <body>
   
@@ -338,6 +340,10 @@
           
             <a href="/campl-ng/components/inpage/tables.html" class="dropdown-item">Tables</a>
           
+            <a href="/campl-ng/components/inpage/tabs.html" class="dropdown-item">Tabs</a>
+          
+            <a href="/campl-ng/components/inpage/pills.html" class="dropdown-item">Pills</a>
+          
         </div>
       </li>
       
@@ -632,71 +638,56 @@
 <form action="">
   <legend>Form state Visual indicators</legend>
   <div class="form-group has-warning">
-    <label class="control-label" for="inputWarning">Input with warning</label>
+    <label class="form-control-label" for="inputWarning">Input with warning</label>
     <input type="text" class="form-control" id="inputwarning">
-    <span class="text-help">Something my havve gone wrong</span>
+    <span class="help-block">Something my have gone wrong</span>
   </div>
   
+  <div class="form-group has-warning">
+    <label class="form-control-label">Textarea</label>
+    <textarea class="form-control"></textarea>
+  </div>
     
-    
-      <div class="campl-control-group campl-warning">
-          <label for="textareaWarning">textarea</label>
-          <div class="campl-controls">
-              <textarea rows="3" id="textareaWarning"  cols=""></textarea>
-          </div>
-        </div>
-
-      <div class="campl-control-group campl-warning">
-          <label for="selectWarning">select</label>
-          <div class="campl-controls">
-              <select id="selectWarning">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="campl-control-group campl-warning">
-          <label class="control-label" for="optionsCheckboxListWarning">Checkboxes</label>
-          <div class="campl-controls">
-            <label class="campl-checkbox">
-              <input type="checkbox" name="optionsCheckboxList1Warning" value="option1" />
-              Option one 
-            </label>
-        </div>
-        </div>
-    
-      <div class="campl-control-group campl-warning">
-          <label class="control-label">Radio buttons</label>
-          <div class="campl-controls">
-            <label class="campl-radio">
-              <input type="radio" name="optionsRadios" id="optionsRadios1Warning" value="option1"  />
-              Option one
-            </label>
-        </div>
-        </div>
-    
-    
-      <hr />
-    
-      <div class="campl-control-group campl-error">
-        <label class="control-label" for="inputError">Input with error</label>
-        <div class="campl-controls">
-          <input type="text" id="inputError" />
-          <span class="campl-help-block">Please correct the error</span>
-        </div>
-      </div>
-      <div class="campl-control-group campl-success">
-        <label class="control-label" for="inputSuccess">Input with success</label>
-        <div class="campl-controls">
-          <input type="text" id="inputSuccess" />
-          <span class="campl-help-block">This is a success message</span>
-        </div>
-      </div>
+  <div class="form-group has-warning">
+    <label class="form-control-label">Select</label>
+    <select class="form-control">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+  
+  <label>Checkboxes</label>
+  <fieldset class="form-group has-warning">
+    <div class="checkbox">
+      <label>
+        <input type="checkbox"> Option one
+      </label>
+    </div>
   </fieldset>
+  
+  <label>Radio buttons</label>
+  <fieldset class="form-group has-warning">
+    <div class="radio">
+      <label>
+        <input type="radio"> Option one
+      </label>
+    </div>
+  </fieldset>
+
+  <div class="form-group has-error">
+    <label class="form-control-label" for="inputWarning">Input with error</label>
+    <input type="text" class="form-control" id="inputwarning">
+    <span class="help-block">Please correct the error</span>
+  </div>
+  
+  <div class="form-group has-success">
+    <label class="form-control-label" for="inputWarning">Input with success</label>
+    <input type="text" class="form-control" id="inputwarning">
+    <span class="help-block">This is a success message</span>
+  </div>
 </form>
 
 
