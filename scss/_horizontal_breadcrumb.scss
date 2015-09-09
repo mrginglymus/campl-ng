@@ -3,6 +3,7 @@
 .tertiary-navigation {
   border-left: 1px solid #e4e4e4;
   border-right: 1px solid #e4e4e4;
+  border-top: 1px solid #e4e4e4;
   padding-left:0px;
   padding-right:0px;
   margin-top: -50px;
@@ -14,9 +15,9 @@
   .nav-pills .nav-item {
   
     font-size: 14px;
+    line-height: 16px;
     font-weight: 600;
     background-color: #fafafa;
-    border-bottom: 1px solid #e4e4e4;
     margin-top: 0px !important;
     padding: 0px;
     @include hover-focus {
@@ -26,6 +27,7 @@
     .nav-link {
       color: #999999;
       padding: 16px 20px;
+      border-bottom: 1px solid #e4e4e4;
       
       &:after {
         @include fa-icon();
