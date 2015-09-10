@@ -258,14 +258,20 @@
     </li>
     
       
+      <li class="active">
+        In Page Components
+      </li>
+      
+    
+      
       <li>
-        <a href="/demo/campl-ng/layouts/overview.html">Page Layouts</a>
+        <a href="/demo/campl-ng/components/inpage/navigation/navigation.html">Navigation</a>
       </li>
       
     
       
       <li class="active">
-        Subsection with navigation
+        Pills
       </li>
       
     
@@ -291,7 +297,7 @@
       
     
       
-      <li class="nav-item active dropdown">
+      <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
           Page Layouts
         </a>
@@ -331,7 +337,7 @@
       
     
       
-      <li class="nav-item dropdown">
+      <li class="nav-item active dropdown">
         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
           In Page Components
         </a>
@@ -355,7 +361,7 @@
     <div class="col-md-9 col-md-offset-3">
     
       <div>
-        <h1>Subsection with navigation</h1>
+        <h1>Pills</h1>
       </div>
     </div>
   </div>
@@ -381,30 +387,40 @@
     
     
     
+      <li class="nav-item">
+        <a class="nav-link" href="/demo/campl-ng/None">In Page Components</a>
+      </li>
+    
   </ul>
   
   
   <ul class="list-unstyled">
     <li>
       
-      <a href="/demo/campl-ng/layouts/overview.html">Page Layouts</a>
+      <a href="/demo/campl-ng/components/inpage/navigation/navigation.html">Navigation</a>
       
       
         <ul class="list-unstyled">
           
             
-            <li><span>Subsection with navigation</span></li>
-            
-          
-            
             <li>
-              <a href="/demo/campl-ng/layouts/subnonav.html">Subsection without navigation</a>
+              <a href="/demo/campl-ng/components/inpage/navigation/tables.html">Tables</a>
             </li>
             
           
             
             <li>
-              <a href="/demo/campl-ng/layouts/subnocol.html">Subsection without right column</a>
+              <a href="/demo/campl-ng/components/inpage/navigation/tabs.html">Tabs</a>
+            </li>
+            
+          
+            
+            <li><span>Pills</span></li>
+            
+          
+            
+            <li>
+              <a href="/demo/campl-ng/components/inpage/navigation/pagination.html">Pagination</a>
             </li>
             
           
@@ -413,27 +429,11 @@
     </li>
     
       
-        <li>
-        
-        <a href="/demo/campl-ng/demo.html">About</a>
-        
-        </li>
-      
-    
-      
     
       
         <li>
         
-        <a href="/demo/campl-ng/core_elements/typography.html">Core Elements</a>
-        
-        </li>
-      
-    
-      
-        <li>
-        
-        <a href="/demo/campl-ng/components/inpage/navigation/navigation.html">In Page Components</a>
+        <a href="/demo/campl-ng/components/inpage/content/content.html">Content</a>
         
         </li>
       
@@ -445,7 +445,117 @@
           
           <div class="content-padding">
             
-            
+
+
+  
+<div class="clearfix">
+  <ul class="nav nav-pills" role="tablist">
+    <li class="nav-item">
+      <a href="#tab1" class="nav-link active" role="tab" data-toggle="tab">Active</a>
+    </li>
+    <li class="nav-item">
+      <a href="#tab2" class="nav-link" role="tab" data-toggle="tab">Link</a>
+    </li>
+    <li class="nav-item">
+      <a href="#tab3" class="nav-link" role="tab" data-toggle="tab">Another Link</a>
+    </li>
+    <li class="nav-item">
+      <span class="nav-link disabled" role="tab">Disabled</a>
+    </li>
+  </ul>
+</div>
+<div class="tab-content">
+  <div role="tabpanel" class="tab-pane active" id="tab1"><p>Tab 1 content</p></div>
+  <div role="tabpanel" class="tab-pane" id="tab2"><p>Tab 2 content</p></div>
+  <div role="tabpanel" class="tab-pane" id="tab3"><p>Tab 3 content</p></div>
+</div>
+
+  <br>
+  <pre>
+    <code class="html">
+&lt;div class=&#34;clearfix&#34;&gt;
+  &lt;ul class=&#34;nav nav-pills&#34; role=&#34;tablist&#34;&gt;
+    &lt;li class=&#34;nav-item&#34;&gt;
+      &lt;a href=&#34;#tab1&#34; class=&#34;nav-link active&#34; role=&#34;tab&#34; data-toggle=&#34;tab&#34;&gt;Active&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;nav-item&#34;&gt;
+      &lt;a href=&#34;#tab2&#34; class=&#34;nav-link&#34; role=&#34;tab&#34; data-toggle=&#34;tab&#34;&gt;Link&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;nav-item&#34;&gt;
+      &lt;a href=&#34;#tab3&#34; class=&#34;nav-link&#34; role=&#34;tab&#34; data-toggle=&#34;tab&#34;&gt;Another Link&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&#34;nav-item&#34;&gt;
+      &lt;span class=&#34;nav-link disabled&#34; role=&#34;tab&#34;&gt;Disabled&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;tab-content&#34;&gt;
+  &lt;div role=&#34;tabpanel&#34; class=&#34;tab-pane active&#34; id=&#34;tab1&#34;&gt;&lt;p&gt;Tab 1 content&lt;/p&gt;&lt;/div&gt;
+  &lt;div role=&#34;tabpanel&#34; class=&#34;tab-pane&#34; id=&#34;tab2&#34;&gt;&lt;p&gt;Tab 2 content&lt;/p&gt;&lt;/div&gt;
+  &lt;div role=&#34;tabpanel&#34; class=&#34;tab-pane&#34; id=&#34;tab3&#34;&gt;&lt;p&gt;Tab 3 content&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code>
+  </pre>
+
+
+
+
+  
+<div class="row">
+  <div class="col-md-4">
+    <ul class="nav nav-pills nav-stacked" role="tablist">
+      <li class="nav-item">
+        <a href="#tab1a" class="nav-link active" role="tab" data-toggle="tab">Active</a>
+      </li>
+      <li class="nav-item">
+        <a href="#tab2a" class="nav-link" role="tab" data-toggle="tab">Link</a>
+      </li>
+      <li class="nav-item">
+        <a href="#tab3a" class="nav-link" role="tab" data-toggle="tab">Another Link</a>
+      </li>
+      <li class="nav-item">
+        <span class="nav-link disabled" role="tab">Disabled</a>
+      </li>
+    </ul>
+  </div>
+  <div class="tab-content col-md-8">
+    <div role="tabpanel" class="tab-pane active" id="tab1a"><p>Tab 1 content</p></div>
+    <div role="tabpanel" class="tab-pane" id="tab2a"><p>Tab 2 content</p></div>
+    <div role="tabpanel" class="tab-pane" id="tab3a"><p>Tab 3 content</p></div>
+  </div>
+</div>
+
+  <br>
+  <pre>
+    <code class="html">
+&lt;div class=&#34;row&#34;&gt;
+  &lt;div class=&#34;col-md-4&#34;&gt;
+    &lt;ul class=&#34;nav nav-pills nav-stacked&#34; role=&#34;tablist&#34;&gt;
+      &lt;li class=&#34;nav-item&#34;&gt;
+        &lt;a href=&#34;#tab1a&#34; class=&#34;nav-link active&#34; role=&#34;tab&#34; data-toggle=&#34;tab&#34;&gt;Active&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&#34;nav-item&#34;&gt;
+        &lt;a href=&#34;#tab2a&#34; class=&#34;nav-link&#34; role=&#34;tab&#34; data-toggle=&#34;tab&#34;&gt;Link&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&#34;nav-item&#34;&gt;
+        &lt;a href=&#34;#tab3a&#34; class=&#34;nav-link&#34; role=&#34;tab&#34; data-toggle=&#34;tab&#34;&gt;Another Link&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&#34;nav-item&#34;&gt;
+        &lt;span class=&#34;nav-link disabled&#34; role=&#34;tab&#34;&gt;Disabled&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;tab-content col-md-8&#34;&gt;
+    &lt;div role=&#34;tabpanel&#34; class=&#34;tab-pane active&#34; id=&#34;tab1a&#34;&gt;&lt;p&gt;Tab 1 content&lt;/p&gt;&lt;/div&gt;
+    &lt;div role=&#34;tabpanel&#34; class=&#34;tab-pane&#34; id=&#34;tab2a&#34;&gt;&lt;p&gt;Tab 2 content&lt;/p&gt;&lt;/div&gt;
+    &lt;div role=&#34;tabpanel&#34; class=&#34;tab-pane&#34; id=&#34;tab3a&#34;&gt;&lt;p&gt;Tab 3 content&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code>
+  </pre>
+
+
+
           </div>
         </div>
         

@@ -6485,27 +6485,27 @@ a.bg-danger:focus, a.bg-danger:hover {
 .fa-fonticons:before {
   content: ""; }
 
-.nav:not(.nav-global):not(.nav-local) .nav-item .nav-link {
+.nav:not(.nav-global):not(.nav-local):not(.nav-side) .nav-item .nav-link {
   font-size: 19px;
   font-weight: 200;
   padding: 8px 12px;
   line-height: 18px; }
-.nav:not(.nav-global):not(.nav-local) .nav-item .nav-link:not(.disabled) {
+.nav:not(.nav-global):not(.nav-local):not(.nav-side) .nav-item .nav-link:not(.disabled) {
   color: #28828a; }
-  .nav:not(.nav-global):not(.nav-local) .nav-item .nav-link:not(.disabled):not(.active):hover {
+  .nav:not(.nav-global):not(.nav-local):not(.nav-side) .nav-item .nav-link:not(.disabled):not(.active):hover {
     background-color: #eee;
     color: #28828a; }
-  .nav:not(.nav-global):not(.nav-local) .nav-item .nav-link:not(.disabled).active {
+  .nav:not(.nav-global):not(.nav-local):not(.nav-side) .nav-item .nav-link:not(.disabled).active {
     background-color: #28828a;
     color: #fff; }
-.nav:not(.nav-global):not(.nav-local) .nav-item .nav-link.disabled {
+.nav:not(.nav-global):not(.nav-local):not(.nav-side) .nav-item .nav-link.disabled {
   color: #777; }
-.nav:not(.nav-global):not(.nav-local).nav-tabs {
+.nav:not(.nav-global):not(.nav-local):not(.nav-side).nav-tabs {
   border-bottom: 2px solid #28828a;
   padding-left: 20px; }
-  .nav:not(.nav-global):not(.nav-local).nav-tabs .nav-item {
+  .nav:not(.nav-global):not(.nav-local):not(.nav-side).nav-tabs .nav-item {
     margin-bottom: 0px; }
-    .nav:not(.nav-global):not(.nav-local).nav-tabs .nav-item .nav-link {
+    .nav:not(.nav-global):not(.nav-local):not(.nav-side).nav-tabs .nav-item .nav-link {
       border: none; }
 
 blockquote {

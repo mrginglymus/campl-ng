@@ -45,10 +45,13 @@ def make_html():
       ('Lists', 'core_elements/lists.html', None, None),
     )),
     ('In Page Components', None, None, (
-      ('Tables', 'components/inpage/tables.html', None, None),
-      ('Tabs', 'components/inpage/tabs.html', None, None),
-      ('Pills', 'components/inpage/pills.html', None, None),
-      ('Pagination', 'components/inpage/pagination.html', None, None),
+      ('Navigation', 'components/inpage/navigation/navigation.html', None, (
+        ('Tables', 'components/inpage/navigation/tables.html', None, None),
+        ('Tabs', 'components/inpage/navigation/tabs.html', None, None),
+        ('Pills', 'components/inpage/navigation/pills.html', None, None),
+        ('Pagination', 'components/inpage/navigation/pagination.html', None, None),
+      )),
+      ('Content', 'components/inpage/content/content.html', None, None)
     )),
   ]
   
@@ -62,7 +65,7 @@ def make_html():
 
   env = Environment(loader=FileSystemLoader('templates'))
   
-  def render_node(title, page, context, node, breadcrumb):
+  def render_node(title, page, context, node, breadcrumb, siblings, uncles=None, parent=None, root=False):
     breadcrumb.append((title, page, node))
     if page:
       template = env.get_template(page)
@@ -70,6 +73,34 @@ def make_html():
       context.update(base_context)
       context['breadcrumb'] = breadcrumb
       context['title'] = title
+      
+      # work out the side nav
+      if root:
+        context['menu_parent'] = (title, page)
+        context['menu_breadcrumb'] = []
+        context['menu_siblings'] = siblings
+        if node:
+          context['menu_children'] = node
+        else:
+          context['menu_children'] = None
+      else:
+        if node: #ie, it's not a leaf
+          context['menu_parent'] = (title, page)
+          context['menu_children'] = node
+          context['menu_siblings'] = siblings
+          context['menu_breadcrumb'] = breadcrumb[:-1]
+        else: # it is a leaf!
+          context['menu_parent'] = parent
+          context['menu_children'] = siblings
+          context['menu_siblings'] = uncles
+          context['menu_breadcrumb'] = breadcrumb[:-2]
+        
+      
+      
+      
+      
+      
+      #context['siblings'] = siblings
       dest = os.path.join('dist', page)
       if not os.path.exists(os.path.dirname(dest)):
         os.makedirs(os.path.dirname(dest))
@@ -77,7 +108,7 @@ def make_html():
         fh.write(template.render(**context))
     if node:
       for t, p, c, n in node:
-        render_node(t, p, c, n, breadcrumb)
+        render_node(t, p, c, n, breadcrumb, node, uncles=siblings, parent=(title, page))
     breadcrumb.pop()
   
   
@@ -98,7 +129,7 @@ def make_html():
   
   for title, page, context, node in menu:
     breadcrumb = []
-    render_node(title, page, context, node, breadcrumb)
+    render_node(title, page, context, node, breadcrumb, menu, root=True)
 
 
 def deploy():
