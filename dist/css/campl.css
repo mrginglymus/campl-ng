@@ -6515,32 +6515,13 @@ blockquote {
   font-family: Georgia, "sans serif";
   font-size: 19px;
   line-height: 22.5px;
-  font-weight: 300; }
+  font-weight: 300;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAARCAYAAAA/mJfHAAAAnElEQVQ4y2NgwA7KgXg3A2EgCMQzgbgDl+QZIP4PxeV4DDIG4ndIao3xGfQfl41YDAKx05AVdKAZFIrHVciW3kV3lRKaQfi8l4am1hhdQQeaTQxEumomIQUdBGKPYFAgK0jDY5gLmloldAXo4eVCQngRtG0mNALKsRhcjiWiYFgJm2H4YrUcj1qXUcMGgWHG0LILG07Dks5wqTUGADf4oD70NYA1AAAAAElFTkSuQmCC) no-repeat top left; }
   blockquote p {
     padding-right: 25px;
     margin-bottom: 10px; }
-  blockquote p:first-child:before {
-    display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    content: "";
-    position: relative;
-    right: 25px;
-    margin-right: -15px; }
-  blockquote p:last-of-type:after {
-    display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    content: "";
-    float: right;
-    position: relative;
-    left: 25px; }
+  blockquote p:last-of-type {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAASCAYAAAC5DOVpAAAApElEQVQ4y+2SXQ2AMAyEawEL0zILWJiFWcDCLNTCLGABC1jgJ7CkOdaWRx645B7Ivlx/KNGldDgrRmlcakA9vClGaVz9wz4SNt0fpxcnrAqvvTC8owasZEtOxD2geNWE5BS9A6dZAMUIGmAdCYHgAUIJ2IAAw74Go6vFWgdWykZXBdgoR2N4ZCUkwk4fRQPcCxvjjW+6z3dgJl/tsCM5v/qNVG4HAt6hPQ9Qu8UAAAAASUVORK5CYII=) no-repeat bottom right; }
   blockquote cite {
     color: #999999;
     font-size: 13px;
