@@ -65,9 +65,17 @@ def make_html():
 
   env = Environment(loader=FileSystemLoader('templates'))
   
+  def get_page(page, children):
+    if page:
+      return page
+    elif children:
+      return get_page(children)
+    else:
+      return ''
+  
   def render_page(title, page, context, children, breadcrumb, siblings, uncles=None, parent=None, root=False):
     
-    breadcrumb.append((title, page))
+    breadcrumb.append((title, page, children))
     
     if page:
       template = env.get_template(page)

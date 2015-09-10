@@ -7,7 +7,7 @@
     <li>
       <a href="{{ ROOT_URL }}/">{{ SITE_NAME }}</a>
     </li>
-    {% for title, page in BREADCRUMB %}
+    {% for title, page, children in BREADCRUMB %}
       {% if page and not loop.last %}
       <li>
         <a href="{{ ROOT_URL }}/{{ page }}">{{ title }}</a>
