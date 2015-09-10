@@ -48,7 +48,7 @@
         color: #5a5a5a;
       }
       
-      &[data-toggle="collapse"]:not(.collapsed) {
+      &[data-toggle="tab"].active {
         background-color: #171717;
         margin-bottom: -1px;
         padding-bottom: 26px;
