@@ -48,6 +48,7 @@ def make_html():
       ('Tables', 'components/inpage/tables.html', None, None),
       ('Tabs', 'components/inpage/tabs.html', None, None),
       ('Pills', 'components/inpage/pills.html', None, None),
+      ('Pagination', 'components/inpage/pagination.html', None, None),
     )),
   ]
   

@@ -265,7 +265,7 @@
     
       
       <li class="active">
-        Tables
+        Pagination
       </li>
       
     
@@ -359,7 +359,7 @@
     <div class="col-md-9 col-md-offset-3">
     
       <div>
-        <h1>Tables</h1>
+        <h1>Pagination</h1>
       </div>
     </div>
   </div>
@@ -402,7 +402,11 @@
         <ul class="list-unstyled">
         
           
-          <li><span>Tables</span></li>
+          <li>
+            
+            <a href="/demo/campl-ng/components/inpage/tables.html">Tables</a>
+            
+          </li>
           
         
           
@@ -422,11 +426,7 @@
           
         
           
-          <li>
-            
-            <a href="/demo/campl-ng/components/inpage/pagination.html">Pagination</a>
-            
-          </li>
+          <li><span>Pagination</span></li>
           
         
         </ul>
@@ -466,93 +466,91 @@
           
           <div class="content-padding">
             
-<table class="table table-striped table-bordered table-hover">
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Salary</th>
-      <th>Reference</th>
-      <th>Closes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row" >
-        <a href="http://www.jobs.cam.ac.uk/job/531/" target="_blank">Associate Specialty Director in Palliative Care</a><br />
-        Department of Public Health and Primary Care, The Primary Care Unit
-      </th>
-      <td>
-        £30,992-£53,663 pa
-      </td>
-      <td>
-        SN00445
-      </td>
-      <td>
-        27 August 2012
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">
-        <a href="http://www.jobs.cam.ac.uk/job/154/" target="_blank">Clinical Lecturer in Anaesthesia&nbsp;</a><br />
-        Department of Medicine, Division of Anaesthesia
-      </th>
-      <td>
-        £30,992-£53,663 pa
-      </td>
-      <td>
-        RU00119
-      </td>
-      <td>
-        20 August 2012
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">
-        <a href="http://www.jobs.cam.ac.uk/job/507/" target="_blank">Clinical Lecturer in Medical Genetics or Public Health</a><br />
-        Department of Public Health and Primary Care, The Primary Care Unit
-      </th>
-      <td>
-        £30,992-£53,663 pa
-      </td>
-      <td>
-        SN00423
-      </td>
-      <td>
-        27 August 2012
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">
-        <a href="http://www.jobs.cam.ac.uk/job/170/" target="_blank">Clinical Lecturer in Medical Oncology</a><br />
-        Department of Oncology
-      </th>
-      <td>
-        £30,992-£53,663 pa
-      </td>
-      <td>
-        RD00131
-      </td>
-      <td>
-        5 October 2012
-      </td>
-    </tr>
-    <tr>
-      <th scope="row"><a href="http://www.jobs.cam.ac.uk/job/-16982/" target="_blank">Lecturer in Criminology</a><br />
-        Institute of Criminology
-      </th>
-      <td>
-        £37,012-£46,846 pa
-      </td>
-      <td>
-        JL16982
-      </td>
-      <td>
-        31 July 2012<br />
-      </td>
-    </tr>
-  </tbody>
-  </table>
-            
+
+
+  
+<nav>
+  <ul class="pagination">
+    <li class="active"><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><span class="elipsis">...</span></li>
+    <li><a href="#">21</a></li>
+    <li class="next">
+      <a href="#">
+        <span class="fa fa-angle-right fa-lg"></span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+  <br>
+  <pre>
+    <code class="html">
+&lt;nav&gt;
+  &lt;ul class=&#34;pagination&#34;&gt;
+    &lt;li class=&#34;active&#34;&gt;&lt;a href=&#34;#&#34;&gt;1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#&#34;&gt;2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span class=&#34;elipsis&#34;&gt;...&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#&#34;&gt;21&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&#34;next&#34;&gt;
+      &lt;a href=&#34;#&#34;&gt;
+        &lt;span class=&#34;fa fa-angle-right fa-lg&#34;&gt;&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+</code>
+  </pre>
+
+
+
+  
+<nav>
+  <ul class="pagination">
+    <li class="previous">
+      <a href="#">
+        <span aria-hidden="true" class="fa fa-angle-left fa-lg"></span>
+      </a>
+    </li>
+    <li><a href="#">1</a></li>
+    <li class="active"><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li class="next">
+      <a href="#">
+        <span class="fa fa-angle-right fa-lg"></span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+  <br>
+  <pre>
+    <code class="html">
+&lt;nav&gt;
+  &lt;ul class=&#34;pagination&#34;&gt;
+    &lt;li class=&#34;previous&#34;&gt;
+      &lt;a href=&#34;#&#34;&gt;
+        &lt;span aria-hidden=&#34;true&#34; class=&#34;fa fa-angle-left fa-lg&#34;&gt;&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#&#34;&gt;1&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&#34;active&#34;&gt;&lt;a href=&#34;#&#34;&gt;2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#&#34;&gt;3&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#&#34;&gt;4&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#&#34;&gt;5&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&#34;next&#34;&gt;
+      &lt;a href=&#34;#&#34;&gt;
+        &lt;span class=&#34;fa fa-angle-right fa-lg&#34;&gt;&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+</code>
+  </pre>
+
+
 
           </div>
         </div>
