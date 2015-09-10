@@ -6,7 +6,7 @@
       padding: 8px 12px;
       line-height: 18px;
     }
-    &:not(.disabled) .nav-link {
+    .nav-link:not(.disabled) {
       color: map-get($theme, lighter);
       
       &:not(.active):hover {
@@ -19,7 +19,7 @@
         color: #fff;
       }
     }
-    &.disabled .nav-link {
+    .nav-link.disabled {
       color: #777;
     }
   }

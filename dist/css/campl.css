@@ -6490,15 +6490,15 @@ a.bg-danger:focus, a.bg-danger:hover {
   font-weight: 200;
   padding: 8px 12px;
   line-height: 18px; }
-.nav:not(.nav-global):not(.nav-local) .nav-item:not(.disabled) .nav-link {
+.nav:not(.nav-global):not(.nav-local) .nav-item .nav-link:not(.disabled) {
   color: #28828a; }
-  .nav:not(.nav-global):not(.nav-local) .nav-item:not(.disabled) .nav-link:not(.active):hover {
+  .nav:not(.nav-global):not(.nav-local) .nav-item .nav-link:not(.disabled):not(.active):hover {
     background-color: #eee;
     color: #28828a; }
-  .nav:not(.nav-global):not(.nav-local) .nav-item:not(.disabled) .nav-link.active {
+  .nav:not(.nav-global):not(.nav-local) .nav-item .nav-link:not(.disabled).active {
     background-color: #28828a;
     color: #fff; }
-.nav:not(.nav-global):not(.nav-local) .nav-item.disabled .nav-link {
+.nav:not(.nav-global):not(.nav-local) .nav-item .nav-link.disabled {
   color: #777; }
 .nav:not(.nav-global):not(.nav-local).nav-tabs {
   border-bottom: 2px solid #28828a;
