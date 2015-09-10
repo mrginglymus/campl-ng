@@ -31,7 +31,7 @@ def make_html():
   
   HOME_PAGE = 'layouts/frontpage.html'
   
-  menu = [
+  pages = [
     ('About', 'demo.html', {'image': 'placeholder.jpg'}, None),
     ('Page Layouts', 'layouts/overview.html', None, (
       ('Subsection with navigation', 'layouts/subnav.html', None, None),
@@ -56,59 +56,52 @@ def make_html():
   ]
   
   base_context = {
-    'menu': menu,
     'ROOT_URL': RELEASE_URL,
     'SITE_NAME': SITE_NAME,
     'HOME_PAGE': HOME_PAGE,
     'JS': JS,
+    'MENU': pages,
   }
 
   env = Environment(loader=FileSystemLoader('templates'))
   
-  def render_node(title, page, context, node, breadcrumb, siblings, uncles=None, parent=None, root=False):
-    breadcrumb.append((title, page, node))
+  def render_page(title, page, context, children, breadcrumb, siblings, uncles=None, parent=None, root=False):
+    
+    breadcrumb.append((title, page))
+    
     if page:
       template = env.get_template(page)
       context = context or {}
       context.update(base_context)
-      context['breadcrumb'] = breadcrumb
-      context['title'] = title
+      context['BREADCRUMB'] = breadcrumb
+      context['TITLE'] = title
       
       # work out the side nav
       if root:
-        context['menu_parent'] = (title, page)
-        context['menu_breadcrumb'] = []
-        context['menu_siblings'] = siblings
-        if node:
-          context['menu_children'] = node
-        else:
-          context['menu_children'] = None
+        context['SIDE_MENU_PARENT'] = (title, page)
+        context['SIDE_MENU_BREADCRUMB'] = []
+        context['SIDE_MENU_SIBLINGS'] = siblings
+        context['SIDE_MENU_CHILDREN'] = children
       else:
-        if node: #ie, it's not a leaf
-          context['menu_parent'] = (title, page)
-          context['menu_children'] = node
-          context['menu_siblings'] = siblings
-          context['menu_breadcrumb'] = breadcrumb[:-1]
+        if children: #ie, it's not a leaf
+          context['SIDE_MENU_PARENT'] = (title, page)
+          context['SIDE_MENU_CHILDREN'] = children
+          context['SIDE_MENU_SIBLINGS'] = siblings
+          context['SIDE_MENU_BREADCRUMB'] = breadcrumb[:-1]
         else: # it is a leaf!
-          context['menu_parent'] = parent
-          context['menu_children'] = siblings
-          context['menu_siblings'] = uncles
-          context['menu_breadcrumb'] = breadcrumb[:-2]
-        
+          context['SIDE_MENU_PARENT'] = (parent[0], parent[1])
+          context['SIDE_MENU_CHILDREN'] = siblings
+          context['SIDE_MENU_SIBLINGS'] = uncles
+          context['SIDE_MENU_BREADCRUMB'] = breadcrumb[:-2]
       
-      
-      
-      
-      
-      #context['siblings'] = siblings
       dest = os.path.join('dist', page)
       if not os.path.exists(os.path.dirname(dest)):
         os.makedirs(os.path.dirname(dest))
       with codecs.open(dest, 'wb', 'utf-8') as fh:
         fh.write(template.render(**context))
-    if node:
-      for t, p, c, n in node:
-        render_node(t, p, c, n, breadcrumb, node, uncles=siblings, parent=(title, page))
+    if children:
+      for t, p, c, n in children:
+        render_page(t, p, c, n, breadcrumb, siblings=children, uncles=siblings, parent=(title, page))
     breadcrumb.pop()
   
   
@@ -127,9 +120,9 @@ def make_html():
     fh.write(template.render(**context))
   
   
-  for title, page, context, node in menu:
+  for title, page, context, children in pages:
     breadcrumb = []
-    render_node(title, page, context, node, breadcrumb, menu, root=True)
+    render_page(title, page, context, children, breadcrumb, pages, root=True)
 
 
 def deploy():

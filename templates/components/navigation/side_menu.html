@@ -3,14 +3,7 @@
     <li class="nav-item">
       <a class="nav-link" href="{{ ROOT_URL }}">{{ SITE_NAME }}</a>
     </li>
-    {% if breadcrumb|length == 1 %}
-    {% set LOOP_UNTIL = 1 %}
-    {% elif breadcrumb[-1][2] %}
-    {% set LOOP_UNTIL = 1  %}
-    {% else %}
-    {% set LOOP_UNTIL = 2 %}
-    {% endif %}
-    {% for title, page, node in menu_breadcrumb %}
+    {% for title, page in SIDE_MENU_BREADCRUMB %}
       <li class="nav-item">
         <a class="nav-link" href="{{ ROOT_URL }}/{{ page }}">{{ title }}</a>
       </li>
@@ -20,32 +13,30 @@
   
   <ul class="list-unstyled">
     <li>
-      {% if menu_parent[1] %}
-      <a href="{{ ROOT_URL }}/{{ menu_parent[1] }}">{{ menu_parent[0] }}</a>
+      {% if SIDE_MENU_PARENT[1] %}
+      <a href="{{ ROOT_URL }}/{{ SIDE_MENU_PARENT[1] }}">{{ SIDE_MENU_PARENT[0] }}</a>
       {% else %}
-      <span> {{ menu_parent[0] }}</span>
+      <span>{{ SIDE_MENU_PARENT[0] }}</span>
       {% endif %}
-      {% if menu_children %}
+      {% if SIDE_MENU_CHILDREN %}
         <ul class="list-unstyled">
-          {% for title, page, context, node in menu_children %}
-            {% if page == breadcrumb[-1][1] %}
+          {% for title, page, context, children in SIDE_MENU_CHILDREN %}
+            {% if page == BREADCRUMB[-1][1] %}
             <li><span>{{ title }}</span></li>
             {% else %}
-            <li>
-              <a href="{{ ROOT_URL }}/{{ page }}">{{ title }}</a>
-            </li>
+            <li><a href="{{ ROOT_URL }}/{{ page }}">{{ title }}</a></li>
             {% endif %}
           {% endfor %}
         </ul>
       {% endif %}
     </li>
-    {% for title, page, context, node in menu_siblings %}
-      {% if title != menu_parent[0] %}
+    {% for title, page, context, children in SIDE_MENU_SIBLINGS %}
+      {% if title != SIDE_MENU_PARENT[0] %}
         <li>
         {% if page %}
         <a href="{{ ROOT_URL }}/{{ page }}">{{ title }}</a>
-        {% elif node and node[0][1] %}
-        <a href="{{ ROOT_URL }}/{{ node[0][1] }}">{{ title }}</a>
+        {% elif children and children[0][1] %}
+        <a href="{{ ROOT_URL }}/{{ children[0][1] }}">{{ title }}</a>
         {% endif %}
         </li>
       {% endif %}

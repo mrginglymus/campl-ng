@@ -1,4 +1,4 @@
-{% if breadcrumb %}
+{% if BREADCRUMB %}
 <div class="hidden-sm-down">
   <ol class="breadcrumb">
     <li>
@@ -7,7 +7,7 @@
     <li>
       <a href="{{ ROOT_URL }}/">{{ SITE_NAME }}</a>
     </li>
-    {% for title, page, node in breadcrumb %}
+    {% for title, page in BREADCRUMB %}
       {% if page and not loop.last %}
       <li>
         <a href="{{ ROOT_URL }}/{{ page }}">{{ title }}</a>
