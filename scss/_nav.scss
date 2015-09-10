@@ -1,18 +1,4 @@
-.nav.nav-tabs.nav-inpage {
-  border-bottom: 2px solid map-get($theme, lighter);
-  padding-left: 20px;
-  .nav-item {
-    margin-bottom: 0px;
-    
-    .nav-link {
-      border:none;
-    }
-    
-  }
-}
-
-
-.nav.nav-inpage {
+.nav:not(.nav-global):not(.nav-local) {
   .nav-item {
     .nav-link {
       font-size: 19px;
@@ -35,6 +21,18 @@
     }
     &.disabled .nav-link {
       color: #777;
+    }
+  }
+  &.nav-tabs {
+    border-bottom: 2px solid map-get($theme, lighter);
+    padding-left: 20px;
+    .nav-item {
+      margin-bottom: 0px;
+      
+      .nav-link {
+        border:none;
+      }
+      
     }
   }
 }
