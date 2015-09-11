@@ -19,23 +19,25 @@ class Page(object):
     self.vertical_breadcrumb_children = None
     self.vertical_breadcrumb_siblings = []
     
-  def render(self, base_context):
+  def render(self, base_context, colour):
     if self.source:
       template = env.get_template(self.source)
       context = {}
       context.update(**base_context)
       context['page'] = self
-      if not os.path.exists(os.path.dirname(self.destination)):
-        os.makedirs(os.path.dirname(self.destination))
-      with codecs.open(self.destination, 'wb', 'utf-8') as fh:
+      destination = os.path.join('dist', colour, self.url[1:], 'index.html')
+      
+      if not os.path.exists(os.path.dirname(destination)):
+        os.makedirs(os.path.dirname(destination))
+      with codecs.open(destination, 'wb', 'utf-8') as fh:
         fh.write(template.render(**context))
     for child in self.children:
-      child.render(base_context)
+      child.render(base_context, colour)
    
   
   @property
   def destination(self):
-    return os.path.join('dist', self.url[1:], 'index.html')
+    return os.path.join(self.url[1:], 'index.html')
   
   def update_url(self, root=None, parent=None):
     self.parent = parent
@@ -128,21 +130,13 @@ pages = [
   ]),
   Page('In Page Components', children=[
     Page('Navigation', 'components/inpage/navigation/navigation.html', children=[
-      Page('Tables', 'components/inpage/navigation/tables.html'),
       Page('Tabs', 'components/inpage/navigation/tabs.html'),
       Page('Pills', 'components/inpage/navigation/pills.html'),
       Page('Pagination', 'components/inpage/navigation/pagination.html'),
     ]),
-    Page('Content', 'components/inpage/content/content.html'),
-  ]),
-  Page('Themes', children=[
-    Page('Blue', 'themes/blue.html', context={'THEME_VARIENT':'blue'}),
-    Page('Turqouise', 'themes/turqouise.html', context={'THEME_VARIENT':'turqouise'}),
-    Page('Purple', 'themes/purple.html', context={'THEME_VARIENT':'purple'}),
-    Page('Green', 'themes/green.html', context={'THEME_VARIENT':'green'}),
-    Page('Orange', 'themes/orange.html', context={'THEME_VARIENT':'orange'}),
-    Page('Red', 'themes/red.html', context={'THEME_VARIENT':'red'}),
-    Page('Grey', 'themes/grey.html', context={'THEME_VARIENT':'grey'}),
+    Page('Content', children=[
+      Page('Tables', 'components/inpage/navigation/tables.html'),
+    ]),
   ]),
 ]
     

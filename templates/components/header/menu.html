@@ -24,5 +24,15 @@
       </li>
       {% endif %}
     {% endfor %}
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+        Theme Switcher
+      </a>
+      <div class="dropdown-menu">
+        {% for colour in COLOURS %}
+          <a href="{{ ROOT_URL|replace(THEME_VARIANT, colour) }}{% if page %}{{ page.url }}{% else %}/{% endif %}" class="dropdown-item">{{ colour|title }}</a>
+        {% endfor %}
+      </div>
+    </li>
   </ul>
 </nav>
