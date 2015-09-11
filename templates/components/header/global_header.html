@@ -1,9 +1,12 @@
 <nav class="navbar navbar-global">
   <div class="container">
+    <a class="open-sidebar hidden-lg-up" href="#sidebar-offcanvas" data-toggle="offcanvas">
+      <span class="fa fa-bars fa-2x">&nbsp;</span>
+    </a>
     <a href="http://www.cam.ac.uk/" class="navbar-brand">
       <img alt="University of Cambridge" src="{{ MEDIA_URL }}/img/logo.png">
     </a>
-    <ul class="nav navbar-nav nav-global">
+    <ul class="nav navbar-nav nav-global hidden-md-down">
       <li class="nav-item">
         <a class="nav-link" href="#global-header-drawer-study" data-toggle="tab" data-target="#global-header-drawer-study" data-parent="#global-header-drawers">Study at Cambridge</a>
       </li>
@@ -34,11 +37,11 @@
         <a class="dropdown-item" href="http://www.cam.ac.uk/email-and-phone-search">Email &amp; phone search</a>
       </div>
     </div>
-    <!-- end quiclinks -->
+    <!-- end quicklinks -->
   </div>
 </nav>
 <div id="global-header-drawers">
-  <div class="tab-content global-header-drawer">
+  <div class="tab-content global-header-drawer sidebar-offcanvas">
     {% include 'components/header/global_header_drawer_study.html' %}
     {% include 'components/header/global_header_drawer_about.html' %}
   </div>

@@ -1,3 +1,5 @@
+@import "compass/css3/transition";
+
 .navbar-global {
   font-family: $font-family-sans-serif-extra;
   background-color:black;
@@ -156,6 +158,78 @@
     padding: 15px 0px;
     &:not(:last-child) {
       border-bottom:1px solid #323232;
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .offcanvas {
+    background-color: #323232;
+    position: relative;
+    @include transition-property(all);
+    @include transition-duration(0.25s);
+    @include transition-timing-function(ease-out);
+  }
+  
+  .offcanvas-left {
+    left: 0;
+    &.active {
+      left: 260px;
+    }
+    .sidebar-offcanvas {
+      left: -260px;
+    }
+  }
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    width: 260px;
+  }
+  
+  .navbar-global .navbar-brand {
+    position: absolute;
+    left: 50%;
+    margin-left: -89px;
+  }
+  
+  .open-sidebar {
+    display: block;
+    float: left;
+    margin: 15px;
+    background-color: #323232;
+    color: #999;
+    @include hover-focus {
+      color: #999;
+      background-color: #242424;
+    }
+    span {
+      padding: 4px;
+    }
+  }
+  
+  #global-header-drawers .tab-pane {
+    background-color: #323232;
+    display: block;
+    [class*='col-'] {
+      width: 100%;
+      border: none;
+    }
+    ul {
+      padding: 0;
+    }
+    li:before {
+      display: none;
+    }
+    li {
+      padding: 0;
+    }
+    a {
+      padding: 10px 20px;
+      display: block;
+      @include hover-focus {
+        background-color: #171717;
+        text-decoration: none;
+      }
     }
   }
 }

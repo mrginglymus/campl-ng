@@ -36,13 +36,13 @@ def clean_dist():
 def make_css():
 
   if not os.path.exists(CSS_DIST):
-    os.mkdirs(CSS_DIST)
+    os.makedirs(CSS_DIST)
   call(['sass', '--compass', 'scss/campl_turqouise.scss', 'dist/css/campl_turqouise.css'])
 
 def make_themes():
 
   if not os.path.exists(CSS_DIST):
-    os.mkdirs(CSS_DIST)
+    os.makedirs(CSS_DIST)
   for colour in COLOURS:
     call(['sass', '--compass', 'scss/campl_%s.scss'%colour, 'dist/css/campl_%s.css'%colour])
    
