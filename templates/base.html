@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/default.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
-    <link rel="stylesheet" href="{{ ROOT_URL }}/css/campl.css">
+    <link rel="stylesheet" href="{{ ROOT_URL }}/css/campl{% if THEME_VARIENT %}_{{ THEME_VARIENT }}{% endif %}.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     {% for src, dst in JS %}
     <script type="text/javascript" src="{{ ROOT_URL }}/js/{{ dst }}"></script>

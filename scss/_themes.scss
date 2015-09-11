@@ -1,4 +1,4 @@
-$theme-blue: (
+$theme-blue: ( //1
   darker:  #002e55,
   dark:    #003e74,
   primary: #004e8f,
@@ -8,7 +8,7 @@ $theme-blue: (
   paler:   #d2e4f3,
 );
 
-$theme-turqouise: (
+$theme-turqouise: ( //2
   darker:  #003a41,
   dark:    #106470,
   primary: #0c5963,
@@ -18,4 +18,52 @@ $theme-turqouise: (
   paler:   #d2f3e1,
 );
 
-$theme: $theme-turqouise;
+$theme-purple: ( //3
+  darker:  #35254a,
+  dark:    #422e5d,
+  primary: #612d70,
+  light:   #782c7e,
+  lighter: #8f2b8c,
+  pale:    #af95a3,
+  paler:   #f4d3e5,
+);
+
+$theme-green: ( //4
+  darker:  #222f16,
+  dark:    #304220,
+  primary: #355918,
+  light:   #4b7016,
+  lighter: #57831a,
+  pale:    #aab300,
+  paler:   #f4f6cd,
+);
+
+$theme-orange: ( //5
+  darker:  #772801,
+  dark:    #c44101,
+  primary: #ab3901,
+  light:   #d45812,
+  lighter: #df671d,
+  pale:    #f3bd48,
+  paler:   #f5e7ca,
+);
+
+$theme-red: ( //6
+  darker:  #6c112a,
+  dark:    #851735,
+  primary: #a51137,
+  light:   #be1741,
+  lighter: #d61746,
+  pale:    #eb99a9,
+  paler:   #f8e1e5,
+);
+
+$theme-grey: (
+  darker:  #2f2f2f,
+  dark:    #404040,
+  primary: #5f5f5f,
+  light:   #7d7777,
+  lighter: #8c8989,
+  pale:    #eae8e8,
+  paler:   #dbd9d9,
+);

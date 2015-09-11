@@ -16,7 +16,26 @@ def make_css():
 
   from subprocess import call
 
-  call(['sass', '--compass', 'scss/campl.scss', 'dist/css/campl.css'])
+  call(['sass', '--compass', 'scss/campl_turqouise.scss', 'dist/css/campl.css'])
+
+def make_themes():
+
+  from subprocess import call
+
+  COLOURS = [
+    'blue',
+    'green',
+    'grey',
+    'orange',
+    'purple',
+    'red',
+    'turqouise',
+  ]
+  
+  for colour in COLOURS:
+    call(['sass', '--compass', 'scss/campl_%s.scss'%colour, 'dist/css/campl_%s.css'%colour])
+   
+    
 
 def make_js():
 
@@ -52,6 +71,15 @@ def make_html():
         ('Pagination', 'components/inpage/navigation/pagination.html', None, None),
       )),
       ('Content', 'components/inpage/content/content.html', None, None)
+    )),
+    ('Themes', None, None, (
+      ('Blue', 'themes/blue.html', {'THEME_VARIENT':'blue'}, None),
+      ('Turqouise', 'themes/turqouise.html', {'THEME_VARIENT':'turqouise'}, None),
+      ('Purple', 'themes/purple.html', {'THEME_VARIENT':'purple'}, None),
+      ('Green', 'themes/green.html', {'THEME_VARIENT':'green'}, None),
+      ('Orange', 'themes/orange.html', {'THEME_VARIENT':'orange'}, None),
+      ('Red', 'themes/red.html', {'THEME_VARIENT':'red'}, None),
+      ('Grey', 'themes/grey.html', {'THEME_VARIENT':'grey'}, None),
     )),
   ]
   
