@@ -2,6 +2,7 @@
 
 import os
 import shutil
+from subprocess import call
 
 from local_settings import LOCAL_RELEASE_DIR, LOCAL_RELEASE_URL
 
@@ -21,6 +22,9 @@ COLOURS = [
   'red',
   'grey',
 ]
+CSS_DIST = os.path.join('dist', 'css')
+IMG_DIST = os.path.join('dist', 'img')
+JS_DIST = os.path.join('dist', 'js')
 
 def clean_dist():
   DIST = 'dist'
@@ -31,32 +35,24 @@ def clean_dist():
 
 def make_css():
 
-  from subprocess import call
-  CSS_DIST = os.path.join('dist', 'css')
-  if os.path.exists(CSS_DIST):
-    shutil.rmtree(CSS_DIST)
-  os.mkdir(CSS_DIST)
+  if not os.path.exists(CSS_DIST):
+    os.mkdirs(CSS_DIST)
   call(['sass', '--compass', 'scss/campl_turqouise.scss', 'dist/css/campl_turqouise.css'])
 
 def make_themes():
 
-  from subprocess import call
-  CSS_DIST = os.path.join('dist', 'css')
-  if os.path.exists(CSS_DIST):
-    shutil.rmtree(CSS_DIST)
-  os.mkdir(CSS_DIST)
+  if not os.path.exists(CSS_DIST):
+    os.mkdirs(CSS_DIST)
   for colour in COLOURS:
     call(['sass', '--compass', 'scss/campl_%s.scss'%colour, 'dist/css/campl_%s.css'%colour])
    
 def make_img():
-  IMG_DIST = os.path.join('dist', 'img')
   if os.path.exists(IMG_DIST):
     shutil.rmtree(IMG_DIST)
   shutil.copytree('img', IMG_DIST)
-  
+
 
 def make_js():
-  JS_DIST = os.path.join('dist', 'js')
   if os.path.exists(JS_DIST):
     shutil.rmtree(JS_DIST)
   os.mkdir(JS_DIST)
