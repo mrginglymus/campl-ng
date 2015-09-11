@@ -1,20 +1,17 @@
-{% if BREADCRUMB %}
+{% if page and page.horizontal_breadcrumb %}
 <div class="hidden-sm-down">
   <ol class="breadcrumb">
     <li>
       <a href="http://www.cam.ac.uk/"><span class="fa fa-home fa-lg">&nbsp;</span></a>
     </li>
-    <li>
-      <a href="{{ ROOT_URL }}/">{{ SITE_NAME }}</a>
-    </li>
-    {% for title, page, children in BREADCRUMB %}
-      {% if page and not loop.last %}
+    {% for page in page.horizontal_breadcrumb%}
+      {% if page[1] and not loop.last %}
       <li>
-        <a href="{{ ROOT_URL }}/{{ page }}">{{ title }}</a>
+        <a href="{{ ROOT_URL }}{{ page[1] }}">{{ page[0] }}</a>
       </li>
       {% else %}
       <li class="active">
-        {{ title }}
+        {{ page[0] }}
       </li>
       {% endif %}
     {% endfor %}

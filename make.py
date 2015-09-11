@@ -15,7 +15,10 @@ JS = (
 def make_css():
 
   from subprocess import call
-
+  CSS_DIST = os.path.join('dist', 'css')
+  if os.path.exists(CSS_DIST):
+    shutil.rmtree(CSS_DIST)
+  os.mkdir(CSS_DIST)
   call(['sass', '--compass', 'scss/campl_turqouise.scss', 'dist/css/campl.css'])
 
 def make_themes():
@@ -35,53 +38,28 @@ def make_themes():
   for colour in COLOURS:
     call(['sass', '--compass', 'scss/campl_%s.scss'%colour, 'dist/css/campl_%s.css'%colour])
    
-    
+def make_img():
+  IMG_DIST = os.path.join('dist', 'img')
+  if os.path.exists(IMG_DIST):
+    shutil.rmtree(IMG_DIST)
+  shutil.copytree('img', IMG_DIST)
+  
 
 def make_js():
-
+  JS_DIST = os.path.join('dist', 'js')
+  if os.path.exists(JS_DIST):
+    shutil.rmtree(JS_DIST)
+  os.mkdir(JS_DIST)
   for src, dst in JS:
     shutil.copy(src, os.path.join('dist', 'js', dst))
   
 def make_html():
 
   from jinja2 import FileSystemLoader, Environment
-
+  from pages import pages
   import codecs
   
   HOME_PAGE = 'layouts/frontpage.html'
-  
-  pages = [
-    ('About', 'demo.html', {'image': 'placeholder.jpg'}, None),
-    ('Page Layouts', 'layouts/overview.html', None, (
-      ('Subsection with navigation', 'layouts/subnav.html', None, None),
-      ('Subsection without navigation', 'layouts/subnonav.html', None, None),
-      ('Subsection without right column', 'layouts/subnocol.html', None, None),
-    )),
-    ('Core Elements', None, None, (
-      ('Typography', 'core_elements/typography.html', None, None),
-      ('Links & Buttons', 'core_elements/links_and_buttons.html', None, None),
-      ('Forms', 'core_elements/forms.html', None, None),
-      ('Lists', 'core_elements/lists.html', None, None),
-    )),
-    ('In Page Components', None, None, (
-      ('Navigation', 'components/inpage/navigation/navigation.html', None, (
-        ('Tables', 'components/inpage/navigation/tables.html', None, None),
-        ('Tabs', 'components/inpage/navigation/tabs.html', None, None),
-        ('Pills', 'components/inpage/navigation/pills.html', None, None),
-        ('Pagination', 'components/inpage/navigation/pagination.html', None, None),
-      )),
-      ('Content', 'components/inpage/content/content.html', None, None)
-    )),
-    ('Themes', None, None, (
-      ('Blue', 'themes/blue.html', {'THEME_VARIENT':'blue'}, None),
-      ('Turqouise', 'themes/turqouise.html', {'THEME_VARIENT':'turqouise'}, None),
-      ('Purple', 'themes/purple.html', {'THEME_VARIENT':'purple'}, None),
-      ('Green', 'themes/green.html', {'THEME_VARIENT':'green'}, None),
-      ('Orange', 'themes/orange.html', {'THEME_VARIENT':'orange'}, None),
-      ('Red', 'themes/red.html', {'THEME_VARIENT':'red'}, None),
-      ('Grey', 'themes/grey.html', {'THEME_VARIENT':'grey'}, None),
-    )),
-  ]
   
   base_context = {
     'ROOT_URL': RELEASE_URL,
@@ -92,54 +70,9 @@ def make_html():
   }
 
   env = Environment(loader=FileSystemLoader('templates'))
-  
-  def get_page(page, children):
-    if page:
-      return page
-    elif children:
-      return get_page(children)
-    else:
-      return ''
-  
-  def render_page(title, page, context, children, breadcrumb, siblings, uncles=None, parent=None, root=False):
-    
-    breadcrumb.append((title, page, children))
-    
-    if page:
-      template = env.get_template(page)
-      context = context or {}
-      context.update(base_context)
-      context['BREADCRUMB'] = breadcrumb
-      context['TITLE'] = title
-      
-      # work out the side nav
-      if root:
-        context['SIDE_MENU_PARENT'] = (title, page)
-        context['SIDE_MENU_BREADCRUMB'] = []
-        context['SIDE_MENU_SIBLINGS'] = siblings
-        context['SIDE_MENU_CHILDREN'] = children
-      else:
-        if children: #ie, it's not a leaf
-          context['SIDE_MENU_PARENT'] = (title, page)
-          context['SIDE_MENU_CHILDREN'] = children
-          context['SIDE_MENU_SIBLINGS'] = siblings
-          context['SIDE_MENU_BREADCRUMB'] = breadcrumb[:-1]
-        else: # it is a leaf!
-          context['SIDE_MENU_PARENT'] = (parent[0], parent[1])
-          context['SIDE_MENU_CHILDREN'] = siblings
-          context['SIDE_MENU_SIBLINGS'] = uncles
-          context['SIDE_MENU_BREADCRUMB'] = breadcrumb[:-2]
-      
-      dest = os.path.join('dist', page)
-      if not os.path.exists(os.path.dirname(dest)):
-        os.makedirs(os.path.dirname(dest))
-      with codecs.open(dest, 'wb', 'utf-8') as fh:
-        fh.write(template.render(**context))
-    if children:
-      for t, p, c, n in children:
-        render_page(t, p, c, n, breadcrumb, siblings=children, uncles=siblings, parent=(title, page))
-    breadcrumb.pop()
-  
+
+  for page in pages:
+    page.render(base_context)
   
   CAROUSEL = [
     ('carousel-1.png', RELEASE_URL, 'Lorem ipsum'),
@@ -155,11 +88,6 @@ def make_html():
   with codecs.open(dest, 'wb', 'utf-8') as fh:
     fh.write(template.render(**context))
   
-  
-  for title, page, context, children in pages:
-    breadcrumb = []
-    render_page(title, page, context, children, breadcrumb, pages, root=True)
-
 
 def deploy():
   if os.path.exists(RELEASE_DIR):
@@ -174,9 +102,16 @@ parser.add_argument('mode', nargs='*', default=['all'])
 
 args = parser.parse_args()
 
+if 'clean' in args.mode:
+  DIST = 'dist'
+  if os.path.exists(DIST):
+    shutil.rmtree(DIST)
+  os.mkdir(DIST)
+
 if 'all' in args.mode:
   make_js()
   make_css()
+  make_img()
   make_html()
   deploy()
   
@@ -192,9 +127,14 @@ if 'js' in args.mode:
   make_js()
   deploy()
 
+if 'img' in args.mode:
+  make_img()
+  deploy()
+  
 if 'themes' in args.mode:
   make_themes()
   deploy()
   
 if 'deploy' in args.mode:
   deploy()
+

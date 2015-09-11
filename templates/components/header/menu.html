@@ -3,22 +3,22 @@
     <li class="nav-item">
       <a class="nav-link" href="{{ ROOT_URL }}">Home</a>
     </li>
-    {% for title, page, context, children in MENU %}
-      {% if not children %}
-      <li class="nav-item{% if BREADCRUMB and title==BREADCRUMB[0][0] %} active{% endif %}">
-        <a class="nav-link" href="{{ ROOT_URL }}/{{ page }}">{{ title }}</a>
+    {% for _page in MENU %}
+      {% if not _page.children %}
+      <li class="nav-item{% if page and _page.title==page.horizontal_breadcrumb[1][0] %} active{% endif %}">
+        <a class="nav-link" href="{{ ROOT_URL }}{{ _page.url }}">{{ _page.title }}</a>
       </li>
       {% else %}
-      <li class="nav-item{% if BREADCRUMB and title==BREADCRUMB[0][0] %} active{% endif %} dropdown">
+      <li class="nav-item{% if page and _page.title==page.horizontal_breadcrumb[1][0] %} active{% endif %} dropdown">
         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
-          {{ title }}
+          {{ _page.title }}
         </a>
         <div class="dropdown-menu">
-          {% if page %}
-          <a href="{{ ROOT_URL }}/{{ page }}" class="dropdown-item">{{ title }} - Overview</a>
+          {% if _page.source %}
+          <a href="{{ ROOT_URL }}{{ _page.url }}" class="dropdown-item">{{ _page.title }} - Overview</a>
           {% endif %}
-          {% for title, page, context, children in children %}
-            <a href="{{ ROOT_URL }}/{{ page }}" class="dropdown-item">{{ title }}</a>
+          {% for __page in _page.children %}
+            <a href="{{ ROOT_URL }}{{ __page.url }}" class="dropdown-item">{{ __page.title }}</a>
           {% endfor %}
         </div>
       </li>
