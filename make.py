@@ -147,12 +147,14 @@ if 'img' in args.mode:
 if 'themes' in args.mode:
   make_themes()
   deploy()
-  
-if 'deploy' in args.mode:
-  deploy()
+
 
 if 'remote' in args.mode:
   from local_settings import REMOTE_RELEASE_URL, REMOTE_RELEASE_DIR
   make_html(REMOTE_RELEASE_URL)
   from subprocess import call
-  call(['rsync', '-rv', 'dist/', REMOTE_RELEASE_DIR])
+  call(['rsync', '-r', 'dist/', REMOTE_RELEASE_DIR])
+  make_html()
+  
+if 'deploy' in args.mode:
+  deploy()
