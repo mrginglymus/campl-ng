@@ -3379,14 +3379,14 @@ a.label:focus, a.label:hover {
   position: relative;
   display: block;
   padding: .75rem 1.25rem;
-  margin-bottom: -0.0833rem;
+  margin-bottom: -.0625rem;
   background-color: #fff;
-  border: 0.0833rem solid #ddd; }
+  border: 0.0625rem solid #ddd; }
   .list-group-item:last-child {
     margin-bottom: 0; }
 
 .list-group-flush .list-group-item {
-  border-width: 0.0833rem 0;
+  border-width: .0625rem 0;
   border-radius: 0; }
 
 a.list-group-item,
