@@ -5,11 +5,11 @@
     </li>
     {% for title, page, context, children in MENU %}
       {% if not children %}
-      <li class="nav-item{% if breadcrumb and title==breadcrumb[0][0] %} active{% endif %}">
+      <li class="nav-item{% if BREADCRUMB and title==BREADCRUMB[0][0] %} active{% endif %}">
         <a class="nav-link" href="{{ ROOT_URL }}/{{ page }}">{{ title }}</a>
       </li>
       {% else %}
-      <li class="nav-item{% if breadcrumb and title==breadcrumb[0][0] %} active{% endif %} dropdown">
+      <li class="nav-item{% if BREADCRUMB and title==BREADCRUMB[0][0] %} active{% endif %} dropdown">
         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
           {{ title }}
         </a>

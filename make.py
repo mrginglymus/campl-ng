@@ -191,6 +191,10 @@ if 'css' in args.mode:
 if 'js' in args.mode:
   make_js()
   deploy()
+
+if 'themes' in args.mode:
+  make_themes()
+  deploy()
   
 if 'deploy' in args.mode:
   deploy()
