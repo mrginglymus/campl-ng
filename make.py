@@ -36,7 +36,7 @@ def make_css():
   if os.path.exists(CSS_DIST):
     shutil.rmtree(CSS_DIST)
   os.mkdir(CSS_DIST)
-  call(['sass', '--compass', 'scss/campl_turqouise.scss', 'dist/css/campl.css'])
+  call(['sass', '--compass', 'scss/campl_turqouise.scss', 'dist/css/campl_turqouise.css'])
 
 def make_themes():
 
