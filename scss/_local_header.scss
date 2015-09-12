@@ -65,7 +65,7 @@
     }
   }
 
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(sm) {
     .navbar-local {
       background-color: map-get($theme, dark);
       li {
