@@ -1,7 +1,7 @@
 {% extends 'layouts/subnav.html' %}
 
-{% block content %}
-<table class="table table-striped table-bordered table-hover">
+{% macro make_table(classes) %}
+<table class="{{ classes }}">
   <thead>
     <tr>
       <th>Title</th>
@@ -86,6 +86,43 @@
       </td>
     </tr>
   </tbody>
-  </table>
+</table>
+{% endmacro %}
+
+{% block content %}
+<ul class="nav nav-tabs" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" href="#minimal" role="tab" data-toggle="tab">Minimal</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#bordered" role="tab" data-toggle="tab">Bordered</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#striped" role="tab" data-toggle="tab">Striped</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#hover" role="tab" data-toggle="tab">Hover</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#all" role="tab" data-toggle="tab">All</a>
+  </li>
+</ul>
+<div class="tab-content" style="margin-top: 20px;">
+  <div class="tab-pane active" id="minimal">
+    {{ make_table('table') }}
+  </div>
+  <div class="tab-pane" id="bordered">
+    {{ make_table('table table-bordered') }}
+  </div>
+  <div class="tab-pane" id="striped">
+    {{ make_table('table table-striped') }}
+  </div>
+  <div class="tab-pane" id="hover">
+    {{ make_table('table table-hover') }}
+  </div>
+  <div class="tab-pane" id="all">
+    {{ make_table('table table-bordered table-striped table-hover') }}
+  </div>
+</div>
             
 {% endblock %}

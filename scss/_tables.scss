@@ -1,4 +1,15 @@
-.table-striped {
+.table:not(.table-bordered) {
+  th, td {
+    border: none;
+  }
+  thead {
+    th, td {
+      border: none;
+    }
+  }
+}
+
+.table-bordered {
   border-bottom: 2px solid map-get($theme, lighter);
   thead th {
     background-color: map-get($theme, lighter);

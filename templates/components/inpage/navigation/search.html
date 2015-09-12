@@ -1,0 +1,13 @@
+{% extends 'layouts/subnav.html' %}
+
+{% block content %}
+<div class="inpage-search-container">
+  <form action="/" method="get">
+    <label for="search" class="sr-only">Search</label>
+    <div class="inpage-search input-group">
+      <input id="search" type="text" placeholder="Search..." name="search" class="form-control">
+      <button type="submit" class="input-group-addon"><span class="fa fa-search fa-2x"></span></button>
+    </div>
+  </form>
+</div>
+{% endblock %}

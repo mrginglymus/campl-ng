@@ -18,6 +18,7 @@ pages = Pages([
       Page('Tabs', 'components/inpage/navigation/tabs.html'),
       Page('Pills', 'components/inpage/navigation/pills.html'),
       Page('Pagination', 'components/inpage/navigation/pagination.html'),
+      Page('Search', 'components/inpage/navigation/search.html'),
     ]),
     Page('Content', children=[
       Page('Tables', 'components/inpage/content/tables.html'),
