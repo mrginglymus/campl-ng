@@ -129,7 +129,7 @@ pages = [
     Page('Lists', 'core_elements/lists.html'),
   ]),
   Page('In Page Components', children=[
-    Page('Navigation', 'components/inpage/navigation/navigation.html', children=[
+    Page('Navigation', children=[
       Page('Tabs', 'components/inpage/navigation/tabs.html'),
       Page('Pills', 'components/inpage/navigation/pills.html'),
       Page('Pagination', 'components/inpage/navigation/pagination.html'),
