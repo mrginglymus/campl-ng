@@ -4,3 +4,6 @@
 [submodule "lib/font-awesome"]
 	path = lib/font-awesome
 	url = git@github.com:mrginglymus/font-awesome.git
+[submodule "lib/datetimepicker"]
+	path = lib/datetimepicker
+	url = https://github.com/mrginglymus/bootstrap-datetimepicker.git

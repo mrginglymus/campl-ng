@@ -56,6 +56,10 @@
 
 @import "../lib/font-awesome/scss/font-awesome";
 
+// Bootstrap Datetimepicker
+
+@import "../lib/datetimepicker/src/sass/bootstrap-datetimepicker";
+
 // CamPL-ng components
 @import "nav";
 @import "typography";

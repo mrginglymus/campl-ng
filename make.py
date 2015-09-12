@@ -10,6 +10,7 @@ SITE_NAME = 'Campl-NG'
 
 JS = (
   ('lib/bootstrap/dist/js/bootstrap.js', 'bootstrap.js'),
+  ('lib/datetimepicker/src/js/bootstrap-datetimepicker.js', 'datetimepicker.js'),
   ('js/menu.js', 'menu.js'),
 )
 

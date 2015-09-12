@@ -13,6 +13,8 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
     <link rel="stylesheet" href="{{ MEDIA_URL }}/css/campl{% if THEME_VARIANT %}_{{ THEME_VARIANT }}{% endif %}.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/locale/en-gb.js"></script>
     {% for src, dst in JS %}
     <script type="text/javascript" src="{{ MEDIA_URL }}/js/{{ dst }}"></script>
     {% endfor %}

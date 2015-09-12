@@ -23,6 +23,7 @@ pages = Pages([
     Page('Content', children=[
       Page('Tables', 'components/inpage/content/tables.html'),
       Page('Alerts', 'components/inpage/content/alerts.html'),
+      Page('Date/Time Picker', 'components/inpage/content/datetimepicker.html'),
     ]),
   ]),
 ])

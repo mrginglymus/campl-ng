@@ -31,7 +31,12 @@
           </div>
         </div>
         {% if sidebar %}
-        {% include 'components/sidebar/sidebar.html' %}
+        {% from 'components/sidebar/sidebar.html' import sidebar %}
+        {% call sidebar() %}
+        {% block sidebar_content %}
+          {% include 'components/sidebar/related_links.html' %}
+        {% endblock %}
+        {% endcall %}
         {% endif %}
       </div>
     </div>

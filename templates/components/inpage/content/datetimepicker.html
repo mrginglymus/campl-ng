@@ -1,0 +1,23 @@
+{% extends 'layouts/subnav.html' %}
+
+{% block content %}
+<script type="text/javascript">
+$(document).ready(function() {
+  $('#datetimpicker').datetimepicker({
+    inline: true,
+    icons: {
+      time: "fa fa-clock-o",
+      date: "fa fa-calendar",
+      up: "fa fa-arrow-up",
+      down: "fa fa-arrow-down",
+      next: "fa fa-chevron-right",
+      previous: "fa fa-chevron-left",
+    }
+  });
+});
+</script>
+{% endblock %}
+
+{% block sidebar_content %}
+<div id="datetimpicker"></div>
+{% endblock %}
