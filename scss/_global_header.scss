@@ -70,6 +70,24 @@
   .navbar-divider {
     background-color: rgba(255,255,255,.075);
   }
+  
+  #global-search {
+    padding: 15px 0px;
+    input {
+      background-color: #343434;
+      color: #fff;
+      font-family: $font-family-sans-serif;
+      border: none;
+      padding: 7px 8px;
+    }
+    .input-group-addon {
+      background-color: #434343;
+      border: none;
+      color: #a3a3a3;
+    }
+  }
+  
+  
   #global-quicklinks {
     padding: 15px 0px;
     &> a {
