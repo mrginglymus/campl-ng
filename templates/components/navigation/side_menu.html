@@ -29,7 +29,7 @@
       {% endif %}
     </li>
     {% for _page in page.vertical_breadcrumb_siblings %}
-      {% if _page[0] != page.title %}
+      {% if _page[0] != page.vertical_breadcrumb_parent[0] %}
         <li>
         <a href="{{ ROOT_URL }}{{ _page[1] }}">{{ _page[0] }}</a>
         </li>
