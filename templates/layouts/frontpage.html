@@ -14,7 +14,12 @@
           {% endblock %}
         </div>
       </div>
-      {% include 'components/sidebar/sidebar.html' %}
+      {% from 'components/sidebar/sidebar.html' import sidebar %}
+      {% call sidebar() %}
+      {% block sidebar_content %}
+      {% include 'components/sidebar/related_links.html' %}
+      {% endblock %}
+      {% endcall %}
     </div>
   </div>
 {% include 'components/footer/local_footer.html' %}
