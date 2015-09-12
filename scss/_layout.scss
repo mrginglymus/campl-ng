@@ -19,3 +19,7 @@ html {
 * {
   min-width: 0;
 }
+
+div[class*='col-']:not([class*='offset']) {
+  width: 100%;
+}

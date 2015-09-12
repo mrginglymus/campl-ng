@@ -10,7 +10,6 @@ SITE_NAME = 'Campl-NG'
 
 JS = (
   ('lib/bootstrap/dist/js/bootstrap.js', 'bootstrap.js'),
-  ('lib/drilldown/dist/jquery.drilldown.js', 'drilldown.js'),
   ('js/menu.js', 'menu.js'),
 )
 

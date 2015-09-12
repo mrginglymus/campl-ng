@@ -1,0 +1,58 @@
+{% extends 'layouts/subnav.html' %}
+
+{% macro make_alert(type, title, icon, message, dismissable=false) %}
+<div class="alert alert-top alert-{{ type }}{% if dismissable %} alert-dismissable{% endif %}" role="alert">
+  {% if dismissable %}
+  <div class="close pull-right" data-dismiss="alert">&times;</div>
+  {% endif %}
+  <div class="row">
+    <div class="col-md-4">
+      <span class="fa fa-{{ icon }}"></span>
+      <span>{{ title }}:</span>
+    </div>
+    <div class="col-md-8">
+      {{ message }}
+    </div>
+  </div>
+</div>
+{% endmacro %}
+
+{% block unwrapped_content %}
+<div class="tab-content">
+  <div role="tabpanel" class="tab-pane active" id="success">
+    {{ make_alert('success', 'Success', 'check-circle', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.') }}
+  </div>
+  <div role="tabpanel" class="tab-pane" id="danger">
+    {{ make_alert('danger', 'Warning', 'exclamation-triangle', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.') }}
+  </div>
+  <div role="tabpanel" class="tab-pane" id="warning">
+    {{ make_alert('warning', 'Alert', 'exclamation-circle', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.') }}
+  </div>
+  <div role="tabpanel" class="tab-pane" id="info">
+    {{ make_alert('info', 'Information', 'info-circle', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.') }}
+  </div>
+  <div role="tabpanel" class="tab-pane" id="dismissable">
+    {{ make_alert('success', 'Success', 'check-circle', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.', dismissable=true) }}
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<ul class="nav nav-pills" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" href="#success" role="tab" data-toggle="tab">Success</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#danger" role="tab" data-toggle="tab">Danger</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#warning" role="tab" data-toggle="tab">Warning</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#info" role="tab" data-toggle="tab">Info</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#dismissable" role="tab" data-toggle="tab">Dismissable</a>
+  </li>
+</ul>
+{% endblock %}

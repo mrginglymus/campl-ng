@@ -20,7 +20,8 @@ pages = Pages([
       Page('Pagination', 'components/inpage/navigation/pagination.html'),
     ]),
     Page('Content', children=[
-      Page('Tables', 'components/inpage/navigation/tables.html'),
+      Page('Tables', 'components/inpage/content/tables.html'),
+      Page('Alerts', 'components/inpage/content/alerts.html'),
     ]),
   ]),
 ])

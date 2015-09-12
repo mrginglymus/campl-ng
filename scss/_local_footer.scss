@@ -6,7 +6,6 @@
   padding: 20px 0;
   
   [class*='col-'] {
-    width: 100%;
     @include media-breakpoint-up(md) {
       &:not(:last-of-type) {
         @include background(url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAADCAYAAABS3WWCAAAAFElEQVQIW2P8//9/PSMDAwMDmAAALHsDgGM05VYAAAAASUVORK5CYII=) 100% 0 repeat-y);
