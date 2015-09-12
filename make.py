@@ -5,6 +5,7 @@ import shutil
 from subprocess import call
 
 from local_settings import LOCAL_RELEASE_DIR, LOCAL_RELEASE_URL
+from quicklinks import QUICKLINKS
 
 SITE_NAME = 'Campl-NG'
 
@@ -81,6 +82,7 @@ def make_html(RELEASE_URL=LOCAL_RELEASE_URL):
       'JS': JS,
       'MENU': pages,
       'COLOURS': COLOURS,
+      'QUICKLINKS': QUICKLINKS,
     }
 
     env = Environment(loader=FileSystemLoader('templates'))
