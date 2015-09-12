@@ -71,23 +71,10 @@
     background-color: rgba(255,255,255,.075);
   }
   
-  #global-search {
-    padding: 15px 0px;
-    input {
-      background-color: #343434;
-      color: #fff;
-      font-family: $font-family-sans-serif;
-      border: none;
-      padding: 7px 8px;
-    }
-    .input-group-addon {
-      background-color: #434343;
-      border: none;
-      color: #a3a3a3;
-    }
-  }
-  
-  
+  .global-search {
+    margin-right: 15px;
+  }  
+
   #global-quicklinks {
     padding: 15px 0px;
     &> a {
@@ -136,6 +123,30 @@
         }
       }
     }
+  }
+}
+
+#global-search-drawer {
+  background-color:#000;
+  border-top: 1px solid #3f3f3f;
+  .global-search {
+    padding: 15px;
+  }
+}
+
+.global-search {
+  padding: 15px 0px;
+  input {
+    background-color: #343434;
+    color: #fff;
+    font-family: $font-family-sans-serif;
+    border: none;
+    padding: 7px 8px;
+  }
+  .input-group-addon {
+    background-color: #434343;
+    border: none;
+    color: #a3a3a3;
   }
 }
 
@@ -250,9 +261,8 @@
     margin-left: -89px;
   }
   
-  .open-sidebar {
+  .global-menu-button {
     display: block;
-    float: left;
     margin: 15px;
     padding: 1px 3px;
     background-color: #323232;
@@ -266,6 +276,7 @@
     }
   }
   
+
   #global-header-drawers .tab-pane {
     background-color: #323232;
     display: block;
