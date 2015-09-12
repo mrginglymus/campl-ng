@@ -1,38 +1,62 @@
-<nav class="navbar navbar-local container hidden-sm-down">
-  <ul class="nav navbar-nav nav-local">
-    <li class="nav-item">
-      <a class="nav-link" href="{{ ROOT_URL }}">Home</a>
-    </li>
-    {% for _page in MENU %}
-      {% if not _page.children %}
-      <li class="nav-item{% if page and _page.title==page.horizontal_breadcrumb[1][0] %} active{% endif %}">
-        <a class="nav-link" href="{{ ROOT_URL }}{{ _page.url }}">{{ _page.title }}</a>
+{% macro make_menu_child(page) %}
+  <li>
+    <a href="{{ ROOT_URL }}{{ page.url }}" class="dropdown-item">{{ page.title }}</a>
+    {% if page.children %}
+    <ul class="dropdown-menu">
+      {% for page in page.children %}
+        {{ make_menu_child(page) }}
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </li>
+{% endmacro %}
+<nav class="navbar navbar-local container">
+  <div class="navbar-toggler hidden-md-up">
+    <a href="#top-menu" data-toggle="collapse">
+      <span>Menu</span>
+      <span class="mobile-menu-button"></span>
+    </a>
+  </div>
+  <div class="collapse navbar-toggleable-sm" id="top-menu">
+    <ul class="nav navbar-nav nav-local">
+      <li class="nav-item">
+        <a class="nav-link" href="{{ ROOT_URL }}">Home</a>
       </li>
-      {% else %}
-      <li class="nav-item{% if page and _page.title==page.horizontal_breadcrumb[1][0] %} active{% endif %} dropdown">
+      {% for _page in MENU %}
+        {% if not _page.children %}
+        <li class="nav-item{% if page and _page.title==page.horizontal_breadcrumb[1][0] %} active{% endif %}">
+          <a class="nav-link" href="{{ ROOT_URL }}{{ _page.url }}">{{ _page.title }}</a>
+        </li>
+        {% else %}
+        <li class="nav-item{% if page and _page.title==page.horizontal_breadcrumb[1][0] %} active{% endif %} dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+            {{ _page.title }}
+          </a>
+          <ul class="dropdown-menu">
+            {% if _page.source %}
+            <li>
+              <a href="{{ ROOT_URL }}{{ _page.url }}" class="dropdown-item">{{ _page.title }} - Overview</a>
+            </li>
+            {% endif %}
+            {% for __page in _page.children %}
+              {{ make_menu_child(__page) }}
+            {% endfor %}
+          </ul>
+        </li>
+        {% endif %}
+      {% endfor %}
+      <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
-          {{ _page.title }}
+          Theme Switcher
         </a>
-        <div class="dropdown-menu">
-          {% if _page.source %}
-          <a href="{{ ROOT_URL }}{{ _page.url }}" class="dropdown-item">{{ _page.title }} - Overview</a>
-          {% endif %}
-          {% for __page in _page.children %}
-            <a href="{{ ROOT_URL }}{{ __page.url }}" class="dropdown-item">{{ __page.title }}</a>
+        <ul class="dropdown-menu">
+          {% for colour in COLOURS %}
+            <li>
+              <a href="{{ ROOT_URL|replace(THEME_VARIANT, colour) }}{% if page %}{{ page.url }}{% else %}/{% endif %}" class="dropdown-item">{{ colour|title }}</a>
+            </li>
           {% endfor %}
         </div>
       </li>
-      {% endif %}
-    {% endfor %}
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
-        Theme Switcher
-      </a>
-      <div class="dropdown-menu">
-        {% for colour in COLOURS %}
-          <a href="{{ ROOT_URL|replace(THEME_VARIANT, colour) }}{% if page %}{{ page.url }}{% else %}/{% endif %}" class="dropdown-item">{{ colour|title }}</a>
-        {% endfor %}
-      </div>
-    </li>
-  </ul>
+    </ul>
+  </div>
 </nav>

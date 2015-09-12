@@ -64,5 +64,48 @@
       }
     }
   }
-  
+
+  @include media-breakpoint-down(md) {
+    .navbar-local {
+      background-color: map-get($theme, dark);
+      li {
+        float: none;
+        background-color: map-get($theme, dark) !important;
+        @include hover-focus {
+          background-color: map-get($theme, primary) !important;
+        }
+      }
+      .dropdown-menu {
+        float: none;
+        position: static;
+      }
+        
+    }
+    .navbar-toggler {
+      background-color: map-get($theme, primary);
+      border:none;
+      padding: 0;
+      a {
+        color: #fff;
+        padding: 15px 25px;
+        display: block;
+        font-size: 18px;
+        line-height: 24px;
+        font-family: $font-family-sans-serif-extra;
+        @include hover-focus {
+          color: #fff;
+          text-decoration: none;
+        }
+        .mobile-menu-button {
+          background-color: map-get($theme, darker);
+          width: 53px;
+          height: 53px;
+          display: block;
+          margin: -15px -25px;
+          float:right;
+        }
+      }
+    }
+  }
 }
+

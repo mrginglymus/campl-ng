@@ -162,7 +162,7 @@
   }
 }
 
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down(sm) {
   .offcanvas {
     background-color: #323232;
     position: relative;
