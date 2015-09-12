@@ -233,7 +233,7 @@
 
 @include media-breakpoint-down(sm) {
   .offcanvas {
-    background-color: #323232;
+    background-color: #3b3b3b;
     position: relative;
     @include transition-property(all);
     @include transition-duration(0.25s);
@@ -277,8 +277,8 @@
   }
   
 
-  #global-header-drawers .tab-pane {
-    background-color: #323232;
+  #global-header-drawers div {
+    background-color: #3b3b3b;
     display: block;
     [class*='col-'] {
       width: 100%;
@@ -297,9 +297,13 @@
       padding: 10px 20px;
       display: block;
       @include hover-focus {
-        background-color: #171717;
+        background-color: #292929;
         text-decoration: none;
       }
+    }
+    ul:not(.global-header-drawer-title) a {
+      font-weight: normal;
+      padding-left: 30px;
     }
   }
 }
