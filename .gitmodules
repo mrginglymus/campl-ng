@@ -4,3 +4,6 @@
 [submodule "lib/font-awesome"]
 	path = lib/font-awesome
 	url = git@github.com:mrginglymus/font-awesome.git
+[submodule "lib/drilldown"]
+	path = lib/drilldown
+	url = https://github.com/Cinamonas/jquery-drilldown.git
