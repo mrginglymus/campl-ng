@@ -5,6 +5,16 @@ env = Environment(loader=FileSystemLoader('templates'))
 
 BASE_BREADCRUMB = [('Campl-NG', '/')]
 
+class Pages(list):
+  
+  def __init__(self, *args):
+    list.__init__(self, *args)
+    for page in self:
+      page.update_url()
+    for page in self:
+      page.update_breadcrumbs(self)
+    
+
 class Page(object):
 
   def __init__(self, title, source=None, context={}, children=[]):
@@ -46,14 +56,14 @@ class Page(object):
     for child in self.children:
       child.update_url(self._url, self)
   
-  def update_breadcrumbs(self, vertical_breadcrumb=BASE_BREADCRUMB, horizontal_breadcrumb=BASE_BREADCRUMB, parent=None):
+  def update_breadcrumbs(self, pages, vertical_breadcrumb=BASE_BREADCRUMB, horizontal_breadcrumb=BASE_BREADCRUMB, parent=None):
     if self.source:
       self.horizontal_breadcrumb = horizontal_breadcrumb + [(self.title, self.url)]
     else:
       self.horizontal_breadcrumb = horizontal_breadcrumb + [(self.title, None)]
     self.vertical_breadcrumb = vertical_breadcrumb + [(self.title, self.url)]
     for child in self.children:
-      child.update_breadcrumbs(self.vertical_breadcrumb, self.horizontal_breadcrumb, self)
+      child.update_breadcrumbs(pages, self.vertical_breadcrumb, self.horizontal_breadcrumb, self)
     if self.children:
       self.vertical_breadcrumb_parent = self.horizontal_breadcrumb[-1]
       self.vertical_breadcrumb = self.vertical_breadcrumb[:-1]
@@ -115,33 +125,3 @@ class Page(object):
   def context(self):
     return self._context
       
-pages = [
-  Page('About', 'demo.html', context={'image': 'placeholder.jpg'}),
-  Page('Page Layouts', 'layouts/overview.html', children=[
-    Page('Subsection with navigation', 'layouts/subnav.html'),
-    Page('Subsection without navigation', 'layouts/subnonav.html'),
-    Page('Subsection without right column', 'layouts/subnocol.html'),
-  ]),
-  Page('Core Elements', children=[
-    Page('Typography', 'core_elements/typography.html'),
-    Page('Links & Buttons', 'core_elements/links_and_buttons.html'),
-    Page('Forms', 'core_elements/forms.html'),
-    Page('Lists', 'core_elements/lists.html'),
-  ]),
-  Page('In Page Components', children=[
-    Page('Navigation', children=[
-      Page('Tabs', 'components/inpage/navigation/tabs.html'),
-      Page('Pills', 'components/inpage/navigation/pills.html'),
-      Page('Pagination', 'components/inpage/navigation/pagination.html'),
-    ]),
-    Page('Content', children=[
-      Page('Tables', 'components/inpage/navigation/tables.html'),
-    ]),
-  ]),
-]
-    
-    
-for page in pages:
-  page.update_url()
-for page in pages:
-  page.update_breadcrumbs()

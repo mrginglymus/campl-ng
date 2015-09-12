@@ -63,7 +63,7 @@ def make_js():
 def make_html(RELEASE_URL=LOCAL_RELEASE_URL):
 
   from jinja2 import FileSystemLoader, Environment
-  from pages import pages
+  from site_structure import pages
   import codecs
   
   HOME_PAGE = 'layouts/frontpage.html'
