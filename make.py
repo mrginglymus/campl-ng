@@ -67,9 +67,15 @@ def make_html(RELEASE_URL=LOCAL_RELEASE_URL):
   from site_structure import pages
   import codecs
   
+  env = Environment(loader=FileSystemLoader('templates'))
+  
   HOME_PAGE = 'layouts/frontpage.html'
   
   MEDIA_URL = RELEASE_URL
+  
+  with codecs.open(os.path.join('dist', 'index.html'), 'wb', 'utf-8') as fh:
+    template = env.get_template('index.html')
+    fh.write(template.render(ROOT_URL=RELEASE_URL + '/turqouise/'))
   
   for colour in COLOURS:
   
@@ -85,7 +91,6 @@ def make_html(RELEASE_URL=LOCAL_RELEASE_URL):
       'QUICKLINKS': QUICKLINKS,
     }
 
-    env = Environment(loader=FileSystemLoader('templates'))
 
     for page in pages:
       page.render(base_context, colour)
