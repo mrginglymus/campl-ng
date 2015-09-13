@@ -1,13 +1,6 @@
 .local-header {
   .subtitle {
     background-color: map-get($theme, light);
-    padding: 0;
-    &>div {
-      padding: 0;
-      &> div {
-        padding: 20px;
-      }
-    }
     z-index:0;
     position:relative;
     margin-bottom:-50px;

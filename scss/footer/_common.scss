@@ -3,6 +3,8 @@
 .global-footer, .local-footer {
   padding: 20px 0;
   [class*='col-'] {
+    padding-left: 20px;
+    padding-right: 20px;
     width: 100%;
     @include media-breakpoint-up(md) {
       &:not(:last-of-type) {

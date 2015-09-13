@@ -10,11 +10,6 @@
   
   .row {
     
-    [class*='col-'] {
-      padding-right: 0;
-      padding-left: 0;
-    }
-    
     & div {
       border-left: 1px solid #323232;
     }
