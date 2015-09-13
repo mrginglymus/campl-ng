@@ -23,3 +23,14 @@ html {
 div[class*='col-']:not([class*='offset']) {
   width: 100%;
 }
+
+.carousel-push {
+  @include media-breakpoint-up(xl) {
+    margin-bottom: -380px;
+    padding-bottom: 380px;
+  }
+}
+
+.main-content {
+  background-color:#fff;
+}
