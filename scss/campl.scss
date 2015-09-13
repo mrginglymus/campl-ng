@@ -5,6 +5,12 @@
  */
 
  // Core variables and mixins
+ 
+$theme_variant: turquoise !default;
+ 
+@import "themes/themes";
+$theme: map-get($themes, $theme_variant);
+ 
 @import "variables";
 
 @import "../lib/bootstrap/scss/variables";
@@ -63,17 +69,8 @@
 @import "../lib/datetimepicker/src/sass/bootstrap-datetimepicker";
 
 // CamPL-ng components
-@import "nav";
-@import "typography";
-@import "sidebar";
+@import "core_elements";
 @import "footer";
-@import "lists";
-@import "pagination";
-@import "teasers";
-@import "tables";
-@import "carousel";
 @import "header";
-@import "tertiary_navigation";
 @import "layout";
-@import "alerts";
-@import "search";
+@import "components";

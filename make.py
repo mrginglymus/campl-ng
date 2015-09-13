@@ -17,7 +17,7 @@ JS = (
 
 COLOURS = [
   'blue',
-  'turqouise',
+  'turquoise',
   'purple',
   'green',
   'orange',
@@ -39,14 +39,14 @@ def make_css():
 
   if not os.path.exists(CSS_DIST):
     os.makedirs(CSS_DIST)
-  call(['sass', '--compass', 'scss/campl_turqouise.scss', 'dist/css/campl_turqouise.css'])
+  call(['sass', '--compass', 'scss/themes/campl_turquoise.scss', 'dist/css/campl_turqouise.css'])
 
 def make_themes():
 
   if not os.path.exists(CSS_DIST):
     os.makedirs(CSS_DIST)
   for colour in COLOURS:
-    call(['sass', '--compass', 'scss/campl_%s.scss'%colour, 'dist/css/campl_%s.css'%colour])
+    call(['sass', '--compass', 'scss/themes/campl_%s.scss'%colour, 'dist/css/campl_%s.css'%colour])
    
 def make_img():
   if os.path.exists(IMG_DIST):

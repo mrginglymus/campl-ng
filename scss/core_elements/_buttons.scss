@@ -1,0 +1,38 @@
+.btn-cta, .btn-vcard {
+  font-weight: normal;
+}
+
+.btn-cta:after {
+  @include fa-icon();
+  content: $fa-var-angle-right;
+  float:right;
+  position:relative;
+  left:5px;
+  font-size:2rem;
+  line-height:1rem;
+}
+
+.btn-vcard {
+  &:after {
+    @include fa-icon();
+    content: $fa-var-angle-double-down;
+    float:right;
+    position: relative;
+    left: 5px;
+    top: 3px;
+  }
+  &:before {
+    @include fa-icon();
+    content: $fa-var-user;
+    position: relative;
+    right: 5px;
+  }
+}
+
+.secondary-cta:after {
+  @include fa-icon();
+  content: $fa-var-angle-right;
+  font-size:1.5rem;
+  line-height:1rem;
+  padding-left:0.5rem;
+}
