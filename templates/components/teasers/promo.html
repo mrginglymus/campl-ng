@@ -1,0 +1,16 @@
+{% macro vertical_teaser(title, href, img, body) %}
+<div class="promo-teaser">
+  <div class="promo-teaser-heading">
+    <h3><a href="{{ href }}">{{ title }}</a></h3>
+  </div>
+  <div class="promo-teaser-image">
+    <a href="">
+      <img src="{{ MEDIA_URL }}/img/{{ img }}">
+    </a>
+  </div>
+  <div class="promo-teaser-text clearfix">
+    <p>{{ body }}</p>
+    <a href="{{ href }}" class="secondary-cta pull-right">Read more</a>
+  </div>
+</div>
+{% endmacro %}
