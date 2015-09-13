@@ -5,7 +5,7 @@
   </div>
   <div class="promo-teaser-image">
     <a href="">
-      <img src="{{ MEDIA_URL }}/img/{{ img }}">
+      <img src="{{ MEDIA_URL }}/img/{{ img }}" alt="{{ title }}">
     </a>
   </div>
   <div class="promo-teaser-text clearfix">
@@ -15,12 +15,12 @@
 </div>
 {% endmacro %}
 
-{% macro teaser_image(href, img, type) %}
+{% macro teaser_image(title, href, img, type) %}
 <a href="{{ href }}">
   {% if type %}
     <span class="teaser-image-{{ type }}"></span>
   {% endif %}
-    <img src="{{ MEDIA_URL }}/img/{{ img }}">
+    <img src="{{ MEDIA_URL }}/img/{{ img }}" alt="{{ title }}">
 </a>  
 {% endmacro %}
 
@@ -42,7 +42,7 @@
 <div class="row horizontal-teaser">
   {% if img %}
   <div class="col-sm-6 teaser-image">
-    {{ teaser_image(href, img, type) }}
+    {{ teaser_image(title, href, img, type) }}
   </div>
   <div class="col-sm-6 teaser-body">
     {{ teaser_body(title, href, body, type) }}
@@ -59,7 +59,7 @@
 <div class="vertical-teaser">
   {% if img %}
     <div class="teaser-image">
-      {{ teaser_image(href, img, type) }}
+      {{ teaser_image(title, href, img, type) }}
     </div>
   {% endif %}
   <div class="teaser-body">

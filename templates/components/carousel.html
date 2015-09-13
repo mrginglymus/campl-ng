@@ -1,13 +1,13 @@
 <div id="front-page-carousel" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner" role="listbox">
     {% for image, link, caption in carousel %}
-      <div class="carousel-item{% if loop.first %} active{% endif %}"</div>
+      <div class="carousel-item{% if loop.first %} active{% endif %}">
         {% if link %}
         <a href="{{ link }}">
-        <img src="{{ MEDIA_URL }}/img/{{ image }}">
+        <img src="{{ MEDIA_URL }}/img/{{ image }}" alt="{{ caption }}">
         </a>
         {% else %}
-        <img src="{{ MEDIA_URL }}/img/{{ image }}">
+        <img src="{{ MEDIA_URL }}/img/{{ image }}" alt="{{ caption }}">
         {% endif %}
         <div class="carousel-caption">
           {% if link %}

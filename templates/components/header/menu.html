@@ -55,7 +55,13 @@
               <a href="{{ ROOT_URL|replace(THEME_VARIANT, colour) }}{% if page %}{{ page.url }}{% else %}/{% endif %}" class="dropdown-item">{{ colour|title }}</a>
             </li>
           {% endfor %}
-        </div>
+        </ul>
+      </li>
+      <li class="nav-item pull-right">
+        <a class="nav-link" href="http://github.com/mrginglymus/campl-ng/">
+          <span class="fa fa-github"></span>
+          GitHub
+        </a>
       </li>
     </ul>
   </div>

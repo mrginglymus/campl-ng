@@ -9,7 +9,7 @@ pages = Pages([
   ]),
   Page('Core Elements', children=[
     Page('Typography', 'core_elements/typography.html'),
-    Page('Links & Buttons', 'core_elements/links_and_buttons.html'),
+    Page('Links and Buttons', 'core_elements/links_and_buttons.html'),
     Page('Forms', 'core_elements/forms.html'),
     Page('Lists', 'core_elements/lists.html'),
   ]),
