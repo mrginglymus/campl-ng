@@ -12,14 +12,6 @@
     {{ teasers.horizontal_teaser('Horizontal Teaser', '/', teaser_body(), 'teaser-placeholder.jpg') }}
     {{ teasers.horizontal_teaser('Horizontal Teaser (no image)', '/', teaser_body()) }}
     {{ teasers.horizontal_teaser('Horizontal Video Teaser', '/', teaser_body(), 'teaser-placeholder.jpg', type='video') }}
-    <div class="row">
-      <div class="col-md-6 teaser-list">
-        {{ teasers.vertical_teaser('Vertical Audio Teaser', '/', teaser_body(), 'teaser-placeholder.jpg', type='audio') }}
-      </div>
-      <div class="col-md-6 teaser-list">
-        {{ teasers.vertical_teaser('Vertical Video Teaser', '/', teaser_body(), 'teaser-placeholder.jpg', type='video') }}
-      </div>
-    </div>
   </div>
   <div class="col-md-4 teaser-list">
     {{ teasers.news_teaser('Check out CamPL-NG', teaser_body(), '/', '30 August 2012') }}
