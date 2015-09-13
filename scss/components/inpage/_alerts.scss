@@ -9,7 +9,9 @@
   border-width: 0px 0px 4px;
   background-color: #fff;
   color: #000;
-  
+}
+
+.alert {
   &.alert-success {
     @include alert_style($brand-success);
   }
