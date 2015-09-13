@@ -1,0 +1,15 @@
+.global-footer {
+  background-color: #171717;
+  color: #ffffff;
+  
+  h3 {
+    font-size: 1.16rem;
+  }
+  
+  a {
+    color: #ffffff;
+    @include hover-focus {
+      text-decoration: none;
+    }
+  }
+}

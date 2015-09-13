@@ -1,0 +1,21 @@
+.global-header {
+  .global-search {
+    margin-right: 15px;
+  }
+}
+
+.global-search {
+  padding: 15px 0px;
+  input {
+    background-color: #343434;
+    color: #fff;
+    font-family: $font-family-sans-serif;
+    border: none;
+    padding: 7px 8px;
+  }
+  .input-group-addon {
+    background-color: #434343;
+    border: none;
+    color: #a3a3a3;
+  }
+}

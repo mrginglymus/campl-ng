@@ -1,0 +1,39 @@
+.local-header {
+  .navbar-local {
+    background-color: map-get($theme, primary);
+    font-family: $font-family-sans-serif-extra;
+    font-size: 14px;
+    padding: 0;
+    
+    .nav-item {
+      @include hover-focus {
+        background-color: map-get($theme, darker);
+      }
+      margin-left: 0;
+      background-color: map-get($theme, primary);
+      &.active {
+        background-color: map-get($theme, lighter);
+      }
+    }
+    
+    .nav-link {
+      color: #ffffff;
+      padding: 10px 20px;
+    }
+    
+    .dropdown-menu {
+      background-color: map-get($theme, darker);
+      margin-top: -1px;
+      padding: 0px;
+      font-size: 1em;
+      a {
+        border-top: 1px solid map-get($theme, dark);
+        padding: 10px;
+        @include hover-focus {
+          background-color: map-get($theme, primary);
+        }
+        color: #ffffff;
+      }
+    }
+  }
+}

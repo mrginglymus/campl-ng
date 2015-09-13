@@ -1,37 +1,13 @@
 @import "compass/css3/images";
 
-.local-footer {
-  background-color: map-get($theme, dark);
-  
+.global-footer, .local-footer {
   padding: 20px 0;
-  
   [class*='col-'] {
+    width: 100%;
     @include media-breakpoint-up(md) {
       &:not(:last-of-type) {
         @include background(url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAADCAYAAABS3WWCAAAAFElEQVQIW2P8//9/PSMDAwMDmAAALHsDgGM05VYAAAAASUVORK5CYII=) 100% 0 repeat-y);
       }
     }
   }
-  
-  a {
-    @include hover-focus {
-      text-decoration: none;
-    }
-  }
-  
-  h3 {
-    padding-bottom: 10px;
-    a {
-      font-size: 1.16rem;
-      color: #91b9a4;
-    }
-  }
-  
-  li {
-    padding-bottom: 5px;
-    a {
-      color: #ffffff;
-    }
-  }
-  
 }

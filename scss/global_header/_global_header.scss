@@ -1,0 +1,71 @@
+.global-header {
+  font-family: $font-family-sans-serif-extra;
+  background-color:black;
+  padding: 0;
+  
+  .container {
+    padding: 0px;
+  }
+  
+  .navbar-brand {
+    color: $navbar-dark-active-color;
+    
+    padding: 15px;
+    
+
+    @include hover-focus {
+      color: $navbar-dark-active-color;
+    }
+  }
+
+  .navbar-nav {
+    .nav-item {
+      &:first-child {
+        border-left: 1px solid #2e2e2e;
+      }
+    
+      border-right: 1px solid #2e2e2e;
+      margin-left: 0;
+      font-size: 1.16rem;
+      line-height: 1.5rem;
+      
+      @include hover-focus {
+        background-color:#171717;
+        border-left: 1px solid #737373;
+        border-right: 1px solid #737373;
+        &:not(:first-child) {
+          margin-left: -1px;
+        }
+      }
+    }
+        
+  
+    .nav-link {
+      font-weight: 600;
+      color: #ffffff;
+      padding: 25px 20px;
+      @include hover-focus {
+        color: #5a5a5a;
+      }
+      
+      &[data-toggle="tab"].active {
+        background-color: #171717;
+        margin-bottom: -1px;
+        padding-bottom: 26px;
+      }
+    }
+
+    .open > .nav-link,
+    .active > .nav-link,
+    .nav-link.open,
+    .nav-link.active {
+      @include plain-hover-focus {
+        color: $navbar-dark-active-color;
+      }
+    }
+  }
+
+  .navbar-divider {
+    background-color: rgba(255,255,255,.075);
+  }
+}

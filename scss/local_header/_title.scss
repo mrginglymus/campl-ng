@@ -1,0 +1,13 @@
+.local-header {
+  .title {
+    font-size: 40px;
+    @include media-breakpoint-down(md) {
+      font-size:20px;
+      line-height:26px;
+      margin-bottom: 0;
+    }
+    color: #ffffff;
+    font-weight: 100;
+    font-family: $font-family-sans-serif-extra;
+  }
+}

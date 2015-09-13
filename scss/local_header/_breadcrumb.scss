@@ -1,0 +1,14 @@
+.local-header {
+  .breadcrumb {
+    padding: 0;
+    a {
+      color: #ffffff;
+      @include hover-focus {
+        text-decoration: none;
+      }
+      .fa-home {
+        color: rgba(255,255,255,0.2);
+      }
+    }
+  }
+}

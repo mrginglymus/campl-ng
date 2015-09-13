@@ -1,0 +1,80 @@
+.global-header-drawer {
+  font-family: $font-family-sans-serif-extra;
+  background-color: #171717;
+  color: #ffffff;
+  border-top: 1px solid #3f3f3f;
+  font-size: 1.16rem;
+  .container {
+    border-right: 1px solid #323232;
+  }
+  
+  .row {
+    
+    [class*='col-'] {
+      padding-right: 0;
+      padding-left: 0;
+    }
+    
+    & div {
+      border-left: 1px solid #323232;
+    }
+  
+    &:first-child {
+      border-bottom: 1px solid #323232;
+      &> div > .list-unstyled {
+        padding: 10px 20px 20px 20px;
+      }
+      
+    }
+  }
+  
+  .global-header-close {
+    font-family: $font-family-sans-serif;
+    background-color: #000000;
+    font-size: 1rem;
+    font-weight: 600;
+    
+    a {
+      padding: 21px 15px;
+      height: 57px;
+      color: #ffffff;
+      display:block;
+    }
+  }
+  
+  div > .list-unstyled {
+    padding: 0px 20px 20px 20px;
+    &> li {
+      padding-top:10px;
+      &> a {
+        font-weight: 600;
+      }
+    }
+    
+    li:before {
+      @include fa-icon();
+      content: $fa-var-angle-right;
+    }
+  }
+  
+  .list-unstyled {
+    margin: 0;
+    li, li a {
+      color: #ffffff;
+    }
+    
+    .list-unstyled {
+      padding-top:15px;
+      li {
+        padding: 10px 0px;
+      }
+    }
+  }
+  
+  .list-separated li {
+    padding: 15px 0px;
+    &:not(:last-child) {
+      border-bottom:1px solid #323232;
+    }
+  }
+}
