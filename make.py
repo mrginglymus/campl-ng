@@ -3,12 +3,11 @@
 import os
 import shutil
 from subprocess import call
-import loremipsum
 
 from local_settings import LOCAL_RELEASE_DIR, LOCAL_RELEASE_URL
 from quicklinks import QUICKLINKS
 
-SITE_NAME = 'Campl-NG'
+SITE_NAME = 'CamPL-NG'
 
 JS = (
   ('lib/bootstrap/dist/js/bootstrap.js', 'bootstrap.js'),
@@ -65,12 +64,10 @@ def make_js():
 def make_html(RELEASE_URL=LOCAL_RELEASE_URL):
 
   from jinja2 import FileSystemLoader, Environment
-  from site_structure import pages
+  from site_structure import pages, front_page
   import codecs
   
   env = Environment(loader=FileSystemLoader('templates'))
-  
-  HOME_PAGE = 'layouts/frontpage.html'
   
   MEDIA_URL = RELEASE_URL
   
@@ -83,7 +80,6 @@ def make_html(RELEASE_URL=LOCAL_RELEASE_URL):
     base_context = {
       'ROOT_URL': RELEASE_URL + '/' + colour,
       'SITE_NAME': SITE_NAME,
-      'HOME_PAGE': HOME_PAGE,
       'MEDIA_URL': MEDIA_URL,
       'THEME_VARIANT': colour,
       'JS': JS,
@@ -96,20 +92,7 @@ def make_html(RELEASE_URL=LOCAL_RELEASE_URL):
     for page in pages:
       page.render(base_context, colour)
     
-    CAROUSEL = [
-      ('carousel-1.png', RELEASE_URL, ' '.join(loremipsum.get_sentences(1))),
-      ('carousel-2.png', RELEASE_URL, ' '.join(loremipsum.get_sentences(2))),
-      ('carousel-3.png', None, ' '.join(loremipsum.get_sentences(1))),
-    ]
-    
-    template = env.get_template(HOME_PAGE)
-    context = base_context
-    context['breadcrumb'] = []
-    context['CAROUSEL'] = CAROUSEL
-    dest = os.path.join('dist', colour, 'index.html')
-    with codecs.open(dest, 'wb', 'utf-8') as fh:
-      fh.write(template.render(**context))
-  
+    front_page.render(base_context, colour)
 
 def deploy():
   if os.path.exists(LOCAL_RELEASE_DIR):

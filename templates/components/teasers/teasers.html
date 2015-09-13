@@ -67,3 +67,11 @@
   </div>
 </div>
 {% endmacro %}
+
+{% macro news_teaser(title, body, href, date) %}
+<div class="news-teaser">
+  <h3 class="news-teaser-title"><a href="{{ href }}">{{ title }}</a></h3>
+  <span class="news-teaser-date">{{ date }}</span>
+  <p>{{ body }}</p>
+</div>
+{% endmacro %}

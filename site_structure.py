@@ -1,4 +1,5 @@
 from pages import Page, Pages
+import loremipsum
 
 pages = Pages([
   Page('About', 'demo.html', context={'image': 'placeholder.jpg'}),
@@ -28,3 +29,16 @@ pages = Pages([
     Page('Teasers', 'components/teasers/examples.html'),
   ]),
 ])
+
+front_page = Page(
+  'Home',
+  'layouts/frontpage_example.html',
+  context={
+    'CAROUSEL': [
+      ('carousel-1.png', '/', ' '.join(loremipsum.get_sentences(1))),
+      ('carousel-2.png', '/', ' '.join(loremipsum.get_sentences(2))),
+      ('carousel-3.png', None, ' '.join(loremipsum.get_sentences(1))),
+    ]
+  },
+  front_page=True,
+)

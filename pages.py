@@ -17,7 +17,7 @@ class Pages(list):
 
 class Page(object):
 
-  def __init__(self, title, source=None, context={}, children=[]):
+  def __init__(self, title, source=None, context={}, children=[], front_page=False):
     self.title = title
     self.source = source
     self._context = context
@@ -28,11 +28,12 @@ class Page(object):
     self.vertical_breadcrumb_parent = None
     self.vertical_breadcrumb_children = None
     self.vertical_breadcrumb_siblings = []
+    self.front_page=front_page
     
   def render(self, base_context, colour):
     if self.source:
       template = env.get_template(self.source)
-      context = {}
+      context = self.context
       context.update(**base_context)
       context['page'] = self
       destination = os.path.join('dist', colour, self.url[1:], 'index.html')
@@ -47,7 +48,10 @@ class Page(object):
   
   @property
   def destination(self):
-    return os.path.join(self.url[1:], 'index.html')
+    if self.front_page:
+      return 'index.html'
+    else:
+      return os.path.join(self.url[1:], 'index.html')
   
   def update_url(self, root=None, parent=None):
     self.parent = parent
@@ -114,7 +118,9 @@ class Page(object):
   
   @property
   def url(self):
-    if self.source:
+    if self.front_page:
+      return ''
+    elif self.source:
       return self._url
     elif self.children:
       return self.children[0].url

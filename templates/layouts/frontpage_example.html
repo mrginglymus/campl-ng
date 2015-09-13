@@ -1,8 +1,10 @@
-{% extends 'layouts/subnonav.html' %}
-
+{% extends 'layouts/frontpage.html' %}
 {% import 'components/teasers/teasers.html' as teasers with context %}
-
 {% from 'macros.html' import teaser_body %}
+
+{% block sidebar_content %}
+{% include 'components/sidebar/related_links.html' %}
+{% endblock %}
 
 {% block content %}
 <div class="row">
@@ -20,15 +22,9 @@
     </div>
   </div>
   <div class="col-md-4 teaser-list">
-    {{ teasers.vertical_teaser('Vertical Teaser', '/', teaser_body(), 'teaser-placeholder.jpg') }}
-    {{ teasers.vertical_teaser('Vertical Teaser (no image)', '/', teaser_body()) }}
-    {{ teasers.news_teaser('News Item 1', teaser_body(), '/', '30 August 2012') }}
+    {{ teasers.news_teaser('Check out CamPL-NG', teaser_body(), '/', '30 August 2012') }}
     {{ teasers.news_teaser('News Item 2', teaser_body(), '/', '7 August 2012') }}
   </div>
 </div>
-{% endblock %}
-
-{% block sidebar_content %}
-  {{ teasers.promo_teaser('Promo Teaser', '/', teaser_body(), 'promo-teaser-placeholder.jpg') }}
 {% endblock %}
 

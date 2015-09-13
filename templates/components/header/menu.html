@@ -24,11 +24,11 @@
       </li>
       {% for _page in MENU %}
         {% if not _page.children %}
-        <li class="nav-item{% if page and _page.title==page.horizontal_breadcrumb[1][0] %} active{% endif %}">
+        <li class="nav-item{% if not page.front_page and _page.title==page.horizontal_breadcrumb[1][0] %} active{% endif %}">
           <a class="nav-link" href="{{ ROOT_URL }}{{ _page.url }}">{{ _page.title }}</a>
         </li>
         {% else %}
-        <li class="nav-item{% if page and _page.title==page.horizontal_breadcrumb[1][0] %} active{% endif %} dropdown">
+        <li class="nav-item{% if not page.front_page and _page.title==page.horizontal_breadcrumb[1][0] %} active{% endif %} dropdown">
           <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
             {{ _page.title }}
           </a>
@@ -52,7 +52,7 @@
         <ul class="dropdown-menu">
           {% for colour in COLOURS %}
             <li>
-              <a href="{{ ROOT_URL|replace(THEME_VARIANT, colour) }}{% if page %}{{ page.url }}{% else %}/{% endif %}" class="dropdown-item">{{ colour|title }}</a>
+              <a href="{{ ROOT_URL|replace(THEME_VARIANT, colour) }}{% if not page.front_page %}{{ page.url }}{% else %}/{% endif %}" class="dropdown-item">{{ colour|title }}</a>
             </li>
           {% endfor %}
         </ul>

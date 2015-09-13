@@ -8,3 +8,8 @@
     </code>
   </pre>
 {% endmacro %}
+
+
+{% macro teaser_body() %}
+  {{ lipsum(1, false, max=30) }}
+{% endmacro %}
