@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% from 'components/carousel.html' import carousel with context %}
+
 {% block body %}
 {% include 'components/header/global_header.html' %}
 {% include 'components/header/local_header.html' %}
@@ -8,7 +10,7 @@
   <div class="content container">
     <div class="row">
       <div class="col-md-9 main-content">
-        {% include 'components/carousel.html' %}
+        {{ carousel(CAROUSEL) }}
         <div class="content-padding">
           {% block content %}
           {% endblock %}

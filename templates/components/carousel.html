@@ -1,23 +1,28 @@
+{% macro carousel_item(image, link, caption, items, loop) %}
+<div class="carousel-item{% if loop.first %} active{% endif %}">
+  {% if link %}
+  <a href="{{ link }}">
+  <img src="{{ MEDIA_URL }}/img/{{ image }}" alt="{{ caption }}">
+  </a>
+  {% else %}
+  <img src="{{ MEDIA_URL }}/img/{{ image }}" alt="{{ caption }}">
+  {% endif %}
+  <div class="carousel-caption">
+    {% if link %}
+    <a href="{{ link }}">{{ caption }}</a>
+    {% else %}
+    <span>{{ caption }}</span>
+    {% endif %}
+    <span class="carousel-page">{{ loop.index }} of {{ items|length }}</span>
+  </div>
+</div>
+{% endmacro %}
+
+{% macro carousel(items) %}
 <div id="front-page-carousel" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner" role="listbox">
-    {% for image, link, caption in carousel %}
-      <div class="carousel-item{% if loop.first %} active{% endif %}">
-        {% if link %}
-        <a href="{{ link }}">
-        <img src="{{ MEDIA_URL }}/img/{{ image }}" alt="{{ caption }}">
-        </a>
-        {% else %}
-        <img src="{{ MEDIA_URL }}/img/{{ image }}" alt="{{ caption }}">
-        {% endif %}
-        <div class="carousel-caption">
-          {% if link %}
-          <a href="{{ link }}">{{ caption }}</a>
-          {% else %}
-          <span>{{ caption }}</span>
-          {% endif %}
-          <span class="carousel-page">{{ loop.index }} of {{ carousel|length }}</span>
-        </div>
-      </div>
+    {% for image, link, caption in items %}
+      {{ carousel_item(image, link, caption, items, loop) }}
     {% endfor %}
   </div>
   <a class="left carousel-control" href="#front-page-carousel" role="button" data-slide="prev">
@@ -29,3 +34,4 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+{% endmacro %}

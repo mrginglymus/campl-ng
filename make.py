@@ -3,6 +3,7 @@
 import os
 import shutil
 from subprocess import call
+import loremipsum
 
 from local_settings import LOCAL_RELEASE_DIR, LOCAL_RELEASE_URL
 from quicklinks import QUICKLINKS
@@ -96,15 +97,15 @@ def make_html(RELEASE_URL=LOCAL_RELEASE_URL):
       page.render(base_context, colour)
     
     CAROUSEL = [
-      ('carousel-1.png', RELEASE_URL, 'Lorem ipsum'),
-      ('carousel-2.png', RELEASE_URL, 'Lorem ipsum'),
-      ('carousel-3.png', RELEASE_URL, 'Lorem ipsum'),
+      ('carousel-1.png', RELEASE_URL, ' '.join(loremipsum.get_sentences(1))),
+      ('carousel-2.png', RELEASE_URL, ' '.join(loremipsum.get_sentences(2))),
+      ('carousel-3.png', None, ' '.join(loremipsum.get_sentences(1))),
     ]
     
     template = env.get_template(HOME_PAGE)
     context = base_context
     context['breadcrumb'] = []
-    context['carousel'] = CAROUSEL
+    context['CAROUSEL'] = CAROUSEL
     dest = os.path.join('dist', colour, 'index.html')
     with codecs.open(dest, 'wb', 'utf-8') as fh:
       fh.write(template.render(**context))
