@@ -1,7 +1,4 @@
 .horizontal-teaser, .vertical-teaser {
-  padding: 20px 0px;
-  margin: 0px 10px;
-  
   .teaser-title {
     a {
       color: #171717;
@@ -49,6 +46,15 @@
   }
 }
 
+.teaser-list .row {
+  &:not(:first-of-type) {
+    padding-top: 20px;
+  }
+  &:not(:last-of-type) {
+    padding-bottom: 20px;
+  }
+}
+
 .horizontal-teaser .teaser-image {
   padding: 0 20px 0 0;
   .teaser-image-audio, .teaser-image-video {
@@ -65,22 +71,28 @@
   }
 }
 
+.teaser-list {
+  padding: 0 20px;
+  margin: 20px 0px;
+}
+
 .teaser-list + .teaser-list {
   border-left: 1px solid #e4e4e4;
 }
 
-.teaser-list {
-  .horizontal-teaser, .vertical-teaser {
-    &:not(:last-of-type) {
-      border-bottom: 1px solid #e4e4e4;
-    }
+.teaser-list > .row:not(:last-of-type) {  
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.teaser-list > .row.vertical-teaser-container {
+  padding: 0;
+}
+
+.vertical-teaser-container {
+  .teaser-list:first-of-type {
+    padding-left: 0;
   }
-}
-
-.teaser-list > .row:not(.horizontal-teaser) {
-  margin-top: 20px;
-}
-
-.teaser-list .row + .horizontal-teaser {
-  border-top: 1px solid #e4e4e4;
+  .teaser-list:last-of-type {
+    padding-right: 0;
+  }
 }

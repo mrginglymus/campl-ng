@@ -56,14 +56,16 @@
 {% endmacro %}
 
 {% macro vertical_teaser(title, href, body, img=None, type=None) %}
-<div class="vertical-teaser">
-  {% if img %}
-    <div class="teaser-image">
-      {{ teaser_image(title, href, img, type) }}
+<div class="vertical-teaser row">
+  <div class="col-sm-12">
+    {% if img %}
+      <div class="teaser-image">
+        {{ teaser_image(title, href, img, type) }}
+      </div>
+    {% endif %}
+    <div class="teaser-body">
+      {{ teaser_body(title, href, body, type) }}
     </div>
-  {% endif %}
-  <div class="teaser-body">
-    {{ teaser_body(title, href, body, type) }}
   </div>
 </div>
 {% endmacro %}

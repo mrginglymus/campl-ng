@@ -11,10 +11,13 @@
     <div class="row">
       <div class="col-md-9 main-content">
         {{ carousel(CAROUSEL) }}
+        {% block unwrapped_content %}
+        {% endblock %}
+        {% if self.content () %}
         <div class="content-padding">
-          {% block content %}
-          {% endblock %}
+          {% block content %}{% endblock %}
         </div>
+        {% endif %}
       </div>
       {% from 'components/sidebar/sidebar.html' import sidebar %}
       {% call sidebar() %}

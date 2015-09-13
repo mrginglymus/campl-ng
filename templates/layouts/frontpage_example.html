@@ -6,7 +6,7 @@
 {% include 'components/sidebar/related_links.html' %}
 {% endblock %}
 
-{% block content %}
+{% block unwrapped_content %}
 <div class="row">
   <div class="col-md-8 teaser-list">
     {{ teasers.horizontal_teaser('Horizontal Teaser', '/', teaser_body(), 'teaser-placeholder.jpg') }}

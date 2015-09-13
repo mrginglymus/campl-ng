@@ -25,10 +25,11 @@
           {% endif %}
           {% block unwrapped_content %}
           {% endblock %}
+          {% if self.content() %}
           <div class="content-padding">
-            {% block content %}
-            {% endblock %}
+            {% block content %}{% endblock %}
           </div>
+          {% endif %}
         </div>
         {% if sidebar %}
         {% from 'components/sidebar/sidebar.html' import sidebar %}
