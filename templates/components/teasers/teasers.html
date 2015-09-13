@@ -1,0 +1,69 @@
+{% macro promo_teaser(title, href, body, img) %}
+<div class="promo-teaser">
+  <div class="promo-teaser-heading">
+    <h3><a href="{{ href }}">{{ title }}</a></h3>
+  </div>
+  <div class="promo-teaser-image">
+    <a href="">
+      <img src="{{ MEDIA_URL }}/img/{{ img }}">
+    </a>
+  </div>
+  <div class="promo-teaser-text clearfix">
+    <p>{{ body }}</p>
+    <a href="{{ href }}" class="secondary-cta pull-right">Read more</a>
+  </div>
+</div>
+{% endmacro %}
+
+{% macro teaser_image(href, img, type) %}
+<a href="{{ href }}">
+  {% if type %}
+    <span class="teaser-image-{{ type }}"></span>
+  {% endif %}
+    <img src="{{ MEDIA_URL }}/img/{{ img }}">
+</a>  
+{% endmacro %}
+
+{% macro teaser_body(title, href, body, type) %}
+<h3 class="teaser-title">
+  <a href="{{ href }}">
+    {{ title }}
+  </a>
+</h3>
+<p>{{ body }}</p>
+{% if type %}
+<a class="secondary-cta" href="{{ href }}">Read more</a>
+{% else %}
+<a class="btn btn-primary btn-cta" href="{{ href }}">Read more</a>
+{% endif %}
+{% endmacro %}
+
+{% macro horizontal_teaser(title, href, body, img=None, type=None) %}
+<div class="row horizontal-teaser">
+  {% if img %}
+  <div class="col-sm-6 teaser-image">
+    {{ teaser_image(href, img, type) }}
+  </div>
+  <div class="col-sm-6 teaser-body">
+    {{ teaser_body(title, href, body, type) }}
+  </div>
+  {% else %}
+  <div class="col-sm-12 teaser-body">
+    {{ teaser_body(title, href, body, type) }}
+  </div>
+  {% endif %}
+</div>
+{% endmacro %}
+
+{% macro vertical_teaser(title, href, body, img=None, type=None) %}
+<div class="vertical-teaser">
+  {% if img %}
+    <div class="teaser-image">
+      {{ teaser_image(href, img, type) }}
+    </div>
+  {% endif %}
+  <div class="teaser-body">
+    {{ teaser_body(title, href, body, type) }}
+  </div>
+</div>
+{% endmacro %}

@@ -39,7 +39,7 @@ def make_css():
 
   if not os.path.exists(CSS_DIST):
     os.makedirs(CSS_DIST)
-  call(['sass', '--compass', 'scss/themes/campl_turquoise.scss', 'dist/css/campl_turqouise.css'])
+  call(['sass', '--compass', 'scss/themes/campl_turquoise.scss', 'dist/css/campl_turquoise.css'])
 
 def make_themes():
 

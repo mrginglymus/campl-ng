@@ -25,5 +25,6 @@ pages = Pages([
       Page('Alerts', 'components/inpage/content/alerts.html'),
       Page('Date/Time Picker', 'components/inpage/content/datetimepicker.html'),
     ]),
+    Page('Teasers', 'components/teasers/examples.html'),
   ]),
 ])

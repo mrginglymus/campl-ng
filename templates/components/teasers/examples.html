@@ -1,0 +1,30 @@
+{% extends 'layouts/subnonav.html' %}
+
+{% import 'components/teasers/teasers.html' as teasers with context %}
+
+{% block content %}
+<div class="row">
+  <div class="col-md-8 teaser-list">
+    {{ teasers.horizontal_teaser('Horizontal Teaser', '/', lipsum(1, false, max=30), 'teaser-placeholder.jpg') }}
+    {{ teasers.horizontal_teaser('Horizontal Teaser (no image)', '/', lipsum(1, false, max=30)) }}
+    {{ teasers.horizontal_teaser('Horizontal Video Teaser', '/', lipsum(1, false, max=30), 'teaser-placeholder.jpg', type='video') }}
+    <div class="row">
+      <div class="col-md-6 teaser-list">
+        {{ teasers.vertical_teaser('Vertical Audio Teaser', '/', lipsum(1, false, max=30), 'teaser-placeholder.jpg', type='audio') }}
+      </div>
+      <div class="col-md-6 teaser-list">
+        {{ teasers.vertical_teaser('Vertical Video Teaser', '/', lipsum(1, false, max=30), 'teaser-placeholder.jpg', type='video') }}
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 teaser-list">
+    {{ teasers.vertical_teaser('Vertical Teaser', '/', lipsum(1, false, max=30), 'teaser-placeholder.jpg') }}
+    {{ teasers.vertical_teaser('Vertical Teaser (no image)', '/', lipsum(1, false, max=30)) }}
+  </div>
+</div>
+{% endblock %}
+
+{% block sidebar_content %}
+  {{ teasers.promo_teaser('Promo Teaser', '/', lipsum(1, false, max=30), 'promo-teaser-placeholder.jpg') }}
+{% endblock %}
+
