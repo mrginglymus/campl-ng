@@ -1,6 +1,6 @@
 {% extends 'layouts/frontpage.html' %}
 {% import 'components/teasers/teasers.html' as teasers with context %}
-{% from 'macros.html' import teaser_body %}
+{% from 'macros.html' import teaser_body, random_image %}
 
 {% block sidebar_content %}
 {% include 'components/sidebar/related_links.html' %}
@@ -9,9 +9,9 @@
 {% block unwrapped_content %}
 <div class="row">
   <div class="col-md-8 teaser-list">
-    {{ teasers.horizontal_teaser('Horizontal Teaser', '/', teaser_body(), 'teaser-placeholder.jpg') }}
+    {{ teasers.horizontal_teaser('Horizontal Teaser', '/', teaser_body(), random_image(256)) }}
     {{ teasers.horizontal_teaser('Horizontal Teaser (no image)', '/', teaser_body()) }}
-    {{ teasers.horizontal_teaser('Horizontal Video Teaser', '/', teaser_body(), 'teaser-placeholder.jpg', type='video') }}
+    {{ teasers.horizontal_teaser('Horizontal Video Teaser', '/', teaser_body(), random_image(256), type='video') }}
   </div>
   <div class="col-md-4 teaser-list">
     {{ teasers.news_teaser('Check out CamPL-NG', teaser_body(), '/', '30 August 2012') }}

@@ -5,7 +5,7 @@
   </div>
   <div class="promo-teaser-image">
     <a href="">
-      <img src="{{ MEDIA_URL }}/img/{{ img }}" alt="{{ title }}">
+      <img src="{{ img }}" alt="{{ title }}">
     </a>
   </div>
   <div class="promo-teaser-text clearfix">
@@ -20,7 +20,7 @@
   {% if type %}
     <span class="teaser-image-{{ type }}"></span>
   {% endif %}
-    <img src="{{ MEDIA_URL }}/img/{{ img }}" alt="{{ title }}">
+    <img src="{{ img }}" alt="{{ title }}">
 </a>  
 {% endmacro %}
 

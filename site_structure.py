@@ -1,5 +1,16 @@
 from pages import Page, Pages
 import loremipsum
+from random import random
+
+def random_image(width, height=None):
+  if not height:
+    height=width
+  scale = random() + 1
+  height = int(height*scale)
+  width = int(width*scale)
+  
+  return "http://lorempixel.com/%s/%s" % (width, height)
+  
 
 pages = Pages([
   Page('About', 'demo.html', context={'image': 'placeholder.jpg'}),
@@ -35,9 +46,9 @@ front_page = Page(
   'layouts/frontpage_example.html',
   context={
     'CAROUSEL': [
-      ('carousel-1.png', '/', ' '.join(loremipsum.get_sentences(1))),
-      ('carousel-2.png', '/', ' '.join(loremipsum.get_sentences(2))),
-      ('carousel-3.png', None, ' '.join(loremipsum.get_sentences(1))),
+      (random_image(885, 432), '/', ' '.join(loremipsum.get_sentences(1))),
+      (random_image(885, 432), '/', ' '.join(loremipsum.get_sentences(2))),
+      (random_image(885, 432), None, ' '.join(loremipsum.get_sentences(1))),
     ]
   },
   front_page=True,

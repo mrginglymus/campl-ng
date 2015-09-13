@@ -2,10 +2,10 @@
 <div class="carousel-item{% if loop.first %} active{% endif %}">
   {% if link %}
   <a href="{{ link }}">
-  <img src="{{ MEDIA_URL }}/img/{{ image }}" alt="{{ caption }}">
+  <img src="{{ image }}" alt="{{ caption }}">
   </a>
   {% else %}
-  <img src="{{ MEDIA_URL }}/img/{{ image }}" alt="{{ caption }}">
+  <img src="{{ image }}" alt="{{ caption }}">
   {% endif %}
   <div class="carousel-caption">
     {% if link %}
