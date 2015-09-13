@@ -75,7 +75,7 @@ def make_html(RELEASE_URL=LOCAL_RELEASE_URL):
   
   with codecs.open(os.path.join('dist', 'index.html'), 'wb', 'utf-8') as fh:
     template = env.get_template('index.html')
-    fh.write(template.render(ROOT_URL=RELEASE_URL + '/turqouise/'))
+    fh.write(template.render(ROOT_URL=RELEASE_URL + '/turquoise/'))
   
   for colour in COLOURS:
   
