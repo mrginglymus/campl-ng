@@ -47,6 +47,12 @@ def make_themes():
     os.makedirs(CSS_DIST)
   for colour in COLOURS:
     call(['sass', '--compass', 'scss/themes/campl_%s.scss'%colour, 'dist/css/campl_%s.css'%colour])
+
+def make_themes_legacy():
+  if not os.path.exists(CSS_DIST):
+    os.makedirs(CSS_DIST)
+  for colour in COLOURS:
+    call(['sass', '--compass', 'scss/themes/campl_%s_legacy.scss'%colour, 'dist/css/campl_%s_legacy.css'%colour])
    
 def make_img():
   if os.path.exists(IMG_DIST):
@@ -134,6 +140,10 @@ if 'img' in args.mode:
   
 if 'themes' in args.mode:
   make_themes()
+  deploy()
+  
+if 'legacy' in args.mode:
+  make_themes_legacy()
   deploy()
 
 

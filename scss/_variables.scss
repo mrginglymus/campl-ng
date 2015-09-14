@@ -8,7 +8,7 @@ $brand-danger:              #ff0000;
 
 
 // yay flexbox
-$enable-flex:               true;
+$enable-flex:               true !default;
 
 // boo rounded
 $enable-rounded:            false;

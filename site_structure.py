@@ -13,7 +13,7 @@ def random_image(width, height=None):
   
 
 pages = Pages([
-  Page('About', 'demo.html', context={'image': 'placeholder.jpg'}),
+  Page('About', 'demo.html', context={'image': random_image(590,288)}),
   Page('Page Layouts', 'layouts/overview.html', children=[
     Page('Subsection with navigation', 'layouts/subnav.html'),
     Page('Subsection without navigation', 'layouts/subnonav.html'),

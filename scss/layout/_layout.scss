@@ -20,8 +20,10 @@ html {
   min-width: 0;
 }
 
-div[class*='col-']:not([class*='offset']) {
-  width: 100%;
+@if $enable-flex {
+  div[class*='col-']:not([class*='offset']) {
+    width: 100%;
+  }
 }
 
 .carousel-push {
@@ -33,4 +35,8 @@ div[class*='col-']:not([class*='offset']) {
 
 .main-content {
   background-color:#fff;
+}
+
+img.leading-image {
+  width: 100%;
 }
