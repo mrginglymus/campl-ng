@@ -1,4 +1,5 @@
 .horizontal-teaser, .vertical-teaser {
+  // style teaser title link
   .teaser-title {
     a {
       color: #171717;
@@ -12,17 +13,18 @@
   }
   
   .teaser-image {
-    position: relative;
+    position: relative; // so that audio/vido icons can be placed relative
     a {
       @include hover-focus {
         .teaser-image-audio, .teaser-image-video {
-          background-color: rgba(0,0,0,0.8);
+          background-color: rgba(0,0,0,0.8); // hover colour for A/V icons
         }
       }
     }
     
   }
   
+  // AV icons
   .teaser-image-audio, .teaser-image-video {
     &:before {
       @include fa-icon();
@@ -36,25 +38,32 @@
     color: #fff;
   }
   
-
+  // audio icon
   .teaser-image-audio:before {
     content: $fa-var-volume-off;
   }
 
+  // video icon
   .teaser-image-video:before {
     content: $fa-var-play;
   }
 }
 
-.teaser-list .row {
-  &:not(:first-of-type) {
-    padding-top: 20px;
-  }
-  &:not(:last-of-type) {
-    padding-bottom: 20px;
+// teasers in a horizontal list should use vertical padding EXCEPT at the outer edge
+// where the padding of the teaser list should be used - this is to ensure the border
+// doesn't hit the edges
+.teaser-list {
+  .horizontal-teaser, .vertical-teaser {
+    &:not(:first-of-type) {
+      padding-top: 20px;
+    }
+    &:not(:last-of-type) {
+      padding-bottom: 20px;
+    }
   }
 }
 
+// padding for teaser image and positioning for AV icon
 .horizontal-teaser .teaser-image {
   padding: 0 20px 0 0;
   .teaser-image-audio, .teaser-image-video {
@@ -63,15 +72,17 @@
   }
 }
 
+// padding for teaser image and position for AV icon
+// The vertical teaser 'collapses' into a horizontal teaser at the 'md' breakpoint
 .vertical-teaser .teaser-image {
   @include media-breakpoint-up(md) {
-    padding: 0 0 20px 0;
+    margin: 0 0 20px 0;
     .teaser-image-audio, .teaser-image-video {
       right: 0;
-      bottom: 20px;
+      bottom: 0;
     }
   }
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(sm) {
     padding: 0 20px 0 0;
     .teaser-image-audio, .teaser-image-video {
       right: 20px;
@@ -80,27 +91,31 @@
   }
 }
 
+// teaser list - padding at the sides, margin at the top to ensure border placement
 .teaser-list {
   padding: 0 20px;
   margin: 20px 0px;
 }
 
+// teaser lists next to each other have a border between them, unless they've collapsed
 .teaser-list + .teaser-list {
   @include media-breakpoint-up(md) {
     border-left: 1px solid #e4e4e4;
   }
 }
 
+
+// rows in a teaser list (whether they be nested lists or another teaser) have lines
+// between them
 .teaser-list > .row:not(:last-of-type) {  
   border-bottom: 1px solid #e4e4e4;
 }
 
-.teaser-list > .row.vertical-teaser-container {
-  padding: 0;
-}
 
+// non collapsed lists - nested teaser lists do not have the outmost padding, as the 
+// parent teaser list handles this
 @include media-breakpoint-up(md) {
-  .vertical-teaser-container {
+  .teaser-list {
     .teaser-list:first-of-type {
       padding-left: 0;
     }
@@ -110,6 +125,9 @@
   }
 }
 
+// collapsed lists  - flip the padding, margin, adjacent teaser lists now are on top of
+// each other so put a border in, remove margin on nested teaser lists and stick a 
+// border on top
 @include media-breakpoint-down(sm) {
   .teaser-list {
     padding: 20px 0;
@@ -117,12 +135,12 @@
     &+ .teaser-list {
       border-top: 1px solid #e4e4e4;
     }
-  }
-  .vertical-teaser-container .teaser-list {
-    padding: 20px 0;
-    margin: 0;
-    &+ .teaser-list {
-      border-top: 1px solid #e4e4e4;
+    .teaser-list {
+      padding: 20px 0;
+      margin: 0;
+      &+ .teaser-list {
+        border-top: 1px solid #e4e4e4;
+      }
     }
   }
 }
