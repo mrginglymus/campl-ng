@@ -20,12 +20,6 @@ html {
   min-width: 0;
 }
 
-@if $enable-flex {
-  div[class*='col-']:not([class*='offset']) {
-    width: 100%;
-  }
-}
-
 .carousel-push {
   @include media-breakpoint-up(xl) {
     margin-bottom: -380px;
