@@ -5,9 +5,9 @@
 .btn-cta:after {
   @include fa-icon();
   content: $fa-var-angle-right;
-  float:right;
   position:relative;
   left:5px;
+  top: 3px;
   font-size:2rem;
   line-height:1rem;
 }
@@ -16,10 +16,8 @@
   &:after {
     @include fa-icon();
     content: $fa-var-angle-double-down;
-    float:right;
     position: relative;
     left: 5px;
-    top: 3px;
   }
   &:before {
     @include fa-icon();

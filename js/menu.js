@@ -4,8 +4,13 @@ $(document).ready(function() {
     $('.global-header a.nav-link.active').removeClass('active');
   });
   
-  $('[data-toggle="offcanvas"]').click(function(e) {
+  $('[data-toggle="offcanvas-right"]').click(function(e) {
     e.preventDefault();
-    $('.offcanvas').toggleClass('active');
+    $('.offcanvas').toggleClass('active-right');
+  });
+  
+  $('[data-toggle="offcanvas-left"]').click(function(e) {
+    e.preventDefault();
+    $('.offcanvas').toggleClass('active-left');
   });
 });

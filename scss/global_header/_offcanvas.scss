@@ -11,13 +11,26 @@
   
   .offcanvas-left {
     left: 0;
-    &.active {
+    &.active-left {
+      right: auto;
       left: 260px;
     }
-    .sidebar-offcanvas {
+    .sidebar-offcanvas-left {
       left: -260px;
     }
   }
+  
+  .offcanvas-right {
+    right: 0;
+    &.active-right {
+      left: auto;
+      right: 260px;
+    }
+    .sidebar-offcanvas-right {
+      right: -260px;
+    }
+  }
+  
   .sidebar-offcanvas {
     position: absolute;
     top: 0;
