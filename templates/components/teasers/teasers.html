@@ -41,14 +41,14 @@
 {% macro horizontal_teaser(title, href, body, img=None, type=None) %}
 <div class="row horizontal-teaser">
   {% if img %}
-  <div class="col-sm-6 teaser-image">
+  <div class="col-md-6 col-xs-3 teaser-image">
     {{ teaser_image(title, href, img, type) }}
   </div>
-  <div class="col-sm-6 teaser-body">
+  <div class="col-md-6 col-xs-9 teaser-body">
     {{ teaser_body(title, href, body, type) }}
   </div>
   {% else %}
-  <div class="col-sm-12 teaser-body">
+  <div class="col-xs-9 col-xs-offset-3 col-md-12 col-md-offset-0 teaser-body">
     {{ teaser_body(title, href, body, type) }}
   </div>
   {% endif %}
@@ -58,14 +58,14 @@
 {% macro vertical_teaser(title, href, body, img=None, type=None) %}
 <div class="vertical-teaser row">
   {% if img %}
-    <div class="teaser-image col-md-12 col-sm-6">
+    <div class="teaser-image col-md-12 col-xs-3">
       {{ teaser_image(title, href, img, type) }}
     </div>
-    <div class="teaser-body col-md-12 col-sm-6">
+    <div class="teaser-body col-md-12 col-xs-9">
       {{ teaser_body(title, href, body, type) }}
     </div>
   {% else %}
-    <div class="teaser-body col-md-12">
+    <div class="teaser-body col-md-12 col-md-offset-0 col-xs-9 col-xs-offset-3">
       {{ teaser_body(title, href, body, type) }}
     </div>
   {% endif %}
