@@ -5,6 +5,8 @@
   @include media-breakpoint-up(md) {
     @include make-col();
     @include make-col-span(3);
+    margin-top: -50px;
+    padding-bottom: 50px;
   }
 
   border-left: 1px solid #e4e4e4;
@@ -12,8 +14,6 @@
   border-top: 1px solid #e4e4e4;
   padding-left:0px;
   padding-right:0px;
-  margin-top: -50px;
-  padding-bottom: 50px;
   @include background(url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAM0lEQVQYV2NkQAM3P3/7r87LxYgsDBLDEMCmCCQGV4jLJJhGsEJCikBqGIlRBFY4nDwDAIeHT431w+WIAAAAAElFTkSuQmCC));
 
   font-family: $font-family-sans-serif-extra;
@@ -48,6 +48,7 @@
     border-bottom: 1px solid #e4e4e4;
     background-color: #ffffff;
     padding: 5px 20px;
+    margin-bottom: 0;
     font-size: 14px;
     &> li > a {
       font-weight:bold;

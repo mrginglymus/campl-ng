@@ -2,7 +2,6 @@
 
 @include media-breakpoint-down(sm) {
   .offcanvas {
-    background-color: #3b3b3b;
     position: relative;
     @include transition-property(all);
     @include transition-duration(0.25s);
@@ -14,10 +13,11 @@
     &.active-left {
       right: auto;
       left: 260px;
+      background-color: #3b3b3b;
     }
     .sidebar-offcanvas-left {
       left: -260px;
-    }
+      }
   }
   
   .offcanvas-right {
@@ -25,6 +25,8 @@
     &.active-right {
       left: auto;
       right: 260px;
+      @include background(url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAM0lEQVQYV2NkQAM3P3/7r87LxYgsDBLDEMCmCCQGV4jLJJhGsEJCikBqGIlRBFY4nDwDAIeHT431w+WIAAAAAElFTkSuQmCC));
+      border-right: 1px solid #e4e4e4;
     }
     .sidebar-offcanvas-right {
       right: -260px;
