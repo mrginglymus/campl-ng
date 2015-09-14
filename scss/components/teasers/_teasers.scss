@@ -96,9 +96,7 @@
 }
 
 .teaser-list > .row.vertical-teaser-container {
-  @include media-breakpoint-up(md) {
-    padding: 0;
-  }
+  padding: 0;
 }
 
 @include media-breakpoint-up(md) {
@@ -108,6 +106,23 @@
     }
     .teaser-list:last-of-type {
       padding-right: 0;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .teaser-list {
+    padding: 20px 0;
+    margin: 0 20px;
+    &+ .teaser-list {
+      border-top: 1px solid #e4e4e4;
+    }
+  }
+  .vertical-teaser-container .teaser-list {
+    padding: 20px 0;
+    margin: 0;
+    &+ .teaser-list {
+      border-top: 1px solid #e4e4e4;
     }
   }
 }
