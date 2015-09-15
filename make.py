@@ -3,8 +3,14 @@
 import os
 import shutil
 from subprocess import call
+import argparse
 
-from local_settings import LOCAL_RELEASE_DIR, LOCAL_RELEASE_URL
+from local_settings import (
+  LOCAL_RELEASE_DIR,
+  LOCAL_RELEASE_URL,
+  REMOTE_RELEASE_URL,
+  REMOTE_RELEASE_DIR,
+)
 from quicklinks import QUICKLINKS
 
 SITE_NAME = 'CamPL-NG'
@@ -41,6 +47,12 @@ def make_css():
     os.makedirs(CSS_DIST)
   call(['sass', '--compass', 'scss/themes/campl_turquoise.scss', 'dist/css/campl_turquoise.css'])
 
+def make_css_legacy():
+
+  if not os.path.exists(CSS_DIST):
+    os.makedirs(CSS_DIST)
+  call(['sass', '--compass', 'scss/themes/campl_turquoise_legacy.scss', 'dist/css/campl_turquoise_legacy.css'])
+  
 def make_themes():
 
   if not os.path.exists(CSS_DIST):
@@ -49,6 +61,7 @@ def make_themes():
     call(['sass', '--compass', 'scss/themes/campl_%s.scss'%colour, 'dist/css/campl_%s.css'%colour])
 
 def make_themes_legacy():
+
   if not os.path.exists(CSS_DIST):
     os.makedirs(CSS_DIST)
   for colour in COLOURS:
@@ -101,18 +114,26 @@ def make_html(RELEASE_URL=LOCAL_RELEASE_URL):
     front_page.render(base_context, colour)
 
 def deploy():
-  if os.path.exists(LOCAL_RELEASE_DIR):
-    shutil.rmtree(LOCAL_RELEASE_DIR)
-  shutil.copytree('dist', LOCAL_RELEASE_DIR)
+  if args.r:
+    if 'html' not in args.mode:
+      make_html(REMOTE_RELEASE_URL)
+    call(['rsync', '-r', 'dist/', REMOTE_RELEASE_DIR])
+    make_html(LOCAL_RELEASE_URL)
+  else:
+    if os.path.exists(LOCAL_RELEASE_DIR):
+      shutil.rmtree(LOCAL_RELEASE_DIR)
+    shutil.copytree('dist', LOCAL_RELEASE_DIR)
+  
     
-import argparse
+
 
 parser = argparse.ArgumentParser(description='Make campl-ng')
 
-parser.add_argument('mode', nargs='*', default=['all'])
+parser.add_argument('-l', action='store_true')
+parser.add_argument('-r', action='store_true')
+parser.add_argument('mode', nargs='*', default=[])
 
 args = parser.parse_args()
-
 
 if 'all' in args.mode:
   clean_dist()
@@ -123,36 +144,26 @@ if 'all' in args.mode:
   deploy()
   
 if 'html' in args.mode:
-  make_html()
-  deploy()
+  if args.r:
+    make_html(REMOTE_RELEASE_URL)
+  else:
+    make_html(LOCAL_RELEASE_URL)
 
 if 'css' in args.mode:
+  if args.l:
+    make_css_legacy()
   make_css()
-  deploy()
 
+if 'themes' in args.mode:
+  if args.l:
+    make_themes_legacy()
+  make_themes()
+  
 if 'js' in args.mode:
   make_js()
-  deploy()
 
 if 'img' in args.mode:
-  make_img()
-  deploy()
-  
-if 'themes' in args.mode:
-  make_themes()
-  deploy()
-  
-if 'legacy' in args.mode:
-  make_themes_legacy()
-  deploy()
+  make_img()  
 
-
-if 'remote' in args.mode:
-  from local_settings import REMOTE_RELEASE_URL, REMOTE_RELEASE_DIR
-  make_html(REMOTE_RELEASE_URL)
-  from subprocess import call
-  call(['rsync', '-r', 'dist/', REMOTE_RELEASE_DIR])
-  make_html()
-  
 if 'deploy' in args.mode:
   deploy()
