@@ -52,7 +52,7 @@
         <ul class="dropdown-menu">
           {% for colour in COLOURS %}
             <li>
-              <a href="{{ ROOT_URL|replace(THEME_VARIANT, colour) }}{% if not page.front_page %}{{ page.url }}{% else %}/{% endif %}" class="dropdown-item">{{ colour|title }}</a>
+              <a href="{{ ROOT_URL|replace(THEME_VARIANT, colour) }}/{{ page.url }}" class="dropdown-item">{{ colour|title }}</a>
             </li>
           {% endfor %}
         </ul>

@@ -1,14 +1,30 @@
 {% extends 'layouts/subnonav.html' %}
 
+{% from 'components/sidebar/sidebar.html' import sidebar_heading %}
+{% from 'components/sidebar/related_links.html' import related_links %}
 
-{% block content %}
-<pre>
-<code class="django" style="font-size:1.2em;">
-{{ template|e }}
-</code>
-</pre>
+{% block unwrapped_content %}
+<pre style="margin:0;"><code class="django" style="font-size:1.2em;">{{ template|e }}</code></pre>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('pre code').each(function(i, block) {
+      hljs.highlightBlock(block);
+      $('span.hljs-string:contains(".html")').each( function(i, e) {
+        var href = e.innerHTML.replace(/'/g, '');
+        $(e).wrapInner('<a href="{{ ROOT_URL }}/templates/' + href + '"></a>');
+      });
+    });
+  });
+</script>
 {% endblock %}
 
 {% block sidebar_content %}
-{{ referenced }}
+{% if template_references %}
+{{ sidebar_heading('Template References') }}
+{{ related_links(template_references) }}
+{% endif %}
+{% if referencing_templates %}
+{{ sidebar_heading('Referencing Templates') }}
+{{ related_links(referencing_templates) }}
+{% endif %}
 {% endblock %}

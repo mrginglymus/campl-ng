@@ -13,37 +13,49 @@ class Pages(list):
       page.update_url()
     for page in self:
       page.update_breadcrumbs(self)
-    
-def get_referenced_templates(source):
-  return list(
-    meta.find_referenced_templates(
-      env.parse(
-        env.loader.get_source(
-          env, source
-        )[0]
-      )
-    )
-  )
+
+  
+TEMPLATE_REFERENCES = {}
+
+REFERENCING_TEMPLATES = {}
+
+TEMPLATE_PAGES = []
+
+def template_to_tuple(templates, root_url):
+  return [
+    (
+      ' > '.join(t.split('/')),
+      '%s/templates/%s' % (root_url, t)
+    ) for t in templates
+  ]
+
+for template_name in env.list_templates():
+  if template_name != 'template.html':
+    refs = list(meta.find_referenced_templates(env.parse(env.loader.get_source(env, template_name)[0])))
+    TEMPLATE_REFERENCES[template_name] = refs
+    for ref in refs:
+      REFERENCING_TEMPLATES.setdefault(ref, []).append(template_name)
 
 class TemplatePage(object):
   def __init__(self, template_name):
-    self.title = template_name
+    self.title = template_name.split('/')[-1]
     self.source = template_name
     self.url = 'templates/' + template_name
     self.children = []
-    self.horizontal_breadcrumb = []
+    self.horizontal_breadcrumb = BASE_BREADCRUMB + [('Templates', None)] + [(t.replace('_', ' ').title(), None) for t in self.source.split('/')[:-1]] + [(self.title, None)]
     self.vertical_breadcrumb = []
     self.vertical_breadcrumb_parent = None
     self.vertical_breadcrumb_children = None
     self.vertical_breadcrumb_siblings = []
-    self.front_page=True
+    self.front_page=False
     
   def render(self, base_context, colour):
     template = env.get_template('template.html')
     context = {
       'page': self,
       'template': env.loader.get_source(env, self.source)[0],
-      'referenced': get_referenced_templates(self.source),
+      'template_references': template_to_tuple(TEMPLATE_REFERENCES.get(self.source, []), base_context['ROOT_URL']),
+      'referencing_templates': template_to_tuple(REFERENCING_TEMPLATES.get(self.source, []), base_context['ROOT_URL']),
     }
     context.update(**base_context)
     destination = os.path.join('dist', colour, self.url)
