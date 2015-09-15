@@ -36,7 +36,7 @@ for template_name in env.list_templates():
     for ref in refs:
       REFERENCING_TEMPLATES.setdefault(ref, []).append(template_name)
 
-class TemplatePage(object):
+class XTemplatePage(object):
   def __init__(self, template_name):
     self.title = template_name.split('/')[-1]
     self.source = template_name
@@ -80,10 +80,6 @@ class Page(object):
     self.vertical_breadcrumb_children = None
     self.vertical_breadcrumb_siblings = []
     self.front_page=front_page
-    #if self.source:
-    #  self.referenced_templates = list(get_referenced_templates(self.source))
-    #else:
-    #  self.referenced_templates = []
             
     
   def render(self, base_context, colour):
@@ -186,4 +182,49 @@ class Page(object):
   @property
   def context(self):
     return self._context
-      
+
+class SCSSPage(Page):
+
+  def render(self, base_context, colour):
+    if self.source:
+      with open(os.path.join('scss', *self.url.split('/')[2:]), 'r') as scss_file:
+        scss = scss_file.read()
+      template = env.get_template('meta/stylesheet.html')
+      context = {
+        'page': self,
+        'scss': scss,
+      }
+      context.update(**base_context)
+      destination = os.path.join('dist', colour, self.url[1:], 'index.html')
+      if not os.path.exists(os.path.dirname(destination)):
+        os.makedirs(os.path.dirname(destination))
+      with codecs.open(destination, 'wb', 'utf-8') as fh:
+        fh.write(template.render(**context))
+    for child in self.children:
+      child.render(base_context, colour)
+ 
+
+class TemplatePage(Page):
+     
+    
+  def render(self, base_context, colour):
+    if self.source:
+      template = env.get_template('meta/template.html')
+      template_file = os.path.join(*self.url.split('/')[2:])
+      context = {
+        'page': self,
+        'template': env.loader.get_source(env, template_file)[0],
+        'template_references': template_to_tuple(TEMPLATE_REFERENCES.get(template_file, []), base_context['ROOT_URL']),
+        'referencing_templates': template_to_tuple(REFERENCING_TEMPLATES.get(template_file, []), base_context['ROOT_URL']),
+      }
+      context.update(**base_context)
+      destination = os.path.join('dist', colour, self.url[1:], 'index.html')
+    
+      if not os.path.exists(os.path.dirname(destination)):
+        os.makedirs(os.path.dirname(destination))
+      with codecs.open(destination, 'wb', 'utf-8') as fh:
+        fh.write(template.render(**context))
+    for child in self.children:
+      child.render(base_context, colour)
+    
+    

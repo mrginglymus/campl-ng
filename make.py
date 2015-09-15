@@ -84,7 +84,7 @@ def make_html(RELEASE_URL=LOCAL_RELEASE_URL):
   MEDIA_URL = RELEASE_URL
   
   with codecs.open(os.path.join('dist', 'index.html'), 'wb', 'utf-8') as fh:
-    template = env.get_template('index.html')
+    template = env.get_template('meta/index.html')
     fh.write(template.render(ROOT_URL=RELEASE_URL + '/turquoise/'))
   
   for colour in COLOURS:
@@ -107,8 +107,6 @@ def make_html(RELEASE_URL=LOCAL_RELEASE_URL):
     
     front_page.render(base_context, colour)
     
-    for t in env.list_templates():
-      TemplatePage(t).render(base_context, colour)
 
 def deploy():
   if args.r:

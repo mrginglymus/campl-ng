@@ -1,6 +1,7 @@
-from pages import Page, Pages
+from pages import Page, Pages, SCSSPage, TemplatePage
 import loremipsum
 from random import random
+import os
 
 def random_image(width, height=None):
   if not height:
@@ -10,7 +11,41 @@ def random_image(width, height=None):
   width = int(width*scale)
   
   return "http://lorempixel.com/%s/%s" % (width, height)
+
+
+# css pages
+
+def get_directory_structure(rootdir):
+  """
+  Creates a nested dictionary that represents the folder structure of rootdir
+  """
+  dir = {}
+  rootdir = rootdir.rstrip(os.sep)
+  start = rootdir.rfind(os.sep) + 1
+  for path, dirs, files in os.walk(rootdir):
+    folders = path[start:].split(os.sep)
+    subdir = dict.fromkeys(files)
+    parent = reduce(dict.get, folders[:-1], dir)
+    parent[folders[-1]] = subdir
+  return dir
   
+
+scss = get_directory_structure('scss')['scss']
+
+def shuffle_dirs(dir, cls):
+  for p, c in dir.items():
+    if p != 'meta':
+      if c:
+        children = list(shuffle_dirs(c, cls))
+        yield cls(p, children=children)
+      else:
+        yield cls(p, p)
+
+scss_pages = list(shuffle_dirs(scss, SCSSPage))
+
+templates = get_directory_structure('templates')['templates']
+
+template_pages = list(shuffle_dirs(templates, TemplatePage))
 
 pages = Pages([
   Page('About', 'demo.html', context={'image': random_image(590,288)}),
@@ -40,6 +75,8 @@ pages = Pages([
     ]),
     Page('Teasers', 'components/teasers/examples.html'),
   ]),
+  Page('Stylesheets', children=scss_pages),
+  Page('Templates', children=template_pages),
 ])
 
 front_page = Page(

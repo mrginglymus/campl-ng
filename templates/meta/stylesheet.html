@@ -1,0 +1,12 @@
+{% extends 'layouts/subnocol.html' %}
+
+{% block unwrapped_content %}
+<pre style="margin:0;"><code class="scss" style="font-size:1.2em;">{{ scss|e }}</code></pre>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('pre code').each(function(i, block) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+{% endblock %}
