@@ -1,27 +1,11 @@
 {% extends 'layouts/subnav.html' %}
 
-{% import 'macros.html' as macros %}
+{% import 'components/inpage/navigation/nav.html' as nav %}
 
 {% block content %}
-{% call macros.show_code() %}
-<ul class="nav nav-tabs" role="tablist">
-  <li class="nav-item">
-    <a href="#tab1" class="nav-link active" role="tab" data-toggle="tab">Active</a>
-  </li>
-  <li class="nav-item">
-    <a href="#tab2" class="nav-link" role="tab" data-toggle="tab">Link</a>
-  </li>
-  <li class="nav-item">
-    <a href="#tab3" class="nav-link" role="tab" data-toggle="tab">Another Link</a>
-  </li>
-  <li class="nav-item">
-    <span class="nav-link disabled" role="tab">Disabled</a>
-  </li>
-</ul>
-<div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="tab1"><p>Tab 1 content</p></div>
-  <div role="tabpanel" class="tab-pane" id="tab2"><p>Tab 2 content</p></div>
-  <div role="tabpanel" class="tab-pane" id="tab3"><p>Tab 3 content</p></div>
+
+{{ nav.nav(nav.NAV_ITEMS_EXAMPLE, 'tab', local=true) }}
+<div class="p-t">
+  {{ nav.tabs(nav.NAV_ITEMS_EXAMPLE) }}
 </div>
-{% endcall %}
 {% endblock %}

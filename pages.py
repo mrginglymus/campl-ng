@@ -15,7 +15,7 @@ class Pages(list):
       page.update_breadcrumbs(self)
     
 def get_referenced_templates(source):
-  rtl = list(
+  return list(
     meta.find_referenced_templates(
       env.parse(
         env.loader.get_source(
@@ -24,8 +24,35 @@ def get_referenced_templates(source):
       )
     )
   )
-  for t in rtl:
-    yield list((t, list(get_referenced_templates(t))))
+
+class TemplatePage(object):
+  def __init__(self, template_name):
+    self.title = template_name
+    self.source = template_name
+    self.url = 'templates/' + template_name
+    self.children = []
+    self.horizontal_breadcrumb = []
+    self.vertical_breadcrumb = []
+    self.vertical_breadcrumb_parent = None
+    self.vertical_breadcrumb_children = None
+    self.vertical_breadcrumb_siblings = []
+    self.front_page=True
+    
+  def render(self, base_context, colour):
+    template = env.get_template('template.html')
+    context = {
+      'page': self,
+      'template': env.loader.get_source(env, self.source)[0],
+      'referenced': get_referenced_templates(self.source),
+    }
+    context.update(**base_context)
+    destination = os.path.join('dist', colour, self.url)
+    
+    if not os.path.exists(os.path.dirname(destination)):
+      os.makedirs(os.path.dirname(destination))
+    with codecs.open(destination, 'wb', 'utf-8') as fh:
+      fh.write(template.render(**context))
+    
 
 class Page(object):
 
@@ -41,10 +68,10 @@ class Page(object):
     self.vertical_breadcrumb_children = None
     self.vertical_breadcrumb_siblings = []
     self.front_page=front_page
-    if self.source:
-      self.referenced_templates = list(get_referenced_templates(self.source))
-    else:
-      self.referenced_templates = []
+    #if self.source:
+    #  self.referenced_templates = list(get_referenced_templates(self.source))
+    #else:
+    #  self.referenced_templates = []
             
     
   def render(self, base_context, colour):

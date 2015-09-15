@@ -1,0 +1,14 @@
+{% extends 'layouts/subnonav.html' %}
+
+
+{% block content %}
+<pre>
+<code class="django" style="font-size:1.2em;">
+{{ template|e }}
+</code>
+</pre>
+{% endblock %}
+
+{% block sidebar_content %}
+{{ referenced }}
+{% endblock %}

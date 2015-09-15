@@ -12,6 +12,7 @@ from local_settings import (
   REMOTE_RELEASE_DIR,
 )
 from quicklinks import QUICKLINKS
+from pages import TemplatePage
 
 from git import Repo
 
@@ -105,6 +106,29 @@ def make_html(RELEASE_URL=LOCAL_RELEASE_URL):
       page.render(base_context, colour)
     
     front_page.render(base_context, colour)
+    
+    template_page = env.get_template('template.html')
+    template_pages=[]
+    for template_name in env.list_templates():
+      template_pages.append(
+        TemplatePage(
+          template_name
+        )
+      )
+      """
+      template = env.loader.get_source(env, template_name)[0]
+      context = base_context
+      context['template'] = template
+      context['template_name'] = template_name
+      dest = os.path.join('dist', colour, 'templates', template_name)
+      if not os.path.exists(os.path.dirname(dest)):
+        os.makedirs(os.path.dirname(dest))
+      with codecs.open(os.path.join('dist', colour, 'templates', template_name), 'wb', 'utf-8') as fh:
+        fh.write(template_page.render(**context))
+      """
+    
+    for t in template_pages:
+      t.render(base_context, colour)
 
 def deploy():
   if args.r:

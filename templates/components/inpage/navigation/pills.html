@@ -1,56 +1,15 @@
 {% extends 'layouts/subnav.html' %}
 
-{% import 'macros.html' as macros %}
+{% import 'components/inpage/navigation/nav.html' as nav %}
+
 
 {% block content %}
-{% call macros.show_code() %}
-<div class="clearfix">
-  <ul class="nav nav-pills" role="tablist">
-    <li class="nav-item">
-      <a href="#tab1" class="nav-link active" role="tab" data-toggle="tab">Active</a>
-    </li>
-    <li class="nav-item">
-      <a href="#tab2" class="nav-link" role="tab" data-toggle="tab">Link</a>
-    </li>
-    <li class="nav-item">
-      <a href="#tab3" class="nav-link" role="tab" data-toggle="tab">Another Link</a>
-    </li>
-    <li class="nav-item">
-      <span class="nav-link disabled" role="tab">Disabled</a>
-    </li>
-  </ul>
-</div>
-<div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="tab1"><p>Tab 1 content</p></div>
-  <div role="tabpanel" class="tab-pane" id="tab2"><p>Tab 2 content</p></div>
-  <div role="tabpanel" class="tab-pane" id="tab3"><p>Tab 3 content</p></div>
-</div>
-{% endcall %}
 
-{% call macros.show_code() %}
-<div class="row">
-  <div class="col-md-4">
-    <ul class="nav nav-pills nav-stacked" role="tablist">
-      <li class="nav-item">
-        <a href="#tab1a" class="nav-link active" role="tab" data-toggle="tab">Active</a>
-      </li>
-      <li class="nav-item">
-        <a href="#tab2a" class="nav-link" role="tab" data-toggle="tab">Link</a>
-      </li>
-      <li class="nav-item">
-        <a href="#tab3a" class="nav-link" role="tab" data-toggle="tab">Another Link</a>
-      </li>
-      <li class="nav-item">
-        <span class="nav-link disabled" role="tab">Disabled</a>
-      </li>
-    </ul>
-  </div>
-  <div class="tab-content col-md-8">
-    <div role="tabpanel" class="tab-pane active" id="tab1a"><p>Tab 1 content</p></div>
-    <div role="tabpanel" class="tab-pane" id="tab2a"><p>Tab 2 content</p></div>
-    <div role="tabpanel" class="tab-pane" id="tab3a"><p>Tab 3 content</p></div>
-  </div>
+<div class="clearfix">
+  {{ nav.nav(nav.NAV_ITEMS_EXAMPLE, 'pill', local=true) }}
 </div>
-{% endcall %}
+<div class="p-t">
+  {{ nav.tabs(nav.NAV_ITEMS_EXAMPLE) }}
+</div>
 
 {% endblock %}

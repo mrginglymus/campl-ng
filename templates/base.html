@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500italic,700,700italic,900,900italic,500' rel='stylesheet' type='text/css'>
 
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/solarized_light.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
     
     <!--[if gte IE 10]><!--><link rel="stylesheet" href="{{ MEDIA_URL }}/css/campl{% if THEME_VARIANT %}_{{ THEME_VARIANT }}{% endif %}.css"><!--<![endif]-->
@@ -35,32 +35,5 @@
   {% block body %}
   Hello, world
   {% endblock %}
-  {% if page %}
-  <div class="modal" role="dialog" id="templates">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title" id="templates">Template Usage</h2>
-        </div>
-        <div class="modal-body">
-          <p>Base template: <a href="{{ TEMPLATE_REPO_ROOT }}/{{ page.source}}">{{ page.source }}</a></p>
-          <p>Referenced templates:</p>
-          <ul>
-          {% for template, children in page.referenced_templates recursive %}
-            <li>
-              <a href="{{ TEMPLATE_REPO_ROOT }}/{{ template }}">{{ template }}</a>
-              {% if children %}
-              <ul>
-                {{ loop(children) }}
-              </ul>
-              {% endif %}
-            </li>
-          {% endfor %}
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-  {% endif %}
   </body>
 </html>
