@@ -36,11 +36,14 @@
     font-size: 3em;
     position: absolute;
     color: #fff;
+    @include media-breakpoint-down(sm) {
+      font-size: 2em;
+    }
   }
   
   // audio icon
   .teaser-image-audio:before {
-    content: $fa-var-volume-off;
+    content: $fa-var-volume-up;
   }
 
   // video icon
@@ -66,9 +69,17 @@
 // padding for teaser image and positioning for AV icon
 .horizontal-teaser .teaser-image {
   padding: 0 20px 0 0;
-  .teaser-image-audio, .teaser-image-video {
-    right: 20px;
-    bottom: 0;
+  @include media-breakpoint-up(md) {
+    .teaser-image-audio, .teaser-image-video {
+      right: 20px;
+      bottom: 0;
+    }
+  }
+  @include media-breakpoint-down(sm) {
+    .teaser-image-audio, .teaser-image-video {
+      top: 0;
+      left: 0;
+    }
   }
 }
 
@@ -85,8 +96,8 @@
   @include media-breakpoint-down(sm) {
     padding: 0 20px 0 0;
     .teaser-image-audio, .teaser-image-video {
-      right: 20px;
-      bottom: 0;
+      top: 0;
+      left: 0;
     }
   }
 }

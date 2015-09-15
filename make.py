@@ -40,32 +40,14 @@ def clean_dist():
     shutil.rmtree(DIST)
   os.mkdir(DIST)
 
-
-def make_css():
-
-  if not os.path.exists(CSS_DIST):
-    os.makedirs(CSS_DIST)
-  call(['sass', '--compass', 'scss/themes/campl_turquoise.scss', 'dist/css/campl_turquoise.css'])
-
-def make_css_legacy():
-
-  if not os.path.exists(CSS_DIST):
-    os.makedirs(CSS_DIST)
-  call(['sass', '--compass', 'scss/themes/campl_turquoise_legacy.scss', 'dist/css/campl_turquoise_legacy.css'])
   
-def make_themes():
-
+def make_css(colours=['turquoise'], legacy=False):
   if not os.path.exists(CSS_DIST):
     os.makedirs(CSS_DIST)
-  for colour in COLOURS:
+  for colour in colours:
     call(['sass', '--compass', 'scss/themes/campl_%s.scss'%colour, 'dist/css/campl_%s.css'%colour])
-
-def make_themes_legacy():
-
-  if not os.path.exists(CSS_DIST):
-    os.makedirs(CSS_DIST)
-  for colour in COLOURS:
-    call(['sass', '--compass', 'scss/themes/campl_%s_legacy.scss'%colour, 'dist/css/campl_%s_legacy.css'%colour])
+    if legacy:
+      call(['sass', '--compass', 'scss/themes/campl_%s_legacy.scss'%colour, 'dist/css/campl_%s_legacy.css'%colour])
    
 def make_img():
   if os.path.exists(IMG_DIST):
@@ -119,10 +101,9 @@ def deploy():
       make_html(REMOTE_RELEASE_URL)
     call(['rsync', '-r', 'dist/', REMOTE_RELEASE_DIR])
     make_html(LOCAL_RELEASE_URL)
-  else:
-    if os.path.exists(LOCAL_RELEASE_DIR):
-      shutil.rmtree(LOCAL_RELEASE_DIR)
-    shutil.copytree('dist', LOCAL_RELEASE_DIR)
+  if os.path.exists(LOCAL_RELEASE_DIR):
+    shutil.rmtree(LOCAL_RELEASE_DIR)
+  shutil.copytree('dist', LOCAL_RELEASE_DIR)
   
     
 
@@ -131,6 +112,7 @@ parser = argparse.ArgumentParser(description='Make campl-ng')
 
 parser.add_argument('-l', action='store_true')
 parser.add_argument('-r', action='store_true')
+parser.add_argument('-a', action='store_true')
 parser.add_argument('mode', nargs='*', default=[])
 
 args = parser.parse_args()
@@ -150,14 +132,10 @@ if 'html' in args.mode:
     make_html(LOCAL_RELEASE_URL)
 
 if 'css' in args.mode:
-  if args.l:
-    make_css_legacy()
-  make_css()
-
-if 'themes' in args.mode:
-  if args.l:
-    make_themes_legacy()
-  make_themes()
+  if args.a:
+    make_css(colours=COLOURS, legacy=args.l)
+  else:
+    make_css(legacy=args.l)
   
 if 'js' in args.mode:
   make_js()
@@ -165,5 +143,4 @@ if 'js' in args.mode:
 if 'img' in args.mode:
   make_img()  
 
-if 'deploy' in args.mode:
-  deploy()
+deploy()
