@@ -1,4 +1,4 @@
-from jinja2 import FileSystemLoader, Environment
+from jinja2 import FileSystemLoader, Environment, meta
 import codecs
 import os
 env = Environment(loader=FileSystemLoader('templates'))
@@ -14,6 +14,18 @@ class Pages(list):
     for page in self:
       page.update_breadcrumbs(self)
     
+def get_referenced_templates(source):
+  rtl = list(
+    meta.find_referenced_templates(
+      env.parse(
+        env.loader.get_source(
+          env, source
+        )[0]
+      )
+    )
+  )
+  for t in rtl:
+    yield list((t, list(get_referenced_templates(t))))
 
 class Page(object):
 
@@ -29,6 +41,11 @@ class Page(object):
     self.vertical_breadcrumb_children = None
     self.vertical_breadcrumb_siblings = []
     self.front_page=front_page
+    if self.source:
+      self.referenced_templates = list(get_referenced_templates(self.source))
+    else:
+      self.referenced_templates = []
+            
     
   def render(self, base_context, colour):
     if self.source:

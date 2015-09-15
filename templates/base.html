@@ -35,5 +35,32 @@
   {% block body %}
   Hello, world
   {% endblock %}
+  {% if page %}
+  <div class="modal" role="dialog" id="templates">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title" id="templates">Template Usage</h2>
+        </div>
+        <div class="modal-body">
+          <p>Base template: <a href="{{ TEMPLATE_REPO_ROOT }}/{{ page.source}}">{{ page.source }}</a></p>
+          <p>Referenced templates:</p>
+          <ul>
+          {% for template, children in page.referenced_templates recursive %}
+            <li>
+              <a href="{{ TEMPLATE_REPO_ROOT }}/{{ template }}">{{ template }}</a>
+              {% if children %}
+              <ul>
+                {{ loop(children) }}
+              </ul>
+              {% endif %}
+            </li>
+          {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
   </body>
 </html>

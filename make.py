@@ -13,6 +13,16 @@ from local_settings import (
 )
 from quicklinks import QUICKLINKS
 
+from git import Repo
+
+repo = Repo(os.getcwd())
+base_repo_url = repo.remotes.origin.url
+if ':' in base_repo_url:
+  base_repo_url = base_repo_url.replace('git@github.com:', 'https://github.com/')
+base_repo_url = base_repo_url.replace('.git', '')
+
+base_template_url = '/'.join([base_repo_url, 'tree', repo.active_branch.name, 'templates'])
+
 SITE_NAME = 'CamPL-NG'
 
 JS = (
@@ -87,6 +97,7 @@ def make_html(RELEASE_URL=LOCAL_RELEASE_URL):
       'MENU': pages,
       'COLOURS': COLOURS,
       'QUICKLINKS': QUICKLINKS,
+      'TEMPLATE_REPO_ROOT': base_template_url,
     }
 
 
