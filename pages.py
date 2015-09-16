@@ -49,7 +49,7 @@ class XTemplatePage(object):
     self.vertical_breadcrumb_siblings = []
     self.front_page=False
     
-  def render(self, base_context, colour):
+  def render(self, base_context):
     template = env.get_template('template.html')
     context = {
       'page': self,
@@ -58,7 +58,7 @@ class XTemplatePage(object):
       'referencing_templates': template_to_tuple(REFERENCING_TEMPLATES.get(self.source, []), base_context['ROOT_URL']),
     }
     context.update(**base_context)
-    destination = os.path.join('dist', colour, self.url)
+    destination = os.path.join('dist', self.url)
     
     if not os.path.exists(os.path.dirname(destination)):
       os.makedirs(os.path.dirname(destination))
@@ -82,20 +82,20 @@ class Page(object):
     self.front_page=front_page
             
     
-  def render(self, base_context, colour):
+  def render(self, base_context):
     if self.source:
       template = env.get_template(self.source)
       context = self.context
       context.update(**base_context)
       context['page'] = self
-      destination = os.path.join('dist', colour, self.url[1:], 'index.html')
+      destination = os.path.join('dist', self.url[1:], 'index.html')
       
       if not os.path.exists(os.path.dirname(destination)):
         os.makedirs(os.path.dirname(destination))
       with codecs.open(destination, 'wb', 'utf-8') as fh:
         fh.write(template.render(**context))
     for child in self.children:
-      child.render(base_context, colour)
+      child.render(base_context)
    
   
   @property
@@ -185,7 +185,7 @@ class Page(object):
 
 class SCSSPage(Page):
 
-  def render(self, base_context, colour):
+  def render(self, base_context):
     if self.source:
       with open(os.path.join('scss', *self.url.split('/')[2:]), 'r') as scss_file:
         scss = scss_file.read()
@@ -195,19 +195,19 @@ class SCSSPage(Page):
         'scss': scss,
       }
       context.update(**base_context)
-      destination = os.path.join('dist', colour, self.url[1:], 'index.html')
+      destination = os.path.join('dist', self.url[1:], 'index.html')
       if not os.path.exists(os.path.dirname(destination)):
         os.makedirs(os.path.dirname(destination))
       with codecs.open(destination, 'wb', 'utf-8') as fh:
         fh.write(template.render(**context))
     for child in self.children:
-      child.render(base_context, colour)
+      child.render(base_context)
  
 
 class TemplatePage(Page):
      
     
-  def render(self, base_context, colour):
+  def render(self, base_context):
     if self.source:
       template = env.get_template('meta/template.html')
       template_file = os.path.join(*self.url.split('/')[2:])
@@ -218,13 +218,13 @@ class TemplatePage(Page):
         'referencing_templates': template_to_tuple(REFERENCING_TEMPLATES.get(template_file, []), base_context['ROOT_URL']),
       }
       context.update(**base_context)
-      destination = os.path.join('dist', colour, self.url[1:], 'index.html')
+      destination = os.path.join('dist', self.url[1:], 'index.html')
     
       if not os.path.exists(os.path.dirname(destination)):
         os.makedirs(os.path.dirname(destination))
       with codecs.open(destination, 'wb', 'utf-8') as fh:
         fh.write(template.render(**context))
     for child in self.children:
-      child.render(base_context, colour)
+      child.render(base_context)
     
     

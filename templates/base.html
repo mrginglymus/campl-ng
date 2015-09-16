@@ -10,13 +10,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/solarized_light.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
     
-    <!--[if gte IE 10]><!--><link rel="stylesheet" href="{{ MEDIA_URL }}/css/campl{% if THEME_VARIANT %}_{{ THEME_VARIANT }}{% endif %}.css"><!--<![endif]-->
+    
+    {% for colour in COLOURS %}
+    <!--[if gte IE 10]><!--><link rel="{% if not colour=="turquoise" %}alternate {% endif %} stylesheet" href="{{ MEDIA_URL }}/css/campl_{{ colour }}.css" title="{{ colour }}" disabled><!--<![endif]-->
     <!--[if lte IE 9 ]>
-      <link rel="stylesheet" href="{{ MEDIA_URL }}/css/campl{% if THEME_VARIANT %}_{{ THEME_VARIANT }}{% endif %}_legacy.css">
+      <link rel="{% if not colour=="turquoise" %}alternate {% endif %} stylesheet" href="{{ MEDIA_URL }}/css/campl_{{ colour }}_legacy.css" title="{{ colour }}" disabled>
     <![endif]-->
+    {% endfor %}
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/locale/en-gb.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.0.3/js.cookie.js"></script>
     {% for src, dst in JS %}
     <script type="text/javascript" src="{{ MEDIA_URL }}/js/{{ dst }}"></script>
     {% endfor %}

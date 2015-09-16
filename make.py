@@ -30,6 +30,7 @@ JS = (
   ('lib/bootstrap/dist/js/bootstrap.js', 'bootstrap.js'),
   ('lib/datetimepicker/src/js/bootstrap-datetimepicker.js', 'datetimepicker.js'),
   ('js/menu.js', 'menu.js'),
+  ('js/theme_switcher.js', 'theme_switcher.js'),
 )
 
 COLOURS = [
@@ -82,30 +83,21 @@ def make_html(RELEASE_URL=LOCAL_RELEASE_URL):
   env = Environment(loader=FileSystemLoader('templates'))
   
   MEDIA_URL = RELEASE_URL
-  
-  with codecs.open(os.path.join('dist', 'index.html'), 'wb', 'utf-8') as fh:
-    template = env.get_template('meta/index.html')
-    fh.write(template.render(ROOT_URL=RELEASE_URL + '/turquoise/'))
-  
-  for colour in COLOURS:
-  
-    base_context = {
-      'ROOT_URL': RELEASE_URL + '/' + colour,
-      'SITE_NAME': SITE_NAME,
-      'MEDIA_URL': MEDIA_URL,
-      'THEME_VARIANT': colour,
-      'JS': JS,
-      'MENU': pages,
-      'COLOURS': COLOURS,
-      'QUICKLINKS': QUICKLINKS,
-      'TEMPLATE_REPO_ROOT': base_template_url,
-    }
+  base_context = {
+    'ROOT_URL': RELEASE_URL ,
+    'SITE_NAME': SITE_NAME,
+    'MEDIA_URL': MEDIA_URL,
+    'JS': JS,
+    'MENU': pages,
+    'COLOURS': COLOURS,
+    'QUICKLINKS': QUICKLINKS,
+    'TEMPLATE_REPO_ROOT': base_template_url,
+  }
 
-
-    for page in pages:
-      page.render(base_context, colour)
-    
-    front_page.render(base_context, colour)
+  for page in pages:
+    page.render(base_context)
+  
+  front_page.render(base_context)
     
 
 def deploy():
