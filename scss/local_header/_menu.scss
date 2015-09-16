@@ -1,3 +1,5 @@
+@import "compass/css3/images";
+
 .local-header {
   .navbar-local {
     @include theme_element(background-color, primary);
@@ -29,6 +31,17 @@
     .nav-link {
       color: #ffffff;
       padding: 10px 20px;
+    }
+    
+    .dropdown-toggle:after {
+      border: none;
+      width:20px;
+      height:20px;
+      @include background(url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAHCAYAAADTcMcaAAAAK0lEQVR42mP4+/dvAwMJAK6eWI0Y6ghpxCmPS4KgS9AVEO1nmEJSAwmvBgDXWC0MT+3i3gAAAABJRU5ErkJggg==));
+      background-repeat: no-repeat;
+      background-position: center;
+      position: relative;
+      left: 10px;
     }
     
     .dropdown-menu {
