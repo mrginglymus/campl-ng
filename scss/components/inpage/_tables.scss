@@ -25,9 +25,9 @@
 }
 
 .table-hover {
-  tbody tr {
+  tbody tr, tbody tr:nth-of-type(odd) {
     @include hover {
-      background-color: $table-bg-hover !important;
+      background-color: $table-bg-hover;
     }
   }
 }

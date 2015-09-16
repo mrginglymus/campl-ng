@@ -6,15 +6,17 @@ h1, h2 {
   @include theme_element(color, dark);
 }
 
-h1, h2, h3, h4, h5, h6 {
+#{headings()} {
   font-family: $font-family-sans-serif-extra;
 }
 
-.lite-heading {
-  font-weight: 300;
-  font-size: 19px;
-  line-height: 25px;
-  color: #000 !important;
+#{headings()} {
+  &.lite-heading {
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 25px;
+    color: #000;
+  }
 }
 
 .heading {
