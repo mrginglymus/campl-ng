@@ -23,3 +23,11 @@
     @include theme_element(background-color, paler);
   }
 }
+
+.table-hover {
+  tbody tr {
+    @include hover {
+      background-color: $table-bg-hover !important;
+    }
+  }
+}
