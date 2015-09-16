@@ -123,7 +123,7 @@ args = parser.parse_args()
 if 'all' in args.mode:
   clean_dist()
   make_js()
-  make_themes()
+  make_css()
   make_img()
   make_html()
   deploy()
