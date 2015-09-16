@@ -7,15 +7,15 @@
       line-height: 18px;
     }
     .nav-link:not(.disabled) {
-      color: map-get($theme, lighter);
+      @include theme_element(color, lighter);
       
       &:not(.active):hover {
         background-color: #eee;
-        color: map-get($theme, lighter);
+        @include theme_element(color, lighter);
       }
       
       &.active {
-        background-color: map-get($theme, lighter);
+        @include theme_element(background-color, lighter);
         color: #fff;
       }
     }
@@ -24,7 +24,8 @@
     }
   }
   &.nav-tabs {
-    border-bottom: 2px solid map-get($theme, lighter);
+    border-bottom: 2px solid;
+    @include theme_element(border-bottom-color, lighter);
     padding-left: 20px;
     .nav-item {
       margin-bottom: 0px;

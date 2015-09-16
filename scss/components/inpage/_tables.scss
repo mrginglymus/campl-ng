@@ -10,9 +10,16 @@
 }
 
 .table-bordered {
-  border-bottom: 2px solid map-get($theme, lighter);
+  border-bottom: 2px solid;
+  @include theme_element(border-bottom-color, lighter);
   thead th {
-    background-color: map-get($theme, lighter);
+    @include theme_element(background-color, lighter);
     color: #fff;
+  }
+}
+
+.table-striped {
+  tbody tr:nth-of-type(odd) {
+    @include theme_element(background-color, paler);
   }
 }

@@ -1,25 +1,28 @@
 .local-header {
   .navbar-local {
-    background-color: map-get($theme, primary);
+    @include theme_element(background-color, primary);
     font-family: $font-family-sans-serif-extra;
     font-size: 14px;
     padding: 0;
-    border-bottom: 1px solid map-get($theme, dark);
+    border-bottom: 1px solid;
+    @include theme_element(border-bottom-color, dark);
     
     .nav-item {
       @include hover-focus {
-        background-color: map-get($theme, darker);
+        @include theme_element(background-color, darker);
       }
       margin-left: 0;
-      background-color: map-get($theme, primary);
+      @include theme_element(background-color, primary);
       &.active {
-        background-color: map-get($theme, lighter);
+        @include theme_element(background-color, lighter);
       }
       &:not(.pull-right) .nav-link {
-        border-right: 1px solid map-get($theme, dark);
+        border-right: 1px solid;
+        @include theme_element(border-right-color, dark);
       }
       &.pull-right .nav-link {
-        border-left: 1px solid map-get($theme, dark);
+        border-left: 1px solid;
+        @include theme_element(border-left-color, dark);
       }
     }
     
@@ -29,16 +32,17 @@
     }
     
     .dropdown-menu {
-      background-color: map-get($theme, darker);
+      @include theme_element(background-color, darker);
       margin-top: 0px;
       margin-left: -1px;
       padding: 0px;
       font-size: 1em;
       a {
-        border-top: 1px solid map-get($theme, dark);
+        border-top: 1px solid;
+        @include theme_element(border-top-color, dark);
         padding: 10px;
         @include hover-focus {
-          background-color: map-get($theme, primary);
+          @include theme_element(background-color, primary);
         }
         color: #ffffff;
       }

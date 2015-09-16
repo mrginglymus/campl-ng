@@ -1,6 +1,6 @@
 .local-header {
   .subtitle {
-    background-color: map-get($theme, light);
+    @include theme_element(background-color, light);
     z-index:0;
     position:relative;
     margin-bottom:-50px;

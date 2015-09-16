@@ -1,5 +1,5 @@
 .carousel-control {
-  background-color: map-get($theme, lighter);
+  @include theme_element(background-color, lighter);
   background-image: none !important;
   height: 50px;
   width: 50px;
@@ -8,7 +8,7 @@
 
   &:hover {
     opacity: 1;
-    background-color: map-get($theme, primary);
+    @include theme_element(background-color, primary);
   }
   
   &.left {

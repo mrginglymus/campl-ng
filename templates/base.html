@@ -11,12 +11,10 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
     
     
-    {% for colour in COLOURS %}
-    <!--[if gte IE 10]><!--><link rel="{% if not colour=="turquoise" %}alternate {% endif %} stylesheet" href="{{ MEDIA_URL }}/css/campl_{{ colour }}.css" title="{{ colour }}" disabled><!--<![endif]-->
+    <!--[if gte IE 10]><!--><link rel="stylesheet" href="{{ MEDIA_URL }}/css/campl.css"><!--<![endif]-->
     <!--[if lte IE 9 ]>
-      <link rel="{% if not colour=="turquoise" %}alternate {% endif %} stylesheet" href="{{ MEDIA_URL }}/css/campl_{{ colour }}_legacy.css" title="{{ colour }}" disabled>
+      <link rel="stylesheet" href="{{ MEDIA_URL }}/css/campl_legacy.css">
     <![endif]-->
-    {% endfor %}
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/locale/en-gb.js"></script>
@@ -32,7 +30,7 @@
       }
     </script>
   </head>
-  <body class="offcanvas offcanvas-left">
+  <body class="offcanvas offcanvas-left theme-turquoise">
   {% block body %}
   Hello, world
   {% endblock %}

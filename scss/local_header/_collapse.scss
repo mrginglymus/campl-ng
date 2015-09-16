@@ -1,12 +1,12 @@
 .local-header {
   @include media-breakpoint-down(sm) {
     .navbar-local {
-      background-color: map-get($theme, dark);
+      @include theme_element(background-color, dark);
       li {
         float: none;
-        background-color: map-get($theme, dark) !important;
+        @include theme_element(background-color, dark, !important);
         @include hover-focus {
-          background-color: map-get($theme, primary) !important;
+          @include theme_element(background-color, primary, !important);
         }
       }
       .dropdown-menu {
@@ -16,7 +16,7 @@
         
     }
     .navbar-toggler {
-      background-color: map-get($theme, primary);
+      @include theme_element(background-color, primary);
       border:none;
       padding: 0;
       a {
@@ -31,7 +31,7 @@
           text-decoration: none;
         }
         .mobile-menu-button {
-          background-color: map-get($theme, darker);
+          @include theme_element(background-color, darker);
           width: 53px;
           height: 53px;
           display: block;

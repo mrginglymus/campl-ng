@@ -53,13 +53,12 @@ def clean_dist():
   os.mkdir(DIST)
 
   
-def make_css(colours=['turquoise'], legacy=False):
+def make_css(legacy=False):
   if not os.path.exists(CSS_DIST):
     os.makedirs(CSS_DIST)
-  for colour in colours:
-    call(['sass', '--compass', 'scss/themes/campl_%s.scss'%colour, 'dist/css/campl_%s.css'%colour])
-    if legacy:
-      call(['sass', '--compass', 'scss/themes/campl_%s_legacy.scss'%colour, 'dist/css/campl_%s_legacy.css'%colour])
+  call(['sass', '--compass', 'scss/campl.scss', 'dist/css/campl.css'])
+  if legacy:
+    call(['sass', '--compass', 'scss/campl_legacy.scss', 'dist/css/campl_legacy.css'])
    
 def make_img():
   if os.path.exists(IMG_DIST):
@@ -117,7 +116,6 @@ parser = argparse.ArgumentParser(description='Make campl-ng')
 
 parser.add_argument('-l', action='store_true')
 parser.add_argument('-r', action='store_true')
-parser.add_argument('-a', action='store_true')
 parser.add_argument('mode', nargs='*', default=[])
 
 args = parser.parse_args()
@@ -137,10 +135,7 @@ if 'html' in args.mode:
     make_html(LOCAL_RELEASE_URL)
 
 if 'css' in args.mode:
-  if args.a:
-    make_css(colours=COLOURS, legacy=args.l)
-  else:
-    make_css(legacy=args.l)
+  make_css(legacy=args.l)
   
 if 'js' in args.mode:
   make_js()

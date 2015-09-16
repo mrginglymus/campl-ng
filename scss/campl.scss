@@ -6,11 +6,8 @@
 
  // Core variables and mixins
  
-$theme_variant: turquoise !default;
  
-@import "themes/themes";
-$theme: map-get($themes, $theme_variant);
- 
+@import "themes"; 
 @import "variables";
 
 @import "../lib/bootstrap/scss/variables";

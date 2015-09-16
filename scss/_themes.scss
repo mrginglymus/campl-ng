@@ -1,5 +1,5 @@
 $themes: (
-  blue: ( //1
+  "blue": ( //1
     darker:  #002e55,
     dark:    #003e74,
     primary: #004e8f,
@@ -8,7 +8,7 @@ $themes: (
     pale:    #68ace5,
     paler:   #d2e4f3,
   ),
-  turquoise: ( //2
+  "turquoise": ( //2
     darker:  #003a41,
     dark:    #106470,
     primary: #0c5963,
@@ -17,7 +17,7 @@ $themes: (
     pale:    #91b9a4,
     paler:   #d2f3e1,
   ),
-  purple: ( //3
+  "purple": ( //3
     darker:  #35254a,
     dark:    #422e5d,
     primary: #612d70,
@@ -26,7 +26,7 @@ $themes: (
     pale:    #af95a3,
     paler:   #f4d3e5,
   ),
-  green: ( //4
+  "green": ( //4
     darker:  #222f16,
     dark:    #304220,
     primary: #355918,
@@ -35,7 +35,7 @@ $themes: (
     pale:    #aab300,
     paler:   #f4f6cd,
   ),
-  orange: ( //5
+  "orange": ( //5
     darker:  #772801,
     dark:    #c44101,
     primary: #ab3901,
@@ -44,7 +44,7 @@ $themes: (
     pale:    #f3bd48,
     paler:   #f5e7ca,
   ),
-  red: ( //6
+  "red": ( //6
     darker:  #6c112a,
     dark:    #851735,
     primary: #a51137,
@@ -53,7 +53,7 @@ $themes: (
     pale:    #eb99a9,
     paler:   #f8e1e5,
   ),
-  grey: (
+  "grey": (
     darker:  #2f2f2f,
     dark:    #404040,
     primary: #5f5f5f,
@@ -63,3 +63,16 @@ $themes: (
     paler:   #dbd9d9,
   ),
 );
+
+@mixin theme_element($property, $variant, $important:"") {
+  $element: #{&};
+  @each $colour, $map in $themes {
+    @at-root {
+      .theme-#{$colour} {
+        #{$element} {
+          #{$property}:  map-get($map, $variant) #{$important};
+        }
+      }
+    }
+  }
+}
