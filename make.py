@@ -81,11 +81,10 @@ def make_html(RELEASE_URL=LOCAL_RELEASE_URL):
   
   env = Environment(loader=FileSystemLoader('templates'))
   
-  MEDIA_URL = RELEASE_URL
+  RELEASE_URL = RELEASE_URL
   base_context = {
     'ROOT_URL': RELEASE_URL ,
     'SITE_NAME': SITE_NAME,
-    'MEDIA_URL': MEDIA_URL,
     'JS': JS,
     'MENU': pages,
     'COLOURS': COLOURS,
