@@ -66,6 +66,7 @@ pages = Pages([
       Page('Tabs', 'components/inpage/navigation/tabs.html'),
       Page('Pills', 'components/inpage/navigation/pills.html'),
       Page('Pills (Stacked)', 'components/inpage/navigation/pills_stacked.html'),
+      Page('Stages', 'components/inpage/navigation/stages.html'),
       Page('Pagination', 'components/inpage/navigation/pagination.html'),
       Page('Search', 'components/inpage/navigation/search.html'),
     ]),

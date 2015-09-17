@@ -22,6 +22,9 @@
     .nav-link.disabled {
       color: #777;
     }
+    + .nav-item {
+      margin-left: 3px;
+    }
   }
   &.nav-tabs {
     border-bottom: 2px solid;
@@ -35,4 +38,5 @@
       }
     }
   }
+  
 }

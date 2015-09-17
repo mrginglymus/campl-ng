@@ -1,5 +1,5 @@
-{% macro nav(items, type, stacked=false, local=false) %}
-  <ul class="nav nav-{{ type }}s{% if stacked %} nav-stacked{% endif %}" role="tablist">
+{% macro nav(items, type, stacked=false, local=false, extra_classes='') %}
+  <ul class="nav nav-{{ type }}s{% if stacked %} nav-stacked{% endif %} {{ extra_classes }}" role="tablist">
     {% for item in items %}
     <li class="nav-item">
       <a 

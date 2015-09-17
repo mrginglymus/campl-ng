@@ -1,0 +1,15 @@
+{% extends 'layouts/subnav.html' %}
+
+{% import 'components/inpage/navigation/nav.html' as nav %}
+
+
+{% block content %}
+
+<div class="clearfix">
+  {{ nav.nav(nav.NAV_ITEMS_EXAMPLE[:-1], 'pill', local=true, extra_classes="nav-stages") }}
+</div>
+<div class="p-t">
+  {{ nav.tabs(nav.NAV_ITEMS_EXAMPLE[:-1]) }}
+</div>
+
+{% endblock %}
