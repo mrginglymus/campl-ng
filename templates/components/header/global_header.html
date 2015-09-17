@@ -37,12 +37,14 @@
         </div>
       </div>
       <div class="col-md-2 hidden-sm-down">
+        {% block search %}
         <form action="http://search.cam.ac.uk/web" method="get">
           <div class="input-group global-search">
             <input class="form-control" type="text" placeholder="Search" name="query">
             <button type="submit" class="input-group-addon"><span class="fa fa-search fa-lg">&nbsp;</span></button>
           </div>
         </form>
+        {% endblock %}
       </div>
     </div>
   </div>
@@ -66,8 +68,10 @@
   </div>
 </div>
 <div class="collapse hidden-md-up" id="global-search-drawer">
+  {% block responsive_search %}
   <div class="input-group global-search">
     <input class="form-control" type="text" placeholder="Search" name="query">
     <button type="submit" class="input-group-addon"><span class="fa fa-search fa-lg">&nbsp;</span></button>
   </div>
+  {% endblock %}
 </div>

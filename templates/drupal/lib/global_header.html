@@ -1,0 +1,52 @@
+{% extends 'components/header/global_header.html' %}
+
+{% block search %}
+<form action="http://search.cam.ac.uk/web" method="get">
+  <div class="input-group global-search">
+  <input id="header-search" type="text" name="query" value="" placeholder="Search" class="form-control">
+  <?php
+  switch (theme_get_setting('search_box')):
+    case 1:
+      print '<input type="hidden" name="filterTitle" value="' . $site_name . '"/>';
+      print '<input type="hidden" name="include" value="' . $base_url . '"/>';
+      break;
+    case 2:
+      print '<input type="hidden" name="inst" value="' .
+        htmlspecialchars(theme_get_setting('search_box_filter_inst')) . '"/>';
+      if (theme_get_setting('search_box_filter_tag')):
+        print '<input type="hidden" name="tag" value="' .
+          htmlspecialchars(theme_get_setting('search_box_filter_tag')) . '"/>';
+      endif;
+      break;
+  endswitch;
+  ?>
+  <button type="submit" class="input-group-addon"><span class="fa fa-search fa-lg">&nbsp;</span></button>
+</form>
+{% endblock %}
+
+{% block responsive_search %}
+<form action = "http://search.cam.ac.uk/web" method="get">
+  <div class="input-group global-search">
+  <div class="campl-search-form-wrapper clearfix">
+    <input type="text" class="text" name="query" value="" placeholder="Search" class="form-control">
+
+    <?php
+    switch (theme_get_setting('search_box')):
+      case 1:
+        print '<input type="hidden" name="filterTitle" value="' . $site_name . '"/>';
+        print '<input type="hidden" name="include" value="' . $base_url . '"/>';
+        break;
+      case 2:
+        print '<input type="hidden" name="inst" value="' .
+          htmlspecialchars(theme_get_setting('search_box_filter_inst')) . '"/>';
+        if (theme_get_setting('search_box_filter_tag')):
+          print '<input type="hidden" name="tag" value="' .
+            htmlspecialchars(theme_get_setting('search_box_filter_tag')) . '"/>';
+        endif;
+        break;
+    endswitch;
+    ?>
+    <button type="submit" class="input-group-addon"><span class="fa fa-search fa-lg">&nbsp;</span></button>
+  </div>
+</form>
+{% endblock %}
