@@ -14,4 +14,7 @@
   .promo-teaser-text {
     padding: 15px;
   }
+  &+ .promo-teaser {
+    margin-top: 20px;
+  }
 }
