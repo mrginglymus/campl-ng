@@ -118,7 +118,7 @@
 
 // rows in a teaser list (whether they be nested lists or another teaser) have lines
 // between them
-.teaser-list > .row:not(:last-of-type) {  
+.teaser-list > .row:not(:last-of-type), .teaser-list> .teaser-row:not(:last-of-type) {  
   border-bottom: 1px solid #e4e4e4;
 }
 
@@ -126,13 +126,9 @@
 // non collapsed lists - nested teaser lists do not have the outmost padding, as the 
 // parent teaser list handles this
 @include media-breakpoint-up(md) {
-  .teaser-list {
-    .teaser-list:first-of-type {
-      padding-left: 0;
-    }
-    .teaser-list:last-of-type {
-      padding-right: 0;
-    }
+  .teaser-row > .row {
+    margin-left:-20px;
+    margin-right: -20px;
   }
 }
 
