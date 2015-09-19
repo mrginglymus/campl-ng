@@ -1,0 +1,58 @@
+@import "compass/css3/opacity";
+
+.atoz {
+  padding: $spacer;
+  text-align: center;
+  
+  ul {
+    list-style: none;
+    padding-left: 0;
+    li {
+      display: inline-block;
+      a, span {
+        font-size: 14px;
+        font-weight: bold;
+      }
+      a {
+        color: #fff;
+        @include hover-focus() {
+          color: #fff;
+          text-decoration: none;
+        }
+        position: relative;
+        &.active, &:not(.active):hover {
+          &:before {
+            content: "";
+            width: 0;
+            height: 0;
+            border-color: transparent transparent #fff transparent;
+            border-width: 0 20px 20px 20px;
+            border-style: solid;
+            position: absolute;
+            left: -15px;
+            top: 34px;
+          }
+        }
+      }
+      span {
+        @include theme_element(color, pale);
+      }
+      &:not(:last-of-type):after {
+        content: "/";
+        padding: 0 5px 0 10px;
+        @include media-breakpoint-down(lg) {
+          padding: 0;
+        }
+        font-size: 16px;
+        @include theme_element(color, darker);
+        @include opacity(0.5);
+      }
+    }
+  }
+  select {
+    height: 40px;
+    width: 50%;
+    margin: auto;
+    font-size: 18px;
+  }
+}

@@ -31,6 +31,7 @@ JS = (
   ('lib/datetimepicker/src/js/bootstrap-datetimepicker.js', 'datetimepicker.js'),
   ('js/menu.js', 'menu.js'),
   ('js/theme_switcher.js', 'theme_switcher.js'),
+  ('js/select_tab.js', 'select_tab.js'),
 )
 
 COLOURS = [

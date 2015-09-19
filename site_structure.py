@@ -3,6 +3,19 @@ import loremipsum
 from random import random
 import os
 from ordereddict import OrderedDict
+import string
+
+def lipsum(n):
+  paras = loremipsum.get_paragraphs(n)
+  return ''.join(['<p>%s</p>' % p for p in paras])
+
+A_TO_Z = list(
+  [l, lipsum(5) if random() > 0.2 else None, False] for l in string.ascii_uppercase
+)
+
+A_TO_Z[0][1] = lipsum(5)
+A_TO_Z[0][2] = True
+
 
 def random_image(width, height=None):
   if not height:
@@ -68,6 +81,7 @@ pages = Pages([
       Page('Pills (Stacked)', 'components/inpage/navigation/pills_stacked.html'),
       Page('Stages', 'components/inpage/navigation/stages.html'),
       Page('Pagination', 'components/inpage/navigation/pagination.html'),
+      Page('A to Z', 'components/inpage/navigation/atoz.html', context={'A_TO_Z': A_TO_Z}),
       Page('Search', 'components/inpage/navigation/search.html'),
     ]),
     Page('Content', children=[
