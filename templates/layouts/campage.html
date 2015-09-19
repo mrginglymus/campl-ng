@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% from 'components/carousel.html' import frontpage_carousel with context %}
+
+{% block body %}
+  {% include 'components/header/global_header.html' %}
+  <div class="local-header">
+    <div class="container p-a">
+      <a href="http://www.cam.ac.uk/" class="main-logo">
+        <img alt="University of Cambridge" src="{{ ROOT_URL }}/img/logo_lg.png">
+      </a>
+    </div>
+  </div>
+  <div class="local-header campage-carousel-push">
+  </div>
+  <div class="content container">
+  {{ frontpage_carousel(CAROUSEL) }}
+  </div>
+{% endblock %}

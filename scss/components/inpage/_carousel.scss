@@ -1,4 +1,14 @@
 @import "compass/css3/images";
+.carousel img {
+  width: 100%;
+}
+
+.carousel-control.carousel-control-campage {
+  background-color: #000 !important;
+  &:hover {
+    background-color: #000 !important;
+  }
+}
 
 .carousel-control {
   // have to be this specific in order to override bootstrap defaults
@@ -57,4 +67,15 @@
     bottom: 16px;
     font-size: 1rem;
   }
+}
+
+.carousel-text {
+  @include theme_element(background-color, lighter);
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 300;
+  font-family: $font-family-sans-serif-extra;
+  text-align: center;
+  color: #fff;
+  padding: $spacer;
 }

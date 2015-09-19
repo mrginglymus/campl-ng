@@ -27,6 +27,12 @@ def random_image(width, height=None):
   return "http://lorempixel.com/%s/%s" % (width, height)
 
 
+FRONTPAGE_CAROUSEL = [
+  (random_image(885, 432), '/', ' '.join(loremipsum.get_sentences(1)), '"%s"'%' '.join(loremipsum.get_sentences(1))),
+  (random_image(885, 432), '/', ' '.join(loremipsum.get_sentences(2)), '"%s"'%' '.join(loremipsum.get_sentences(1))),
+  (random_image(885, 432), '/', ' '.join(loremipsum.get_sentences(1)), '"%s"'%' '.join(loremipsum.get_sentences(1))),
+]
+
 # css pages
 
 def get_directory_structure(rootdir):
@@ -67,6 +73,7 @@ pages = Pages([
     Page('Subsection with navigation', 'layouts/subnav.html'),
     Page('Subsection without navigation', 'layouts/subnonav.html'),
     Page('Subsection without right column', 'layouts/subnocol.html'),
+    Page('Cambridge Front Page', 'layouts/campage.html', globals={'CAM_PAGE': True}, context={'CAROUSEL': FRONTPAGE_CAROUSEL}),
   ]),
   Page('Core Elements', children=[
     Page('Typography', 'core_elements/typography.html'),

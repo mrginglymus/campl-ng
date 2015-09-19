@@ -68,7 +68,7 @@ class XTemplatePage(object):
 
 class Page(object):
 
-  def __init__(self, title, source=None, context={}, children=[], front_page=False):
+  def __init__(self, title, source=None, context={}, children=[], globals={}, front_page=False):
     self.title = title
     self.source = source
     self._context = context
@@ -80,11 +80,12 @@ class Page(object):
     self.vertical_breadcrumb_children = None
     self.vertical_breadcrumb_siblings = []
     self.front_page=front_page
+    self.globals = globals
             
     
   def render(self, base_context):
     if self.source:
-      template = env.get_template(self.source)
+      template = env.get_template(self.source, globals=self.globals)
       context = self.context
       context.update(**base_context)
       context['page'] = self

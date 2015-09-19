@@ -8,9 +8,11 @@
         <a class="global-menu-button pull-right hidden-md-up" href="#global-search-drawer" data-toggle="collapse">
           <span class="fa fa-search fa-2x"></span>
         </a>
+        {% if not CAM_PAGE %}
         <a href="http://www.cam.ac.uk/" class="navbar-brand">
           <img alt="University of Cambridge" src="{{ ROOT_URL }}/img/logo.png">
         </a>
+        {% endif %}
         <ul class="nav navbar-nav nav-global hidden-sm-down">
           <li class="nav-item">
             <a class="nav-link" href="#global-header-drawer-study" data-toggle="tab" data-target="#global-header-drawer-study" data-parent="#global-header-drawers">Study at Cambridge</a>
