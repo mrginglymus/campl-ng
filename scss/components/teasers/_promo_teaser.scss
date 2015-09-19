@@ -1,7 +1,7 @@
 .promo-teaser {
   background: #fff;
   .promo-teaser-heading {
-    padding: 20px;
+    padding: $spacer;
     a {
       color: #171717;
       font-weight: 700;
@@ -12,9 +12,9 @@
     width: 100%;
   }
   .promo-teaser-text {
-    padding: 15px;
+    padding: $spacer * 0.75;
   }
   &+ .promo-teaser {
-    margin-top: 20px;
+    margin-top: $spacer;
   }
 }

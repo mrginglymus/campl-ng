@@ -1,10 +1,10 @@
 @import "compass/css3/images";
 
 .global-footer, .local-footer {
-  padding: 20px 0;
+  padding: $spacer 0;
   [class*='col-'] {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: $spacer;
+    padding-right: $spacer;
     @include media-breakpoint-up(md) {
       &:not(:last-of-type) {
         @include background(url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAADCAYAAABS3WWCAAAAFElEQVQIW2P8//9/PSMDAwMDmAAALHsDgGM05VYAAAAASUVORK5CYII=) 100% 0 repeat-y);

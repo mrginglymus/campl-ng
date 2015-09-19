@@ -17,20 +17,20 @@
   .navbar-nav {
     .nav-item {
       &:first-child {
-        border-left: 1px solid #2e2e2e;
+        border-left: $border-width solid #2e2e2e;
       }
     
-      border-right: 1px solid #2e2e2e;
+      border-right: $border-width solid #2e2e2e;
       margin-left: 0;
       font-size: 1.16rem;
       line-height: 1.5rem;
       
       @include hover-focus {
         background-color:#171717;
-        border-left: 1px solid #737373;
-        border-right: 1px solid #737373;
+        border-left: $border-width solid #737373;
+        border-right: $border-width solid #737373;
         &:not(:first-child) {
-          margin-left: -1px;
+          margin-left: -$border-width;
         }
       }
     }
@@ -39,14 +39,14 @@
     .nav-link {
       font-weight: 600;
       color: #ffffff;
-      padding: 25px 20px;
+      padding: $spacer*1.25 $spacer;
       @include hover-focus {
         color: #5a5a5a;
       }
       
       &[data-toggle="tab"].active {
         background-color: #171717;
-        margin-bottom: -1px;
+        margin-bottom: -$border-width;
         padding-bottom: 26px;
       }
     }

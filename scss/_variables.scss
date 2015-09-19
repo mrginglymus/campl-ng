@@ -18,6 +18,8 @@ $spacer: 20px;
 // body colour
 $body-color:                 $gray-darker;
 
+$border-color: #e4e4e4;
+
 // grids
 
 $grid-breakpoints: (
@@ -65,7 +67,7 @@ $border-radius-sm:       0;
 
 $table-bg-hover:                #e4e4e4;
 
-$table-border-color:            #e4e4e4;
+$table-border-color:            $border-color;
 
 // buttons
 

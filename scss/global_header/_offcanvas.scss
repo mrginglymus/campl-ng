@@ -63,7 +63,7 @@
       padding: 0;
     }
     a {
-      padding: 10px 20px;
+      padding: $spacer/2 $spacer;
       display: block;
       @include hover-focus {
         background-color: #292929;

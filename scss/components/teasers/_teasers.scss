@@ -58,20 +58,20 @@
 .teaser-list {
   .horizontal-teaser, .vertical-teaser {
     &:not(:first-of-type) {
-      padding-top: 20px;
+      padding-top: $spacer;
     }
     &:not(:last-of-type) {
-      padding-bottom: 20px;
+      padding-bottom: $spacer;
     }
   }
 }
 
 // padding for teaser image and positioning for AV icon
 .horizontal-teaser .teaser-image {
-  padding: 0 20px 0 0;
+  padding: 0 $spacer 0 0;
   @include media-breakpoint-up(md) {
     .teaser-image-audio, .teaser-image-video {
-      right: 20px;
+      right: $spacer;
       bottom: 0;
     }
   }
@@ -87,14 +87,14 @@
 // The vertical teaser 'collapses' into a horizontal teaser at the 'md' breakpoint
 .vertical-teaser .teaser-image {
   @include media-breakpoint-up(md) {
-    margin: 0 0 20px 0;
+    margin: 0 0 $spacer 0;
     .teaser-image-audio, .teaser-image-video {
       right: 0;
       bottom: 0;
     }
   }
   @include media-breakpoint-down(sm) {
-    padding: 0 20px 0 0;
+    padding: 0 $spacer 0 0;
     .teaser-image-audio, .teaser-image-video {
       top: 0;
       left: 0;
@@ -104,14 +104,14 @@
 
 // teaser list - padding at the sides, margin at the top to ensure border placement
 .teaser-list {
-  padding: 0 20px;
-  margin: 20px 0px;
+  padding: 0 $spacer;
+  margin: $spacer 0px;
 }
 
 // teaser lists next to each other have a border between them, unless they've collapsed
 .teaser-list + .teaser-list {
   @include media-breakpoint-up(md) {
-    border-left: 1px solid #e4e4e4;
+    border-left: $border-width solid $border-color;
   }
 }
 
@@ -119,7 +119,7 @@
 // rows in a teaser list (whether they be nested lists or another teaser) have lines
 // between them
 .teaser-list > .row:not(:last-of-type), .teaser-list> .teaser-row:not(:last-of-type) {  
-  border-bottom: 1px solid #e4e4e4;
+  border-bottom: $border-width solid $border-color;
 }
 
 
@@ -127,8 +127,8 @@
 // parent teaser list handles this
 @include media-breakpoint-up(md) {
   .teaser-row > .row {
-    margin-left:-20px;
-    margin-right: -20px;
+    margin-left:-$spacer;
+    margin-right: -$spacer;
   }
 }
 
@@ -137,17 +137,17 @@
 // border on top
 @include media-breakpoint-down(sm) {
   .teaser-list {
-    padding: 20px 0;
-    margin: 0 20px;
+    padding: $spacer 0;
+    margin: 0 $spacer;
     &+ .teaser-list {
-      border-top: 1px solid #e4e4e4;
-      margin-top: -20px;
+      border-top: $border-width solid $border-color;
+      margin-top: -$spacer;
     }
     .teaser-list {
-      padding: 20px 0;
+      padding: $spacer 0;
       margin: 0;
       &+ .teaser-list {
-        border-top: 1px solid #e4e4e4;
+        border-top: $border-width solid $border-color;
       }
     }
   }
