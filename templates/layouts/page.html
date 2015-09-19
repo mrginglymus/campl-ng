@@ -4,8 +4,20 @@
 {% block body %}
   {% include 'components/header/global_header.html' %}
   {% include 'components/header/local_header.html' %}
-  {% block subtitle  %}
-  {% include 'components/header/subtitle.html' %}
+  {% block subtitle %}
+    <div class="local-header">
+      <div class="container subtitle">
+        {% if side_menu %}
+        <div class="col-md-9 col-md-offset-3">
+        {% else %}
+        <div class="col-md-12">
+        {% endif %}
+          <div class="p-a">
+            <h1>{{ page.title }}</h1>
+          </div>
+        </div>
+      </div>
+    </div>
   {% endblock %}
   {% set content_columns = 12 %}
   {% if side_menu %}
