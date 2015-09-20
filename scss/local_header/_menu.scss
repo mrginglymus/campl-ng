@@ -33,15 +33,12 @@
       padding: 10px 20px;
     }
     
-    .dropdown-toggle:after {
-      border: none;
-      width:20px;
-      height:20px;
-      @include background(inline-image('dropdown-indicator.png'));
-      background-repeat: no-repeat;
-      background-position: center;
-      position: relative;
-      left: 10px;
+    .dropdown-toggle {
+      @include background(inline-image('dropdown-indicator.png') no-repeat right 5px top 50%);
+      &:after {
+        content: none;
+      }
+      padding: 10px 40px 10px 10px;
     }
     
     .dropdown-menu {
