@@ -1,5 +1,7 @@
+@import "compass/css3/images";
+
 .focus-on-teaser {
-  margin-bottom: $spacer;
+  margin: 0 $spacer $spacer $spacer;
   @include theme_element(background-color, dark);
   .teaser-body {
     padding: 15px;
@@ -15,7 +17,7 @@
       text-decoration: none;
     }
     a:after {
-      content: ">";
+      content: "";
       color: #fff;
       width: 33px;
       height: 33px;
@@ -23,6 +25,7 @@
       bottom: 0;
       position: absolute;
       @include theme_element(background-color, primary);
+      @include background($icon-chevron-right no-repeat center center);
     }
   }
   

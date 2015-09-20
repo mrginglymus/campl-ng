@@ -1,3 +1,11 @@
-.main-logo {
-  padding: 15px;
+.main-logo img {
+  margin: 15px;
+}
+
+.campage-heading {
+  @include theme_element(color, dark);
+  font-size: 30px;
+  line-height: 38px;
+  font-weight: 300;
+  font-family: $font-family-sans-serif-extra;
 }
