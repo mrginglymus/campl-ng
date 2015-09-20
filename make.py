@@ -44,7 +44,7 @@ COLOURS = [
   'grey',
 ]
 CSS_DIST = os.path.join('dist', 'css')
-IMG_DIST = os.path.join('dist', 'img')
+IMG_DIST = os.path.join('dist', 'images')
 JS_DIST = os.path.join('dist', 'js')
 LP_IMG_DIST = os.path.join('dist', 'lp_img')
 
@@ -65,7 +65,7 @@ def make_css(legacy=False):
 def make_img():
   if os.path.exists(IMG_DIST):
     shutil.rmtree(IMG_DIST)
-  shutil.copytree('img', IMG_DIST)
+  shutil.copytree('images', IMG_DIST)
 
 
 def make_js():

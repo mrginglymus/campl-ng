@@ -36,7 +36,7 @@
       height: 57px;
       color: #ffffff;
       display:block;
-      @include background($icon-close-lg no-repeat 90% 50%);
+      @include background(inline-image('close-lg.png') no-repeat 90% 50%);
       
     }
   }
