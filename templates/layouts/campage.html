@@ -82,9 +82,10 @@
           </div>
         </div>
         <div class="teaser-list">
-          {{ news_teaser(random_sentence(3,6), random_sentence(), '/', '7 August 2012') }}
-          {{ news_teaser(random_sentence(3,6), random_sentence(), '/', '7 August 2012') }}
-          {{ news_teaser(random_sentence(3,6), random_sentence(), '/', '7 August 2012') }}
+          {{ news_teaser(random_sentence(3,6), random_sentence(), '/', random_date()) }}
+          {{ news_teaser(random_sentence(3,6), random_sentence(), '/', random_date()) }}
+          {{ news_teaser(random_sentence(3,6), random_sentence(), '/', random_date()) }}
+          <div><a class="secondary-cta pull-right" href="" >View all news</a></div>
         </div>
       </div>
     </div>

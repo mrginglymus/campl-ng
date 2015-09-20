@@ -36,8 +36,8 @@
   <div class="col-md-4 teaser-list">
     {{ teasers.vertical_teaser('Vertical Teaser', '/', random_sentence(), random_image(256)) }}
     {{ teasers.vertical_teaser('Vertical Teaser (no image)', '/', random_sentence()) }}
-    {{ teasers.news_teaser('News Item 1', random_sentence(), '/', '30 August 2012') }}
-    {{ teasers.news_teaser('News Item 2', random_sentence(), '/', '7 August 2012') }}
+    {{ teasers.news_teaser('News Item 1', random_sentence(), '/', random_date()) }}
+    {{ teasers.news_teaser('News Item 2', random_sentence(), '/', random_date()) }}
   </div>
 </div>
 {% endblock %}

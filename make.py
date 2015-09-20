@@ -82,7 +82,7 @@ def make_html(RELEASE_URL=LOCAL_RELEASE_URL):
   import codecs
     
     
-  from functions import random_image, random_word, random_sentence
+  from functions import random_image, random_word, random_sentence, random_date
   
   if os.path.exists(LP_IMG_DIST):
     shutil.rmtree(LP_IMG_DIST)
@@ -92,6 +92,7 @@ def make_html(RELEASE_URL=LOCAL_RELEASE_URL):
   env.globals.update(random_image=random_image)
   env.globals.update(random_word=random_word)
   env.globals.update(random_sentence=random_sentence)
+  env.globals.update(random_date=random_date)
   
   base_context = {
     'ROOT_URL': RELEASE_URL ,

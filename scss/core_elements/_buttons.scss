@@ -1,5 +1,9 @@
 .btn-cta, .btn-vcard {
   font-weight: normal;
+  &:hover {
+    background-color: #454545;
+    border-color: #454545;
+  }
 }
 
 .btn-cta:after {

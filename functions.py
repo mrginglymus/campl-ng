@@ -8,7 +8,9 @@ import uuid
 
 import os
 
-from random import random
+from random import random, randrange
+
+from datetime import timedelta, date
 
 from jinja2.utils import generate_lorem_ipsum as lipsum
 
@@ -31,3 +33,7 @@ def random_sentence(min=None, max=30):
   if min is None:
     min = int(max * 0.75)-1
   return lipsum(1, False, min, max)
+  
+def random_date():
+  d = date.today() - timedelta(days=randrange(100))
+  return d.strftime('%-d %B %Y')
