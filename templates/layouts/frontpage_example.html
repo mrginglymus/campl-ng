@@ -1,10 +1,16 @@
 {% extends 'layouts/frontpage.html' %}
 {% import 'components/teasers/teasers.html' as teasers with context %}
-{% from 'macros.html' import teaser_body, random_image %}
+{% from 'macros.html' import teaser_body %}
 
 {% block sidebar_content %}
 {% include 'components/sidebar/related_links.html' %}
 {% endblock %}
+
+{% set CAROUSEL = [
+  (random_image(885, 432), '/', lipsum(1, false, 4, 8)),
+  (random_image(885, 432), '/', lipsum(1, false, 4, 8)),
+  (random_image(885, 432), '/', lipsum(1, false, 4, 8)),
+] %}
 
 {% block unwrapped_content %}
 <div class="row">

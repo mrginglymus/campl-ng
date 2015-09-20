@@ -1,7 +1,8 @@
 from jinja2 import FileSystemLoader, Environment, meta
 import codecs
 import os
-env = Environment(loader=FileSystemLoader('templates'))
+
+
 
 BASE_BREADCRUMB = [('Campl-NG', '/')]
 
@@ -29,42 +30,14 @@ def template_to_tuple(templates, root_url):
     ) for t in templates
   ]
 
-for template_name in env.list_templates():
+t_env = Environment(loader=FileSystemLoader('templates'))
+
+for template_name in t_env.list_templates():
   if template_name != 'template.html':
-    refs = list(meta.find_referenced_templates(env.parse(env.loader.get_source(env, template_name)[0])))
+    refs = list(meta.find_referenced_templates(t_env.parse(t_env.loader.get_source(t_env, template_name)[0])))
     TEMPLATE_REFERENCES[template_name] = refs
     for ref in refs:
       REFERENCING_TEMPLATES.setdefault(ref, []).append(template_name)
-
-class XTemplatePage(object):
-  def __init__(self, template_name):
-    self.title = template_name.split('/')[-1]
-    self.source = template_name
-    self.url = 'templates/' + template_name
-    self.children = []
-    self.horizontal_breadcrumb = BASE_BREADCRUMB + [('Templates', None)] + [(t.replace('_', ' ').title(), None) for t in self.source.split('/')[:-1]] + [(self.title, None)]
-    self.vertical_breadcrumb = []
-    self.vertical_breadcrumb_parent = None
-    self.vertical_breadcrumb_children = None
-    self.vertical_breadcrumb_siblings = []
-    self.front_page=False
-    
-  def render(self, base_context):
-    template = env.get_template('template.html')
-    context = {
-      'page': self,
-      'template': env.loader.get_source(env, self.source)[0],
-      'template_references': template_to_tuple(TEMPLATE_REFERENCES.get(self.source, []), base_context['ROOT_URL']),
-      'referencing_templates': template_to_tuple(REFERENCING_TEMPLATES.get(self.source, []), base_context['ROOT_URL']),
-    }
-    context.update(**base_context)
-    destination = os.path.join('dist', self.url)
-    
-    if not os.path.exists(os.path.dirname(destination)):
-      os.makedirs(os.path.dirname(destination))
-    with codecs.open(destination, 'wb', 'utf-8') as fh:
-      fh.write(template.render(**context))
-    
 
 class Page(object):
 
@@ -83,11 +56,10 @@ class Page(object):
     self.globals = globals
             
     
-  def render(self, base_context):
+  def render(self, env):
     if self.source:
       template = env.get_template(self.source, globals=self.globals)
       context = self.context
-      context.update(**base_context)
       context['page'] = self
       destination = os.path.join('dist', self.url[1:], 'index.html')
       
@@ -96,7 +68,7 @@ class Page(object):
       with codecs.open(destination, 'wb', 'utf-8') as fh:
         fh.write(template.render(**context))
     for child in self.children:
-      child.render(base_context)
+      child.render(env)
    
   
   @property
@@ -186,7 +158,7 @@ class Page(object):
 
 class SCSSPage(Page):
 
-  def render(self, base_context):
+  def render(self, env):
     if self.source:
       with open(os.path.join('scss', *self.url.split('/')[2:]), 'r') as scss_file:
         scss = scss_file.read()
@@ -195,30 +167,28 @@ class SCSSPage(Page):
         'page': self,
         'scss': scss,
       }
-      context.update(**base_context)
       destination = os.path.join('dist', self.url[1:], 'index.html')
       if not os.path.exists(os.path.dirname(destination)):
         os.makedirs(os.path.dirname(destination))
       with codecs.open(destination, 'wb', 'utf-8') as fh:
         fh.write(template.render(**context))
     for child in self.children:
-      child.render(base_context)
+      child.render(env)
  
 
 class TemplatePage(Page):
      
     
-  def render(self, base_context):
+  def render(self, env):
     if self.source:
       template = env.get_template('meta/template.html')
       template_file = os.path.join(*self.url.split('/')[2:])
       context = {
         'page': self,
         'template': env.loader.get_source(env, template_file)[0],
-        'template_references': template_to_tuple(TEMPLATE_REFERENCES.get(template_file, []), base_context['ROOT_URL']),
-        'referencing_templates': template_to_tuple(REFERENCING_TEMPLATES.get(template_file, []), base_context['ROOT_URL']),
+        'template_references': template_to_tuple(TEMPLATE_REFERENCES.get(template_file, []), env.globals['ROOT_URL']),
+        'referencing_templates': template_to_tuple(REFERENCING_TEMPLATES.get(template_file, []), env.globals['ROOT_URL']),
       }
-      context.update(**base_context)
       destination = os.path.join('dist', self.url[1:], 'index.html')
     
       if not os.path.exists(os.path.dirname(destination)):
@@ -226,6 +196,6 @@ class TemplatePage(Page):
       with codecs.open(destination, 'wb', 'utf-8') as fh:
         fh.write(template.render(**context))
     for child in self.children:
-      child.render(base_context)
+      child.render(env)
     
     

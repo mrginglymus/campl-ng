@@ -17,22 +17,6 @@ A_TO_Z[0][1] = lipsum(5)
 A_TO_Z[0][2] = True
 
 
-def random_image(width, height=None):
-  if not height:
-    height=width
-  scale = random() + 1
-  height = int(height*scale)
-  width = int(width*scale)
-  
-  return "http://lorempixel.com/%s/%s" % (width, height)
-
-
-FRONTPAGE_CAROUSEL = [
-  (random_image(885, 432), '/', ' '.join(loremipsum.get_sentences(1)), '"%s"'%' '.join(loremipsum.get_sentences(1))),
-  (random_image(885, 432), '/', ' '.join(loremipsum.get_sentences(2)), '"%s"'%' '.join(loremipsum.get_sentences(1))),
-  (random_image(885, 432), '/', ' '.join(loremipsum.get_sentences(1)), '"%s"'%' '.join(loremipsum.get_sentences(1))),
-]
-
 # css pages
 
 def get_directory_structure(rootdir):
@@ -68,12 +52,12 @@ templates = get_directory_structure('templates')['templates']
 template_pages = list(shuffle_dirs(templates, TemplatePage))
 
 pages = Pages([
-  Page('About', 'demo.html', context={'image': random_image(590,288)}),
+  Page('About', 'demo.html'),
   Page('Page Layouts', 'layouts/overview.html', children=[
     Page('Subsection with navigation', 'layouts/subnav.html'),
     Page('Subsection without navigation', 'layouts/subnonav.html'),
     Page('Subsection without right column', 'layouts/subnocol.html'),
-    Page('Cambridge Front Page', 'layouts/campage.html', globals={'CAM_PAGE': True}, context={'CAROUSEL': FRONTPAGE_CAROUSEL}),
+    Page('Cambridge Front Page', 'layouts/campage.html', globals={'CAM_PAGE': True}),
   ]),
   Page('Core Elements', children=[
     Page('Typography', 'core_elements/typography.html'),
@@ -105,12 +89,5 @@ pages = Pages([
 front_page = Page(
   'Home',
   'layouts/frontpage_example.html',
-  context={
-    'CAROUSEL': [
-      (random_image(885, 432), '/', ' '.join(loremipsum.get_sentences(1))),
-      (random_image(885, 432), '/', ' '.join(loremipsum.get_sentences(2))),
-      (random_image(885, 432), None, ' '.join(loremipsum.get_sentences(1))),
-    ]
-  },
   front_page=True,
 )

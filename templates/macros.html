@@ -14,14 +14,3 @@
   {{ lipsum(1, false, max=30) }}
 {% endmacro %}
 
-{% macro get_img_url(img) %}{{ MEDIA_ROOT }}/img/{{ img }}{% endmacro %}
-
-{%- macro random_image(width, height=None) -%}
-  {% if not height %}
-    {% set height=width %}
-  {% endif %}
-  {% set scale=range(100,150)|random / 100 %}
-  {% set height=height*scale %}
-  {% set width=width*scale %}
-  http://lorempixel.com/{{ width|round|int }}/{{ height|round|int }}
-{%- endmacro -%}

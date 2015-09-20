@@ -46,6 +46,7 @@ COLOURS = [
 CSS_DIST = os.path.join('dist', 'css')
 IMG_DIST = os.path.join('dist', 'img')
 JS_DIST = os.path.join('dist', 'js')
+LP_IMG_DIST = os.path.join('dist', 'lp_img')
 
 def clean_dist():
   DIST = 'dist'
@@ -79,10 +80,17 @@ def make_html(RELEASE_URL=LOCAL_RELEASE_URL):
   from jinja2 import FileSystemLoader, Environment
   from site_structure import pages, front_page
   import codecs
+    
+    
+  from functions import random_image
   
+  if os.path.exists(LP_IMG_DIST):
+    shutil.rmtree(LP_IMG_DIST)
+  os.mkdir(LP_IMG_DIST)
+
   env = Environment(loader=FileSystemLoader('templates'))
+  env.globals.update(random_image=random_image)  
   
-  RELEASE_URL = RELEASE_URL
   base_context = {
     'ROOT_URL': RELEASE_URL ,
     'SITE_NAME': SITE_NAME,
@@ -92,11 +100,13 @@ def make_html(RELEASE_URL=LOCAL_RELEASE_URL):
     'QUICKLINKS': QUICKLINKS,
     'TEMPLATE_REPO_ROOT': base_template_url,
   }
+  
+  env.globals.update(**base_context)
 
   for page in pages:
-    page.render(base_context)
+    page.render(env)
   
-  front_page.render(base_context)
+  front_page.render(env)
     
 
 def deploy():
@@ -126,7 +136,6 @@ if 'all' in args.mode:
   make_css()
   make_img()
   make_html()
-  deploy()
   
 if 'html' in args.mode:
   if args.r:
