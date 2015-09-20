@@ -25,7 +25,7 @@
       bottom: 0;
       position: absolute;
       @include theme_element(background-color, primary);
-      @include background($icon-chevron-right no-repeat center center);
+      @include background(inline-image('link-bullet-white.png') no-repeat center center);
     }
   }
   

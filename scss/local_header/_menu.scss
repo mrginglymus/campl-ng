@@ -37,7 +37,7 @@
       border: none;
       width:20px;
       height:20px;
-      @include background($icon-chevron-down);
+      @include background(inline-image('dropdown-indicator.png'));
       background-repeat: no-repeat;
       background-position: center;
       position: relative;

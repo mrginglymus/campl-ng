@@ -7,7 +7,7 @@
     padding-right: $spacer;
     @include media-breakpoint-up(md) {
       &:not(:last-of-type) {
-        @include background($icon-vertical-dash 100% 0 repeat-y);
+        @include background(inline-image('footer-separator.png') 100% 0 repeat-y);
       }
     }
   }

@@ -28,13 +28,13 @@
   }
   
   &.right {
-    @include background-image($icon-chevron-right-lg);
+    @include background-image(inline-image('carousel-right.png'));
   }
   
   &.left {
     left: auto;
     right: 51px;
-    @include background-image($icon-chevron-left-lg);
+    @include background-image(inline-image('carousel-left.png'));
 
   }
 }

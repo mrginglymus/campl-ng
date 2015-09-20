@@ -51,7 +51,7 @@
     }
     
     li a {
-      @include background($icon-chevron-right no-repeat 0 50%);
+      @include background(inline-image('link-bullet-white.png') no-repeat 0 50%);
       padding-left: 10px;
     }
   }
