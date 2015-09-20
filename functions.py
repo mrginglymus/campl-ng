@@ -10,6 +10,8 @@ import os
 
 from random import random
 
+from jinja2.utils import generate_lorem_ipsum as lipsum
+
 @contextfunction
 def random_image(context, width, height=None):
   if not height:
@@ -20,3 +22,12 @@ def random_image(context, width, height=None):
   id = str(uuid.uuid4())
   urllib.urlretrieve("http://lorempixel.com/%s/%s" % (width, height), os.path.join('dist', 'lp_img', id))
   return os.path.join(context['ROOT_URL'], 'lp_img', id)
+  
+
+def random_word():
+  return lipsum(1, False, 1, 2).rstrip('.')
+  
+def random_sentence(min=None, max=30):
+  if min is None:
+    min = int(max * 0.75)-1
+  return lipsum(1, False, min, max)

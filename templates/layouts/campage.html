@@ -1,13 +1,12 @@
 {% extends 'base.html' %}
 
 {% from 'components/carousel.html' import frontpage_carousel with context %}
-{% from 'components/teasers/teasers.html' import focus_on_teaser, campage_teaser %}
-{% from 'macros.html' import teaser_body %}
+{% from 'components/teasers/teasers.html' import focus_on_teaser, campage_teaser, news_teaser %}
 
 {% set CAROUSEL = [
-  (random_image(785, 428), '/', lipsum(1, false, 4, 8), '"%s"'%lipsum(1, false, 8, 12)),
-  (random_image(785, 428), '/', lipsum(1, false, 4, 8), '"%s"'%lipsum(1, false, 8, 12)),
-  (random_image(785, 428), '/', lipsum(1, false, 4, 8), '"%s"'%lipsum(1, false, 8, 12)),
+  (random_image(785, 428), '/', random_sentence(4, 8), '"%s"'%random_sentence(8, 12)),
+  (random_image(785, 428), '/', random_sentence(4, 8), '"%s"'%random_sentence(8, 12)),
+  (random_image(785, 428), '/', random_sentence(4, 8), '"%s"'%random_sentence(8, 12)),
 ] %}
 
 {% block body %}
@@ -34,18 +33,18 @@
         </div>
         <div class="row">
           <div class="col-md-6">
-            {{ focus_on_teaser('Focus on me', '/', random_image(153, 137)) }}
+            {{ focus_on_teaser(random_sentence(3, 6), '/', random_image(153, 137)) }}
           </div>
           <div class="col-md-6">
-            {{ focus_on_teaser('Focus on me', '/', random_image(153, 137)) }}
+            {{ focus_on_teaser(random_sentence(3, 6), '/', random_image(153, 137)) }}
           </div>
         </div>
         <div class="row">
           <div class="col-md-6">
-            {{ focus_on_teaser('Focus on me', '/', random_image(153, 137)) }}
+            {{ focus_on_teaser(random_sentence(3, 6), '/', random_image(153, 137)) }}
           </div>
           <div class="col-md-6">
-            {{ focus_on_teaser('Focus on me', '/', random_image(153, 137)) }}
+            {{ focus_on_teaser(random_sentence(3, 6), '/', random_image(153, 137)) }}
           </div>
         </div>
         <div class="p-x">
@@ -57,28 +56,39 @@
           <div class="teaser-row">
             <div class="row">
               <div class="col-md-6 teaser-list">
-                {{ campage_teaser('Blah', teaser_body(), '/', random_image(349,183), 'Science') }}
+                {{ campage_teaser(random_sentence(2, 5), random_sentence(), '/', random_image(349,183), random_word()) }}
               </div>
               <div class="col-md-6 teaser-list">
-                {{ campage_teaser('Blah', teaser_body(), '/', random_image(349,183), 'Science') }}
+                {{ campage_teaser(random_sentence(2, 5), random_sentence(), '/', random_image(349,183), random_word()) }}
               </div>
             </div>
           </div>
           <div class="teaser-row">
             <div class="row">
               <div class="col-md-6 teaser-list">
-                {{ campage_teaser('Blah', teaser_body(), '/', random_image(349,183), 'Science') }}
+                {{ campage_teaser(random_sentence(2, 5), random_sentence(), '/', random_image(349,183), random_word()) }}
               </div>
               <div class="col-md-6 teaser-list">
-                {{ campage_teaser('Blah', teaser_body(), '/', random_image(349,183), 'Science') }}
+                {{ campage_teaser(random_sentence(2, 5), random_sentence(), '/', random_image(349,183), random_word()) }}
               </div>
             </div>
           </div>
         </div>
       </div>
       <div class="col-md-4 sidebar">
-        hello
+        <div class="p-x p-t">
+          <div class="heading">
+            <h2 class="campage-heading">Latest news</h2>
+          </div>
+        </div>
+        <div class="teaser-list">
+          {{ news_teaser(random_sentence(3,6), random_sentence(), '/', '7 August 2012') }}
+          {{ news_teaser(random_sentence(3,6), random_sentence(), '/', '7 August 2012') }}
+          {{ news_teaser(random_sentence(3,6), random_sentence(), '/', '7 August 2012') }}
+        </div>
       </div>
     </div>
   </div>
+  {% include 'components/footer/local_footer.html' %}
+  {% include 'components/footer/global_footer.html' %}
 {% endblock %}

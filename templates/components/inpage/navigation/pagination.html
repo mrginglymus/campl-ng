@@ -1,9 +1,6 @@
 {% extends 'layouts/subnav.html' %}
 
-{% import 'macros.html' as macros %}
-
 {% block content %}
-{% call macros.show_code() %}
 <nav>
   <ul class="pagination">
     <li class="active"><a href="#">1</a></li>
@@ -17,8 +14,6 @@
     </li>
   </ul>
 </nav>
-{% endcall %}
-{% call macros.show_code() %}
 <nav>
   <ul class="pagination">
     <li class="previous">
@@ -38,6 +33,5 @@
     </li>
   </ul>
 </nav>
-{% endcall %}
 
 {% endblock %}

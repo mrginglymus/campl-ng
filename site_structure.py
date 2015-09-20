@@ -1,13 +1,10 @@
 from pages import Page, Pages, SCSSPage, TemplatePage
-import loremipsum
+from jinja2.utils import generate_lorem_ipsum as lipsum
 from random import random
 import os
 from ordereddict import OrderedDict
 import string
 
-def lipsum(n):
-  paras = loremipsum.get_paragraphs(n)
-  return ''.join(['<p>%s</p>' % p for p in paras])
 
 A_TO_Z = list(
   [l, lipsum(5) if random() > 0.2 else None, False] for l in string.ascii_uppercase

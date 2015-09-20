@@ -3,9 +3,13 @@
 }
 
 .campage-heading {
-  @include theme_element(color, dark);
   font-size: 30px;
   line-height: 38px;
   font-weight: 300;
   font-family: $font-family-sans-serif-extra;
+  @include theme_element(color, dark);
+}
+
+.sidebar .campage-heading { 
+  color: #171717;
 }

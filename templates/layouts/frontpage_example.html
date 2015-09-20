@@ -1,28 +1,27 @@
 {% extends 'layouts/frontpage.html' %}
 {% import 'components/teasers/teasers.html' as teasers with context %}
-{% from 'macros.html' import teaser_body %}
 
 {% block sidebar_content %}
 {% include 'components/sidebar/related_links.html' %}
 {% endblock %}
 
 {% set CAROUSEL = [
-  (random_image(885, 432), '/', lipsum(1, false, 4, 8)),
-  (random_image(885, 432), '/', lipsum(1, false, 4, 8)),
-  (random_image(885, 432), '/', lipsum(1, false, 4, 8)),
+  (random_image(885, 432), '/', random_sentence(4, 8)),
+  (random_image(885, 432), '/', random_sentence(4, 8)),
+  (random_image(885, 432), '/', random_sentence(4, 8)),
 ] %}
 
 {% block unwrapped_content %}
 <div class="row">
   <div class="col-md-8 teaser-list">
-    {{ teasers.horizontal_teaser('Horizontal Teaser', '/', teaser_body(), random_image(256)) }}
-    {{ teasers.horizontal_teaser('Horizontal Teaser (no image)', '/', teaser_body()) }}
-    {{ teasers.horizontal_teaser('Horizontal Video Teaser', '/', teaser_body(), random_image(256), type='video') }}
+    {{ teasers.horizontal_teaser('Horizontal Teaser', '/', random_sentence(), random_image(256)) }}
+    {{ teasers.horizontal_teaser('Horizontal Teaser (no image)', '/', random_sentence()) }}
+    {{ teasers.horizontal_teaser('Horizontal Video Teaser', '/', random_sentence(), random_image(256), type='video') }}
   </div>
   <div class="col-md-4 teaser-list">
     <div class="heading"><h2 class="lite-heading">Latest News</h2></div>
-    {{ teasers.news_teaser('Check out CamPL-NG', teaser_body(), '/', '30 August 2012') }}
-    {{ teasers.news_teaser('News Item 2', teaser_body(), '/', '7 August 2012') }}
+    {{ teasers.news_teaser('Check out CamPL-NG', random_sentence(), '/', '30 August 2012') }}
+    {{ teasers.news_teaser(random_sentence(3,6), random_sentence(), '/', '7 August 2012') }}
     <div><a class="secondary-cta pull-right" href="" >View all news</a></div>
   </div>
 </div>
