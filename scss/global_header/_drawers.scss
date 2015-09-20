@@ -50,9 +50,9 @@
       }
     }
     
-    li:before {
-      @include fa-icon();
-      content: $fa-var-angle-right;
+    li a {
+      @include background($icon-chevron-right no-repeat 0 50%);
+      padding-left: 10px;
     }
   }
   
