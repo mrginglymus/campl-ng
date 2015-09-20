@@ -28,13 +28,13 @@
   }
   
   &.right {
-    @include background-image(url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAZUlEQVRIx+WVgQ0AIAjD4P+j8QMFRk2MPNDANuYRYfT4N5AwM7+xiQzKnksCVTRpg6rCt0Add5VBXQuXQEpO0iA1jCnQROKPoKm3sgU9sQmuCe4uPCd44vHfhX9hvE/wZrzW8fIsdq9fz+8FnqcAAAAASUVORK5CYII='));
+    @include background-image($icon-chevron-right-lg);
   }
   
   &.left {
     left: auto;
     right: 51px;
-    @include background-image(url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAYUlEQVRIx+3VyQ0AIAhEUei/aGzAhc0fD04DLwZh1MzkdvQjk5iI6E1kCXQhW6ADOQJVxAVUEDeQRUJABgkDUSQFRJA04EVKwFMvwWaC/S5sT7CNx24XdoWxPsGaEev4bQb6oF/PLesGowAAAABJRU5ErkJggg=='));
+    @include background-image($icon-chevron-left-lg);
 
   }
 }

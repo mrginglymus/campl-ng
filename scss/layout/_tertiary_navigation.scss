@@ -8,7 +8,7 @@
   padding-right:0px;
   margin-top: -50px;
   padding-bottom: 50px;
-  @include background(url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAM0lEQVQYV2NkQAM3P3/7r87LxYgsDBLDEMCmCCQGV4jLJJhGsEJCikBqGIlRBFY4nDwDAIeHT431w+WIAAAAAElFTkSuQmCC));
+  @include background($icon-tertiary-nav-background);
 
   font-family: $font-family-sans-serif-extra;
   
@@ -24,7 +24,7 @@
   
     &:after {
       content: "";
-      @include background-image(url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAKCAYAAABWiWWfAAAAV0lEQVQoz6XPSwoAIAhAQe9/Tg+hbgwjg35SuXjgxkEBEVVE0pkDqgpZ0PbNMSgFtr1qOPQF+kVeH2aQmZ+gAduBRHQNLdjNyydoi0VgBB2xGfQiKMR+KtUijYBKyzMDAAAAAElFTkSuQmCC));
+      @include background-image($icon-tertiary-nav-down);
       background-repeat: no-repeat;
       height: 15px;
       width: 20px;
@@ -39,7 +39,7 @@
     @include hover-focus {
       background-color: #efefef;
       &:after {
-        @include background-image(url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAKCAYAAABWiWWfAAAAUUlEQVQoz6XOuxEAIBBCQfqvk5wSMPECfzd6Bi9kB5C0pO9IGrbxC/Y9QBKSymBAthHPSmBAA1YBZ2jAXsAdtGA34AnaYhmYQUdsBqMMSrFKDdhtf1iac/jfAAAAAElFTkSuQmCC));
+        @include background-image($icon-tertiary-nav-down-hover);
       }
     }
     
