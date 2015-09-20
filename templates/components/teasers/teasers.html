@@ -79,3 +79,24 @@
   <p>{{ body }}</p>
 </div>
 {% endmacro %}
+
+{% macro focus_on_teaser(title, href, img=None) %}
+<div class="focus-on-teaser">
+  <div class="row">
+    {% if img %}
+    <div class="col-xs-5">
+      <a href="{{ href }}"><img src="{{ img }}" alt="{{ title }}"></a>
+    </div>
+    {% endif %}
+    {% if img %}
+    <div class="col-xs-7 teaser-body">
+    {% else %}
+    <div class="col-xs-12 teaser-body">
+    {% endif %}
+      <h3 class="teaser-title">
+        <a href="{{ href }}">{{ title }}</a>
+      </h3>
+    </div>
+  </div>
+</div>
+{% endmacro %}

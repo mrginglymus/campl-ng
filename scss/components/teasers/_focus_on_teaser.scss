@@ -1,0 +1,32 @@
+.focus-on-teaser {
+  margin-bottom: $spacer;
+  @include theme_element(background-color, dark);
+  .teaser-body {
+    padding: 15px;
+    position: relative;
+  }
+  .teaser-title {
+    font-size: 14px;
+    line-height: 20px;
+    font-family: $font-family-sans-serif-extra;
+    font-weight: 600;
+    a, a:hover {
+      color: #fff;
+      text-decoration: none;
+    }
+    a:after {
+      content: ">";
+      color: #fff;
+      width: 33px;
+      height: 33px;
+      right: 0;
+      bottom: 0;
+      position: absolute;
+      @include theme_element(background-color, primary);
+    }
+  }
+  
+  img {
+    width: 100%;
+  }
+}

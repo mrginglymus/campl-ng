@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 
 {% from 'components/carousel.html' import frontpage_carousel with context %}
+{% from 'components/teasers/teasers.html' import focus_on_teaser %}
+{% from 'macros.html' import random_image %}
 
 {% block body %}
   {% include 'components/header/global_header.html' %}
@@ -15,5 +17,30 @@
   </div>
   <div class="content container">
   {{ frontpage_carousel(CAROUSEL) }}
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 p-a">
+        <div class="row">
+          <div class="col-md-6">
+            {{ focus_on_teaser('Focus on me', '/', random_image(160)) }}
+          </div>
+          <div class="col-md-6">
+            {{ focus_on_teaser('Focus on me', '/', random_image(160)) }}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            {{ focus_on_teaser('Focus on me', '/', random_image(160)) }}
+          </div>
+          <div class="col-md-6">
+            {{ focus_on_teaser('Focus on me', '/', random_image(160)) }}
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 sidebar">
+        hello
+      </div>
+    </div>
   </div>
 {% endblock %}
