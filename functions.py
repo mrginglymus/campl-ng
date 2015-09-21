@@ -5,7 +5,7 @@ from jinja2 import contextfunction
 from local_settings import LOCAL_RELEASE_DIR
 
 import uuid
-
+import re
 import os
 
 from random import random, randrange
@@ -13,6 +13,7 @@ from random import random, randrange
 from datetime import timedelta, date
 
 from jinja2.utils import generate_lorem_ipsum as lipsum
+from markupsafe import escape
 
 @contextfunction
 def random_image(context, width, height=None):
@@ -41,3 +42,10 @@ def random_sentence(min=None, max=30):
 def random_date():
   d = date.today() - timedelta(days=randrange(100))
   return d.strftime('%-d %B %Y')
+  
+@contextfunction
+def print_macro(context, macro):
+  env = context.environment
+  t = env.loader.get_source(env, context.name)[0]
+  res = re.search('({%% macro %s\(.*?{%% endmacro %%})'%macro.name, t, re.S).group(1)
+  return escape(res)
