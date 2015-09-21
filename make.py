@@ -105,6 +105,7 @@ def make_html(RELEASE_URL=LOCAL_RELEASE_URL):
   }
   
   env.globals.update(**base_context)
+  env.globals.update(CACHE_IMAGES = not args.nocacheimages)
 
   for page in pages:
     page.render(env)
@@ -129,6 +130,7 @@ parser = argparse.ArgumentParser(description='Make campl-ng')
 
 parser.add_argument('-l', action='store_true')
 parser.add_argument('-r', action='store_true')
+parser.add_argument('--no-cache-images', dest='nocacheimages', action='store_true')
 parser.add_argument('mode', nargs='*', default=[])
 
 args = parser.parse_args()

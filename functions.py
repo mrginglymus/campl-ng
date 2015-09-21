@@ -21,9 +21,13 @@ def random_image(context, width, height=None):
   scale = random() + 1
   height = int(height*scale)
   width = int(width*scale)
-  id = str(uuid.uuid4())
-  urllib.urlretrieve("http://lorempixel.com/%s/%s" % (width, height), os.path.join('dist', 'lp_img', id))
-  return os.path.join(context['ROOT_URL'], 'lp_img', id)
+  lploc = "http://lorempixel.com/%s/%s" % (width, height)
+  if context['CACHE_IMAGES']:
+    id = str(uuid.uuid4())
+    urllib.urlretrieve(lploc, os.path.join('dist', 'lp_img', id))
+    return os.path.join(context['ROOT_URL'], 'lp_img', id)
+  else:
+    return lploc
   
 
 def random_word():
