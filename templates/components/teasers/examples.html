@@ -45,5 +45,10 @@
 {% block sidebar_content %}
   {{ teasers.promo_teaser('Promo Teaser', '/', random_sentence(), random_image(349,126)) }}
   {{ teasers.promo_teaser('Promo Teaser', '/', random_sentence(), random_image(349,126)) }}
+  <div class="p-t">
+  {{ teasers.date_teaser(random_date(raw=True), random_sentence(4, 6), '/') }}
+  {{ teasers.date_teaser(random_date(raw=True), random_sentence(4, 6), '/') }}
+  {{ teasers.date_teaser(random_date(raw=True), random_sentence(4, 6), '/') }}
+  </div>
 {% endblock %}
 

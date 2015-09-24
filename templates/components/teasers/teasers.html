@@ -114,3 +114,19 @@
   </div>
 </div>
 {% endmacro %}
+
+{% macro date_teaser(date, title, href) %}
+<div class="date-teaser">
+  <div class="date-teaser-date">
+    <div class="date-teaser-date-day">
+      {{ date.strftime('%-d') }}
+    </div>
+    <div class="date-teaser-date-month">
+      {{ date.strftime('%b') }}
+    </div>
+  </div>
+  <div class="date-teaser-text">
+    <a href="{{ href }}">{{ title }}</a>
+  </div>
+</div>
+{% endmacro %}

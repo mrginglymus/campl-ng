@@ -39,8 +39,10 @@ def random_sentence(min=None, max=30):
     min = int(max * 0.75)-1
   return lipsum(1, False, min, max)
   
-def random_date():
+def random_date(raw=False):
   d = date.today() - timedelta(days=randrange(100))
+  if raw:
+    return d
   return d.strftime('%-d %B %Y')
   
 @contextfunction

@@ -1,0 +1,30 @@
+.date-teaser {
+  margin-bottom: 10px;
+  @include clearfix();
+  .date-teaser-date {
+    width: 55px;
+    color: #fff;
+    @include theme-element('background-color', lighter);
+
+    font-family: $font-family-sans-serif-extra;
+    text-align: center;
+    float: left;
+    margin-right: 10px;
+
+    .date-teaser-date-day {
+      font-size: 30px;
+      line-height: 30px;
+      font-weight: 700;
+    }
+    .date-teaser-date-month {
+      font-size: 17px;
+      line-height: 23px;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+  }
+  .date-teaser-text {
+    vertical-align: top;
+    padding-top: 10px;
+  }
+}
