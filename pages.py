@@ -54,6 +54,7 @@ class Page(object):
     self.vertical_breadcrumb_siblings = []
     self.front_page=front_page
     self.globals = globals
+    self.type = 'page'
             
     
   def render(self, env):
@@ -158,6 +159,10 @@ class Page(object):
 
 class SCSSPage(Page):
 
+  def __init__(self, *args, **kwargs):
+    super(SCSSPage, self).__init__(*args, **kwargs)
+    self.type='scss'
+
   def render(self, env):
     if self.source:
       with open(os.path.join('scss', *self.url.split('/')[2:]), 'r') as scss_file:
@@ -178,6 +183,9 @@ class SCSSPage(Page):
 
 class TemplatePage(Page):
      
+  def __init__(self, *args, **kwargs):
+    super(TemplatePage, self).__init__(*args, **kwargs)
+    self.type='template'  
     
   def render(self, env):
     if self.source:

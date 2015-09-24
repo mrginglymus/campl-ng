@@ -57,6 +57,11 @@
           {% endfor %}
         </ul>
       </li>
+      {% if page.type=='page' %}
+        <li class="nav-item">
+          <a class="nav-link" href="{{ ROOT_URL }}/templates/{{ page.source }}/">View template</a>
+        </li>
+      {% endif %}
     </ul>
   </div>
 </nav>
