@@ -1,9 +1,6 @@
 {% extends 'layouts/frontpage.html' %}
 {% import 'components/teasers/teasers.html' as teasers with context %}
 
-{% block sidebar_content %}
-{% include 'components/sidebar/related_links.html' %}
-{% endblock %}
 
 {% set CAROUSEL = [
   (random_image(885, 432), '/', random_sentence(4, 8)),
@@ -25,4 +22,13 @@
     <div><a class="secondary-cta pull-right" href="" >View all news</a></div>
   </div>
 </div>
+{% endblock %}
+
+{% block sidebar_content %}
+<div class="heading m-b"><h2 class="lite-heading">Upcoming Events</h2></div>
+{{ teasers.date_teaser(random_date(raw=True), random_sentence(4, 6), '/') }}
+{{ teasers.date_teaser(random_date(raw=True), random_sentence(4, 6), '/') }}
+{{ teasers.date_teaser(random_date(raw=True), random_sentence(4, 6), '/') }}
+<div class="clearfix m-b"><a class="secondary-cta pull-right" href="" >View all events</a></div>
+{{ teasers.promo_teaser('Promo Teaser', '/', random_sentence(), random_image(349,126)) }}
 {% endblock %}
