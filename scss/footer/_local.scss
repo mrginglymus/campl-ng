@@ -1,8 +1,6 @@
 .local-footer {
   @include theme_element(background-color, dark);
   
-  color: #ffffff;
-  
   a {
     @include hover-focus {
       text-decoration: none;

@@ -1,5 +1,3 @@
-@import "compass/css3/flexbox";
-
 .recess-push {
   padding-top:50px;
   background-color: #fff;
@@ -33,14 +31,4 @@ html {
 
 img.leading-image {
   width: 100%;
-}
-
-body {
-  @include display-flex(flex);
-  min-height: 100vh;
-  @include flex-direction(column);
-}
-
-main {
-  @include flex-grow(1);
 }
