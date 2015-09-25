@@ -38,7 +38,7 @@ img.leading-image {
 body {
   @include display-flex(flex);
   min-height: 100vh;
-  @include flex-direction(column);
+  @include flex-direction(column)
 }
 
 main {
