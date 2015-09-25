@@ -54,6 +54,7 @@ pages = Pages([
     Page('Subsection with navigation', 'layouts/subnav.html'),
     Page('Subsection without navigation', 'layouts/subnonav.html'),
     Page('Subsection without right column', 'layouts/subnocol.html'),
+    Page('App', 'layouts/app.html'),
     Page('Cambridge Front Page', 'layouts/campage.html', globals={'CAM_PAGE': True}),
   ]),
   Page('Core Elements', children=[
