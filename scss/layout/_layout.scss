@@ -46,10 +46,10 @@ main {
 }
 
 main > .container {
-  display: flex;
-  flex-grow: 1;
+  @include display-flex(flex);
+  @include flex-grow(1);
 }
 
 main > .container > .row {
-  flex-grow: 1;
+  @include flex-grow(1);
 }
