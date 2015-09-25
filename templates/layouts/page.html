@@ -29,33 +29,31 @@
     {% endif %}
   </header>
   <main>
-    <div class="recess-push">
-      <div class="content container">
-        <div class="row">
-          {% if side_menu %}
-          {% include 'components/navigation/side_menu.html' %}
+    <div class="recess-push container">
+      <div class="row">
+        {% if side_menu %}
+        {% include 'components/navigation/side_menu.html' %}
+        {% endif %}
+        <div class="col-md-{{ content_columns }} main-content">
+          {% if image %}
+            <img src="{{ image }}" class="leading-image">
           {% endif %}
-          <div class="col-md-{{ content_columns }} main-content">
-            {% if image %}
-              <img src="{{ image }}" class="leading-image">
-            {% endif %}
-            {% block unwrapped_content %}
-            {% endblock %}
-            {% if self.content() %}
-            <div class="p-a">
-              {% block content %}{% endblock %}
-            </div>
-            {% endif %}
-          </div>
-          {% if sidebar %}
-          {% from 'components/sidebar/sidebar.html' import sidebar %}
-          {% call sidebar() %}
-          {% block sidebar_content %}
-            {% include 'components/sidebar/related_links.html' %}
+          {% block unwrapped_content %}
           {% endblock %}
-          {% endcall %}
+          {% if self.content() %}
+          <div class="p-a">
+            {% block content %}{% endblock %}
+          </div>
           {% endif %}
         </div>
+        {% if sidebar %}
+        {% from 'components/sidebar/sidebar.html' import sidebar %}
+        {% call sidebar() %}
+        {% block sidebar_content %}
+          {% include 'components/sidebar/related_links.html' %}
+        {% endblock %}
+        {% endcall %}
+        {% endif %}
       </div>
     </div>
   </main>

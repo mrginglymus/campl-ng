@@ -25,18 +25,16 @@
   </div>
 </header>
 <main>
-  <div class="recess-push">
-    <div class="content container">
-      <div class="row">
-        <div class="col-md-12 main-content">
-          <div style="padding-top:5px;" class="clearfix">
-            {{ nav.nav(nav.NAV_ITEMS_EXAMPLE[:-1], 'pill', local=true, extra_classes="nav-stages") }}
-          </div>
-          <hr style="margin-top:5px;">
-          <div class="p-a">
-            {% block content %}
-            {% endblock %}
-          </div>
+  <div class="recess-push container">
+    <div class="row">
+      <div class="col-md-12 main-content">
+        <div style="padding-top:5px;" class="clearfix">
+          {{ nav.nav(nav.NAV_ITEMS_EXAMPLE[:-1], 'pill', local=true, extra_classes="nav-stages") }}
+        </div>
+        <hr style="margin-top:5px;">
+        <div class="p-a">
+          {% block content %}
+          {% endblock %}
         </div>
       </div>
     </div>
