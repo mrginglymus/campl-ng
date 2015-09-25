@@ -8,6 +8,8 @@
     h1 {
       font-weight:300;
       color: #ffffff;
+      font-size: 30px;
+      line-height: 38px;
       @include media-breakpoint-down(md) {
         font-size: 28px;
         line-height: 34px;
