@@ -32,3 +32,24 @@ html {
 img.leading-image {
   width: 100%;
 }
+
+body {
+  @include display-flex(flex);
+  min-height: 100vh;
+  @include flex-direction(column);
+}
+
+main {
+  @include flex-grow(1);
+  background-color: #fff;
+  @include display-flex(flex);
+}
+
+main > .container {
+  display: flex;
+  flex-grow: 1;
+}
+
+main > .container > .row {
+  flex-grow: 1;
+}

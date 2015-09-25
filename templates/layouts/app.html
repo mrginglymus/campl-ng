@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% import 'components/inpage/navigation/nav.html' as nav %}
+
+{% block body %}
+<header>
+  <div class="local-header">
+    <div class="container p-a">
+      <div>
+        <p class="title">
+          <img alt="University of Cambridge" src="{{ ROOT_URL }}/images/logo.png" style="padding-right: 20px;">
+          Referee Portal
+         </p>
+      </div>
+    </div>
+  </div>
+  <div class="local-header">
+    <div class="container subtitle">
+      <div class="col-md-12">
+        <div class="p-a">
+          <h1>Academic Reference for Miss Sarah Williams</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<main>
+  <div class="recess-push container">
+    <div class="row">
+      <div class="col-md-12 main-content">
+        <div style="padding-top:5px;" class="clearfix">
+          {{ nav.nav(nav.NAV_ITEMS_EXAMPLE[:-1], 'pill', local=true, extra_classes="nav-stages") }}
+        </div>
+        <hr style="margin-top:5px;">
+        <div class="p-a">
+          {% block content %}
+          {% endblock %}
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<footer>
+  <div class="local-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+          <p>This application is provided and managed by the <a href="http://www.admin.cam.ac.uk">Unified Administrative Service</a>.</p>
+          <p>&copy; 2015 University of Cambridge</p>
+        </div>
+        <div class="col-md-4">
+          <p class="text-muted">Version 0.4.0-SNAPSHOT (20150924-1109)</p>
+          <p class="bg-danger">This is a DEVELOPMENT version of the system</p>
+        </div>
+        <div class="col-md-3">
+          <h3><a href="/">Privacy and Cookie Policy</a></h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+{% endblock %}
