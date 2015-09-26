@@ -17,7 +17,7 @@ img.leading-image {
 @if $enable-flex {
   body {
     @include display-flex(flex);
-    height: 100vh;
+    min-height: 100vh;
     @include flex-direction(column);
   }
 
