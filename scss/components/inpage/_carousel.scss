@@ -98,9 +98,15 @@
 
 @include media-breakpoint-down(sm) {
   .carousel-caption {
-    position: static;
     background-color: rgba(0, 0, 0, 1);
-    z-index:100;
+    padding-left: 70px;
+    padding-right: 80px;
+    left: 0;
+    right: 0;
+    position: static;
+    .carousel-page {
+      right: 66px;
+    }
   }
   
   .carousel-control {
@@ -115,5 +121,9 @@
     &.left {
       left: 0;
     }
+  }
+  
+  .carousel-text {
+    padding: 20px 60px;
   }
 }

@@ -37,12 +37,12 @@
 {% macro frontpage_carousel_item(image, link, caption, text, items, loop) %}
 <div class="carousel-item{% if loop.first %} active{% endif %}">
   <div class="row">
-    <div class="col-xs-8">
+    <div class="col-md-8">
       <a href="{{ link }}">
         <img src="{{ image }}" alt="{{ caption }}">
       </a>
     </div>
-    <div class="col-xs-4 carousel-text">
+    <div class="col-md-4 carousel-text">
       {{ text }}
     </div>
   </div>
