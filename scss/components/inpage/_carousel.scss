@@ -1,14 +1,14 @@
 @import "compass/css3/images";
 
 
-@include media-breakpoint-up(md) {
+@include media-breakpoint-up(xl) {
   .carousel:after {
     content: " ";
     height: 500px;
-    width: 300%;
+    width: 100vw;
     position: absolute;
     bottom: 50px;
-    right: -100%;
+    left: calc(#{map-get($container-max-widths, xl)/2} - 50vw);;
     z-index:-1;
     @include theme_element(background-color, dark);
   }

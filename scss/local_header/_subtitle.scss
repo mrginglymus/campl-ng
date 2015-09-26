@@ -18,7 +18,7 @@
     &:after {
       @include theme_element(background-color, dark);
       content: " ";
-      width: 100%;
+      width: 100vw;
       height: 50px;
       position: absolute;
       bottom: 50px;
