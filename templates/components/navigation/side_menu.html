@@ -1,4 +1,5 @@
-<div class="col-md-3 tertiary-navigation collapse navbar-toggleable-sm" id="tertiary-navigation">
+{% macro make_side_menu(visible) %}
+<div class="col-md-3 tertiary-navigation collapse{% if visible %} navbar-toggleable-sm{% endif %}" id="tertiary-navigation">
   <ul class="nav nav-pills nav-stacked nav-side">
     {% for page in page.vertical_breadcrumb %}
       <li class="nav-item">
@@ -7,7 +8,8 @@
     {% endfor %}
   </ul>
   <ul class="list-unstyled">
-    <li>
+    {% if not page.front_page %}
+    <li class="tertiary-navigation-parent">
       {% if page.vertical_breadcrumb_parent[1] %}
       <a href="{{ ROOT_URL }}{{ page.vertical_breadcrumb_parent[1] }}">{{ page.vertical_breadcrumb_parent[0] }}</a>
       {% else %}
@@ -25,6 +27,7 @@
         </ul>
       {% endif %}
     </li>
+    {% endif %}
     {% for _page in page.vertical_breadcrumb_siblings %}
       {% if _page[0] != page.vertical_breadcrumb_parent[0] %}
         <li>
@@ -34,3 +37,4 @@
     {% endfor %}
   </ul>
 </div>
+{% endmacro %}

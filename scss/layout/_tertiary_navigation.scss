@@ -64,7 +64,7 @@
     &> li > span {
       font-weight:bold;
     }
-    &> li:first-child > a {
+    &> li.tertiary-navigation-parent > a {
       color: #171717;
     }
     &> li:not(:first-child) {

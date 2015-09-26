@@ -2,6 +2,8 @@
 
 {% from 'components/carousel.html' import carousel with context %}
 
+{% from 'components/navigation/side_menu.html' import make_side_menu with context %}
+
 {% block body %}
 <header>
   {% include 'components/header/global_header.html' %}
@@ -9,6 +11,7 @@
 </header>
 <main class="container">
   <div class="row">
+    {{ make_side_menu(false) }}
     <div class="col-md-9 main-content">
       {{ carousel(CAROUSEL) }}
       {% block unwrapped_content %}

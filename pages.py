@@ -41,7 +41,7 @@ for template_name in t_env.list_templates():
 
 class Page(object):
 
-  def __init__(self, title, source=None, context={}, children=[], globals={}, front_page=False):
+  def __init__(self, title, source=None, context={}, children=[], globals={}):
     self.title = title
     self.source = source
     self._context = context
@@ -52,7 +52,6 @@ class Page(object):
     self.vertical_breadcrumb_parent = None
     self.vertical_breadcrumb_children = None
     self.vertical_breadcrumb_siblings = []
-    self.front_page=front_page
     self.globals = globals
     self.type = 'page'
             
@@ -74,10 +73,7 @@ class Page(object):
   
   @property
   def destination(self):
-    if self.front_page:
-      return 'index.html'
-    else:
-      return os.path.join(self.url[1:], 'index.html')
+    return os.path.join(self.url[1:], 'index.html')
   
   def update_url(self, root=None, parent=None):
     self.parent = parent
@@ -144,9 +140,7 @@ class Page(object):
   
   @property
   def url(self):
-    if self.front_page:
-      return ''
-    elif self.source:
+    if self.source:
       return self._url
     elif self.children:
       return self.children[0].url
@@ -206,4 +200,18 @@ class TemplatePage(Page):
     for child in self.children:
       child.render(env)
     
+class FrontPage(Page):
+  
+  @property
+  def destination(self):
+    return 'index.html'
+  
+  @property
+  def url(self):
+    return ''
     
+  def __init__(self, title, source, pages):
+    super(FrontPage, self).__init__(title, source)
+    self.vertical_breadcrumb=[('Campl-NG', '/')]
+    self.front_page = True
+    self.vertical_breadcrumb_siblings = [(p.title, p.url) for p in pages]

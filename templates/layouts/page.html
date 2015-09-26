@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 
+{% from 'components/navigation/side_menu.html' import make_side_menu with context %}
 
 {% block body %}
   <header>
@@ -30,7 +31,7 @@
   </header>
   <main class="container">
     <div class="row">
-      {% include 'components/navigation/side_menu.html' %}
+      {{ make_side_menu(side_menu) }}
       <div class="col-md-{{ content_columns }} main-content">
         {% if image %}
           <img src="{{ image }}" class="leading-image">

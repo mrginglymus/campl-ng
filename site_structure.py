@@ -1,4 +1,4 @@
-from pages import Page, Pages, SCSSPage, TemplatePage
+from pages import Page, Pages, SCSSPage, TemplatePage, FrontPage
 from jinja2.utils import generate_lorem_ipsum as lipsum
 from random import random
 import os
@@ -84,8 +84,8 @@ pages = Pages([
   Page('Templates', children=template_pages),
 ])
 
-front_page = Page(
+front_page = FrontPage(
   'Home',
   'layouts/frontpage_example.html',
-  front_page=True,
+  pages,
 )
