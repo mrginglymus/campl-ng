@@ -136,6 +136,11 @@
 }
 
 
+// if the last item in a teaser list is a teaser row, remove bottom padding
+.teaser-list > .teaser-row:last-of-type {
+  margin-bottom: -$spacer;
+}
+
 // non collapsed lists - nested teaser lists do not have the outmost padding, as the 
 // parent teaser list handles this
 @include media-breakpoint-up(md) {

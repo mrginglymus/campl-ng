@@ -106,7 +106,7 @@ def make_html(RELEASE_URL=LOCAL_RELEASE_URL):
   }
   
   env.globals.update(**base_context)
-  env.globals.update(CACHE_IMAGES = args.cacheimages)
+  env.globals.update(CACHE_IMAGES = args.cacheimages or args.r)
 
   for page in pages:
     page.render(env)
@@ -139,7 +139,7 @@ args = parser.parse_args()
 if 'all' in args.mode:
   clean_dist()
   make_js()
-  make_css()
+  make_css(legacy=args.l)
   make_img()
   make_html()
   
