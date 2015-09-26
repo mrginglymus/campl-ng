@@ -26,6 +26,9 @@
   
   .global-header .navbar-brand {
     margin: 0 auto;
+    display: block;
+    float: none;
+    width: 208px;
   }
   
   .global-menu-button {

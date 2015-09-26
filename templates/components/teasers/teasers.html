@@ -103,13 +103,13 @@
 
 {% macro campage_teaser(title, body, href, img, tag) %}
 <div class="row vertical-teaser campage-teaser">
-  <div class="teaser-image col-md-12 col-xs-3">
+  <div class="teaser-image col-xs-12">
     <span class="teaser-tag">{{ tag }}</span>
     <a href="{{ href }}">
       <img src="{{ img }}" alt="{{ title }}">
     </a>
   </div>
-  <div class="teaser-body col-md-12 col-md-offset-0 col-xs-9 col-xs-offset-3">
+  <div class="teaser-body col-xs-12">
     {{ teaser_body(title, href, body) }}
   </div>
 </div>
