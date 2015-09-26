@@ -42,3 +42,18 @@
     }
   }
 }
+
+.local-menu-button {
+  display: block;
+  margin: 15px;
+  padding: 1px 3px;
+  @include theme_element(background-color, darker);
+  color: #999;
+  @include hover-focus {
+    color: #999;
+    @include theme_element(background-color, darker);
+  }
+  span {
+    padding: 4px;
+  }
+}

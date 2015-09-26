@@ -30,9 +30,7 @@
   </header>
   <main class="container">
     <div class="row">
-      {% if side_menu %}
       {% include 'components/navigation/side_menu.html' %}
-      {% endif %}
       <div class="col-md-{{ content_columns }} main-content">
         {% if image %}
           <img src="{{ image }}" class="leading-image">

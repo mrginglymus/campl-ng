@@ -6,8 +6,9 @@
   border-top: $border-width solid $border-color;
   padding-left:0px;
   padding-right:0px;
-  margin-top: -50px;
-  padding-bottom: 50px;
+  @include media-breakpoint-up(md) {
+    margin-top: -50px;
+  }
   @include background(inline-image('tertiary-nav-background.png'));
 
   font-family: $font-family-sans-serif-extra;
@@ -56,6 +57,7 @@
     background-color: #ffffff;
     padding: $spacer/4 $spacer;
     font-size: 14px;
+    margin-bottom: 0px;
     &> li > a {
       font-weight:bold;
     }

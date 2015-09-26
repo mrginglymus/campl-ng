@@ -1,4 +1,4 @@
-<div class="col-md-3 tertiary-navigation hidden-sm-down">
+<div class="col-md-3 tertiary-navigation collapse navbar-toggleable-sm" id="tertiary-navigation">
   <ul class="nav nav-pills nav-stacked nav-side">
     {% for page in page.vertical_breadcrumb %}
       <li class="nav-item">
@@ -6,11 +6,8 @@
       </li>
     {% endfor %}
   </ul>
-  
-  
   <ul class="list-unstyled">
     <li>
-      
       {% if page.vertical_breadcrumb_parent[1] %}
       <a href="{{ ROOT_URL }}{{ page.vertical_breadcrumb_parent[1] }}">{{ page.vertical_breadcrumb_parent[0] }}</a>
       {% else %}
