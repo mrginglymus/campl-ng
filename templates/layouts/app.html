@@ -14,8 +14,8 @@
       </div>
     </div>
   </div>
-  <div class="local-header">
-    <div class="container subtitle">
+  <div class="local-header subtitle">
+    <div class="container">
       <div class="col-md-12">
         <div class="p-a">
           <h1>Academic Reference for Miss Sarah Williams</h1>
@@ -24,18 +24,16 @@
     </div>
   </div>
 </header>
-<main>
-  <div class="recess-push container">
-    <div class="row">
-      <div class="col-md-12 main-content">
-        <div style="padding-top:5px;" class="clearfix">
-          {{ nav.nav(nav.NAV_ITEMS_EXAMPLE[:-1], 'pill', local=true, extra_classes="nav-stages") }}
-        </div>
-        <hr style="margin-top:5px;">
-        <div class="p-a">
-          {% block content %}
-          {% endblock %}
-        </div>
+<main class="container">
+  <div class="row">
+    <div class="col-md-12 main-content">
+      <div style="padding-top:5px;" class="clearfix">
+        {{ nav.nav(nav.NAV_ITEMS_EXAMPLE[:-1], 'pill', local=true, extra_classes="nav-stages") }}
+      </div>
+      <hr style="margin-top:5px;">
+      <div class="p-a">
+        {% block content %}
+        {% endblock %}
       </div>
     </div>
   </div>

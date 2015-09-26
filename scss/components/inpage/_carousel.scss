@@ -1,4 +1,17 @@
 @import "compass/css3/images";
+
+.carousel:after {
+  content: " ";
+  height: 500px;
+  width: 300%;
+  position: absolute;
+  bottom: 50px;
+  right: -100%;
+  z-index:-1;
+  @include theme_element(background-color, dark);
+}
+  
+  
 .carousel img {
   width: 100%;
 }

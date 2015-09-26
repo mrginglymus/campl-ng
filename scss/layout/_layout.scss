@@ -1,28 +1,9 @@
-.recess-push {
-  padding-top:50px;
-  background-color: #fff;
-}
-
 html {
   overflow-x: hidden;
 }
 
 * {
   min-width: 0;
-}
-
-.carousel-push {
-  @include media-breakpoint-up(xl) {
-    margin-bottom: -380px;
-    padding-bottom: 380px;
-  }
-}
-
-.campage-carousel-push {
-  @include media-breakpoint-up(xl) {
-    margin-bottom: -378px;
-    padding-bottom: 377px;
-  }
 }
 
 .main-content {
@@ -33,23 +14,22 @@ img.leading-image {
   width: 100%;
 }
 
-body {
-  @include display-flex(flex);
-  min-height: 100vh;
-  @include flex-direction(column);
-}
+@if $enable-flex {
+  body {
+    @include display-flex(flex);
+    height: 100vh;
+    @include flex-direction(column);
+  }
 
-main {
-  @include flex-grow(1);
-  background-color: #fff;
-  @include display-flex(flex);
-}
+  main {
+    @include flex-grow(1);
+    background-color: #fff;
+    @include display-flex(flex);
+    width: 100%;
+  }
 
-main > .container {
-  @include display-flex(flex);
-  @include flex-grow(1);
-}
 
-main > .container > .row {
-  @include flex-grow(1);
+  main > .row {
+    @include flex-grow(1);
+  }
 }

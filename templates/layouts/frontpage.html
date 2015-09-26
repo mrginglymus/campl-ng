@@ -3,29 +3,31 @@
 {% from 'components/carousel.html' import carousel with context %}
 
 {% block body %}
-{% include 'components/header/global_header.html' %}
-{% include 'components/header/local_header.html' %}
-  <div class="local-header carousel-push">
-  </div>
-  <div class="content container">
-    <div class="row">
-      <div class="col-md-9 main-content">
-        {{ carousel(CAROUSEL) }}
-        {% block unwrapped_content %}
-        {% endblock %}
-        {% if self.content () %}
-        <div class="p-a">
-          {% block content %}{% endblock %}
-        </div>
-        {% endif %}
-      </div>
-      {% from 'components/sidebar/sidebar.html' import sidebar %}
-      {% call sidebar() %}
-      {% block sidebar_content %}
+<header>
+  {% include 'components/header/global_header.html' %}
+  {% include 'components/header/local_header.html' %}
+</header>
+<main class="container">
+  <div class="row">
+    <div class="col-md-9 main-content">
+      {{ carousel(CAROUSEL) }}
+      {% block unwrapped_content %}
       {% endblock %}
-      {% endcall %}
+      {% if self.content () %}
+      <div class="p-a">
+        {% block content %}{% endblock %}
+      </div>
+      {% endif %}
     </div>
+    {% from 'components/sidebar/sidebar.html' import sidebar %}
+    {% call sidebar() %}
+    {% block sidebar_content %}
+    {% endblock %}
+    {% endcall %}
   </div>
-{% include 'components/footer/local_footer.html' %}
-{% include 'components/footer/global_footer.html' %}
+</main>
+<footer>
+  {% include 'components/footer/local_footer.html' %}
+  {% include 'components/footer/global_footer.html' %}
+</footer>
 {% endblock %}

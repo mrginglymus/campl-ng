@@ -1,9 +1,9 @@
-.local-header {
-  .subtitle {
+.local-header.subtitle {
+  background: none;
+  position: relative;
+  .container {
     @include theme_element(background-color, light);
     z-index:0;
-    position:relative;
-    margin-bottom:-50px;
     overflow:auto;
     h1 {
       font-weight:300;
@@ -13,5 +13,14 @@
         line-height: 34px;
       }
     }
+  }
+  &:after {
+    @include theme_element(background-color, dark);
+    content: " ";
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 50px;
+    z-index: -1;
   }
 }

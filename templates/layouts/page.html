@@ -6,8 +6,8 @@
     {% include 'components/header/global_header.html' %}
     {% include 'components/header/local_header.html' %}
     {% block subtitle %}
-      <div class="local-header">
-        <div class="container subtitle">
+      <div class="local-header subtitle">
+        <div class="container">
           {% if side_menu %}
           <div class="col-md-9 col-md-offset-3">
           {% else %}
@@ -28,33 +28,31 @@
       {% set content_columns = content_columns - 3 %}
     {% endif %}
   </header>
-  <main>
-    <div class="recess-push container">
-      <div class="row">
-        {% if side_menu %}
-        {% include 'components/navigation/side_menu.html' %}
+  <main class="container">
+    <div class="row">
+      {% if side_menu %}
+      {% include 'components/navigation/side_menu.html' %}
+      {% endif %}
+      <div class="col-md-{{ content_columns }} main-content">
+        {% if image %}
+          <img src="{{ image }}" class="leading-image">
         {% endif %}
-        <div class="col-md-{{ content_columns }} main-content">
-          {% if image %}
-            <img src="{{ image }}" class="leading-image">
-          {% endif %}
-          {% block unwrapped_content %}
-          {% endblock %}
-          {% if self.content() %}
-          <div class="p-a">
-            {% block content %}{% endblock %}
-          </div>
-          {% endif %}
-        </div>
-        {% if sidebar %}
-        {% from 'components/sidebar/sidebar.html' import sidebar %}
-        {% call sidebar() %}
-        {% block sidebar_content %}
-          {% include 'components/sidebar/related_links.html' %}
+        {% block unwrapped_content %}
         {% endblock %}
-        {% endcall %}
+        {% if self.content() %}
+        <div class="p-a">
+          {% block content %}{% endblock %}
+        </div>
         {% endif %}
       </div>
+      {% if sidebar %}
+      {% from 'components/sidebar/sidebar.html' import sidebar %}
+      {% call sidebar() %}
+      {% block sidebar_content %}
+        {% include 'components/sidebar/related_links.html' %}
+      {% endblock %}
+      {% endcall %}
+      {% endif %}
     </div>
   </main>
   <footer>
