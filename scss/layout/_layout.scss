@@ -32,4 +32,10 @@ img.leading-image {
   main > .row {
     @include flex-grow(1);
   }
+  
+  @media screen and (min-width:0\0) {
+    body, main {
+      display: block;
+    }
+  }
 }
