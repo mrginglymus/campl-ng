@@ -8,4 +8,17 @@ $(document).ready(function() {
     e.preventDefault();
     $('.offcanvas').toggleClass('active');
   });
+  
+  if (Cookies.get('mobile_menu_open')) {
+    $('#tertiary-navigation').addClass('in');
+  }
+  
+  $('#tertiary-navigation').on('show.bs.collapse', function() {
+    Cookies.set('mobile_menu_open', true);
+  });
+  
+  $('#tertiary-navigation').on('hide.bs.collapse', function() {
+    Cookies.remove('mobile_menu_open');
+  });
+  
 });
