@@ -1,96 +1,23 @@
 <div class="global-footer">
   <div class="container">
     <div class="row">
+      {% for column in FOOTER_LINKS %}
       <div class="col-md-3">
-        <img alt="University of Cambridge" src="{{ ROOT_URL }}/images/logo.png">
-        <p>&copy; 2013 University of Cambridge</p>
+        {% if not column.header %}
+          <img alt="University of Cambridge" src="{{ ROOT_URL }}/images/logo.png">
+          <p>&copy; 2015 University of Cambridge</p>
+        {% else %}
+          <h3><a href="{{ column.header.1 }}">{{ column.header.0 }}</a></h3>
+        {% endif %}
         <ul class="list-unstyled">
+          {% for title, href in column.links %}
           <li>
-            <a href="http://www.cam.ac.uk/university-a-z">University A-Z</a>
+            <a href="{{ href }}">{{ title }}</a>
           </li>
-          <li>
-            <a href="http://www.cam.ac.uk/contact-the-university">Contact the University</a>
-          </li>
-          <li>
-            <a href="http://www.cam.ac.uk/about-this-site/accessibility">Accessibility</a>
-          </li>
-          <li>
-            <a href="http://www.admin.cam.ac.uk/univ/information/foi/">Freedom of information</a>
-          </li>
-          <li>
-            <a href="http://www.cam.ac.uk/about-this-site/terms-and-conditions">Terms and conditions</a>
-          </li>
+          {% endfor %}
         </ul>
       </div>
-      <div class="col-md-3">
-        <h3><a href="">Study at Cambridge</a></h3> 
-        <ul class="list-unstyled hidden-sm-down">
-          <li>
-            <a href="http://www.study.cam.ac.uk/undergraduate/">Undergraduate</a>
-          </li>
-          <li>
-            <a href="http://www.admin.cam.ac.uk/students/gradadmissions/prospec/">Graduate</a>
-          </li>
-          <li>
-            <a href="http://www.cam.ac.uk/about-the-university/international-cambridge/studying-at-cambridge">International students</a>
-          </li>
-          <li>
-            <a href="http://www.ice.cam.ac.uk/">Continuing education</a>
-          </li>
-          <li>
-            <a href="http://www.admin.cam.ac.uk/offices/education/epe/">Executive and professional education</a>
-          </li>
-          <li>
-            <a href="http://www.educ.cam.ac.uk/">Courses in education</a>
-          </li>
-        </ul>
-      </div>
-      <div class="col-md-3">
-        <h3><a href="http://www.cam.ac.uk/about-the-university">About the University</a></h3> 
-        <ul class="list-unstyled hidden-sm-down">
-          <li>
-            <a href="http://www.cam.ac.uk/about-the-university/how-the-university-and-colleges-work">How the University and Colleges work</a>
-          </li>
-          <li>
-            <a href="http://www.cam.ac.uk/about-the-university/visiting-the-university">Visiting the University</a>
-          </li>
-          <li>
-            <a href="http://map.cam.ac.uk/">Map</a>
-          </li>
-          <li>
-            <a href="http://www.cam.ac.uk/news">News</a>
-          </li>
-          <li>
-            <a href="http://www.admin.cam.ac.uk/whatson">Events</a>
-          </li>
-          <li>
-            <a href="http://www.jobs.cam.ac.uk/">Jobs</a>
-          </li>
-          <li>
-            <a href="http://www.philanthropy.cam.ac.uk/">Giving to Cambridge</a>
-          </li>
-        </ul>
-      </div>
-      <div class="col-md-3">
-        <h3><a href="http://www.cam.ac.uk/research">Research at Cambridge</a></h3> 
-        <ul class="list-unstyled hidden-sm-down">
-          <li>
-            <a href="http://www.cam.ac.uk/research/news">News</a>
-          </li>
-          <li>
-            <a href="http://www.cam.ac.uk/research/features">Features</a>
-          </li>
-          <li>
-            <a href="http://www.cam.ac.uk/research/discussion">Discussion</a>
-          </li>
-          <li>
-            <a href="http://www.cam.ac.uk/research/spotlight-on">Spotlight on...</a>
-          </li>
-          <li>
-            <a href="http://www.cam.ac.uk/research/research-at-cambridge">About research at Cambridge</a>
-          </li>
-        </ul>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </div>
