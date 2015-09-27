@@ -75,15 +75,18 @@
       border-top: $border-width solid $border-color;
     }
     li {
-      &:not(.tertiary-navigation-parent) {
-        @include media-breakpoint-down(sm) {
-          padding: 0;
-        }
+      @include media-breakpoint-down(sm) {
+        padding: 0;
       }
       padding: 10px 0px;
     }
     .list-unstyled {
-      margin-top: 10px;
+      @include media-breakpoint-up(md) {
+        margin-top: 10px;
+      }
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 10px;
+      }
       li {
         @include media-breakpoint-down(sm) {
           padding: 0;
