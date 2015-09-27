@@ -71,3 +71,7 @@
 @import "header";
 @import "layout";
 @import "components";
+
+// select2
+@import "../lib/select2/src/scss/core";
+@import "select2";

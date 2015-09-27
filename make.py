@@ -29,6 +29,7 @@ SITE_NAME = 'CamPL-NG'
 JS = (
   ('lib/bootstrap/dist/js/bootstrap.js', 'bootstrap.js'),
   ('lib/datetimepicker/src/js/bootstrap-datetimepicker.js', 'datetimepicker.js'),
+  ('lib/select2/dist/js/select2.full.js', 'datetimepicker.js'),
   ('js/menu.js', 'menu.js'),
   ('js/theme_switcher.js', 'theme_switcher.js'),
   ('js/select_tab.js', 'select_tab.js'),
