@@ -60,6 +60,10 @@
     margin-bottom: 0px;
     &> li > a {
       font-weight:bold;
+      @include media-breakpoint-down(sm) {
+        display: block;
+        padding: 10px 0;
+      }
     }
     &> li > span {
       font-weight:bold;
@@ -71,13 +75,25 @@
       border-top: $border-width solid $border-color;
     }
     li {
+      &:not(.tertiary-navigation-parent) {
+        @include media-breakpoint-down(sm) {
+          padding: 0;
+        }
+      }
       padding: 10px 0px;
     }
     .list-unstyled {
       margin-top: 10px;
       li {
+        @include media-breakpoint-down(sm) {
+          padding: 0;
+        }
         padding: 5px 5px 5px 0px;
         a, span {
+          @include media-breakpoint-down(sm) {
+            display: block;
+            padding: 5px 5px 5px 15px;
+          }
           padding-left: 15px;
           @include background(inline-image('link-bullet-black.png') no-repeat 0 50%);
         }
