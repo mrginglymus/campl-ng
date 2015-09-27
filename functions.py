@@ -7,6 +7,7 @@ from local_settings import LOCAL_RELEASE_DIR
 import uuid
 import re
 import os
+import pathlib
 
 from random import random, randrange
 
@@ -49,7 +50,8 @@ def random_date(raw=False):
   
 @contextfunction
 def print_macro(context, macro):
+  p = pathlib.Path(macro._func.func_code.co_filename)
   env = context.environment
-  t = env.loader.get_source(env, context.name)[0]
+  t = env.loader.get_source(env, str(p.relative_to(*p.parts[:1])))[0]
   res = re.search('({%% macro %s\(.*?{%% endmacro %%})'%macro.name, t, re.S).group(1)
-  return escape(res)
+  return '<pre><code class="django">%s</code></pre>' % escape(res)

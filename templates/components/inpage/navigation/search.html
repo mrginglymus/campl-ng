@@ -1,6 +1,6 @@
 {% extends 'layouts/subnav.html' %}
 
-{% block content %}
+{% macro inpage_search() %}
 <div class="inpage-search-container">
   <form action="/" method="get">
     <label for="search" class="sr-only">Search</label>
@@ -10,4 +10,13 @@
     </div>
   </form>
 </div>
+{% endmacro %}
+
+{% block unwrapped_content %}
+{{ inpage_search() }}
+{% endblock %}
+
+{% block content %}
+<h2>Source</h2>
+{{ print_macro(inpage_search) }}
 {% endblock %}

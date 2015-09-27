@@ -14,4 +14,10 @@
   </div>
 </div>
 
+<h2>Nav Macro</h2>
+{{ print_macro(nav.nav) }}
+
+<h2>Usage</h2>
+<pre><code class="django">{% raw %}{{ nav.nav(nav.NAV_ITEMS_EXAMPLE, 'pill', stacked=true, local=true) }}{% endraw %}</code></pre>
+
 {% endblock %}

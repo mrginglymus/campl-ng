@@ -12,4 +12,13 @@
   {{ nav.tabs(nav.NAV_ITEMS_EXAMPLE) }}
 </div>
 
+<h2>Nav Macro</h2>
+<pre>
+{{ print_macro(nav.nav) }}
+</pre>
+
+<h2>Usage</h2>
+<pre><code class="django">{% raw %}{{ nav.nav(nav.NAV_ITEMS_EXAMPLE, 'pill', local=true) }}{% endraw %}</code></pre>
+
+
 {% endblock %}
