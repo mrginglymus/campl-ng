@@ -1,10 +1,11 @@
 .local-footer {
   @include theme_element(background-color, dark);
-  
+  color: #ffffff;
   a {
     @include hover-focus {
       text-decoration: none;
     }
+    @include theme_element(color, pale);
   }
   
   h3 {
@@ -18,7 +19,7 @@
   li {
     padding-bottom: 5px;
     a {
-      color: #ffffff;
+      color: #ffffff !important;
     }
   } 
 }
