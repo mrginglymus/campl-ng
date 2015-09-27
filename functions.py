@@ -15,6 +15,8 @@ from datetime import timedelta, date
 from jinja2.utils import generate_lorem_ipsum as lipsum
 from markupsafe import escape
 
+__all__ = ['random_image', 'random_word', 'random_sentence', 'random_date', 'print_macro']
+
 @contextfunction
 def random_image(context, width, height=None):
   if not height:

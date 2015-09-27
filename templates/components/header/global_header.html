@@ -1,3 +1,45 @@
+{% macro global_header_drawer(id, links) %}
+<div id="global-header-drawer-{{ id }}" role="tabpanel" class="tab-pane">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-11">
+        <ul class="list-unstyled global-header-drawer-title">
+          <li>
+            <a href="{{ links.title.1 }}">{{ links.title.0 }}</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-1 global-header-close hidden-md-down">
+        <a href="#global-header-drawer-close" data-target="#global-header-drawer-close">Close</a>
+      </div>
+    </div>
+    <div class="row">
+      {% for column in links.links %}
+      <div class="col-md-4">
+        <ul class="list-unstyled">
+        {% for title, href, children in column %}
+          <li>
+            <a href="{{ href }}">{{ title }}</a>
+            {% if children %}
+            <ul class="list-unstyled hidden-md-down">
+            {% for title, href in children %}
+              <li>
+                <a href="{{ href }}">{{ title }}</a>
+              </li>
+            {% endfor %}
+            </ul>
+            {% endif %}
+          </li>
+        {% endfor %}
+        </ul>    
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% endmacro %}
+
 <nav class="navbar global-header">
   <div class="container">
     <div class="row">
@@ -51,8 +93,8 @@
 </nav>
 <div id="global-header-drawers">
   <div class="tab-content global-header-drawer sidebar-offcanvas">
-    {% include 'components/header/global_header_drawer_study.html' %}
-    {% include 'components/header/global_header_drawer_about.html' %}
+    {{ global_header_drawer('study', STUDY_DRAWER) }}
+    {{ global_header_drawer('about', ABOUT_DRAWER) }}
     <div class="hidden-md-up">
       <ul class="list-unstyled global-header-drawer-title">
         <li>
