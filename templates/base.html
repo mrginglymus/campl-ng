@@ -7,9 +7,7 @@
  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/solarized_light.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/languages/django.min.js"></script>
+    
     <!--[if gte IE 10]><!--><link rel="stylesheet" href="{{ ROOT_URL }}/css/campl.css"><!--<![endif]-->
     <!--[if lte IE 9 ]>
       <link rel="stylesheet" href="{{ ROOT_URL }}/css/campl_legacy.css">
@@ -25,27 +23,7 @@
       } catch (e) {
       }
     </script>
-    <script type="text/javascript">
-      $(document).ready(function() {
-        $('pre code').each(function(i, block) {
-          hljs.highlightBlock(block);
-        });
-        $('span.hljs-keyword:contains("import") + span.hljs-string').each( function(i, e) {
-          spl = e.innerHTML.replace(/['"]/g, '').split('/')
-          if (spl[0].indexOf('..') == -1 && spl[0].indexOf('compass') == -1) {
-            if (spl[spl.length-1].indexOf('campl') == -1) {
-              spl[spl.length-1] = '_' + spl[spl.length-1];
-            }
-            spl[spl.length-1] = spl[spl.length-1] + '.scss'
-            href = spl.join('/')
-            $(e).wrapInner('<a href="{{ ROOT_URL }}/stylesheets/' + href + '"></a>');
-          }
-        });
-        $('span.hljs-template_tag:contains(".html")').each( function(i, e) {
-          $(e).html($(e).html().replace(/'(.*.html)'/, '\'<a href="{{ ROOT_URL }}/templates/$1">$1</a>\''));
-        });
-      });
-    </script>
+    {% include 'meta/hljs.html' %}
   </head>
   <body class="offcanvas offcanvas-left theme-turquoise">
   {% block body %}

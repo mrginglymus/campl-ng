@@ -35,12 +35,11 @@ scss = get_directory_structure('scss')['scss']
 
 def shuffle_dirs(dir, cls):
   for p, c in dir.items():
-    if p != 'meta':
-      if c:
-        children = list(shuffle_dirs(c, cls))
-        yield cls(p, children=children)
-      else:
-        yield cls(p, p)
+    if c:
+      children = list(shuffle_dirs(c, cls))
+      yield cls(p, children=children)
+    else:
+      yield cls(p, p)
 
 scss_pages = list(shuffle_dirs(scss, SCSSPage))
 
@@ -54,7 +53,7 @@ pages = Pages([
     Page('Subsection with navigation', 'layouts/subnav.html'),
     Page('Subsection without navigation', 'layouts/subnonav.html', side_menu=False),
     Page('Subsection without right column', 'layouts/subnocol.html'),
-    Page('App', 'layouts/app.html'),
+    Page('App', 'layouts/app.html', side_menu=False),
     Page('Cambridge Front Page', 'layouts/campage.html', globals={'CAM_PAGE': True}),
   ]),
   Page('Core Elements', children=[
@@ -70,7 +69,7 @@ pages = Pages([
       Page('Pills (Stacked)', 'components/inpage/navigation/pills_stacked.html'),
       Page('Stages', 'components/inpage/navigation/stages.html'),
       Page('Pagination', 'components/inpage/navigation/pagination.html'),
-      Page('A to Z', 'components/inpage/navigation/atoz.html', context={'A_TO_Z': A_TO_Z}),
+      Page('A to Z', 'components/inpage/navigation/atoz.html', context={'A_TO_Z': A_TO_Z}, side_menu=False),
       Page('Search', 'components/inpage/navigation/search.html'),
     ]),
     Page('Content', children=[
@@ -78,7 +77,7 @@ pages = Pages([
       Page('Alerts', 'components/inpage/content/alerts.html'),
       Page('Date/Time Picker', 'components/inpage/content/datetimepicker.html'),
     ]),
-    Page('Teasers', 'components/teasers/examples.html'),
+    Page('Teasers', 'components/teasers/examples.html', side_menu=False),
   ]),
   Page('Stylesheets', children=scss_pages),
   Page('Templates', children=template_pages),

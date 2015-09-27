@@ -1,4 +1,4 @@
-{% extends 'layouts/subnav.html' %}
+{% extends 'layouts/page.html' %}
 
 {% macro top_alert(type, title, icon, message, dismissable=false) %}
 <div class="alert alert-top alert-{{ type }}{% if dismissable %} alert-dismissable{% endif %}" role="alert">
