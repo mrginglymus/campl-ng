@@ -2,8 +2,6 @@
 
 {% from 'components/carousel.html' import carousel with context %}
 
-{% from 'components/navigation/side_menu.html' import make_side_menu with context %}
-
 {% block body %}
 <header>
   {% include 'components/header/global_header.html' %}
@@ -11,7 +9,7 @@
 </header>
 <main class="container">
   <div class="row">
-    {{ make_side_menu(false) }}
+    {% include 'components/navigation/side_menu.html' %}
     <div class="col-md-9 main-content">
       {{ carousel(CAROUSEL) }}
       {% block unwrapped_content %}
@@ -22,11 +20,11 @@
       </div>
       {% endif %}
     </div>
-    {% from 'components/sidebar/sidebar.html' import sidebar %}
-    {% call sidebar() %}
-    {% block sidebar_content %}
-    {% endblock %}
-    {% endcall %}
+    <div class="col-md-3 sidebar">
+      <div class="p-a">
+        {% block sidebar_content %}{% endblock %}
+      </div>
+    </div>
   </div>
 </main>
 <footer>

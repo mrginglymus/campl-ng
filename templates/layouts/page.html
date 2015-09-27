@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
-{% from 'components/navigation/side_menu.html' import make_side_menu with context %}
+{% from 'components/sidebar/related_links.html' import related_links %}
+{% from 'components/sidebar/sidebar.html' import sidebar_heading %}
 
 {% block body %}
   <header>
@@ -9,7 +10,7 @@
     {% block subtitle %}
       <div class="local-header subtitle">
         <div class="container">
-          {% if side_menu %}
+          {% if page.side_menu %}
           <div class="col-md-9 col-md-offset-3">
           {% else %}
           <div class="col-md-12">
@@ -22,16 +23,19 @@
       </div>
     {% endblock %}
     {% set content_columns = 12 %}
-    {% if side_menu %}
+    {% if page.side_menu %}
       {% set content_columns = content_columns - 3 %}
     {% endif %}
+    
+    {% set sidebar = not not self.sidebar_content() %}
+    
     {% if sidebar %}
       {% set content_columns = content_columns - 3 %}
     {% endif %}
   </header>
   <main class="container">
     <div class="row">
-      {{ make_side_menu(side_menu) }}
+      {% include 'components/navigation/side_menu.html' %}
       <div class="col-md-{{ content_columns }} main-content">
         {% if image %}
           <img src="{{ image }}" class="leading-image">
@@ -45,12 +49,11 @@
         {% endif %}
       </div>
       {% if sidebar %}
-      {% from 'components/sidebar/sidebar.html' import sidebar %}
-      {% call sidebar() %}
-      {% block sidebar_content %}
-        {% include 'components/sidebar/related_links.html' %}
-      {% endblock %}
-      {% endcall %}
+      <div class="col-md-3 sidebar">
+        <div class="p-a">
+          {% block sidebar_content %}{% if page.type=='page' %}{{ sidebar_heading('Related links') }}{{ related_links((('View template', '%s/templates/%s/' % (ROOT_URL, page.source)),)) }}{% endif %}{% endblock %}
+        </div>
+      </div>
       {% endif %}
     </div>
   </main>

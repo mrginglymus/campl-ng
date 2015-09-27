@@ -41,7 +41,7 @@ for template_name in t_env.list_templates():
 
 class Page(object):
 
-  def __init__(self, title, source=None, context={}, children=[], globals={}):
+  def __init__(self, title, source=None, context={}, children=[], globals={}, side_menu=True):
     self.title = title
     self.source = source
     self._context = context
@@ -53,6 +53,7 @@ class Page(object):
     self.vertical_breadcrumb_children = None
     self.vertical_breadcrumb_siblings = []
     self.globals = globals
+    self.side_menu = side_menu
     self.type = 'page'
             
     
@@ -215,3 +216,4 @@ class FrontPage(Page):
     self.vertical_breadcrumb=[('Campl-NG', '/')]
     self.front_page = True
     self.vertical_breadcrumb_siblings = [(p.title, p.url) for p in pages]
+    self.side_menu = False

@@ -52,7 +52,7 @@ pages = Pages([
   Page('About', 'demo.html'),
   Page('Page Layouts', 'layouts/overview.html', children=[
     Page('Subsection with navigation', 'layouts/subnav.html'),
-    Page('Subsection without navigation', 'layouts/subnonav.html'),
+    Page('Subsection without navigation', 'layouts/subnonav.html', side_menu=False),
     Page('Subsection without right column', 'layouts/subnocol.html'),
     Page('App', 'layouts/app.html'),
     Page('Cambridge Front Page', 'layouts/campage.html', globals={'CAM_PAGE': True}),
