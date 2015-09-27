@@ -58,15 +58,14 @@
     padding: $spacer/4 $spacer;
     font-size: 14px;
     margin-bottom: 0px;
-    &> li > a {
-      font-weight:bold;
-      @include media-breakpoint-down(sm) {
-        display: block;
-        padding: 10px 0;
+    &> li > {
+      a, span {
+        font-weight:bold;
+        @include media-breakpoint-down(sm) {
+          display: block;
+          padding: 10px 0;
+        }
       }
-    }
-    &> li > span {
-      font-weight:bold;
     }
     &> li.tertiary-navigation-parent > a {
       color: #171717;
