@@ -1,15 +1,3 @@
-{% macro make_menu_child(page) %}
-  <li>
-    <a href="{{ ROOT_URL }}{{ page.url }}" class="dropdown-item">{{ page.title }}</a>
-    {% if page.children %}
-    <ul class="dropdown-menu">
-      {% for page in page.children %}
-        {{ make_menu_child(page) }}
-      {% endfor %}
-    </ul>
-    {% endif %}
-  </li>
-{% endmacro %}
 <nav class="navbar navbar-local container hidden-sm-down">
   <div>
     <ul class="nav navbar-nav nav-local">
@@ -33,7 +21,7 @@
             </li>
             {% endif %}
             {% for __page in _page.children %}
-              {{ make_menu_child(__page) }}
+               <a href="{{ ROOT_URL }}{{ __page.url }}" class="dropdown-item">{{ __page.title }}</a>
             {% endfor %}
           </ul>
         </li>
