@@ -12,7 +12,7 @@
       $(e).html($(e).html().replace(/['"]((?:\w+\/)*)(\w+)['"]/, '\'<a href="{{ ROOT_URL }}/stylesheets/$1_$2.scss/">$1$2</a>\''));
     });
     $('span.hljs-template_tag:contains(".html")').each( function(i, e) {
-      $(e).html($(e).html().replace(/'(.*.html)'/, '\'<a href="{{ ROOT_URL }}/templates/$1">$1</a>\''));
+      $(e).html($(e).html().replace(/'(.*.html)'/, '\'<a href="{{ ROOT_URL }}/templates/$1/">$1</a>\''));
     });
   });
 </script>

@@ -79,8 +79,8 @@ pages = Pages([
     ]),
     Page('Teasers', 'components/teasers/examples.html', side_menu=False),
   ]),
-  Page('Stylesheets', children=scss_pages),
   Page('Templates', children=template_pages),
+  Page('Stylesheets', children=scss_pages),
 ])
 
 front_page = FrontPage(
