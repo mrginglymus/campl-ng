@@ -7,3 +7,6 @@
 [submodule "lib/datetimepicker"]
 	path = lib/datetimepicker
 	url = https://github.com/mrginglymus/bootstrap-datetimepicker.git
+[submodule "lib/select2"]
+	path = lib/select2
+	url = https://github.com/select2/select2.git
