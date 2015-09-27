@@ -1,4 +1,4 @@
-<div class="col-md-3 tertiary-navigation collapse{% if page.side_menu %} navbar-toggleable-sm{% endif %}" id="tertiary-navigation">
+<div class="col-md-3 tertiary-navigation collapse {% if page.side_menu %}navbar-toggleable-sm{% else %}hidden-md-up{% endif %}" id="tertiary-navigation">
   <ul class="nav nav-pills nav-stacked nav-side">
     {% for page in page.vertical_breadcrumb %}
       <li class="nav-item">
