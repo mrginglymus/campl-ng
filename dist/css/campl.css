@@ -7631,8 +7631,9 @@ html {
 img.leading-image {
   width: 100%; }
 
-body {
-  overflow-x: hidden; }
+@media (min-width: 768px) {
+  body {
+    overflow-x: hidden; } }
 
 body {
   display: -webkit-flex;
