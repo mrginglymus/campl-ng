@@ -26,10 +26,6 @@ base_repo_url = base_repo_url.replace('.git', '')
 base_template_url = '/'.join([base_repo_url, 'tree', repo.active_branch.name, 'templates'])
 
 SITE_NAME = 'CamPL-NG'
-CSS_DIST = os.path.join('dist', 'css')
-IMG_DIST = os.path.join('dist', 'images')
-JS_DIST = os.path.join('dist', 'js')
-LP_IMG_DIST = os.path.join('dist', 'lp_img')
 
 LOCAL_JS = (
   'lib/bootstrap/dist/js/bootstrap.js',
@@ -58,35 +54,44 @@ COLOURS = [
   'grey',
 ]
 
+CSS_BUILD = os.path.join('build', 'css')
+IMG_BUILD = os.path.join('build', 'images')
+JS_BUILD = os.path.join('build', 'js')
+LP_IMG_BUILD = os.path.join('build', 'lp_img')
+
+
+def clean_build():
+  if os.path.exists('build'):
+    shutil.rmtree('build')
+  os.mkdir('build')
 
 def clean_dist():
-  DIST = 'dist'
-  if os.path.exists(DIST):
-    shutil.rmtree(DIST)
-  os.mkdir(DIST)
-
+  if os.path.exists('dist'):
+    shutil.rmtree('dist')
+  os.mkdir('dist')
   
 def make_css(legacy=False):
-  if not os.path.exists(CSS_DIST):
-    os.makedirs(CSS_DIST)
-  call(['sass', '--compass', 'scss/campl.scss', 'dist/css/campl.css'])
+  if not os.path.exists(CSS_BUILD):
+    os.makedirs(CSS_BUILD)
+  call(['sass', '--compass', 'scss/campl.scss', 'build/css/campl.css'])
   if legacy:
-    call(['sass', '--compass', 'scss/campl_legacy.scss', 'dist/css/campl_legacy.css'])
+    call(['sass', '--compass', 'scss/campl_legacy.scss', 'build/css/campl_legacy.css'])
    
 def make_img():
-  if os.path.exists(IMG_DIST):
-    shutil.rmtree(IMG_DIST)
-  shutil.copytree('images', IMG_DIST)
+  if os.path.exists(IMG_BUILD):
+    shutil.rmtree(IMG_BUILD)
+  shutil.copytree('images', IMG_BUILD)
 
 
 def make_js():
-  if os.path.exists(JS_DIST):
-    shutil.rmtree(JS_DIST)
-  os.mkdir(JS_DIST)
+  if os.path.exists(JS_BUILD):
+    shutil.rmtree(JS_BUILD)
+  os.mkdir(JS_BUILD)
   for js in LOCAL_JS:
-    shutil.copy(js, os.path.join(JS_DIST, os.path.basename(js)))
+    shutil.copy(js, os.path.join(JS_BUILD, os.path.basename(js)))
   for js in REMOTE_JS:
-    urllib.urlretrieve(js, os.path.join(JS_DIST, os.path.basename(js)))
+    urllib.urlretrieve(js, os.path.join(JS_BUILD, os.path.basename(js)))
+
   
 def make_html(ROOT_URL=LOCAL_ROOT_URL):
 
@@ -94,9 +99,10 @@ def make_html(ROOT_URL=LOCAL_ROOT_URL):
   from site_structure import pages, front_page
   import codecs
     
-  if os.path.exists(LP_IMG_DIST):
-    shutil.rmtree(LP_IMG_DIST)
-  os.mkdir(LP_IMG_DIST)
+
+  if os.path.exists(LP_IMG_BUILD):
+    shutil.rmtree(LP_IMG_BUILD)
+  os.mkdir(LP_IMG_BUILD)
 
   env = Environment(loader=FileSystemLoader('templates'))
   
@@ -133,14 +139,17 @@ def deploy():
   if args.r:
     if 'html' not in args.mode:
       make_html(REMOTE_ROOT_URL)
-    call(['rsync', '-r', 'dist/', REMOTE_RELEASE_DIR])
+    call(['rsync', '-r', 'build/', REMOTE_RELEASE_DIR])
     make_html(LOCAL_ROOT_URL)
   if os.path.exists(LOCAL_RELEASE_DIR):
     shutil.rmtree(LOCAL_RELEASE_DIR)
-  shutil.copytree('dist', LOCAL_RELEASE_DIR)
+  shutil.copytree('build', LOCAL_RELEASE_DIR)
+  if not os.path.exists(os.path.join('dist', 'css')):
+    os.mkdir(os.path.join('dist', 'css'))
+  shutil.copy(os.path.join('build', 'css', 'campl.css'), os.path.join('dist', 'css', 'campl.css'))
+  if os.path.exists(os.path.join('build', 'css', 'campl_legacy.css')):
+    shutil.copy(os.path.join('build', 'css', 'campl_legacy.css'), os.path.join('dist', 'css', 'campl_legacy.css'))
   
-    
-
 
 parser = argparse.ArgumentParser(description='Make campl-ng')
 
@@ -152,6 +161,7 @@ parser.add_argument('mode', nargs='*', default=[])
 args = parser.parse_args()
 
 if 'all' in args.mode:
+  clean_build()
   clean_dist()
   make_js()
   make_css(legacy=args.l)

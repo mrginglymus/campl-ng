@@ -63,7 +63,7 @@ class Page(object):
       template = env.get_template(self.source, globals=self.globals)
       context = self.context
       context['page'] = self
-      destination = os.path.join('dist', self.url[1:], 'index.html')
+      destination = os.path.join('build', self.url[1:], 'index.html')
       
       if not os.path.exists(os.path.dirname(destination)):
         os.makedirs(os.path.dirname(destination))
@@ -168,7 +168,7 @@ class SCSSPage(Page):
         'page': self,
         'scss': scss,
       }
-      destination = os.path.join('dist', self.url[1:], 'index.html')
+      destination = os.path.join('build', self.url[1:], 'index.html')
       if not os.path.exists(os.path.dirname(destination)):
         os.makedirs(os.path.dirname(destination))
       with codecs.open(destination, 'wb', 'utf-8') as fh:
@@ -193,7 +193,7 @@ class TemplatePage(Page):
         'template_references': template_to_tuple(TEMPLATE_REFERENCES.get(template_file, []), env.globals['ROOT_URL']),
         'referencing_templates': template_to_tuple(REFERENCING_TEMPLATES.get(template_file, []), env.globals['ROOT_URL']),
       }
-      destination = os.path.join('dist', self.url[1:], 'index.html')
+      destination = os.path.join('build', self.url[1:], 'index.html')
     
       if not os.path.exists(os.path.dirname(destination)):
         os.makedirs(os.path.dirname(destination))
