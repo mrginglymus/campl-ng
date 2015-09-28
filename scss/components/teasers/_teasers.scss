@@ -13,8 +13,9 @@
   }
   
   .teaser-image {
-    position: relative; // so that audio/vido icons can be placed relative
     a {
+      position: relative;
+      display: block;
       @include hover-focus {
         .teaser-image-audio, .teaser-image-video {
           background-color: rgba(0,0,0,0.8); // hover colour for A/V icons
@@ -35,6 +36,8 @@
     padding: 5px;
     font-size: 3em;
     position: absolute;
+    right: 0;
+    bottom: 0;
     color: #fff;
     @include media-breakpoint-down(sm) {
       font-size: 2em;
@@ -69,38 +72,16 @@
 // padding for teaser image and positioning for AV icon
 .horizontal-teaser .teaser-image {
   padding: 0 $spacer 0 0;
-  @include media-breakpoint-up(md) {
-    .teaser-image-audio, .teaser-image-video {
-      right: $spacer;
-      bottom: 0;
-    }
-  }
-  @include media-breakpoint-down(sm) {
-    .teaser-image-audio, .teaser-image-video {
-      top: 0;
-      left: 0;
-    }
-  }
 }
 
 // padding for teaser image and position for AV icon
 // The vertical teaser 'collapses' into a horizontal teaser at the 'md' breakpoint
 .vertical-teaser .teaser-image {
-  @include media-breakpoint-up(md) {
-    margin: 0 0 $spacer 0;
-    .teaser-image-audio, .teaser-image-video {
-      right: 0;
-      bottom: 0;
-    }
-  }
   @include media-breakpoint-down(sm) {
     padding: 0 $spacer 0 0;
-    .teaser-image-audio, .teaser-image-video {
-      top: 0;
-      left: 0;
-    }
   }
 }
+
 
 .teaser-tag {
   position: absolute;
