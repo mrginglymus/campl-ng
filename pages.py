@@ -41,7 +41,7 @@ for template_name in t_env.list_templates():
 
 class Page(object):
 
-  def __init__(self, title, source=None, context={}, children=[], globals={}, side_menu=True):
+  def __init__(self, title, source=None, context={}, children=[], globals={}, side_menu=True, scss=[]):
     self.title = title
     self.source = source
     self._context = context
@@ -55,6 +55,7 @@ class Page(object):
     self.globals = globals
     self.side_menu = side_menu
     self.type = 'page'
+    self.scss = scss
             
     
   def render(self, env):

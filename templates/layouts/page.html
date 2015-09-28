@@ -51,7 +51,10 @@
       {% if sidebar %}
       <div class="col-md-3 sidebar">
         <div class="p-a">
-          {% block sidebar_content %}{% if page.type=='page' %}{{ sidebar_heading('Related links') }}{{ related_links((('View template', '%s/templates/%s/' % (ROOT_URL, page.source)),)) }}{% endif %}{% endblock %}
+          {% block sidebar_content %}{% if page.type=='page' %}
+            {{ sidebar_heading('Sources') }}
+            {{ related_links(get_sources_links(page)) }}
+          {% endif %}{% endblock %}
         </div>
       </div>
       {% endif %}
