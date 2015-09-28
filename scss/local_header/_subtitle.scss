@@ -18,7 +18,7 @@
     &:after {
       @include theme_element(background-color, dark);
       content: " ";
-      width: 100vw;
+      width: 100%; // not vw because scrollbars
       height: calc(100% - 50px);
       position: absolute;
       bottom: 50px;
