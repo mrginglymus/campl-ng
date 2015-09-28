@@ -12,18 +12,6 @@ from local_settings import (
   REMOTE_ROOT_URL,
   REMOTE_RELEASE_DIR,
 )
-from quicklinks import QUICKLINKS
-from pages import TemplatePage
-
-from git import Repo
-
-repo = Repo(os.getcwd())
-base_repo_url = repo.remotes.origin.url
-if ':' in base_repo_url:
-  base_repo_url = base_repo_url.replace('git@github.com:', 'https://github.com/')
-base_repo_url = base_repo_url.replace('.git', '')
-
-base_template_url = '/'.join([base_repo_url, 'tree', repo.active_branch.name, 'templates'])
 
 SITE_NAME = 'CamPL-NG'
 
@@ -65,10 +53,16 @@ def clean_build():
     shutil.rmtree('build')
   os.mkdir('build')
 
-def clean_dist():
+def make_dist():
   if os.path.exists('dist'):
     shutil.rmtree('dist')
   os.mkdir('dist')
+  make_css(True)
+  if not os.path.exists(os.path.join('dist', 'css')):
+    os.mkdir(os.path.join('dist', 'css'))
+  shutil.copy(os.path.join('build', 'css', 'campl.css'), os.path.join('dist', 'css', 'campl.css'))
+  if os.path.exists(os.path.join('build', 'css', 'campl_legacy.css')):
+    shutil.copy(os.path.join('build', 'css', 'campl_legacy.css'), os.path.join('dist', 'css', 'campl_legacy.css'))
   
 def make_css(legacy=False):
   if not os.path.exists(CSS_BUILD):
@@ -124,7 +118,6 @@ def make_html(ROOT_URL=LOCAL_ROOT_URL):
     'JS': JS,
     'MENU': pages,
     'COLOURS': COLOURS,
-    'TEMPLATE_REPO_ROOT': base_template_url,
     'CACHE_IMAGES': args.cacheimages or args.r,
   })
   
@@ -144,11 +137,6 @@ def deploy():
   if os.path.exists(LOCAL_RELEASE_DIR):
     shutil.rmtree(LOCAL_RELEASE_DIR)
   shutil.copytree('build', LOCAL_RELEASE_DIR)
-  if not os.path.exists(os.path.join('dist', 'css')):
-    os.mkdir(os.path.join('dist', 'css'))
-  shutil.copy(os.path.join('build', 'css', 'campl.css'), os.path.join('dist', 'css', 'campl.css'))
-  if os.path.exists(os.path.join('build', 'css', 'campl_legacy.css')):
-    shutil.copy(os.path.join('build', 'css', 'campl_legacy.css'), os.path.join('dist', 'css', 'campl_legacy.css'))
   
 
 parser = argparse.ArgumentParser(description='Make campl-ng')
@@ -162,7 +150,6 @@ args = parser.parse_args()
 
 if 'all' in args.mode:
   clean_build()
-  clean_dist()
   make_js()
   make_css(legacy=args.l)
   make_img()
@@ -184,3 +171,6 @@ if 'img' in args.mode:
   make_img()  
 
 deploy()
+
+if 'dist' in args.mode:
+  make_dist()
