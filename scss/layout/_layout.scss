@@ -1,3 +1,5 @@
+@import "compass/css3/images";
+
 html {
   overflow-x: hidden;
 }
@@ -45,4 +47,15 @@ body {
       display: block;
     }
   }
+}
+
+
+.logo.logo-sm {
+  width: 178px;
+  height: 36px;
+}
+
+.logo.logo-lg {
+  width: 288px;
+  height: 61px;
 }
