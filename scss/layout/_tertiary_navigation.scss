@@ -54,6 +54,10 @@
   
   &> .list-unstyled {
     border-bottom: $border-width solid $border-color;
+    @include media-breakpoint-down(sm) {
+      border-bottom-width: 5px;
+      @include theme_element(border-bottom-color, light);
+    }
     background-color: #ffffff;
     padding: $spacer/4 $spacer;
     font-size: 14px;
@@ -102,5 +106,4 @@
       }
     }
   }
-
 }

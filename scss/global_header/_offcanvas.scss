@@ -50,12 +50,16 @@
   #global-header-drawers div {
     background-color: #3b3b3b;
     display: block;
+    .row {
+      border-bottom: none;
+    }
     [class*='col-'] {
       width: 100%;
       border: none;
     }
     ul {
       padding: 0;
+      border-bottom:$border-width solid #323232;
     }
     li:before {
       display: none;
@@ -66,6 +70,7 @@
     a {
       padding: $spacer/2 $spacer;
       display: block;
+      background: none;
       @include hover-focus {
         background-color: #292929;
         text-decoration: none;

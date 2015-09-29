@@ -7237,18 +7237,22 @@ blockquote {
   #global-header-drawers div {
     background-color: #3b3b3b;
     display: block; }
+    #global-header-drawers div .row {
+      border-bottom: none; }
     #global-header-drawers div [class*='col-'] {
       width: 100%;
       border: none; }
     #global-header-drawers div ul {
-      padding: 0; }
+      padding: 0;
+      border-bottom: 1px solid #323232; }
     #global-header-drawers div li:before {
       display: none; }
     #global-header-drawers div li {
       padding: 0; }
     #global-header-drawers div a {
       padding: 10px 20px;
-      display: block; }
+      display: block;
+      background: none; }
       #global-header-drawers div a:focus, #global-header-drawers div a:hover {
         background-color: #292929;
         text-decoration: none; }
@@ -7456,6 +7460,23 @@ img.leading-image {
     padding: 5px 20px;
     font-size: 14px;
     margin-bottom: 0px; }
+    @media (max-width: 767.9px) {
+      .tertiary-navigation > .list-unstyled {
+        border-bottom-width: 5px; }
+        .theme-blue .tertiary-navigation > .list-unstyled {
+          border-bottom-color: #005dab ; }
+        .theme-turquoise .tertiary-navigation > .list-unstyled {
+          border-bottom-color: #1e7680 ; }
+        .theme-purple .tertiary-navigation > .list-unstyled {
+          border-bottom-color: #782c7e ; }
+        .theme-green .tertiary-navigation > .list-unstyled {
+          border-bottom-color: #4b7016 ; }
+        .theme-orange .tertiary-navigation > .list-unstyled {
+          border-bottom-color: #d45812 ; }
+        .theme-red .tertiary-navigation > .list-unstyled {
+          border-bottom-color: #be1741 ; }
+        .theme-grey .tertiary-navigation > .list-unstyled {
+          border-bottom-color: #7d7777 ; } }
     .tertiary-navigation > .list-unstyled > li > a, .tertiary-navigation > .list-unstyled > li > span {
       font-weight: bold; }
       @media (max-width: 767.9px) {
