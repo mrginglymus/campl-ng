@@ -16,11 +16,9 @@ img.leading-image {
   width: 100%;
 }
 
-body {
-  @include media-breakpoint-up(md) {
-    // when we're not using offcanvas, hide overflow for scrollbar vw bug
-    overflow-x: hidden;
-  }
+body:not(.active) {
+  // when we're not using offcanvas, hide overflow for scrollbar vw bug
+  overflow-x: hidden;
 }
 
 @if $enable-flex {
