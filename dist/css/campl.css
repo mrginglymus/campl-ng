@@ -7217,7 +7217,8 @@ blockquote {
     .local-header .navbar-local .nav .nav-item .nav-link {
       color: #ffffff !important;
       padding: 10px 20px;
-      font-size: 14px; }
+      font-size: 14px;
+      font-weight: normal; }
       .theme-blue .local-header .navbar-local .nav .nav-item .nav-link {
         background-color: #004e8f ; }
       .theme-turquoise .local-header .navbar-local .nav .nav-item .nav-link {
