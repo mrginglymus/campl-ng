@@ -14,7 +14,7 @@
     }
   }
 
-  .navbar-nav {
+  .nav {
     .nav-item {
       &:first-child {
         border-left: $border-width solid #2e2e2e;
@@ -22,32 +22,32 @@
     
       border-right: $border-width solid #2e2e2e;
       margin-left: 0;
-      font-size: 14px;
-      line-height: 18px;
       
       @include hover-focus {
-        background-color:#171717;
-        border-left: $border-width solid #737373;
-        border-right: $border-width solid #737373;
         &:not(:first-child) {
           margin-left: -$border-width;
         }
-      }
-    }
-        
-  
-    .nav-link {
-      font-weight: 600;
-      color: #ffffff;
-      padding: $spacer*1.25 $spacer;
-      @include hover-focus {
-        color: #5a5a5a;
+        border-left: $border-width solid #737373;
+        border-right: $border-width solid #737373;
       }
       
-      &[data-toggle="tab"].active {
-        background-color: #171717;
-        margin-bottom: -$border-width;
-        padding-bottom: 26px;
+      .nav-link {
+        font-size: 14px;
+        line-height: 18px;
+      
+        font-weight: 600;
+        color: #ffffff !important;
+        padding: $spacer*1.25 $spacer;
+        @include hover-focus {
+          color: #5a5a5a !important;
+          background-color:#171717 !important;
+        }
+        
+        &[data-toggle="tab"].active {
+          background-color: #171717 !important;
+          margin-bottom: -$border-width;
+          padding-bottom: 26px;
+        }
       }
     }
 

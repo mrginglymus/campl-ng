@@ -4,57 +4,62 @@
   .navbar-local {
     @include theme_element(background-color, primary);
     font-family: $font-family-sans-serif-extra;
-    font-size: 14px;
+    
     padding: 0;
     border-bottom: $border-width solid;
     @include theme_element(border-bottom-color, dark);
     
-    .nav-item {
-      @include hover-focus {
-        @include theme_element(background-color, darker);
-      }
-      margin-left: 0;
-      @include theme_element(background-color, primary);
-      &.active {
-        @include theme_element(background-color, lighter);
-      }
-      &:not(.pull-right) .nav-link {
-        border-right: $border-width solid;
-        @include theme_element(border-right-color, dark);
-      }
-      &.pull-right .nav-link {
-        border-left: $border-width solid;
-        @include theme_element(border-left-color, dark);
-      }
-    }
-    
-    .nav-link {
-      color: #ffffff;
-      padding: 10px 20px;
-    }
-    
-    .dropdown-toggle {
-      @include background(inline-image('dropdown-indicator.png') no-repeat right 5px top 50%);
-      &:after {
-        content: none;
-      }
-      padding: 10px 40px 10px 10px;
-    }
-    
-    .dropdown-menu {
-      @include theme_element(background-color, darker);
-      margin-top: 0px;
-      margin-left: -$border-width;
-      padding: 0px;
-      font-size: 1em;
-      a {
-        border-top: $border-width solid;
-        @include theme_element(border-top-color, dark);
-        padding: 10px;
-        @include hover-focus {
-          @include theme_element(background-color, primary);
+    .nav {
+      .nav-item {
+       
+        margin-left: 0;
+        &.active .nav-link {
+          @include theme_element(background-color, lighter);
         }
-        color: #ffffff;
+        &:not(.pull-right) .nav-link {
+          border-right: $border-width solid;
+          @include theme_element(border-right-color, dark);
+        }
+        &.pull-right .nav-link {
+          border-left: $border-width solid;
+          @include theme_element(border-left-color, dark);
+        }
+      
+      
+        .nav-link {
+          @include theme_element(background-color, primary);
+          @include hover-focus {
+            @include theme_element(background-color, darker);
+          }
+          color: #ffffff !important;
+          padding: 10px 20px;
+          font-size: 14px;
+        }
+        
+        .dropdown-toggle {
+          @include background(inline-image('dropdown-indicator.png') no-repeat right 5px top 50%);
+          &:after {
+            content: none;
+          }
+          padding: 10px 40px 10px 10px;
+        }
+        
+        .dropdown-menu {
+          @include theme_element(background-color, darker);
+          margin-top: 0px;
+          margin-left: -$border-width;
+          padding: 0px;
+          font-size: 14px;
+          a {
+            border-top: $border-width solid;
+            @include theme_element(border-top-color, dark);
+            padding: 10px;
+            @include hover-focus {
+              @include theme_element(background-color, primary);
+            }
+            color: #ffffff;
+          }
+        }
       }
     }
   }

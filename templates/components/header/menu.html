@@ -21,7 +21,9 @@
             </li>
             {% endif %}
             {% for __page in _page.children %}
+            <li>
                <a href="{{ ROOT_URL }}{{ __page.url }}" class="dropdown-item">{{ __page.title }}</a>
+            </li>
             {% endfor %}
           </ul>
         </li>

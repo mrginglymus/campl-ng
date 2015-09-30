@@ -15,9 +15,7 @@
   
   .nav-pills .nav-item {
   
-    font-size: 14px;
-    line-height: 16px;
-    font-weight: 600;
+    
     background-color: #fafafa;
     margin-top: 0px;
     padding: 0px;
@@ -45,7 +43,10 @@
     }
     
     .nav-link {
-      color: #999999;
+      color: #999999 !important;
+      font-size: 14px;
+      line-height: 16px;
+      font-weight: 600;
       padding: $spacer*0.8 $spacer;
       border-bottom: $border-width solid $border-color;
       @include background(inline-image('vertical-breadcrumb-arrow-up.png') no-repeat 95% 50%);
