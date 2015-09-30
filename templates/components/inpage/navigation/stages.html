@@ -3,15 +3,16 @@
 {% import 'components/inpage/navigation/nav.html' as nav %}
 
 
-{% block content %}
-
-<div class="clearfix">
-  {{ nav.nav(nav.NAV_ITEMS_EXAMPLE[:-1], 'pill', local=true, extra_classes="nav-stages") }}
+{% block unwrapped_content %}
+<div class="p-x">
+  {{ nav.nav(nav.NAV_ITEMS_EXAMPLE[:-1], 'stage', local=true, extra_classes="nav-pills") }}
 </div>
-<div class="p-t">
+{% endblock %}
+
+{% block content %}
+<div>
   {{ nav.tabs(nav.NAV_ITEMS_EXAMPLE[:-1]) }}
 </div>
-
 <h2>Nav Macro</h2>
 {{ print_macro(nav.nav) }}
 

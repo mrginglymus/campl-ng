@@ -7634,7 +7634,17 @@ ul.pagination > li > span.elipsis, ul.pagination > li > span.elipsis:hover {
     color: #fff;
     padding: 9px; }
 
+.nav-stages-wrapper {
+  padding-top: 7px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #e4e4e4; }
+  .nav-stages-wrapper::after {
+    content: "";
+    display: table;
+    clear: both; }
+
 .nav-stages .nav-item {
+  padding-bottom: 2px;
   position: relative; }
   .nav-stages .nav-item:not(:first-of-type):before {
     content: "";

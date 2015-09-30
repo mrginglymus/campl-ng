@@ -1,5 +1,13 @@
+.nav-stages-wrapper {
+  @include clearfix();
+  padding-top: 7px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #e4e4e4;
+}
+
 .nav-stages {
   .nav-item {
+    padding-bottom: 2px;
     position: relative;
     &:not(:first-of-type):before {
       content: "";
