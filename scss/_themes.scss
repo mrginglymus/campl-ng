@@ -65,7 +65,7 @@ $themes: (
 );
 
 @mixin theme_element($property, $variant, $important:"") {
-  $element: #{&};
+  $element: &;
   @each $colour, $map in $themes {
     @at-root {
       .theme-#{$colour} {
