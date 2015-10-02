@@ -7083,14 +7083,14 @@ blockquote {
 .local-header .title {
   font-size: 40px;
   line-height: 48px;
+  margin-bottom: 0;
   color: #ffffff;
   font-weight: 100;
   font-family: "myriad-pro", myriad, verdana, Arial, sans-serif; }
   @media (max-width: 979.9px) {
     .local-header .title {
       font-size: 20px;
-      line-height: 26px;
-      margin-bottom: 0; } }
+      line-height: 26px; } }
 
 .local-header.subtitle {
   background: none;
@@ -7119,6 +7119,10 @@ blockquote {
         .local-header.subtitle .container h1 {
           font-size: 28px;
           line-height: 34px; } }
+      .local-header.subtitle .container h1.app {
+        font-size: 26px;
+        font-size: 29px;
+        margin-bottom: 0; }
   @media (min-width: 768px) {
     .local-header.subtitle:after {
       content: " ";

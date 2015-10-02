@@ -12,6 +12,11 @@
         font-size: 28px;
         line-height: 34px;
       }
+      &.app {
+        font-size: 26px;
+        font-size: 29px;
+        margin-bottom: 0;
+      }
     }
   }
   @include media-breakpoint-up(md) {
