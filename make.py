@@ -67,7 +67,7 @@ def make_dist():
 def make_css(legacy=False):
   if not os.path.exists(CSS_BUILD):
     os.makedirs(CSS_BUILD)
-  call(['sass', '--compass', 'scss/campl.scss', 'build/css/campl.css'])
+  call(['sass', '--compass', '--sourcemap=inline', 'scss/campl.scss', 'build/css/campl.css'])
   if legacy:
     call(['sass', '--compass', 'scss/campl_legacy.scss', 'build/css/campl_legacy.css'])
    
