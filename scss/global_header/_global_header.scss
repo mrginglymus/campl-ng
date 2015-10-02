@@ -21,7 +21,10 @@
       }
     
       border-right: $border-width solid #2e2e2e;
-      margin-left: 0;
+      
+      &+ .nav-item {
+        margin-left: 0;
+      }
       
       @include hover-focus {
         &:not(:first-child) {
