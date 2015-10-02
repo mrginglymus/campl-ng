@@ -8166,7 +8166,8 @@ ul.pagination > li > span.elipsis, ul.pagination > li > span.elipsis:hover {
   color: #171717;
   padding: 0 6px 5px 0;
   font-weight: 400;
-  font-family: "myriad-pro", myriad, verdana, Arial, sans-serif; }
+  font-family: "myriad-pro", myriad, verdana, Arial, sans-serif;
+  z-index: 1; }
 
 .teaser-list {
   padding: 0 20px;
