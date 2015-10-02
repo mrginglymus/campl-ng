@@ -2,7 +2,7 @@
   background: none;
   position: relative;
   .container {
-    @include theme_element(background-color, light);
+    @include theme_element(background-color, light-highlight);
     z-index:0;
     overflow:auto;
     h1 {
@@ -16,7 +16,7 @@
   }
   @include media-breakpoint-up(md) {
     &:after {
-      @include theme_element(background-color, dark);
+      @include theme_element(background-color, page-background);
       content: " ";
       width: 100%; // not vw because scrollbars
       height: calc(100% - 50px);

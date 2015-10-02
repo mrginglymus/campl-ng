@@ -2,34 +2,34 @@
 
 .local-header {
   .navbar-local {
-    @include theme_element(background-color, primary);
+    @include theme_element(background-color, navbar);
     font-family: $font-family-sans-serif-extra;
     
     padding: 0;
     border-bottom: $border-width solid;
-    @include theme_element(border-bottom-color, dark);
+    @include theme_element(border-bottom-color, page-background);
     
     .nav {
       .nav-item {
        
         margin-left: 0;
         &.active .nav-link {
-          @include theme_element(background-color, lighter);
+          @include theme_element(background-color, selected);
         }
         &:not(.pull-right) .nav-link {
           border-right: $border-width solid;
-          @include theme_element(border-right-color, dark);
+          @include theme_element(border-right-color, page-background);
         }
         &.pull-right .nav-link {
           border-left: $border-width solid;
-          @include theme_element(border-left-color, dark);
+          @include theme_element(border-left-color, page-background);
         }
       
       
         .nav-link {
-          @include theme_element(background-color, primary);
+          @include theme_element(background-color, navbar);
           @include hover-focus {
-            @include theme_element(background-color, darker);
+            @include theme_element(background-color, dark-highlight);
           }
           color: #ffffff !important;
           padding: 10px 20px;
@@ -46,17 +46,17 @@
         }
         
         .dropdown-menu {
-          @include theme_element(background-color, darker);
+          @include theme_element(background-color, dark-highlight);
           margin-top: 0px;
           margin-left: -$border-width;
           padding: 0px;
           font-size: 14px;
           a {
             border-top: $border-width solid;
-            @include theme_element(border-top-color, dark);
+            @include theme_element(border-top-color, page-background);
             padding: 10px;
             @include hover-focus {
-              @include theme_element(background-color, primary);
+              @include theme_element(background-color, navbar);
             }
             color: #ffffff;
           }

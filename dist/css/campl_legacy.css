@@ -7152,10 +7152,11 @@ blockquote {
     .global-header .navbar-brand:focus, .global-header .navbar-brand:hover {
       color: white; }
   .global-header .nav .nav-item {
-    border-right: 1px solid #2e2e2e;
-    margin-left: 0; }
+    border-right: 1px solid #2e2e2e; }
     .global-header .nav .nav-item:first-child {
       border-left: 1px solid #2e2e2e; }
+    .global-header .nav .nav-item + .nav-item {
+      margin-left: 0; }
     .global-header .nav .nav-item:focus, .global-header .nav .nav-item:hover {
       border-left: 1px solid #737373;
       border-right: 1px solid #737373; }

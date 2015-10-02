@@ -3,7 +3,7 @@ h1 {
 }
 
 h1, h2 {
-  @include theme_element(color, dark);
+  @include theme_element(color, page-background);
 }
 
 #{headings()} {

@@ -1,18 +1,18 @@
 .local-footer {
-  @include theme_element(background-color, dark);
+  @include theme_element(background-color, page-background);
   color: #ffffff;
   a {
     @include hover-focus {
       text-decoration: none;
     }
-    @include theme_element(color, pale);
+    @include theme_element(color, pale-tone);
   }
   
   h3 {
     padding-bottom: 10px;
     a {
       font-size: 14px;
-      @include theme_element(color, pale);
+      @include theme_element(color, pale-tone);
     }
   }
   

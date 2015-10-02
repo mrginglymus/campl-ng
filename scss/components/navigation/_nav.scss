@@ -7,15 +7,15 @@
       line-height: 18px;
     }
     .nav-link:not(.disabled) {
-      @include theme_element(color, lighter);
+      @include theme_element(color, selected);
       
       &:not(.active):hover {
         background-color: #eee;
-        @include theme_element(color, lighter);
+        @include theme_element(color, selected);
       }
       
       &.active {
-        @include theme_element(background-color, lighter);
+        @include theme_element(background-color, selected);
         color: #fff;
       }
     }
@@ -28,7 +28,7 @@
   }
   &.nav-tabs {
     border-bottom: 2px solid;
-    @include theme_element(border-bottom-color, lighter);
+    @include theme_element(border-bottom-color, selected);
     padding-left: 20px;
     .nav-item {
       margin-bottom: 0px;

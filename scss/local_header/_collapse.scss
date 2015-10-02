@@ -1,12 +1,12 @@
 .local-header {
   @include media-breakpoint-down(sm) {
     .navbar-local {
-      @include theme_element(background-color, dark);
+      @include theme_element(background-color, page-background);
       li {
         float: none;
-        @include theme_element(background-color, dark, !important);
+        @include theme_element(background-color, page-background, !important);
         @include hover-focus {
-          @include theme_element(background-color, primary, !important);
+          @include theme_element(background-color, navbar, !important);
         }
       }
       .dropdown-menu {
@@ -16,7 +16,7 @@
         
     }
     .navbar-toggler {
-      @include theme_element(background-color, primary);
+      @include theme_element(background-color, navbar);
       border:none;
       padding: 0;
       a {
@@ -31,7 +31,7 @@
           text-decoration: none;
         }
         .mobile-menu-button {
-          @include theme_element(background-color, darker);
+          @include theme_element(background-color, dark-highlight);
           width: 53px;
           height: 53px;
           display: block;
@@ -47,11 +47,11 @@
   display: block;
   margin: 15px;
   padding: 1px 3px;
-  @include theme_element(background-color, darker);
+  @include theme_element(background-color, dark-highlight);
   color: #999;
   @include hover-focus {
     color: #999;
-    @include theme_element(background-color, darker);
+    @include theme_element(background-color, dark-highlight);
   }
   span {
     padding: 4px;

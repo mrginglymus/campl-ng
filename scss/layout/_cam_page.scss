@@ -7,7 +7,7 @@
   line-height: 38px;
   font-weight: 300;
   font-family: $font-family-sans-serif-extra;
-  @include theme_element(color, dark);
+  @include theme_element(color, page-background);
 }
 
 .sidebar .campage-heading { 

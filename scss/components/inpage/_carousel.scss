@@ -10,7 +10,7 @@
     bottom: 50px;
     left: calc(#{map-get($container-max-widths, xl)/2} - 50vw);;
     z-index:-1;
-    @include theme_element(background-color, dark);
+    @include theme_element(background-color, page-background);
   }
 }
   
@@ -29,7 +29,7 @@
 .carousel-control {
   // have to be this specific in order to override bootstrap defaults
   &.left, &.right {
-    @include theme_element(background-color, lighter);
+    @include theme_element(background-color, selected);
     height: 50px;
     width: 50px;
     top: auto;
@@ -39,7 +39,7 @@
 
     &:hover {
       opacity: 1;
-      @include theme_element(background-color, primary);
+      @include theme_element(background-color, navbar);
     }
   }
   
@@ -86,7 +86,7 @@
 }
 
 .carousel-text {
-  @include theme_element(background-color, lighter);
+  @include theme_element(background-color, selected);
   font-size: 40px;
   line-height: 48px;
   font-weight: 300;

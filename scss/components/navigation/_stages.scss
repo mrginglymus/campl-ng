@@ -41,19 +41,19 @@
     .nav-link {
       color: #fff !important;
       font-size: 13px !important;
-      @include theme_element(background-color, primary);
+      @include theme_element(background-color, navbar);
       
       &.active {
-        @include theme_element(background-color, lighter);
+        @include theme_element(background-color, selected);
         &:after {
-          @include theme_element(border-left-color, lighter);
+          @include theme_element(border-left-color, selected);
         }
       }
       
       &:not(.active):not(.disabled):hover {
-        @include theme_element(background-color, light, !important);
+        @include theme_element(background-color, light-highlight, !important);
         &:after {
-          @include theme_element(border-left-color, light);
+          @include theme_element(border-left-color, light-highlight);
         }
       }
       
@@ -62,7 +62,7 @@
         border-top-color: transparent;
         border-bottom-color: transparent;
         border-right-color: transparent;
-        @include theme_element(border-left-color, primary);
+        @include theme_element(border-left-color, navbar);
         border-style: solid;
         border-width: 17px 0 17px 17px;
         height:0;

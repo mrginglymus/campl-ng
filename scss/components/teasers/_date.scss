@@ -4,7 +4,7 @@
   .date-teaser-date {
     width: 55px;
     color: #fff;
-    @include theme-element('background-color', lighter);
+    @include theme-element('background-color', selected);
 
     font-family: $font-family-sans-serif-extra;
     text-align: center;

@@ -11,16 +11,16 @@
 
 .table-bordered {
   border-bottom: 2px solid;
-  @include theme_element(border-bottom-color, lighter);
+  @include theme_element(border-bottom-color, selected);
   thead th {
-    @include theme_element(background-color, lighter);
+    @include theme_element(background-color, selected);
     color: #fff;
   }
 }
 
 .table-striped {
   tbody tr:nth-of-type(odd) {
-    @include theme_element(background-color, paler);
+    @include theme_element(background-color, pale-table-bg);
   }
 }
 
