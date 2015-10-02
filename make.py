@@ -5,6 +5,7 @@ import shutil
 import urllib
 from subprocess import call
 import argparse
+import re
 
 from local_settings import (
   LOCAL_RELEASE_DIR,
@@ -32,15 +33,8 @@ REMOTE_JS = (
 
 JS = [os.path.basename(js) for js in REMOTE_JS + LOCAL_JS]
 
-COLOURS = [
-  'blue',
-  'turquoise',
-  'purple',
-  'green',
-  'orange',
-  'red',
-  'grey',
-]
+with open('scss/_themes.scss') as f:
+  COLOURS = re.findall('"(\w+)":', f.read())
 
 CSS_BUILD = os.path.join('build', 'css')
 IMG_BUILD = os.path.join('build', 'images')
