@@ -7872,6 +7872,11 @@ main > .row {
     .nav.nav-tabs .nav-item .nav-link {
       border: none; }
 
+.nav-pills-wrapper::after {
+  content: "";
+  display: table;
+  clear: both; }
+
 ul.pagination > li > a, ul.pagination > li > span {
   margin: 0 2px;
   line-height: 12px;
