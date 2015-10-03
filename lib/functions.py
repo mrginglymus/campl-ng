@@ -26,8 +26,8 @@ def random_image(context, width, height=None):
   lploc = "http://lorempixel.com/%s/%s" % (width, height)
   if context['CACHE_IMAGES']:
     id = str(uuid.uuid4())
-    urllib.urlretrieve(lploc, os.path.join('build', 'lp_img', id))
-    return os.path.join(context['ROOT_URL'], 'lp_img', id)
+    urllib.urlretrieve(lploc, os.path.join('build', 'images', id))
+    return os.path.join(context['ROOT_URL'], 'images', id)
   else:
     return lploc
   
