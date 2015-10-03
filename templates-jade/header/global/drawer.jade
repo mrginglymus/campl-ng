@@ -1,0 +1,22 @@
+mixin drawer(id, links)
+  div(id="global-header-drawer-#{id}", role="tabpanel", class="tab-pane")
+    div.container
+      div.row
+        div.col-md-11
+          ul.list-unstyled.global-header-drawer-title
+            li
+              a(href=links.link) #{links.title}
+        div.col-md-1.global-header-close.hidden-sm-down
+          a(href="#global-header-drawer-close" data-target="#global-header-drawer-close") Close
+      div.row
+        each column in links.links
+          div.col-md-4
+            ul.list-unstyled
+              each menu in column
+                li
+                  a(href=menu.link) #{menu.title}
+                  if menu.links
+                    ul.list-unstyled.hidden-sm-down
+                      each link, title in menu.links
+                        li
+                          a(href=link) #{title}

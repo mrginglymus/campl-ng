@@ -4,6 +4,13 @@ sass_options =
   require: './themes.rb',
   compass: true,
 
+remote_js = [
+  'https://code.jquery.com/jquery-1.11.3.min.js',
+  'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.js',
+  'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/locale/en-gb.js',
+  'https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.0.3/js.cookie.js',
+]
+
 module.exports = (grunt) ->
   
   grunt.loadNpmTasks 'grunt-contrib-sass'
@@ -12,9 +19,16 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-concat'
   grunt.loadNpmTasks 'grunt-contrib-uglify'
   grunt.loadNpmTasks 'grunt-contrib-copy'
+  grunt.loadNpmTasks 'grunt-contrib-jade'
+  grunt.loadNpmTasks 'grunt-contrib-watch'
+  grunt.loadNpmTasks 'grunt-env'
   
   grunt.initConfig
     pkg: grunt.file.readJSON('package.json')
+
+    env:
+      local:
+        src: 'local.json'
 
     clean: 
       dist: 'dist',
@@ -47,6 +61,8 @@ module.exports = (grunt) ->
     concat:
       core:
         src: [
+          'lib/bootstrap/dist/js/bootstrap.js',
+          'lib/datetimepicker/src/js/bootstrap-datetimepicker.js',
           'js/menu.js',
           'js/select_tab.js',
         ]
@@ -72,14 +88,14 @@ module.exports = (grunt) ->
         
     copy:
       images:
-        expand: true,
+        expand: true
         cwd: 'images'
         src: [
-          'logo.png',
+          'logo.png'
         ]
         dest: 'build/images'
       dist:
-        expand: true,
+        expand: true
         cwd: 'build'
         src: [
           'images/**',
@@ -87,10 +103,29 @@ module.exports = (grunt) ->
           'css/**',
         ]
         dest: 'dist'
-          
-          
+      deploy:
+        expand: true
+        cwd: 'build'
+        src: ['**']
+        dest: "/Users/bill/Sites/campl-ng"
+
+    jade:
+      options:
+        data:
+          ROOT: '/~bill/campl-ng'
+          REMOTE_JS: remote_js
+          LINKS: grunt.file.readJSON('links.json')
+      compile:
+        files:
+          'build/base.html': ['templates-jade/layouts/page.jade']  
+
+    watch:
+      jade:
+        files: 'templates-jade/**'
+        tasks: ['jade', 'copy:deploy']
       
-    
+ 
+
   grunt.registerTask 'default', ['clean', 'sass:core', 'concat:core']
   
   grunt.registerTask 'build-css', ['sass', 'cssmin']
@@ -102,4 +137,6 @@ module.exports = (grunt) ->
   grunt.registerTask 'build', ['clean', 'build-css', 'build-js', 'build-images']
   
   grunt.registerTask 'dist', ['build', 'copy:dist']
+
+  grunt.registerTask 'local', ['jade', 'copy:deploy']
   
