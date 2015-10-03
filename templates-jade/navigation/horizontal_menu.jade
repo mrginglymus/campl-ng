@@ -1,0 +1,11 @@
+nav.navbar.navbar-local.container.hidden-sm-down
+	div
+		ul.nav.navbar-nav.nav-local
+			li.nav-item
+				a.nav-link(href=ROOT) Home
+			li.nav-item.dropdown
+				a.nav-link.dropdown-toggle(href="#", data-toggle="dropdown") Theme Switcher
+				ul.dropdown-menu
+					each theme, colour in COLOURS
+						li
+							a.dropdown-item(href="#", data-toggle="theme", data-colour=colour) #{colour}

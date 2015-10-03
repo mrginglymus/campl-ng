@@ -4,7 +4,7 @@ sass_options =
   require: './lib/themes.rb',
   compass: true,
 
-remote_js = [
+REMOTE_JS = [
   'https://code.jquery.com/jquery-1.11.3.min.js',
   'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.js',
   'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/locale/en-gb.js',
@@ -63,8 +63,6 @@ module.exports = (grunt) ->
     concat:
       core:
         src: [
-          'lib/bootstrap/dist/js/bootstrap.js',
-          'lib/datetimepicker/src/js/bootstrap-datetimepicker.js',
           'js/menu.js',
           'js/select_tab.js',
         ]
@@ -114,9 +112,21 @@ module.exports = (grunt) ->
     jade:
       options:
         data:
-          ROOT: '/~bill/campl-ng'
-          REMOTE_JS: remote_js
-          LINKS: grunt.file.readJSON('links.json')
+          ROOT: '<%= local_settings.root_url %>'
+          REMOTE_JS: [
+            'https://code.jquery.com/jquery-1.11.3.min.js',
+            'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.js',
+            'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/locale/en-gb.js',
+            'https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.0.3/js.cookie.js',
+            'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js',
+            'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js'
+          ]
+          LOCAL_JS: [
+            'js/campl.js',
+            'js/theme_switcher.js',
+          ]
+          LINKS: grunt.file.readJSON('site_content/links.json')
+          COLOURS: grunt.file.readJSON('themes.json')
       compile:
         files:
           'build/base.html': ['templates-jade/layouts/page.jade']      
