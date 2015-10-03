@@ -17,10 +17,9 @@
   
     
     background-color: #fafafa;
-    margin-top: 0px;
+    margin: 0px !important;
     padding: 0px;
     
-  
     &:after {
       content: "";
       @include background-image(inline-image('vertical-breadcrumb-arrow.png'));

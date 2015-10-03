@@ -7688,7 +7688,7 @@ main > .row {
       margin-top: -50px; } }
   .tertiary-navigation .nav-pills .nav-item {
     background-color: #fafafa;
-    margin-top: 0px;
+    margin: 0px !important;
     padding: 0px; }
     .tertiary-navigation .nav-pills .nav-item:after {
       content: "";
