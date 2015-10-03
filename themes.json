@@ -39,8 +39,8 @@
     "dark-highlight":   "#772801",
     "page-background":  "#c44101",
     "navbar":           "#ab3901",
-    "selected":         "#df671d",
     "light-highlight":  "#d45812",
+    "selected":         "#df671d",
     "pale-tone":        "#f3bd48",
     "pale-table-bg":    "#f5e7ca"
   },
