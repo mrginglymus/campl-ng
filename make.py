@@ -5,7 +5,8 @@ import shutil
 import urllib
 from subprocess import call
 import argparse
-import re
+import json
+from ordereddict import OrderedDict
 
 from local_settings import (
   LOCAL_RELEASE_DIR,
@@ -33,8 +34,8 @@ REMOTE_JS = (
 
 JS = [os.path.basename(js) for js in REMOTE_JS + LOCAL_JS]
 
-with open('scss/_themes.scss') as f:
-  COLOURS = re.findall('"(\w+)":', f.read())
+with open('themes.json') as f:
+  COLOURS = json.loads(f.read(), object_pairs_hook=OrderedDict).keys()
 
 CSS_BUILD = os.path.join('build', 'css')
 IMG_BUILD = os.path.join('build', 'images')
@@ -58,13 +59,25 @@ def make_dist():
   if os.path.exists(os.path.join('build', 'css', 'campl_legacy.css')):
     shutil.copy(os.path.join('build', 'css', 'campl_legacy.css'), os.path.join('dist', 'css', 'campl_legacy.css'))
   
+def call_sass(fname):
+  call([
+    'sass',
+    '-r',
+    './themes.rb',
+    '--compass',
+    '--sourcemap=inline',
+    'scss/%s.scss'%fname,
+    'build/css/%s.css'%fname,
+  ])
+      
+  
 def make_css(legacy=False):
   if not os.path.exists(CSS_BUILD):
-    os.makedirs(CSS_BUILD)
-  call(['sass', '--compass', '--sourcemap=inline', 'scss/campl.scss', 'build/css/campl.css'])
+    os.makedirs(CSS_BUILD)  
+  call_sass('campl')
   if legacy:
-    call(['sass', '--compass', 'scss/campl_legacy.scss', 'build/css/campl_legacy.css'])
-   
+    call_sass('campl_legacy')
+       
 def make_img():
   if os.path.exists(IMG_BUILD):
     shutil.rmtree(IMG_BUILD)
