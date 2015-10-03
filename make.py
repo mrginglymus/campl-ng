@@ -7,22 +7,16 @@ from subprocess import call
 import argparse
 import json
 from ordereddict import OrderedDict
+from jinja2 import FileSystemLoader, Environment
+import codecs
 
-from local_settings import (
-  LOCAL_RELEASE_DIR,
-  LOCAL_ROOT_URL,
-  REMOTE_ROOT_URL,
-  REMOTE_RELEASE_DIR,
-)
+from site_content import links, structure
 
 SITE_NAME = 'CamPL-NG'
 
 LOCAL_JS = (
-  'lib/bootstrap/dist/js/bootstrap.js',
-  'lib/datetimepicker/src/js/bootstrap-datetimepicker.js',
-  'js/menu.js',
+  'js/campl.js',
   'js/theme_switcher.js',
-  'js/select_tab.js',
 )
 
 REMOTE_JS = (
@@ -30,6 +24,8 @@ REMOTE_JS = (
   'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.js',
   'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/locale/en-gb.js',
   'https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.0.3/js.cookie.js',
+  'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js'
+  'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js'
 )
 
 JS = [os.path.basename(js) for js in REMOTE_JS + LOCAL_JS]
@@ -37,147 +33,44 @@ JS = [os.path.basename(js) for js in REMOTE_JS + LOCAL_JS]
 with open('themes.json') as f:
   COLOURS = json.loads(f.read(), object_pairs_hook=OrderedDict)
 
-CSS_BUILD = os.path.join('build', 'css')
-IMG_BUILD = os.path.join('build', 'images')
-JS_BUILD = os.path.join('build', 'js')
-LP_IMG_BUILD = os.path.join('build', 'lp_img')
-
-
-def clean_build():
-  if os.path.exists('build'):
-    shutil.rmtree('build')
-  os.mkdir('build')
-
-def make_dist():
-  if os.path.exists('dist'):
-    shutil.rmtree('dist')
-  os.mkdir('dist')
-  make_css(True)
-  if not os.path.exists(os.path.join('dist', 'css')):
-    os.mkdir(os.path.join('dist', 'css'))
-  shutil.copy(os.path.join('build', 'css', 'campl.css'), os.path.join('dist', 'css', 'campl.css'))
-  if os.path.exists(os.path.join('build', 'css', 'campl_legacy.css')):
-    shutil.copy(os.path.join('build', 'css', 'campl_legacy.css'), os.path.join('dist', 'css', 'campl_legacy.css'))
+with open('local_settings.json') as f:
+  local_settings = json.loads(f.read())
   
-def call_sass(fname):
-  call([
-    'sass',
-    '-r',
-    './themes.rb',
-    '--compass',
-    '--sourcemap=inline',
-    'scss/%s.scss'%fname,
-    'build/css/%s.css'%fname,
-  ])
-      
-  
-def make_css(legacy=False):
-  if not os.path.exists(CSS_BUILD):
-    os.makedirs(CSS_BUILD)  
-  call_sass('campl')
-  if legacy:
-    call_sass('campl_legacy')
-       
-def make_img():
-  if os.path.exists(IMG_BUILD):
-    shutil.rmtree(IMG_BUILD)
-  shutil.copytree('images', IMG_BUILD)
-
-
-def make_js():
-  if os.path.exists(JS_BUILD):
-    shutil.rmtree(JS_BUILD)
-  os.mkdir(JS_BUILD)
-  for js in LOCAL_JS:
-    shutil.copy(js, os.path.join(JS_BUILD, os.path.basename(js)))
-  for js in REMOTE_JS:
-    urllib.urlretrieve(js, os.path.join(JS_BUILD, os.path.basename(js)))
-
-  
-def make_html(ROOT_URL=LOCAL_ROOT_URL):
-
-  from jinja2 import FileSystemLoader, Environment
-  from site_structure import pages, front_page
-  import codecs
+def make_html():
     
-
-  if os.path.exists(LP_IMG_BUILD):
-    shutil.rmtree(LP_IMG_BUILD)
-  os.mkdir(LP_IMG_BUILD)
 
   env = Environment(loader=FileSystemLoader('templates'))
   
-  import functions
-  
+  from lib import functions
+
   # add functions
   for fname in functions.__all__:
     env.globals.update(**{fname:functions.__dict__[fname]})
-  
-  import links
-  
+    
   # add links
   for lname in links.__all__:
     env.globals.update(**{lname:links.__dict__[lname]})
   
   env.globals.update(**{
-    'ROOT_URL': ROOT_URL ,
+    'ROOT_URL': local_settings['root_url'] ,
     'SITE_NAME': SITE_NAME,
-    'JS': JS,
-    'MENU': pages,
+    'LOCAL_JS': LOCAL_JS,
+    'REMOTE_JS': REMOTE_JS,
+    'MENU': structure.pages,
     'COLOURS': COLOURS,
-    'CACHE_IMAGES': args.cacheimages or args.r,
+    'CACHE_IMAGES': args.cacheimages,
   })
   
 
-  for page in pages:
+  for page in structure.pages:
     page.render(env)
   
-  front_page.render(env)
+  structure.front_page.render(env)
     
 
-def deploy():
-  if args.r:
-    if 'html' not in args.mode:
-      make_html(REMOTE_ROOT_URL)
-    call(['rsync', '-r', 'build/', REMOTE_RELEASE_DIR])
-    make_html(LOCAL_ROOT_URL)
-  if os.path.exists(LOCAL_RELEASE_DIR):
-    shutil.rmtree(LOCAL_RELEASE_DIR)
-  shutil.copytree('build', LOCAL_RELEASE_DIR)
-  
-
 parser = argparse.ArgumentParser(description='Make campl-ng')
-
-parser.add_argument('-l', action='store_true')
-parser.add_argument('-r', action='store_true')
 parser.add_argument('--cache-images', dest='cacheimages', action='store_true')
-parser.add_argument('mode', nargs='*', default=[])
 
 args = parser.parse_args()
 
-if 'all' in args.mode:
-  clean_build()
-  make_js()
-  make_css(legacy=args.l)
-  make_img()
-  make_html()
-  
-if 'html' in args.mode:
-  if args.r:
-    make_html(REMOTE_ROOT_URL)
-  else:
-    make_html(LOCAL_ROOT_URL)
-
-if 'css' in args.mode:
-  make_css(legacy=args.l)
-  
-if 'js' in args.mode:
-  make_js()
-
-if 'img' in args.mode:
-  make_img()  
-
-deploy()
-
-if 'dist' in args.mode:
-  make_dist()
+make_html()

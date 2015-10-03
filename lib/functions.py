@@ -2,8 +2,6 @@ import urllib
 
 from jinja2 import contextfunction
 
-from local_settings import LOCAL_RELEASE_DIR
-
 import uuid
 import re
 import os

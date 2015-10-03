@@ -1,7 +1,7 @@
 sass_options = 
   sourcemap: 'inline',
   trace: true,
-  require: './themes.rb',
+  require: './lib/themes.rb',
   compass: true,
 
 module.exports = (grunt) ->
@@ -14,9 +14,12 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-copy'
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-env'
+
+  
   
   grunt.initConfig
     pkg: grunt.file.readJSON('package.json')
+    local_settings: grunt.file.readJSON('local_settings.json')
 
     env:
       local:
@@ -98,15 +101,12 @@ module.exports = (grunt) ->
         expand: true,
         cwd: 'build'
         src: ['**']
-        dest: '<%= ROOT_DIR %>'
+        dest: '<%= local_settings.release_dir %>'
           
     watch:
       css:
         files: 'scss/**'
         tasks: ['sass:core', 'copy:dist']
-
-  grunt.registerTask 'loadconst', 'Load constants', ->
-    grunt.config('ROOT_DIR', process.env.ROOT_DIR)
     
   grunt.registerTask 'default', ['clean:build', 'sass:core', 'concat:core']
   
@@ -116,9 +116,8 @@ module.exports = (grunt) ->
   
   grunt.registerTask 'build-images', ['copy:images']
   
-  grunt.registerTask 'build', ['clean:build', 'build-css', 'build-js', 'build-images']
+  grunt.registerTask 'build', ['clean:build', 'build-css', 'build-js', 'build-images', 'copy:deploy']
   
   grunt.registerTask 'dist', ['clean:dist', 'build', 'copy:dist']
 
-  grunt.registerTask 'deploy', ['env:local', 'loadconst', 'copy:deploy']
-  
+  grunt.registerTask 'deploy', ['copy:deploy']  

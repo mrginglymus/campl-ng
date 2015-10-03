@@ -1,6 +1,6 @@
 .sass-cache
 .ruby-version
-local_settings.py
+local_settings.json
 *.pyc
 gh-pages/
 build
