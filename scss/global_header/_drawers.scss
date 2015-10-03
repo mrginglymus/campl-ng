@@ -73,7 +73,7 @@
     }
   }
   
-  .list-unstyled:not(.hidden-md-down) > li {
+  .list-unstyled:not(.hidden-sm-down) > li {
     padding: 15px 0px;
     &:not(:last-child) {
       border-bottom:$border-width solid #323232;

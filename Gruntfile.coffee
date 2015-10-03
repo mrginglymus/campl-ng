@@ -1,7 +1,7 @@
 sass_options = 
   sourcemap: 'inline',
   trace: true,
-  require: './themes.rb',
+  require: './lib/themes.rb',
   compass: true,
 
 remote_js = [
@@ -21,14 +21,16 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-copy'
   grunt.loadNpmTasks 'grunt-contrib-jade'
   grunt.loadNpmTasks 'grunt-contrib-watch'
-  grunt.loadNpmTasks 'grunt-env'
+
   
   grunt.initConfig
     pkg: grunt.file.readJSON('package.json')
+    local_settings: grunt.file.readJSON('local_settings.json')
 
     env:
       local:
-        src: 'local.json'
+        ROOT_DIR: '/Users/bill/Sites/campl-ng'
+        ROOT_URL: '/~bill/campl-ng'
 
     clean: 
       dist: 'dist',
@@ -107,7 +109,7 @@ module.exports = (grunt) ->
         expand: true
         cwd: 'build'
         src: ['**']
-        dest: "/Users/bill/Sites/campl-ng"
+        dest: '<%= local_settings.release_dir %>'
 
     jade:
       options:
@@ -117,16 +119,17 @@ module.exports = (grunt) ->
           LINKS: grunt.file.readJSON('links.json')
       compile:
         files:
-          'build/base.html': ['templates-jade/layouts/page.jade']  
-
+          'build/base.html': ['templates-jade/layouts/page.jade']      
+          
     watch:
-      jade:
+      html:
         files: 'templates-jade/**'
         tasks: ['jade', 'copy:deploy']
-      
- 
-
-  grunt.registerTask 'default', ['clean', 'sass:core', 'concat:core']
+      css:
+        files: 'scss/**'
+        tasks: ['sass:core', 'copy:dist']
+    
+  grunt.registerTask 'default', ['clean:build', 'sass:core', 'concat:core']
   
   grunt.registerTask 'build-css', ['sass', 'cssmin']
   
@@ -134,9 +137,8 @@ module.exports = (grunt) ->
   
   grunt.registerTask 'build-images', ['copy:images']
   
-  grunt.registerTask 'build', ['clean', 'build-css', 'build-js', 'build-images']
+  grunt.registerTask 'build', ['clean:build', 'build-css', 'build-js', 'build-images', 'copy:deploy']
   
-  grunt.registerTask 'dist', ['build', 'copy:dist']
+  grunt.registerTask 'dist', ['clean:dist', 'build', 'copy:dist']
 
-  grunt.registerTask 'local', ['jade', 'copy:deploy']
-  
+  grunt.registerTask 'deploy', ['copy:deploy']  

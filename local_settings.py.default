@@ -1,5 +1,0 @@
-LOCAL_RELEASE_DIR = # e.g. '/var/wwww/html/campl-ng'
-LOCAL_ROOT_URL = # e.g. '/campl-ng'
-
-REMOTE_RELEASE_DIR = # e.g. 'abc123@linux.ds.cam.ac.uk:public_html/campl-ng'
-REMOTE_ROOT_URL = # e.g. '/abc123/campl-ng'
