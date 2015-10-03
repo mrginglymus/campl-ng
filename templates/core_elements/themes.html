@@ -1,0 +1,55 @@
+{% extends 'layouts/page.html' %}  
+  
+{% block content %}
+  <p>There are {{ COLOURS|count }} themes available.</p>
+  
+  <div class="nav-pills-wrapper">
+    <ul class="nav nav-pills" role="tablist" id="theme_swatches">
+      {% for name in COLOURS.keys() %}
+      <li class="nav-item">
+        <a 
+          class="nav-link"
+          role="tab"
+          data-toggle="pill"
+          href="#{{ name }}"
+          data-colour="{{ name }}"
+        >{{ name|title() }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="tab-content">
+  {% for name, theme in COLOURS.items() %}
+    <div role="tabpanel" class="tab-pane" id="{{ name }}">
+      <table class="table m-b">
+        <tbody>
+          {% for variant, colour in theme.items() %}
+          <tr>
+            <th style="width: 25%;">
+              {{ variant }}
+            </th>
+            <td style="width: 25%;">
+              {{ colour }}
+            </td>
+            <td style="width: 50%; background-color:{{ colour }}"></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  {% endfor %}
+  </div>
+  
+  <script type="text/javascript">
+    $(document).ready(function() {
+      theme = Cookies.get('theme');
+      if (typeof theme === 'undefined'){
+        theme = 'turquoise';
+      }
+      $('#theme_swatches a[href="#' + theme + '"]').tab('show');
+      $('#theme_swatches a[data-toggle="pill"]').on('show.bs.tab', function() {
+        set_theme($(this).data('colour'));
+      });
+    });
+  </script>
+{% endblock %}

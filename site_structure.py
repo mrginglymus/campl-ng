@@ -61,6 +61,7 @@ pages = Pages([
     Page('Links and Buttons', 'core_elements/links_and_buttons.html', scss=['core_elements/_buttons.scss']),
     Page('Forms', 'core_elements/forms.html'),
     Page('Lists', 'core_elements/lists.html'),
+    Page('Themes', 'core_elements/themes.html'),
   ]),
   Page('In Page Components', children=[
     Page('Navigation', children=[

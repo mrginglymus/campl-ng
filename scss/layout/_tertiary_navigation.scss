@@ -32,8 +32,6 @@
       float: left;
     }
     
-
-    
     @include hover-focus {
       background-color: #efefef;
       &:after {

@@ -35,7 +35,7 @@ REMOTE_JS = (
 JS = [os.path.basename(js) for js in REMOTE_JS + LOCAL_JS]
 
 with open('themes.json') as f:
-  COLOURS = json.loads(f.read(), object_pairs_hook=OrderedDict).keys()
+  COLOURS = json.loads(f.read(), object_pairs_hook=OrderedDict)
 
 CSS_BUILD = os.path.join('build', 'css')
 IMG_BUILD = os.path.join('build', 'images')
