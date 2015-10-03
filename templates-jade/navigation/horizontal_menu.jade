@@ -1,11 +1,26 @@
 nav.navbar.navbar-local.container.hidden-sm-down
-	div
-		ul.nav.navbar-nav.nav-local
-			li.nav-item
-				a.nav-link(href=ROOT) Home
-			li.nav-item.dropdown
-				a.nav-link.dropdown-toggle(href="#", data-toggle="dropdown") Theme Switcher
-				ul.dropdown-menu
-					each theme, colour in COLOURS
-						li
-							a.dropdown-item(href="#", data-toggle="theme", data-colour=colour) #{colour}
+  div
+    ul.nav.navbar-nav.nav-local
+      li.nav-item
+        a.nav-link(href=ROOT) Home
+      each _page in PAGES
+        if _page.children.length == 0
+          li.nav-item
+            a.nav-link(href=ROOT_URL + _page.url) #{_page.title}
+        else
+          li.nav-item.dropdown
+            a.nav-link.dropdown-toggle(href=ROOT_URL + _page.url, data-toggle="dropdown") #{_page.title}
+            ul.dropdown-menu
+              if _page.source
+                li
+                  a.dropdown-item(href=ROOT_URL + _page.url) #{_page.title} - Overview
+              each __page in _page.children
+                li
+                  a.dropdown-item(href=ROOT_URL + __page.url) #{__page.title}
+
+      li.nav-item.dropdown
+        a.nav-link.dropdown-toggle(href="#", data-toggle="dropdown") Theme Switcher
+        ul.dropdown-menu
+          each theme, colour in COLOURS
+            li
+              a.dropdown-item(href="#", data-toggle="theme", data-colour=colour) #{colour}

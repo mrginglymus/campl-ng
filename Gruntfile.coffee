@@ -22,6 +22,8 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-jade'
   grunt.loadNpmTasks 'grunt-contrib-watch'
 
+  site_structure = require('./site_content/structure.coffee')
+
   
   grunt.initConfig
     pkg: grunt.file.readJSON('package.json')
@@ -127,6 +129,7 @@ module.exports = (grunt) ->
           ]
           LINKS: grunt.file.readJSON('site_content/links.json')
           COLOURS: grunt.file.readJSON('themes.json')
+          PAGES: require('./site_content/structure.coffee')
       compile:
         files:
           'build/base.html': ['templates-jade/layouts/page.jade']      
