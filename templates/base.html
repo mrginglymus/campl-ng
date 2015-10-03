@@ -17,7 +17,7 @@
     <script type="text/javascript" src={{ js }}></script>
     {% endfor %}
     {% for js in LOCAL_JS %}
-    <script type="text/javascript" src="{{ ROOT_URL }}{{ js }}"></script>
+    <script type="text/javascript" src="{{ ROOT_URL }}/{{ js }}"></script>
     {% endfor %}
     <script type="text/javascript" src="//use.typekit.com/hyb5bko.js"></script>
     <script type="text/javascript">
@@ -26,7 +26,7 @@
       } catch (e) {
       }
     </script>
-    {% include 'meta/hljs.html' %}
+    {% include './meta/hljs.html' %}
   </head>
   <body class="offcanvas offcanvas-left theme-turquoise">
   {% block body %}

@@ -34,7 +34,7 @@
           Theme Switcher
         </a>
         <ul class="dropdown-menu">
-          {% for colour in COLOURS.keys() %}
+          {% for colour, theme in COLOURS %}
             <li>
               <a href="#" class="dropdown-item" data-toggle="theme" data-colour="{{ colour }}">{{ colour|title }}</a>
             </li>

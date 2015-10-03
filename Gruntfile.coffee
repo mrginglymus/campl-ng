@@ -13,6 +13,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-uglify'
   grunt.loadNpmTasks 'grunt-contrib-copy'
   grunt.loadNpmTasks 'grunt-contrib-watch'
+  grunt.loadNpmTasks 'grunt-nunjucks-2-html'
   grunt.loadNpmTasks 'grunt-env'
 
   
@@ -30,6 +31,32 @@ module.exports = (grunt) ->
       dist: 'dist',
       build: 'build',
       
+    nunjucks:
+      options:
+        data:
+          LINKS: grunt.file.readJSON('site_content/links.json')
+          COLOURS: grunt.file.readJSON('themes.json')
+          LOCAL_JS: [
+            'js/campl.js',
+            'js/theme_switcher.js',
+          ]
+          ROOT_URL: '<%= local_settings.root_url %>'
+          REMOTE_JS: [
+            'https://code.jquery.com/jquery-1.11.3.min.js',
+            'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.js',
+            'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/locale/en-gb.js',
+            'https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.0.3/js.cookie.js',
+            'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js',
+            'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js'
+          ]
+      render:
+        files: [
+          expand: true
+          cwd: 'templates/'
+          src: 'layouts/page.html'
+          dest: 'build/'
+          ext: '.html'
+        ]
     sass:
       core:
         options:
