@@ -12,9 +12,16 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-concat'
   grunt.loadNpmTasks 'grunt-contrib-uglify'
   grunt.loadNpmTasks 'grunt-contrib-copy'
+  grunt.loadNpmTasks 'grunt-contrib-watch'
+  grunt.loadNpmTasks 'grunt-env'
   
   grunt.initConfig
     pkg: grunt.file.readJSON('package.json')
+
+    env:
+      local:
+        ROOT_DIR: '/Users/bill/Sites/campl-ng'
+        ROOT_URL: '/~bill/campl-ng'
 
     clean: 
       dist: 'dist',
@@ -87,11 +94,21 @@ module.exports = (grunt) ->
           'css/**',
         ]
         dest: 'dist'
+      deploy:
+        expand: true,
+        cwd: 'build'
+        src: ['**']
+        dest: '<%= ROOT_DIR %>'
           
-          
-      
+    watch:
+      css:
+        files: 'scss/**'
+        tasks: ['sass:core', 'copy:dist']
+
+  grunt.registerTask 'loadconst', 'Load constants', ->
+    grunt.config('ROOT_DIR', process.env.ROOT_DIR)
     
-  grunt.registerTask 'default', ['clean', 'sass:core', 'concat:core']
+  grunt.registerTask 'default', ['clean:build', 'sass:core', 'concat:core']
   
   grunt.registerTask 'build-css', ['sass', 'cssmin']
   
@@ -99,7 +116,9 @@ module.exports = (grunt) ->
   
   grunt.registerTask 'build-images', ['copy:images']
   
-  grunt.registerTask 'build', ['clean', 'build-css', 'build-js', 'build-images']
+  grunt.registerTask 'build', ['clean:build', 'build-css', 'build-js', 'build-images']
   
-  grunt.registerTask 'dist', ['build', 'copy:dist']
+  grunt.registerTask 'dist', ['clean:dist', 'build', 'copy:dist']
+
+  grunt.registerTask 'deploy', ['env:local', 'loadconst', 'copy:deploy']
   

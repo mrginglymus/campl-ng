@@ -7542,9 +7542,9 @@ blockquote {
       padding-top: 15px; }
       .global-header-drawer .list-unstyled .list-unstyled li {
         padding: 10px 0px; }
-  .global-header-drawer .list-unstyled:not(.hidden-md-down) > li {
+  .global-header-drawer .list-unstyled:not(.hidden-sm-down) > li {
     padding: 15px 0px; }
-    .global-header-drawer .list-unstyled:not(.hidden-md-down) > li:not(:last-child) {
+    .global-header-drawer .list-unstyled:not(.hidden-sm-down) > li:not(:last-child) {
       border-bottom: 1px solid #323232; }
 
 .global-search {
