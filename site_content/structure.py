@@ -51,8 +51,8 @@ template_pages = list(shuffle_dirs(templates, TemplatePage))
 pages = Pages([
   Page('About', 'pages/about.html'),
   Page('Page Layouts', children=[
-    Page('App', 'layouts/app.html', side_menu=False),
-    Page('Cambridge Front Page', 'layouts/campage.html', globals={'CAM_PAGE': True}),
+    Page('App', 'layout/app.html', side_menu=False),
+    Page('Cambridge Front Page', 'layout/campage.html', globals={'CAM_PAGE': True}),
   ]),
   Page('Core Elements', children=[
     Page('Typography', 'pages/core_elements/typography.html', scss=['core_elements/_typography.scss', 'core_elements/_blockquote.scss']),

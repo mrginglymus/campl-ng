@@ -1,16 +1,14 @@
-@import 'components/navigation/nav';
-@import 'components/navigation/pagination';
-@import 'components/navigation/search';
-@import 'components/navigation/stages';
-@import 'components/navigation/atoz';
+/* generated with grunt-sass-globbing */
 
-@import 'components/inpage/carousel';
-@import 'components/inpage/tables';
-@import 'components/inpage/alerts';
-@import 'components/inpage/related_links';
-
-@import 'components/teasers/promo_teaser';
-@import 'components/teasers/news_teaser';
-@import 'components/teasers/teasers';
-@import 'components/teasers/focus_on_teaser';
-@import 'components/teasers/date';
+@import "components/alerts";
+@import "components/carousel";
+@import "components/navigation/atoz";
+@import "components/navigation/nav";
+@import "components/navigation/pagination";
+@import "components/navigation/search";
+@import "components/navigation/stages";
+@import "components/teasers/date";
+@import "components/teasers/focus_on_teaser";
+@import "components/teasers/news_teaser";
+@import "components/teasers/promo_teaser";
+@import "components/teasers/teasers";

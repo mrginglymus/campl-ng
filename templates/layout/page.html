@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 
-{% from 'layouts/sidebar/related_links.html' import related_links %}
-{% from 'layouts/sidebar/sidebar.html' import sidebar_heading %}
+{% from 'layout/sidebar/related_links.html' import related_links %}
+{% from 'layout/sidebar/sidebar.html' import sidebar_heading %}
 
 {% block body %}
   <header>
-    {% include 'layouts/header/global/header.html' %}
-    {% include 'layouts/header/local/header.html' %}
+    {% include 'layout/header/global/header.html' %}
+    {% include 'layout/header/local/header.html' %}
     {% block subtitle %}
       <div class="local-header subtitle">
         <div class="container">
@@ -61,7 +61,7 @@
     </div>
   </main>
   <footer>
-  {% include 'layouts/footer/local/footer.html' %}
-  {% include 'layouts/footer/global/footer.html' %}
+  {% include 'layout/footer/local/footer.html' %}
+  {% include 'layout/footer/global/footer.html' %}
   </footer>
 {% endblock %}
