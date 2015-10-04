@@ -34,6 +34,11 @@ module.exports = (grunt) ->
           sass_options
         files:
           'build/css/campl_legacy.css': 'scss/campl_legacy.scss'
+      meta:
+        options:
+          sass_options
+        files:
+          'build/css/meta.css': 'scss/meta.scss'
     
     cssmin:
       options:
@@ -92,6 +97,7 @@ module.exports = (grunt) ->
           'images/**',
           'js/**',
           'css/**',
+          '!css/meta**'
         ]
         dest: 'dist'
       deploy:
@@ -103,7 +109,7 @@ module.exports = (grunt) ->
     watch:
       css:
         files: 'scss/**'
-        tasks: ['sass:core', 'copy:deploy']
+        tasks: ['sass:core', 'sass:meta', 'copy:deploy']
       html:
         files: 'templates/**'
         tasks: ['exec:html', 'copy:deploy']

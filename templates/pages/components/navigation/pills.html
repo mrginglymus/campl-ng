@@ -1,21 +1,17 @@
 {% extends 'layouts/page.html' %}
 
-{% from 'components/navigation/nav.html' import nav %}
+{% from 'components/navigation/nav.html' import nav_pills %}
 {% from 'components/navigation/tabs.html' import tabs %}
 
 {% block content %}
 
 <div class="clearfix">
-  {{ nav(EXAMPLES.NAV_ITEMS, 'pill', local=true) }}
+  {{ nav_pills(EXAMPLES.NAV_ITEMS, local=true) }}
 </div>
 <div class="p-t">
   {{ tabs(EXAMPLES.NAV_ITEMS) }}
 </div>
 
-<h2>Nav Macro</h2>
-<pre>
-{{ print_macro(nav) }}
-</pre>
 
 <h2>Usage</h2>
 <pre><code class="django">{% raw %}{{ nav(EXAMPLES.NAV_ITEMS, 'pill', local=true) }}{% endraw %}</code></pre>

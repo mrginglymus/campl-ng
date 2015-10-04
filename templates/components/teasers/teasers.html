@@ -1,3 +1,5 @@
+{% from 'components/teasers/common.html' import teaser_body, teaser_image %}
+
 {% macro promo_teaser(title, href, body, img) %}
 <div class="promo-teaser">
   <div class="promo-teaser-heading">
@@ -13,29 +15,6 @@
     <a href="{{ href }}" class="secondary-cta pull-right">Read more</a>
   </div>
 </div>
-{% endmacro %}
-
-{% macro teaser_image(title, href, img, type) %}
-<a href="{{ href }}">
-  {% if type %}
-    <span class="teaser-image-{{ type }}"></span>
-  {% endif %}
-    <img src="{{ img }}" alt="{{ title }}">
-</a>  
-{% endmacro %}
-
-{% macro teaser_body(title, href, body, type) %}
-<h3 class="teaser-title">
-  <a href="{{ href }}">
-    {{ title }}
-  </a>
-</h3>
-<p>{{ body }}</p>
-{% if type %}
-<a class="secondary-cta" href="{{ href }}">Read more</a>
-{% else %}
-<a class="btn btn-primary btn-cta" href="{{ href }}">Read more</a>
-{% endif %}
 {% endmacro %}
 
 {% macro horizontal_teaser(title, href, body, img=None, type=None) %}

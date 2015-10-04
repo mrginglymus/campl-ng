@@ -1,55 +1,23 @@
 {% extends 'layouts/page.html' %}
 
-{% macro top_alert(type, title, icon, message, dismissable=false) %}
-<div class="alert alert-top alert-{{ type }}{% if dismissable %} alert-dismissable{% endif %}" role="alert">
-  {% if dismissable %}
-  <div class="close pull-right" data-dismiss="alert">&times;</div>
-  {% endif %}
-  <div class="row">
-    <div class="col-md-4">
-      <span class="fa fa-{{ icon }}"></span>
-      <span>{{ title }}:</span>
-    </div>
-    <div class="col-md-8">
-      {{ message }}
-    </div>
-  </div>
-</div>
-{% endmacro %}
-
-{% macro alert(type, title, message, icon=None, dismissable=false) %}
-<div class="alert alert-{{ type }}{% if dismissable %} alert-dismissable{% endif %}" role="alert">
-  {% if dismissable %}
-  <div class="close pull-right" data-dismiss="alert">&times;</div>
-  {% endif %}
-  <div class="row">
-    <div class="col-md-4">
-      <span class="fa fa-{{ icon }}"></span>
-      <span>{{ title }}:</span>
-    </div>
-    <div class="col-md-8">
-      {{ message }}
-    </div>
-  </div>
-</div>
-{% endmacro %}
+{% from 'components/content/alerts.html' import alert_info, alert_success, alert_warning, alert_danger, alert %}
 
 {% block unwrapped_content %}
 <div class="tab-content">
   <div role="tabpanel" class="tab-pane active" id="top_success">
-    {{ top_alert('success', 'Success', 'check-circle', random_sentence(5, 10)) }}
+    {{ alert_success('Success', random_sentence(5, 10), top=true) }}
   </div>
   <div role="tabpanel" class="tab-pane" id="top_danger">
-    {{ top_alert('danger', 'Warning', 'exclamation-triangle', random_sentence(5, 10)) }}
+    {{ alert_danger('Warning', random_sentence(10, 20), top=true) }}
   </div>
   <div role="tabpanel" class="tab-pane" id="top_warning">
-    {{ top_alert('warning', 'Alert', 'exclamation-circle', random_sentence(5, 10)) }}
+    {{ alert_warning('Alert', random_sentence(10, 20), top=true) }}
   </div>
   <div role="tabpanel" class="tab-pane" id="top_info">
-    {{ top_alert('info', 'Information', 'info-circle', random_sentence(5, 10)) }}
+    {{ alert_info('Information', random_sentence(10, 20), top=true) }}
   </div>
   <div role="tabpanel" class="tab-pane" id="top_dismissable">
-    {{ top_alert('success', 'Success', 'check-circle', random_sentence(5, 10), dismissable=true) }}
+    {{ alert_success('Success', random_sentence(10, 20), top=true, dismissable=true) }}
   </div>
 </div>
 {% endblock %}
@@ -97,28 +65,23 @@
 
 <div class="tab-content">
   <div role="tabpanel" class="tab-pane active" id="success">
-    {{ alert('success', 'Success',  random_sentence(10, 20), 'check-circle') }}
+    {{ alert_success('Success', random_sentence(5, 10)) }}
   </div>
   <div role="tabpanel" class="tab-pane" id="danger">
-    {{ alert('danger', 'Warning', random_sentence(10, 20), 'exclamation-triangle') }}
+    {{ alert_danger('Warning', random_sentence(10, 20)) }}
   </div>
   <div role="tabpanel" class="tab-pane" id="warning">
-    {{ alert('warning', 'Alert', random_sentence(10, 20), 'exclamation-circle') }}
+    {{ alert_warning('Alert', random_sentence(10, 20)) }}
   </div>
   <div role="tabpanel" class="tab-pane" id="info">
-    {{ alert('info', 'Information', random_sentence(10, 20), 'info-circle') }}
+    {{ alert_info('Information', random_sentence(10, 20)) }}
   </div>
   <div role="tabpanel" class="tab-pane" id="dismissable">
-    {{ alert('success', 'Success', random_sentence(10, 20), 'check-circle', dismissable=true) }}
+    {{ alert_success('Success', random_sentence(10, 20), dismissable=true) }}
   </div>
 </div>
 
-
 <h2>Source</h2>
-<h3>Alert</h3>
 {{ print_macro(alert) }}
-
-<h3>Top Alert</h3>
-{{ print_macro(top_alert) }}
 
 {% endblock %}

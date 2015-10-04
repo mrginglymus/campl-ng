@@ -1,0 +1,13 @@
+{% extends 'layouts/page.html' %}
+
+{% from 'components/navigation/nav.html' import nav_tabs, %}
+{% from 'components/navigation/tabs.html' import tabs %}
+
+{% block content %}
+{{ nav_tabs(EXAMPLES.NAV_ITEMS, local=true) }}
+<div class="p-t">
+  {{ tabs(EXAMPLES.NAV_ITEMS) }}
+</div>
+
+
+{% endblock %}

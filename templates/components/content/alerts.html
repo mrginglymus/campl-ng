@@ -1,0 +1,32 @@
+{% macro alert(title, message, type, icon, top=false, dismissable=false) %}
+<div class="alert alert-{{ type }}{% if top %} alert-top{% endif %}{% if dismissable %} alert-dismissable{% endif %}" role="alert">
+  {% if dismissable %}
+  <div class="close pull-right" data-dismiss="alert">&times;</div>
+  {% endif %}
+  <div class="row">
+    <div class="col-md-4">
+      <span class="fa fa-{{ icon }}"></span>
+      <span>{{ title }}:</span>
+    </div>
+    <div class="col-md-8">
+      {{ message }}
+    </div>
+  </div>
+</div>
+{% endmacro %}
+
+{% macro alert_success(title, message, top=false, dismissable=false) %}
+  {{ alert(title, message, 'success', 'check-circle', top, dismissable) }}
+{% endmacro %}
+
+{% macro alert_warning(title, message, top=false, dismissable=false) %}
+  {{ alert(title, message, 'warning', 'exclamation-triangle', top, dismissable) }}
+{% endmacro %}
+
+{% macro alert_danger(title, message, top=false, dismissable=false) %}
+  {{ alert(title, message, 'danger', 'exclamation-circle', top, dismissable) }}
+{% endmacro %}
+
+{% macro alert_info(title, message, top=false, dismissable=false) %}
+  {{ alert(title, message, 'info', 'info-circle', top, dismissable) }}
+{% endmacro %}

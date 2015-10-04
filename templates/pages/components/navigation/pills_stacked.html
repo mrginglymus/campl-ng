@@ -1,21 +1,18 @@
 {% extends 'layouts/page.html' %}
 
-{% from 'components/navigation/nav.html' import nav %}
+{% from 'components/navigation/nav.html' import nav_pills_stacked %}
 {% from 'components/navigation/tabs.html' import tabs %}
 
 {% block content %}
 
 <div class="row">
   <div class="col-md-4">
-    {{ nav(EXAMPLES.NAV_ITEMS, 'pill', stacked=true, local=true) }}
+    {{ nav_pills_stacked(EXAMPLES.NAV_ITEMS, local=true) }}
   </div>
   <div class="col-md-8 p-l">
     {{ tabs(EXAMPLES.NAV_ITEMS) }}
   </div>
 </div>
-
-<h2>Nav Macro</h2>
-{{ print_macro(nav) }}
 
 <h2>Usage</h2>
 <pre><code class="django">{% raw %}{{ nav(EXAMPLES.NAV_ITEMS, 'pill', stacked=true, local=true) }}{% endraw %}</code></pre>

@@ -1,6 +1,6 @@
-{% macro nav(items, type, stacked=false, local=false, extra_classes='') %}
-<div class="nav-{{ type}}s-wrapper">
-  <ul class="nav nav-{{ type }}s{% if stacked %} nav-stacked{% endif %} {{ extra_classes }}" role="tablist">
+{% macro _nav(items, type, data_toggle="tab", stacked=false, local=false, extra_classes='') %}
+<div class="nav-{{ type }}-wrapper">
+  <ul class="nav nav-{{ type }}{% if stacked %} nav-stacked{% endif %} {{ extra_classes }}" role="tablist">
     {% for item in items %}
     <li class="nav-item">
       <a 
@@ -8,7 +8,7 @@
         role="tab"
         {% if not item.disabled %}
           {% if local %}
-            data-toggle="pill"
+            data-toggle="{{ data_toggle }}"
             href="#{{ item.id }}"
           {% else %}
             href="{{ item.link }}"
@@ -19,4 +19,21 @@
     {% endfor %}
   </ul>
 </div>
+{% endmacro %}
+
+
+{% macro nav_tabs(items, local=false) %}
+  {{ _nav(items, 'tabs', local=local) }}
+{% endmacro %}
+
+{% macro nav_pills(items, local=false) %}
+  {{ _nav(items, 'pills', data_toggle='pill', local=local) }}
+{% endmacro %}
+
+{% macro nav_pills_stacked(items, local=false) %}
+  {{ _nav(items, 'pills', data_toggle='pill', stacked=true, local=local) }}
+{% endmacro %}
+
+{% macro nav_stages(items, local=false) %}
+  {{ _nav(items, 'stages', data_toggle='pill', extra_classes='nav-pills', local=local) }}
 {% endmacro %}
