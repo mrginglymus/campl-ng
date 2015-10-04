@@ -9,9 +9,9 @@
       return $(".offcanvas").toggleClass("active");
     });
     if (Cookies.get("mobile_menu_open")) {
-      $("#tertiary-navigation").addClass("in");
+      $("#vertical-navigation").addClass("in");
     }
-    return $("#tertiary-navigation").on("show.bs.collapse", function() {
+    return $("#vertical-navigation").on("show.bs.collapse", function() {
       return Cookies.set("mobile_menu_open", true);
     }).on("hide.bs.collapse", function() {
       return Cookies.remove("mobile_menu_open");

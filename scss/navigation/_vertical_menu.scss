@@ -1,6 +1,6 @@
 @import "compass/css3/images";
 
-.tertiary-navigation {
+.vertical-navigation {
   border-left: $border-width solid $border-color;
   border-right: $border-width solid $border-color;
   border-top: $border-width solid $border-color;
@@ -9,7 +9,7 @@
   @include media-breakpoint-up(md) {
     margin-top: -50px;
   }
-  @include background(inline-image('tertiary-nav-background.png'));
+  @include background(inline-image('vertical-nav-background.png'));
 
   font-family: $font-family-sans-serif-extra;
   
@@ -69,7 +69,7 @@
         }
       }
     }
-    &> li.tertiary-navigation-parent > a {
+    &> li.vertical-navigation-parent > a {
       color: #171717;
     }
     &> li:not(:first-child) {

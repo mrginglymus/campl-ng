@@ -1,4 +1,4 @@
-<div class="col-md-3 tertiary-navigation collapse {% if page.side_menu %}navbar-toggleable-sm{% else %}hidden-md-up{% endif %}" id="tertiary-navigation">
+<div class="col-md-3 vertical-navigation collapse {% if page.side_menu %}navbar-toggleable-sm{% else %}hidden-md-up{% endif %}" id="vertical-navigation">
   <ul class="nav nav-pills nav-stacked nav-side">
     {% for page in page.vertical_breadcrumb %}
       <li class="nav-item">
@@ -8,7 +8,7 @@
   </ul>
   <ul class="list-unstyled">
     {% if not page.front_page %}
-    <li class="tertiary-navigation-parent">
+    <li class="vertical-navigation-parent">
       {% if page.vertical_breadcrumb_parent[1] %}
       <a href="{{ ROOT_URL }}{{ page.vertical_breadcrumb_parent[1] }}">{{ page.vertical_breadcrumb_parent[0] }}</a>
       {% else %}

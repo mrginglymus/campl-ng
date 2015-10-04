@@ -8,9 +8,9 @@ $ ->
     $(".offcanvas").toggleClass "active"
 
   if Cookies.get "mobile_menu_open"
-    $("#tertiary-navigation").addClass "in"
+    $("#vertical-navigation").addClass "in"
 
-  $("#tertiary-navigation")
+  $("#vertical-navigation")
     .on "show.bs.collapse", ->
       Cookies.set "mobile_menu_open", true
     .on "hide.bs.collapse", ->

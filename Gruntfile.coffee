@@ -29,7 +29,8 @@ module.exports = (grunt) ->
         files:
           'scss/_components.scss': 'scss/components/**/*.scss',
           'scss/_core_elements.scss': 'scss/core_elements/**/*.scss',
-          'scss/_layout.scss': 'scss/layout/**/*.scss'
+          'scss/_layout.scss': 'scss/layout/**/*.scss',
+          'scss/_navigation.scss': 'scss/navigation/**/*.scss'
 
     sass:
       core:
