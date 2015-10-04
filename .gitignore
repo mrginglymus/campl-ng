@@ -1,4 +1,5 @@
 .sass-cache
+npm-debug.log
 .ruby-version
 local_settings.json
 *.pyc
