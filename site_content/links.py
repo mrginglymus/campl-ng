@@ -70,7 +70,7 @@ ABOUT_DRAWER = {
 
 FOOTER_LINKS = [
   {
-    'header': None,
+    'heading': None,
     'links': [
       ('University A-Z', 'http://www.cam.ac.uk/university-a-z'),
       ('Contact the University', 'http://www.cam.ac.uk/contact-the-university'),
@@ -80,7 +80,7 @@ FOOTER_LINKS = [
     ],
   },
   {
-    'header': ('Study at Cambridge', 'http://www.cam.ac.uk/study-at-cambridge'),
+    'heading': ('Study at Cambridge', 'http://www.cam.ac.uk/study-at-cambridge'),
     'links': [
       ('Undergraduate', 'http://www.study.cam.ac.uk/undergraduate/'),
       ('Graduate', 'http://www.admin.cam.ac.uk/students/gradadmissions/prospec/'),
@@ -91,7 +91,7 @@ FOOTER_LINKS = [
     ],
   },
   {
-    'header': ('About the University', 'http://www.cam.ac.uk/about-the-university'),
+    'heading': ('About the University', 'http://www.cam.ac.uk/about-the-university'),
     'links': [
       ('How the University and Colleges work', 'http://www.cam.ac.uk/about-the-university/how-the-university-and-colleges-work'),
       ('Visiting the University', 'http://www.cam.ac.uk/about-the-university/visiting-the-university'),
@@ -103,7 +103,7 @@ FOOTER_LINKS = [
     ],
   },
   {
-    'header': ('Research at Cambridge', 'http://www.cam.ac.uk/research'),
+    'heading': ('Research at Cambridge', 'http://www.cam.ac.uk/research'),
     'links': [
       ('News', 'http://www.cam.ac.uk/research/news'),
       ('Features', 'http://www.cam.ac.uk/research/features'),

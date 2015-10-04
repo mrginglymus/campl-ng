@@ -1,0 +1,12 @@
+div.local-footer
+  div.container
+    div.row
+      each column in LINKS.LOCAL_FOOTER_LINKS
+        div.col-md-3
+          each menu in column
+            h3
+              a(href="")= menu.header
+            ul.list-unstyled.hidden-sm-down
+              each link in menu.links
+                li
+                  a(href="")= link

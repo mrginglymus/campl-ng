@@ -1,26 +1,27 @@
-nav.navbar.navbar-local.container.hidden-sm-down
-  div
-    ul.nav.navbar-nav.nav-local
-      li.nav-item
-        a.nav-link(href=ROOT) Home
-      each _page in PAGES
-        if _page.children.length == 0
-          li.nav-item
-            a.nav-link(href=ROOT + '/' + _page.get_url()) #{_page.title}
-        else
-          li.nav-item.dropdown
-            a.nav-link.dropdown-toggle(href=ROOT + '/' + _page.get_url(), data-toggle="dropdown") #{_page.title}
-            ul.dropdown-menu
-              if _page.source
-                li
-                  a.dropdown-item(href=ROOT + '/' + _page.get_url()) #{_page.title} - Overview
-              each __page in _page.children
-                li
-                  a.dropdown-item(href=ROOT + '/' + __page.get_url()) #{__page.title}
+div.local-header
+  nav.navbar.navbar-local.container.hidden-sm-down
+    div
+      ul.nav.navbar-nav.nav-local
+        li.nav-item
+          a.nav-link(href=ROOT) Home
+        each _page in PAGES
+          if _page.children.length == 0
+            li.nav-item(class=_page.title==page.horizontal_breadcrumb[1][0] ? "active":"")
+              a.nav-link(href=ROOT + '/' + _page.get_url()) #{_page.title}
+          else
+            li.nav-item.dropdown(class=_page.title==page.horizontal_breadcrumb[1][0] ? "active":"")
+              a.nav-link.dropdown-toggle(href=ROOT + '/' + _page.get_url(), data-toggle="dropdown") #{_page.title}
+              ul.dropdown-menu
+                if _page.source
+                  li
+                    a.dropdown-item(href=ROOT + '/' + _page.get_url()) #{_page.title} - Overview
+                each __page in _page.children
+                  li
+                    a.dropdown-item(href=ROOT + '/' + __page.get_url()) #{__page.title}
 
-      li.nav-item.dropdown
-        a.nav-link.dropdown-toggle(href="#", data-toggle="dropdown") Theme Switcher
-        ul.dropdown-menu
-          each theme, colour in COLOURS
-            li
-              a.dropdown-item(href="#", data-toggle="theme", data-colour=colour) #{colour}
+        li.nav-item.dropdown
+          a.nav-link.dropdown-toggle(href="#", data-toggle="dropdown") Theme Switcher
+          ul.dropdown-menu
+            each theme, colour in COLOURS
+              li
+                a.dropdown-item(href="#", data-toggle="theme", data-colour=colour) #{colour}
