@@ -1,7 +1,28 @@
-div.col-md-3.tertiary-navigation.collapse.navbar-toggleable-sm#tertiary-navigation
+div.col-md-3.tertiary-navigation.collapse#tertiary-navigation(class=page.side_menu ? "navbar-toggleable-sm" : "hidden-md-up")
   ul.nav.nav-pills.nav-stacked.nav-side
+    each _page in page.vertical_breadcrumb
+      li.nav-item
+        a.nav-link(href=ROOT + '/' + _page[1])= _page[0]
   ul.list-unstyled
     li.tertiary-navigation-parent
+      if page.vertical_breadcrumb_parent[1]
+        a(href=ROOT + '/' + page.vertical_breadcrumb_parent[1])= page.vertical_breadcrumb_parent[0]
+      else
+        span= page.vertical_breadcrumb_parent[0]
+      if page.vertical_breadcrumb_children.length > 0
+        ul.list-unstyled
+          each _page in page.vertical_breadcrumb_children
+            if _page[0] == page.title
+              li
+                span= _page[0]
+            else
+              li
+                a(href=ROOT + '/' + _page[1])= _page[0]
+    for _page in page.vertical_breadcrumb_siblings
+      if _page[0] != page.vertical_breadcrumb_parent[0]
+        li
+          a(href=ROOT + '/' + _page[1])= _page[0]
+
 
 //
   <div class="col-md-3 tertiary-navigation collapse {% if page.side_menu %}navbar-toggleable-sm{% else %}hidden-md-up{% endif %}" id="tertiary-navigation">

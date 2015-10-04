@@ -6,17 +6,17 @@ nav.navbar.navbar-local.container.hidden-sm-down
       each _page in PAGES
         if _page.children.length == 0
           li.nav-item
-            a.nav-link(href=ROOT_URL + _page.url) #{_page.title}
+            a.nav-link(href=ROOT + '/' + _page.get_url()) #{_page.title}
         else
           li.nav-item.dropdown
-            a.nav-link.dropdown-toggle(href=ROOT_URL + _page.url, data-toggle="dropdown") #{_page.title}
+            a.nav-link.dropdown-toggle(href=ROOT + '/' + _page.get_url(), data-toggle="dropdown") #{_page.title}
             ul.dropdown-menu
               if _page.source
                 li
-                  a.dropdown-item(href=ROOT_URL + _page.url) #{_page.title} - Overview
+                  a.dropdown-item(href=ROOT + '/' + _page.get_url()) #{_page.title} - Overview
               each __page in _page.children
                 li
-                  a.dropdown-item(href=ROOT_URL + __page.url) #{__page.title}
+                  a.dropdown-item(href=ROOT + '/' + __page.get_url()) #{__page.title}
 
       li.nav-item.dropdown
         a.nav-link.dropdown-toggle(href="#", data-toggle="dropdown") Theme Switcher

@@ -6,9 +6,9 @@ block body
 		include ../header/local/header.jade
 		div.local-header.subtitle
 			div.container
-				div.col-md-9.col-md-offset-3
+				div(class=page.side_menu ? "col-md-9 col-md-offset-3" : "col-md-12")
 					div.p-a
-						h1 SUBTITLE
+						h1= page.title
 	main.container
 		div.row
 			include ../navigation/vertical_menu.jade
