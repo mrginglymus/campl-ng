@@ -18,7 +18,7 @@
       display: block;
       @include hover-focus {
         .teaser-image-audio, .teaser-image-video {
-          background-color: rgba(0,0,0,0.8); // hover colour for A/V icons
+          background-color: rgba(0, 0, 0, 0.8); // hover colour for A/V icons
         }
       }
     }
@@ -30,9 +30,9 @@
     &:before {
       @include fa-icon();
       width: 1.5em;
-      text-align:center;
+      text-align: center;
     }
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0, 0, 0, 0.6);
     padding: 5px;
     font-size: 3em;
     position: absolute;
@@ -127,7 +127,7 @@
 // parent teaser list handles this
 @include media-breakpoint-up(md) {
   .teaser-row > .row {
-    margin-left:-$spacer;
+    margin-left: -$spacer;
     margin-right: -$spacer;
   }
 }

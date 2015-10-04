@@ -1,6 +1,6 @@
 .global-header {
   font-family: $font-family-sans-serif-extra;
-  background-color:black;
+  background-color: black;
   padding: 0;
   
   .navbar-brand {
@@ -43,7 +43,7 @@
         padding: $spacer*1.25 $spacer;
         @include hover-focus {
           color: #5a5a5a !important;
-          background-color:#171717 !important;
+          background-color: #171717 !important;
         }
         
         &[data-toggle="tab"].active {
@@ -65,6 +65,6 @@
   }
 
   .navbar-divider {
-    background-color: rgba(255,255,255,.075);
+    background-color: rgba(255, 255, 255, .075);
   }
 }

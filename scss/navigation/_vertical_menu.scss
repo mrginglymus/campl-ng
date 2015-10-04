@@ -4,8 +4,8 @@
   border-left: $border-width solid $border-color;
   border-right: $border-width solid $border-color;
   border-top: $border-width solid $border-color;
-  padding-left:0px;
-  padding-right:0px;
+  padding-left: 0px;
+  padding-right: 0px;
   @include media-breakpoint-up(md) {
     margin-top: -50px;
   }
@@ -62,7 +62,7 @@
     margin-bottom: 0px;
     &> li > {
       a, span {
-        font-weight:bold;
+        font-weight: bold;
         @include media-breakpoint-down(sm) {
           display: block;
           padding: 10px 0;

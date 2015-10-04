@@ -38,7 +38,7 @@
       padding: 21px 15px;
       height: 57px;
       color: #ffffff;
-      display:block;
+      display: block;
       @include background(inline-image('close-lg.png') no-repeat 90% 50%);
       
     }
@@ -47,7 +47,7 @@
   div > .list-unstyled {
     padding: 0px $spacer;
     &> li {
-      padding-top:$spacer/2;
+      padding-top: $spacer/2;
       &> a {
         font-weight: 600;
       }
@@ -66,7 +66,7 @@
     }
     
     .list-unstyled {
-      padding-top:15px;
+      padding-top: 15px;
       li {
         padding: 10px 0px;
       }
@@ -76,7 +76,7 @@
   .list-unstyled:not(.hidden-sm-down) > li {
     padding: 15px 0px;
     &:not(:last-child) {
-      border-bottom:$border-width solid #323232;
+      border-bottom: $border-width solid #323232;
     }
   }
 }

@@ -7033,8 +7033,8 @@ a.bg-danger:focus, a.bg-danger:hover {
           content: "";
           width: 0;
           height: 0;
-          border-color: transparent transparent #fff transparent;
-          border-width: 0 20px 20px 20px;
+          border-color: transparent transparent #fff;
+          border-width: 0 20px 20px;
           border-style: solid;
           position: absolute;
           left: -15px;
@@ -7157,7 +7157,7 @@ a.bg-danger:focus, a.bg-danger:hover {
   .nav.nav-tabs .nav-item {
     margin-bottom: 0px; }
     .nav.nav-tabs .nav-item .nav-link {
-      border: none; }
+      border: 0; }
 
 .nav-pills-wrapper::after {
   content: "";
@@ -7175,7 +7175,7 @@ ul.pagination > li.previous > a, ul.pagination > li.previous > span, ul.paginati
   background-color: #000; }
 ul.pagination > li > span.elipsis, ul.pagination > li > span.elipsis:hover {
   background-color: #fff;
-  border: none; }
+  border: 0; }
 
 .inpage-search-container {
   background-color: #e4e4e4;
@@ -7362,7 +7362,7 @@ ul.pagination > li > span.elipsis, ul.pagination > li > span.elipsis:hover {
     padding-top: 10px; }
 
 .focus-on-teaser {
-  margin: 0 20px 20px 20px; }
+  margin: 0 20px 20px; }
   .theme-blue .focus-on-teaser {
     background-color: #003e74 ; }
   .theme-turquoise .focus-on-teaser {
@@ -7586,9 +7586,9 @@ blockquote {
   padding-right: 10px; }
 
 .table:not(.table-bordered) th, .table:not(.table-bordered) td {
-  border: none; }
+  border: 0; }
 .table:not(.table-bordered) thead th, .table:not(.table-bordered) thead td {
-  border: none; }
+  border: 0; }
 
 .table-bordered {
   border-bottom: 2px solid; }
@@ -7962,10 +7962,10 @@ main > .row {
     background-color: #3b3b3b;
     display: block; }
     #global-header-drawers div .row {
-      border-bottom: none; }
+      border-bottom: 0; }
     #global-header-drawers div [class*='col-'] {
       width: 100%;
-      border: none; }
+      border: 0; }
     #global-header-drawers div ul {
       padding: 0;
       border-bottom: 1px solid #323232; }
@@ -8055,11 +8055,11 @@ main > .row {
     background-color: #343434;
     color: #fff;
     font-family: verdana, Arial, sans-serif;
-    border: none;
+    border: 0;
     padding: 7px 8px; }
   .global-search .input-group-addon {
     background-color: #434343;
-    border: none;
+    border: 0;
     color: #a3a3a3; }
   @media (min-width: 768px) {
     .global-search {
@@ -8114,7 +8114,7 @@ main > .row {
     float: none;
     position: static; }
   .local-header .navbar-toggler {
-    border: none;
+    border: 0;
     padding: 0; }
     .theme-blue .local-header .navbar-toggler {
       background-color: #004e8f ; }
@@ -8243,7 +8243,7 @@ main > .row {
           line-height: 34px; } }
       .local-header.subtitle .container h1.app {
         font-size: 26px;
-        font-size: 29px;
+        line-height: 29px;
         margin-bottom: 0; }
   @media (min-width: 768px) {
     .local-header.subtitle:after {

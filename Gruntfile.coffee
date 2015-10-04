@@ -14,6 +14,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-sass-globbing'
+  grunt.loadNpmTasks 'grunt-scss-lint'
   grunt.loadNpmTasks 'grunt-exec'
   
   grunt.initConfig
@@ -23,7 +24,12 @@ module.exports = (grunt) ->
     clean: 
       dist: 'dist',
       build: 'build',
-      
+    
+    scsslint:
+      options:
+        config: 'scss/.scss-lint.yml'
+      src: ['scss/**/*.scss']
+
     sass_globbing:
       core:
         files:

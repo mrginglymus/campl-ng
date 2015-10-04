@@ -6,7 +6,7 @@
     padding: 15px 0px;
     &> a {
       color: #fff;
-      @include background(linear-gradient(to bottom, #3d3d3d 0%,#292929 100%));
+      @include background(linear-gradient(to bottom, #3d3d3d 0%, #292929 100%));
       display: block;
       padding: 7px;
       font-family: $font-family-sans-serif;
@@ -14,14 +14,14 @@
         text-decoration: none;
       }
       span.quicklinks-dropdown-toggle {
-        @include background(linear-gradient(to bottom, #a3a3a3 0%,#4a4a4a 100%));
+        @include background(linear-gradient(to bottom, #a3a3a3 0%, #4a4a4a 100%));
         width: 35px;
         margin: -7px;
         padding: 7px 7px 7px 13px;
-        float:right;
+        float: right;
         color: #000;
         @include hover-focus {
-          @include background(linear-gradient(to bottom, #a3a3a3 0%,#707070 100%));
+          @include background(linear-gradient(to bottom, #a3a3a3 0%, #707070 100%));
         }
       }
     }

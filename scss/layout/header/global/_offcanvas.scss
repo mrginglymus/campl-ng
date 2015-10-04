@@ -51,15 +51,15 @@
     background-color: #3b3b3b;
     display: block;
     .row {
-      border-bottom: none;
+      border-bottom: 0;
     }
     [class*='col-'] {
       width: 100%;
-      border: none;
+      border: 0;
     }
     ul {
       padding: 0;
-      border-bottom:$border-width solid #323232;
+      border-bottom: $border-width solid #323232;
     }
     li:before {
       display: none;
