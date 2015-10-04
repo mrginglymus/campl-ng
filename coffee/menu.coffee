@@ -1,5 +1,3 @@
-$ = jQuery
-
 $ ->
   $("a[href='#global-header-drawer-close']").click ->
     $("#global-header-drawers div.tab-pane.active").removeClass "active"

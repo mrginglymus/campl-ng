@@ -1,4 +1,3 @@
-
 window.set_theme = (theme) ->
   Cookies.set 'theme', theme
   clist = document.body.classList
