@@ -4,7 +4,7 @@
       {% for column in LINKS.FOOTER_LINKS %}
       <div class="col-md-3">
         {% if not column.heading %}
-          <img class="logo logo-sm" alt="University of Cambridge" src="{{ ROOT_URL }}/images/logo.png">
+          <img class="logo logo-sm" alt="University of Cambridge" src="{{ ROOT }}/images/logo.png">
           <p>&copy; 2015 University of Cambridge</p>
         {% else %}
           <h3><a href="{{ column.heading.link }}">{{ column.heading.title }}</a></h3>

@@ -2,7 +2,7 @@
   <ul class="nav nav-pills nav-stacked nav-side">
     {% for page in page.vertical_breadcrumb %}
       <li class="nav-item">
-        <a class="nav-link" href="{{ ROOT_URL }}{{ page[1] }}">{{ page[0] }}</a>
+        <a class="nav-link" href="{{ ROOT }}{{ page[1] }}">{{ page[0] }}</a>
       </li>
     {% endfor %}
   </ul>
@@ -10,7 +10,7 @@
     {% if not page.front_page %}
     <li class="tertiary-navigation-parent">
       {% if page.vertical_breadcrumb_parent[1] %}
-      <a href="{{ ROOT_URL }}{{ page.vertical_breadcrumb_parent[1] }}">{{ page.vertical_breadcrumb_parent[0] }}</a>
+      <a href="{{ ROOT }}{{ page.vertical_breadcrumb_parent[1] }}">{{ page.vertical_breadcrumb_parent[0] }}</a>
       {% else %}
       <span>{{ page.vertical_breadcrumb_parent[0] }}</span>
       {% endif %}
@@ -20,7 +20,7 @@
             {% if _page[0] == page.title %}
             <li><span>{{ _page[0] }}</span></li>
             {% else %}
-            <li><a href="{{ ROOT_URL }}{{ _page[1] }}">{{ _page[0] }}</a></li>
+            <li><a href="{{ ROOT }}{{ _page[1] }}">{{ _page[0] }}</a></li>
             {% endif %}
           {% endfor %}
         </ul>
@@ -30,7 +30,7 @@
     {% for _page in page.vertical_breadcrumb_siblings %}
       {% if _page[0] != page.vertical_breadcrumb_parent[0] %}
         <li>
-        <a href="{{ ROOT_URL }}{{ _page[1] }}">{{ _page[0] }}</a>
+        <a href="{{ ROOT }}{{ _page[1] }}">{{ _page[0] }}</a>
         </li>
       {% endif %}
     {% endfor %}
