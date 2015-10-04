@@ -3,7 +3,7 @@ Pages = require './pages.coffee'
 
 
 pages = new Pages(
-  new Page('About', 'layouts/page.jade'),
+  new Page('About', 'pages/about.jade'),
   new Page('Page Layouts', null, [
     new Page('Subsection with navigation', 'layouts/page.jade'),
     new Page('Subsection without navigation', 'layouts/page.jade', [], {side_menu:false}),
@@ -12,9 +12,9 @@ pages = new Pages(
     new Page('Cambridge Front Page', 'layouts/page.jade')
   ]),
   new Page('Core Elements', null, [
-    new Page('Typography', 'layouts/page.jade'),
-    new Page('Links and Buttons', 'layouts/page.jade'),
-    new Page('Forms', 'layouts/page.jade'),
+    new Page('Typography', 'pages/core_elements/typography.jade'),
+    new Page('Links and Buttons', 'pages/core_elements/links_and_buttons.jade'),
+    new Page('Forms', 'pages/core_elements/forms.jade'),
     new Page('Lists', 'layouts/page.jade'),
     new Page('Themes', 'layouts/page.jade'),
   ])

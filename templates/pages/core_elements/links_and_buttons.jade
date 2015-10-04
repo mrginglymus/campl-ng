@@ -1,0 +1,31 @@
+extends ../../layouts/page
+
+block content
+  h2 Inline Links
+  p: a(href="") consectetur adipisicing elit
+
+  h3 Links with icons
+  p #[span.fa.fa-print] #[a(href="") Print icon]
+  p #[span.fa.fa-lock] #[a(href="") Locked document icon]
+  p #[span.fa.fa-question-circle] #[a(href="") Help icon]
+  p #[span.fa.fa-info-circle] #[a(href="") Information icon]
+  p #[span.fa.fa-file-excel-o] #[a(href="") Excel icon]
+  p #[span.fa.fa-file-pdf-o] #[a(href="") PDF icon]
+  p #[span.fa.fa-file-word-o] #[a(href="") Word document icon]
+
+  h3 External link
+  p: a(href="http://www.gooogle.com") Lorem ipsum dolor sit amet
+
+  h3 Links within body text
+  p Lorem ipsum dolor site amet, consectetur adipisicing elit, #[span.fa.fa-file-excel-o] #[a(href="") Ut enim ad minim veniam sed do eiusmod] tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, #[a(href="http://www.google.com") Lorem ipsum dolor sit amet] ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis #[a(href="") consectetur adipisicing elit] in voluptate velit esse.
+
+  h2 Primary call to action
+  p: a.btn.btn-primary.btn-cta(href="#") Read more
+  p: a.btn.btn-primary.btn-vcard(href="#") Download vCard
+
+  h2 Secondary call to action
+  p: a.secondary-cta(href="#") View all news
+
+  h2 Primary and secondary form buttons
+  p: button.btn.btn-secondary Secondary
+  p: button.btn.btn-primary.btn-cta Primary

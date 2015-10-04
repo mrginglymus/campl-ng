@@ -4,14 +4,6 @@ sass_options =
   require: './lib/themes.rb',
   compass: true,
 
-REMOTE_JS = [
-  'https://code.jquery.com/jquery-1.11.3.min.js',
-  'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.js',
-  'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/locale/en-gb.js',
-  'https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.0.3/js.cookie.js',
-]
-
-
 module.exports = (grunt) ->
   
   grunt.loadNpmTasks 'grunt-contrib-sass'
@@ -139,7 +131,7 @@ module.exports = (grunt) ->
           
     watch:
       html:
-        files: 'templates-jade/**'
+        files: 'templates/**'
         tasks: ['build-html', 'copy:deploy']
       css:
         files: 'scss/**'
@@ -177,6 +169,7 @@ module.exports = (grunt) ->
       LINKS: grunt.file.readJSON('site_content/links.json')
       COLOURS: grunt.file.readJSON('themes.json')
       PAGES: grunt.config.data.site_structure
+      lipsum: require('lorem-ipsum')
     
     for page in grunt.config.data.site_structure
       page.render BASE_CONTEXT, grunt

@@ -1,0 +1,126 @@
+extends ../../layouts/page
+
+block content
+  form
+    legend Standard form elements
+    fieldset.form-group
+      label(for="input") Input
+      input.form-control#input(type="text", value="Basic input")
+
+    fieldset.form-group
+      label(for="textarea") Textarea
+      textarea.form-control#textarea(rows=3)
+
+    fieldset.form-group
+      label(for="select")
+      select.form-control#select
+        option 1
+        option 2
+        option 3
+        option 4
+        option 5
+
+    label Checkboxes
+    fieldset.form-group
+      div.checkbox: label: #[input(type="checkbox")] Option one
+      div.checkbox: label: #[input(type="checkbox")] Option two
+      div.checkbox: label: #[input(type="checkbox")] Option three
+
+    label Inline Checkboxes
+    fieldset.form-group
+      div.checkbox-inline: label: #[input(type="checkbox")] 1
+      div.checkbox-inline: label: #[input(type="checkbox")] 2
+      div.checkbox-inline: label: #[input(type="checkbox")] 3
+
+    label Radio Buttons
+    fieldset.form-group
+      div.radio-inline: label: #[input(name="radio", type="radio")] Option one
+      div.radio-inline: label: #[input(name="radio", type="radio")] Option two
+
+    p.text-muted This is an example of guidance text to give supplementary information to the user about completion of the form
+
+    legend Form field variants
+    fieldset.form-group
+      label(for="block-input") Block level input
+      input.form-control#block-input(type="text", value="Stretching to fill container")
+
+    div.row
+      fieldset.form-group.col-xs-2
+        label(for="input-2") Input 2
+        input.form-control#input-2(type="text", value="col-2")
+
+    div.row
+      fieldset.form-group.col-xs-4
+        label(for="input-4") Input 4
+        input.form-control#input-4(type="text", value="col-4")
+
+    div.row
+      fieldset.form-group.col-xs-6
+        label(for="input-6") Input 6
+        input.form-control#input-6(type="text", value="col-6")
+
+    div.row
+      fieldset.form-group.col-xs-8
+        label(for="input-8") Input 8
+        input.form-control#input-8(type="text", value="col-8")
+
+    legend Form field action states
+
+    fieldset.form-group
+      label(for="disabled_input") Disabled input
+      input.form-control#disabled_input(type="text", placeholder="Disabled input here", disabled)
+
+    label Disabled Checkbox
+    fieldset.form-group
+      div.checkbox: label: #[input(type="checkbox", disabled)] This is a disabled checkbox
+
+    fieldset.form-group
+      label Uneditable input
+      div.form-control Some value here
+
+    fieldset.form-group
+      label Disabled textarea
+      textarea.form-control(disabled)= lipsum()
+
+    fieldset.form-group
+      label(for="readonly") Read only input
+      input.form-control#readonly(type="text", value="xyz", readonly)
+
+    p: button.btn.btn-secondary(type="button", disabled) Disabled button
+
+    legend Form state visual indicators
+    div.form-group.has-warning
+      label.form-control-label(for="input-warning") Input with warning
+      input.form-control#input-warning(type="text")
+      span.help-block Something may have gone wrong
+
+    div.form-group.has-warning
+      label.form-control-label Textarea
+      textarea.form-control
+
+    div.form-group.has-warning
+      label.form-control-label Select
+      select.form-control
+        option 1
+        option 2
+        option 3
+        option 4
+        option 5
+
+    label Checkboxes
+    fieldset.form-group.has-warning
+      div.checkbox: label: #[input(type="checkbox")] Option one
+
+    label Radio buttons
+    fieldset.form-group.has-warning
+      div.radio: label: #[input(type="radio")] Option one
+
+    div.form-group.has-error
+      label.form-control-label Input with error
+      input.form-control(type="text")
+      span.help-block Please correct the error
+
+    div.form-group.has-success
+      label.form-control-label Input with success
+      input.form-control(type="text")
+      span.help-block This is a success message

@@ -1,0 +1,11 @@
+extends ../layouts/page.jade
+
+block content
+  h2 Heading
+  != lipsum({count:3, units:'paragraphs', format:'html'})
+  blockquote
+    != lipsum({count:2, units:'paragraphs', format:'html'})
+    cite William Shakespeare
+
+  p.
+    Text can have inline links to sites like the #[a(href="http://www.bbc.co.uk") BBC website] or the #[a(href="http://map.cam.ac.uk") official University of Cambridge map].

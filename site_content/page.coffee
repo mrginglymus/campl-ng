@@ -76,7 +76,7 @@ class Page
   render: (BASE_CONTEXT, grunt) ->
     if @source
       data = extend {page: @}, BASE_CONTEXT
-      html = jade.renderFile 'templates-jade/' + @source, data
+      html = jade.renderFile 'templates/' + @source, data
       dest = "build/" + decodeURIComponent(@get_url()) + 'index.html'
       grunt.file.write dest, html
     for child in @children
@@ -84,29 +84,3 @@ class Page
 
 
 module.exports = Page
-###
- 
-    if self.children:
-      self.vertical_breadcrumb_parent = self.horizontal_breadcrumb[-1]
-      self.vertical_breadcrumb = self.vertical_breadcrumb[:-1]
-      self.vertical_breadcrumb_children = [(child.title, child.url) for child in self.children]
-      if parent:
-        self.vertical_breadcrumb_siblings = [(child.title, child.url) for child in parent.children]
-      else:
-        self.vertical_breadcrumb_siblings = [(p.title, p.url) for p in pages]
-    elif not parent:
-      self.vertical_breadcrumb = BASE_BREADCRUMB
-      self.vertical_breadcrumb_parent = (self.title, self.url)
-      self.vertical_breadcrumb_siblings = [(p.title, p.url) for p in pages]
-    else:
-      self.vertical_breadcrumb_parent = self.horizontal_breadcrumb[-2]
-      self.vertical_breadcrumb = self.vertical_breadcrumb[:-2]
-      if parent:
-        self.vertical_breadcrumb_children = [(child.title, child.url) for child in parent.children]
-        if parent.parent:
-          self.vertical_breadcrumb_siblings = [(child.title, child.url) for child in parent.parent.children]
-        else:
-           self.vertical_breadcrumb_siblings = [(p.title, p.url) for p in pages]
-  
- 
-###
