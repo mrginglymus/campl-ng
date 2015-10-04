@@ -9,10 +9,10 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-sass'
   grunt.loadNpmTasks 'grunt-contrib-clean'
   grunt.loadNpmTasks 'grunt-contrib-cssmin'
-  grunt.loadNpmTasks 'grunt-contrib-concat'
   grunt.loadNpmTasks 'grunt-contrib-uglify'
   grunt.loadNpmTasks 'grunt-contrib-copy'
   grunt.loadNpmTasks 'grunt-contrib-watch'
+  grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-sass-globbing'
   grunt.loadNpmTasks 'grunt-exec'
   
@@ -60,30 +60,23 @@ module.exports = (grunt) ->
           ext: '.min.css',
         ]
     
-    concat:
+    coffee:
       core:
-        src: [
-          'js/menu.js',
-          'js/select_tab.js',
-        ]
-        dest:
-          'build/js/campl.js'
-      dev:
-        src: [
-          'js/theme_switcher.js',
-        ]
-        dest:
-          'build/js/theme_switcher.js'
+        files:
+          'build/js/campl.js': ['coffee/menu.coffee', 'coffee/select_tab.coffee']
+      meta:
+        files:
+          'build/js/theme_switcher.js': ['coffee/theme_switcher.coffee']
     
     uglify:
       options:
         sourceMap: true
         sourceMapIncludeSources: true
       core:
-        src: '<%= concat.core.dest %>'
+        src: 'build/js/campl.js'
         dest: 'build/js/campl.min.js'
-      dev:
-        src: '<%= concat.dev.dest %>'
+      meta:
+        src: 'build/js/theme_switcher.js'
         dest: 'build/js/theme_switcher.min.js'
     
     exec:
@@ -122,11 +115,11 @@ module.exports = (grunt) ->
         files: 'templates/**/*.html'
         tasks: ['exec:html', 'copy:deploy']
     
-  grunt.registerTask 'default', ['clean:build', 'sass:core', 'concat:core']
+  grunt.registerTask 'default', ['clean:build', 'sass:core', 'coffee:core']
   
   grunt.registerTask 'build-css', ['sass_globbing', 'sass', 'cssmin']
   
-  grunt.registerTask 'build-js', ['concat', 'uglify']
+  grunt.registerTask 'build-js', ['coffee', 'uglify']
   
   grunt.registerTask 'build-images', ['copy:images']
 

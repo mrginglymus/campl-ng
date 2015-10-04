@@ -1,30 +1,38 @@
-$(document).ready(function() {
-  $('a[href="#global-header-drawer-close"]').click(function() {
-    $('#global-header-drawers div.tab-pane.active').removeClass('active');
-    $('.global-header a.nav-link.active').removeClass('active');
-  });
-  
-  $('[data-toggle="offcanvas"]').click(function(e) {
-    e.preventDefault();
-    $('.offcanvas').toggleClass('active');
-  });
-  
-  if (Cookies.get('mobile_menu_open')) {
-    $('#tertiary-navigation').addClass('in');
-  }
-  
-  $('#tertiary-navigation').on('show.bs.collapse', function() {
-    Cookies.set('mobile_menu_open', true);
-  });
-  
-  $('#tertiary-navigation').on('hide.bs.collapse', function() {
-    Cookies.remove('mobile_menu_open');
-  });
-  
-});
+(function() {
+  var $;
 
-$(document).ready(function() {
-  $('select[data-toggle="tab"]').change(function() {
-    $('a[href="'+$(this).val()+'"]').tab('show');
+  $ = jQuery;
+
+  $(function() {
+    $("a[href='#global-header-drawer-close']").click(function() {
+      $("#global-header-drawers div.tab-pane.active").removeClass("active");
+      return $(".global-header a.nav-link.active").removeClass("active");
+    });
+    $("[data-toggle='offcanvas']").click(function(e) {
+      e.preventDefault();
+      return $(".offcanvas").toggleClass("active");
+    });
+    if (Cookies.get("mobile_menu_open")) {
+      $("#tertiary-navigation").addClass("in");
+    }
+    return $("#tertiary-navigation").on("show.bs.collapse", function() {
+      return Cookies.set("mobile_menu_open", true);
+    }).on("hide.bs.collapse", function() {
+      return Cookies.remove("mobile_menu_open");
+    });
   });
-});
+
+}).call(this);
+
+(function() {
+  var $;
+
+  $ = jQuery;
+
+  $(function() {
+    return $("select[data-toggle='tab']").change(function() {
+      return $("[href='" + ($(this).val()) + "']").tab('show');
+    });
+  });
+
+}).call(this);

@@ -1,19 +1,21 @@
-function set_theme(theme) {
-  Cookies.set('theme', theme);
-  clist = document.body.classList;
-  clist.remove(clist.item(clist.length-1))
-  clist.add('theme-'+theme);
-}
+(function() {
+  window.set_theme = function(theme) {
+    var clist;
+    Cookies.set('theme', theme);
+    clist = document.body.classList;
+    clist.remove(clist.item(clist.length - 1));
+    return clist.add("theme-" + theme);
+  };
 
-
-$(document).ready(function() {
-  theme = Cookies.get('theme');
-  if (typeof theme === 'undefined'){
-    theme = 'turquoise';
-  }
-  set_theme(theme);
-  $('a[data-toggle="theme"]').click(function() {
-    set_theme($(this).data('colour'));
-    return false;
+  $(function() {
+    var theme;
+    theme = Cookies.get("theme");
+    theme = theme != null ? theme : "turquoise";
+    set_theme(theme);
+    return $("a[data-toggle='theme']").click(function() {
+      set_theme($(this).data('colour'));
+      return false;
+    });
   });
-});
+
+}).call(this);
