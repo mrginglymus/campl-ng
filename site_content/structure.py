@@ -51,9 +51,6 @@ template_pages = list(shuffle_dirs(templates, TemplatePage))
 pages = Pages([
   Page('About', 'pages/about.html'),
   Page('Page Layouts', children=[
-    Page('Subsection with navigation', 'layouts/subnav.html'),
-    Page('Subsection without navigation', 'layouts/subnonav.html', side_menu=False),
-    Page('Subsection without right column', 'layouts/subnocol.html'),
     Page('App', 'layouts/app.html', side_menu=False),
     Page('Cambridge Front Page', 'layouts/campage.html', globals={'CAM_PAGE': True}),
   ]),
@@ -87,6 +84,6 @@ pages = Pages([
 
 front_page = FrontPage(
   'Home',
-  'layouts/frontpage_example.html',
+  'pages/frontpage.html',
   pages,
 )

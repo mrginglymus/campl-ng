@@ -33,7 +33,7 @@ def template_to_tuple(templates, root_url):
 t_env = Environment(loader=FileSystemLoader('templates'))
 
 for template_name in t_env.list_templates():
-  if not template_name.startswith(('.', 'meta', 'pages')) and template_name.endswith('.html'):
+  if not template_name.startswith(('.', 'meta')) and template_name.endswith('.html'):
     refs = list(meta.find_referenced_templates(t_env.parse(t_env.loader.get_source(t_env, template_name)[0])))
     TEMPLATE_REFERENCES[template_name] = refs
     for ref in refs:
