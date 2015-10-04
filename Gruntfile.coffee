@@ -13,18 +13,11 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-uglify'
   grunt.loadNpmTasks 'grunt-contrib-copy'
   grunt.loadNpmTasks 'grunt-contrib-watch'
-  grunt.loadNpmTasks 'grunt-env'
-
-  
+  grunt.loadNpmTasks 'grunt-exec'
   
   grunt.initConfig
     pkg: grunt.file.readJSON('package.json')
     local_settings: grunt.file.readJSON('local_settings.json')
-
-    env:
-      local:
-        ROOT_DIR: '/Users/bill/Sites/campl-ng'
-        ROOT_URL: '/~bill/campl-ng'
 
     clean: 
       dist: 'dist',
@@ -79,7 +72,11 @@ module.exports = (grunt) ->
       dev:
         src: '<%= concat.dev.dest %>'
         dest: 'build/js/theme_switcher.min.js'
-        
+    
+    exec:
+      html:
+        cmd: 'plenv/bin/python make.py'
+
     copy:
       images:
         expand: true,
@@ -106,7 +103,10 @@ module.exports = (grunt) ->
     watch:
       css:
         files: 'scss/**'
-        tasks: ['sass:core', 'copy:dist']
+        tasks: ['sass:core', 'copy:deploy']
+      html:
+        files: 'templates/**'
+        tasks: ['exec:html', 'copy:deploy']
     
   grunt.registerTask 'default', ['clean:build', 'sass:core', 'concat:core']
   
@@ -115,8 +115,10 @@ module.exports = (grunt) ->
   grunt.registerTask 'build-js', ['concat', 'uglify']
   
   grunt.registerTask 'build-images', ['copy:images']
+
+  grunt.registerTask 'build-html', ['exec:html']
   
-  grunt.registerTask 'build', ['clean:build', 'build-css', 'build-js', 'build-images', 'copy:deploy']
+  grunt.registerTask 'build', ['clean:build', 'build-css', 'build-js', 'build-images', 'build-html', 'copy:deploy']
   
   grunt.registerTask 'dist', ['clean:dist', 'build', 'copy:dist']
 
