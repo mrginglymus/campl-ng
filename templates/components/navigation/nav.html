@@ -1,0 +1,22 @@
+{% macro nav(items, type, stacked=false, local=false, extra_classes='') %}
+<div class="nav-{{ type}}s-wrapper">
+  <ul class="nav nav-{{ type }}s{% if stacked %} nav-stacked{% endif %} {{ extra_classes }}" role="tablist">
+    {% for item in items %}
+    <li class="nav-item">
+      <a 
+        class="nav-link{% if item.disabled %} disabled{% elif item.active %} active{% endif %}"
+        role="tab"
+        {% if not item.disabled %}
+          {% if local %}
+            data-toggle="pill"
+            href="#{{ item.id }}"
+          {% else %}
+            href="{{ item.link }}"
+          {% endif %}
+        {% endif %}
+      >{{ item.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endmacro %}

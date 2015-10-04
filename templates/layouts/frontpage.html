@@ -4,12 +4,12 @@
 
 {% block body %}
 <header>
-  {% include 'components/header/global_header.html' %}
-  {% include 'components/header/local_header.html' %}
+  {% include 'layouts/header/global/header.html' %}
+  {% include 'layouts/header/local/header.html' %}
 </header>
 <main class="container">
   <div class="row">
-    {% include 'components/navigation/side_menu.html' %}
+    {% include 'navigation/vertical_menu.html' %}
     <div class="col-md-9 main-content">
       {{ carousel(CAROUSEL) }}
       {% block unwrapped_content %}
@@ -28,7 +28,7 @@
   </div>
 </main>
 <footer>
-  {% include 'components/footer/local_footer.html' %}
-  {% include 'components/footer/global_footer.html' %}
+  {% include 'layouts/footer/local/footer.html' %}
+  {% include 'layouts/footer/global/footer.html' %}
 </footer>
 {% endblock %}

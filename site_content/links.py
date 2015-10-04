@@ -1,4 +1,4 @@
-__all__ = ('QUICKLINKS', 'STUDY_DRAWER', 'ABOUT_DRAWER', 'FOOTER_LINKS')
+__all__ = ('QUICKLINKS', 'STUDY_DRAWER', 'ABOUT_DRAWER', 'GLOBAL_FOOTER_LINKS')
 
 QUICKLINKS = (
   ('http://www.cam.ac.uk/for-staff', 'For staff'),
@@ -68,7 +68,7 @@ ABOUT_DRAWER = {
   ],
 }
 
-FOOTER_LINKS = [
+GLOBAL_FOOTER_LINKS = [
   {
     'header': None,
     'links': [

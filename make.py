@@ -10,7 +10,7 @@ from ordereddict import OrderedDict
 from jinja2 import FileSystemLoader, Environment
 import codecs
 
-from site_content import links, structure
+from site_content import links, structure, examples, functions
 
 SITE_NAME = 'CamPL-NG'
 
@@ -41,15 +41,20 @@ def make_html():
 
   env = Environment(loader=FileSystemLoader('templates'))
   
-  from lib import functions
-
   # add functions
   for fname in functions.__all__:
     env.globals.update(**{fname:functions.__dict__[fname]})
     
+  env.globals['LINKS'] = {}
+
   # add links
   for lname in links.__all__:
-    env.globals.update(**{lname:links.__dict__[lname]})
+    env.globals['LINKS'][lname] = links.__dict__[lname]
+
+  env.globals['EXAMPLES'] = {}
+
+  for ex in examples.__all__:
+    env.globals['EXAMPLES'][ex] = examples.__dict__[ex]
   
   env.globals.update(**{
     'ROOT_URL': local_settings['root_url'] ,

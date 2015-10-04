@@ -1,0 +1,11 @@
+{% macro tabs(items) %}
+<div class="tab-content">
+  {% for item in items %}
+    {% if not item.disabled %}
+      <div role="tabpanel" class="tab-pane{% if item.active %} active{% endif %}" id="{{ item.id }}">
+        {{ item.content }}
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
+{% endmacro %}

@@ -11,7 +11,7 @@
 
 {% block body %}
   <header>
-    {% include 'components/header/global_header.html' %}
+    {% include 'layouts/header/global/header.html' %}
     <div class="local-header">
       <div class="container p-a">
         <a href="http://www.cam.ac.uk/" class="main-logo">
@@ -91,7 +91,7 @@
     </div>
   </main>
   <footer>
-    {% include 'components/footer/local_footer.html' %}
-    {% include 'components/footer/global_footer.html' %}
+    {% include 'layouts/footer/local/footer.html' %}
+    {% include 'layouts/footer/global/footer.html' %}
   </footer>
 {% endblock %}

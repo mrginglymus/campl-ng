@@ -1,7 +1,7 @@
 {% extends 'layouts/page.html' %}
 
-{% from 'components/sidebar/sidebar.html' import sidebar_heading %}
-{% from 'components/sidebar/related_links.html' import related_links %}
+{% from 'layouts/sidebar/sidebar.html' import sidebar_heading %}
+{% from 'layouts/sidebar/related_links.html' import related_links %}
 
 {% block unwrapped_content %}
 <pre style="margin:0;"><code class="django" style="font-size:1.2em;">{{ template|e }}</code></pre>

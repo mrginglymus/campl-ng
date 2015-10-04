@@ -1,0 +1,19 @@
+{% extends 'layouts/page.html' %}
+
+{% from 'components/navigation/nav.html' import nav %}
+{% from 'components/navigation/tabs.html' import tabs %}
+
+{% block content %}
+{{ nav(EXAMPLES.NAV_ITEMS, 'tab', local=true) }}
+<div class="p-t">
+  {{ tabs(EXAMPLES.NAV_ITEMS) }}
+</div>
+
+
+
+<h2>Nav Macro</h2>
+{{ print_macro(nav) }}
+
+<h2>Usage</h2>
+<pre><code class="django">{% raw %}{{ nav(EXAMPLES.NAV_ITEMS, 'tab', local=true) }}{% endraw %}</code></pre>
+{% endblock %}

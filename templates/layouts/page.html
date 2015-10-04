@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 
-{% from 'components/sidebar/related_links.html' import related_links %}
-{% from 'components/sidebar/sidebar.html' import sidebar_heading %}
+{% from 'layouts/sidebar/related_links.html' import related_links %}
+{% from 'layouts/sidebar/sidebar.html' import sidebar_heading %}
 
 {% block body %}
   <header>
-    {% include 'components/header/global_header.html' %}
-    {% include 'components/header/local_header.html' %}
+    {% include 'layouts/header/global/header.html' %}
+    {% include 'layouts/header/local/header.html' %}
     {% block subtitle %}
       <div class="local-header subtitle">
         <div class="container">
@@ -35,7 +35,7 @@
   </header>
   <main class="container">
     <div class="row">
-      {% include 'components/navigation/side_menu.html' %}
+      {% include 'navigation/vertical_menu.html' %}
       <div class="col-md-{{ content_columns }} main-content">
         {% if image %}
           <img src="{{ image }}" class="leading-image">
@@ -61,7 +61,7 @@
     </div>
   </main>
   <footer>
-  {% include 'components/footer/local_footer.html' %}
-  {% include 'components/footer/global_footer.html' %}
+  {% include 'layouts/footer/local/footer.html' %}
+  {% include 'layouts/footer/global/footer.html' %}
   </footer>
 {% endblock %}

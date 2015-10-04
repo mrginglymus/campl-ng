@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% import 'components/inpage/navigation/nav.html' as nav %}
+{% import 'components/navigation/nav.html' as nav %}
 
 {% block body %}
 <header>
@@ -36,7 +36,7 @@
   <div class="row">
     <div class="col-md-12 main-content">
       <div style="padding-top:5px;" class="clearfix">
-        {{ nav.nav(nav.NAV_ITEMS_EXAMPLE[:-1], 'pill', local=true, extra_classes="nav-stages") }}
+        {{ nav.nav(EXAMPLES.NAV_ITEMS[:-1], 'pill', local=true, extra_classes="nav-stages") }}
       </div>
       <hr style="margin-top:5px;">
       <div class="p-a">
