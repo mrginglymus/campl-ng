@@ -4,6 +4,8 @@ sass_options =
   require: './lib/themes.rb',
   compass: true,
 
+uuid = require('node-uuid')
+
 module.exports = (grunt) ->
   
   grunt.loadNpmTasks 'grunt-contrib-sass'
@@ -16,6 +18,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-sass-globbing'
   grunt.loadNpmTasks 'grunt-scss-lint'
   grunt.loadNpmTasks 'grunt-exec'
+  grunt.loadNpmTasks 'grunt-text-replace'
   
   grunt.initConfig
     pkg: grunt.file.readJSON('package.json')
@@ -86,6 +89,17 @@ module.exports = (grunt) ->
         src: 'build/js/theme_switcher.js'
         dest: 'build/js/theme_switcher.min.js'
     
+    replace:
+      image_cache :
+        src: ['build/**/*.html', '!build/templates/**/*.html'],
+        overwrite: true,
+        replacements: [
+          from: /(http\:\/\/lorempixel\.com\/\d+\/\d+\/)/g
+          to: (lp) ->
+            u = uuid.v4()
+            grunt.event.emit('getimg', lp, u)
+            return grunt.config.data.local_settings.root_url + '/images/' + u
+        ]
     exec:
       html:
         cmd: 'plenv/bin/python make.py'
@@ -136,4 +150,12 @@ module.exports = (grunt) ->
   
   grunt.registerTask 'dist', ['clean:dist', 'build', 'copy:dist']
 
-  grunt.registerTask 'deploy', ['copy:deploy']  
+  grunt.registerTask 'deploy', ['copy:deploy']
+  
+  grunt.registerTask 'cache_images', ['replace:image_cache'] 
+
+  grunt.event.on 'getimg', (lp, u) ->
+    grunt.util.spawn
+      cmd: 'wget',
+      args: ['-O', 'build/images/' + u, lp],
+    
