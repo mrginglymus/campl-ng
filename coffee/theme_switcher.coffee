@@ -4,7 +4,7 @@ window.set_theme = (theme) ->
   clist.remove(clist.item(clist.length-1))
   clist.add "theme-#{theme}"
 
-$ ->
+jQuery ($) ->
   theme = Cookies.get "theme"
   theme = theme ? "turquoise"
   set_theme theme

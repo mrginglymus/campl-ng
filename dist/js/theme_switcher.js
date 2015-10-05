@@ -7,7 +7,7 @@
     return clist.add("theme-" + theme);
   };
 
-  $(function() {
+  jQuery(function($) {
     var theme;
     theme = Cookies.get("theme");
     theme = theme != null ? theme : "turquoise";

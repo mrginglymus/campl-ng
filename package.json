@@ -27,6 +27,8 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-exec": "^0.4.6",
     "grunt-sass-globbing": "^1.4.0",
-    "grunt-scss-lint": "^0.3.8"
+    "grunt-scss-lint": "^0.3.8",
+    "grunt-text-replace": "^0.4.0",
+    "node-uuid": "^1.4.3"
   }
 }

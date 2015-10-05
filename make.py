@@ -36,46 +36,36 @@ with open('themes.json') as f:
 with open('local_settings.json') as f:
   local_settings = json.loads(f.read())
   
-def make_html():
-    
+env = Environment(loader=FileSystemLoader('templates'))
 
-  env = Environment(loader=FileSystemLoader('templates'))
+# add functions
+for fname in functions.__all__:
+  env.globals.update(**{fname:functions.__dict__[fname]})
   
-  # add functions
-  for fname in functions.__all__:
-    env.globals.update(**{fname:functions.__dict__[fname]})
-    
-  env.globals['LINKS'] = {}
+env.globals['LINKS'] = {}
 
-  # add links
-  for lname in links.__all__:
-    env.globals['LINKS'][lname] = links.__dict__[lname]
+# add links
+for lname in links.__all__:
+  env.globals['LINKS'][lname] = links.__dict__[lname]
 
-  env.globals['EXAMPLES'] = {}
+env.globals['EXAMPLES'] = {}
 
-  for ex in examples.__all__:
-    env.globals['EXAMPLES'][ex] = examples.__dict__[ex]
-  
-  env.globals.update(**{
-    'ROOT_URL': local_settings['root_url'] ,
-    'SITE_NAME': SITE_NAME,
-    'LOCAL_JS': LOCAL_JS,
-    'REMOTE_JS': REMOTE_JS,
-    'MENU': structure.pages,
-    'COLOURS': COLOURS,
-    'CACHE_IMAGES': args.cacheimages,
-  })
-  
+for ex in examples.__all__:
+  env.globals['EXAMPLES'][ex] = examples.__dict__[ex]
 
-  for page in structure.pages:
-    page.render(env)
-  
-  structure.front_page.render(env)
-    
+env.globals.update(**{
+  'ROOT_URL': local_settings['root_url'] ,
+  'SITE_NAME': SITE_NAME,
+  'LOCAL_JS': LOCAL_JS,
+  'REMOTE_JS': REMOTE_JS,
+  'MENU': structure.pages,
+  'COLOURS': COLOURS,
+})
 
-parser = argparse.ArgumentParser(description='Make campl-ng')
-parser.add_argument('--cache-images', dest='cacheimages', action='store_true')
 
-args = parser.parse_args()
+for page in structure.pages:
+  page.render(env)
 
-make_html()
+structure.front_page.render(env)
+
+
