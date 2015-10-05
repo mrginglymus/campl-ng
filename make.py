@@ -5,7 +5,7 @@ import shutil
 import urllib
 from subprocess import call
 import argparse
-import json
+import simplejson as json
 from ordereddict import OrderedDict
 from jinja2 import FileSystemLoader, Environment
 import codecs
