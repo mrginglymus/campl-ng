@@ -23,7 +23,8 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-exec'
   grunt.loadNpmTasks 'grunt-text-replace'
   grunt.loadNpmTasks 'grunt-rsync'
-  grunt.loadNpmTasks('grunt-coffeelint');
+  grunt.loadNpmTasks 'grunt-coffeelint'
+  grunt.loadNpmTasks 'grunt-html'
 
   grunt.initConfig
     pkg: grunt.file.readJSON('package.json')
@@ -39,7 +40,13 @@ module.exports = (grunt) ->
       src: ['scss/**/*.scss']
 
     coffeelint:
-      src: ['coffee/**/*.coffee']
+      config:
+        max_line_length:
+          level: 'ignore'
+      src: ['coffee/**/*.coffee', 'Gruntfile.coffee']
+
+    htmllint:
+      src: ['build/**/*.html', '!build/templates/**/*', 'build/templates/**/index.html']
 
     sass_globbing:
       core:

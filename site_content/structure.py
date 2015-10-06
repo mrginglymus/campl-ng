@@ -7,7 +7,9 @@ import string
 
 
 A_TO_Z = list(
-  [l, lipsum(5) if random() > 0.2 else None, False] for l in string.ascii_uppercase
+  [
+    l, lipsum(5) if random() > 0.2 else None, False
+  ] for l in string.ascii_uppercase
 )
 
 A_TO_Z[0][1] = lipsum(5)
@@ -25,12 +27,13 @@ def get_directory_structure(rootdir, ext):
   start = rootdir.rfind(os.sep) + 1
   for path, dirs, files in os.walk(rootdir):
     folders = path[start:].split(os.sep)
-    files = filter(lambda x: x.endswith('.%s'%ext), files)
+    files = filter(lambda x: x.endswith('.%s' % ext), files)
     subdir = OrderedDict.fromkeys(files)
     parent = reduce(OrderedDict.get, folders[:-1], dir)
     parent[folders[-1]] = subdir
   return dir
-  
+
+
 def shuffle_dirs(dir, cls):
   for p, c in dir.items():
     if c:
