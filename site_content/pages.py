@@ -182,10 +182,7 @@ class Page(object):
         self.vertical_breadcrumb_children = [
           (child.title, child.url) for child in parent.children
         ]
-        if parent.parent:
-          self.vertical_breadcrumb_siblings = [
-            (child.title, child.url) for child in parent.parent.children
-          ]
+      self.vertical_breadcrumb_siblings = parent.vertical_breadcrumb_siblings
 
   @property
   def url(self):
