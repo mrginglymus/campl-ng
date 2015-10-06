@@ -91,7 +91,7 @@ module.exports = (grunt) ->
         dest: 'build/js/theme_switcher.min.js'
     
     replace:
-      image_cache :
+      image_cache:
         src: ['build/**/*.html', '!build/templates/**/*.html'],
         overwrite: true,
         replacements: [
@@ -101,6 +101,15 @@ module.exports = (grunt) ->
             r = execSync "wget -O build/images/" + u + " " + lp
             return grunt.config.data.local_settings.root_url + '/images/' + u
         ]
+      root_url:
+        src: ['build/**/*.html', '!build/templates/**/*', 'build/templates/**/index.html']
+        overwrite: true
+        replacements: [
+          from: /\=\"\/(?!\/)/g
+          to: ->
+            return '="' + grunt.config.data.local_settings.root_url + '/'
+        ]
+        
     exec:
       html:
         cmd: 'plenv/bin/python make.py'
@@ -145,7 +154,7 @@ module.exports = (grunt) ->
   
   grunt.registerTask 'build-images', ['copy:images']
 
-  grunt.registerTask 'build-html', ['exec:html']
+  grunt.registerTask 'build-html', ['exec:html', 'replace:root_url']
   
   grunt.registerTask 'build', ['clean:build', 'build-css', 'build-js', 'build-images', 'build-html', 'copy:deploy']
   

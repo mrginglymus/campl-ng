@@ -22,11 +22,11 @@ REFERENCING_TEMPLATES = {}
 
 TEMPLATE_PAGES = []
 
-def template_to_tuple(templates, root_url):
+def template_to_tuple(templates):
   return [
     (
       ' > '.join(t.split('/')),
-      '%s/templates/%s' % (root_url, t)
+      '/templates/%s' % t
     ) for t in templates
   ]
 
@@ -190,8 +190,8 @@ class TemplatePage(Page):
       context = {
         'page': self,
         'template': env.loader.get_source(env, template_file)[0],
-        'template_references': template_to_tuple(TEMPLATE_REFERENCES.get(template_file, []), env.globals['ROOT_URL']),
-        'referencing_templates': template_to_tuple(REFERENCING_TEMPLATES.get(template_file, []), env.globals['ROOT_URL']),
+        'template_references': template_to_tuple(TEMPLATE_REFERENCES.get(template_file, [])),
+        'referencing_templates': template_to_tuple(REFERENCING_TEMPLATES.get(template_file, [])),
       }
       destination = os.path.join('build', self.url[1:], 'index.html')
     

@@ -8,18 +8,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     
-    <!--[if gte IE 10]><!--><link rel="stylesheet" href="{{ ROOT_URL }}/css/campl.css"><!--<![endif]-->
+    <!--[if gte IE 10]><!--><link rel="stylesheet" href="/css/campl.css"><!--<![endif]-->
     <!--[if lte IE 9 ]>
-      <link rel="stylesheet" href="{{ ROOT_URL }}/css/campl_legacy.css">
+      <link rel="stylesheet" href="/css/campl_legacy.css">
     <![endif]-->
 
-    <link rel="stylesheet" href="{{ ROOT_URL }}/css/meta.css">
+    <link rel="stylesheet" href="/css/meta.css">
     
     {% for js in REMOTE_JS %}
     <script type="text/javascript" src={{ js }}></script>
     {% endfor %}
     {% for js in LOCAL_JS %}
-    <script type="text/javascript" src="{{ ROOT_URL }}/{{ js }}"></script>
+    <script type="text/javascript" src="/{{ js }}"></script>
     {% endfor %}
     <script type="text/javascript" src="//use.typekit.com/hyb5bko.js"></script>
     <script type="text/javascript">

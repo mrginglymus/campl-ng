@@ -33,9 +33,6 @@ JS = [os.path.basename(js) for js in REMOTE_JS + LOCAL_JS]
 with open('themes.json') as f:
   COLOURS = json.loads(f.read(), object_pairs_hook=OrderedDict)
 
-with open('local_settings.json') as f:
-  local_settings = json.loads(f.read())
-  
 env = Environment(loader=FileSystemLoader('templates'))
 
 # add functions
@@ -54,7 +51,6 @@ for ex in examples.__all__:
   env.globals['EXAMPLES'][ex] = examples.__dict__[ex]
 
 env.globals.update(**{
-  'ROOT_URL': local_settings['root_url'] ,
   'SITE_NAME': SITE_NAME,
   'LOCAL_JS': LOCAL_JS,
   'REMOTE_JS': REMOTE_JS,

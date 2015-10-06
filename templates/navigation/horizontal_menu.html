@@ -2,12 +2,12 @@
   <div>
     <ul class="nav navbar-nav nav-local">
       <li class="nav-item">
-        <a class="nav-link" href="{{ ROOT_URL }}">Home</a>
+        <a class="nav-link" href="/">Home</a>
       </li>
       {% for _page in MENU %}
         {% if not _page.children %}
         <li class="nav-item{% if not page.front_page and _page.title==page.horizontal_breadcrumb[1][0] %} active{% endif %}">
-          <a class="nav-link" href="{{ ROOT_URL }}{{ _page.url }}">{{ _page.title }}</a>
+          <a class="nav-link" href="{{ _page.url }}">{{ _page.title }}</a>
         </li>
         {% else %}
         <li class="nav-item{% if not page.front_page and _page.title==page.horizontal_breadcrumb[1][0] %} active{% endif %} dropdown">
@@ -17,12 +17,12 @@
           <ul class="dropdown-menu">
             {% if _page.source %}
             <li>
-              <a href="{{ ROOT_URL }}{{ _page.url }}" class="dropdown-item">{{ _page.title }} - Overview</a>
+              <a href="{{ _page.url }}" class="dropdown-item">{{ _page.title }} - Overview</a>
             </li>
             {% endif %}
             {% for __page in _page.children %}
             <li>
-               <a href="{{ ROOT_URL }}{{ __page.url }}" class="dropdown-item">{{ __page.title }}</a>
+               <a href="{{ __page.url }}" class="dropdown-item">{{ __page.title }}</a>
             </li>
             {% endfor %}
           </ul>
