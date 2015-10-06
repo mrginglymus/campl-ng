@@ -9,6 +9,8 @@ execSync = require('child_process').execSync
 
 module.exports = (grunt) ->
   
+  grunt.option('target', grunt.option('target') || 'local')
+  
   grunt.loadNpmTasks 'grunt-contrib-sass'
   grunt.loadNpmTasks 'grunt-contrib-clean'
   grunt.loadNpmTasks 'grunt-contrib-cssmin'
@@ -20,6 +22,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-scss-lint'
   grunt.loadNpmTasks 'grunt-exec'
   grunt.loadNpmTasks 'grunt-text-replace'
+  grunt.loadNpmTasks 'grunt-rsync'
   
   grunt.initConfig
     pkg: grunt.file.readJSON('package.json')
@@ -99,7 +102,7 @@ module.exports = (grunt) ->
           to: (lp) ->
             u = uuid.v4()
             r = execSync "wget -O build/images/" + u + " " + lp
-            return grunt.config.data.local_settings.root_url + '/images/' + u
+            return grunt.config.data.local_settings[grunt.option('target')].root_url + '/images/' + u
         ]
       root_url:
         src: ['build/**/*.html', '!build/templates/**/*', 'build/templates/**/index.html']
@@ -107,7 +110,7 @@ module.exports = (grunt) ->
         replacements: [
           from: /\=\"\/(?!\/)/g
           to: ->
-            return '="' + grunt.config.data.local_settings.root_url + '/'
+            return '="' + grunt.config.data.local_settings[grunt.option('target')].root_url + '/'
         ]
         
     exec:
@@ -132,20 +135,30 @@ module.exports = (grunt) ->
           '!css/meta**'
         ]
         dest: 'dist'
-      deploy:
-        expand: true,
-        cwd: 'build'
-        src: ['**']
-        dest: '<%= local_settings.release_dir %>'
+    
+    rsync:
+      options:
+        recursive: true
+      local:
+        options:
+          src: "build/*"
+          dest: "<%= local_settings.local.release_dir %>"
+      remote:
+        options:
+          src: "build/*"
+          dest: "<%= local_settings.remote.release_dir %>"
+          host: "<%= local_settings.remote.host %>"
           
+    
     watch:
       css:
         files: 'scss/**/*.scss'
-        tasks: ['sass_globbing', 'sass:core', 'sass:meta', 'copy:deploy']
+        tasks: ['sass_globbing', 'sass:core', 'sass:meta', 'copy:local']
       html:
         files: 'templates/**/*.html'
-        tasks: ['exec:html', 'copy:deploy']
-    
+        tasks: ['exec:html', 'rsync:local']
+  
+  
   grunt.registerTask 'default', ['clean:build', 'sass:core', 'coffee:core']
   
   grunt.registerTask 'build-css', ['sass_globbing', 'sass', 'cssmin']
@@ -156,10 +169,12 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'build-html', ['exec:html', 'replace:root_url']
   
-  grunt.registerTask 'build', ['clean:build', 'build-css', 'build-js', 'build-images', 'build-html', 'copy:deploy']
+  grunt.registerTask 'build', ['clean:build', 'build-css', 'build-js', 'build-images', 'build-html']
   
   grunt.registerTask 'dist', ['clean:dist', 'build', 'copy:dist']
 
-  grunt.registerTask 'deploy', ['copy:deploy']
+  grunt.registerTask 'deploy', ['rsync:' + grunt.option('target')]
   
-  grunt.registerTask 'cache-images', ['replace:image_cache', 'copy:deploy']
+  grunt.registerTask 'cache-images', ['replace:image_cache']
+  
+
