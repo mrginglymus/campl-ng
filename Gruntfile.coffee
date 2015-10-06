@@ -153,10 +153,13 @@ module.exports = (grunt) ->
     watch:
       css:
         files: 'scss/**/*.scss'
-        tasks: ['sass_globbing', 'sass:core', 'sass:meta', 'copy:local']
+        tasks: ['sass_globbing', 'sass:core', 'sass:meta', 'rsync:local']
       html:
         files: 'templates/**/*.html'
-        tasks: ['exec:html', 'rsync:local']
+        tasks: ['build-html', 'rsync:local']
+      js:
+        files: 'coffee/**/*.coffee'
+        tasks: ['coffee', 'rsync:local']
   
   
   grunt.registerTask 'default', ['clean:build', 'sass:core', 'coffee:core']
