@@ -160,6 +160,9 @@ module.exports = (grunt) ->
       js:
         files: 'coffee/**/*.coffee'
         tasks: ['coffee', 'rsync:local']
+      scsslint:
+        files: ['scss/**/*.scss', 'scss/.scss-lint.yml']
+        tasks: ['scsslint']
   
   
   grunt.registerTask 'default', ['clean:build', 'sass:core', 'coffee:core']

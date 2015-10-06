@@ -1,27 +1,33 @@
-ul.pagination {
-  &> li {
-    &> a, &> span {
+.pagination {
+  > li {
+    > a,
+    > span {
       margin: 0 2px;
       line-height: 12px;
       font-size: 11px;
     }
   }
-  &> li.active {
-    &> a, &> span {
+
+  > .active {
+    > a,
+    > span {
       font-weight: bold;
     }
   }
-  
-  &> li.previous, &> li.next {
-    &> a, &> span {
-      color: #fff;
-      background-color: #000;
+
+  > .previous,
+  > .next {
+    > a,
+    > span {
+      color: $white;
+      background-color: $black;
     }
   }
-  
-  &> li > span.elipsis {
-    &, &:hover {
-      background-color: #fff;
+
+  > li > .elipsis {
+    &,
+    &:hover {
+      background-color: $white;
       border: 0;
     }
   }

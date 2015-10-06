@@ -1,10 +1,14 @@
 
 // brand colours
 $gray-darker:               #171717;
+
 $brand-success:             #55a51c;
 $brand-info:                #0072cf;
 $brand-warning:             #ea7125;
 $brand-danger:              #ff0000;
+
+$white:                     #ffffff;
+$black:                     #000000;
 
 
 // yay flexbox
@@ -32,8 +36,8 @@ $grid-breakpoints: (
 
 $container-max-widths: (
   sm: 100%,
-  md: 100%,  
-  lg: 100%, 
+  md: 100%,
+  lg: 100%,
   xl: 1177px
 );
 
@@ -73,9 +77,9 @@ $table-border-color:            $border-color;
 
 $btn-font-weight:                600;
 $btn-primary-bg:                 #171717;
-$btn-secondary-color:            #000;
+$btn-secondary-color:            $black;
 $btn-secondary-bg:               #e4e4e4;
-$btn-secondary-border:           #999;
+$btn-secondary-border:           #999999;
 
 // pagination
 
@@ -85,11 +89,11 @@ $pagination-padding-y:                5px;
 $pagination-color:                     #171717;
 $pagination-border:                    #d6d6d6;
 
-$pagination-hover-color:               #000000;
+$pagination-hover-color:               $black;
 $pagination-hover-bg:                  #f2f2f2;
 $pagination-hover-border:              #d6d6d6;
 
-$pagination-active-color:              #000;
+$pagination-active-color:              $black;
 $pagination-active-bg:                 #f2f2f2;
 $pagination-active-border:             #d6d6d6;
 
@@ -102,8 +106,8 @@ $card-border-radius: 0;
 $breadcrumb-padding-horizontal: 6px;
 
 $breadcrumb-bg:                 inherit;
-$breadcrumb-divider-color:      #ffffff;
-$breadcrumb-active-color:       #ffffff;
+$breadcrumb-divider-color:      $white;
+$breadcrumb-active-color:       $white;
 
 // carousel
 
@@ -113,7 +117,7 @@ $carousel-control-opacity:                    1;
 
 // datetimepicker
 
-$bs-datetimepicker-active-bg: #888;
+$bs-datetimepicker-active-bg: #888888;
 $bs-datetimepicker-text-shadow: none;
 
 $fa-font-path:        "//netdna.bootstrapcdn.com/font-awesome/4.4.0/fonts";

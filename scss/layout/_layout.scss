@@ -9,10 +9,10 @@ html {
 }
 
 .main-content {
-  background-color: #fff;
+  background-color: $white;
 }
 
-img.leading-image {
+.leading-image {
   width: 100%;
 }
 
@@ -24,14 +24,14 @@ body:not(.active) {
 @if $enable-flex {
   body {
     @include display-flex(flex);
-    min-height: 100vh;
     @include flex-direction(column);
+    min-height: 100vh;
   }
 
   main {
     @include flex-grow(1);
-    background-color: #fff;
     @include display-flex(flex);
+    background-color: $white;
     width: 100%;
   }
 
@@ -39,9 +39,10 @@ body:not(.active) {
   main > .row {
     @include flex-grow(1);
   }
-  
+
   @media screen and (min-width:0\0) {
-    body, main {
+    body,
+    main {
       display: block;
     }
   }

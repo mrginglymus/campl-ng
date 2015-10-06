@@ -1,35 +1,35 @@
 @import "compass/css3/images";
 
-
 @include media-breakpoint-up(xl) {
   .carousel:after {
+    @include theme-element(background-color, page-background);
     content: " ";
     height: calc(100% - 50px);
     width: 100vw;
     position: absolute;
     bottom: 50px;
-    left: calc(#{map-get($container-max-widths, xl)/2} - 50vw);;
+    left: calc(#{map-get($container-max-widths, xl) / 2} - 50vw);
     z-index: -1;
-    @include theme_element(background-color, page-background);
   }
 }
-  
-  
+
 .carousel img {
   width: 100%;
 }
 
 .carousel-control.carousel-control-campage {
-  background-color: #000 !important;
+  background-color: $black !important;
+
   &:hover {
-    background-color: #000 !important;
+    background-color: $black !important;
   }
 }
 
 .carousel-control {
   // have to be this specific in order to override bootstrap defaults
-  &.left, &.right {
-    @include theme_element(background-color, selected);
+  &.left,
+  &.right {
+    @include theme-element(background-color, selected);
     height: 50px;
     width: 50px;
     top: auto;
@@ -38,19 +38,19 @@
     background-position: center;
 
     &:hover {
+      @include theme-element(background-color, navbar);
       opacity: 1;
-      @include theme_element(background-color, navbar);
     }
   }
-  
+
   &.right {
-    @include background-image(inline-image('carousel-right.png'));
+    @include background-image(inline-image("carousel-right.png"));
   }
-  
+
   &.left {
+    @include background-image(inline-image("carousel-left.png"));
     left: auto;
     right: 51px;
-    @include background-image(inline-image('carousel-left.png'));
 
   }
 }
@@ -67,14 +67,15 @@
   font-size: 19px;
   line-height: 25px;
   padding-right: 40px;
-  
+
   a {
-    color: #fff;
+    color: $white;
+
     @include hover-focus {
       text-decoration: none;
     }
   }
-  
+
   .carousel-page {
     font-family: $font-family-sans-serif;
     line-height: 18px;
@@ -86,13 +87,13 @@
 }
 
 .carousel-text {
-  @include theme_element(background-color, selected);
+  @include theme-element(background-color, selected);
   font-size: 40px;
   line-height: 48px;
   font-weight: 300;
   font-family: $font-family-sans-serif-extra;
   text-align: center;
-  color: #fff;
+  color: $white;
   padding: $spacer;
 }
 
@@ -104,25 +105,29 @@
     left: 0;
     right: 0;
     position: static;
+
     .carousel-page {
       right: 66px;
     }
   }
-  
+
   .carousel-control {
-    &.left, &.right {
+    &.left,
+    &.right {
       top: 0;
       height: 100%;
       opacity: 0.8;
+
       @include hover-focus {
         opacity: 0.8;
       }
     }
+
     &.left {
       left: 0;
     }
   }
-  
+
   .carousel-text {
     padding: 20px 60px;
   }

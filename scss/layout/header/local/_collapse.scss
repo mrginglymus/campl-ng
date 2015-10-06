@@ -1,37 +1,42 @@
 .local-header {
   @include media-breakpoint-down(sm) {
     .navbar-local {
-      @include theme_element(background-color, page-background);
+      @include theme-element(background-color, page-background);
       li {
+        @include theme-element(background-color, page-background, !important);
         float: none;
-        @include theme_element(background-color, page-background, !important);
+
         @include hover-focus {
-          @include theme_element(background-color, navbar, !important);
+          @include theme-element(background-color, navbar, !important);
         }
       }
+
       .dropdown-menu {
         float: none;
         position: static;
       }
-        
     }
+
     .navbar-toggler {
-      @include theme_element(background-color, navbar);
+      @include theme-element(background-color, navbar);
       border: 0;
       padding: 0;
+
       a {
-        color: #fff;
+        color: $white;
         padding: 15px 25px;
         display: block;
         font-size: 18px;
         line-height: 24px;
         font-family: $font-family-sans-serif-extra;
+
         @include hover-focus {
-          color: #fff;
+          color: $white;
           text-decoration: none;
         }
+
         .mobile-menu-button {
-          @include theme_element(background-color, dark-highlight);
+          @include theme-element(background-color, dark-highlight);
           width: 53px;
           height: 53px;
           display: block;
@@ -44,15 +49,17 @@
 }
 
 .local-menu-button {
+  @include theme-element(background-color, dark-highlight);
   display: block;
   margin: 15px;
   padding: 1px 3px;
-  @include theme_element(background-color, dark-highlight);
-  color: #999;
+  color: #999999;
+
   @include hover-focus {
-    color: #999;
-    @include theme_element(background-color, dark-highlight);
+    @include theme-element(background-color, dark-highlight);
+    color: #999999;
   }
+
   span {
     padding: 4px;
   }

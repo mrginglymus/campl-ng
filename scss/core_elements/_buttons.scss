@@ -1,7 +1,9 @@
 @import "compass/css3/images";
 
-.btn-cta, .btn-vcard {
+.btn-cta,
+.btn-vcard {
   font-weight: normal;
+
   &:hover {
     background-color: #454545;
     border-color: #454545;
@@ -9,13 +11,14 @@
 }
 
 .btn-cta {
-  @include background(#171717 inline-image('primary-cta-chevron.png') no-repeat right 11px top 50%);
+  @include background($gray-darker inline-image("primary-cta-chevron.png") no-repeat right 11px top 50%);
   padding: 5px 25px 5px 10px;
 }
 
 .btn-vcard {
+  @include background($gray-darker inline-image("download.png") no-repeat right 5px top 50%);
   padding-right: 30px;
-  @include background(#171717 inline-image('download.png') no-repeat right 5px top 50%);
+
   &:before {
     @include fa-icon();
     content: $fa-var-user;
@@ -25,6 +28,6 @@
 }
 
 .secondary-cta {
-  @include background(inline-image('secondary-cta-chevron.png') no-repeat 100% 50%);
+  @include background(inline-image("secondary-cta-chevron.png") no-repeat 100% 50%);
   padding-right: 10px;
 }

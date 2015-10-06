@@ -1,13 +1,14 @@
 .global-footer {
-  background-color: #171717;
-  color: #ffffff;
-  
+  background-color: $gray-darker;
+  color: $white;
+
   h3 {
     font-size: 14px;
   }
-  
+
   a {
-    color: #ffffff;
+    color: $white;
+
     @include hover-focus {
       text-decoration: none;
     }

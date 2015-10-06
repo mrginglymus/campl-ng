@@ -1,33 +1,38 @@
 .local-header.subtitle {
   background: none;
   position: relative;
-  .container {
-    @include theme_element(background-color, light-highlight);
-    z-index: 0;
-    overflow: auto;
-    h1 {
-      font-weight: 300;
-      color: #ffffff;
-      @include media-breakpoint-down(md) {
-        font-size: 28px;
-        line-height: 34px;
-      }
-      &.app {
-        font-size: 26px;
-        line-height: 29px;
-        margin-bottom: 0;
-      }
-    }
-  }
+
   @include media-breakpoint-up(md) {
     &:after {
-      @include theme_element(background-color, page-background);
+      @include theme-element(background-color, page-background);
       content: " ";
       width: 100%; // not vw because scrollbars
       height: calc(100% - 50px);
       position: absolute;
       bottom: 50px;
       z-index: -1;
+    }
+  }
+
+  .container {
+    @include theme-element(background-color, light-highlight);
+    z-index: 0;
+    overflow: auto;
+
+    h1 {
+      font-weight: 300;
+      color: $white;
+
+      @include media-breakpoint-down(md) {
+        font-size: 28px;
+        line-height: 34px;
+      }
+
+      &.app {
+        font-size: 26px;
+        line-height: 29px;
+        margin-bottom: 0;
+      }
     }
   }
 }

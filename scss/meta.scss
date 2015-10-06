@@ -3,13 +3,15 @@
 main .main-content {
   @include display-flex(flex);
   @include flex-direction(column);
-  &> pre {
-    margin: 0;
+
+  > pre {
     @include display-flex(flex);
     @include flex-grow(1);
-    &> code {
-      font-size: 1.2em;
+    margin: 0;
+
+    > code {
       @include flex-grow(1);
+      font-size: 1.2em;
     }
   }
 }

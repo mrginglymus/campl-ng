@@ -1,45 +1,49 @@
-@mixin alert_style($colour) {
+@mixin alert-style($colour) {
   border-color: $colour;
+
   .row div:first-child {
     color: $colour;
   }
 }
 
 .alert-top {
-  border-width: 0px 0px 4px;
-  background-color: #fff;
-  color: #000;
+  border-width: 0 0 4px;
+  background-color: $white;
+  color: $black;
 }
 
 .alert {
   &.alert-success {
-    @include alert_style($brand-success);
+    @include alert-style($brand-success);
   }
-  
+
   &.alert-warning {
-    @include alert_style($brand-warning);
+    @include alert-style($brand-warning);
   }
-  
+
   &.alert-danger {
-    @include alert_style($brand-danger);
+    @include alert-style($brand-danger);
   }
-  
+
   &.alert-info {
-    @include alert_style($brand-info);
+    @include alert-style($brand-info);
   }
-  
+
   .row div {
     padding: 2px;
   }
-  
+
   .row div:first-child {
+    font-weight: bold;
+
     @include media-breakpoint-up(md) {
       text-align: right;
     }
-    font-weight: bold;
+
     span {
       vertical-align: top;
     }
+
     .fa {
       position: relative;
       top: -0.25em;
