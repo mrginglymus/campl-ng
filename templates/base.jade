@@ -4,13 +4,13 @@ html(lang="en")
     meta(http-equiv="Content-Type", content="text/html; charset=UTF-8")
     title CamPL-NG: #{page.title}
 
-    link(rel="stylesheet", href="#{ROOT}/css/campl.css")
+    link(rel="stylesheet", href="/css/campl.css")
 
     each js in REMOTE_JS
       script(type="text/javascript", src="#{js}")
 
-    script(type="text/javascript", src="#{ROOT}/js/campl.js")
-    script(type="text/javascript", src="#{ROOT}/js/theme_switcher.js")
+    script(type="text/javascript", src="/js/campl.js")
+    script(type="text/javascript", src="/js/theme_switcher.js")
     script(type="text/javascript" src="//use.typekit.com/hyb5bko.js")
     script(type="text/javascript").
       try {

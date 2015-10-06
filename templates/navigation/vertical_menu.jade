@@ -1,10 +1,10 @@
-div.col-md-3.tertiary-navigation.collapse#tertiary-navigation(class=page.side_menu ? "navbar-toggleable-sm" : "hidden-md-up")
+div.col-md-3.vertical-navigation.collapse#vertical-navigation(class=page.side_menu ? "navbar-toggleable-sm" : "hidden-md-up")
   ul.nav.nav-pills.nav-stacked.nav-side
     each _page in page.vertical_breadcrumb
       li.nav-item
         a.nav-link(href=ROOT + '/' + _page[1])= _page[0]
   ul.list-unstyled
-    li.tertiary-navigation-parent
+    li.vertical-navigation-parent
       if page.vertical_breadcrumb_parent[1]
         a(href=ROOT + '/' + page.vertical_breadcrumb_parent[1])= page.vertical_breadcrumb_parent[0]
       else

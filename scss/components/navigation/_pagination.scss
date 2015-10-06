@@ -22,7 +22,7 @@ ul.pagination {
   &> li > span.elipsis {
     &, &:hover {
       background-color: #fff;
-      border: none;
+      border: 0;
     }
   }
 }

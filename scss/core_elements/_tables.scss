@@ -1,10 +1,10 @@
 .table:not(.table-bordered) {
   th, td {
-    border: none;
+    border: 0;
   }
   thead {
     th, td {
-      border: none;
+      border: 0;
     }
   }
 }

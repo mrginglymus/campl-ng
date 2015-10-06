@@ -6,7 +6,7 @@ $themes: get_themes();
     @at-root {
       .theme-#{$colour} {
         #{$element} {
-          #{$property}:  map-get($map, $variant) #{$important};
+          #{$property}: map-get($map, $variant) #{$important};
         }
       }
     }

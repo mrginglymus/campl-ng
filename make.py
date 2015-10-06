@@ -5,12 +5,12 @@ import shutil
 import urllib
 from subprocess import call
 import argparse
-import json
+import simplejson as json
 from ordereddict import OrderedDict
 from jinja2 import FileSystemLoader, Environment
 import codecs
 
-from site_content import links, structure
+from site_content import links, structure, examples, functions
 
 SITE_NAME = 'CamPL-NG'
 
@@ -33,44 +33,35 @@ JS = [os.path.basename(js) for js in REMOTE_JS + LOCAL_JS]
 with open('themes.json') as f:
   COLOURS = json.loads(f.read(), object_pairs_hook=OrderedDict)
 
-with open('local_settings.json') as f:
-  local_settings = json.loads(f.read())
+env = Environment(loader=FileSystemLoader('templates'))
+
+# add functions
+for fname in functions.__all__:
+  env.globals.update(**{fname:functions.__dict__[fname]})
   
-def make_html():
-    
+env.globals['LINKS'] = {}
 
-  env = Environment(loader=FileSystemLoader('templates'))
-  
-  from lib import functions
+# add links
+for lname in links.__all__:
+  env.globals['LINKS'][lname] = links.__dict__[lname]
 
-  # add functions
-  for fname in functions.__all__:
-    env.globals.update(**{fname:functions.__dict__[fname]})
-    
-  # add links
-  for lname in links.__all__:
-    env.globals.update(**{lname:links.__dict__[lname]})
-  
-  env.globals.update(**{
-    'ROOT_URL': local_settings['root_url'] ,
-    'SITE_NAME': SITE_NAME,
-    'LOCAL_JS': LOCAL_JS,
-    'REMOTE_JS': REMOTE_JS,
-    'MENU': structure.pages,
-    'COLOURS': COLOURS,
-    'CACHE_IMAGES': args.cacheimages,
-  })
-  
+env.globals['EXAMPLES'] = {}
 
-  for page in structure.pages:
-    page.render(env)
-  
-  structure.front_page.render(env)
-    
+for ex in examples.__all__:
+  env.globals['EXAMPLES'][ex] = examples.__dict__[ex]
 
-parser = argparse.ArgumentParser(description='Make campl-ng')
-parser.add_argument('--cache-images', dest='cacheimages', action='store_true')
+env.globals.update(**{
+  'SITE_NAME': SITE_NAME,
+  'LOCAL_JS': LOCAL_JS,
+  'REMOTE_JS': REMOTE_JS,
+  'MENU': structure.pages,
+  'COLOURS': COLOURS,
+})
 
-args = parser.parse_args()
 
-make_html()
+for page in structure.pages:
+  page.render(env)
+
+structure.front_page.render(env)
+
+

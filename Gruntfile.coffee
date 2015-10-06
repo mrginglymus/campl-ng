@@ -4,31 +4,49 @@ sass_options =
   require: './lib/themes.rb',
   compass: true,
 
+uuid = require('node-uuid')
+execSync = require('child_process').execSync
+
 module.exports = (grunt) ->
+  
+  grunt.option('target', grunt.option('target') || 'local')
   
   grunt.loadNpmTasks 'grunt-contrib-sass'
   grunt.loadNpmTasks 'grunt-contrib-clean'
   grunt.loadNpmTasks 'grunt-contrib-cssmin'
-  grunt.loadNpmTasks 'grunt-contrib-concat'
   grunt.loadNpmTasks 'grunt-contrib-uglify'
   grunt.loadNpmTasks 'grunt-contrib-copy'
   grunt.loadNpmTasks 'grunt-contrib-jade'
   grunt.loadNpmTasks 'grunt-contrib-watch'
+  grunt.loadNpmTasks 'grunt-contrib-coffee'
+  grunt.loadNpmTasks 'grunt-sass-globbing'
+  grunt.loadNpmTasks 'grunt-scss-lint'
+  grunt.loadNpmTasks 'grunt-exec'
+  grunt.loadNpmTasks 'grunt-text-replace'
+  grunt.loadNpmTasks 'grunt-rsync'
   
   grunt.initConfig
     pkg: grunt.file.readJSON('package.json')
     local_settings: grunt.file.readJSON('local_settings.json')
     site_structure: require('./site_content/structure.coffee')
 
-    env:
-      local:
-        ROOT_DIR: '/Users/bill/Sites/campl-ng'
-        ROOT_URL: '/~bill/campl-ng'
-
     clean: 
       dist: 'dist',
       build: 'build',
-      
+    
+    scsslint:
+      options:
+        config: 'scss/.scss-lint.yml'
+      src: ['scss/**/*.scss']
+
+    sass_globbing:
+      core:
+        files:
+          'scss/_components.scss': 'scss/components/**/*.scss',
+          'scss/_core_elements.scss': 'scss/core_elements/**/*.scss',
+          'scss/_layout.scss': 'scss/layout/**/*.scss',
+          'scss/_navigation.scss': 'scss/navigation/**/*.scss'
+
     sass:
       core:
         options:
@@ -40,6 +58,11 @@ module.exports = (grunt) ->
           sass_options
         files:
           'build/css/campl_legacy.css': 'scss/campl_legacy.scss'
+      meta:
+        options:
+          sass_options
+        files:
+          'build/css/meta.css': 'scss/meta.scss'
     
     cssmin:
       options:
@@ -53,32 +76,49 @@ module.exports = (grunt) ->
           ext: '.min.css',
         ]
     
-    concat:
+    coffee:
       core:
-        src: [
-          'js/menu.js',
-          'js/select_tab.js',
-        ]
-        dest:
-          'build/js/campl.js'
-      dev:
-        src: [
-          'js/theme_switcher.js',
-        ]
-        dest:
-          'build/js/theme_switcher.js'
+        files:
+          'build/js/campl.js': ['coffee/menu.coffee', 'coffee/select_tab.coffee']
+      meta:
+        files:
+          'build/js/theme_switcher.js': ['coffee/theme_switcher.coffee']
     
     uglify:
       options:
         sourceMap: true
         sourceMapIncludeSources: true
       core:
-        src: '<%= concat.core.dest %>'
+        src: 'build/js/campl.js'
         dest: 'build/js/campl.min.js'
-      dev:
-        src: '<%= concat.dev.dest %>'
+      meta:
+        src: 'build/js/theme_switcher.js'
         dest: 'build/js/theme_switcher.min.js'
+    
+    replace:
+      image_cache:
+        src: ['build/**/*.html', '!build/templates/**/*.html'],
+        overwrite: true,
+        replacements: [
+          from: /(http\:\/\/lorempixel\.com\/\d+\/\d+\/)/g
+          to: (lp) ->
+            u = uuid.v4()
+            r = execSync "wget -O build/images/" + u + " " + lp
+            return grunt.config.data.local_settings[grunt.option('target')].root_url + '/images/' + u
+        ]
+      root_url:
+        src: ['build/**/*.html', '!build/templates/**/*', 'build/templates/**/index.html']
+        overwrite: true
+        replacements: [
+          from: /\=\"\/(?!\/)/g
+          to: ->
+            return '="' + grunt.config.data.local_settings[grunt.option('target')].root_url + '/'
+        ]
         
+    exec:
+      html:
+        cmd: 'plenv/bin/python make.py'
+
     copy:
       images:
         expand: true
@@ -94,13 +134,9 @@ module.exports = (grunt) ->
           'images/**',
           'js/**',
           'css/**',
+          '!css/meta**'
         ]
         dest: 'dist'
-      deploy:
-        expand: true
-        cwd: 'build'
-        src: ['**']
-        dest: '<%= local_settings.release_dir %>'
 
     jade:
       options:
@@ -128,30 +164,48 @@ module.exports = (grunt) ->
           src: '**'
           ext: '/index.html'
           dest: 'build'     
-          
-    watch:
-      html:
-        files: 'templates/**'
-        tasks: ['build-html', 'copy:deploy']
-      css:
-        files: 'scss/**'
-        tasks: ['sass:core', 'copy:dist']
     
-  grunt.registerTask 'default', ['clean:build', 'sass:core', 'concat:core']
+    rsync:
+      options:
+        recursive: true
+      local:
+        options:
+          src: "build/*"
+          dest: "<%= local_settings.local.release_dir %>"
+      remote:
+        options:
+          src: "build/*"
+          dest: "<%= local_settings.remote.release_dir %>"
+          host: "<%= local_settings.remote.host %>"
+          
+    
+    watch:
+      css:
+        files: 'scss/**/*.scss'
+        tasks: ['sass_globbing', 'sass:core', 'sass:meta', 'rsync:local']
+      html:
+        files: 'templates/**/*.html'
+        tasks: ['build-html', 'rsync:local']
+      js:
+        files: 'coffee/**/*.coffee'
+        tasks: ['coffee', 'rsync:local']
   
-  grunt.registerTask 'build-css', ['sass', 'cssmin']
   
-  grunt.registerTask 'build-js', ['concat', 'uglify']
+  grunt.registerTask 'default', ['clean:build', 'sass:core', 'coffee:core']
+  
+  grunt.registerTask 'build-css', ['sass_globbing', 'sass', 'cssmin']
+  
+  grunt.registerTask 'build-js', ['coffee', 'uglify']
   
   grunt.registerTask 'build-images', ['copy:images']
+
+  grunt.registerTask 'build-html', ['build-jade', 'replace:root_url']
   
-  grunt.registerTask 'build', ['clean:build', 'build-css', 'build-js', 'build-images', 'copy:deploy']
+  grunt.registerTask 'build', ['clean:build', 'build-css', 'build-js', 'build-images', 'build-html']
   
   grunt.registerTask 'dist', ['clean:dist', 'build', 'copy:dist']
 
-  grunt.registerTask 'deploy', ['copy:deploy']  
-
-  grunt.registerTask 'build-html', "Build HTML from Jade", ->
+  grunt.registerTask 'build-jade', "Build HTML from Jade", ->
     BASE_CONTEXT = 
       ROOT: grunt.config.data.local_settings.root_url
       REMOTE_JS: [
@@ -173,3 +227,7 @@ module.exports = (grunt) ->
     
     for page in grunt.config.data.site_structure
       page.render BASE_CONTEXT, grunt
+
+  grunt.registerTask 'deploy', ['rsync:' + grunt.option('target')]
+  
+  grunt.registerTask 'cache-images', ['replace:image_cache']

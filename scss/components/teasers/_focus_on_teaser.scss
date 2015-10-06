@@ -1,7 +1,7 @@
 @import "compass/css3/images";
 
 .focus-on-teaser {
-  margin: 0 $spacer $spacer $spacer;
+  margin: 0 $spacer $spacer;
   @include theme_element(background-color, page-background);
   .teaser-body {
     padding: 15px;

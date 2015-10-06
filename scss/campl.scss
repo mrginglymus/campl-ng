@@ -66,8 +66,7 @@
 @import "../lib/datetimepicker/src/sass/bootstrap-datetimepicker";
 
 // CamPL-ng components
-@import "core_elements";
-@import "footer";
-@import "header";
-@import "layout";
 @import "components";
+@import "core_elements";
+@import "layout";
+@import "navigation";

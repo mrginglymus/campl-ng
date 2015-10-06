@@ -1,0 +1,15 @@
+@import "compass/css3/flexbox";
+
+main .main-content {
+  @include display-flex(flex);
+  @include flex-direction(column);
+  &> pre {
+    margin: 0;
+    @include display-flex(flex);
+    @include flex-grow(1);
+    &> code {
+      font-size: 1.2em;
+      @include flex-grow(1);
+    }
+  }
+}

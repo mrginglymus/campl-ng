@@ -1,8 +1,9 @@
 .sass-cache
+npm-debug.log
 .ruby-version
 local_settings.json
 *.pyc
 gh-pages/
 build
 node_modules
-local.json
+plenv

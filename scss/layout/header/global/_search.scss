@@ -8,12 +8,12 @@
     background-color: #343434;
     color: #fff;
     font-family: $font-family-sans-serif;
-    border: none;
+    border: 0;
     padding: 7px 8px;
   }
   .input-group-addon {
     background-color: #434343;
-    border: none;
+    border: 0;
     color: #a3a3a3;
   }
   @include media-breakpoint-up(md) {
