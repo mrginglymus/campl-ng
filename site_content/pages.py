@@ -113,12 +113,10 @@ class Page(object):
     else:
       self.horizontal_breadcrumb = horizontal_breadcrumb + [(self.title, None)]
     self.vertical_breadcrumb = vertical_breadcrumb + [(self.title, self.url)]
-    for child in self.children:
-      child.update_breadcrumbs(
-        pages,
-        self.vertical_breadcrumb,
-        self.horizontal_breadcrumb, self
-      )
+
+    vertical_breadcrumb_base = self.vertical_breadcrumb
+    horizontal_breadcrumb_base = self.horizontal_breadcrumb
+
     if self.children:
       self.vertical_breadcrumb_parent = self.horizontal_breadcrumb[-1]
       self.vertical_breadcrumb = self.vertical_breadcrumb[:-1]
@@ -142,47 +140,14 @@ class Page(object):
         self.vertical_breadcrumb_children = [
           (child.title, child.url) for child in parent.children
         ]
-        if parent.parent:
-          self.vertical_breadcrumb_siblings = [
-            (child.title, child.url) for child in parent.parent.children
-          ]
-        else:
-          self.vertical_breadcrumb_siblings = [(p.title, p.url) for p in pages]
-
-  def update_horizontal_breadcrumb(self, breadcrumb=BASE_BREADCRUMB):
-    if self.source:
-      self.horizontal_breadcrumb = breadcrumb + [(self.title, self.url)]
-    else:
-      self.horizontal_breadcrumb = breadcrumb + [(self.title, None)]
+        self.vertical_breadcrumb_siblings = parent.vertical_breadcrumb_siblings
     for child in self.children:
-      child.update_horizontal_breadcrumb(self.horizontal_breadcrumb)
-
-  def update_vertical_breadcrumb(
-    self,
-    breadcrumb=BASE_BREADCRUMB,
-    parent=None
-  ):
-    self.vertical_breadcrumb = breadcrumb + [(self.title, self.url)]
-    for child in self.children:
-      child.update_vertical_breadcrumb(self.vertical_breadcrumb, parent=self)
-    if self.children:
-      self.vertical_breadcrumb_parent = self.vertical_breadcrumb[-1]
-      self.vertical_breadcrumb = self.vertical_breadcrumb[:-1]
-      self.vertical_breadcrumb_children = [
-        (child.title, child.url) for child in self.children
-      ]
-      if parent:
-        self.vertical_breadcrumb_siblings = [
-          (child.title, child.url) for child in parent.children
-        ]
-    else:
-      self.vertical_breadcrumb_parent = self.vertical_breadcrumb[-2]
-      self.vertical_breadcrumb = self.vertical_breadcrumb[:-2]
-      if parent:
-        self.vertical_breadcrumb_children = [
-          (child.title, child.url) for child in parent.children
-        ]
-      self.vertical_breadcrumb_siblings = parent.vertical_breadcrumb_siblings
+      child.update_breadcrumbs(
+        pages,
+        vertical_breadcrumb_base,
+        horizontal_breadcrumb_base,
+        self
+      )
 
   @property
   def url(self):
