@@ -1,4 +1,4 @@
-sass_options = 
+sass_options =
   sourcemap: 'inline',
   trace: true,
   require: './lib/themes.rb',
@@ -8,9 +8,9 @@ uuid = require('node-uuid')
 execSync = require('child_process').execSync
 
 module.exports = (grunt) ->
-  
+
   grunt.option('target', grunt.option('target') || 'local')
-  
+
   grunt.loadNpmTasks 'grunt-contrib-sass'
   grunt.loadNpmTasks 'grunt-contrib-clean'
   grunt.loadNpmTasks 'grunt-contrib-cssmin'
@@ -23,19 +23,23 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-exec'
   grunt.loadNpmTasks 'grunt-text-replace'
   grunt.loadNpmTasks 'grunt-rsync'
-  
+  grunt.loadNpmTasks('grunt-coffeelint');
+
   grunt.initConfig
     pkg: grunt.file.readJSON('package.json')
     local_settings: grunt.file.readJSON('local_settings.json')
 
-    clean: 
+    clean:
       dist: 'dist',
       build: 'build',
-    
+
     scsslint:
       options:
         config: 'scss/.scss-lint.yml'
       src: ['scss/**/*.scss']
+
+    coffeelint:
+      src: ['coffee/**/*.coffee']
 
     sass_globbing:
       core:
@@ -61,7 +65,7 @@ module.exports = (grunt) ->
           sass_options
         files:
           'build/css/meta.css': 'scss/meta.scss'
-    
+
     cssmin:
       options:
         sourceMap: true
@@ -73,7 +77,7 @@ module.exports = (grunt) ->
           dest: 'build/css',
           ext: '.min.css',
         ]
-    
+
     coffee:
       core:
         files:
@@ -81,7 +85,7 @@ module.exports = (grunt) ->
       meta:
         files:
           'build/js/theme_switcher.js': ['coffee/theme_switcher.coffee']
-    
+
     uglify:
       options:
         sourceMap: true
@@ -92,7 +96,7 @@ module.exports = (grunt) ->
       meta:
         src: 'build/js/theme_switcher.js'
         dest: 'build/js/theme_switcher.min.js'
-    
+
     replace:
       image_cache:
         src: ['build/**/*.html', '!build/templates/**/*.html'],
@@ -112,7 +116,7 @@ module.exports = (grunt) ->
           to: ->
             return '="' + grunt.config.data.local_settings[grunt.option('target')].root_url + '/'
         ]
-        
+
     exec:
       html:
         cmd: 'plenv/bin/python make.py'
@@ -135,7 +139,7 @@ module.exports = (grunt) ->
           '!css/meta**'
         ]
         dest: 'dist'
-    
+
     rsync:
       options:
         recursive: true
@@ -148,8 +152,8 @@ module.exports = (grunt) ->
           src: "build/*"
           dest: "<%= local_settings.remote.release_dir %>"
           host: "<%= local_settings.remote.host %>"
-          
-    
+
+
     watch:
       css:
         files: 'scss/**/*.scss'
@@ -163,24 +167,27 @@ module.exports = (grunt) ->
       scsslint:
         files: ['scss/**/*.scss', 'scss/.scss-lint.yml']
         tasks: ['scsslint']
-  
-  
+      coffeelint:
+        files: ['coffee/**/*.coffee']
+        tasks: ['coffeelint']
+
+
   grunt.registerTask 'default', ['clean:build', 'sass:core', 'coffee:core']
-  
+
   grunt.registerTask 'build-css', ['sass_globbing', 'sass', 'cssmin']
-  
+
   grunt.registerTask 'build-js', ['coffee', 'uglify']
-  
+
   grunt.registerTask 'build-images', ['copy:images']
 
   grunt.registerTask 'build-html', ['exec:html', 'replace:root_url']
-  
+
   grunt.registerTask 'build', ['clean:build', 'build-css', 'build-js', 'build-images', 'build-html']
-  
+
   grunt.registerTask 'dist', ['clean:dist', 'build', 'copy:dist']
 
   grunt.registerTask 'deploy', ['rsync:' + grunt.option('target')]
-  
+
   grunt.registerTask 'cache-images', ['replace:image_cache']
-  
+
 
