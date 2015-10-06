@@ -5,6 +5,7 @@ sass_options =
   compass: true,
 
 uuid = require('node-uuid')
+execSync = require('child_process').execSync
 
 module.exports = (grunt) ->
   
@@ -97,7 +98,7 @@ module.exports = (grunt) ->
           from: /(http\:\/\/lorempixel\.com\/\d+\/\d+\/)/g
           to: (lp) ->
             u = uuid.v4()
-            grunt.event.emit 'cache_img', lp, u
+            r = execSync "wget -O build/images/" + u + " " + lp
             return grunt.config.data.local_settings.root_url + '/images/' + u
         ]
     exec:
@@ -146,10 +147,10 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'build-html', ['exec:html']
   
-  grunt.registerTask 'build', ['clean:build', 'build-css', 'build-js', 'build-images', 'build-html', 'cache-images', 'copy:deploy']
+  grunt.registerTask 'build', ['clean:build', 'build-css', 'build-js', 'build-images', 'build-html', 'copy:deploy']
   
   grunt.registerTask 'dist', ['clean:dist', 'build', 'copy:dist']
 
   grunt.registerTask 'deploy', ['copy:deploy']
   
-  grunt.registerTask 'cache-images', ['replace:image_cache'] 
+  grunt.registerTask 'cache-images', ['replace:image_cache', 'copy:deploy']
