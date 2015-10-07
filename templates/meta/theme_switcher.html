@@ -15,19 +15,3 @@
     </li>
   </ul>
 </li>
-<style type="text/css">
-{% for colour, theme in COLOURS.items() %}
-.dropdown-menu a[data-colour="{{ colour }}"] {
-  background-color: {{ theme['light-highlight'] }};
-}
-.dropdown-menu a[data-colour="{{ colour }}"]:hover {
-  background-color: {{ theme['page-background'] }} !important;
-}
-.dropdown-menu a[href="#disco"] {
-  background-color: #000000 !important;
-}
-.dropdown-menu a[href="#disco"]:hover {
-  background-color: #111111 !important;
-}
-{% endfor %}
-</style>
