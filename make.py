@@ -10,7 +10,8 @@ from ordereddict import OrderedDict
 from jinja2 import FileSystemLoader, Environment
 import codecs
 
-from site_content import links, structure, examples, functions
+from site_content import structure, functions
+from site_content.examples import EXAMPLES
 
 SITE_NAME = 'CamPL-NG'
 
@@ -38,17 +39,11 @@ env = Environment(loader=FileSystemLoader('templates'))
 # add functions
 for fname in functions.__all__:
   env.globals.update(**{fname:functions.__dict__[fname]})
+
+with open('site_content/links.json') as f:
+  env.globals['LINKS'] = json.loads(f.read(), object_pairs_hook=OrderedDict)
   
-env.globals['LINKS'] = {}
-
-# add links
-for lname in links.__all__:
-  env.globals['LINKS'][lname] = links.__dict__[lname]
-
-env.globals['EXAMPLES'] = {}
-
-for ex in examples.__all__:
-  env.globals['EXAMPLES'][ex] = examples.__dict__[ex]
+env.globals['EXAMPLES'] = EXAMPLES
 
 env.globals.update(**{
   'SITE_NAME': SITE_NAME,

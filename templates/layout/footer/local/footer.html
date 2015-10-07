@@ -1,66 +1,15 @@
-{% set FOOTER_ITEMS = [
-  ('3', {
-    ('About the Faculty', ''): [
-      ('Lorem ipsum dolor', ''),
-      ('Sit amet', ''),
-      ('Consectetur adipisicing elit', ''),
-      ('Sed do eiusmod', ''),
-      ('Tempor Incididunt', ''),
-    ],
-    ('Research', ''): [
-      ('Ut labore et dolore', ''),
-      ('Ut enim ad minim veniam', ''),
-      ('Magna aliqua', ''),
-    ]
-  }),
-  ('3', {
-    ('About the University', ''): [
-      ('Quis nostrud exercitation', ''),
-      ('Ullamco laboris nisi', ''),
-      ('Ut aliquip ex ea commodo', ''),
-      ('Duis aute irure dolor', ''),
-    ],
-    ('Libraries & facilities', ''): [
-      ('In reprehenderit in voluptate', ''),
-      ('Velit esse cillum dolore', ''),
-      ('Eu fugiat nulla pariatur', ''),
-      ('Duis aute irure dolor', ''),
-    ]
-  }),
-  ('3', {
-    ('Graduate', ''): [
-      ('Excepteur sint occaecat', ''),
-      ('Cupidatat non proident', ''),
-    ]
-  }),
-  ('3', {
-    ('Subjects', ''): [
-      ('Sunt in culpa qui officia', ''),
-      ('Deserunt mollit anim', ''),
-      ('Id est laborum', ''),
-      ('Duis aute irure dolor', ''),
-    ]
-  }),
-]
-%}
-  
-
-
-
-
-
 <div class="local-footer">
   <div class="container">
     <div class="row">
-      {% for colspan, content in FOOTER_ITEMS %}
-      <div class="col-md-{{ colspan }}">
-        {% for (heading, heading_link), links in content.items() %}
-          <h3><a href="{{ heading_link }}">{{ heading }}</a></h3>
-          {% if links %}
+      {% for column in EXAMPLES.LOCAL_FOOTER_LINKS %}
+      <div class="col-md-3">
+        {% for menu in column %}
+          <h3><a href="#">{{ menu.header }}</a></h3>
+          {% if menu.links %}
           <ul class="list-unstyled hidden-sm-down">
-            {% for title, link in links %}
+            {% for link in menu.links %}
             <li>
-              <a href="{{ link }}">{{ title }}</a>
+              <a href="#">{{ link }}</a>
             </li>
             {% endfor %}
           </ul>
