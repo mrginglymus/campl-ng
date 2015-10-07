@@ -27,7 +27,7 @@ def template_to_tuple(templates):
   return [
     (
       ' > '.join(t.split('/')),
-      '/templates/%s' % t
+      '/templates/%s/' % t
     ) for t in templates
   ]
 
@@ -165,8 +165,12 @@ class Page(object):
 
 class SCSSPage(Page):
 
-  def __init__(self, *args, **kwargs):
-    super(SCSSPage, self).__init__(*args, **kwargs)
+  def __init__(self, title, source=None, **kwargs):
+    super(SCSSPage, self).__init__(title, source, **kwargs)
+    if source:
+      self.title = title.lstrip('_')
+    else:
+      self.title = title.replace('_', ' ' ).title()
     self.type = 'scss'
 
   def render(self, env):
@@ -191,8 +195,10 @@ class SCSSPage(Page):
 
 class TemplatePage(Page):
 
-  def __init__(self, *args, **kwargs):
-    super(TemplatePage, self).__init__(*args, **kwargs)
+  def __init__(self, title, source=None, **kwargs):
+    super(TemplatePage, self).__init__(title, source, **kwargs)
+    if not source:
+      self.title = title.replace('_', ' ').title()
     self.type = 'template'
 
   def render(self, env):
