@@ -10,17 +10,20 @@ from ordereddict import OrderedDict
 from jinja2 import FileSystemLoader, Environment
 import codecs
 
-from site_content import structure, functions
 from site_content.examples import EXAMPLES
+from site_content.functions import FUNCTIONS
+from site_content.structure import pages, front_page
 
-SITE_NAME = 'CamPL-NG'
+env = Environment(loader=FileSystemLoader('templates'))
 
-LOCAL_JS = (
+env.globals['SITE_NAME'] = 'CamPL-NG'
+
+env.globals['LOCAL_JS'] = (
   'js/campl.js',
   'js/theme_switcher.js',
 )
 
-REMOTE_JS = (
+env.globals['REMOTE_JS'] = (
   'https://code.jquery.com/jquery-1.11.3.min.js',
   'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.js',
   'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/locale/en-gb.js',
@@ -29,34 +32,23 @@ REMOTE_JS = (
   'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js',
 )
 
-JS = [os.path.basename(js) for js in REMOTE_JS + LOCAL_JS]
-
 with open('themes.json') as f:
-  COLOURS = json.loads(f.read(), object_pairs_hook=OrderedDict)
-
-env = Environment(loader=FileSystemLoader('templates'))
+  env.globals['COLOURS'] = json.loads(f.read(), object_pairs_hook=OrderedDict)
 
 # add functions
-for fname in functions.__all__:
-  env.globals.update(**{fname:functions.__dict__[fname]})
+for f in FUNCTIONS:
+  env.globals[f.func_name] = f
 
 with open('site_content/links.json') as f:
   env.globals['LINKS'] = json.loads(f.read(), object_pairs_hook=OrderedDict)
   
 env.globals['EXAMPLES'] = EXAMPLES
 
-env.globals.update(**{
-  'SITE_NAME': SITE_NAME,
-  'LOCAL_JS': LOCAL_JS,
-  'REMOTE_JS': REMOTE_JS,
-  'MENU': structure.pages,
-  'COLOURS': COLOURS,
-})
+env.globals['MENU'] = pages
 
-
-for page in structure.pages:
+for page in pages:
   page.render(env)
 
-structure.front_page.render(env)
+front_page.render(env)
 
 

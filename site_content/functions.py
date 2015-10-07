@@ -10,16 +10,6 @@ from datetime import timedelta, date
 from jinja2.utils import generate_lorem_ipsum as lipsum
 from markupsafe import escape
 
-__all__ = [
-  'random_image',
-  'random_word',
-  'random_sentence',
-  'random_date',
-  'print_macro',
-  'get_sources_links'
-]
-
-
 @contextfunction
 def random_image(context, width, height=None):
   if not height:
@@ -74,3 +64,12 @@ def get_sources_links(context, page):
       ) for scss in page.scss
     ]
   return []
+
+FUNCTIONS = [
+  random_image,
+  random_word,
+  random_sentence,
+  random_date,
+  print_macro,
+  get_sources_links,
+]
