@@ -170,7 +170,7 @@ class SCSSPage(Page):
     if source:
       self.title = title.lstrip('_')
     else:
-      self.title = title.replace('_', ' ' ).title()
+      self.title = title.replace('_', ' ').title()
     self.type = 'scss'
 
   def render(self, env):
@@ -217,6 +217,34 @@ class TemplatePage(Page):
       }
       destination = os.path.join('build', self.url[1:], 'index.html')
 
+      if not os.path.exists(os.path.dirname(destination)):
+        os.makedirs(os.path.dirname(destination))
+      with codecs.open(destination, 'wb', 'utf-8') as fh:
+        fh.write(template.render(**context))
+    for child in self.children:
+      child.render(env)
+
+
+class CoffeePage(Page):
+
+  def __init__(self, title, source=None, **kwargs):
+    super(CoffeePage, self).__init__(title, source, **kwargs)
+    if not source:
+      self.title = title.replace('_', ' ').title()
+    self.type = 'template'
+
+  def render(self, env):
+    if self.source:
+      with open(
+        os.path.join('coffee', *self.url.split('/')[2:]), 'r'
+      ) as coffee_file:
+        coffee = coffee_file.read()
+      template = env.get_template('meta/script.html')
+      context = {
+        'page': self,
+        'coffee': coffee,
+      }
+      destination = os.path.join('build', self.url[1:], 'index.html')
       if not os.path.exists(os.path.dirname(destination)):
         os.makedirs(os.path.dirname(destination))
       with codecs.open(destination, 'wb', 'utf-8') as fh:

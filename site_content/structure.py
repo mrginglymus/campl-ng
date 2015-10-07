@@ -1,4 +1,4 @@
-from pages import Page, Pages, SCSSPage, TemplatePage, FrontPage
+from pages import Page, Pages, SCSSPage, TemplatePage, FrontPage, CoffeePage
 from jinja2.utils import generate_lorem_ipsum as lipsum
 from random import random
 import os
@@ -51,6 +51,10 @@ templates = get_directory_structure('templates', 'html')['templates']
 
 template_pages = list(shuffle_dirs(templates, TemplatePage))
 
+coffee = get_directory_structure('coffee', 'coffee')['coffee']
+
+coffee_pages = list(shuffle_dirs(coffee, CoffeePage))
+
 pages = Pages([
   Page('About', 'pages/about.html'),
   Page('Page Layouts', children=[
@@ -83,6 +87,7 @@ pages = Pages([
   ]),
   Page('Templates', children=template_pages),
   Page('Stylesheets', children=scss_pages),
+  Page('Scripts', children=coffee_pages)
 ])
 
 front_page = FrontPage(
