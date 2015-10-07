@@ -129,6 +129,9 @@ module.exports = (grunt) ->
         cmd: 'plenv/bin/python make.py'
 
     copy:
+      js:
+        src: 'lib/bootstrap/dist/js/bootstrap.js',
+        dest: 'build/js/bootstrap.js'
       images:
         expand: true,
         cwd: 'images'
@@ -183,7 +186,7 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'build-css', ['sass_globbing', 'sass', 'cssmin']
 
-  grunt.registerTask 'build-js', ['coffee', 'uglify']
+  grunt.registerTask 'build-js', ['coffee', 'copy:js', 'uglify']
 
   grunt.registerTask 'build-images', ['copy:images']
 
