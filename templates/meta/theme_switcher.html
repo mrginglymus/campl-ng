@@ -10,7 +10,7 @@
     {% endfor %}
     <li>
       <a class="dropdown-item" href="#disco">
-        <span class="fa fa-random">&nbsp;</span> Disco
+        <span class="fa fa-random">&nbsp;</span> Shuffle
       </a>
     </li>
   </ul>
@@ -22,6 +22,12 @@
 }
 .dropdown-menu a[data-colour="{{ colour }}"]:hover {
   background-color: {{ theme['page-background'] }} !important;
+}
+.dropdown-menu a[href="#disco"] {
+  background-color: #000000 !important;
+}
+.dropdown-menu a[href="#disco"]:hover {
+  background-color: #111111 !important;
 }
 {% endfor %}
 </style>

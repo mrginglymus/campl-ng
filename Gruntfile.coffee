@@ -144,7 +144,8 @@ module.exports = (grunt) ->
         cwd: 'build'
         src: [
           'images/**',
-          'js/**',
+          'js/campl*',
+          'js/bootstrap*',
           'css/**',
           '!css/meta**'
         ]
