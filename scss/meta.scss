@@ -12,6 +12,7 @@ main .main-content {
     > code {
       @include flex-grow(1);
       font-size: 1.2em;
+      padding: 20px;
     }
   }
 }
