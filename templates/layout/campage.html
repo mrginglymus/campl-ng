@@ -1,13 +1,7 @@
 {% extends 'base.html' %}
 
-{% from 'components/carousel.html' import frontpage_carousel with context %}
+{% from 'components/carousel.html' import frontpage_carousel %}
 {% from 'components/teasers/teasers.html' import focus_on_teaser, campage_teaser, news_teaser %}
-
-{% set CAROUSEL = [
-  (random_image(785, 428), '/', random_sentence(4, 8), '"%s"'%random_sentence(8, 12)),
-  (random_image(785, 428), '/', random_sentence(4, 8), '"%s"'%random_sentence(8, 12)),
-  (random_image(785, 428), '/', random_sentence(4, 8), '"%s"'%random_sentence(8, 12)),
-] %}
 
 {% block body %}
   <header>
@@ -20,7 +14,7 @@
       </div>
     </div>
     <div class="container">
-      {{ frontpage_carousel(CAROUSEL) }}
+      {{ frontpage_carousel(EXAMPLES.CAMPAGE_CAROUSEL) }}
     </div>
   </header>
   <main class="container">

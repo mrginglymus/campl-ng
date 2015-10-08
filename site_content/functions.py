@@ -10,8 +10,7 @@ from datetime import timedelta, date
 from jinja2.utils import generate_lorem_ipsum as lipsum
 from markupsafe import escape
 
-@contextfunction
-def random_image(context, width, height=None):
+def random_image(width, height=None):
   if not height:
     height = width
   scale = random() + 1
@@ -49,8 +48,7 @@ def print_macro(context, macro):
   return '<pre><code class="django">%s</code></pre>' % escape(res)
 
 
-@contextfunction
-def get_sources_links(context, page):
+def get_sources_links(page):
   if page.type == 'page':
     return [
       (

@@ -1,12 +1,5 @@
 {% extends 'layout/frontpage.html' %}
-{% import 'components/teasers/teasers.html' as teasers with context %}
-
-
-{% set CAROUSEL = [
-  (random_image(885, 432), '/', random_sentence(4, 8)),
-  (random_image(885, 432), '/', random_sentence(4, 8)),
-  (random_image(885, 432), '/', random_sentence(4, 8)),
-] %}
+{% import 'components/teasers/teasers.html' as teasers %}
 
 {% block unwrapped_content %}
 <div class="row">
