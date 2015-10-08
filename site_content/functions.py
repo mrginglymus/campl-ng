@@ -2,13 +2,18 @@ from jinja2 import contextfunction
 
 import re
 import pathlib
+import feedparser
+import bleach
 
 from random import random, randrange
 
-from datetime import timedelta, date
+from datetime import timedelta, date, datetime
+from time import mktime
 
 from jinja2.utils import generate_lorem_ipsum as lipsum
 from markupsafe import escape
+
+FEED = feedparser.parse('http://www.cam.ac.uk/news/feed?')
 
 def random_image(width, height=None):
   if not height:
@@ -28,6 +33,14 @@ def random_sentence(min=None, max=30):
     min = int(max * 0.75) - 1
   return lipsum(1, False, min, max)
 
+def random_article():
+  article = FEED['items'][randrange(len(FEED['items']))] 
+  return {
+    'title': article['title'],
+    'link': article['links'][0]['href'],
+    'body': bleach.clean(article['description'], strip=True, tags=[]).split('.')[0] + '.',
+    'date': datetime.fromtimestamp(mktime(article['published_parsed'])),
+  }
 
 def random_date(raw=False):
   d = date.today() - timedelta(days=randrange(100))
@@ -70,4 +83,5 @@ FUNCTIONS = [
   random_date,
   print_macro,
   get_sources_links,
+  random_article,
 ]

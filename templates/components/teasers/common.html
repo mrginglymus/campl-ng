@@ -1,22 +1,22 @@
-{% macro teaser_image(title, href, img, type) %}
-  <a href="{{ href }}">
+{% macro teaser_image(article, img, type) %}
+  <a href="{{ article.link }}">
     {% if type %}
       <span class="teaser-image-{{ type }}"></span>
     {% endif %}
-      <img src="{{ img }}" alt="{{ title }}">
+      <img src="{{ img }}" alt="{{ article.title }}">
   </a>  
 {% endmacro %}
 
-{% macro teaser_body(title, href, body, type) %}
+{% macro teaser_body(article, type) %}
   <h3 class="teaser-title">
-    <a href="{{ href }}">
-      {{ title }}
+    <a href="{{ article.link }}">
+      {{ article.title }}
     </a>
   </h3>
-  <p>{{ body }}</p>
+  <p>{{ article.body }}</p>
   {% if type %}
-  <a class="secondary-cta" href="{{ href }}">Read more</a>
+  <a class="secondary-cta" href="{{ article.link }}">Read more</a>
   {% else %}
-  <a class="btn btn-primary btn-cta" href="{{ href }}">Read more</a>
+  <a class="btn btn-primary btn-cta" href="{{ article.link }}">Read more</a>
   {% endif %}
 {% endmacro %}

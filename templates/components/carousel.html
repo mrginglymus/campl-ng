@@ -1,17 +1,17 @@
-{% macro carousel_item(image, link, caption, items, loop) %}
+{% macro carousel_item(article, image, items, loop) %}
 <div class="carousel-item{% if loop.first %} active{% endif %}">
   {% if link %}
-  <a href="{{ link }}">
-  <img src="{{ image }}" alt="{{ caption }}">
+  <a href="{{ article.link }}">
+  <img src="{{ image }}" alt="{{ article.title }}">
   </a>
   {% else %}
-  <img src="{{ image }}" alt="{{ caption }}">
+  <img src="{{ image }}" alt="{{ article.title }}">
   {% endif %}
   <div class="carousel-caption">
     {% if link %}
-    <a href="{{ link }}">{{ caption }}</a>
+    <a href="{{ article.link }}">{{ article.title }}</a>
     {% else %}
-    <span>{{ caption }}</span>
+    <span>{{ article.title }}</span>
     {% endif %}
     <span class="carousel-page">{{ loop.index }} of {{ items|length }}</span>
   </div>
@@ -21,8 +21,8 @@
 {% macro carousel(items) %}
 <div id="front-page-carousel" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner" role="listbox">
-    {% for image, link, caption in items %}
-      {{ carousel_item(image, link, caption, items, loop) }}
+    {% for article, image in items %}
+      {{ carousel_item(article, image, items, loop) }}
     {% endfor %}
   </div>
   <a class="left carousel-control" href="#front-page-carousel" role="button" data-slide="prev">
@@ -34,21 +34,21 @@
 </div>
 {% endmacro %}
 
-{% macro frontpage_carousel_item(image, link, caption, text, items, loop) %}
+{% macro frontpage_carousel_item(article, image, items, loop) %}
 <div class="carousel-item{% if loop.first %} active{% endif %}">
   <div class="row">
     <div class="col-md-8">
-      <a href="{{ link }}">
-        <img src="{{ image }}" alt="{{ caption }}">
+      <a href="{{ article.link }}">
+        <img src="{{ image }}" alt="{{ article.title }}">
       </a>
     </div>
     <div class="col-md-4 carousel-text">
-      {{ text }}
+      "{{ ' '.join(article.body.split(' ')[:8]) }}"
     </div>
   </div>
   <div class="carousel-caption">
-    <a href="{{ link }}">
-      {{ caption }}
+    <a href="{{ article.link }}">
+      {{ article.title }}
     </a>
     <span class="carousel-page">{{ loop.index }} of {{ items|length }}</span>
   </div>
@@ -58,8 +58,8 @@
 {% macro frontpage_carousel(items) %}
 <div id="front-page-carousel" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner" role="listbox">
-    {% for image, link, caption, text in items %}
-      {{ frontpage_carousel_item(image, link, caption, text, items, loop) }}
+    {% for article, image in items %}
+      {{ frontpage_carousel_item(article, image, items, loop) }}
     {% endfor %}
   </div>
   <a class="left carousel-control carousel-control-campage" href="#front-page-carousel" role="button" data-slide="prev">

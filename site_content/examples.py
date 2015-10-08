@@ -1,4 +1,4 @@
-from functions import lipsum, random_image, random_sentence
+from functions import lipsum, random_image, random_sentence, random_article
 from random import random
 import string
 
@@ -103,15 +103,15 @@ A_TO_Z[0][1] = lipsum(5)
 A_TO_Z[0][2] = True
 
 CAROUSEL = [
-  (random_image(885, 432), '/', random_sentence(4, 8)),
-  (random_image(885, 432), '/', random_sentence(4, 8)),
-  (random_image(885, 432), '/', random_sentence(4, 8)),
+  (random_article(), random_image(885, 432)),
+  (random_article(), random_image(885, 432)),
+  (random_article(), random_image(885, 432)),
 ]
 
 CAMPAGE_CAROUSEL = [
-  (random_image(785, 428), '/', random_sentence(4, 8), '"%s"'%random_sentence(8, 12)),
-  (random_image(785, 428), '/', random_sentence(4, 8), '"%s"'%random_sentence(8, 12)),
-  (random_image(785, 428), '/', random_sentence(4, 8), '"%s"'%random_sentence(8, 12)),
+  (random_article(), random_image(785, 428)),
+  (random_article(), random_image(785, 428)),
+  (random_article(), random_image(785, 428)),
 ]
 
 EXAMPLES = {
