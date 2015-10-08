@@ -1,4 +1,6 @@
 from functions import lipsum
+from random import random
+import string
 
 NAV_ITEMS = [
   {
@@ -91,7 +93,17 @@ LOCAL_FOOTER_LINKS = [
   ]
 ]
 
+A_TO_Z = list(
+  [
+    l, lipsum(5) if random() > 0.2 else None, False
+  ] for l in string.ascii_uppercase
+)
+
+A_TO_Z[0][1] = lipsum(5)
+A_TO_Z[0][2] = True
+
 EXAMPLES = {
   'NAV_ITEMS': NAV_ITEMS,
   'LOCAL_FOOTER_LINKS': LOCAL_FOOTER_LINKS,
+  'A_TO_Z': A_TO_Z,
 }

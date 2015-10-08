@@ -1,22 +1,8 @@
 from pages import Page, Pages, SCSSPage, TemplatePage, FrontPage, CoffeePage
 from jinja2.utils import generate_lorem_ipsum as lipsum
-from random import random
 import os
 from ordereddict import OrderedDict
-import string
 
-
-A_TO_Z = list(
-  [
-    l, lipsum(5) if random() > 0.2 else None, False
-  ] for l in string.ascii_uppercase
-)
-
-A_TO_Z[0][1] = lipsum(5)
-A_TO_Z[0][2] = True
-
-
-# css pages
 
 def get_directory_structure(rootdir, ext):
   """
@@ -75,7 +61,7 @@ pages = Pages([
       Page('Pills (Stacked)', 'pages/components/navigation/pills_stacked.html', scss=['components/navigation/_nav.scss']),
       Page('Stages', 'pages/components/navigation/stages.html', scss=['components/navigation/_nav.scss']),
       Page('Pagination', 'pages/components/navigation/pagination.html', scss=['components/navigation/_pagination.scss']),
-      Page('A to Z', 'pages/components/navigation/atoz.html', context={'A_TO_Z': A_TO_Z}, side_menu=False),
+      Page('A to Z', 'pages/components/navigation/atoz.html', side_menu=False),
       Page('Search', 'pages/components/navigation/search.html', scss=['components/navigation/_search.scss']),
     ]),
     Page('Content', children=[

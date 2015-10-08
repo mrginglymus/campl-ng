@@ -1,0 +1,28 @@
+{% macro atoz(content) %}
+<div class="local-header subtitle">
+  <div class="container atoz">
+    <div class="hidden-sm-down">
+      <ul role="tablist" class="">
+        {% for letter, content, active in content %}
+          <li class="nav-item">
+            {% if content %}
+            <a href="#atoz_{{ letter }}" class="nav-link{% if active %} active{% endif %}" role="tab" data-toggle="tab">{{ letter }}</a>
+            {% else %}
+            <span>{{ letter }}</span>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="hidden-md-up">
+      <select class="form-control" data-toggle="tab">
+        {% for letter, content, active in content %}
+          {% if content %}
+          <option value="#atoz_{{ letter }}"{% if active %} selected{% endif %}>{{ letter }}</option>
+          {% endif %}
+        {% endfor %}
+      </select>
+    </div>
+  </div>
+</div>
+{% endmacro %}
