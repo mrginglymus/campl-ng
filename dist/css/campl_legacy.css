@@ -7406,6 +7406,79 @@ blockquote {
   background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAJCAYAAAD6reaeAAAAJ0lEQVQI12NgKDr/H4gZUDCU8R+bIKoEmtb/2AQhEoRU/idoO4Y7ARfoQWXgMrsxAAAAAElFTkSuQmCC') no-repeat 100% 50%;
   padding-right: 10px; }
 
+.btn-radio {
+  border: 1px solid #ccc;
+  font-weight: normal; }
+  .btn-radio:focus, .btn-radio:hover {
+    background-color: #ebebeb;
+    border-color: #adadad; }
+
+.radio-btns {
+  margin-left: 0;
+  padding-left: 0; }
+  .radio-btns + .radio-btns {
+    margin-left: 0; }
+  .radio-btns input {
+    display: none; }
+  .radio-btns :checked + .btn-radio {
+    color: #fff; }
+    .theme-blue .radio-btns :checked + .btn-radio {
+      background-color: #0072cf ; }
+    .theme-turquoise .radio-btns :checked + .btn-radio {
+      background-color: #28828a ; }
+    .theme-purple .radio-btns :checked + .btn-radio {
+      background-color: #8f2b8c ; }
+    .theme-green .radio-btns :checked + .btn-radio {
+      background-color: #57831a ; }
+    .theme-orange .radio-btns :checked + .btn-radio {
+      background-color: #df671d ; }
+    .theme-red .radio-btns :checked + .btn-radio {
+      background-color: #d61746 ; }
+    .theme-grey .radio-btns :checked + .btn-radio {
+      background-color: #8c8989 ; }
+    .theme-blue .radio-btns :checked + .btn-radio {
+      border-color: #005dab ; }
+    .theme-turquoise .radio-btns :checked + .btn-radio {
+      border-color: #1e7680 ; }
+    .theme-purple .radio-btns :checked + .btn-radio {
+      border-color: #782c7e ; }
+    .theme-green .radio-btns :checked + .btn-radio {
+      border-color: #4b7016 ; }
+    .theme-orange .radio-btns :checked + .btn-radio {
+      border-color: #d45812 ; }
+    .theme-red .radio-btns :checked + .btn-radio {
+      border-color: #be1741 ; }
+    .theme-grey .radio-btns :checked + .btn-radio {
+      border-color: #7d7777 ; }
+    .theme-blue .radio-btns :checked + .btn-radio:focus, .theme-blue .radio-btns :checked + .btn-radio:hover {
+      background-color: #005dab ; }
+    .theme-turquoise .radio-btns :checked + .btn-radio:focus, .theme-turquoise .radio-btns :checked + .btn-radio:hover {
+      background-color: #1e7680 ; }
+    .theme-purple .radio-btns :checked + .btn-radio:focus, .theme-purple .radio-btns :checked + .btn-radio:hover {
+      background-color: #782c7e ; }
+    .theme-green .radio-btns :checked + .btn-radio:focus, .theme-green .radio-btns :checked + .btn-radio:hover {
+      background-color: #4b7016 ; }
+    .theme-orange .radio-btns :checked + .btn-radio:focus, .theme-orange .radio-btns :checked + .btn-radio:hover {
+      background-color: #d45812 ; }
+    .theme-red .radio-btns :checked + .btn-radio:focus, .theme-red .radio-btns :checked + .btn-radio:hover {
+      background-color: #be1741 ; }
+    .theme-grey .radio-btns :checked + .btn-radio:focus, .theme-grey .radio-btns :checked + .btn-radio:hover {
+      background-color: #7d7777 ; }
+    .theme-blue .radio-btns :checked + .btn-radio:focus, .theme-blue .radio-btns :checked + .btn-radio:hover {
+      border-color: #004e8f ; }
+    .theme-turquoise .radio-btns :checked + .btn-radio:focus, .theme-turquoise .radio-btns :checked + .btn-radio:hover {
+      border-color: #0c5963 ; }
+    .theme-purple .radio-btns :checked + .btn-radio:focus, .theme-purple .radio-btns :checked + .btn-radio:hover {
+      border-color: #612d70 ; }
+    .theme-green .radio-btns :checked + .btn-radio:focus, .theme-green .radio-btns :checked + .btn-radio:hover {
+      border-color: #355918 ; }
+    .theme-orange .radio-btns :checked + .btn-radio:focus, .theme-orange .radio-btns :checked + .btn-radio:hover {
+      border-color: #ab3901 ; }
+    .theme-red .radio-btns :checked + .btn-radio:focus, .theme-red .radio-btns :checked + .btn-radio:hover {
+      border-color: #a51137 ; }
+    .theme-grey .radio-btns :checked + .btn-radio:focus, .theme-grey .radio-btns :checked + .btn-radio:hover {
+      border-color: #5f5f5f ; }
+
 .table:not(.table-bordered) th,
 .table:not(.table-bordered) td {
   border: 0; }

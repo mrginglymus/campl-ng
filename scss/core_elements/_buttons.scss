@@ -36,3 +36,37 @@
   @include background(inline-image("secondary-cta-chevron.png") no-repeat 100% 50%);
   padding-right: 10px;
 }
+
+.btn-radio {
+  border: 1px solid #ccc;
+  font-weight: normal;
+  
+  @include hover-focus {
+    background-color: #ebebeb;
+    border-color: #adadad;
+  }
+}
+
+.radio-btns {
+  margin-left: 0;
+  padding-left: 0;
+  
+  + .radio-btns {
+    margin-left: 0;
+  }
+  
+  input {
+    display: none;
+  }
+  
+  :checked + .btn-radio {
+    @include theme-element(background-color, selected);
+    @include theme-element(border-color, light-highlight);
+    color: #fff;
+    
+    @include hover-focus {
+      @include theme-element(background-color, light-highlight);
+      @include theme-element(border-color, navbar);
+    }
+  }
+}
