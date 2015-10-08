@@ -16,7 +16,7 @@ def random_image(width, height=None):
   scale = random() + 1
   height = int(height * scale)
   width = int(width * scale)
-  return "http://lorempixel.com/%s/%s/" % (width, height)
+  return "http://loremflickr.com/%s/%s/?user=cambridge%%20university" % (width, height)
 
 
 def random_word():

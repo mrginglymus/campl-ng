@@ -109,7 +109,7 @@ module.exports = (grunt) ->
         src: ['build/**/*.html', '!build/templates/**/*.html'],
         overwrite: true,
         replacements: [
-          from: /(http\:\/\/lorempixel\.com\/\d+\/\d+\/)/g
+          from: /(http\:\/\/loremflickr\.com\/\d+\/\d+\/\?user\=cambridge\%20university)/g
           to: (lp) ->
             u = uuid.v4()
             r = execSync "wget -O build/images/" + u + " " + lp
