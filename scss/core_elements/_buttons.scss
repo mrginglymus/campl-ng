@@ -3,21 +3,26 @@
 .btn-cta,
 .btn-vcard {
   font-weight: normal;
-
-  &:hover {
-    background-color: #454545;
-    border-color: #454545;
+  background-color: $gray-darker;
+  background-repeat: no-repeat;
+  
+  @include hover-focus-active {
+    background-color: #454545 !important;
+    border-color: #454545 !important;
   }
 }
 
 .btn-cta {
-  @include background($gray-darker inline-image("primary-cta-chevron.png") no-repeat right 11px top 50%);
+  @include background-image(inline-image("primary-cta-chevron.png") !important);
+  background-color: $gray-darker;
+  background-position: right 11px top 50%;
   padding: 5px 25px 5px 10px;
 }
 
 .btn-vcard {
-  @include background($gray-darker inline-image("download.png") no-repeat right 5px top 50%);
+  @include background-image(inline-image("download.png") !important);
   padding-right: 30px;
+  background-position: right 5px top 50%;
 
   &:before {
     @include fa-icon();
