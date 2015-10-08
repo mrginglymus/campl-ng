@@ -7526,6 +7526,10 @@ a.bg-danger:focus, a.bg-danger:hover {
 .teaser-list {
   padding: 0 20px;
   margin: 20px 0; }
+  @media (max-width: 767.9px) {
+    .teaser-list .horizontal-teaser,
+    .teaser-list .vertical-teaser {
+      padding-bottom: 20px; } }
   .teaser-list .horizontal-teaser:not(:first-of-type),
   .teaser-list .vertical-teaser:not(:first-of-type) {
     padding-top: 20px; }

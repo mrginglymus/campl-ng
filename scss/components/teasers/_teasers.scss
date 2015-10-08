@@ -71,9 +71,14 @@
   // doesn't hit the edges
   .horizontal-teaser,
   .vertical-teaser {
+    @include media-breakpoint-down(sm) {
+      padding-bottom: $spacer;
+    }
+
     &:not(:first-of-type) {
       padding-top: $spacer;
     }
+
 
     &:not(:last-of-type) {
       padding-bottom: $spacer;
