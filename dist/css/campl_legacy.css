@@ -6605,35 +6605,50 @@ a.bg-danger:focus, a.bg-danger:hover {
   background-color: #ffffff;
   color: #000000; }
 
-.alert.alert-success {
-  border-color: #55a51c; }
-  .alert.alert-success .row div:first-child {
-    color: #55a51c; }
-.alert.alert-warning {
-  border-color: #ea7125; }
-  .alert.alert-warning .row div:first-child {
-    color: #ea7125; }
-.alert.alert-danger {
-  border-color: #ff0000; }
-  .alert.alert-danger .row div:first-child {
-    color: #ff0000; }
-.alert.alert-info {
-  border-color: #0072cf; }
-  .alert.alert-info .row div:first-child {
-    color: #0072cf; }
-.alert .row div {
-  padding: 2px; }
-.alert .row div:first-child {
-  font-weight: bold; }
+.alert {
+  position: relative; }
   @media (min-width: 768px) {
-    .alert .row div:first-child {
-      text-align: right; } }
-  .alert .row div:first-child span {
-    vertical-align: top; }
-  .alert .row div:first-child .fa {
-    position: relative;
-    top: -0.25em;
-    font-size: 2.4em; }
+    .alert {
+      padding: 15px 80px; } }
+  .alert.alert-success {
+    border-color: #55a51c; }
+    .alert.alert-success .row div:first-child {
+      color: #55a51c; }
+  .alert.alert-warning {
+    border-color: #ea7125; }
+    .alert.alert-warning .row div:first-child {
+      color: #ea7125; }
+  .alert.alert-danger {
+    border-color: #ff0000; }
+    .alert.alert-danger .row div:first-child {
+      color: #ff0000; }
+  .alert.alert-info {
+    border-color: #0072cf; }
+    .alert.alert-info .row div:first-child {
+      color: #0072cf; }
+  .alert .row div {
+    padding: 2px; }
+  .alert .row div:first-child {
+    font-weight: bold; }
+    @media (min-width: 768px) {
+      .alert .row div:first-child {
+        text-align: right; } }
+    .alert .row div:first-child span {
+      vertical-align: top; }
+    .alert .row div:first-child .fa {
+      position: relative;
+      top: -0.25em;
+      font-size: 2.4em; }
+  .alert .close {
+    background: rgba(255, 255, 255, 0.5) url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6+R8AAAAUUlEQVQoU2NkYGD4D8SMQEws+A9TTKxGsDpkGwhphMujOwuXRhRxbH5B14hhEK4AgCnEajO+UMPpR6rZRLKfSA49kuOJkAZYEoOnCGI1wDUCAJOdGQwejF4/AAAAAElFTkSuQmCC') no-repeat 50% 50%;
+    width: 23px;
+    height: 23px;
+    padding: 4px;
+    opacity: 1;
+    border: 1px solid #ddd;
+    position: absolute;
+    top: 4px;
+    right: 4px; }
 
 @media (min-width: 1200px) {
   .carousel:after {

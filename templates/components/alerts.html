@@ -1,7 +1,7 @@
 {% macro alert(title, message, type, icon, top=false, dismissable=false) %}
 <div class="alert alert-{{ type }}{% if top %} alert-top{% endif %}{% if dismissable %} alert-dismissable{% endif %}" role="alert">
   {% if dismissable %}
-  <div class="close pull-right" data-dismiss="alert">&times;</div>
+  <div class="close pull-right" data-dismiss="alert">&nbsp;</div>
   {% endif %}
   <div class="row">
     <div class="col-md-4">
