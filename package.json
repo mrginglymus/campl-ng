@@ -1,7 +1,7 @@
 {
   "name": "campl-ng",
   "description": "A modern implementation of the Project Light theme for the University of Cambridge",
-  "version": "0.1.1-alpha4",
+  "version": "0.1.1-alpha5",
   "homepage": "http://people.ds.cam.ac.uk/wac26/campl-ng/",
   "author": "Bill Collins <bill@bill.works>",
   "repository": {
