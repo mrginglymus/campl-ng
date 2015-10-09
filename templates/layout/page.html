@@ -2,7 +2,7 @@
 
 {% from 'layout/sidebar/related_links.html' import related_links %}
 {% from 'layout/sidebar/sidebar.html' import sidebar_heading %}
-{% from 'components/images.html' import safe_image %}
+{% from 'core_elements/images.html' import safe_image %}
 
 {% block body %}
   <header>
@@ -27,9 +27,9 @@
     {% if page.side_menu %}
       {% set content_columns = content_columns - 3 %}
     {% endif %}
-    
+
     {% set sidebar = not not self.sidebar_content() %}
-    
+
     {% if sidebar %}
       {% set content_columns = content_columns - 3 %}
     {% endif %}
