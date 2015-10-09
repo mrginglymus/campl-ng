@@ -2,6 +2,7 @@
 
 {% from 'layout/sidebar/related_links.html' import related_links %}
 {% from 'layout/sidebar/sidebar.html' import sidebar_heading %}
+{% from 'components/images.html' import safe_image %}
 
 {% block body %}
   <header>
@@ -38,7 +39,7 @@
       {% include 'navigation/vertical_menu.html' %}
       <div class="col-md-{{ content_columns }} main-content">
         {% if image %}
-          <img src="{{ image }}" class="leading-image">
+          {{ safe_image(image, 'leading') }}
         {% endif %}
         {% block unwrapped_content %}
         {% endblock %}

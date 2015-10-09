@@ -1,0 +1,32 @@
+{% macro safe_image(src, ratio) %}
+<div class="image_wrapper image_wrapper_{{ ratio }}">
+  <div class="safe_image" style="background-image: url('{{ src }}')">
+  </div>
+</div>
+<style type="text/css">
+.image_wrapper {
+  display: inline-block;
+  position: relative;
+}
+
+.safe_image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.image_wrapper:after {
+  content: "";
+  display: block;
+  padding-top: 47%;
+}
+
+.image_wrapper_leading:after {
+  padding-top: calc(590 / 288);
+}
+</style>
+{% endmacro %}
