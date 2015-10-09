@@ -97,6 +97,12 @@
   @include media-breakpoint-down(sm) {
     padding: 0 $spacer 0 0;
   }
+  
+  @include media-breakpoint-up(md) {
+    + .teaser-body {
+      margin-top: $spacer;
+    }
+  }
 }
 
 
