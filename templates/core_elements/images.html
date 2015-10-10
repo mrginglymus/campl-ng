@@ -4,3 +4,10 @@
   </div>
 </div>
 {% endmacro %}
+
+{% macro linked_safe_image(src, link, style) %}
+<div class="image_wrapper image_wrapper_{{ style }}">
+  <a href="{{ link }}" class="safe_image" style="background-image: url('{{ src }}')">
+  </a>
+</div>
+{% endmacro %}

@@ -1,12 +1,13 @@
-{% from 'core_elements/images.html' import safe_image %}
+{% from 'core_elements/images.html' import safe_image, linked_safe_image %}
 
 {% macro teaser_image(article, img, type) %}
-  <a href="{{ article.link }}">
-    {% if type %}
-      <span class="teaser-image-{{ type }}"></span>
-    {% endif %}
-      {{ safe_image(img, 'square') }}
-  </a>
+  <div class="image_wrapper image_wrapper_square">
+    <a href="{{ article.link }}" class="safe_image" style="background-image: url('{{ img }}')">
+      {% if type %}
+        <span class="teaser-image-{{ type }}"></span>
+      {% endif %}
+    </a>
+  </div>
 {% endmacro %}
 
 {% macro teaser_body(article, type) %}

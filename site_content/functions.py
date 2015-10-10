@@ -15,8 +15,8 @@ from markupsafe import escape
 
 FEED = feedparser.parse('http://www.cam.ac.uk/news/feed?')
 
-IMAGE_SOURCE = "http://loremflickr.com/%s/%s/?user=cambridge%%20university"
 IMAGE_SOURCE = "http://placehold.it/%sx%s"
+IMAGE_SOURCE = "http://loremflickr.com/%s/%s/?user=cambridge%%20university"
 
 
 def random_image(width, height=None):

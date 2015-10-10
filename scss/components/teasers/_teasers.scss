@@ -16,7 +16,6 @@
 
   .teaser-image {
     a {
-      position: relative;
       display: block;
 
       @include hover-focus {
@@ -38,6 +37,7 @@
     right: 0;
     bottom: 0;
     color: $white;
+    z-index: 1;
 
     @include media-breakpoint-down(sm) {
       font-size: 2em;
@@ -97,7 +97,7 @@
   @include media-breakpoint-down(sm) {
     padding: 0 $spacer 0 0;
   }
-  
+
   @include media-breakpoint-up(md) {
     + .teaser-body {
       margin-top: $spacer;
