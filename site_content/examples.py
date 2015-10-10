@@ -1,4 +1,4 @@
-from functions import lipsum, random_image, random_sentence, random_article
+from functions import lipsum, random_image, random_article
 from random import random
 import string
 
@@ -114,10 +114,16 @@ CAMPAGE_CAROUSEL = [
   (random_article(), random_image(785, 428)),
 ]
 
+VIDEOS = {
+  "16by9": "https://www.youtube.com/embed/Nz8gqWsSpm8",
+  "4by3": "https://www.youtube.com/embed/8-QNAwUdHUQ",
+}
+
 EXAMPLES = {
   'NAV_ITEMS': NAV_ITEMS,
   'LOCAL_FOOTER_LINKS': LOCAL_FOOTER_LINKS,
   'A_TO_Z': A_TO_Z,
   'CAROUSEL': CAROUSEL,
   'CAMPAGE_CAROUSEL': CAMPAGE_CAROUSEL,
+  'VIDEOS': VIDEOS,
 }
