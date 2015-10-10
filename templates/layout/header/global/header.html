@@ -10,7 +10,7 @@
         </ul>
       </div>
       <div class="col-md-1 global-header-close hidden-sm-down">
-        <a href="#global-header-drawer-close" data-target="#global-header-drawer-close">Close</a>
+        <a href="#global-header-drawers" data-target="#global-header-drawers" data-toggle="collapse">Close</a>
       </div>
     </div>
     <div class="row">
@@ -31,7 +31,7 @@
             {% endif %}
           </li>
         {% endfor %}
-        </ul>    
+        </ul>
       </div>
       {% endfor %}
     </div>
@@ -90,7 +90,7 @@
     </div>
   </div>
 </nav>
-<div id="global-header-drawers">
+<div id="global-header-drawers" class="collapse navbar-toggleable-xs">
   <div class="tab-content global-header-drawer sidebar-offcanvas">
     {{ global_header_drawer('study', LINKS.STUDY_DRAWER) }}
     {{ global_header_drawer('about', LINKS.ABOUT_DRAWER) }}

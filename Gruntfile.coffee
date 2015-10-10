@@ -168,13 +168,13 @@ module.exports = (grunt) ->
     watch:
       css:
         files: 'scss/**/*.scss'
-        tasks: ['sass_globbing', 'sass:core', 'sass:meta', 'rsync:local']
+        tasks: ['sass_globbing', 'sass:core', 'sass:meta', 'deploy']
       html:
         files: 'templates/**/*.html'
-        tasks: ['build-html', 'rsync:local']
+        tasks: ['build-html', 'deploy']
       js:
         files: 'coffee/**/*.coffee'
-        tasks: ['coffee', 'rsync:local']
+        tasks: ['coffee', 'deploy']
       scsslint:
         files: ['scss/**/*.scss', 'scss/.scss-lint.yml']
         tasks: ['scsslint']
