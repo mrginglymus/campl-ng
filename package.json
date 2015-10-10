@@ -11,9 +11,6 @@
   "bugs": {
     "url": "https://github.com/mrginglymus/campl-ng/issues"
   },
-  "scripts": {
-    "install": "pip install -r py_requirements.txt"
-  },
   "license": "ISC",
   "dependencies": {
     "coffeelint": "^1.12.1",
