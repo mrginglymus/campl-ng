@@ -12,7 +12,7 @@
     "url": "https://github.com/mrginglymus/campl-ng/issues"
   },
   "scripts": {
-    "install": "virtualenv plenv && plenv/bin/pip install -r py_requirements.txt"
+    "install": "pip install -r py_requirements.txt"
   },
   "license": "ISC",
   "dependencies": {

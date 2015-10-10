@@ -126,7 +126,7 @@ module.exports = (grunt) ->
 
     exec:
       html:
-        cmd: 'plenv/bin/python make.py'
+        cmd: 'python make.py'
 
     copy:
       js:

@@ -6,5 +6,4 @@ local_settings.json
 gh-pages/
 build
 node_modules
-plenv
 local_settings.py
