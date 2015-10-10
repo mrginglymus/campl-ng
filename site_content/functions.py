@@ -15,13 +15,17 @@ from markupsafe import escape
 
 FEED = feedparser.parse('http://www.cam.ac.uk/news/feed?')
 
+IMAGE_SOURCE = "http://loremflickr.com/%s/%s/?user=cambridge%%20university"
+IMAGE_SOURCE = "http://placehold.it/%sx%s"
+
+
 def random_image(width, height=None):
   if not height:
     height = width
   scale = random() + 1
   height = int(height * scale)
   width = int(width * scale)
-  return "http://loremflickr.com/%s/%s/?user=cambridge%%20university" % (width, height)
+  return IMAGE_SOURCE % (width, height)
 
 
 def random_word():
@@ -33,14 +37,19 @@ def random_sentence(min=None, max=30):
     min = int(max * 0.75) - 1
   return lipsum(1, False, min, max)
 
+
 def random_article():
-  article = FEED['items'][randrange(len(FEED['items']))] 
+  article = FEED['items'][randrange(len(FEED['items']))]
   return {
     'title': article['title'],
     'link': article['links'][0]['href'],
-    'body': bleach.clean(article['description'], strip=True, tags=[]).split('.')[0] + '.',
+    'body': bleach.clean(
+      article['description'],
+      strip=True, tags=[]
+    ).split('.')[0] + '.',
     'date': datetime.fromtimestamp(mktime(article['published_parsed'])),
   }
+
 
 def random_date(raw=False):
   d = date.today() - timedelta(days=randrange(100))
@@ -75,6 +84,7 @@ def get_sources_links(page):
       ) for scss in page.scss
     ]
   return []
+
 
 FUNCTIONS = [
   random_image,

@@ -109,11 +109,11 @@ module.exports = (grunt) ->
         src: ['build/**/*.html', '!build/templates/**/*.html'],
         overwrite: true,
         replacements: [
-          from: /(http\:\/\/loremflickr\.com\/\d+\/\d+\/\?user\=cambridge\%20university)/g
-          to: (lp) ->
+          from: /img src="(http.+?)"/g
+          to: (match, index, fulltext, matches) ->
             u = uuid.v4()
-            r = execSync "wget -O build/images/" + u + " " + lp
-            return grunt.config.data.local_settings[grunt.option('target')].root_url + '/images/' + u
+            r = execSync "wget -O build/images/" + u + " " + matches[0]
+            return 'img src="' + grunt.config.data.local_settings[grunt.option('target')].root_url + '/images/' + u + '"'
         ]
       root_url:
         src: ['build/**/*.html', '!build/templates/**/*', 'build/templates/**/index.html']
