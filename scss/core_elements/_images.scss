@@ -11,14 +11,9 @@
   }
 }
 
-.image_wrapper:after {
-  content: "";
-  display: block;
-}
-
 @mixin image-wrapper-style($name, $width, $height) {
-  .image_wrapper_#{$name}:after {
-    padding-top: $height / $width * 100%;
+  .image_wrapper_#{$name} {
+    padding-bottom: $height / $width * 100%;
   }
 }
 

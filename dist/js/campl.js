@@ -1,8 +1,20 @@
 (function() {
   jQuery(function($) {
-    $("a[href='#global-header-drawer-close']").click(function() {
+    $("#global-header-drawers").on('hidden.bs.collapse', function() {
       $("#global-header-drawers div.tab-pane.active").removeClass("active");
       return $(".global-header a.nav-link.active").removeClass("active");
+    });
+    $(".global-header [data-parent='#global-header-drawers']").on('shown.bs.tab', function() {
+      if (!$("#global-header-drawers").hasClass("in")) {
+        return $("#global-header-drawers").collapse("show");
+      }
+    });
+    $(".global-header [data-parent='#global-header-drawers']").click(function() {
+      if ($("#global-header-drawers").hasClass("in")) {
+        if ($(this).hasClass("active")) {
+          return $("#global-header-drawers").collapse("hide");
+        }
+      }
     });
     $("[data-toggle='offcanvas']").click(function(e) {
       e.preventDefault();
