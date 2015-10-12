@@ -15,8 +15,8 @@ from markupsafe import escape
 
 FEED = feedparser.parse('http://www.cam.ac.uk/news/feed?')
 
-IMAGE_SOURCE = "http://loremflickr.com/%s/%s/?user=cambridge%%20university"
 IMAGE_SOURCE = "http://placehold.it/%sx%s"
+IMAGE_SOURCE = "http://loremflickr.com/%s/%s/?user=cambridge%%20university"
 
 
 def random_image(width, height=None):
@@ -24,6 +24,7 @@ def random_image(width, height=None):
     height = width
   scale = random() + 1
   height = int(height * scale)
+  scale = random() + 1
   width = int(width * scale)
   return IMAGE_SOURCE % (width, height)
 
