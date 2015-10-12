@@ -6,7 +6,7 @@
     <h3><a href="{{ article.link }}">{{ article.title }}</a></h3>
   </div>
   <div class="promo-teaser-image">
-    <a href="{{ article.link }}">
+    <a href="{{ article.link }}" class="image_wrapper image_wrapper_promo">
       <img src="{{ img }}" alt="{{article. title }}">
     </a>
   </div>
@@ -64,7 +64,7 @@
   <div class="row">
     {% if img %}
     <div class="col-xs-5">
-      <a href="{{ href }}"><img src="{{ img }}" alt="{{ title }}"></a>
+      <a href="{{ href }}" class="image_wrapper image_wrapper_focuson"><img src="{{ img }}" alt="{{ title }}"></a>
     </div>
     {% endif %}
     {% if img %}
@@ -84,7 +84,7 @@
 <div class="row vertical-teaser campage-teaser">
   <div class="teaser-image col-xs-12">
     <span class="teaser-tag">{{ tag }}</span>
-    <a href="{{ article.link }}">
+    <a href="{{ article.link }}" class="image_wrapper image_wrapper_tagged">
       <img src="{{ img }}" alt="{{ article.title }}">
     </a>
   </div>

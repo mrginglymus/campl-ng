@@ -1,17 +1,14 @@
 .image_wrapper {
-  display: inline-block;
+  display: block;
   position: relative;
   width: 100%;
-}
-
-.safe_image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-size: cover;
-  background-position: 50% 50%;
+  
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .image_wrapper:after {
@@ -36,5 +33,13 @@
 }
 
 .image_wrapper_promo:after {
-  padding-top: 428 / 785 * 100%;
+  padding-top: 126 / 349 * 100%;
+}
+
+.image_wrapper_focuson:after {
+  padding-top: 137 / 153 * 100%;
+}
+
+.image_wrapper_tagged:after {
+  padding-top: 183 / 349 * 100%;
 }
