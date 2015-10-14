@@ -52,6 +52,7 @@ pages = Pages([
     Page('Links and Buttons', 'pages/core_elements/links_and_buttons.html', scss=['core_elements/_buttons.scss']),
     Page('Forms', 'pages/core_elements/forms.html'),
     Page('Lists', 'pages/core_elements/lists.html'),
+    Page('Images', 'pages/core_elements/images.html'),
     Page('Embedded Media', 'pages/core_elements/embedded_media.html'),
     Page('Themes', 'pages/core_elements/themes.html'),
   ]),

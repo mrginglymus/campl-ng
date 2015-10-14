@@ -1,7 +1,7 @@
 sass_options =
   sourcemap: 'inline',
   trace: true,
-  require: './lib/themes.rb',
+  require: './lib/loaders.rb',
   compass: true,
 
 uuid = require('node-uuid')

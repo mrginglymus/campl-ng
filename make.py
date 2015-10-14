@@ -35,6 +35,9 @@ env.globals['REMOTE_JS'] = (
 with open('themes.json') as f:
   env.globals['COLOURS'] = json.loads(f.read(), object_pairs_hook=OrderedDict)
 
+with open('images.json') as f:
+  env.globals['IMAGE_STYLES'] = json.loads(f.read(), object_pairs_hook=OrderedDict)
+  
 # add functions
 for f in FUNCTIONS:
   env.globals[f.func_name] = f

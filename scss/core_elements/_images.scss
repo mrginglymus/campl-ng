@@ -11,22 +11,10 @@
   }
 }
 
-@mixin image-wrapper-style($name, $width, $height) {
-  .image-wrapper-#{$name} {
-    padding-bottom: $height / $width * 100%;
+$images: get_images();
+
+@each $style, $map in $images {
+  .image-wrapper-#{$style} {
+    padding-bottom: map-get($map, height) / map-get($map, width) * 100%;
   }
 }
-
-@include image-wrapper-style(leading, 590, 288);
-
-@include image-wrapper-style(square, 100, 100);
-
-@include image-wrapper-style(carousel, 885, 432);
-
-@include image-wrapper-style(promo, 349, 125);
-
-@include image-wrapper-style(focuson, 153, 137);
-
-@include image-wrapper-style(tagged, 349, 183);
-
-@include image-wrapper-style(carousel_campage, 785, 428);
