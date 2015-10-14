@@ -5,12 +5,12 @@
 {% block content %}
 <p class="lead">Images are centered and resized to fit their container with the correct aspect ratio</p>
 
-<p><a href="{{ example_image }}">View Uncropped Image</a></p>
-
 {% for image_style_name, image_style in IMAGE_STYLES.items() %}
 <h3>{{ image_style.description }} <small>({{ image_style.width }} by {{ image_style.height }})</small></h3>
-<div class="image-wrapper image-wrapper-{{ image_style_name }} m-b">
-  <img src="{{ example_image }}">
+<div style="max-width: {{ image_style.width }}px;">
+  <div class="image-wrapper image-wrapper-{{ image_style_name }} m-b">
+    <img src="{{ example_image }}">
+  </div>
 </div>
 {% endfor %}
 {% endblock %}
