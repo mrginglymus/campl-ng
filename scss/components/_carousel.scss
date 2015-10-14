@@ -64,6 +64,11 @@
   line-height: 25px;
   padding-right: 80px;
 
+  @include media-breakpoint-down(sm) {
+    left: 0;
+    right: 0;
+  }
+  
   a {
     color: $white;
 
@@ -91,17 +96,8 @@
   text-align: center;
   color: $white;
   padding: $spacer;
-}
-
-@include media-breakpoint-down(sm) {
-  .carousel-caption {
-    background-color: rgba(0, 0, 0, 1);
-    left: 0;
-    right: 0;
-    position: static;
-  }
-
-  .carousel-text {
+  
+  @include media-breakpoint-down(sm) {
     padding: 20px 60px;
   }
 }

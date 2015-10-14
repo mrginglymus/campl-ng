@@ -6746,6 +6746,10 @@ a.bg-danger:focus, a.bg-danger:hover {
   font-size: 19px;
   line-height: 25px;
   padding-right: 80px; }
+  @media (max-width: 767.9px) {
+    .carousel-caption {
+      left: 0;
+      right: 0; } }
   .carousel-caption a {
     color: #ffffff; }
     .carousel-caption a:focus, .carousel-caption a:hover {
@@ -6784,16 +6788,10 @@ a.bg-danger:focus, a.bg-danger:hover {
     background-color: #888b22 ; }
   .theme-blue-grey .carousel-text {
     background-color: #8c8989 ; }
+  @media (max-width: 767.9px) {
+    .carousel-text {
+      padding: 20px 60px; } }
 
-@media (max-width: 767.9px) {
-  .carousel-caption {
-    background-color: black;
-    left: 0;
-    right: 0;
-    position: static; }
-
-  .carousel-text {
-    padding: 20px 60px; } }
 .atoz {
   padding: 20px;
   text-align: center; }
