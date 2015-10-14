@@ -6677,9 +6677,6 @@ a.bg-danger:focus, a.bg-danger:hover {
       background-color: #abb400 ; }
     .theme-blue-grey .carousel:after {
       background-color: #d2dde7 ; } }
-.carousel img {
-  width: 100%; }
-
 .carousel-control.carousel-control-campage {
   background-color: #000000 !important; }
   .carousel-control.carousel-control-campage:hover {
@@ -6748,7 +6745,7 @@ a.bg-danger:focus, a.bg-danger:hover {
   font-weight: 300;
   font-size: 19px;
   line-height: 25px;
-  padding-right: 40px; }
+  padding-right: 80px; }
   .carousel-caption a {
     color: #ffffff; }
     .carousel-caption a:focus, .carousel-caption a:hover {
@@ -7584,8 +7581,8 @@ blockquote {
   width: 100%; }
   .image-wrapper img {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 100% !important;
+    height: 100% !important;
     object-fit: cover; }
 
 .image-wrapper-leading {

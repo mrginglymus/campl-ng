@@ -1,6 +1,6 @@
 {% macro carousel_item(article, image, items, loop) %}
 <div class="carousel-item{% if loop.first %} active{% endif %}">
-  {% if link %}
+  {% if article.link %}
   <a href="{{ article.link }}" class="image-wrapper image-wrapper-carousel">
     <img src="{{ image }}" alt="{{ article.title }}">
   </a>
@@ -10,7 +10,7 @@
   </div>
   {% endif %}
   <div class="carousel-caption">
-    {% if link %}
+    {% if article.link %}
     <a href="{{ article.link }}">{{ article.title }}</a>
     {% else %}
     <span>{{ article.title }}</span>

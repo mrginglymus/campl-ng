@@ -13,10 +13,6 @@
   }
 }
 
-.carousel img {
-  width: 100%;
-}
-
 .carousel-control.carousel-control-campage {
   background-color: $black !important;
 
@@ -66,7 +62,7 @@
   font-weight: 300;
   font-size: 19px;
   line-height: 25px;
-  padding-right: 40px;
+  padding-right: 80px;
 
   a {
     color: $white;
