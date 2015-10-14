@@ -1,0 +1,30 @@
+@import "compass/css3/images";
+
+.vertical-menu-children {
+  @include media-breakpoint-up(md) {
+    margin-top: 10px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 10px;
+  }
+
+  > li {
+    padding: 5px 5px 5px 0;
+
+    @include media-breakpoint-down(sm) {
+      padding: 0;
+    }
+
+    a,
+    span {
+      @include background(inline-image("link-bullet-black.png") no-repeat 0 50%);
+      padding-left: 15px;
+
+      @include media-breakpoint-down(sm) {
+        display: block;
+        padding: 5px 5px 5px 15px;
+      }
+    }
+  }
+}
