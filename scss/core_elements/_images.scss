@@ -11,7 +11,7 @@
   }
 }
 
-$images: get_images();
+$images: get-images();
 
 @each $style, $map in $images {
   .image-wrapper-#{$style} {
