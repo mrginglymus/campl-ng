@@ -21,9 +21,9 @@
       return $(".offcanvas").toggleClass("active");
     });
     if (Cookies.get("mobile_menu_open")) {
-      $("#vertical-navigation").addClass("in");
+      $("#vertical-menu").addClass("in");
     }
-    return $("#vertical-navigation").on("show.bs.collapse", function() {
+    return $("#vertical-menu").on("show.bs.collapse", function() {
       return Cookies.set("mobile_menu_open", true);
     }).on("hide.bs.collapse", function() {
       return Cookies.remove("mobile_menu_open");
