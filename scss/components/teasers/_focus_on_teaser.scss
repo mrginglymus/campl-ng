@@ -2,11 +2,24 @@
 
 .focus-on-teaser {
   @include theme-element(background-color, page-background);
+  @include make-row();
   margin: 0 $spacer $spacer;
+
+  .teaser-image {
+    @include make-col-span(5);
+
+    + .teaser-body {
+      @include make-col-span(7);
+    }
+  }
 
   .teaser-body {
     padding: 15px;
     position: relative;
+
+    &:first-child {
+      @include make-col-span(12);
+    }
   }
 
   .teaser-title {

@@ -18,16 +18,16 @@
 {% endmacro %}
 
 {% macro horizontal_teaser(article, img=None, type=None) %}
-<div class="row horizontal-teaser">
+<div class="horizontal-teaser">
   {% if img %}
-  <div class="col-md-6 col-xs-3 teaser-image">
+  <div class="teaser-image">
     {{ teaser_image(article, img, type) }}
   </div>
-  <div class="col-md-6 col-xs-9 teaser-body">
+  <div class="teaser-body">
     {{ teaser_body(article, type) }}
   </div>
   {% else %}
-  <div class="col-xs-9 col-xs-offset-3 col-md-12 col-md-offset-0 teaser-body">
+  <div class="teaser-body">
     {{ teaser_body(article, type) }}
   </div>
   {% endif %}
@@ -35,16 +35,16 @@
 {% endmacro %}
 
 {% macro vertical_teaser(article, img=None, type=None) %}
-<div class="vertical-teaser row">
+<div class="vertical-teaser">
   {% if img %}
-    <div class="teaser-image col-md-12 col-xs-3">
+    <div class="teaser-image">
       {{ teaser_image(article, img, type) }}
     </div>
-    <div class="teaser-body col-md-12 col-xs-9">
+    <div class="teaser-body">
       {{ teaser_body(article, type) }}
     </div>
   {% else %}
-    <div class="teaser-body col-md-12 col-md-offset-0 col-xs-9 col-xs-offset-3">
+    <div class="teaser-body">
       {{ teaser_body(article, type) }}
     </div>
   {% endif %}
@@ -61,34 +61,28 @@
 
 {% macro focus_on_teaser(article, img=None) %}
 <div class="focus-on-teaser">
-  <div class="row">
-    {% if img %}
-    <div class="col-xs-5">
-      <a href="{{ href }}" class="image-wrapper image-wrapper-focuson"><img src="{{ img }}" alt="{{ title }}"></a>
-    </div>
-    {% endif %}
-    {% if img %}
-    <div class="col-xs-7 teaser-body">
-    {% else %}
-    <div class="col-xs-12 teaser-body">
-    {% endif %}
-      <h3 class="teaser-title">
-        <a href="{{ article.link }}">{{ article.title }}</a>
-      </h3>
-    </div>
+  {% if img %}
+  <div class="teaser-image">
+    <a href="{{ href }}" class="image-wrapper image-wrapper-focuson"><img src="{{ img }}" alt="{{ title }}"></a>
+  </div>
+  {% endif %}
+  <div class="teaser-body">
+    <h3 class="teaser-title">
+      <a href="{{ article.link }}">{{ article.title }}</a>
+    </h3>
   </div>
 </div>
 {% endmacro %}
 
 {% macro campage_teaser(article, img, tag) %}
-<div class="row vertical-teaser campage-teaser">
-  <div class="teaser-image col-xs-12">
+<div class="vertical-teaser campage-teaser">
+  <div class="teaser-image">
     <span class="teaser-tag">{{ tag }}</span>
     <a href="{{ article.link }}" class="image-wrapper image-wrapper-tagged">
       <img src="{{ img }}" alt="{{ article.title }}">
     </a>
   </div>
-  <div class="teaser-body col-xs-12">
+  <div class="teaser-body">
     {{ teaser_body(article) }}
   </div>
 </div>

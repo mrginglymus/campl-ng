@@ -1,5 +1,6 @@
 .horizontal-teaser,
 .vertical-teaser {
+  @include make-row();
   padding: $spacer;
 
   // style teaser title link
@@ -66,6 +67,40 @@
 // padding for teaser image and positioning for AV icon
 .horizontal-teaser .teaser-image {
   padding: 0 $spacer 0 0;
+
+  @include media-breakpoint-up(md) {
+    @include make-col-span(6);
+  }
+
+  + .teaser-body {
+    @include media-breakpoint-up(md) {
+      @include make-col-span(6);
+    }
+  }
+}
+
+.vertical-teaser, .horizontal-teaser {
+  .teaser-body:first-child {
+    @include media-breakpoint-up(md) {
+      @include make-col-span(12);
+      @include make-col-offset(0);
+    }
+
+    @include media-breakpoint-up(xs) {
+      @include make-col-span(9);
+      @include make-col-offset(3);
+    }
+  }
+
+  @include media-breakpoint-up(xs) {
+    .teaser-image {
+      @include make-col-span(3);
+
+      + .teaser-body {
+        @include make-col-span(9);
+      }
+    }
+  }
 }
 
 // padding for teaser image and position for AV icon
@@ -76,7 +111,12 @@
   }
 
   @include media-breakpoint-up(md) {
-    + .teaser-body {
+    @include make-col-span(12);
+  }
+
+  + .teaser-body {
+    @include media-breakpoint-up(md) {
+      @include make-col-span(12);
       margin-top: $spacer;
     }
   }
