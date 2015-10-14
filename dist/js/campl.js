@@ -43,13 +43,11 @@
 
 (function() {
   jQuery(function($) {
-    var carousel;
-    carousel = new Hammer($('.carousel')[0]);
-    carousel.on('swipeleft', function() {
-      return $('.carousel').carousel('next');
+    $('.carousel').hammer().bind('swipeleft', function() {
+      return $(this).carousel('next');
     });
-    return carousel.on('swiperight', function() {
-      return $('.carousel').carousel('prev');
+    return $('.carousel').hammer().bind('swiperight', function() {
+      return $(this).carousel('prev');
     });
   });
 
