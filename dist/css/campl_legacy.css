@@ -6788,22 +6788,9 @@ a.bg-danger:focus, a.bg-danger:hover {
 @media (max-width: 767.9px) {
   .carousel-caption {
     background-color: black;
-    padding-left: 70px;
-    padding-right: 80px;
     left: 0;
     right: 0;
     position: static; }
-    .carousel-caption .carousel-page {
-      right: 66px; }
-
-  .carousel-control.left, .carousel-control.right {
-    top: 0;
-    height: 100%;
-    opacity: 0.8; }
-    .carousel-control.left:focus, .carousel-control.left:hover, .carousel-control.right:focus, .carousel-control.right:hover {
-      opacity: 0.8; }
-  .carousel-control.left {
-    left: 0; }
 
   .carousel-text {
     padding: 20px 60px; } }

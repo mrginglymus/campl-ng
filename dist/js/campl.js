@@ -40,3 +40,17 @@
   });
 
 }).call(this);
+
+(function() {
+  jQuery(function($) {
+    var carousel;
+    carousel = new Hammer($('.carousel')[0]);
+    carousel.on('swipeleft', function() {
+      return $('.carousel').carousel('next');
+    });
+    return carousel.on('swiperight', function() {
+      return $('.carousel').carousel('prev');
+    });
+  });
+
+}).call(this);

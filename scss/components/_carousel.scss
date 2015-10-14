@@ -96,32 +96,9 @@
 @include media-breakpoint-down(sm) {
   .carousel-caption {
     background-color: rgba(0, 0, 0, 1);
-    padding-left: 70px;
-    padding-right: 80px;
     left: 0;
     right: 0;
     position: static;
-
-    .carousel-page {
-      right: 66px;
-    }
-  }
-
-  .carousel-control {
-    &.left,
-    &.right {
-      top: 0;
-      height: 100%;
-      opacity: 0.8;
-
-      @include hover-focus {
-        opacity: 0.8;
-      }
-    }
-
-    &.left {
-      left: 0;
-    }
   }
 
   .carousel-text {

@@ -88,7 +88,11 @@ module.exports = (grunt) ->
     coffee:
       core:
         files:
-          'build/js/campl.js': ['coffee/menu.coffee', 'coffee/select_tab.coffee']
+          'build/js/campl.js': [
+            'coffee/menu.coffee',
+            'coffee/select_tab.coffee',
+            'coffee/carousel.coffee'
+          ]
       meta:
         files:
           'build/js/theme_switcher.js': ['coffee/theme_switcher.coffee']
