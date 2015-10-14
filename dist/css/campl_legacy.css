@@ -6645,7 +6645,7 @@ a.bg-danger:focus, a.bg-danger:hover {
     height: 23px;
     padding: 4px;
     opacity: 1;
-    border: 1px solid #ddd;
+    border: 1px solid #dddddd;
     position: absolute;
     top: 4px;
     right: 4px; }
@@ -7490,7 +7490,7 @@ blockquote {
   padding-right: 10px; }
 
 .btn-radio {
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   font-weight: normal; }
   .btn-radio:focus, .btn-radio:hover {
     background-color: #ebebeb;
@@ -7504,7 +7504,7 @@ blockquote {
   .radio-btns input {
     display: none; }
   .radio-btns :checked + .btn-radio {
-    color: #fff; }
+    color: #ffffff; }
     .theme-blue .radio-btns :checked + .btn-radio {
       background-color: #0072cf ; }
     .theme-turquoise .radio-btns :checked + .btn-radio {
@@ -7578,35 +7578,35 @@ blockquote {
     .theme-blue-grey .radio-btns :checked + .btn-radio:focus, .theme-blue-grey .radio-btns :checked + .btn-radio:hover {
       border-color: #5f5f5f ; }
 
-.image_wrapper {
+.image-wrapper {
   display: block;
   position: relative;
   width: 100%; }
-  .image_wrapper img {
+  .image-wrapper img {
     position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover; }
 
-.image_wrapper_leading {
+.image-wrapper-leading {
   padding-bottom: 48.81356%; }
 
-.image_wrapper_square {
+.image-wrapper-square {
   padding-bottom: 100%; }
 
-.image_wrapper_carousel {
+.image-wrapper-carousel {
   padding-bottom: 48.81356%; }
 
-.image_wrapper_promo {
+.image-wrapper-promo {
   padding-bottom: 35.81662%; }
 
-.image_wrapper_focuson {
+.image-wrapper-focuson {
   padding-bottom: 89.54248%; }
 
-.image_wrapper_tagged {
+.image-wrapper-tagged {
   padding-bottom: 52.43553%; }
 
-.image_wrapper_carousel_campage {
+.image-wrapper-carousel_campage {
   padding-bottom: 54.52229%; }
 
 .table:not(.table-bordered) th,

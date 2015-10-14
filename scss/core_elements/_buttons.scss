@@ -5,7 +5,7 @@
   font-weight: normal;
   background-color: $gray-darker;
   background-repeat: no-repeat;
-  
+
   @include hover-focus-active {
     background-color: #454545 !important;
     border-color: #454545 !important;
@@ -38,9 +38,9 @@
 }
 
 .btn-radio {
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   font-weight: normal;
-  
+
   @include hover-focus {
     background-color: #ebebeb;
     border-color: #adadad;
@@ -50,20 +50,20 @@
 .radio-btns {
   margin-left: 0;
   padding-left: 0;
-  
+
   + .radio-btns {
     margin-left: 0;
   }
-  
+
   input {
     display: none;
   }
-  
+
   :checked + .btn-radio {
     @include theme-element(background-color, selected);
     @include theme-element(border-color, light-highlight);
-    color: #fff;
-    
+    color: #ffffff;
+
     @include hover-focus {
       @include theme-element(background-color, light-highlight);
       @include theme-element(border-color, navbar);

@@ -16,11 +16,11 @@
 
 .alert {
   position: relative;
-  
+
   @include media-breakpoint-up(md) {
     padding: 15px 80px;
   }
-  
+
   &.alert-success {
     @include alert-style($brand-success);
   }
@@ -58,14 +58,14 @@
       font-size: 2.4em;
     }
   }
-  
+
   .close {
     @include background(rgba(255, 255, 255, 0.5) inline-image("alert-close.png") no-repeat 50% 50%);
     width: 23px;
     height: 23px;
     padding: 4px;
     opacity: 1;
-    border: 1px solid #ddd;
+    border: 1px solid #dddddd;
     position: absolute;
     top: 4px;
     right: 4px;
