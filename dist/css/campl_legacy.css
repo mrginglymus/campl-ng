@@ -7399,6 +7399,9 @@ a.bg-danger:focus, a.bg-danger:hover {
 @media (max-width: 767.9px) {
   .vertical-teaser .teaser-image {
     padding: 0 20px 0 0; } }
+@media (min-width: 768px) {
+  .vertical-teaser .teaser-image + .teaser-body {
+    margin-top: 20px; } }
 
 .teaser-tag {
   position: absolute;
