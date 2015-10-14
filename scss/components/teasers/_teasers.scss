@@ -1,5 +1,7 @@
 .horizontal-teaser,
 .vertical-teaser {
+  padding: $spacer;
+
   // style teaser title link
   .teaser-title {
     font-size: 14px;
@@ -61,31 +63,6 @@
   }
 }
 
-.teaser-list {
-  // teaser list - padding at the sides, margin at the top to ensure border placement
-  padding: 0 $spacer;
-  margin: $spacer 0;
-
-  // teasers in a horizontal list should use vertical padding EXCEPT at the outer edge
-  // where the padding of the teaser list should be used - this is to ensure the border
-  // doesn't hit the edges
-  .horizontal-teaser,
-  .vertical-teaser {
-    @include media-breakpoint-down(sm) {
-      padding-bottom: $spacer;
-    }
-
-    &:not(:first-of-type) {
-      padding-top: $spacer;
-    }
-
-
-    &:not(:last-of-type) {
-      padding-bottom: $spacer;
-    }
-  }
-}
-
 // padding for teaser image and positioning for AV icon
 .horizontal-teaser .teaser-image {
   padding: 0 $spacer 0 0;
@@ -97,14 +74,7 @@
   @include media-breakpoint-down(sm) {
     padding: 0 $spacer 0 0;
   }
-
-  @include media-breakpoint-up(md) {
-    + .teaser-body {
-      margin-top: $spacer;
-    }
-  }
 }
-
 
 .teaser-tag {
   position: absolute;
@@ -118,58 +88,4 @@
   font-weight: 400;
   font-family: $font-family-sans-serif-extra;
   z-index: 1;
-}
-
-// teaser lists next to each other have a border between them, unless they've collapsed
-.teaser-list + .teaser-list {
-  @include media-breakpoint-up(md) {
-    border-left: $border-width solid $border-color;
-  }
-}
-
-
-// rows in a teaser list (whether they be nested lists or another teaser) have lines
-// between them
-.teaser-list > .row:not(:last-of-type),
-.teaser-list> .teaser-row:not(:last-of-type) {
-  border-bottom: $border-width solid $border-color;
-}
-
-
-// if the last item in a teaser list is a teaser row, remove bottom padding
-.teaser-list > .teaser-row:last-of-type {
-  margin-bottom: -$spacer;
-}
-
-// non collapsed lists - nested teaser lists do not have the outmost padding, as the
-// parent teaser list handles this
-@include media-breakpoint-up(md) {
-  .teaser-row > .row {
-    margin-left: -$spacer;
-    margin-right: -$spacer;
-  }
-}
-
-// collapsed lists  - flip the padding, margin, adjacent teaser lists now are on top of
-// each other so put a border in, remove margin on nested teaser lists and stick a
-// border on top
-@include media-breakpoint-down(sm) {
-  .teaser-list {
-    padding: $spacer 0;
-    margin: 0 $spacer;
-
-    + .teaser-list {
-      border-top: $border-width solid $border-color;
-      margin-top: -$spacer;
-    }
-
-    .teaser-list {
-      padding: $spacer 0;
-      margin: 0;
-
-      + .teaser-list {
-        border-top: $border-width solid $border-color;
-      }
-    }
-  }
 }

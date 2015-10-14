@@ -12,13 +12,13 @@
     <div class="heading"><h2 class="lite-heading">Latest News</h2></div>
     {{ teasers.news_teaser(random_article()) }}
     {{ teasers.news_teaser(random_article()) }}
-    <div><a class="secondary-cta pull-right" href="" >View all news</a></div>
+    <div class="p-a clearfix"><a class="secondary-cta pull-right" href="" >View all news</a></div>
   </div>
 </div>
 {% endblock %}
 
 {% block sidebar_content %}
-<div class="heading m-b"><h2 class="lite-heading">Upcoming Events</h2></div>
+<h2 class="lite-heading">Upcoming Events</h2>
 {{ teasers.date_teaser(random_article()) }}
 {{ teasers.date_teaser(random_article()) }}
 {{ teasers.date_teaser(random_article()) }}

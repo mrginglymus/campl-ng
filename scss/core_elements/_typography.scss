@@ -21,5 +21,7 @@ h2 {
 }
 
 .heading {
-  border-bottom: $border-width solid $border-color;
+  margin-left: $spacer;
+  margin-right: $spacer;
+  padding-top: $spacer;
 }

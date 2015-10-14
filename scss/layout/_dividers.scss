@@ -1,0 +1,30 @@
+@import "compass/css3/flexbox";
+
+.vertical-divider {
+  @include media-breakpoint-up(md) {
+    @include flex(0 0 auto);
+    margin-top: $spacer;
+    margin-bottom: $spacer;
+    margin-left: -1px !important;
+    border-left: $border-width solid #e4e4e4;
+  }
+  
+  @include media-breakpoint-down(sm) {
+    margin-left: $spacer;
+    margin-right: $spacer;
+    border-top: $border-width solid #e4e4e4;
+    width: 100%;
+  }
+}
+
+.horizontal-divider {
+  margin-left: $spacer;
+  margin-right: $spacer;
+  border-top: $border-width solid #e4e4e4;
+}
+
+.horizontal-divider-dashed {
+  margin-left: $spacer;
+  margin-right: $spacer;
+  border-bottom: $border-width dashed #b5b5b5;
+}
