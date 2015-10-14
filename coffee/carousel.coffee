@@ -1,6 +1,5 @@
 jQuery ($) ->
-  carousel = new Hammer $('.carousel')[0]
-  carousel.on 'swipeleft', ->
-    $('.carousel').carousel 'next'
-  carousel.on 'swiperight', ->
-    $('.carousel').carousel 'prev'
+  $('.carousel').hammer().bind 'swipeleft', ->
+    $(this).carousel 'next'
+  $('.carousel').hammer().bind 'swiperight', ->
+    $(this).carousel 'prev'

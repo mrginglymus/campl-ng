@@ -31,6 +31,7 @@ env.globals['REMOTE_JS'] = (
   'https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.0.3/js.cookie.js',
   'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js',
   'https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.4/hammer.js',
+  'https://cdn.jsdelivr.net/jquery.hammerjs/2.0.0/jquery.hammer.js',
 )
 
 with open('themes.json') as f:
