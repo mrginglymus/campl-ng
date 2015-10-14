@@ -54,7 +54,9 @@
       <div class="col-md-3 sidebar">
         <div class="p-a">
           {% block sidebar_content %}{% if page.type=='page' %}
-            {{ sidebar_heading('Sources') }}
+            <div class="heading m-a-0 p-a-0">
+              <h2 class="lite-heading">Sources</h2>
+            </div>
             {{ related_links(get_sources_links(page)) }}
           {% endif %}{% endblock %}
         </div>
