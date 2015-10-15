@@ -1,5 +1,4 @@
 .teaser {
-  @include make-row();
   padding: $spacer;
 
   .teaser-title {
@@ -23,21 +22,28 @@
 }
 
 @mixin teaser-common() {
+  @include make-row();
+
   .teaser-image {
     @include make-col-span(3);
+    @include make-col();
 
     + .teaser-body {
       @include make-col-span(9);
     }
   }
 
-  .teaser-body:first-child {
-    @include make-col-span(9);
-    @include make-col-offset(3);
+  .teaser-body {
+    @include make-col();
 
-    @include media-breakpoint-up(md) {
-      @include make-col-span(12);
-      @include make-col-offset(0);
+    :first-child {
+      @include make-col-span(9);
+      @include make-col-offset(3);
+
+      @include media-breakpoint-up(md) {
+        @include make-col-span(12);
+        @include make-col-offset(0);
+      }
     }
   }
 }
@@ -80,6 +86,8 @@
 }
 
 .wide-vertical-teaser {
+  @include teaser-common();
+
   .teaser-image {
     @include make-col-span(12);
 
