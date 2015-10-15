@@ -7552,7 +7552,8 @@ blockquote {
 
 .btn-input {
   border: 1px solid #cccccc;
-  font-weight: normal; }
+  font-weight: normal;
+  padding-left: 2em; }
   .btn-input:focus, .btn-input:hover {
     background-color: #ebebeb;
     border-color: #adadad; }
@@ -7563,7 +7564,9 @@ blockquote {
   .input-btn + .input-btn {
     margin-left: 0; }
   .input-btn input {
-    display: none; }
+    margin: 0 !important;
+    left: 0.6em;
+    top: 20%; }
   .input-btn :checked + .btn-input {
     color: #ffffff; }
     .theme-blue .input-btn :checked + .btn-input {
