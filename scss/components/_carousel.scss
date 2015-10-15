@@ -40,11 +40,11 @@
   }
 
   &.right {
-    @include background-image(inline-image("carousel-right.png"));
+    background-image: inline-image("carousel-right.png");
   }
 
   &.left {
-    @include background-image(inline-image("carousel-left.png"));
+    background-image: inline-image("carousel-left.png");
     left: auto;
     right: 51px;
 
@@ -68,7 +68,7 @@
     left: 0;
     right: 0;
   }
-  
+
   a {
     color: $white;
 
@@ -96,7 +96,7 @@
   text-align: center;
   color: $white;
   padding: $spacer;
-  
+
   @include media-breakpoint-down(sm) {
     padding: 20px 60px;
   }

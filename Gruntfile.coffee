@@ -25,6 +25,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-rsync'
   grunt.loadNpmTasks 'grunt-coffeelint'
   grunt.loadNpmTasks 'grunt-html'
+  grunt.loadNpmTasks 'grunt-autoprefixer'
 
   grunt.initConfig
     pkg: grunt.file.readJSON('package.json')
@@ -72,6 +73,12 @@ module.exports = (grunt) ->
           sass_options
         files:
           'build/css/meta.css': 'scss/meta.scss'
+
+    autoprefixer:
+      core:
+        src: 'build/css/campl.css'
+      legacy:
+        src: 'build/css/campl_legacy.css'
 
     cssmin:
       options:
@@ -189,7 +196,7 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'default', ['clean:build', 'sass:core', 'coffee:core']
 
-  grunt.registerTask 'build-css', ['sass_globbing', 'sass', 'cssmin']
+  grunt.registerTask 'build-css', ['sass_globbing', 'sass', 'autoprefixer', 'cssmin']
 
   grunt.registerTask 'build-js', ['coffee', 'copy:js', 'uglify']
 

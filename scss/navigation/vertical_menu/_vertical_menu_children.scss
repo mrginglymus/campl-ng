@@ -18,7 +18,7 @@
 
     a,
     span {
-      @include background(inline-image("link-bullet-black.png") no-repeat 0 50%);
+      background: inline-image("link-bullet-black.png") no-repeat 0 50%;
       padding-left: 15px;
 
       @include media-breakpoint-down(sm) {
