@@ -7867,6 +7867,9 @@ blockquote {
     .theme-blue-grey .radio-btns :checked + .btn-radio:focus, .theme-blue-grey .radio-btns :checked + .btn-radio:hover {
       border-color: #5f5f5f ; }
 
+.embed-responsive {
+  width: 100%; }
+
 .image-wrapper {
   display: block;
   position: relative;

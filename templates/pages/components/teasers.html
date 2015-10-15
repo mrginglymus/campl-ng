@@ -21,6 +21,11 @@
       </div>
     </div>
     {{ teasers.horizontal_teaser(random_article(), random_image(256), type='video') }}
+    <div class="teaser p-a">
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="{{ EXAMPLES.VIDEOS['16by9'] }}" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
     <div class="teaser-row">
       <div class="row">
         <div class="col-md-6 teaser-list">
