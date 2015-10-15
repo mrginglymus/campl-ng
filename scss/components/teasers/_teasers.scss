@@ -1,5 +1,4 @@
-.horizontal-teaser,
-.vertical-teaser {
+.teaser {
   @include make-row();
   padding: $spacer;
 
@@ -20,118 +19,78 @@
   .teaser-image {
     a {
       display: block;
-
-      @include hover-focus {
-        .teaser-image-audio,
-        .teaser-image-video {
-          background-color: rgba(0, 0, 0, 0.8); // hover colour for A/V icons
-        }
-      }
-    }
-  }
-
-  // AV icons
-  .teaser-image-audio,
-  .teaser-image-video {
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 5px;
-    font-size: 3em;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    color: $white;
-    z-index: 1;
-
-    @include media-breakpoint-down(sm) {
-      font-size: 2em;
-    }
-
-    &:before {
-      @include fa-icon();
-      width: 1.5em;
-      text-align: center;
-    }
-  }
-
-  // audio icon
-  .teaser-image-audio:before {
-    content: $fa-var-volume-up;
-  }
-
-  // video icon
-  .teaser-image-video:before {
-    content: $fa-var-youtube-play;
-  }
-}
-
-// padding for teaser image and positioning for AV icon
-.horizontal-teaser .teaser-image {
-  padding: 0 $spacer 0 0;
-
-  @include media-breakpoint-up(md) {
-    @include make-col-span(6);
-  }
-
-  + .teaser-body {
-    @include media-breakpoint-up(md) {
-      @include make-col-span(6);
     }
   }
 }
 
-.vertical-teaser, .horizontal-teaser {
+@mixin teaser_common() {
+  .teaser-image {
+    @include make-col-span(3);
+
+    + .teaser-body {
+      @include make-col-span(9);
+    }
+  }
+
   .teaser-body:first-child {
+    @include make-col-span(9);
+    @include make-col-offset(3);
+
     @include media-breakpoint-up(md) {
       @include make-col-span(12);
       @include make-col-offset(0);
     }
-
-    @include media-breakpoint-up(xs) {
-      @include make-col-span(9);
-      @include make-col-offset(3);
-    }
   }
+}
 
-  @include media-breakpoint-up(xs) {
-    .teaser-image {
-      @include make-col-span(3);
 
-      + .teaser-body {
-        @include make-col-span(9);
+.horizontal-teaser {
+  @include teaser_common();
+
+  .teaser-image {
+    padding: 0 $spacer 0 0;
+
+    @include media-breakpoint-up(md) {
+      @include make-col-span(6);
+    }
+
+    + .teaser-body {
+      @include media-breakpoint-up(md) {
+        @include make-col-span(6);
       }
     }
   }
 }
 
-// padding for teaser image and position for AV icon
-// The vertical teaser 'collapses' into a horizontal teaser at the 'md' breakpoint
-.vertical-teaser .teaser-image {
-  @include media-breakpoint-down(sm) {
-    padding: 0 $spacer 0 0;
-  }
+.vertical-teaser {
+  @include teaser_common();
 
-  @include media-breakpoint-up(md) {
-    @include make-col-span(12);
-  }
+  .teaser-image {
+    @include media-breakpoint-down(sm) {
+      padding: 0 $spacer 0 0;
+    }
 
-  + .teaser-body {
     @include media-breakpoint-up(md) {
       @include make-col-span(12);
-      margin-top: $spacer;
+
+      + .teaser-body {
+        @include make-col-span(12);
+        margin-top: $spacer;
+      }
     }
   }
 }
 
-.teaser-tag {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: $white;
-  text-transform: uppercase;
-  font-size: 11px;
-  color: $gray-darker;
-  padding: 0 6px 5px 0;
-  font-weight: 400;
-  font-family: $font-family-sans-serif-extra;
-  z-index: 1;
+.wide-vertical-teaser {
+  .teaser-image {
+    @include make-col-span(12);
+    
+    + .teaser-body {  
+      margin-top: $spacer;
+    }
+  }
+  
+  .teaser-body {
+    @include make-col-span(12);
+  }
 }

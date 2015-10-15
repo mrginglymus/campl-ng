@@ -1,8 +1,6 @@
-.horizontal-teaser,
-.vertical-teaser,
+.teaser,
 .teaser-row {
-  + .horizontal-teaser,
-  + .vertical-teaser {
+  + .teaser {
     &:before {
       content: "";
       display: block;

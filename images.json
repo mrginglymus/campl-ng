@@ -24,10 +24,10 @@
     "height": 137,
     "description": "Focus On Teaser"
   },
-  "tagged": {
+  "teaser-wide": {
     "width": 349,
     "height": 183,
-    "description": "Cam Page Teaser"
+    "description": "Wide Vertical Teaser"
   },
   "carousel-campage": {
     "width": 785,

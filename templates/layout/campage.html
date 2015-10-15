@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% from 'components/carousel.html' import frontpage_carousel %}
-{% from 'components/teasers/teasers.html' import focus_on_teaser, campage_teaser, news_teaser %}
+{% from 'components/teasers/teasers.html' import focus_on_teaser, tagged_teaser, news_teaser %}
 
 {% block body %}
   <header>
@@ -48,20 +48,20 @@
           <div class="teaser-row">
             <div class="row">
               <div class="col-md-6 teaser-list">
-                {{ campage_teaser(random_article(), random_image(349,183), random_word()) }}
+                {{ tagged_teaser(random_article(), random_image(349,183), random_word()) }}
               </div>
               <div class="col-md-6 teaser-list">
-                {{ campage_teaser(random_article(), random_image(349,183), random_word()) }}
+                {{ tagged_teaser(random_article(), random_image(349,183), random_word()) }}
               </div>
             </div>
           </div>
           <div class="teaser-row">
             <div class="row">
               <div class="col-md-6 teaser-list">
-                {{ campage_teaser(random_article(), random_image(349,183), random_word()) }}
+                {{ tagged_teaser(random_article(), random_image(349,183), random_word()) }}
               </div>
               <div class="col-md-6 teaser-list">
-                {{ campage_teaser(random_article(), random_image(349,183), random_word()) }}
+                {{ tagged_teaser(random_article(), random_image(349,183), random_word()) }}
               </div>
             </div>
           </div>

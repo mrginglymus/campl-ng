@@ -18,7 +18,7 @@
 {% endmacro %}
 
 {% macro horizontal_teaser(article, img=None, type=None) %}
-<div class="horizontal-teaser">
+<div classt="teaser horizontal-teaser">
   {% if img %}
   <div class="teaser-image">
     {{ teaser_image(article, img, type) }}
@@ -35,7 +35,7 @@
 {% endmacro %}
 
 {% macro vertical_teaser(article, img=None, type=None) %}
-<div class="vertical-teaser">
+<div class="teaser vertical-teaser">
   {% if img %}
     <div class="teaser-image">
       {{ teaser_image(article, img, type) }}
@@ -74,11 +74,11 @@
 </div>
 {% endmacro %}
 
-{% macro campage_teaser(article, img, tag) %}
-<div class="vertical-teaser campage-teaser">
+{% macro tagged_teaser(article, img, tag) %}
+<div class="teaser wide-vertical-teaser tagged-teaser">
   <div class="teaser-image">
     <span class="teaser-tag">{{ tag }}</span>
-    <a href="{{ article.link }}" class="image-wrapper image-wrapper-tagged">
+    <a href="{{ article.link }}" class="image-wrapper image-wrapper-teaser-wide">
       <img src="{{ img }}" alt="{{ article.title }}">
     </a>
   </div>
