@@ -3,14 +3,33 @@
 {% set example_image=random_image(1000,1000) %}
 
 {% block content %}
+<script type="text/javascript">
+jQuery(function($) {
+  $('input[name="imagetoggle"]').change(function() {
+    $('#image-demo').css('max-width', $(this).data('max-width'));
+    $('#image-demo div').removeClass().addClass('image-wrapper').addClass($(this).val());
+  });
+
+  $('#view-original').attr('href', $('#image-demo img').attr('src'));
+});
+</script>
+
 <p class="lead">Images are centered and resized to fit their container with the correct aspect ratio</p>
 
+<fieldset class="form-group">
 {% for image_style_name, image_style in IMAGE_STYLES.items() %}
-<h3>{{ image_style.description }} <small>({{ image_style.width }} by {{ image_style.height }})</small></h3>
-<div style="max-width: {{ image_style.width }}px;">
-  <div class="image-wrapper image-wrapper-{{ image_style_name }} m-b">
+  <div class="radio-inline input-btn">
+    <input name="imagetoggle" type="radio" id="imagetoggle{{ image_style_name}}" value="image-wrapper-{{ image_style_name }}" data-max-width="{{ image_style.width }}px"{% if loop.first %} checked{% endif %}>
+    <label class="btn btn-input" for="imagetoggle{{ image_style_name}}">{{ image_style.description }} <small>({{ image_style.width }} by {{ image_style.height }})</small></label>
+  </div>
+{% endfor %}
+</fieldset>
+
+<div style="max-width: {{ IMAGE_STYLES.values()[0].width }}px;" id="image-demo">
+  <div class="image-wrapper image-wrapper-{{ IMAGE_STYLES.keys()[0] }}">
     <img src="{{ example_image }}">
   </div>
 </div>
-{% endfor %}
+
+<p><a class="secondary-cta" href="#" id="view-original">View Original</a></p>
 {% endblock %}
