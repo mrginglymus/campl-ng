@@ -16,6 +16,7 @@
   },
   "license": "ISC",
   "dependencies": {
+    "autoprefixer": "^6.0.3",
     "coffeelint": "^1.12.1",
     "grunt": "^0.4.5",
     "grunt-cli": "^0.1.13",
