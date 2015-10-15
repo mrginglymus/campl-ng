@@ -7625,9 +7625,6 @@ a.bg-danger:focus, a.bg-danger:hover {
   font-family: "myriad-pro", myriad, verdana, Arial, sans-serif;
   z-index: 1; }
 
-.tagged-teaser .teaser-image {
-  position: relative; }
-
 .teaser {
   display: -webkit-flex;
   display: flex;
@@ -8240,11 +8237,11 @@ main > .row {
   padding-left: 0;
   list-style: none;
   padding-top: 15px; }
-  .global-header-sublist li {
-    padding: 10px 0; }
   @media (max-width: 767px) {
     .global-header-sublist {
       display: none !important; } }
+  .global-header-sublist li {
+    padding: 10px 0; }
 
 .global-header-drawer {
   font-family: "myriad-pro", myriad, verdana, Arial, sans-serif;

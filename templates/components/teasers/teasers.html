@@ -75,10 +75,10 @@
 {% endmacro %}
 
 {% macro tagged_teaser(article, img, tag) %}
-<div class="teaser wide-vertical-teaser tagged-teaser">
+<div class="teaser wide-vertical-teaser">
   <div class="teaser-image">
-    <span class="teaser-tag">{{ tag }}</span>
     <a href="{{ article.link }}" class="image-wrapper image-wrapper-teaser-wide">
+      <span class="teaser-tag">{{ tag }}</span>
       <img src="{{ img }}" alt="{{ article.title }}">
     </a>
   </div>

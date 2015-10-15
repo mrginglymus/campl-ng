@@ -2,7 +2,7 @@
 
 .global-header-drawer-title {
   border-bottom: 1px solid #323232;
-  
+
   a {
     @include background(inline-image("link-bullet-white.png") no-repeat 0 50%);
     margin: $spacer;
@@ -12,7 +12,6 @@
     font-weight: 600;
   }
 }
-  
 
 .global-header-close {
   font-family: $font-family-sans-serif;
@@ -33,19 +32,19 @@
 .global-header-list {
   @include list-unstyled();
   margin: 0 20px;
-  
+
   > li {
     padding: 15px 0;
-    
+
     > a {
       font-weight: 600;
     }
-    
+
     + li {
       border-top: 1px solid #323232;
     }
   }
-    
+
   a {
     @include background(inline-image("link-bullet-white.png") no-repeat 0 50%);
     padding-left: 10px;
@@ -56,16 +55,16 @@
 .global-header-sublist {
   @include list-unstyled();
   padding-top: 15px;
-  
-  li {
-    padding: 10px 0;
-  }
-  
+
   @include media-breakpoint-down(sm) {
     display: none !important;
   }
+
+  li {
+    padding: 10px 0;
+  }
 }
-  
+
 .global-header-drawer {
   font-family: $font-family-sans-serif-extra;
   background-color: $gray-darker;
