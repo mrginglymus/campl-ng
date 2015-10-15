@@ -1,6 +1,5 @@
 .date-teaser {
   @include clearfix();
-  margin-bottom: 10px;
 
   .date-teaser-date {
     @include theme-element('background-color', selected);

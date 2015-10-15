@@ -18,10 +18,14 @@
 {% endblock %}
 
 {% block sidebar_content %}
-<h2 class="lite-heading">Upcoming Events</h2>
-{{ teasers.date_teaser(random_article()) }}
-{{ teasers.date_teaser(random_article()) }}
-{{ teasers.date_teaser(random_article()) }}
+<div class="heading m-x-0 p-t-0">
+  <h2 class="lite-heading">Upcoming Events</h2>
+</div>
+<ul class="related-links">
+  <li>{{ teasers.date_teaser(random_article()) }}</li>
+  <li>{{ teasers.date_teaser(random_article()) }}</li>
+  <li>{{ teasers.date_teaser(random_article()) }}</li>
+</ul>
 <div class="clearfix m-b"><a class="secondary-cta pull-right" href="" >View all events</a></div>
 {{ teasers.promo_teaser(random_article(), random_image(349,126)) }}
 {% endblock %}
