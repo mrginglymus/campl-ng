@@ -36,7 +36,7 @@
   .teaser-body {
     @include make-col();
 
-    :first-child {
+    &:first-child {
       @include make-col-span(9);
       @include make-col-offset(3);
 
