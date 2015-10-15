@@ -13,8 +13,8 @@
     <label for="textarea">Textarea</label>
     <textarea rows="3" id="textarea" cols="" class="form-control"></textarea>
   </fieldset>
-  
-  
+
+
   <fieldset class="form-group">
     <label for="select">Select</label>
     <select id="select" class="form-control">
@@ -44,7 +44,7 @@
       </label>
     </div>
   </fieldset>
-  
+
   <label>Inline Checkboxes</label>
   <fieldset class="form-group">
     <div class="checkbox-inline">
@@ -77,26 +77,42 @@
       </label>
     </div>
   </fieldset>
-  
+
   <label>Custom Radio Buttons</label>
   <fieldset class="form-group">
-    <div class="radio-inline radio-btns">
+    <div class="radio-inline input-btn">
       <input name="cradio" type="radio" id="cradioone">
-      <label class="btn btn-radio" for="cradioone">Option one</label>
+      <label class="btn btn-input" for="cradioone">Option one</label>
     </div>
-    <div class="radio-inline radio-btns">
+    <div class="radio-inline input-btn">
       <input name="cradio" type="radio" id="cradiotwo">
-      <label class="btn btn-radio" for="cradiotwo">Option two</label>
+      <label class="btn btn-input" for="cradiotwo">Option two</label>
+    </div>
+  </fieldset>
+
+  <label>Custom Checkboxes</label>
+  <fieldset class="form-group">
+    <div class="checkbox-inline input-btn">
+      <input name="ccheck" type="checkbox" id="ccheckone">
+      <label class="btn btn-input" for="ccheckone">Option one</label>
+    </div>
+    <div class="checkbox-inline input-btn">
+      <input name="ccheck" type="checkbox" id="cchecktwo">
+      <label class="btn btn-input" for="cchecktwo">Option two</label>
+    </div>
+    <div class="checkbox-inline input-btn">
+      <input name="ccheck" type="checkbox" id="ccheckthree">
+      <label class="btn btn-input" for="ccheckthree">Option three</label>
     </div>
   </fieldset>
 
   <p class="text-muted">This is an example of guidance text to give supplementary information to the user about completion of the form.</p>
-  
+
   <button type="button" class="btn btn-secondary">Button</button>
   <button type="reset" class="btn btn-secondary">Reset</button>
   <button class="btn btn-secondary">Cancel</button>
   <button type="submit" class="btn btn-primary btn-cta">Submit</button>
-      
+
 
 </form>
 
@@ -106,29 +122,29 @@
     <label for="block-input">Block level input</label>
     <input id="block-input" type="text" class="form-control" value="Stretching to fill container" />
   </fieldset>
-  
-  
+
+
   <div class="row">
     <fieldset class="form-group col-xs-2">
       <label for="campl-input-mini">Input mini</label>
       <input id="campl-input-mini" type="text" value="Mini" class="form-control" />
     </fieldset>
   </div>
-  
+
   <div class="row">
     <fieldset class="form-group col-xs-3">
       <label for="campl-input-small">Input small</label>
       <input id="campl-input-small" type="text" value="Mini" class="form-control" />
     </fieldset>
   </div>
-  
+
   <div class="row">
     <fieldset class="form-group col-xs-4">
       <label for="campl-input-medium">Input medium</label>
       <input id="campl-input-medium" type="text" value="Mini" class="form-control" />
     </fieldset>
   </div>
-  
+
   <div class="row">
     <fieldset class="form-group col-xs-6">
       <label for="campl-input-large">Input large</label>
@@ -144,15 +160,15 @@
   </div>
 </form>
 
-  
+
 <form action="">
   <legend>Form field action states</legend>
-  
+
   <fieldset class="form-group">
     <label for="disabledInput">Disabled input</label>
     <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here…" disabled>
   </fieldset>
-  
+
   <label>Disabled checkbox</label>
   <fieldset class="form-group">
     <div class="checkbox">
@@ -161,22 +177,22 @@
       </label>
     </div>
   </fieldset>
-  
+
   <div class="form-group">
     <label>Uneditable input</label>
     <div class="form-control">Some value here</div>
   </div>
-  
+
   <fieldset class="form-group">
     <label>Uneditable textarea</label>
     <textarea class="form-control" disabled>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</textarea>
   </fieldset>
-  
+
   <fieldset class="form-group">
     <label for="readinput">Disabled input</label>
     <input class="form-control" id="readinput" type="text" value="xyz" readonly>
   </fieldset>
-  
+
 
   <button type="button" class="btn btn-secondary" disabled>Disabled Button</button>
 
@@ -191,12 +207,12 @@
     <input type="text" class="form-control" id="inputwarning">
     <span class="help-block">Something my have gone wrong</span>
   </div>
-  
+
   <div class="form-group has-warning">
     <label class="form-control-label">Textarea</label>
     <textarea class="form-control"></textarea>
   </div>
-    
+
   <div class="form-group has-warning">
     <label class="form-control-label">Select</label>
     <select class="form-control">
@@ -207,7 +223,7 @@
       <option>5</option>
     </select>
   </div>
-  
+
   <label>Checkboxes</label>
   <fieldset class="form-group has-warning">
     <div class="checkbox">
@@ -216,7 +232,7 @@
       </label>
     </div>
   </fieldset>
-  
+
   <label>Radio buttons</label>
   <fieldset class="form-group has-warning">
     <div class="radio">
@@ -231,7 +247,7 @@
     <input type="text" class="form-control" id="inputwarning">
     <span class="help-block">Please correct the error</span>
   </div>
-  
+
   <div class="form-group has-success">
     <label class="form-control-label" for="inputWarning">Input with success</label>
     <input type="text" class="form-control" id="inputwarning">

@@ -77,8 +77,23 @@ module.exports = (grunt) ->
     autoprefixer:
       core:
         src: 'build/css/campl.css'
+        options:
+          browsers: [
+            'Android 2.3',
+            'Android >= 4',
+            'Chrome >= 35',
+            'Firefox >= 31',
+            'Explorer >= 10',
+            'iOS >= 7',
+            'Opera >= 12',
+            'Safari >= 7.1'
+          ]
       legacy:
         src: 'build/css/campl_legacy.css'
+        options:
+          browsers: [
+            'Explorer 9'
+          ]
 
     cssmin:
       options:

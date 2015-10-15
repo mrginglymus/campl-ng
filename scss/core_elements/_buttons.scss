@@ -37,7 +37,7 @@
   padding-right: 10px;
 }
 
-.btn-radio {
+.btn-input {
   border: 1px solid #cccccc;
   font-weight: normal;
 
@@ -47,11 +47,11 @@
   }
 }
 
-.radio-btns {
+.input-btn {
   margin-left: 0;
   padding-left: 0;
 
-  + .radio-btns {
+  + .input-btn {
     margin-left: 0;
   }
 
@@ -59,7 +59,7 @@
     display: none;
   }
 
-  :checked + .btn-radio {
+  :checked + .btn-input {
     @include theme-element(background-color, selected);
     @include theme-element(border-color, light-highlight);
     color: #ffffff;
