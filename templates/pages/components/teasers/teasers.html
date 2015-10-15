@@ -1,0 +1,116 @@
+{% extends 'layout/page.html' %}
+
+{% block content %}
+{% set article=random_article() %}
+{% set teaser_image=random_image(400) %}
+
+<script type="text/javascript">
+jQuery(function($) {
+  $('#tag').keyup(function() {
+    if ($(this).val()) {
+      $('#teaser-example .teaser-tag').show().html($(this).val());
+    } else {
+      $('#teaser-example .teaser-tag').hide();
+    }
+  });
+
+  $('[name="teasertype"]').change(function() {
+    $('#teaser-example .teaser-image a').removeClass().addClass('image-wrapper').addClass($(this).data('image-style'));
+    $('#teaser-example').parent().css('max-width', $(this).data('max-width'));
+    $('#teaser-example').removeClass().addClass($(this).val());
+    if ($(this).val()!='focus-on-teaser') {
+      $('#teaser-example').addClass('teaser');
+      $('#teaser-example p').show();
+      $('#teaser-example-link').show();
+    } else {
+      $('#teaser-example p').hide();
+      $('#teaser-example-link').hide();
+    }
+  });
+
+  $('[name="linktype"]').change(function() {
+    $('#teaser-example-link').removeClass().addClass($(this).val());
+  });
+
+  $('[name="mediatype"]').change(function() {
+    $('#teaser-media').removeClass();
+    if ($(this).val()) {
+      $('#teaser-media').addClass($(this).val());
+    }
+  });
+});
+</script>
+
+<h2>Teaser Builder</h2>
+
+<fieldset class="form-group">
+  <label for="input">Tag</label>
+  <input id="tag" class="form-control" type="text" value="">
+</fieldset>
+
+<fieldset class="form-group">
+  <div class="radio-inline input-btn">
+    <input name="teasertype" type="radio" id="vertical-teaser" value="vertical-teaser" checked data-image-style="image-wrapper-square" data-max-width="300px">
+    <label class="btn btn-input" for="vertical-teaser">Vertical Teaser</label>
+  </div>
+  <div class="radio-inline input-btn">
+    <input name="teasertype" type="radio" id="horizontal-teaser" value="horizontal-teaser" data-image-style="image-wrapper-square" data-max-width="450px">
+    <label class="btn btn-input" for="horizontal-teaser">Horizontal Teaser</label>
+  </div>
+  <div class="radio-inline input-btn">
+    <input name="teasertype" type="radio" id="wide-vertical-teaser" value="wide-vertical-teaser" data-image-style="image-wrapper-teaser-wide" data-max-width="375px">
+    <label class="btn btn-input" for="wide-vertical-teaser">Wide Vertical Teaser</label>
+  </div>
+  <div class="radio-inline input-btn">
+    <input name="teasertype" type="radio" id="focus-on-teaser" value="focus-on-teaser" data-image-style="image-wrapper-focuson" data-max-width="450px">
+    <label  class="btn btn-input" for="focus-on-teaser">Focus On Teaser</label>
+  </div>
+</fieldset>
+
+<fieldset class="form-group">
+  <div class="radio-inline input-btn">
+    <input name="linktype" type="radio" id="primary" value="btn btn-primary btn-cta" checked>
+    <label class="btn btn-input" for="primary">Primary Link</label>
+  </div>
+  <div class="radio-inline input-btn">
+    <input name="linktype" type="radio" id="secondary" value="secondary-cta">
+    <label class="btn btn-input" for="secondary">Secondary Link</label>
+  </div>
+</fieldset>
+
+<fieldset class="form-group">
+  <div class="radio-inline input-btn">
+    <input name="mediatype" type="radio" id="none" value="" checked>
+    <label class="btn btn-input" for="none">None</label>
+  </div>
+  <div class="radio-inline input-btn">
+    <input name="mediatype" type="radio" id="video" value="teaser-image-video">
+    <label class="btn btn-input" for="video">Video</label>
+  </div>
+  <div class="radio-inline input-btn">
+    <input name="mediatype" type="radio" id="audio" value="teaser-image-audio">
+    <label class="btn btn-input" for="audio">Audio</label>
+  </div>
+</fieldset>
+
+<div style="max-width: 300px; margin: 0 auto;">
+  <div class="teaser vertical-teaser" id="teaser-example">
+    <div class="teaser-image">
+      <a href="{{ article.link }}" class="image-wrapper image-wrapper-square" id="teaser-example-image">
+        <span class="teaser-tag" style="display:none;"></span>
+        <span id="teaser-media"></span>
+        <img src="{{ teaser_image }}" alt="{{ article.title }}">
+      </a>
+    </div>
+    <div class="teaser-body">
+      <h3 class="teaser-title">
+        <a href="{{ article.link }}">
+          {{ article.title }}
+        </a>
+      </h3>
+      <p>{{ article.body }}</p>
+      <a class="btn btn-primary btn-cta" href="{{ article.link }}" id="teaser-example-link">Read more</a>
+    </div>
+  </div>
+</div>
+{% endblock %}

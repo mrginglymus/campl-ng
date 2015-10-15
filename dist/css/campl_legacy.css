@@ -7463,32 +7463,20 @@ a.bg-danger:focus, a.bg-danger:hover {
     display: table;
     clear: both; }
   .wide-vertical-teaser .teaser-image {
-    width: 25%;
     position: relative;
     float: left;
     min-height: 1px;
     padding-left: 0;
-    padding-right: 0; }
-    .wide-vertical-teaser .teaser-image + .teaser-body {
-      width: 75%; }
-  .wide-vertical-teaser .teaser-body {
-    position: relative;
-    float: left;
-    min-height: 1px;
-    padding-left: 0;
-    padding-right: 0; }
-    .wide-vertical-teaser .teaser-body:first-child {
-      width: 75%;
-      margin-left: 25%; }
-      @media (min-width: 768px) {
-        .wide-vertical-teaser .teaser-body:first-child {
-          width: 100%;
-          margin-left: 0%; } }
-  .wide-vertical-teaser .teaser-image {
+    padding-right: 0;
     width: 100%; }
     .wide-vertical-teaser .teaser-image + .teaser-body {
       margin-top: 20px; }
   .wide-vertical-teaser .teaser-body {
+    position: relative;
+    float: left;
+    min-height: 1px;
+    padding-left: 0;
+    padding-right: 0;
     width: 100%; }
 
 /* generated with grunt-sass-globbing */

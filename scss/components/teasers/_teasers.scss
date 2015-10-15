@@ -86,9 +86,10 @@
 }
 
 .wide-vertical-teaser {
-  @include teaser-common();
+  @include make-row();
 
   .teaser-image {
+    @include make-col();
     @include make-col-span(12);
 
     + .teaser-body {
@@ -97,6 +98,7 @@
   }
 
   .teaser-body {
+    @include make-col();
     @include make-col-span(12);
   }
 }

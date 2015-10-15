@@ -71,7 +71,9 @@ pages = Pages([
       Page('Alerts', 'pages/components/content/alerts.html', scss=['components/inpage/_alerts.scss']),
       Page('Date/Time Picker', 'pages/components/content/datetimepicker.html'),
     ]),
-    Page('Teasers', 'pages/components/teasers.html', side_menu=False),
+    Page('Teasers', 'pages/components/teasers/teasers.html', children=[
+      Page('Teaser Examples', 'pages/components/teasers/examples.html', side_menu=False),
+    ]),
   ]),
   Page('Templates', children=template_pages),
   Page('Stylesheets', children=scss_pages),
