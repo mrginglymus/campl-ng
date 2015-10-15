@@ -1,8 +1,9 @@
 .promo-teaser {
   background: $white;
 
-  .promo-teaser-heading {
+  .teaser-heading {
     padding: $spacer;
+    margin-bottom: 0;
 
     a {
       color: $gray-darker;
@@ -11,15 +12,8 @@
     }
   }
 
-  .promo-teaser-image img {
-    width: 100%;
-  }
-
-  .promo-teaser-text {
+  .teaser-text {
+    @include clearfix();
     padding: $spacer * 0.75;
-  }
-
-  + .promo-teaser {
-    margin-top: $spacer;
   }
 }

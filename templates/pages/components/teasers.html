@@ -43,7 +43,9 @@
 {% endblock %}
 
 {% block sidebar_content %}
+  <div class="m-b">
   {{ teasers.promo_teaser(random_article(), random_image(349,126)) }}
+  </div>
   {{ teasers.promo_teaser(random_article(), random_image(349,126)) }}
   <div class="p-t">
   {{ teasers.date_teaser(random_article()) }}

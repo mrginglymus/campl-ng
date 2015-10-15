@@ -2,15 +2,15 @@
 
 {% macro promo_teaser(article, img) %}
 <div class="promo-teaser">
-  <div class="promo-teaser-heading">
-    <h3><a href="{{ article.link }}">{{ article.title }}</a></h3>
-  </div>
-  <div class="promo-teaser-image">
+  <h3 class="teaser-heading">
+    <a href="{{ article.link }}">{{ article.title }}</a>
+  </h3>
+  <div class="teaser-image">
     <a href="{{ article.link }}" class="image-wrapper image-wrapper-promo">
       <img src="{{ img }}" alt="{{article. title }}">
     </a>
   </div>
-  <div class="promo-teaser-text clearfix">
+  <div class="teaser-text">
     <p>{{ article.body }}</p>
     <a href="{{ article.href }}" class="secondary-cta pull-right">Read more</a>
   </div>
