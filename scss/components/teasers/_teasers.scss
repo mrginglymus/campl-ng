@@ -2,7 +2,6 @@
   @include make-row();
   padding: $spacer;
 
-  // style teaser title link
   .teaser-title {
     font-size: 14px;
     line-height: 20px;
@@ -23,7 +22,7 @@
   }
 }
 
-@mixin teaser_common() {
+@mixin teaser-common() {
   .teaser-image {
     @include make-col-span(3);
 
@@ -43,9 +42,8 @@
   }
 }
 
-
 .horizontal-teaser {
-  @include teaser_common();
+  @include teaser-common();
 
   .teaser-image {
     padding: 0 $spacer 0 0;
@@ -63,7 +61,7 @@
 }
 
 .vertical-teaser {
-  @include teaser_common();
+  @include teaser-common();
 
   .teaser-image {
     @include media-breakpoint-down(sm) {
@@ -84,12 +82,12 @@
 .wide-vertical-teaser {
   .teaser-image {
     @include make-col-span(12);
-    
-    + .teaser-body {  
+
+    + .teaser-body {
       margin-top: $spacer;
     }
   }
-  
+
   .teaser-body {
     @include make-col-span(12);
   }
