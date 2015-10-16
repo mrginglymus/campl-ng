@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       {% for column in EXAMPLES.LOCAL_FOOTER_LINKS %}
-      <div class="col-md-3">
+      <div class="col-md-3 col-xs-12">
         {% for menu in column %}
           <h3><a href="#">{{ menu.header }}</a></h3>
           {% if menu.links %}

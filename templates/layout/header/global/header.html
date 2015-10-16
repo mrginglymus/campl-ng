@@ -1,8 +1,8 @@
 {% macro global_header_drawer(id, drawer) %}
-<div id="global-header-drawer-{{ id }}" role="tabpanel" class="tab-pane">
+<div id="global-header-drawer-{{ id }}" role="tabpanel" class="tab-pane fade">
   <div class="container">
     <div class="row">
-      <div class="col-md-11 global-header-drawer-title">
+      <div class="col-md-11 col-xs-12 global-header-drawer-title">
         <a href="{{ drawer.link }}">{{ drawer.title }}</a>  
       </div>
       <div class="col-md-1 global-header-close hidden-sm-down">
@@ -11,7 +11,7 @@
     </div>
     <div class="row">
       {% for column in drawer.links %}
-      <div class="col-md-4">
+      <div class="col-md-4 col-xs-12">
         <ul class="global-header-list">
         {% for menu in column %}
           <li>
@@ -38,7 +38,7 @@
 <nav class="navbar global-header">
   <div class="container">
     <div class="row">
-      <div class="col-md-8">
+      <div class="col-md-8 col-xs-12">
         <a class="global-menu-button pull-left hidden-md-up" href="#sidebar-offcanvas" data-toggle="offcanvas">
           <span class="fa fa-bars fa-2x"></span>
         </a>
@@ -75,7 +75,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-2 collapse navbar-toggleable-sm" id="global-search-drawer">
+      <div class="col-md-2 col-xs-12 collapse navbar-toggleable-sm" id="global-search-drawer">
         <form action="http://search.cam.ac.uk/web" method="get">
           <div class="input-group global-search">
             <input class="form-control" type="text" placeholder="Search" name="query">
