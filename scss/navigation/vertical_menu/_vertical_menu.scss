@@ -1,6 +1,8 @@
 @import "compass/css3/images";
 
 .vertical-menu {
+  @include make-col();
+  @include make-col-span(12);
   background: inline-image("vertical-nav-background.png");
   border-left: $border-width solid $border-color;
   border-right: $border-width solid $border-color;
@@ -8,6 +10,10 @@
   padding-left: 0;
   padding-right: 0;
   font-family: $font-family-sans-serif-extra;
+  
+  @include media-breakpoint-up(md) {
+    @include make-col-span(3);
+  }
 }
 
 .vertical-menu-inset {

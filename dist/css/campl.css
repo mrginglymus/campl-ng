@@ -9365,6 +9365,15 @@ main > .row {
             background-color: #5f5f5f ; }
 
 .vertical-menu {
+  position: relative;
+  min-height: 1px;
+  padding-left: 0;
+  padding-right: 0;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 100%;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  max-width: 100%;
   background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAM0lEQVQYV2NkQAM3X/34ry7GwYgsDBLDEMCmCCQGV4jLJJhGsEJCikBqGIlRBFY4nDwDAHbOT3++G7jxAAAAAElFTkSuQmCC');
   border-left: 1px solid #e4e4e4;
   border-right: 1px solid #e4e4e4;
@@ -9372,6 +9381,13 @@ main > .row {
   padding-left: 0;
   padding-right: 0;
   font-family: "myriad-pro", myriad, verdana, Arial, sans-serif; }
+  @media (min-width: 768px) {
+    .vertical-menu {
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 25%;
+          -ms-flex: 0 0 25%;
+              flex: 0 0 25%;
+      max-width: 25%; } }
 
 @media (min-width: 768px) {
   .vertical-menu-inset {
