@@ -36,7 +36,7 @@
   <main class="container">
     <div class="row">
       {% include 'navigation/vertical_menu.html' %}
-      <div class="col-md-{{ content_columns }} main-content">
+      <div class="col-md-{{ content_columns }} col-xs-12 main-content">
         {% if image %}
           <div class="image-wrapper image-wrapper-leading">
             <img src="{{ image }}">
@@ -51,7 +51,7 @@
         {% endif %}
       </div>
       {% if sidebar %}
-      <div class="col-md-3 sidebar">
+      <div class="col-md-3 col-xs-12 sidebar">
         <div class="p-a">
           {% block sidebar_content %}{% if page.type=='page' %}
             <div class="heading m-a-0 p-a-0">
