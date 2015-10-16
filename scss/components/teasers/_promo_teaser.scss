@@ -1,7 +1,7 @@
 .promo-teaser {
   background: $white;
 
-  .teaser-heading {
+  .teaser-title {
     padding: $spacer;
     margin-bottom: 0;
 
@@ -12,8 +12,12 @@
     }
   }
 
-  .teaser-text {
+  .teaser-body {
     @include clearfix();
     padding: $spacer * 0.75;
+  }
+  
+  .teaser-link {
+    float: right;
   }
 }

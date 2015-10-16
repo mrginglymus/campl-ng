@@ -7917,12 +7917,12 @@ a.bg-danger:focus, a.bg-danger:hover {
 .news-teaser {
   margin: 10px 20px;
   border-bottom: 1px dashed #b5b5b5; }
-  .news-teaser .news-teaser-title {
+  .news-teaser .teaser-title {
     font-family: verdana, Arial, sans-serif;
     font-size: 14px;
     line-height: 20px;
     font-weight: bold; }
-  .news-teaser .news-teaser-date {
+  .news-teaser .teaser-date {
     font-family: Georgia, "sans serif";
     font-size: 14px;
     font-style: italic;
@@ -7930,19 +7930,21 @@ a.bg-danger:focus, a.bg-danger:hover {
 
 .promo-teaser {
   background: #ffffff; }
-  .promo-teaser .teaser-heading {
+  .promo-teaser .teaser-title {
     padding: 20px;
     margin-bottom: 0; }
-    .promo-teaser .teaser-heading a {
+    .promo-teaser .teaser-title a {
       color: #171717;
       font-weight: 700;
       font-size: 17px; }
-  .promo-teaser .teaser-text {
+  .promo-teaser .teaser-body {
     padding: 15px; }
-    .promo-teaser .teaser-text::after {
+    .promo-teaser .teaser-body::after {
       content: "";
       display: table;
       clear: both; }
+  .promo-teaser .teaser-link {
+    float: right; }
 
 .teaser-tag {
   position: absolute;
