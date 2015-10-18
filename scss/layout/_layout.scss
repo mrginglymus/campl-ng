@@ -39,13 +39,6 @@ body:not(.active) {
   main > .row {
     @include flex-grow(1);
   }
-
-  @include ie11-below() {
-    body,
-    main {
-      display: block;
-    }
-  }
 }
 
 

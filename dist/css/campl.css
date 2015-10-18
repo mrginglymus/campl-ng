@@ -8538,10 +8538,6 @@ main > .row {
       -ms-flex-positive: 1;
           flex-grow: 1; }
 
-@media screen and (min-width: 0\0) and (-webkit-min-device-pixel-ratio: 0.75), screen and (min-width: 0\0) and (-o-min-device-pixel-ratio: 3/4), screen and (min-width: 0\0) and (min-resolution: 72dpi) {
-  body,
-  main {
-    display: block; } }
 .logo.logo-sm {
   width: 178px; }
 
