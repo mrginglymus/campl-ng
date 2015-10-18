@@ -7820,6 +7820,10 @@ a.bg-danger:focus, a.bg-danger:hover {
   .theme-blue-grey .focus-on-teaser {
     background-color: #d2dde7 ; }
   .focus-on-teaser .teaser-image {
+    position: relative;
+    min-height: 1px;
+    padding-left: 0;
+    padding-right: 0;
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 41.66667%;
         -ms-flex: 0 0 41.66667%;
@@ -7832,6 +7836,10 @@ a.bg-danger:focus, a.bg-danger:hover {
               flex: 0 0 58.33333%;
       max-width: 58.33333%; }
   .focus-on-teaser .teaser-body {
+    position: relative;
+    min-height: 1px;
+    padding-left: 0;
+    padding-right: 0;
     padding: 15px;
     position: relative; }
     .focus-on-teaser .teaser-body:first-child {

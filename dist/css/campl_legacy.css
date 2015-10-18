@@ -7241,10 +7241,20 @@ a.bg-danger:focus, a.bg-danger:hover {
     display: table;
     clear: both; }
   .focus-on-teaser .teaser-image {
+    position: relative;
+    float: left;
+    min-height: 1px;
+    padding-left: 0;
+    padding-right: 0;
     width: 41.66667%; }
     .focus-on-teaser .teaser-image + .teaser-body {
       width: 58.33333%; }
   .focus-on-teaser .teaser-body {
+    position: relative;
+    float: left;
+    min-height: 1px;
+    padding-left: 0;
+    padding-right: 0;
     padding: 15px;
     position: relative; }
     .focus-on-teaser .teaser-body:first-child {

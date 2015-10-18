@@ -6,6 +6,7 @@
   margin: 0 $spacer $spacer;
 
   .teaser-image {
+    @include make-col();
     @include make-col-span(5);
 
     + .teaser-body {
@@ -14,6 +15,7 @@
   }
 
   .teaser-body {
+    @include make-col();
     padding: 15px;
     position: relative;
 
