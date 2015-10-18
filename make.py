@@ -22,6 +22,7 @@ env.globals['LOCAL_JS'] = (
   'js/bootstrap.js',
   'js/campl.js',
   'js/theme_switcher.js',
+  'js/modernizr.js',
 )
 
 env.globals['REMOTE_JS'] = (

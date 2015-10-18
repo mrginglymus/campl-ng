@@ -26,6 +26,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-coffeelint'
   grunt.loadNpmTasks 'grunt-html'
   grunt.loadNpmTasks 'grunt-autoprefixer'
+  grunt.loadNpmTasks 'grunt-modernizr'
 
   grunt.initConfig
     pkg: grunt.file.readJSON('package.json')
@@ -48,6 +49,16 @@ module.exports = (grunt) ->
 
     htmllint:
       src: ['build/**/*.html', '!build/templates/**/*', 'build/templates/**/index.html']
+
+    modernizr:
+      build:
+        dest: 'build/js/modernizr.js'
+        files:
+          src: [
+            'build/**/*.{js,css}'
+          ]
+        uglify: false
+        
 
     sass_globbing:
       core:
@@ -113,7 +124,8 @@ module.exports = (grunt) ->
           'build/js/campl.js': [
             'coffee/menu.coffee',
             'coffee/select_tab.coffee',
-            'coffee/carousel.coffee'
+            'coffee/carousel.coffee',
+            'coffee/object_fit.coffee'
           ]
       meta:
         files:
@@ -172,6 +184,7 @@ module.exports = (grunt) ->
           'images/**',
           'js/campl*',
           'js/bootstrap*',
+          'js/modernizr*',
           'css/**',
           '!css/meta**'
         ]
@@ -219,7 +232,7 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'build-html', ['exec:html', 'replace:root_url']
 
-  grunt.registerTask 'build', ['clean:build', 'build-css', 'build-js', 'build-images', 'build-html']
+  grunt.registerTask 'build', ['clean:build', 'build-css', 'build-js', 'build-images', 'build-html', 'modernizr']
 
   grunt.registerTask 'dist', ['clean:dist', 'build', 'copy:dist']
 
