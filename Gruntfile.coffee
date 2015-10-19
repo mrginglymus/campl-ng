@@ -125,7 +125,8 @@ module.exports = (grunt) ->
             'coffee/menu.coffee',
             'coffee/select_tab.coffee',
             'coffee/carousel.coffee',
-            'coffee/object_fit.coffee'
+            'coffee/object_fit.coffee',
+            'coffee/flexbox.coffee'
           ]
       meta:
         files:

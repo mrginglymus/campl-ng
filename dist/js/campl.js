@@ -65,3 +65,15 @@
   });
 
 }).call(this);
+
+(function() {
+  jQuery(function($) {
+    var max_height;
+    if (!Modernizr.flexbox) {
+      max_height = Math.max.apply(Math, [$('.vertical-menu').height() - 50, $('.sidebar, .main-content').height()]);
+      $('.vertical-menu').height(max_height + 50);
+      return $('.sidebar, .main-content').height(max_height);
+    }
+  });
+
+}).call(this);
