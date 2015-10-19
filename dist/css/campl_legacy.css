@@ -7648,21 +7648,15 @@ blockquote {
 .image-wrapper {
   display: block;
   position: relative;
-  width: 100%; }
+  width: 100%;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat; }
   .image-wrapper img {
     position: absolute;
     width: 100% !important;
     height: 100% !important;
     object-fit: cover; }
-  .image-wrapper div {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat; }
 
 .image-wrapper-leading {
   padding-bottom: 48.81356%; }

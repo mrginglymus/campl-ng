@@ -59,7 +59,7 @@
       return $('.image-wrapper').each(function() {
         var $img;
         $img = $('img', this).hide();
-        return $('<div>').css("background-image", "url(" + ($img.attr('src')) + ")").appendTo($(this));
+        return $(this).css("background-image", "url(" + ($img.attr('src')) + ")");
       });
     }
   });
