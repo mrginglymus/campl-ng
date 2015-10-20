@@ -3,6 +3,7 @@ sass_options =
   trace: true,
   require: './lib/loaders.rb',
   compass: true,
+  style: 'compressed',
 
 uuid = require('node-uuid')
 execSync = require('child_process').execSync
@@ -13,7 +14,6 @@ module.exports = (grunt) ->
 
   grunt.loadNpmTasks 'grunt-contrib-sass'
   grunt.loadNpmTasks 'grunt-contrib-clean'
-  grunt.loadNpmTasks 'grunt-contrib-cssmin'
   grunt.loadNpmTasks 'grunt-contrib-uglify'
   grunt.loadNpmTasks 'grunt-contrib-copy'
   grunt.loadNpmTasks 'grunt-contrib-watch'
@@ -52,12 +52,11 @@ module.exports = (grunt) ->
 
     modernizr:
       build:
-        dest: 'build/js/modernizr.js'
+        dest: 'build/js/modernizr.min.js'
         files:
           src: [
             'build/**/*.{js,css}'
           ]
-        uglify: false
         
 
     sass_globbing:
@@ -73,21 +72,21 @@ module.exports = (grunt) ->
         options:
           sass_options
         files:
-          'build/css/campl.css': 'scss/campl.scss'
+          'build/css/campl.min.css': 'scss/campl.scss'
       legacy:
         options:
           sass_options
         files:
-          'build/css/campl_legacy.css': 'scss/campl_legacy.scss'
+          'build/css/campl_legacy.min.css': 'scss/campl_legacy.scss'
       meta:
         options:
           sass_options
         files:
-          'build/css/meta.css': 'scss/meta.scss'
+          'build/css/meta.min.css': 'scss/meta.scss'
 
     autoprefixer:
       core:
-        src: 'build/css/campl.css'
+        src: 'build/css/campl.min.css'
         options:
           browsers: [
             'Android 2.3',
@@ -106,18 +105,6 @@ module.exports = (grunt) ->
             'Explorer 9'
           ]
 
-    cssmin:
-      options:
-        sourceMap: true
-      core:
-        files:[
-          expand: true,
-          cwd: 'build/css',
-          src: ['*.css', '!*.min.css'],
-          dest: 'build/css',
-          ext: '.min.css',
-        ]
-
     coffee:
       core:
         files:
@@ -135,13 +122,24 @@ module.exports = (grunt) ->
     uglify:
       options:
         sourceMap: true
-        sourceMapIncludeSources: true
       core:
         src: 'build/js/campl.js'
         dest: 'build/js/campl.min.js'
       meta:
         src: 'build/js/theme_switcher.js'
         dest: 'build/js/theme_switcher.min.js'
+      lib:
+        files:
+          'build/js/lib.min.js': [
+            'bower_components/jquery/dist/jquery.js',
+            'bower_components/bootstrap/dist/js/bootstrap.js',
+            'bower_components/moment/moment.js',
+            'bower_components/moment/locale/en-gb.js',
+            'bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js',
+            'bower_components/hammerjs/hammer.js',
+            'bower_components/jquery-hammerjs/jquery.hammer.js',
+            'bower_components/js-cookie/src/js.cookie.js'
+          ]
 
     replace:
       image_cache:
@@ -168,9 +166,6 @@ module.exports = (grunt) ->
         cmd: 'plenv/bin/python make.py'
 
     copy:
-      js:
-        src: 'lib/bootstrap/dist/js/bootstrap.js',
-        dest: 'build/js/bootstrap.js'
       images:
         expand: true,
         cwd: 'images'
@@ -178,16 +173,22 @@ module.exports = (grunt) ->
           'logo.png',
         ]
         dest: 'build/images'
+      fonts:
+        expand: true,
+        cwd: 'bower_components/font-awesome/fonts',
+        src: ['*'],
+        dest: 'build/fonts'
       dist:
         expand: true,
         cwd: 'build'
         src: [
-          'images/**',
-          'js/campl*',
-          'js/bootstrap*',
-          'js/modernizr*',
-          'css/**',
-          '!css/meta**'
+          'images/logo.png',
+          'js/lib.min.js',
+          'js/campl.min.js',
+          'js/modernizr.min.js',
+          'css/campl.min.css',
+          'css/campl_legacy.min.css',
+          'fonts/*',
         ]
         dest: 'dist'
 
@@ -225,15 +226,17 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'default', ['clean:build', 'sass:core', 'coffee:core']
 
-  grunt.registerTask 'build-css', ['sass_globbing', 'sass', 'autoprefixer', 'cssmin']
+  grunt.registerTask 'build-css', ['sass_globbing', 'sass', 'autoprefixer']
 
-  grunt.registerTask 'build-js', ['coffee', 'copy:js', 'uglify']
+  grunt.registerTask 'build-js', ['coffee', 'uglify']
 
   grunt.registerTask 'build-images', ['copy:images']
 
   grunt.registerTask 'build-html', ['exec:html', 'replace:root_url']
+  
+  grunt.registerTask 'build-fonts', ['copy:fonts']
 
-  grunt.registerTask 'build', ['clean:build', 'build-css', 'build-js', 'build-images', 'build-html', 'modernizr']
+  grunt.registerTask 'build', ['clean:build', 'build-css', 'build-js', 'build-images', 'build-html', 'build-fonts', 'modernizr']
 
   grunt.registerTask 'dist', ['clean:dist', 'build', 'copy:dist']
 
