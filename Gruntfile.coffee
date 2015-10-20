@@ -25,8 +25,8 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-rsync'
   grunt.loadNpmTasks 'grunt-coffeelint'
   grunt.loadNpmTasks 'grunt-html'
-  grunt.loadNpmTasks 'grunt-autoprefixer'
   grunt.loadNpmTasks 'grunt-modernizr'
+  grunt.loadNpmTasks 'grunt-postcss'
 
   grunt.initConfig
     pkg: grunt.file.readJSON('package.json')
@@ -86,26 +86,34 @@ module.exports = (grunt) ->
         files:
           'build/css/meta.min.css': 'scss/meta.scss'
 
-    autoprefixer:
+    postcss:
+      options:
+        map: 
+          inline: false,
+          annotation: 'build/css/'
       core:
         src: 'build/css/campl.min.css'
-        options:
-          browsers: [
-            'Android 2.3',
-            'Android >= 4',
-            'Chrome >= 35',
-            'Firefox >= 31',
-            'Explorer >= 10',
-            'iOS >= 7',
-            'Opera >= 12',
-            'Safari >= 7.1'
-          ]
+        processors: [
+          require('autoprefixer')
+            browsers: [
+              'Android 2.3',
+              'Android >= 4',
+              'Chrome >= 35',
+              'Firefox >= 31',
+              'Explorer >= 10',
+              'iOS >= 7',
+              'Opera >= 12',
+              'Safari >= 7.1'
+            ]
+        ]
       legacy:
-        src: 'build/css/campl_legacy.css'
-        options:
-          browsers: [
-            'Explorer 9'
-          ]
+        src: 'build/css/campl.min.css'
+        processors: [
+          require('autoprefixer')
+            browsers: [
+              'Explorer 9'
+            ]
+        ]
 
     coffee:
       core:
@@ -228,7 +236,7 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'default', ['clean:build', 'sass:core', 'coffee:core']
 
-  grunt.registerTask 'build-css', ['sass_globbing', 'sass', 'autoprefixer']
+  grunt.registerTask 'build-css', ['sass_globbing', 'sass', 'postcss']
 
   grunt.registerTask 'build-js', ['coffee', 'uglify']
 
