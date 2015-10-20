@@ -53,6 +53,7 @@ module.exports = (grunt) ->
     modernizr:
       build:
         dest: 'build/js/modernizr.min.js'
+        excludeTests: ['svg'],
         files:
           src: [
             'build/**/*.{js,css}'
