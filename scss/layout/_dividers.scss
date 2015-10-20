@@ -1,8 +1,6 @@
-@import "compass/css3/flexbox";
-
 .vertical-divider {
   @include media-breakpoint-up(md) {
-    @include flex(0 0 auto);
+    flex: 0 0 auto;
     margin-top: $spacer;
     margin-bottom: $spacer;
     margin-left: -1px !important;
