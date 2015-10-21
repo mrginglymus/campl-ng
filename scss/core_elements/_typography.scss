@@ -11,18 +11,30 @@ h2 {
   font-family: $font-family-sans-serif-extra;
 }
 
-#{headings()} {
-  &.lite-heading {
-    font-weight: 300;
-    font-size: 19px;
-    line-height: 25px;
-    color: $black;
-  }
+.lite-heading {
+  font-family: $font-family-sans-serif-extra;
+  font-weight: 300;
+  font-size: 19px;
+  line-height: 25px;
+  color: $gray-darker !important;
 }
 
-.heading {
-  margin-left: $spacer;
-  margin-right: $spacer;
-  padding-top: $spacer;
+.lite-heading-lg {
+  font-family: $font-family-sans-serif-extra;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 38px;
+  color: $gray-darker !important;
+}
+
+.lite-heading-themed {
+  @include theme-element(color, page-background);
+}
+
+.heading-container {
   border-bottom: $border-width solid $border-color;
+}
+
+.heading-container-padding {
+  margin: $spacer $spacer 0;
 }

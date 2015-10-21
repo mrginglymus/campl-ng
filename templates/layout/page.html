@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 
 {% from 'layout/sidebar/related_links.html' import related_links %}
-{% from 'layout/sidebar/sidebar.html' import sidebar_heading %}
 
 {% block body %}
   <header>
@@ -54,7 +53,7 @@
       <div class="col-md-3 col-xs-12 sidebar">
         <div class="p-a">
           {% block sidebar_content %}{% if page.type=='page' %}
-            <div class="heading m-a-0 p-a-0">
+            <div class="heading-container">
               <h2 class="lite-heading">Sources</h2>
             </div>
             {{ related_links(get_sources_links(page)) }}

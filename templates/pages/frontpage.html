@@ -9,7 +9,7 @@
     {{ teasers.horizontal_teaser(random_article(), random_image(256), type='video') }}
   </div>
   <div class="col-md-4 teaser-list">
-    <div class="heading"><h2 class="lite-heading">Latest News</h2></div>
+    <div class="heading-container heading-container-padding"><h2 class="lite-heading">Latest News</h2></div>
     {{ teasers.news_teaser(random_article()) }}
     {{ teasers.news_teaser(random_article()) }}
     <div class="p-a clearfix"><a class="secondary-cta pull-right" href="" >View all news</a></div>
@@ -18,7 +18,7 @@
 {% endblock %}
 
 {% block sidebar_content %}
-<div class="heading m-x-0 p-t-0">
+<div class="heading-container">
   <h2 class="lite-heading">Upcoming Events</h2>
 </div>
 <ul class="related-links">
