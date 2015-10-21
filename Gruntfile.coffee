@@ -27,6 +27,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-html'
   grunt.loadNpmTasks 'grunt-modernizr'
   grunt.loadNpmTasks 'grunt-postcss'
+  grunt.loadNpmTasks 'grunt-webdriver'
 
   grunt.initConfig
     pkg: grunt.file.readJSON('package.json')
@@ -50,6 +51,10 @@ module.exports = (grunt) ->
     htmllint:
       src: ['build/**/*.html', '!build/templates/**/*', 'build/templates/**/index.html']
 
+    webdriver:
+      test:
+        configFile: './test/wdio.conf.js'
+
     modernizr:
       build:
         dest: 'build/js/modernizr.min.js'
@@ -59,7 +64,7 @@ module.exports = (grunt) ->
           src: [
             'build/**/*.{js,css}'
           ]
-        
+
 
     sass_globbing:
       core:
@@ -88,7 +93,7 @@ module.exports = (grunt) ->
 
     postcss:
       options:
-        map: 
+        map:
           inline: false,
           annotation: 'build/css/'
       core:
@@ -247,7 +252,7 @@ module.exports = (grunt) ->
   grunt.registerTask 'build-images', ['copy:images', 'copy:favicon']
 
   grunt.registerTask 'build-html', ['exec:html', 'replace:root_url']
-  
+
   grunt.registerTask 'build-fonts', ['copy:fonts']
 
   grunt.registerTask 'build', ['clean:build', 'build-css', 'build-js', 'build-images', 'build-html', 'build-fonts', 'modernizr']

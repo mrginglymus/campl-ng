@@ -36,6 +36,10 @@
     "grunt-sass-globbing": "^1.4.0",
     "grunt-scss-lint": "^0.3.8",
     "grunt-text-replace": "^0.4.0",
-    "node-uuid": "^1.4.3"
+    "grunt-webdriver": "^1.0.0",
+    "jasmine": "^2.3.2",
+    "node-uuid": "^1.4.3",
+    "webdriver": "0.0.1",
+    "webdriverio": "^3.2.5"
   }
 }
