@@ -16,6 +16,10 @@
       left: -260px;
     }
   }
+  
+  .offcanvas.active #global-header-drawers {
+    display: block;
+  }
 
   .sidebar-offcanvas {
     position: absolute;
