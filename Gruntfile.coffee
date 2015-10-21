@@ -176,6 +176,9 @@ module.exports = (grunt) ->
         cmd: 'plenv/bin/python make.py'
 
     copy:
+      favicon:
+        src: 'favicon.ico',
+        dest: 'build/favicon.ico'
       images:
         expand: true,
         cwd: 'images'
@@ -199,6 +202,7 @@ module.exports = (grunt) ->
           'css/campl.min.css',
           'css/campl_legacy.min.css',
           'fonts/*',
+          'favicon.ico'
         ]
         dest: 'dist'
 
@@ -240,7 +244,7 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'build-js', ['coffee', 'uglify']
 
-  grunt.registerTask 'build-images', ['copy:images']
+  grunt.registerTask 'build-images', ['copy:images', 'copy:favicon']
 
   grunt.registerTask 'build-html', ['exec:html', 'replace:root_url']
   
