@@ -7,7 +7,7 @@ class Page
   constructor: (@title, @source=null, @children=[], options={}) ->
     @type = 'page'
 
-    @_url = encodeURIComponent(@title.toLowerCase()) + '/'
+    @_url = '/' + encodeURIComponent(@title.toLowerCase().replace(/\ /g, '_'))
 
     @horizontal_breadcrumb = []
     @vertical_breadcrumb = []
@@ -77,7 +77,7 @@ class Page
     if @source
       data = extend {page: @}, BASE_CONTEXT
       html = jade.renderFile 'templates/' + @source, data
-      dest = "build/" + decodeURIComponent(@get_url()) + 'index.html'
+      dest = "build" + decodeURIComponent(@get_url()) + '/index.html'
       grunt.file.write dest, html
     for child in @children
       child.render BASE_CONTEXT, grunt

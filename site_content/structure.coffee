@@ -16,6 +16,7 @@ pages = new Pages(
     new Page('Links and Buttons', 'pages/core_elements/links_and_buttons.jade'),
     new Page('Forms', 'pages/core_elements/forms.jade'),
     new Page('Lists', 'layout/page.jade'),
+    new Page('Images', 'pages/core_elements/images.jade'),
     new Page('Themes', 'layout/page.jade'),
   ])
   new Page('In Page Components', null, [

@@ -1,0 +1,29 @@
+extends ../../layout/page
+
+
+block content
+  script
+    :coffee-script
+      jQuery ($) ->
+        $('input[name="imagetoggle"]').change ->
+          $('#image-demo').css 'max-width', $(this).data('max-width')
+          $('#image-demo div')
+            .removeClass()
+            .addClass 'image-wrapper'
+            .addClass $(this).val()
+        $('#view-original').attr 'href', $('#image-demo img').attr('src')
+
+  - var FIRST_IMAGE = Object.keys(IMAGE_STYLES)[0]
+  p.lead Images are centered and resized to fit their container with the correct aspect ratio
+
+  fieldset.form-group
+    each image_style, name in IMAGE_STYLES
+      div.radio-inline.input-btn
+        input(name="imagetoggle" type="radio" id="imagetoggle#{ name }" value="image-wrapper-#{ name }" data-max-width="#{ image_style.width }px" checked=name==FIRST_IMAGE ? true:false)
+        label.btn.btn-input(for="imagetoggle#{ name }") #{image_style.description} #[small (#{image_style.width} by #{image_style.height})]
+
+  div#image-demo(style="max-width: #{ IMAGE_STYLES[FIRST_IMAGE].width }px")
+    div.image-wrapper(class="image-wrapper-#{ FIRST_IMAGE }")
+      img(src=random_image(1000))
+
+  p: a.secondary-cta#view-original(href="#") View Original

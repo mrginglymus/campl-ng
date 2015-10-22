@@ -41,6 +41,8 @@
   border: 1px solid #cccccc;
   font-weight: normal;
   padding-left: 2em;
+  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
 
   @include hover-focus {
     background-color: #ebebeb;

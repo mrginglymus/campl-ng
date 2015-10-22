@@ -299,23 +299,19 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'build-jade', "Build HTML from Jade", ->
     BASE_CONTEXT =
-      ROOT: grunt.config.data.local_settings.root_url
-      REMOTE_JS: [
-        'https://code.jquery.com/jquery-1.11.3.min.js',
-        'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.js',
-        'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/locale/en-gb.js',
-        'https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.0.3/js.cookie.js',
-        'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js',
-        'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js'
-      ]
-      LOCAL_JS: [
-        'js/campl.js',
-        'js/theme_switcher.js',
-      ]
       LINKS: grunt.file.readJSON('site_content/links.json')
       COLOURS: grunt.file.readJSON('themes.json')
+      IMAGE_STYLES: grunt.file.readJSON('images.json')
       PAGES: grunt.config.data.site_structure
       lipsum: require('lorem-ipsum')
+      random_image: (width, height = null) ->
+        if not height
+          height = width
+          scale = Math.random() + 1
+          height = Math.floor height * scale
+          scale = Math.random() + 1
+          width = Math.floor width * scale
+          return "http://loremflickr.com/#{width}/#{height}/?user=cambridge%%20university"
 
     for page in grunt.config.data.site_structure
       page.render BASE_CONTEXT, grunt

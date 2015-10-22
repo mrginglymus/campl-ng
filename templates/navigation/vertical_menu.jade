@@ -2,11 +2,11 @@ div.vertical-menu.vertical-menu-inset.collapse#vertical-menu(class=page.side_men
   ul.nav.nav-pills.nav-stacked.nav-side.vertical-menu-ancestors
     each _page in page.vertical_breadcrumb
       li.nav-item
-        a.nav-link(href=ROOT + '/' + _page[1])= _page[0]
+        a.nav-link(href=_page[1])= _page[0]
   ul.list-unstyled.vertical-menu-siblings
     li.vertical-menu-parent
       if page.vertical_breadcrumb_parent[1]
-        a(href=ROOT + '/' + page.vertical_breadcrumb_parent[1])= page.vertical_breadcrumb_parent[0]
+        a(href=page.vertical_breadcrumb_parent[1])= page.vertical_breadcrumb_parent[0]
       else
         span= page.vertical_breadcrumb_parent[0]
       if page.vertical_breadcrumb_children.length > 0
@@ -17,8 +17,8 @@ div.vertical-menu.vertical-menu-inset.collapse#vertical-menu(class=page.side_men
                 span= _page[0]
             else
               li
-                a(href=ROOT + '/' + _page[1])= _page[0]
+                a(href=_page[1])= _page[0]
     for _page in page.vertical_breadcrumb_siblings
       if _page[0] != page.vertical_breadcrumb_parent[0]
         li
-          a(href=ROOT + '/' + _page[1])= _page[0]
+          a(href=_page[1])= _page[0]
