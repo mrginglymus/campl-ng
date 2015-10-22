@@ -5,9 +5,9 @@ mixin drawer(id, drawer)
         div.col-md-11.col-xs-12.global-header-drawer-title
           a(href=drawer.link) #{drawer.title}
         div.col-md-1.global-header-close.hidden-sm-down
-          a(href="#global-header-drawer-close" data-target="#global-header-drawer-close" data-toggle="collapse") Close
+          a(href="#global-header-drawers" data-target="#global-header-drawers" data-toggle="collapse") Close
       div.row
-        each column in links.links
+        each column in drawer.links
           div.col-md-4.col-xs-12
             ul.global-header-list
               each menu in column

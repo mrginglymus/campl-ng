@@ -4,7 +4,7 @@ div.global-footer
       each column in LINKS.GLOBAL_FOOTER_LINKS
         div.col-md-3.col-xs-12
           if !('link' in column.header)
-            img.logo.logo-sm(alt="University of Cambridge", src=ROOT + '/images/logo.png')
+            img.logo.logo-sm(alt="University of Cambridge", src='/images/logo.png')
           else
             h3
               a(href=column.header.link)= column.header.title
