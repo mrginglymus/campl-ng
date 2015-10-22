@@ -43,10 +43,11 @@ module.exports = (grunt) ->
       src: ['scss/**/*.scss']
 
     coffeelint:
-      config:
+      options:
         max_line_length:
           level: 'ignore'
       src: ['coffee/**/*.coffee', 'Gruntfile.coffee']
+      test: ['test/specs/**/*.coffee']
 
     htmllint:
       src: ['build/**/*.html', '!build/templates/**/*', 'build/templates/**/index.html']
