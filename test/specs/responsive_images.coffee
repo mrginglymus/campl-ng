@@ -30,13 +30,13 @@ describe 'Testing responsive images', ->
           expect size.height / size.width
             .toBeCloseTo image_style.height / image_style.width, 2
         .getCssProperty '.image-wrapper', 'background-image'
-          .then (bgimage) =>
-            if @objectFit
-              expect bgimage.value
-                .toEqual 'none'
-            else
-              expect bgimage.value
-                .toEqual "url(\"#{@src}\")"
+        .then (bgimage) =>
+          if @objectFit
+            expect bgimage.value
+              .toEqual 'none'
+          else
+            expect bgimage.value
+              .toEqual "url(\"#{@src}\")"
         .then done
 
   for image_style_id, image_style of image_styles
