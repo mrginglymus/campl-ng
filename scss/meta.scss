@@ -1,15 +1,39 @@
-@import "compass/css3/flexbox";
+@import "themes";
 
 main .main-content {
-  @include display-flex(flex);
-  @include flex-direction(column);
-  &> pre {
+  display: flex;
+  flex-direction: column;
+
+  > pre {
+    display: flex;
+    flex-grow: 1;
     margin: 0;
-    @include display-flex(flex);
-    @include flex-grow(1);
-    &> code {
+
+    > code {
+      flex-grow: 1;
       font-size: 1.2em;
-      @include flex-grow(1);
+      padding: 20px;
+    }
+  }
+}
+
+
+.dropdown-menu {
+  @each $colour, $theme in $themes {
+    [data-colour="#{$colour}"] {
+      background-color: map-get($theme, light-highlight) !important;
+
+      &:hover {
+        background-color: map-get($theme, page-background) !important;
+      }
+    }
+  }
+
+  [href="#disco"] {
+    background-color: #000000 !important;
+
+    &:hover {
+      background-color: #111111 !important;
     }
   }
 }

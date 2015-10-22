@@ -7,3 +7,4 @@ gh-pages/
 build
 node_modules
 plenv
+bower_components

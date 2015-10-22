@@ -1,6 +1,6 @@
-$themes: get_themes();
+$themes: get-themes();
 
-@mixin theme_element($property, $variant, $important:"") {
+@mixin theme-element($property, $variant, $important:"") {
   $element: &;
   @each $colour, $map in $themes {
     @at-root {

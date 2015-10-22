@@ -2,63 +2,73 @@
 
 .local-header {
   .navbar-local {
-    @include theme_element(background-color, navbar);
+    @include theme-element(background-color, navbar);
+    @include theme-element(border-color, page-background);
     font-family: $font-family-sans-serif-extra;
-    
     padding: 0;
     border-bottom: $border-width solid;
-    @include theme_element(border-bottom-color, page-background);
-    
+    border-top: $border-width solid;
+
     .nav {
+      margin-top: -1px;
+
       .nav-item {
-       
         margin-left: 0;
+        margin-bottom: -1px;
+
         &.active .nav-link {
-          @include theme_element(background-color, selected);
+          @include theme-element(background-color, selected);
         }
+
         &:not(.pull-right) .nav-link {
           border-right: $border-width solid;
-          @include theme_element(border-right-color, page-background);
         }
+
         &.pull-right .nav-link {
           border-left: $border-width solid;
-          @include theme_element(border-left-color, page-background);
         }
-      
-      
+
         .nav-link {
-          @include theme_element(background-color, navbar);
-          @include hover-focus {
-            @include theme_element(background-color, dark-highlight);
-          }
-          color: #ffffff !important;
+          @include theme-element(background-color, navbar);
+          @include theme-element(border-color, page-background);
+          border-bottom: $border-width solid;
+          border-top: $border-width solid;
+          color: $white !important;
           padding: 10px 20px;
           font-size: 14px;
           font-weight: normal;
+
+          @include hover-focus {
+            @include theme-element(background-color, dark-highlight);
+          }
         }
-        
+
         .dropdown-toggle {
-          @include background(inline-image('dropdown-indicator.png') no-repeat right 5px top 50%);
+          background: inline-image("dropdown-indicator.png") no-repeat right 5px top 50%;
+          padding: 10px 40px 10px 10px;
+
           &:after {
             content: none;
           }
-          padding: 10px 40px 10px 10px;
         }
-        
+
         .dropdown-menu {
-          @include theme_element(background-color, dark-highlight);
-          margin-top: 0px;
+          @include theme-element(background-color, dark-highlight);
+          margin-top: -$border-width;
           margin-left: -$border-width;
-          padding: 0px;
+          border-top: 0;
+          padding: 0;
           font-size: 14px;
+
           a {
+            @include theme-element(border-top-color, page-background);
             border-top: $border-width solid;
-            @include theme_element(border-top-color, page-background);
             padding: 10px;
+            color: $white;
+
             @include hover-focus {
-              @include theme_element(background-color, navbar);
+              @include theme-element(background-color, navbar);
             }
-            color: #ffffff;
           }
         }
       }

@@ -1,0 +1,23 @@
+.image-wrapper {
+  display: block;
+  position: relative;
+  width: 100%;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+
+  img {
+    position: absolute;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+  }
+}
+
+$images: get-images();
+
+@each $style, $map in $images {
+  .image-wrapper-#{$style} {
+    padding-bottom: map-get($map, height) / map-get($map, width) * 100%;
+  }
+}

@@ -2,51 +2,61 @@
   .quicklinks-container {
     padding-right: 10px;
   }
+
   #global-quicklinks {
-    padding: 15px 0px;
-    &> a {
-      color: #fff;
-      @include background(linear-gradient(to bottom, #3d3d3d 0%, #292929 100%));
+    padding: 15px 0;
+
+    > a {
+      background: linear-gradient(to bottom, #3d3d3d 0%, #292929 100%);
+      color: $white;
       display: block;
       padding: 7px;
       font-family: $font-family-sans-serif;
+
       @include hover-focus {
         text-decoration: none;
       }
-      span.quicklinks-dropdown-toggle {
-        @include background(linear-gradient(to bottom, #a3a3a3 0%, #4a4a4a 100%));
+
+      .quicklinks-dropdown-toggle {
+        background: linear-gradient(to bottom, #a3a3a3 0%, #4a4a4a 100%);
         width: 35px;
         margin: -7px;
         padding: 7px 7px 7px 13px;
         float: right;
-        color: #000;
+        color: $black;
+
         @include hover-focus {
-          @include background(linear-gradient(to bottom, #a3a3a3 0%, #707070 100%));
+          background: linear-gradient(to bottom, #a3a3a3 0%, #707070 100%);
         }
       }
     }
-    &.open span.quicklinks-dropdown-toggle {
-      @include background(linear-gradient(to bottom, #666666 0%, #303030 100%));
+
+    &.open .quicklinks-dropdown-toggle {
+      background: linear-gradient(to bottom, #666666 0%, #303030 100%);
+
       @include hover-focus {
-        @include background(linear-gradient(to bottom, #666666 0%, #303030 100%));
+        background: linear-gradient(to bottom, #666666 0%, #303030 100%);
       }
     }
+
     .dropdown-menu {
       width: 200px;
-      margin: 0px;
-      padding: 0px;
+      margin: 0;
+      padding: 0;
       top: auto;
       background-color: #2a2a2a;
+
       a {
-        color: #fff;
+        color: $white;
         padding: 7px 7px 7px 16px;
         display: block;
         border-bottom: $border-width solid #323232;
         font-size: 14px;
         font-family: $font-family-sans-serif-extra;
         font-weight: 600;
+
         @include hover-focus {
-          background-color: #171717;
+          background-color: $gray-darker;
         }
       }
     }

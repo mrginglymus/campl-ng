@@ -1,0 +1,25 @@
+{
+  "name": "campl-ng",
+  "description": "A modern implementation of the Project Light theme for the University of Cambridge",
+  "main": "",
+  "authors": [
+    "Bill Collins <bill@bill.works>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/mrginglymus/campl-ng",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "4.0.0-alpha",
+    "eonasdan-bootstrap-datetimepicker": "4.17.37",
+    "hammerjs": "hammer.js#~2.0.4",
+    "jquery-hammerjs": "jquery.hammer.js#~2.0.0",
+    "js-cookie": "2.0.3"
+  }
+}

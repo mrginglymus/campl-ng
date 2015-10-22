@@ -2,4 +2,8 @@
 
 @import "navigation/breadcrumb";
 @import "navigation/horizontal_menu";
-@import "navigation/vertical_menu";
+@import "navigation/vertical_menu/vertical_menu";
+@import "navigation/vertical_menu/vertical_menu_ancestors";
+@import "navigation/vertical_menu/vertical_menu_children";
+@import "navigation/vertical_menu/vertical_menu_parent";
+@import "navigation/vertical_menu/vertical_menu_siblings";

@@ -1,0 +1,37 @@
+{
+  "leading": {
+    "width": 590,
+    "height": 288,
+    "description": "Leading"
+  },
+  "square": {
+    "width": 254,
+    "height": 254,
+    "description": "Square Teaser"
+  },
+  "carousel": {
+    "width": 885,
+    "height": 432,
+    "description": "Carousel"
+  },
+  "promo": {
+    "width": 349,
+    "height": 125,
+    "description": "Promo Teaser"
+  },
+  "focuson": {
+    "width": 153,
+    "height": 137,
+    "description": "Focus On Teaser"
+  },
+  "teaser-wide": {
+    "width": 349,
+    "height": 183,
+    "description": "Wide Vertical Teaser"
+  },
+  "carousel-campage": {
+    "width": 785,
+    "height": 428,
+    "description": "Cam Page Carousel"
+  }
+}

@@ -1,6 +1,8 @@
 Jinja2==2.8
 MarkupSafe==0.23
 argparse==1.2.1
+bleach==1.4.2
+feedparser==5.2.1
 ordereddict==1.1
 pathlib==1.0.1
 simplejson==3.8.0

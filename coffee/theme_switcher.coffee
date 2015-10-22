@@ -1,13 +1,15 @@
 window.set_theme = (theme) ->
   Cookies.set 'theme', theme
   clist = document.body.classList
-  clist.remove(clist.item(clist.length-1))
-  clist.add "theme-#{theme}"
+  if !!clist
+    clist.remove(clist.item(clist.length - 1))
+    clist.add "theme-#{theme}"
 
 jQuery ($) ->
   window.themes = $("a[data-toggle='theme']").map ->
     $(@).data 'colour'
   .get()
+  window.discoidx = 0
 
   theme = Cookies.get "theme"
   theme = theme ? "turquoise"
@@ -15,17 +17,14 @@ jQuery ($) ->
   $("a[data-toggle='theme']").click ->
     set_theme $(@).data 'colour'
     false
-    
+
   $("a[href='#disco']").click ->
     if window.disco
       clearInterval window.disco
       window.disco = false
     else
-      window.discoidx = -1
       window.disco = setInterval ->
-        ++window.discoidx
-        if window.discoidx >= window.themes.length
-          window.discoidx = 0
+        window.discoidx = (window.discoidx + Math.floor(Math.random() * (window.themes.length - 1)) + 1) % window.themes.length
         set_theme window.themes[window.discoidx]
       , 500
     false

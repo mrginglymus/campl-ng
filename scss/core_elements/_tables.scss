@@ -1,31 +1,36 @@
 .table:not(.table-bordered) {
-  th, td {
+  th,
+  td {
     border: 0;
   }
+
   thead {
-    th, td {
+    th,
+    td {
       border: 0;
     }
   }
 }
 
 .table-bordered {
+  @include theme-element(border-bottom-color, selected);
   border-bottom: 2px solid;
-  @include theme_element(border-bottom-color, selected);
+
   thead th {
-    @include theme_element(background-color, selected);
-    color: #fff;
+    @include theme-element(background-color, selected);
+    color: $white;
   }
 }
 
 .table-striped {
   tbody tr:nth-of-type(odd) {
-    @include theme_element(background-color, pale-table-bg);
+    @include theme-element(background-color, pale-table-bg);
   }
 }
 
 .table-hover {
-  tbody tr, tbody tr:nth-of-type(odd) {
+  tbody tr,
+  tbody tr:nth-of-type(odd) {
     @include hover {
       background-color: $table-bg-hover;
     }

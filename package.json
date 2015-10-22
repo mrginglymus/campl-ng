@@ -1,7 +1,7 @@
 {
   "name": "campl-ng",
   "description": "A modern implementation of the Project Light theme for the University of Cambridge",
-  "version": "0.1.1-alpha4",
+  "version": "0.1.1-alpha5",
   "homepage": "http://people.ds.cam.ac.uk/wac26/campl-ng/",
   "author": "Bill Collins <bill@bill.works>",
   "repository": {
@@ -12,27 +12,38 @@
     "url": "https://github.com/mrginglymus/campl-ng/issues"
   },
   "scripts": {
-    "install": "virtualenv plenv && plenv/bin/pip install -r py_requirements.txt"
+    "install": "virtualenv plenv && plenv/bin/pip install -r py_requirements.txt && bower install"
   },
   "license": "ISC",
   "dependencies": {
+    "autoprefixer": "^6.0.3",
+    "bower": "^1.6.3",
+    "coffeelint": "^1.12.1",
     "grunt": "^0.4.5",
     "grunt-cli": "^0.1.13",
+    "grunt-coffeelint": "0.0.13",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-coffee": "^0.13.0",
     "grunt-contrib-copy": "^0.8.1",
-    "grunt-contrib-cssmin": "^0.14.0",
     "grunt-contrib-jade": "^0.15.0",
     "grunt-contrib-sass": "^0.9.2",
     "grunt-contrib-uglify": "^0.9.2",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-exec": "^0.4.6",
+    "grunt-html": "^5.0.1",
+    "grunt-modernizr": "^1.0.0",
+    "grunt-postcss": "^0.6.0",
     "grunt-rsync": "^0.6.2",
     "grunt-sass-globbing": "^1.4.0",
     "grunt-scss-lint": "^0.3.8",
     "grunt-text-replace": "^0.4.0",
     "jade": "^1.11.0",
     "lorem-ipsum": "^1.0.3",
-    "node-uuid": "^1.4.3"
+    "node-uuid": "^1.4.3",
+    "grunt-webdriver": "^1.0.0",
+    "jasmine": "^2.3.2",
+    "node-uuid": "^1.4.3",
+    "webdriver": "0.0.1",
+    "webdriverio": "^3.2.5"
   }
 }

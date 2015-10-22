@@ -61,5 +61,23 @@
     "selected":         "#8c8989",
     "pale-tone":        "#eae8e8",
     "pale-table-bg":    "#dbd9d9"
+  },
+  "lime": {
+    "dark-highlight":   "#4e6c16",
+    "page-background":  "#abb400",
+    "navbar":           "#404f24",
+    "light-highlight":  "#79791e",
+    "selected":         "#888b22",
+    "pale-tone":        "#5d6200",
+    "pale-table-bg":    "#dfdfac"
+  },
+  "blue-grey": {
+    "dark-highlight":   "#134374",
+    "page-background":  "#d2dde7",
+    "navbar":           "#5f5f5f",
+    "light-highlight":  "#7d7777",
+    "selected":         "#8c8989",
+    "pale-tone":        "#404040",
+    "pale-table-bg":    "#dfdfac"
   }
 }

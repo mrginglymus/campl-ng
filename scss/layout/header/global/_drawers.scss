@@ -1,82 +1,84 @@
 @import "compass/css3/images";
 
+.global-header-drawer-title {
+  border-bottom: 1px solid #323232;
+
+  a {
+    background: inline-image("link-bullet-white.png") no-repeat 0 50%;
+    margin: $spacer;
+    color: $white;
+    display: inline-block;
+    padding-left: 10px;
+    font-weight: 600;
+  }
+}
+
+.global-header-close {
+  font-family: $font-family-sans-serif;
+  background-color: $black;
+  font-size: 12px;
+  font-weight: 600;
+  border-bottom: 1px solid #323232;
+
+  a {
+    background: inline-image("close-lg.png") no-repeat 90% 50%;
+    padding: 21px 15px;
+    height: 57px;
+    color: $white;
+    display: block;
+  }
+}
+
+.global-header-list {
+  @include list-unstyled();
+  margin: 0 20px;
+
+  > li {
+    padding: 15px 0;
+
+    > a {
+      font-weight: 600;
+    }
+
+    + li {
+      border-top: 1px solid #323232;
+    }
+  }
+
+  a {
+    background: inline-image("link-bullet-white.png") no-repeat 0 50%;
+    padding-left: 10px;
+    color: $white;
+  }
+}
+
+.global-header-sublist {
+  @include list-unstyled();
+  padding-top: 15px;
+
+  @include media-breakpoint-down(sm) {
+    display: none !important;
+  }
+
+  li {
+    padding: 10px 0;
+  }
+}
+
 .global-header-drawer {
   font-family: $font-family-sans-serif-extra;
-  background-color: #171717;
-  color: #ffffff;
+  background-color: $gray-darker;
+  color: $white;
   border-top: $border-width solid #323232;
   font-size: 14px;
+
   .container {
     border-right: 1px solid #323232;
   }
-  
+
   .row {
-    
-    & div {
+    div {
       border-left: 1px solid #323232;
-    }
-  
-    &:first-child {
-      border-bottom: 1px solid #323232;
-      &> div > .list-unstyled {
-        padding: $spacer;
-        li {
-          padding: 0;
-        }
-      }
-      
-    }
-  }
-  
-  .global-header-close {
-    font-family: $font-family-sans-serif;
-    background-color: #000000;
-    font-size: 12px;
-    font-weight: 600;
-    
-    a {
-      padding: 21px 15px;
-      height: 57px;
-      color: #ffffff;
-      display: block;
-      @include background(inline-image('close-lg.png') no-repeat 90% 50%);
-      
-    }
-  }
-  
-  div > .list-unstyled {
-    padding: 0px $spacer;
-    &> li {
-      padding-top: $spacer/2;
-      &> a {
-        font-weight: 600;
-      }
-    }
-    
-    li a {
-      @include background(inline-image('link-bullet-white.png') no-repeat 0 50%);
-      padding-left: 10px;
-    }
-  }
-  
-  .list-unstyled {
-    margin: 0;
-    li, li a {
-      color: #ffffff;
-    }
-    
-    .list-unstyled {
-      padding-top: 15px;
-      li {
-        padding: 10px 0px;
-      }
-    }
-  }
-  
-  .list-unstyled:not(.hidden-sm-down) > li {
-    padding: 15px 0px;
-    &:not(:last-child) {
-      border-bottom: $border-width solid #323232;
     }
   }
 }

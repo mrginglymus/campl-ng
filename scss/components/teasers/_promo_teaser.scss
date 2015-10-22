@@ -1,20 +1,23 @@
 .promo-teaser {
-  background: #fff;
-  .promo-teaser-heading {
+  background: $white;
+
+  .teaser-title {
     padding: $spacer;
+    margin-bottom: 0;
+
     a {
-      color: #171717;
+      color: $gray-darker;
       font-weight: 700;
       font-size: 17px;
     }
   }
-  .promo-teaser-image img {
-    width: 100%;
-  }
-  .promo-teaser-text {
+
+  .teaser-body {
+    @include clearfix();
     padding: $spacer * 0.75;
   }
-  &+ .promo-teaser {
-    margin-top: $spacer;
+  
+  .teaser-link {
+    float: right;
   }
 }

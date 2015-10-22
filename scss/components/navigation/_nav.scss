@@ -6,33 +6,38 @@
       padding: 8px 12px;
       line-height: 18px;
     }
+
     .nav-link:not(.disabled) {
-      @include theme_element(color, selected);
-      
+      @include theme-element(color, selected);
+
       &:not(.active):hover {
-        background-color: #eee;
-        @include theme_element(color, selected);
+        @include theme-element(color, selected);
+        background-color: #eeeeee;
       }
-      
+
       &.active {
-        @include theme_element(background-color, selected);
-        color: #fff;
+        @include theme-element(background-color, selected);
+        color: $white;
       }
     }
+
     .nav-link.disabled {
-      color: #777;
+      color: #777777;
     }
+
     + .nav-item {
       margin-left: 3px;
     }
   }
+
   &.nav-tabs {
+    @include theme-element(border-bottom-color, selected);
     border-bottom: 2px solid;
-    @include theme_element(border-bottom-color, selected);
     padding-left: 20px;
+
     .nav-item {
-      margin-bottom: 0px;
-      
+      margin-bottom: 0;
+
       .nav-link {
         border: 0;
       }

@@ -1,84 +1,113 @@
-@import "compass/css3/transition";
-
 @include media-breakpoint-down(sm) {
   .offcanvas {
+    transition: all 0.25s ease-out;
     background-color: #3b3b3b;
     position: relative;
-    @include transition-property(all);
-    @include transition-duration(0.25s);
-    @include transition-timing-function(ease-out);
   }
-  
+
   .offcanvas-left {
     left: 0;
+
     &.active {
       left: 260px;
     }
+
     .sidebar-offcanvas {
       left: -260px;
     }
   }
+  
+  .offcanvas.active #global-header-drawers {
+    display: block;
+  }
+
   .sidebar-offcanvas {
     position: absolute;
     top: 0;
     width: 260px;
   }
   
+  .fade {
+    opacity: 1 !important;
+  }
+
   .global-header .navbar-brand {
     margin: 0 auto;
     display: block;
     float: none;
     width: 208px;
   }
-  
+
   .global-menu-button {
     display: block;
     margin: 15px;
     padding: 1px 3px;
     background-color: #323232;
-    color: #999;
+    color: #999999;
+
     @include hover-focus {
-      color: #999;
+      color: #999999;
       background-color: #242424;
     }
+
     span {
       padding: 4px;
     }
   }
-  
 
-  #global-header-drawers div {
+  .global-header-drawer-title {
+    border-top: $border-width solid #323232;
+    border-bottom: 0;
+  }
+
+  .global-header-drawer {
     background-color: #3b3b3b;
-    display: block;
+
+    .tab-pane {
+      display: block;
+    }
+
     .row {
       border-bottom: 0;
+
+      div {
+        border-left: 0;
+      }
     }
-    [class*='col-'] {
-      width: 100%;
-      border: 0;
-    }
-    ul {
-      padding: 0;
-      border-bottom: $border-width solid #323232;
-    }
-    li:before {
-      display: none;
-    }
-    li {
-      padding: 0;
-    }
+
     a {
-      padding: $spacer/2 $spacer;
+      padding: $spacer / 2 $spacer;
+      margin: 0;
       display: block;
       background: none;
+
       @include hover-focus {
         background-color: #292929;
         text-decoration: none;
       }
     }
-    ul:not(.global-header-drawer-title) a {
-      font-weight: normal;
-      padding-left: 30px;
+  }
+
+  .global-header-list {
+    margin: 0;
+
+    li {
+      padding: 0;
+      border-top: 1px solid #323232;
+
+      a {
+        font-weight: normal;
+        padding-left: 30px;
+      }
+    }
+  }
+
+  .global-header-offcanvas-quicklinks {
+    @include list-unstyled();
+
+    li a {
+      font-weight: 600;
+      padding-left: 20px;
     }
   }
 }

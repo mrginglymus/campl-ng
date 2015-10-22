@@ -1,49 +1,73 @@
-@mixin alert_style($colour) {
+@import "compass/css3/images";
+
+@mixin alert-style($colour) {
   border-color: $colour;
+
   .row div:first-child {
     color: $colour;
   }
 }
 
 .alert-top {
-  border-width: 0px 0px 4px;
-  background-color: #fff;
-  color: #000;
+  border-width: 0 0 4px;
+  background-color: $white;
+  color: $black;
 }
 
 .alert {
+  position: relative;
+
+  @include media-breakpoint-up(md) {
+    padding: 15px 80px;
+  }
+
   &.alert-success {
-    @include alert_style($brand-success);
+    @include alert-style($brand-success);
   }
-  
+
   &.alert-warning {
-    @include alert_style($brand-warning);
+    @include alert-style($brand-warning);
   }
-  
+
   &.alert-danger {
-    @include alert_style($brand-danger);
+    @include alert-style($brand-danger);
   }
-  
+
   &.alert-info {
-    @include alert_style($brand-info);
+    @include alert-style($brand-info);
   }
-  
+
   .row div {
     padding: 2px;
   }
-  
+
   .row div:first-child {
+    font-weight: bold;
+
     @include media-breakpoint-up(md) {
       text-align: right;
     }
-    font-weight: bold;
+
     span {
       vertical-align: top;
     }
+
     .fa {
       position: relative;
       top: -0.25em;
       font-size: 2.4em;
     }
+  }
+
+  .close {
+    background: rgba(255, 255, 255, 0.5) inline-image("alert-close.png") no-repeat 50% 50%;
+    width: 23px;
+    height: 23px;
+    padding: 4px;
+    opacity: 1;
+    border: 1px solid #dddddd;
+    position: absolute;
+    top: 4px;
+    right: 4px;
   }
 }
