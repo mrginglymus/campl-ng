@@ -9,6 +9,9 @@ describe 'Testing responsive images', ->
           Modernizr.objectfit
         .then (ret) =>
           @objectFit = ret.value
+        .getAttribute '.image-wrapper img', 'src'
+        .then (src) =>
+          @src = src
         .click "#imagetoggle#{image_style_id}"
         .getElementSize '.image-wrapper img'
         .then (size) ->
@@ -33,7 +36,7 @@ describe 'Testing responsive images', ->
                 .toEqual 'none'
             else
               expect bgimage.value
-                .not.toEqual 'none'
+                .toEqual "url(\"#{@src}\")"
         .then done
 
   for image_style_id, image_style of image_styles
