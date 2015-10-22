@@ -15,7 +15,7 @@ describe 'Testing responsive images', ->
         .click "#imagetoggle#{image_style_id}"
         .getElementSize '.image-wrapper img'
         .then (size) ->
-          if size.height == 0
+          if size.height is 0
             expect size.width
               .toEqual 0
           else

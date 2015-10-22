@@ -4,12 +4,12 @@ jQuery ($) ->
     $(".global-header a.nav-link.active").removeClass "active"
 
   $(".global-header [data-parent='#global-header-drawers']").on 'shown.bs.tab', ->
-    if !$("#global-header-drawers").hasClass "in"
+    if not $("#global-header-drawers").hasClass "in"
       $("#global-header-drawers").collapse "show"
 
   $(".global-header [data-parent='#global-header-drawers']").click ->
     if $("#global-header-drawers").hasClass "in"
-      if $(this).hasClass "active"
+      if $(@).hasClass "active"
         $("#global-header-drawers").collapse "hide"
 
   $("[data-toggle='offcanvas']").click (e) ->

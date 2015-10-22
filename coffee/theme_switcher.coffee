@@ -2,7 +2,7 @@ window.set_theme = (theme) ->
   Cookies.set 'theme', theme
   clist = document.body.classList
   if !!clist
-    clist.remove(clist.item(clist.length-1))
+    clist.remove(clist.item(clist.length - 1))
     clist.add "theme-#{theme}"
 
 jQuery ($) ->
@@ -24,7 +24,7 @@ jQuery ($) ->
       window.disco = false
     else
       window.disco = setInterval ->
-        window.discoidx = (window.discoidx + Math.floor(Math.random() * (window.themes.length - 1))+1) % window.themes.length
+        window.discoidx = (window.discoidx + Math.floor(Math.random() * (window.themes.length - 1)) + 1) % window.themes.length
         set_theme window.themes[window.discoidx]
       , 500
     false

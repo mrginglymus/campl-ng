@@ -10,7 +10,7 @@ execSync = require('child_process').execSync
 
 module.exports = (grunt) ->
 
-  grunt.option('target', grunt.option('target') || 'local')
+  grunt.option('target', grunt.option('target') or 'local')
 
   grunt.loadNpmTasks 'grunt-contrib-sass'
   grunt.loadNpmTasks 'grunt-contrib-clean'
@@ -44,8 +44,7 @@ module.exports = (grunt) ->
 
     coffeelint:
       options:
-        max_line_length:
-          level: 'ignore'
+        configFile: 'coffee/coffeelint.json'
       src: ['coffee/**/*.coffee', 'Gruntfile.coffee']
       test: ['test/specs/**/*.coffee']
 
@@ -274,4 +273,3 @@ module.exports = (grunt) ->
   grunt.registerTask 'cache-images', ['replace:image_cache']
 
   grunt.registerTask 'test', ['coffee:test', 'webdriver']
-

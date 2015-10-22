@@ -1,5 +1,5 @@
 jQuery ($) ->
-  if !Modernizr.objectfit
+  if not Modernizr.objectfit
     $('.image-wrapper').each ->
-      $img = $('img', this).hide()
-      $(this).css "background-image", "url(#{$img.attr('src')})"
+      $img = $('img', @).hide()
+      $(@).css "background-image", "url(#{$img.attr('src')})"

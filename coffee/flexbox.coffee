@@ -1,5 +1,5 @@
 jQuery ($) ->
-  if !Modernizr.flexbox
+  if not Modernizr.flexbox
     max_height = Math.max [
       $('.vertical-menu').height() - 50,
       $('.sidebar, .main-content').height()
