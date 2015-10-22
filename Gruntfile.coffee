@@ -1,3 +1,5 @@
+require 'coffee-script/register'
+
 sass_options =
   sourcemap: 'inline',
   trace: true,
