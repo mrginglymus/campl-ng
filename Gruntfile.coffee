@@ -1,5 +1,3 @@
-require 'coffee-script/register'
-
 sass_options =
   sourcemap: 'inline',
   trace: true,
@@ -52,7 +50,7 @@ module.exports = (grunt) ->
 
     htmllint:
       src: ['build/**/*.html', '!build/templates/**/*', 'build/templates/**/index.html']
-
+      
     webdriver:
       test:
         configFile: './test/wdio.conf.js'
@@ -135,6 +133,15 @@ module.exports = (grunt) ->
       meta:
         files:
           'build/js/theme_switcher.js': ['coffee/theme_switcher.coffee']
+      test:
+        options:
+          bare: true
+        expand: true
+        flatten: false
+        cwd: 'test/specs'
+        src: ['**/*.coffee']
+        dest: 'test/specs'
+        ext: '.js'
 
     uglify:
       options:
@@ -236,7 +243,7 @@ module.exports = (grunt) ->
         tasks: ['build-html', 'deploy']
       js:
         files: 'coffee/**/*.coffee'
-        tasks: ['coffee', 'deploy']
+        tasks: ['build-js', 'deploy']
       scsslint:
         files: ['scss/**/*.scss', 'scss/.scss-lint.yml']
         tasks: ['scsslint']
@@ -249,7 +256,7 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'build-css', ['sass_globbing', 'sass', 'postcss']
 
-  grunt.registerTask 'build-js', ['coffee', 'uglify']
+  grunt.registerTask 'build-js', ['coffee:core', 'coffee:meta', 'uglify']
 
   grunt.registerTask 'build-images', ['copy:images', 'copy:favicon']
 
@@ -265,4 +272,5 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'cache-images', ['replace:image_cache']
 
+  grunt.registerTask 'test', ['coffee:test', 'webdriver']
 
