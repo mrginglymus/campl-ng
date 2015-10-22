@@ -46,11 +46,28 @@ exports.config = {
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://docs.saucelabs.com/reference/platforms-configurator
     //
-    capabilities: [{
-        browserName: 'microsoftedge',
-        platform: 'Windows 10',
-        version: '20.10240'
-    }],
+    capabilities: [
+      {
+        browserName: 'internet explorer',
+        platform: 'Windows 7',
+        version: '9.0'
+      },
+      {
+        browserName: 'chrome',
+        platform: 'Windows 7',
+        version: '43.0'
+      },
+      {
+        browserName: 'firefox',
+        platform: 'Windows 7',
+        version: '31.0'
+      },
+      {
+        browserName: 'safari',
+        platform: 'OS X 10.11',
+        version: '9.0'
+      }
+    ],
     //
     // ===================
     // Test Configurations
@@ -112,7 +129,7 @@ exports.config = {
     jasmineNodeOpts: {
         //
         // Jasmine default timeout
-        defaultTimeoutInterval: 10000,
+        defaultTimeoutInterval: 20000,
         //
         // The Jasmine framework allows it to intercept each assertion in order to log the state of the application
         // or website depending on the result. For example it is pretty handy to take a screenshot everytime
