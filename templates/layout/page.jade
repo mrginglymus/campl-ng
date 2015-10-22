@@ -1,10 +1,11 @@
 extends ../base.jade
 
+import ./sidebar/related_links
+
 block body
 	header
 		include ./header/global/header.jade
 		include ./header/local/header.jade
-		include ../navigation/horizontal_menu.jade
 		div.local-header.subtitle
 			div.container
 				div(class=page.side_menu ? "col-md-9 col-md-offset-3" : "col-md-12")
@@ -13,13 +14,14 @@ block body
 	main.container
 		div.row
 			include ../navigation/vertical_menu.jade
-			div(class="col-md-#{page.side_menu ? 6:9}")
-				if page.image
-					img.leading-image(src=page.image)
+			div.col-xs-12.main-content(class="col-md-#{page.side_menu ? 6:9}")
+				if image
+					div.image-wrapper.image-wrapper-leading
+					img(src=image)
 				block unwrapped_content
 				div.p-a
 					block content
-			div.col-md-3.sidebar
+			div.col-md-3.col-xs-12.sidebar
 				div.p-a
 					block sidebar_content
 	footer

@@ -1,0 +1,8 @@
+mixin inpage_search()
+  div.inpage-search-container
+    form(action="/", method="get")
+      label.sr-only(class="search") Search
+      div.inpage-search.input-group
+        input#search.form-control(type="text", placeholder="Search..", name="search")
+        button.input-group-addon(type="submit")
+          span.fa.fa-search.fa-2x

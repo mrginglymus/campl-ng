@@ -2,7 +2,7 @@ div.global-footer
   div.container
     div.row
       each column in LINKS.GLOBAL_FOOTER_LINKS
-        div.col-md-3
+        div.col-md-3.col-xs-12
           if !('link' in column.header)
             img.logo.logo-sm(alt="University of Cambridge", src=ROOT + '/images/logo.png')
           else

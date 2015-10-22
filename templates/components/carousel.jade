@@ -1,0 +1,24 @@
+mixin carousel_item(article, image, items, loop)
+  div.carousel-item(class=loop.first ? "active" : "")
+  if article.link
+    a.image-wrapper.image-wrapper-carousel(href=article.link)
+      img(src=image, alt=article.title)
+  else
+    div.image-wrapper.image-wrapper-carousel
+      img(src=image, alt=article.title)
+  div.carousel-caption
+    if article.link
+      a(href=article.link)= article.title
+    else
+      span= article.title
+    span.carousel-page= "#{ loop.index } of #{ items }"
+
+mixin carousel(items)
+  div#front-page-carousel.carousel.slide(data-ride="carousel")
+    div.carousel-inner(role="listbox")
+      for article, image in items
+        carousel_item(article, image, items, loop)
+    a.left.carousel-control.hidden-sm-down(href="#front-page-carousel", role="button", data-slide="prev")
+      span.sr-only Previous
+    a.right.carousel-control.hidden-sm-down(href="#front-page-carousel", role="button", data-slide="next")
+      span.sr-only Next

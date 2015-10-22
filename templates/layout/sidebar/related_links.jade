@@ -1,0 +1,5 @@
+mixin related_links(links)
+  ul.related_links
+    each link, title in links
+      li
+        a(href=link)= title

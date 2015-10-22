@@ -1,16 +1,16 @@
-div.col-md-3.vertical-navigation.collapse#vertical-navigation(class=page.side_menu ? "navbar-toggleable-sm" : "hidden-md-up")
-  ul.nav.nav-pills.nav-stacked.nav-side
+div.vertical-menu.vertical-menu-inset.collapse#vertical-menu(class=page.side_menu ? "navbar-toggleable-sm" : "hidden-md-up")
+  ul.nav.nav-pills.nav-stacked.nav-side.vertical-menu-ancestors
     each _page in page.vertical_breadcrumb
       li.nav-item
         a.nav-link(href=ROOT + '/' + _page[1])= _page[0]
-  ul.list-unstyled
-    li.vertical-navigation-parent
+  ul.list-unstyled.vertical-menu-siblings
+    li.vertical-menu-parent
       if page.vertical_breadcrumb_parent[1]
         a(href=ROOT + '/' + page.vertical_breadcrumb_parent[1])= page.vertical_breadcrumb_parent[0]
       else
         span= page.vertical_breadcrumb_parent[0]
       if page.vertical_breadcrumb_children.length > 0
-        ul.list-unstyled
+        ul.list-unstyled.vertical-menu-children
           each _page in page.vertical_breadcrumb_children
             if _page[0] == page.title
               li

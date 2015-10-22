@@ -1,0 +1,16 @@
+- var show_breadcrumb = page && !page.front_page && page.horizontal_breadcrumb
+if show_breadcrumb
+  div.hidden-sm-down
+    ol.breadcrumb
+      li
+        a(href="http://www.cam.ac.uk/")
+          span.fa.fa-home.fa-lg &nbsp;
+      each crumb, idx in page.horizontal_breadcrumb
+        if crumb[1] == '/'
+          li
+            a(href=ROOT)= crumb[0]
+        else if crumb[1] && idx!=page.horizontal_breadcrumb.length-1
+          li
+            a(href=ROOT + '/' + crumb[1])= crumb[0]
+        else
+          li.active= crumb[0]

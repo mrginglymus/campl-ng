@@ -1,0 +1,24 @@
+mixin _nav(items, type, data_toggle="tab", stacked=false, local=false, extra_classes='')
+  div(class="nav-#{ type }-wrapper")
+    ul.nav(class="#{ stacked ? '' : 'nav-stacked' } #{ extra_classes }", role="tablist")
+      for item in items
+        li.nav-item
+          a.nav-link(
+            class=item.disabled ? "disabled" : item.active ? "active" : "",
+            role="tab",
+            href=item.local ? "##{ item.id }" : item.link,
+            data-toggle=item.local ? data_toggle : ""
+          )= item.title
+
+
+mixin nav_tabs(items, local=false)
+  _nav(items, 'tabs', local=local)
+
+mixin nav_pills(items, local=false)
+  _nav(items, 'pills', data_toggle='pill', local=local)
+
+mixin nav_pills_stacked(items, local=false)
+  _nav(items, 'pills', data-toggle='pill', stacked=true, local=local)
+
+mixin nav_stages(items, local=false)
+  _nav(items, 'stages', data_toggle='pill', extra_classes='nav-pills', local=loccal)

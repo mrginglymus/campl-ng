@@ -4,20 +4,24 @@ html(lang="en")
     meta(http-equiv="Content-Type", content="text/html; charset=UTF-8")
     title CamPL-NG: #{page.title}
 
-    link(rel="stylesheet", href="/css/campl.css")
+    <!--[if gte IE 10]><!-->
+    link(rel="stylesheet" href="/css/campl.min.css")
+    <!--<![endif]-->
+    <!--[if lte IE 9 ]>
+    link(rel="stylesheet" href="/css/campl_legacy.min.css")
+    <![endif]-->
 
-    each js in REMOTE_JS
-      script(type="text/javascript", src="#{js}")
-
+    script(type="text/javascript", src="/js/lib.min.js")
     script(type="text/javascript", src="/js/campl.js")
-    script(type="text/javascript", src="/js/theme_switcher.js")
+    script(type="text/javascript", src="/js/modernizr.js")
+
     script(type="text/javascript" src="//use.typekit.com/hyb5bko.js")
     script(type="text/javascript").
       try {
         Typekit.load();
       } catch(e) {
       }
-    include meta/hljs.jade
+    include meta/head.jade
 
   body.offcanvas.offcanvas-left.theme-turquoise
     block body

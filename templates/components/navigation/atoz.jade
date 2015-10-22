@@ -1,0 +1,16 @@
+mixin atoz(content)
+  div.local-header.subtitle
+    div.container.atoz
+      div.hidden-sm-down
+        ul(role="tablist")
+          for letter in content
+            li.nav-item
+              if letter.content
+                a.nav-link(href="#atoz#{ letter.letter }", class=letter.active? "" : "active", role="tab", data-toggle="tab")= letter.letter
+              else
+                span= letter.letter
+      div.hidden-md-up
+        select.form-control(data-toggle="tab")
+          for letter in content
+            if letter.content
+              option(value="#atoz_#{ letter.letter }", selected=letter.active? true : false)= letter.letter

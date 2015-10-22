@@ -1,0 +1,62 @@
+include ./common
+
+mixin promo_teaser(article, img)
+  div.promo-teaser
+    h3.teaser-title
+      a(href=article.link) article.title
+    div.teaser-image
+      a.image-wrapper.image-wrapper-promo
+        img(src=img, alt=article.title)
+    div.teaser-body
+      p.teaser-text= article.body
+      a.secondary-cta.teaser-link(href=article.href) Read more
+
+mixin horizontal_teaser(article, img=null, type=null)
+  div.teaser.horizontal-teaser
+    if img
+      div.teaser-image
+        teaser_image(article, img, type)
+    div.teaser-body
+      teaser_body(article, type)
+
+mixin vertical_teaser(article, img=null, type=null)
+  div.teaser.vertical-teaser
+    if img
+      div.teaser-image
+        teaser_image(article, img, type)
+    div.teaser-body
+      teaser_body(article, type)
+
+mixin news_teaser(article)
+  div.news-teaser
+    h3.teaser-title
+      a(href=article.link)= article.title
+    span.teaser-date= article.date
+    p.teaser-text= article.body
+
+mixin focus_on_teaser(article, img=null)
+  div.focus-on-teaser
+    if img
+      div.teaser-image
+        a.image-wrapper.image-wrapper-focuson(href=article.link)
+          img(src=img, alt=article.title)
+    div.teaser-body
+      h3.teaser-title
+        a(href=article.link)= article.title
+
+mixin tagged_tesaer(article, img, tag)
+  div.teaser.wide-vertical-teaser
+    div.teaser-image
+      a.image-wrapper.image-wrapper-teaser-wide(href=article.link)
+        span.teaser-tag= tag
+        img(src=img, alt=article.title)
+    div.teaser-body
+      teaser_body(article)
+
+mixin date_teaser(article)
+  div.date-teaser
+    div.date-teaser-date
+      div.date-teaser-date-day= article.date
+      div.date-teaser-date-month= article.date
+    div.date-teaser-date
+      a(href=article.link)= article.title
