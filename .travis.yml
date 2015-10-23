@@ -6,5 +6,6 @@ install:
   - npm install -g grunt-cli
   - npm install
   - gem install sass
+  - gem install compass
 script:
   - grunt dist
