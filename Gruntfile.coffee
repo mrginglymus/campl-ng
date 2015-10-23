@@ -32,7 +32,6 @@ module.exports = (grunt) ->
 
   grunt.initConfig
     pkg: grunt.file.readJSON('package.json')
-    local_settings: grunt.file.readJSON('local_settings.json')
 
     clean:
       dist: 'dist',
