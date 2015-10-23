@@ -29,6 +29,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-postcss'
   grunt.loadNpmTasks 'grunt-webdriver'
   grunt.loadNpmTasks 'grunt-env'
+  grunt.loadNpmTasks 'grunt-http-server'
 
   grunt.initConfig
     pkg: grunt.file.readJSON('package.json')
@@ -230,6 +231,13 @@ module.exports = (grunt) ->
         ]
         dest: 'dist'
 
+    'http-server':
+      test:
+        root: 'build/'
+        port: 8080
+        host: "0.0.0.0"
+        runInBackground: true
+        
     rsync:
       options:
         recursive: true
@@ -289,6 +297,6 @@ module.exports = (grunt) ->
   
   grunt.registerTask 'cache-images', ['replace:image_cache']
 
-  grunt.registerTask 'test', ['coffee:test', 'webdriver']
+  grunt.registerTask 'test', ['http-server', 'coffee:test', 'webdriver']
 
   grunt.task.run('env:' + grunt.option('target'), 'setenv')
