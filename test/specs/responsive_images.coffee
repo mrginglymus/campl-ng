@@ -5,6 +5,7 @@ describe 'Testing responsive images', ->
   test_image_style = (image_style_id, image_style) ->
     it "#{image_style.description} image size", (done) ->
       browser.url '/core_elements/images'
+        .pause 3000
         .getAttribute '.image-wrapper img', 'src'
         .then (src) =>
           @src = src
