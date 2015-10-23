@@ -13,10 +13,6 @@
   }
 }
 
-.carousel img {
-  width: 100%;
-}
-
 .carousel-control.carousel-control-campage {
   background-color: $black !important;
 
@@ -44,11 +40,11 @@
   }
 
   &.right {
-    @include background-image(inline-image("carousel-right.png"));
+    background-image: inline-image("carousel-right.png");
   }
 
   &.left {
-    @include background-image(inline-image("carousel-left.png"));
+    background-image: inline-image("carousel-left.png");
     left: auto;
     right: 51px;
 
@@ -66,7 +62,12 @@
   font-weight: 300;
   font-size: 19px;
   line-height: 25px;
-  padding-right: 40px;
+  padding-right: 80px;
+
+  @include media-breakpoint-down(sm) {
+    left: 0;
+    right: 0;
+  }
 
   a {
     color: $white;
@@ -95,40 +96,8 @@
   text-align: center;
   color: $white;
   padding: $spacer;
-}
 
-@include media-breakpoint-down(sm) {
-  .carousel-caption {
-    background-color: rgba(0, 0, 0, 1);
-    padding-left: 70px;
-    padding-right: 80px;
-    left: 0;
-    right: 0;
-    position: static;
-
-    .carousel-page {
-      right: 66px;
-    }
-  }
-
-  .carousel-control {
-    &.left,
-    &.right {
-      top: 0;
-      height: 100%;
-      opacity: 0.8;
-
-      @include hover-focus {
-        opacity: 0.8;
-      }
-    }
-
-    &.left {
-      left: 0;
-    }
-  }
-
-  .carousel-text {
+  @include media-breakpoint-down(sm) {
     padding: 20px 60px;
   }
 }

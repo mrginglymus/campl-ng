@@ -1,21 +1,21 @@
-<div class="col-md-3 vertical-navigation collapse {% if page.side_menu %}navbar-toggleable-sm{% else %}hidden-md-up{% endif %}" id="vertical-navigation">
-  <ul class="nav nav-pills nav-stacked nav-side">
+<div class="vertical-menu vertical-menu-inset collapse {% if page.side_menu %}navbar-toggleable-sm{% else %}hidden-md-up{% endif %}" id="vertical-menu">
+  <ul class="nav nav-pills nav-stacked nav-side vertical-menu-ancestors">
     {% for page in page.vertical_breadcrumb %}
       <li class="nav-item">
         <a class="nav-link" href="{{ page[1] }}">{{ page[0] }}</a>
       </li>
     {% endfor %}
   </ul>
-  <ul class="list-unstyled">
+  <ul class="list-unstyled vertical-menu-siblings">
     {% if not page.front_page %}
-    <li class="vertical-navigation-parent">
+    <li class="vertical-menu-parent">
       {% if page.vertical_breadcrumb_parent[1] %}
       <a href="{{ page.vertical_breadcrumb_parent[1] }}">{{ page.vertical_breadcrumb_parent[0] }}</a>
       {% else %}
       <span>{{ page.vertical_breadcrumb_parent[0] }}</span>
       {% endif %}
       {% if page.vertical_breadcrumb_children %}
-        <ul class="list-unstyled">
+        <ul class="list-unstyled vertical-menu-children">
           {% for _page in page.vertical_breadcrumb_children %}
             {% if _page[0] == page.title %}
             <li><span>{{ _page[0] }}</span></li>

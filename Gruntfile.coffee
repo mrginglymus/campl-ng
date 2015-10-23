@@ -1,19 +1,19 @@
 sass_options =
   sourcemap: 'inline',
   trace: true,
-  require: './lib/themes.rb',
+  require: './lib/loaders.rb',
   compass: true,
+  style: 'compressed',
 
 uuid = require('node-uuid')
 execSync = require('child_process').execSync
 
 module.exports = (grunt) ->
 
-  grunt.option('target', grunt.option('target') || 'local')
+  grunt.option('target', grunt.option('target') or 'local')
 
   grunt.loadNpmTasks 'grunt-contrib-sass'
   grunt.loadNpmTasks 'grunt-contrib-clean'
-  grunt.loadNpmTasks 'grunt-contrib-cssmin'
   grunt.loadNpmTasks 'grunt-contrib-uglify'
   grunt.loadNpmTasks 'grunt-contrib-copy'
   grunt.loadNpmTasks 'grunt-contrib-watch'
@@ -25,6 +25,9 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-rsync'
   grunt.loadNpmTasks 'grunt-coffeelint'
   grunt.loadNpmTasks 'grunt-html'
+  grunt.loadNpmTasks 'grunt-modernizr'
+  grunt.loadNpmTasks 'grunt-postcss'
+  grunt.loadNpmTasks 'grunt-webdriver'
 
   grunt.initConfig
     pkg: grunt.file.readJSON('package.json')
@@ -40,13 +43,28 @@ module.exports = (grunt) ->
       src: ['scss/**/*.scss']
 
     coffeelint:
-      config:
-        max_line_length:
-          level: 'ignore'
+      options:
+        configFile: 'coffee/coffeelint.json'
       src: ['coffee/**/*.coffee', 'Gruntfile.coffee']
+      test: ['test/specs/**/*.coffee']
 
     htmllint:
       src: ['build/**/*.html', '!build/templates/**/*', 'build/templates/**/index.html']
+      
+    webdriver:
+      test:
+        configFile: './test/wdio.conf.js'
+
+    modernizr:
+      build:
+        dest: 'build/js/modernizr.min.js'
+        excludeTests: ['svg'],
+        options: [],
+        files:
+          src: [
+            'build/**/*.{js,css}'
+          ]
+
 
     sass_globbing:
       core:
@@ -61,48 +79,91 @@ module.exports = (grunt) ->
         options:
           sass_options
         files:
-          'build/css/campl.css': 'scss/campl.scss'
+          'build/css/campl.min.css': 'scss/campl.scss'
       legacy:
         options:
           sass_options
         files:
-          'build/css/campl_legacy.css': 'scss/campl_legacy.scss'
+          'build/css/campl_legacy.min.css': 'scss/campl_legacy.scss'
       meta:
         options:
           sass_options
         files:
-          'build/css/meta.css': 'scss/meta.scss'
+          'build/css/meta.min.css': 'scss/meta.scss'
 
-    cssmin:
+    postcss:
       options:
-        sourceMap: true
+        map:
+          inline: false,
+          annotation: 'build/css/'
       core:
-        files:[
-          expand: true,
-          cwd: 'build/css',
-          src: ['*.css', '!*.min.css'],
-          dest: 'build/css',
-          ext: '.min.css',
+        src: 'build/css/campl.min.css'
+        processors: [
+          require('autoprefixer')
+            browsers: [
+              'Android 2.3',
+              'Android >= 4',
+              'Chrome >= 35',
+              'Firefox >= 31',
+              'Explorer >= 10',
+              'iOS >= 7',
+              'Opera >= 12',
+              'Safari >= 7.1'
+            ]
+        ]
+      legacy:
+        src: 'build/css/campl.min.css'
+        processors: [
+          require('autoprefixer')
+            browsers: [
+              'Explorer 9'
+            ]
         ]
 
     coffee:
       core:
         files:
-          'build/js/campl.js': ['coffee/menu.coffee', 'coffee/select_tab.coffee']
+          'build/js/campl.js': [
+            'coffee/menu.coffee',
+            'coffee/select_tab.coffee',
+            'coffee/carousel.coffee',
+            'coffee/object_fit.coffee',
+            'coffee/flexbox.coffee'
+          ]
       meta:
         files:
           'build/js/theme_switcher.js': ['coffee/theme_switcher.coffee']
+      test:
+        options:
+          bare: true
+        expand: true
+        flatten: false
+        cwd: 'test/specs'
+        src: ['**/*.coffee']
+        dest: 'test/specs'
+        ext: '.js'
 
     uglify:
       options:
         sourceMap: true
-        sourceMapIncludeSources: true
       core:
         src: 'build/js/campl.js'
         dest: 'build/js/campl.min.js'
       meta:
         src: 'build/js/theme_switcher.js'
         dest: 'build/js/theme_switcher.min.js'
+      lib:
+        files:
+          'build/js/lib.min.js': [
+            'bower_components/jquery/dist/jquery.js',
+            'bower_components/bootstrap/dist/js/bootstrap.js',
+            'bower_components/moment/moment.js',
+            'bower_components/moment/locale/en-gb.js',
+            'bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js',
+            'bower_components/hammerjs/hammer.js',
+            'bower_components/jquery-hammerjs/jquery.hammer.js',
+            'bower_components/js-cookie/src/js.cookie.js'
+          ]
 
     replace:
       image_cache:
@@ -129,9 +190,9 @@ module.exports = (grunt) ->
         cmd: 'python make.py'
 
     copy:
-      js:
-        src: 'lib/bootstrap/dist/js/bootstrap.js',
-        dest: 'build/js/bootstrap.js'
+      favicon:
+        src: 'favicon.ico',
+        dest: 'build/favicon.ico'
       images:
         expand: true,
         cwd: 'images'
@@ -139,15 +200,23 @@ module.exports = (grunt) ->
           'logo.png',
         ]
         dest: 'build/images'
+      fonts:
+        expand: true,
+        cwd: 'bower_components/font-awesome/fonts',
+        src: ['*'],
+        dest: 'build/fonts'
       dist:
         expand: true,
         cwd: 'build'
         src: [
-          'images/**',
-          'js/campl*',
-          'js/bootstrap*',
-          'css/**',
-          '!css/meta**'
+          'images/logo.png',
+          'js/lib.min.js',
+          'js/campl.min.js',
+          'js/modernizr.min.js',
+          'css/campl.min.css',
+          'css/campl_legacy.min.css',
+          'fonts/*',
+          'favicon.ico'
         ]
         dest: 'dist'
 
@@ -168,13 +237,13 @@ module.exports = (grunt) ->
     watch:
       css:
         files: 'scss/**/*.scss'
-        tasks: ['sass_globbing', 'sass:core', 'sass:meta', 'rsync:local']
+        tasks: ['sass_globbing', 'sass:core', 'sass:meta', 'deploy']
       html:
         files: 'templates/**/*.html'
-        tasks: ['build-html', 'rsync:local']
+        tasks: ['build-html', 'deploy']
       js:
         files: 'coffee/**/*.coffee'
-        tasks: ['coffee', 'rsync:local']
+        tasks: ['build-js', 'deploy']
       scsslint:
         files: ['scss/**/*.scss', 'scss/.scss-lint.yml']
         tasks: ['scsslint']
@@ -185,15 +254,17 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'default', ['clean:build', 'sass:core', 'coffee:core']
 
-  grunt.registerTask 'build-css', ['sass_globbing', 'sass', 'cssmin']
+  grunt.registerTask 'build-css', ['sass_globbing', 'sass', 'postcss']
 
-  grunt.registerTask 'build-js', ['coffee', 'copy:js', 'uglify']
+  grunt.registerTask 'build-js', ['coffee:core', 'coffee:meta', 'uglify']
 
-  grunt.registerTask 'build-images', ['copy:images']
+  grunt.registerTask 'build-images', ['copy:images', 'copy:favicon']
 
   grunt.registerTask 'build-html', ['exec:html', 'replace:root_url']
 
-  grunt.registerTask 'build', ['clean:build', 'build-css', 'build-js', 'build-images', 'build-html']
+  grunt.registerTask 'build-fonts', ['copy:fonts']
+
+  grunt.registerTask 'build', ['clean:build', 'build-css', 'build-js', 'build-images', 'build-html', 'build-fonts', 'modernizr']
 
   grunt.registerTask 'dist', ['clean:dist', 'build', 'copy:dist']
 
@@ -201,4 +272,4 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'cache-images', ['replace:image_cache']
 
-
+  grunt.registerTask 'test', ['coffee:test', 'webdriver']

@@ -1,27 +1,23 @@
 {% macro global_header_drawer(id, drawer) %}
-<div id="global-header-drawer-{{ id }}" role="tabpanel" class="tab-pane">
+<div id="global-header-drawer-{{ id }}" role="tabpanel" class="tab-pane fade">
   <div class="container">
     <div class="row">
-      <div class="col-md-11">
-        <ul class="list-unstyled global-header-drawer-title">
-          <li>
-            <a href="{{ drawer.link }}">{{ drawer.title }}</a>
-          </li>
-        </ul>
+      <div class="col-md-11 col-xs-12 global-header-drawer-title">
+        <a href="{{ drawer.link }}">{{ drawer.title }}</a>  
       </div>
       <div class="col-md-1 global-header-close hidden-sm-down">
-        <a href="#global-header-drawer-close" data-target="#global-header-drawer-close">Close</a>
+        <a href="#global-header-drawers" data-target="#global-header-drawers" data-toggle="collapse">Close</a>
       </div>
     </div>
     <div class="row">
       {% for column in drawer.links %}
-      <div class="col-md-4">
-        <ul class="list-unstyled">
+      <div class="col-md-4 col-xs-12">
+        <ul class="global-header-list">
         {% for menu in column %}
           <li>
             <a href="{{ menu.link }}">{{ menu.title }}</a>
             {% if menu.links %}
-            <ul class="list-unstyled hidden-sm-down">
+            <ul class="global-header-sublist">
             {% for title, link in menu.links.items() %}
               <li>
                 <a href="{{ link }}">{{ title }}</a>
@@ -31,7 +27,7 @@
             {% endif %}
           </li>
         {% endfor %}
-        </ul>    
+        </ul>
       </div>
       {% endfor %}
     </div>
@@ -42,7 +38,7 @@
 <nav class="navbar global-header">
   <div class="container">
     <div class="row">
-      <div class="col-md-8">
+      <div class="col-md-8 col-xs-12">
         <a class="global-menu-button pull-left hidden-md-up" href="#sidebar-offcanvas" data-toggle="offcanvas">
           <span class="fa fa-bars fa-2x"></span>
         </a>
@@ -79,7 +75,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-2 collapse navbar-toggleable-sm" id="global-search-drawer">
+      <div class="col-md-2 col-xs-12 collapse navbar-toggleable-sm" id="global-search-drawer">
         <form action="http://search.cam.ac.uk/web" method="get">
           <div class="input-group global-search">
             <input class="form-control" type="text" placeholder="Search" name="query">
@@ -90,12 +86,12 @@
     </div>
   </div>
 </nav>
-<div id="global-header-drawers">
+<div id="global-header-drawers" class="collapse">
   <div class="tab-content global-header-drawer sidebar-offcanvas">
     {{ global_header_drawer('study', LINKS.STUDY_DRAWER) }}
     {{ global_header_drawer('about', LINKS.ABOUT_DRAWER) }}
     <div class="hidden-md-up">
-      <ul class="list-unstyled global-header-drawer-title">
+      <ul class="global-header-offcanvas-quicklinks global-header-list">
         <li>
           <a href="http://www.cam.ac.uk/research">Research at Cambridge</a>
         </li>

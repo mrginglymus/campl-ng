@@ -52,6 +52,7 @@ pages = Pages([
     Page('Links and Buttons', 'pages/core_elements/links_and_buttons.html', scss=['core_elements/_buttons.scss']),
     Page('Forms', 'pages/core_elements/forms.html'),
     Page('Lists', 'pages/core_elements/lists.html'),
+    Page('Images', 'pages/core_elements/images.html'),
     Page('Embedded Media', 'pages/core_elements/embedded_media.html'),
     Page('Themes', 'pages/core_elements/themes.html'),
   ]),
@@ -70,7 +71,9 @@ pages = Pages([
       Page('Alerts', 'pages/components/content/alerts.html', scss=['components/inpage/_alerts.scss']),
       Page('Date/Time Picker', 'pages/components/content/datetimepicker.html'),
     ]),
-    Page('Teasers', 'pages/components/teasers.html', side_menu=False),
+    Page('Teasers', 'pages/components/teasers/teasers.html', children=[
+      Page('Teaser Examples', 'pages/components/teasers/examples.html', side_menu=False),
+    ]),
   ]),
   Page('Templates', children=template_pages),
   Page('Stylesheets', children=scss_pages),

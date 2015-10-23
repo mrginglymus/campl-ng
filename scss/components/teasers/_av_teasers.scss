@@ -1,0 +1,40 @@
+.teaser-image-audio,
+.teaser-image-video {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 5px;
+  font-size: 3em;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: $white;
+  z-index: 1;
+
+  @include media-breakpoint-down(sm) {
+    font-size: 2em;
+  }
+
+  &:before {
+    @include fa-icon();
+    width: 1.5em;
+    text-align: center;
+  }
+}
+
+// audio icon
+.teaser-image-audio:before {
+  content: $fa-var-volume-up;
+}
+
+// video icon
+.teaser-image-video:before {
+  content: $fa-var-youtube-play;
+}
+
+.teaser-image {
+  @include hover-focus {
+    .teaser-image-video,
+    .teaser-image-audio {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  }
+}

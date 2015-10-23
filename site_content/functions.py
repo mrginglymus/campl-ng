@@ -24,6 +24,7 @@ def random_image(width, height=None):
     height = width
   scale = random() + 1
   height = int(height * scale)
+  scale = random() + 1
   width = int(width * scale)
   return IMAGE_SOURCE % (width, height)
 

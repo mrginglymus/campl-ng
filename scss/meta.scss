@@ -1,17 +1,16 @@
-@import "compass/css3/flexbox";
 @import "themes";
 
 main .main-content {
-  @include display-flex(flex);
-  @include flex-direction(column);
+  display: flex;
+  flex-direction: column;
 
   > pre {
-    @include display-flex(flex);
-    @include flex-grow(1);
+    display: flex;
+    flex-grow: 1;
     margin: 0;
 
     > code {
-      @include flex-grow(1);
+      flex-grow: 1;
       font-size: 1.2em;
       padding: 20px;
     }

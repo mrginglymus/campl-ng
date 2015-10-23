@@ -1,14 +1,16 @@
 {% macro carousel_item(article, image, items, loop) %}
 <div class="carousel-item{% if loop.first %} active{% endif %}">
-  {% if link %}
-  <a href="{{ article.link }}">
-  <img src="{{ image }}" alt="{{ article.title }}">
+  {% if article.link %}
+  <a href="{{ article.link }}" class="image-wrapper image-wrapper-carousel">
+    <img src="{{ image }}" alt="{{ article.title }}">
   </a>
   {% else %}
-  <img src="{{ image }}" alt="{{ article.title }}">
+  <div class="image-wrapper image-wrapper-carousel">
+    <img src="{{ image }}" alt="{{ article.title }}">
+  </div>
   {% endif %}
   <div class="carousel-caption">
-    {% if link %}
+    {% if article.link %}
     <a href="{{ article.link }}">{{ article.title }}</a>
     {% else %}
     <span>{{ article.title }}</span>
@@ -25,10 +27,10 @@
       {{ carousel_item(article, image, items, loop) }}
     {% endfor %}
   </div>
-  <a class="left carousel-control" href="#front-page-carousel" role="button" data-slide="prev">
+  <a class="left carousel-control hidden-sm-down" href="#front-page-carousel" role="button" data-slide="prev">
     <span class="sr-only">Previous</span>
   </a>
-  <a class="right carousel-control" href="#front-page-carousel" role="button" data-slide="next">
+  <a class="right carousel-control hidden-sm-down" href="#front-page-carousel" role="button" data-slide="next">
     <span class="sr-only">Next</span>
   </a>
 </div>
@@ -38,7 +40,7 @@
 <div class="carousel-item{% if loop.first %} active{% endif %}">
   <div class="row">
     <div class="col-md-8">
-      <a href="{{ article.link }}">
+      <a href="{{ article.link }}" class="image-wrapper image-wrapper-carousel-campage">
         <img src="{{ image }}" alt="{{ article.title }}">
       </a>
     </div>
@@ -62,10 +64,10 @@
       {{ frontpage_carousel_item(article, image, items, loop) }}
     {% endfor %}
   </div>
-  <a class="left carousel-control carousel-control-campage" href="#front-page-carousel" role="button" data-slide="prev">
-    <span class="sr-only">Previous</sapn>
+  <a class="left carousel-control carousel-control-campage hidden-sm-down" href="#front-page-carousel" role="button" data-slide="prev">
+    <span class="sr-only">Previous</span>
   </a>
-  <a class="right carousel-control carousel-control-campage" href="#front-page-carousel" role="button" data-slide="next">
+  <a class="right carousel-control carousel-control-campage hidden-sm-down" href="#front-page-carousel" role="button" data-slide="next">
     <span class="sr-only">Next</span>
   </a>
 </div>

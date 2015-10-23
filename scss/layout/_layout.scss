@@ -23,28 +23,21 @@ body:not(.active) {
 
 @if $enable-flex {
   body {
-    @include display-flex(flex);
-    @include flex-direction(column);
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
   }
 
   main {
-    @include flex-grow(1);
-    @include display-flex(flex);
+    display: flex;
+    flex-grow: 1;
     background-color: $white;
     width: 100%;
   }
 
 
   main > .row {
-    @include flex-grow(1);
-  }
-
-  @media screen and (min-width:0\0) {
-    body,
-    main {
-      display: block;
-    }
+    flex-grow: 1;
   }
 }
 

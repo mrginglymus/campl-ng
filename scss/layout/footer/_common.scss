@@ -10,7 +10,7 @@
 
     @include media-breakpoint-up(md) {
       &:not(:last-of-type) {
-        @include background(inline-image("footer-separator.png") 100% 0 repeat-y);
+        background: inline-image("footer-separator.png") 100% 0 repeat-y;
       }
     }
   }

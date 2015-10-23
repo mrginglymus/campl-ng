@@ -18,23 +18,12 @@ env = Environment(loader=FileSystemLoader('templates'))
 
 env.globals['SITE_NAME'] = 'CamPL-NG'
 
-env.globals['LOCAL_JS'] = (
-  'js/bootstrap.js',
-  'js/campl.js',
-  'js/theme_switcher.js',
-)
-
-env.globals['REMOTE_JS'] = (
-  'https://code.jquery.com/jquery-1.11.3.min.js',
-  'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.js',
-  'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/locale/en-gb.js',
-  'https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.0.3/js.cookie.js',
-  'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js',
-)
-
 with open('themes.json') as f:
   env.globals['COLOURS'] = json.loads(f.read(), object_pairs_hook=OrderedDict)
 
+with open('images.json') as f:
+  env.globals['IMAGE_STYLES'] = json.loads(f.read(), object_pairs_hook=OrderedDict)
+  
 # add functions
 for f in FUNCTIONS:
   env.globals[f.func_name] = f

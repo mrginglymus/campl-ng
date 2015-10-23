@@ -1,8 +1,9 @@
 window.set_theme = (theme) ->
   Cookies.set 'theme', theme
   clist = document.body.classList
-  clist.remove(clist.item(clist.length-1))
-  clist.add "theme-#{theme}"
+  if !!clist
+    clist.remove(clist.item(clist.length - 1))
+    clist.add "theme-#{theme}"
 
 jQuery ($) ->
   window.themes = $("a[data-toggle='theme']").map ->
@@ -23,7 +24,7 @@ jQuery ($) ->
       window.disco = false
     else
       window.disco = setInterval ->
-        window.discoidx = (window.discoidx + Math.floor(Math.random() * (window.themes.length - 1))+1) % window.themes.length
+        window.discoidx = (window.discoidx + Math.floor(Math.random() * (window.themes.length - 1)) + 1) % window.themes.length
         set_theme window.themes[window.discoidx]
       , 500
     false

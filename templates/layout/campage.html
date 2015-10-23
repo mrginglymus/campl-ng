@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% from 'components/carousel.html' import frontpage_carousel %}
-{% from 'components/teasers/teasers.html' import focus_on_teaser, campage_teaser, news_teaser %}
+{% from 'components/teasers/teasers.html' import focus_on_teaser, tagged_teaser, news_teaser %}
 
 {% block body %}
   <header>
@@ -20,9 +20,9 @@
   <main class="container">
     <div class="row">
       <div class="col-md-8">
-        <div class="p-a">
-          <div class="heading">
-            <h2 class="campage-heading">Focus on</h2>
+        <div class="p-b">
+          <div class="heading-container heading-container-padding">
+            <h2 class="lite-heading-lg lite-heading-themed">Focus on</h2>
           </div>
         </div>
         <div class="row">
@@ -41,39 +41,35 @@
             {{ focus_on_teaser(random_article(), random_image(153, 137)) }}
           </div>
         </div>
-        <div class="p-x">
-          <div class="heading">
-            <h2 class="campage-heading">What's happening</h2>
-          </div>
+        <div class="heading-container heading-container-padding">
+          <h2 class="lite-heading-lg lite-heading-themed">What's happening</h2>
         </div>
         <div class="teaser-list m-t-0">
           <div class="teaser-row">
             <div class="row">
               <div class="col-md-6 teaser-list">
-                {{ campage_teaser(random_article(), random_image(349,183), random_word()) }}
+                {{ tagged_teaser(random_article(), random_image(349,183), random_word()) }}
               </div>
               <div class="col-md-6 teaser-list">
-                {{ campage_teaser(random_article(), random_image(349,183), random_word()) }}
+                {{ tagged_teaser(random_article(), random_image(349,183), random_word()) }}
               </div>
             </div>
           </div>
           <div class="teaser-row">
             <div class="row">
               <div class="col-md-6 teaser-list">
-                {{ campage_teaser(random_article(), random_image(349,183), random_word()) }}
+                {{ tagged_teaser(random_article(), random_image(349,183), random_word()) }}
               </div>
               <div class="col-md-6 teaser-list">
-                {{ campage_teaser(random_article(), random_image(349,183), random_word()) }}
+                {{ tagged_teaser(random_article(), random_image(349,183), random_word()) }}
               </div>
             </div>
           </div>
         </div>
       </div>
       <div class="col-md-4 sidebar">
-        <div class="p-x p-t">
-          <div class="heading">
-            <h2 class="campage-heading">Latest news</h2>
-          </div>
+        <div class="heading-container heading-container-padding">
+          <h2 class="lite-heading-lg">Latest news</h2>
         </div>
         <div class="teaser-list">
           {{ news_teaser(random_article()) }}

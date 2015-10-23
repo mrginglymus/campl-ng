@@ -1,4 +1,7 @@
-.related-links li {
-  border-bottom: $border-width solid $border-color;
-  padding: 10px 0;
+.related-links {
+  @include list-unstyled();
+  li {
+    border-bottom: $border-width solid $border-color;
+    padding: 10px 0;
+  }
 }

@@ -1,10 +1,10 @@
 {% macro teaser_image(article, img, type) %}
-  <a href="{{ article.link }}">
+  <a class="image-wrapper image-wrapper-square" href="{{ article.link }}">
     {% if type %}
       <span class="teaser-image-{{ type }}"></span>
     {% endif %}
-      <img src="{{ img }}" alt="{{ article.title }}">
-  </a>  
+    <img src="{{ img }}">
+  </a>
 {% endmacro %}
 
 {% macro teaser_body(article, type) %}
