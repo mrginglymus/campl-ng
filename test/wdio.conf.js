@@ -50,22 +50,26 @@ exports.config = {
       {
         browserName: 'internet explorer',
         platform: 'Windows 7',
-        version: '9.0'
+        version: '9.0',
+        tunnelIdentifier: process.env.TRAVIS_JOB_NUMBER
       },
       {
         browserName: 'chrome',
         platform: 'Windows 7',
-        version: '43.0'
+        version: '43.0',
+        tunnelIdentifier: process.env.TRAVIS_JOB_NUMBER
       },
       {
         browserName: 'firefox',
         platform: 'Windows 7',
-        version: '31.0'
+        version: '31.0',
+        tunnelIdentifier: process.env.TRAVIS_JOB_NUMBER
       },
       {
         browserName: 'safari',
         platform: 'OS X 10.11',
-        version: '9.0'
+        version: '9.0',
+        tunnelIdentifier: process.env.TRAVIS_JOB_NUMBER
       }
     ],
     //
