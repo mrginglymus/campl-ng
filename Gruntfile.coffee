@@ -28,6 +28,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-modernizr'
   grunt.loadNpmTasks 'grunt-postcss'
   grunt.loadNpmTasks 'grunt-webdriver'
+  grunt.loadNpmTasks 'grunt-env'
 
   grunt.initConfig
     pkg: grunt.file.readJSON('package.json')
@@ -37,6 +38,16 @@ module.exports = (grunt) ->
       dist: 'dist',
       build: 'build',
 
+    env:
+      local:
+        ROOT_URL: process.env.LOCAL_ROOT_URL
+        RELEASE_DIR: process.env.LOCAL_RELEASE_DIR
+      remote:
+        ROOT_URL: process.env.REMOTE_ROOT_URL
+        RELEASE_DIR: process.env.REMOTE_RELEASE_DIR
+        HOST: process.env.REMOTE_HOST
+        
+      
     scsslint:
       options:
         config: 'scss/.scss-lint.yml'
@@ -174,7 +185,7 @@ module.exports = (grunt) ->
           to: (match, index, fulltext, matches) ->
             u = uuid.v4()
             r = execSync "wget -O build/images/" + u + " " + matches[0]
-            return 'img src="' + grunt.config.data.local_settings[grunt.option('target')].root_url + '/images/' + u + '"'
+            return "img src=\"<%= ROOT_URL %>/images/#{u}\""
         ]
       root_url:
         src: ['build/**/*.html', '!build/templates/**/*', 'build/templates/**/index.html']
@@ -182,7 +193,7 @@ module.exports = (grunt) ->
         replacements: [
           from: /\=\"\/(?!\/)/g
           to: ->
-            return '="' + grunt.config.data.local_settings[grunt.option('target')].root_url + '/'
+            return "=\"<%= ROOT_URL %>/"
         ]
 
     exec:
@@ -226,13 +237,12 @@ module.exports = (grunt) ->
       local:
         options:
           src: "build/*"
-          dest: "<%= local_settings.local.release_dir %>"
+          dest: "<%= RELEASE_DIR %>"
       remote:
         options:
           src: "build/*"
-          dest: "<%= local_settings.remote.release_dir %>"
-          host: "<%= local_settings.remote.host %>"
-
+          dest: "<%= RELEASE_DIR %>"
+          host: "<%= HOST %>"
 
     watch:
       css:
@@ -251,7 +261,17 @@ module.exports = (grunt) ->
         files: ['coffee/**/*.coffee']
         tasks: ['coffeelint']
 
-
+  grunt.registerTask 'setenv', "Set environment", ->
+    grunt.config('RELEASE_DIR', process.env.RELEASE_DIR)
+    grunt.config('HOST', process.env.HOST)
+    grunt.config('ROOT_URL', process.env.ROOT_URL)
+  
+  grunt.registerTask 'deploy', "Deploy", ->
+    if grunt.config('HOST')
+      grunt.task.run('rsync:remote')
+    else
+      grunt.task.run('rsync:local')
+        
   grunt.registerTask 'default', ['clean:build', 'sass:core', 'coffee:core']
 
   grunt.registerTask 'build-css', ['sass_globbing', 'sass', 'postcss']
@@ -267,9 +287,9 @@ module.exports = (grunt) ->
   grunt.registerTask 'build', ['clean:build', 'build-css', 'build-js', 'build-images', 'build-html', 'build-fonts', 'modernizr']
 
   grunt.registerTask 'dist', ['clean:dist', 'build', 'copy:dist']
-
-  grunt.registerTask 'deploy', ['rsync:' + grunt.option('target')]
-
+  
   grunt.registerTask 'cache-images', ['replace:image_cache']
 
   grunt.registerTask 'test', ['coffee:test', 'webdriver']
+
+  grunt.task.run('env:' + grunt.option('target'), 'setenv')
