@@ -261,6 +261,9 @@ module.exports = (grunt) ->
         tasks: ['coffeelint']
 
   grunt.registerTask 'setenv', "Set environment", ->
+    console.log 'setting env variables'
+    console.log process.env
+    console.log process.env.RELEASE_DIR
     grunt.config('RELEASE_DIR', process.env.RELEASE_DIR)
     grunt.config('HOST', process.env.HOST)
     grunt.config('ROOT_URL', process.env.ROOT_URL)
