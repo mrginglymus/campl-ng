@@ -11,7 +11,7 @@ install:
   - gem install compass
 script:
   - grunt build
-  - http-server -s build/ &
+  - http-server build/ &
   - grunt test
 env:
   global:

@@ -5,10 +5,6 @@ describe 'Testing responsive images', ->
   test_image_style = (image_style_id, image_style) ->
     it "#{image_style.description} image size", (done) ->
       browser.url '/core_elements/images'
-        .execute ->
-          Modernizr.objectfit
-        .then (ret) =>
-          @objectFit = ret.value
         .getAttribute '.image-wrapper img', 'src'
         .then (src) =>
           @src = src
