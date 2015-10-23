@@ -5,11 +5,6 @@ describe 'Testing responsive images', ->
   test_image_style = (image_style_id, image_style) ->
     it "#{image_style.description} image size", (done) ->
       browser.url '/core_elements/images'
-        .pause 10000
-        .execute ->
-          Modernizr.objectfit
-        .then (ret) =>
-          @objectFit = ret.value
         .getAttribute '.image-wrapper img', 'src'
         .then (src) =>
           @src = src
@@ -22,6 +17,10 @@ describe 'Testing responsive images', ->
           else
             expect size.height / size.width
               .toBeCloseTo image_style.height / image_style.width, 2
+        .execute ->
+          Modernizr.objectfit
+        .then (ret) =>
+          @objectFit = ret.value
         .isVisible '.image-wrapper img'
         .then (isVisible) =>
           expect isVisible
