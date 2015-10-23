@@ -7,7 +7,7 @@ describe 'Testing responsive images', ->
       browser.url '/core_elements/images'
         .pause 1000
         .execute ->
-          Modernizr.objectfit
+          window.Modernizr.objectfit
         .then (ret) =>
           @objectFit = ret.value
         .getAttribute '.image-wrapper img', 'src'
