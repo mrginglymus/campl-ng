@@ -4,11 +4,14 @@ node_js:
 install:
   - pip install --user -r py_requirements.txt
   - npm install -g grunt-cli
+  - npm install -g http-server
   - npm install
+  - bower install
   - gem install sass
   - gem install compass
 script:
-  - grunt dist
+  - grunt build
+  - http-server build/ &
   - grunt test
 env:
   global:

@@ -89,7 +89,7 @@ exports.config = {
     //
     // Set a base URL in order to shorten url command calls. If your url parameter starts
     // with "/", the base url gets prepended.
-    baseUrl: 'http://people.ds.cam.ac.uk/wac26/campl-ng',
+    baseUrl: 'http://127.0.0.1:8080',
     //
     // Default timeout for all waitForXXX commands.
     waitforTimeout: 10000,
