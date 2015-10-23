@@ -10,7 +10,7 @@ install:
   - gem install sass
   - gem install compass
 script:
-  - grunt build
+  - grunt build cache-images
   - http-server -s build/ &
   - grunt test
 env:
