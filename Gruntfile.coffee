@@ -165,6 +165,9 @@ module.exports = (grunt) ->
         dest: 'build/js/theme_switcher.min.js'
       lib:
         files:
+          'build/js/jquery.min.js': [
+            'bower_components/jquery/dist/jquery.js',
+          ],
           'build/js/lib.min.js': [
             'bower_components/jquery/dist/jquery.js',
             'bower_components/bootstrap/dist/js/bootstrap.js',
@@ -221,6 +224,7 @@ module.exports = (grunt) ->
         cwd: 'build'
         src: [
           'images/logo.png',
+          'js/jquery.min.js',
           'js/lib.min.js',
           'js/campl.min.js',
           'js/modernizr.min.js',
