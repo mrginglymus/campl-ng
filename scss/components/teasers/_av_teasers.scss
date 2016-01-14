@@ -13,7 +13,7 @@
     font-size: 2em;
   }
 
-  &:before {
+  &::before {
     @include fa-icon();
     width: 1.5em;
     text-align: center;
@@ -21,12 +21,12 @@
 }
 
 // audio icon
-.teaser-image-audio:before {
+.teaser-image-audio::before {
   content: $fa-var-volume-up;
 }
 
 // video icon
-.teaser-image-video:before {
+.teaser-image-video::before {
   content: $fa-var-youtube-play;
 }
 

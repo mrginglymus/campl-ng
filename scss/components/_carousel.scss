@@ -1,7 +1,7 @@
 @import "compass/css3/images";
 
 @include media-breakpoint-up(xl) {
-  .carousel:after {
+  .carousel::after {
     @include theme-element(background-color, page-background);
     content: " ";
     height: calc(100% - 50px);

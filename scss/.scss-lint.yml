@@ -81,7 +81,7 @@ linters:
   TrailingZero:
     enabled: true
   TransitionAll:
-    enabled: true
+    enabled: false
   UnnecessaryMantissa:
     enabled: true
   UnnecessaryParentReference:

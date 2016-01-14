@@ -24,7 +24,7 @@
   padding-right: 30px;
   background-position: right 5px top 50%;
 
-  &:before {
+  &::before {
     @include fa-icon();
     content: $fa-var-user;
     position: relative;

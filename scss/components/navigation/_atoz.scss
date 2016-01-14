@@ -26,7 +26,7 @@
 
         &.active,
         &:not(.active):hover {
-          &:before {
+          &::before {
             content: "";
             width: 0;
             height: 0;
@@ -44,7 +44,7 @@
         @include theme-element(color, pale-tone);
       }
 
-      &:not(:last-of-type):after {
+      &:not(:last-of-type)::after {
         @include theme-element(color, dark-highlight);
         opacity: 0.5;
         content: "/";

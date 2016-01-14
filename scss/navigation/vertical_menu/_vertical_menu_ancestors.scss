@@ -2,7 +2,7 @@
 
 .vertical-menu-ancestors {
 
-  &:after {
+  &::after {
     display: none;
   }
 
@@ -14,12 +14,12 @@
     @include hover-focus {
       background-color: #efefef;
 
-      &:after {
+      &::after {
         background-image: inline-image("vertical-breadcrumb-arrow-hover.png");
       }
     }
 
-    &:after {
+    &::after {
       background-image: inline-image("vertical-breadcrumb-arrow.png");
       content: "";
       background-repeat: no-repeat;

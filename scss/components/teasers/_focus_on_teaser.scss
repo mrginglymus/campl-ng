@@ -36,7 +36,7 @@
       text-decoration: none;
     }
 
-    a:after {
+    a::after {
       @include theme-element(background-color, navbar);
       background: inline-image("link-bullet-white.png") no-repeat center center;
       content: "";

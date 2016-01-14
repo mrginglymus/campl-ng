@@ -10,7 +10,7 @@
     padding-bottom: 2px;
     position: relative;
 
-    &:not(:first-of-type):before {
+    &:not(:first-of-type)::before {
       content: "";
       border-color: transparent transparent transparent $white;
       border-style: solid;
@@ -27,7 +27,7 @@
       padding-left: 27px !important;
     }
 
-    &:first-of-type:before {
+    &:first-of-type::before {
       content: "";
       width: 2px;
       height: 34px;
@@ -49,7 +49,7 @@
       &.active {
         @include theme-element(background-color, selected);
 
-        &:after {
+        &::after {
           @include theme-element(border-left-color, selected);
         }
       }
@@ -57,12 +57,12 @@
       &:not(.active):not(.disabled):hover {
         @include theme-element(background-color, light-highlight, !important);
 
-        &:after {
+        &::after {
           @include theme-element(border-left-color, light-highlight);
         }
       }
 
-      &:after {
+      &::after {
         @include theme-element(border-left-color, navbar);
         content: "";
         border-top-color: transparent;

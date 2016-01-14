@@ -2,10 +2,14 @@
   margin: 0 2px;
   line-height: 12px;
   font-size: 11px;
+
+  @include hover-focus {
+    text-decoration: none;
+  }
 }
 
 .page-item.active {
-  .page-link{
+  .page-link {
     font-weight: bold;
   }
 }
@@ -29,11 +33,5 @@
   &:hover {
     background-color: $white;
     border: 0;
-  }
-}
-
-.page-link {
-  @include hover-focus {
-    text-decoration: none;
   }
 }
