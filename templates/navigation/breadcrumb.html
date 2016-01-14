@@ -1,16 +1,16 @@
 {% if page and not page.front_page and page.horizontal_breadcrumb %}
 <div class="hidden-sm-down">
   <ol class="breadcrumb">
-    <li>
+    <li class="breadcrumb-item">
       <a href="http://www.cam.ac.uk/"><span class="fa fa-home fa-lg">&nbsp;</span></a>
     </li>
     {% for page in page.horizontal_breadcrumb%}
       {% if page[1] and not loop.last %}
-      <li>
+      <li class="breadcrumb-item">
         <a href="{{ page[1] }}">{{ page[0] }}</a>
       </li>
       {% else %}
-      <li class="active">
+      <li class="breadcrumb-item active">
         {{ page[0] }}
       </li>
       {% endif %}

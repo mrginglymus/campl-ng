@@ -169,7 +169,6 @@ module.exports = (grunt) ->
             'bower_components/jquery/dist/jquery.js',
           ],
           'build/js/lib.min.js': [
-            'bower_components/jquery/dist/jquery.js',
             'bower_components/bootstrap/dist/js/bootstrap.js',
             'bower_components/moment/moment.js',
             'bower_components/moment/locale/en-gb.js',

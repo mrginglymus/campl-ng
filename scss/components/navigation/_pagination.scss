@@ -1,34 +1,39 @@
-.pagination {
-  > li {
-    > a,
-    > span {
-      margin: 0 2px;
-      line-height: 12px;
-      font-size: 11px;
+.page-link {
+  margin: 0 2px;
+  line-height: 12px;
+  font-size: 11px;
+}
+
+.page-item.active {
+  .page-link{
+    font-weight: bold;
+  }
+}
+
+.page-item.previous,
+.page-item.next {
+  .page-link {
+    color: $white;
+    background-color: $black;
+
+    @include hover-focus {
+      color: $pagination-hover-color;
+      background-color: $pagination-hover-bg;
+      border-color: $pagination-hover-border;
     }
   }
+}
 
-  > .active {
-    > a,
-    > span {
-      font-weight: bold;
-    }
+.page-item .page-link.elipsis {
+  &,
+  &:hover {
+    background-color: $white;
+    border: 0;
   }
+}
 
-  > .previous,
-  > .next {
-    > a,
-    > span {
-      color: $white;
-      background-color: $black;
-    }
-  }
-
-  > li > .elipsis {
-    &,
-    &:hover {
-      background-color: $white;
-      border: 0;
-    }
+.page-link {
+  @include hover-focus {
+    text-decoration: none;
   }
 }
