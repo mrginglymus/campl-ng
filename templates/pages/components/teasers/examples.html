@@ -21,7 +21,7 @@
       </div>
     </div>
     {{ teasers.horizontal_teaser(random_article(), random_image(256), type='video') }}
-    <div class="teaser p-a">
+    <div class="teaser p-a-1">
       <div class="embed-responsive embed-responsive-16by9">
         <iframe class="embed-responsive-item" src="{{ EXAMPLES.VIDEOS['16by9'] }}" frameborder="0" allowfullscreen></iframe>
       </div>
@@ -48,11 +48,11 @@
 {% endblock %}
 
 {% block sidebar_content %}
-  <div class="m-b">
+  <div class="m-b-1">
   {{ teasers.promo_teaser(random_article(), random_image(349,126)) }}
   </div>
   {{ teasers.promo_teaser(random_article(), random_image(349,126)) }}
-  <div class="heading-container m-t">
+  <div class="heading-container m-t-1">
     <h2 class="lite-heading">Upcoming Events</h2>
   </div>
   <ul class="related-links">

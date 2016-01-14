@@ -12,7 +12,7 @@
     <div class="heading-container heading-container-padding"><h2 class="lite-heading">Latest News</h2></div>
     {{ teasers.news_teaser(random_article()) }}
     {{ teasers.news_teaser(random_article()) }}
-    <div class="p-a clearfix"><a class="secondary-cta pull-right" href="" >View all news</a></div>
+    <div class="p-a-1 clearfix"><a class="secondary-cta pull-right" href="" >View all news</a></div>
   </div>
 </div>
 {% endblock %}
@@ -26,6 +26,6 @@
   <li>{{ teasers.date_teaser(random_article()) }}</li>
   <li>{{ teasers.date_teaser(random_article()) }}</li>
 </ul>
-<div class="clearfix m-b"><a class="secondary-cta pull-right" href="" >View all events</a></div>
+<div class="clearfix m-b-1"><a class="secondary-cta pull-right" href="" >View all events</a></div>
 {{ teasers.promo_teaser(random_article(), random_image(349,126)) }}
 {% endblock %}
