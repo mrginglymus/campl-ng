@@ -67,8 +67,9 @@ pages = Pages([
       Page('Search', 'pages/components/navigation/search.html', scss=['components/navigation/_search.scss']),
     ]),
     Page('Content', children=[
-      Page('Tables', 'pages/components/content/tables.html', scss=['components/inpage/_tables.scss']),
-      Page('Alerts', 'pages/components/content/alerts.html', scss=['components/inpage/_alerts.scss']),
+      Page('Tables', 'pages/components/content/tables.html', scss=['core_elements/_tables.scss']),
+      Page('Alerts', 'pages/components/content/alerts.html', scss=['components/_alerts.scss']),
+      Page('Well', 'pages/components/content/well.html', scss=['components/_well.scss']),
       Page('Date/Time Picker', 'pages/components/content/datetimepicker.html'),
     ]),
     Page('Teasers', 'pages/components/teasers/teasers.html', children=[
