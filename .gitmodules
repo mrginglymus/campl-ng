@@ -7,3 +7,6 @@
 [submodule "lib/datetimepicker"]
 	path = lib/datetimepicker
 	url = https://github.com/mrginglymus/bootstrap-datetimepicker.git
+[submodule "lib/jquery-ui"]
+	path = lib/jquery-ui
+	url = https://github.com/jquery/jquery-ui.git
