@@ -18,6 +18,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-copy'
   grunt.loadNpmTasks 'grunt-contrib-watch'
   grunt.loadNpmTasks 'grunt-contrib-coffee'
+  grunt.loadNpmTasks 'grunt-contrib-concat'
   grunt.loadNpmTasks 'grunt-sass-globbing'
   grunt.loadNpmTasks 'grunt-scss-lint'
   grunt.loadNpmTasks 'grunt-exec'
@@ -85,6 +86,36 @@ module.exports = (grunt) ->
           'scss/_layout.scss': 'scss/layout/**/*.scss',
           'scss/_navigation.scss': 'scss/navigation/**/*.scss'
 
+    concat:
+      jqueryuilib:
+        src: [
+          'lib/jquery-ui/themes/base/accordion.css',
+          'lib/jquery-ui/themes/base/autocomplete.css',
+          'lib/jquery-ui/themes/base/button.css',
+          'lib/jquery-ui/themes/base/checkboxradio.css',
+          'lib/jquery-ui/themes/base/controlgroup.css',
+          'lib/jquery-ui/themes/base/datepicker.css',
+          'lib/jquery-ui/themes/base/dialog.css',
+          'lib/jquery-ui/themes/base/draggable.css',
+          'lib/jquery-ui/themes/base/menu.css',
+          'lib/jquery-ui/themes/base/progressbar.css',
+          'lib/jquery-ui/themes/base/resizable.css',
+          'lib/jquery-ui/themes/base/selectable.css',
+          'lib/jquery-ui/themes/base/selectmenu.css',
+          'lib/jquery-ui/themes/base/sortable.css',
+          'lib/jquery-ui/themes/base/slider.css',
+          'lib/jquery-ui/themes/base/spinner.css',
+          'lib/jquery-ui/themes/base/tabs.css',
+          'lib/jquery-ui/themes/base/tooltip.css'
+        ]
+        dest: 'build/css/jquery_ui.lib.css'
+      jqueryui:
+        src: [
+          'build/css/jquery_ui.lib.css',
+          'build/css/jquery_ui.theme.css',
+        ]
+        dest: 'build/css/jquery_ui.min.css'
+
     sass:
       core:
         options:
@@ -96,6 +127,11 @@ module.exports = (grunt) ->
           sass_options
         files:
           'build/css/campl_legacy.min.css': 'scss/campl_legacy.scss'
+      jqueryui:
+        options:
+          sass_options
+        files:
+          'build/css/jquery_ui.theme.css': 'scss/jquery_ui.scss'
       meta:
         options:
           sass_options
@@ -178,6 +214,11 @@ module.exports = (grunt) ->
             'bower_components/jquery-hammerjs/jquery.hammer.js',
             'bower_components/js-cookie/src/js.cookie.js'
           ]
+      jqueryui:
+        files:
+          'build/js/jquery_ui.min.js': [
+            'bower_components/jquery-ui/jquery-ui.min.js',
+          ]
 
     replace:
       image_cache:
@@ -230,6 +271,7 @@ module.exports = (grunt) ->
           'js/modernizr.min.js',
           'css/campl.min.css',
           'css/campl_legacy.min.css',
+          'css/jquery_ui.min.css',
           'fonts/*',
           'favicon.ico'
         ]
@@ -285,7 +327,9 @@ module.exports = (grunt) ->
         
   grunt.registerTask 'default', ['clean:build', 'sass:core', 'coffee:core']
 
-  grunt.registerTask 'build-css', ['sass_globbing', 'sass', 'postcss']
+  grunt.registerTask 'build-css', ['sass_globbing', 'sass:core', 'sass:legacy', 'sass:meta', 'postcss']
+
+  grunt.registerTask 'build-jquery', ['concat:jqueryuilib', 'sass:jqueryui', 'concat:jqueryui', 'uglify:jqueryui']
 
   grunt.registerTask 'build-js', ['coffee:core', 'coffee:meta', 'uglify']
 

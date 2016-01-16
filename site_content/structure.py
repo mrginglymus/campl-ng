@@ -74,6 +74,7 @@ pages = Pages([
     Page('Teasers', 'pages/components/teasers/teasers.html', children=[
       Page('Teaser Examples', 'pages/components/teasers/examples.html', side_menu=False),
     ]),
+    Page('jQuery', 'pages/components/jquery.html'),
   ]),
   Page('Templates', children=template_pages),
   Page('Stylesheets', children=scss_pages),

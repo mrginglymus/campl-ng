@@ -40,5 +40,8 @@
     "node-uuid": "^1.4.3",
     "webdriver": "0.0.1",
     "webdriverio": "^3.2.5"
+  },
+  "devDependencies": {
+    "grunt-contrib-concat": "^0.5.1"
   }
 }
