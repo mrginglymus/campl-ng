@@ -18,7 +18,11 @@
   position: relative;
 
   @include media-breakpoint-up(md) {
-    padding: 15px 80px;
+    padding: 15px; // Actually the wide padding looks rubbish on narrow screens, especially when you have lots of error messages
+  
+    &.alert-dismissable {
+      padding-right: 38px;
+    }
   }
 
   &.alert-success {
@@ -56,6 +60,8 @@
       position: relative;
       top: -0.25em;
       font-size: 2.4em;
+      margin-bottom: -1em; // Don't let icon push extra padding at base of alert
+      padding-right: 5px; // because
     }
   }
 
