@@ -20,12 +20,16 @@
           @include theme-element(background-color, selected);
         }
 
-        &:not(.pull-right) .nav-link {
+        &:not(.nav-item-right) .nav-link {
           border-right: $border-width solid;
         }
 
-        &.pull-right .nav-link {
-          border-left: $border-width solid;
+        &.nav-item-right {
+          @include pull-right;
+
+          .nav-link {
+            border-left: $border-width solid;
+          }
         }
 
         .nav-link {
