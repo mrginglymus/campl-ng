@@ -1,0 +1,196 @@
+.ui-picklist {
+  > div {
+    float: left !default;
+  }
+
+  .ui-picklist-buttons {
+    height: 200px !default;
+    padding: 0px 5px !default;
+  }
+
+  .ui-picklist-list {
+    list-style-type: none !default;
+    margin: 0 !default;
+    padding: 0 !default;
+    overflow: auto !default;
+    height: 200px !default;
+    width: 200px !default;
+
+    li {
+      margin: 1px !default;
+      padding: 2px !default;
+    }
+  }
+
+  .ui-button {
+    display: block !default;
+    margin-bottom: 0.3em !default;
+  }
+
+  .ui-button-text-icon-left {
+    width: 100% !default;
+  }
+
+  .ui-picklist-item {
+    cursor: pointer !default;
+    border: 0px none !default;
+    font-weight: inherit !default;
+  }
+
+  .ui-picklist-caption {
+    text-align: center !default;
+    padding: 4px 0px !default;
+    border-bottom: 0px none !default;
+  }
+
+  table {
+    width: 100% !default;
+    border-collapse: collapse !default;
+  }
+
+  .ui-picklist-filter {
+    padding-right: 15px !default;
+    width: 100% !default;
+    box-sizing: border-box !default;
+  }
+
+  .ui-picklist-filter-container {
+    position: relative !default;
+    margin: 0 !default;
+    padding: 0 !default;
+
+    .ui-icon {
+      position: absolute !default;
+      top: 5px !default;
+      right: 2px !default;
+    }
+  }
+
+  display: table !default;
+
+  > div {
+    float: none !default;
+    display: table-cell !default;
+    vertical-align: top !default;
+  }
+
+  .ui-picklist-buttons {
+    vertical-align: middle !default;
+  }
+
+  &.ui-picklist-vertical {
+    display: table !default;
+
+    > div {
+      float: none !default;
+      display: table-row !default;
+      vertical-align: top !default;
+    }
+
+    .ui-picklist-buttons {
+      text-align: center !default;
+      height: auto !default;
+
+      .ui-button {
+        display: inline-block !default;
+      }
+    }
+
+    .ui-button {
+      margin-top: 0.3em !default;
+    }
+  }
+}
+
+/* Vertical */
+
+.ui-picklist-outline {
+  outline: 1px dotted black !default;
+  z-index: 1 !default;
+}
+
+.ui-picklist-list {
+  &.ui-picklist-source, &.ui-picklist-target {
+    outline: none !default;
+  }
+}
+
+/* Responsive */
+
+.ui-picklist.ui-picklist-responsive {
+  * {
+    box-sizing: border-box !default;
+  }
+
+  width: 100% !default;
+
+  .ui-picklist-list-wrapper {
+    width: 35% !default;
+  }
+
+  .ui-picklist-buttons {
+    width: 10% !default;
+
+    button {
+      width: 100% !default;
+    }
+  }
+
+  .ui-picklist-list {
+    width: auto !default;
+  }
+
+  .ui-chkbox-box {
+    width: 18px !default;
+    height: 18px !default;
+  }
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .ui-picklist.ui-picklist-responsive {
+    display: block !default;
+
+    > div {
+      display: block !default;
+      width: 100% !important !default;
+    }
+
+    .ui-picklist-buttons {
+      text-align: center !default;
+      height: auto !default;
+      padding: 5px 0px !default;
+
+      button {
+        display: inline !default;
+        width: 20% !default;
+      }
+    }
+
+    .ui-picklist-source-controls.ui-picklist-buttons {
+      padding-bottom: 5px !default;
+    }
+
+    .ui-picklist-target-controls.ui-picklist-buttons {
+      padding-top: 5px !default;
+    }
+
+    .ui-picklist-buttons {
+      .ui-icon-arrow-1-e {
+        background-position: -64px -32px !default;
+      }
+
+      .ui-icon-arrowstop-1-e {
+        background-position: -224px -32px !default;
+      }
+
+      .ui-icon-arrow-1-w {
+        background-position: 0 -32px !default;
+      }
+
+      .ui-icon-arrowstop-1-w {
+        background-position: -192px -32px !default;
+      }
+    }
+  }
+}

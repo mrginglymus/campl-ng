@@ -1,0 +1,231 @@
+.ui-tree {
+  width: 300px !default;
+  position: relative !default;
+
+  .ui-tree-container {
+    margin: 0 !default;
+    padding: 3px !default;
+    white-space: nowrap !default;
+    overflow: auto !default;
+  }
+
+  .ui-treenode-children {
+    margin: 0 !default;
+    padding: 0 0 0 16px !default;
+  }
+
+  .ui-treenode {
+    background-attachment: scroll !default;
+    background-color: transparent !default;
+    background-image: none !default;
+    background-position: 0 0 !default;
+    background-repeat: repeat-y !default;
+    list-style: none outside none !default;
+    margin: 0 !default;
+    padding: 1px 0 0 !default;
+  }
+
+  .ui-treenode-content {}
+
+  .ui-tree-toggler {
+    cursor: pointer !default;
+    display: inline-block !default;
+    vertical-align: top !default;
+  }
+
+  .ui-treenode-icon {
+    display: inline-block !default;
+    vertical-align: top !default;
+  }
+
+  .ui-treenode-label {
+    display: inline-block !default;
+    margin: 2px 0 0 0 !default;
+    vertical-align: top !default;
+    padding: 0 3px !default;
+  }
+
+  .ui-tree-selectable {
+    .ui-treenode-label, .ui-treenode-icon {
+      cursor: pointer !default;
+    }
+  }
+
+  .ui-treenode-label {
+    &.ui-state-hover, &.ui-state-highlight {
+      font-weight: normal !default;
+      border: 0 none !default;
+    }
+  }
+
+  .ui-treenode-leaf-icon {
+    width: 16px !default;
+    height: 16px !default;
+    display: inline-block !default;
+  }
+
+  .ui-chkbox-box {
+    cursor: pointer !default;
+    width: 15px !default;
+    height: 15px !default;
+    float: left !default;
+  }
+
+  .ui-chkbox {
+    display: inline-block !default;
+    zoom: 1 !default;
+  }
+}
+
+/** Horizontal Tree **/
+
+.ui-tree-horizontal {
+  width: auto !default;
+  padding: 10px 0px !default;
+  overflow: auto !default;
+}
+
+.ui-tree.ui-tree-horizontal {
+  table, tr, td {
+    border-collapse: collapse !default;
+    margin: 0 !default;
+    padding: 0 !default;
+    vertical-align: middle !default;
+  }
+
+  .ui-tree-toggler {
+    vertical-align: bottom !default;
+  }
+}
+
+.ui-tree-horizontal {
+  .ui-treenode-content {
+    font-weight: normal !default;
+
+    &.ui-tree-selectable {
+      cursor: pointer !default;
+    }
+  }
+
+  .ui-treenode-parent .ui-treenode-content {
+    font-weight: normal !default;
+    white-space: nowrap !default;
+    padding: 0.4em 1em 0.4em 0.2em !default;
+  }
+
+  .ui-treenode-leaf .ui-treenode-content {
+    padding: 0.4em 1em !default;
+  }
+}
+
+.ui-tree {
+  &.ui-tree-horizontal {
+    .ui-treenode {
+      background: url("tree/images/line.gif") repeat-x scroll center center transparent !default;
+      padding: 5px 40px !default;
+
+      &.ui-treenode-leaf, &.ui-treenode-collapsed {
+        padding-right: 0px !default;
+      }
+    }
+
+    .ui-treenode-children {
+      padding: 0 !default;
+      margin: 0 !default;
+    }
+
+    .ui-treenode-connector {
+      width: 1px !default;
+    }
+
+    .ui-treenode-connector-table {
+      height: 100% !default;
+      width: 1px !default;
+    }
+
+    .ui-treenode-connector-line {
+      background: url("tree/images/line.gif") repeat-y scroll 0 0 transparent !default;
+      width: 1px !default;
+    }
+
+    table {
+      height: 0px !default;
+    }
+
+    .ui-chkbox {
+      vertical-align: bottom !default;
+      margin-right: 3px !default;
+    }
+  }
+
+  &.ui-tree-rtl {
+    direction: rtl !default;
+
+    .ui-treenode-children {
+      padding: 0 16px 0 0 !default;
+    }
+  }
+}
+
+/** RTL **/
+
+/** DragDrop **/
+
+.ui-tree-droppoint {
+  list-style: none outside none !default;
+  height: 4px !default;
+  margin: 0 !default;
+  padding: 0 !default;
+
+  &.ui-state-hover {
+    border: 0 none !default;
+  }
+}
+
+.ui-treenode-content.ui-state-hover {
+  font-weight: inherit !default;
+}
+
+.ui-tree-draghelper.ui-state-highlight {
+  background: none transparent !default;
+}
+
+.ui-tree {
+  .ui-tree-scrollertop, .ui-tree-scrollerbottom {
+    height: 10px !default;
+    width: 100% !default;
+    position: absolute !default;
+  }
+
+  .ui-tree-scrollertop {
+    top: 0 !default;
+  }
+
+  .ui-tree-scrollerbottom {
+    bottom: 0 !default;
+  }
+
+  .ui-treenode-content {
+    .ui-chkbox.ui-selection {
+      display: none !default;
+    }
+
+    &.ui-tree-selectable .ui-chkbox.ui-selection {
+      display: inline-block !default;
+    }
+  }
+
+  &.ui-tree-checkbox-all .ui-treenode-content .ui-chkbox.ui-selection {
+    display: inline-block !default;
+  }
+
+  .ui-treenode-outline {
+    outline: 1px dotted !default;
+  }
+}
+
+/** Fluid **/
+
+.ui-fluid .ui-tree {
+  width: 100% !default;
+}

@@ -1,0 +1,41 @@
+.ui-datascroller {
+  .ui-datascroller-header {
+    text-align: center !default;
+    padding: 4px 10px !default;
+    border-bottom: 0px none !default;
+  }
+
+  .ui-datascroller-content {
+    padding: 4px 10px !default;
+  }
+}
+
+.ui-datascroller-inline .ui-datascroller-content {
+  overflow: auto !default;
+}
+
+.ui-datascroller {
+  .ui-datascroller-list {
+    list-style-type: none !default;
+    margin: 0 !default;
+    padding: 0 !default;
+  }
+
+  .ui-datascroller-item {
+    border: 0 none !default;
+  }
+
+  .ui-datascroller-loader {
+    text-align: center !default;
+    padding: 4px 10px !default;
+  }
+
+  .ui-datascroller-loading {
+    background: url("datascroller/images/loading.gif") center center no-repeat !default;
+    width: 220px !default;
+    height: 19px !default;
+    padding: 0 !default;
+    margin: 0 !default;
+    display: inline-block !default;
+  }
+}

@@ -1,0 +1,24 @@
+.ui-terminal {
+  height: 300px !default;
+  overflow: auto !default;
+  padding: 3px !default;
+}
+
+.ui-terminal-input {
+  border: 0 none !default;
+  background-color: transparent !default;
+  color: inherit !default;
+  padding: 0 !default;
+  margin: 0 0 0 2px !default;
+  width: 75% !default;
+  outline: none !default;
+}
+
+.ui-terminal-command {
+  margin-left: 2px !default;
+  -moz-margin-start: 3px !default;
+}
+
+.ui-terminal-input::-ms-clear {
+  display: none !default;
+}

@@ -1,0 +1,120 @@
+.ui-ribbon {
+  font-size: 11px !default;
+  padding: 0 !default;
+
+  .ui-tabs-panel {
+    padding: 0 !default;
+  }
+
+  .ui-ribbon-group {
+    float: left !default;
+    background: none !default;
+    border: none !default;
+    border-right: solid 1px #BCC7CF !default;
+    box-shadow: none !default;
+    -moz-box-shadow: none !default;
+    -webkit-box-shadow: none !default;
+    padding: 0.2em !default;
+
+    .ui-ribbon-group-content {
+      height: 6em !default;
+      background: none !default;
+      border: none !default;
+      box-shadow: none !default;
+      -moz-box-shadow: none !default;
+      -webkit-box-shadow: none !default;
+      border-width: 0 !default;
+      padding: 0.2em 0.2em 0 !default;
+    }
+
+    .ui-ribbon-group-label {
+      text-align: center !default;
+      font-weight: 400 !default;
+      white-space: nowrap !default;
+      margin-top: -1px !default;
+      border-width: 1px 0 0 !default;
+      color: #333333 !default;
+    }
+  }
+
+  .ui-button {
+    background: none !default;
+    box-shadow: none !default;
+    -webkit-box-shadow: none !default;
+    -moz-box-shadow: none !default;
+    color: #333 !default;
+  }
+}
+
+.ui-ribbon-bigbutton {
+  background: none !default;
+  border: solid 1px transparent !default;
+  width: 3.5em !default;
+  height: 52px !default;
+  text-decoration: none !default;
+
+  .ui-icon {
+    height: 32px !default;
+    left: 50% !default;
+    margin-left: -17px !default;
+    margin-top: -24px !default;
+    width: 32px !default;
+  }
+
+  .ui-button-text {
+    padding: 3em 0 0 !default;
+    font-size: 10px !default;
+  }
+}
+
+.ui-ribbon {
+  .ui-button {
+    float: left !default;
+    margin: 1px 2px !default;
+  }
+
+  .ui-selectonemenu {
+    float: left !default;
+    margin: 1px 2px !default;
+    float: left !default;
+    -moz-border-radius-bottomright: 0px !default;
+    -webkit-border-bottom-right-radius: 0px !default;
+    border-radius: 3px 0px 0px 3px !default;
+  }
+
+  .ui-buttonset .ui-button {
+    margin: 0 !default;
+    margin-right: -1px !default;
+  }
+
+  .ui-inputfield {
+    background: none !default;
+    box-shadow: none !default;
+  }
+
+  .ui-selectonemenu {
+    &.ui-state-default {
+      background: none !default;
+      box-shadow: none !default;
+    }
+
+    .ui-selectonemenu-trigger {
+      background-image: none !default;
+      box-shadow: none !default;
+      -moz-border-radius-bottomright: 0px !default;
+      -webkit-border-bottom-right-radius: 0px !default;
+      border-radius: 0px !default;
+    }
+  }
+}
+
+.ui-ribbon-groups.ui-widget-content {
+  background: rgb(255, 255, 255) !default;
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 58%, rgba(249, 249, 249, 1) 71%, rgba(237, 237, 237, 1) 88%, rgba(232, 232, 232, 1) 100%) !default;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(58%, rgba(255, 255, 255, 1)), color-stop(71%, rgba(249, 249, 249, 1)), color-stop(88%, rgba(237, 237, 237, 1)), color-stop(100%, rgba(232, 232, 232, 1))) !default;
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 58%, rgba(249, 249, 249, 1) 71%, rgba(237, 237, 237, 1) 88%, rgba(232, 232, 232, 1) 100%) !default;
+  background: -o-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 58%, rgba(249, 249, 249, 1) 71%, rgba(237, 237, 237, 1) 88%, rgba(232, 232, 232, 1) 100%) !default;
+  background: -ms-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 58%, rgba(249, 249, 249, 1) 71%, rgba(237, 237, 237, 1) 88%, rgba(232, 232, 232, 1) 100%) !default;
+  background: linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 58%, rgba(249, 249, 249, 1) 71%, rgba(237, 237, 237, 1) 88%, rgba(232, 232, 232, 1) 100%) !default;
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e8e8e8',GradientType=0 ) !default;
+}

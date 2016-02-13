@@ -1,0 +1,31 @@
+.ui-wizard {
+  margin: 0 !default;
+  padding: 0 !default;
+}
+
+.ui-wizard-content {
+  margin: 3px 0 !default;
+}
+
+.ui-wizard-navbar {
+  text-align: right !default;
+}
+
+.ui-wizard-nav-back, .ui-wizard-nav-next {
+  cursor: pointer !default;
+}
+
+.ui-wizard-nav-back {
+  float: left !default;
+}
+
+.ui-wizard-nav-next {
+  float: right !default;
+}
+
+.ui-wizard-step-title {
+  font-size: 18px !default;
+  margin: 0 3px 0 0 !default;
+  padding: 0.4em !default;
+  float: left !default;
+}

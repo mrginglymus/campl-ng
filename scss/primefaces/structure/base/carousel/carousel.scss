@@ -1,0 +1,90 @@
+.ui-carousel {
+  position: relative !default;
+  padding: 1px !default;
+
+  .ui-carousel-viewport {
+    .ui-carousel-items {
+      list-style: none outside none !default;
+      margin: 0 !default;
+      padding: 0 !default;
+      position: relative !default;
+      width: 32000px !default;
+      left: 0 !default;
+
+      .ui-carousel-item {
+        margin: 1px !default;
+        padding: 0 !default;
+        float: left !default;
+      }
+    }
+
+    overflow: hidden !default;
+    position: relative !default;
+    border: 0 !default;
+  }
+
+  .ui-carousel-footer {
+    margin: 1px 1px 0px 1px !default;
+    padding-top: 9px !default;
+    padding-bottom: 6px !default;
+    padding-right: 10px !default;
+    padding-left: 10px !default;
+    overflow: hidden !default;
+  }
+
+  .ui-carousel-header {
+    margin: 0 1px !default;
+    overflow: hidden !default;
+    padding-top: 7px !default;
+    padding-bottom: 8px !default;
+    padding-right: 10px !default;
+    padding-left: 10px !default;
+
+    .ui-carousel-header-title {
+      display: inline-block !default;
+      width: 30% !default;
+      padding-top: 2px !default;
+      overflow: hidden !default;
+    }
+  }
+
+  .ui-carousel-dropdown, .ui-carousel-mobiledropdown {
+    float: right !default;
+    margin: 0px 10px !default;
+    background-image: none !default;
+  }
+
+  .ui-carousel-dropdown option, .ui-carousel-mobiledropdown option {
+    background-image: none !default;
+    border: 0 none !default;
+    box-shadow: none !default;
+    -moz-box-shadow: none !default;
+    -webkit-box-shadow: none !default;
+  }
+
+  .ui-carousel-button {
+    float: right !default;
+    margin: 2px !default;
+  }
+
+  .ui-carousel-page-link {
+    float: left !default;
+    margin: 0 2px !default;
+    cursor: pointer !default;
+  }
+
+  .ui-carousel-button {
+    cursor: pointer !default;
+  }
+
+  .ui-carousel-page-links {
+    margin: 0px 9px !default;
+    margin-top: 1px !default;
+    display: inline-table !default;
+    float: right !default;
+  }
+
+  .ui-carousel-mobiledropdown {
+    display: none !default;
+  }
+}

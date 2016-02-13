@@ -1,0 +1,163 @@
+.ui-dialog {
+  position: fixed !default;
+  padding: 0 !default;
+  overflow: hidden !default;
+  display: none !default;
+
+  &.ui-dialog-absolute {
+    position: absolute !default;
+  }
+
+  &.ui-overlay-hidden {
+    display: block !default;
+  }
+
+  .ui-dialog-titlebar {
+    padding: .4em .4em .4em 1em !default;
+    position: relative !default;
+    border: 0px !default;
+  }
+
+  .ui-dialog-title {
+    float: left !default;
+    margin: .3em 16px .1em 0 !default;
+  }
+
+  .ui-dialog-content {
+    position: relative !default;
+    border: 0 !default;
+    padding: .5em 1em !default;
+    background: none !default;
+    overflow: auto !default;
+    zoom: 1 !default;
+
+    &.ui-df-content {
+      overflow: hidden !default;
+      padding: 0 !default;
+    }
+  }
+
+  .ui-dialog-footer {
+    padding: .4em 1em !default;
+    border-width: 1px 0 0 0 !default;
+    text-align: left !default;
+  }
+
+  .ui-dialog-buttonpane {
+    text-align: left !default;
+    background-image: none !default;
+    margin: .5em 0 0 0 !default;
+    padding: .3em 1em .5em .4em !default;
+
+    button {
+      margin: .5em .4em .5em 0 !default;
+      cursor: pointer !default;
+    }
+  }
+
+  .ui-resizable-se {
+    width: 14px !default;
+    height: 14px !default;
+    right: 3px !default;
+    bottom: 3px !default;
+  }
+}
+
+.ui-draggable .ui-dialog-titlebar {
+  cursor: move !default;
+}
+
+.ui-dialog {
+  .ui-dialog-titlebar-close, .ui-dialog-titlebar-minimize, .ui-dialog-titlebar-maximize {
+    float: right !default;
+    margin: 0px !default;
+    top: 0px !default;
+    padding: 1px !default;
+    cursor: pointer !default;
+  }
+
+  .ui-dialog-titlebar-close span, .ui-dialog-titlebar-minimize span, .ui-dialog-titlebar-maximize span {
+    display: block !default;
+    margin: 0px !default;
+  }
+
+  .ui-dialog-titlebar-close {
+    &:hover, &:focus {
+      padding: 0 !default;
+    }
+  }
+
+  .ui-dialog-titlebar-minimize {
+    &:hover, &:focus {
+      padding: 0 !default;
+    }
+  }
+
+  .ui-dialog-titlebar-maximize {
+    &:hover, &:focus {
+      padding: 0 !default;
+    }
+  }
+}
+
+.ui-dialog-docking-zone {
+  position: fixed !default;
+  bottom: 0 !default;
+  left: 0 !default;
+}
+
+.ui-dialog-minimizing {
+  border: 2px dotted gray !default;
+}
+
+.ui-dialog .ui-dialog-message {
+  margin-right: .5em !default;
+}
+
+.ui-dialog-mask {
+  position: fixed !default;
+  width: 100% !default;
+  height: 100% !default;
+}
+
+/** Confirm Dialog **/
+
+.ui-confirm-dialog .ui-dialog-content {
+  padding: 1em !default;
+}
+
+.ui-confirm-dialog-severity {
+  float: left !default;
+  margin-right: 4px !default;
+}
+
+.ui-confirm-dialog-message {
+  display: inline-block !default;
+  margin-top: 1px !default;
+}
+
+/** RTL **/
+
+.ui-dialog-rtl {
+  direction: rtl !default;
+}
+
+.ui-dialog.ui-dialog-rtl {
+  .ui-dialog-title {
+    float: right !default;
+  }
+
+  .ui-dialog-titlebar-close, .ui-dialog-titlebar-minimize, .ui-dialog-titlebar-maximize {
+    float: left !default;
+  }
+
+  .ui-dialog-footer {
+    text-align: right !default;
+  }
+}
+
+/* Message Dialog */
+
+.ui-message-dialog .ui-dialog-content {
+  padding: 1em !default;
+}

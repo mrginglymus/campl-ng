@@ -1,0 +1,116 @@
+/*
+ * jQuery File Upload UI Plugin CSS 5.0.6
+ * https://github.com/blueimp/jQuery-File-Upload
+ *
+ * Copyright 2010, Sebastian Tschan
+ * https://blueimp.net
+ *
+ * Licensed under the MIT license:
+ * http://creativecommons.org/licenses/MIT/
+ */
+
+.ui-fileupload-buttonbar .ui-fileupload-choose {
+  input {
+    position: absolute !default;
+    top: 0 !default;
+    right: 0 !default;
+    margin: 0 !default;
+    opacity: 0 !default;
+    filter: alpha(opacity = 0) !default;
+    font-size: 200px !default;
+    direction: ltr !default;
+    cursor: pointer !default;
+  }
+
+  &.ui-state-disabled input {
+    cursor: default !default;
+  }
+}
+
+.ui-fileupload-choose {
+  position: relative !default;
+  overflow: hidden !default;
+}
+
+.ui-fileupload-buttonbar {
+  padding: 0.2em 0.4em !default;
+
+  .ui-button {
+    vertical-align: middle !default;
+    margin-right: 0.2em !default;
+  }
+}
+
+.ui-fileupload-content {
+  padding: 0.2em 0.4em !default;
+  border-top-width: 0 !default;
+
+  .ui-progressbar {
+    width: 200px !default;
+    height: 20px !default;
+    margin: 0px !default;
+
+    .ui-progressbar-value {
+      height: 100% !default;
+    }
+  }
+
+  .ui-progressbar-value-legacy {
+    background: url("#{resource['primefaces:fileupload/ie-anim.gif']}") repeat-x !default;
+  }
+}
+
+.ui-fileupload-files {
+  margin: 10px 0 !default;
+  border-collapse: collapse !default;
+
+  td {
+    padding: 4px 10px !default;
+  }
+
+  img {
+    border: none !default;
+  }
+}
+
+.ui-state-disabled {
+  .ui-state-disabled {
+    opacity: 1 !default;
+    filter: alpha(opacity = 100) !default;
+  }
+
+  input {
+    cursor: default !default;
+  }
+}
+
+/** Simple **/
+
+.ui-fileupload-simple {
+  position: relative !default;
+  overflow: hidden !default;
+
+  .ui-button {
+    overflow: hidden !default;
+  }
+
+  input[type=file] {
+    position: absolute !default;
+    top: 0 !default;
+    right: 0 !default;
+    min-width: 100% !default;
+    min-height: 100% !default;
+    font-size: 100px !default;
+    text-align: right !default;
+    filter: alpha(opacity = 0) !default;
+    opacity: 0 !default;
+    outline: none !default;
+    background: white !default;
+    cursor: inherit !default;
+    display: block !default;
+  }
+
+  .ui-fileupload-filename {
+    margin-left: 0.5em !default;
+  }
+}

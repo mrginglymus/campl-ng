@@ -1,0 +1,55 @@
+/* Fixes issue here http://code.google.com/p/jcrop/issues/detail?id=1 */
+
+.jcrop-holder {
+  text-align: left !default;
+}
+
+.jcrop-vline, .jcrop-hline {
+  font-size: 0px !default;
+  position: absolute !default;
+  background: white url("imagecropper/crop.gif") top left repeat !default;
+}
+
+.jcrop-vline {
+  height: 100% !default;
+  width: 1px !important !default;
+}
+
+.jcrop-hline {
+  width: 100% !default;
+  height: 1px !important !default;
+}
+
+.jcrop-vline.right {
+  right: 0px !default;
+}
+
+.jcrop-hline.bottom {
+  bottom: 0px !default;
+}
+
+.jcrop-handle {
+  font-size: 1px !default;
+  width: 7px !important !default;
+  height: 7px !important !default;
+  border: 1px #eee solid !default;
+  background-color: #333 !default;
+}
+
+.jcrop-tracker {
+  width: 100% !default;
+  height: 100% !default;
+}
+
+.custom {
+  .jcrop-vline, .jcrop-hline {
+    background: yellow !default;
+  }
+
+  .jcrop-handle {
+    border-color: black !default;
+    background-color: #C7BB00 !default;
+    -moz-border-radius: 3px !default;
+    -webkit-border-radius: 3px !default;
+  }
+}

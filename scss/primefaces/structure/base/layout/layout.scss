@@ -1,0 +1,35 @@
+.ui-layout-unit {
+  visibility: hidden !default;
+  padding: 0.2em !default;
+}
+
+.ui-layout-unit-header, .ui-layout-unit-footer {
+  padding: 0.4em 0.2em 0.4em 0.4em !default;
+}
+
+.ui-layout-unit-header-title, .ui-layout-unit-footer-title {}
+
+.ui-layout-unit .ui-layout-unit-content {
+  padding: 0.2em 0em !default;
+  border: 0px none !default;
+  overflow: auto !default;
+}
+
+.ui-layout-unit-header-icon {
+  float: right !default;
+  margin-right: 0.2em !default;
+  margin-top: -0.2em !default;
+
+  &:hover, &:focus {
+    margin-right: 0.2em !default;
+    margin-top: -0.2em !default;
+  }
+}
+
+.ui-layout-unit-expand-icon {
+  display: block !default;
+  width: 16px !default;
+  position: absolute !default;
+  left: 4px !default;
+  top: 2px !default;
+}

@@ -1,0 +1,287 @@
+/*rules for the plot target div.  These will be cascaded down to all plot elements according to css rules*/
+
+.jqplot-target {
+  position: relative !default;
+  color: #666666 !default;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif !default;
+  font-size: 1em !default;
+
+  /*    height: 300px !default;
+      width: 400px !default;*/
+}
+
+/*rules applied to all axes*/
+
+.jqplot-axis {
+  font-size: 0.75em !default;
+}
+
+.jqplot-xaxis {
+  margin-top: 10px !default;
+}
+
+.jqplot-x2axis {
+  margin-bottom: 10px !default;
+}
+
+.jqplot-yaxis {
+  margin-right: 10px !default;
+}
+
+.jqplot-y2axis, .jqplot-y3axis, .jqplot-y4axis, .jqplot-y5axis, .jqplot-y6axis, .jqplot-y7axis, .jqplot-y8axis, .jqplot-y9axis, .jqplot-yMidAxis {
+  margin-left: 10px !default;
+  margin-right: 10px !default;
+}
+
+/*rules applied to all axis tick divs*/
+
+.jqplot-axis-tick, .jqplot-xaxis-tick, .jqplot-yaxis-tick, .jqplot-x2axis-tick, .jqplot-y2axis-tick, .jqplot-y3axis-tick, .jqplot-y4axis-tick, .jqplot-y5axis-tick, .jqplot-y6axis-tick, .jqplot-y7axis-tick, .jqplot-y8axis-tick, .jqplot-y9axis-tick, .jqplot-yMidAxis-tick {
+  position: absolute !default;
+  white-space: pre !default;
+}
+
+.jqplot-xaxis-tick {
+  top: 0px !default;
+
+  /* initial position untill tick is drawn in proper place */
+  left: 15px !default;
+
+  /*    padding-top: 10px !default;*/
+  vertical-align: top !default;
+}
+
+.jqplot-x2axis-tick {
+  bottom: 0px !default;
+
+  /* initial position untill tick is drawn in proper place */
+  left: 15px !default;
+
+  /*    padding-bottom: 10px !default;*/
+  vertical-align: bottom !default;
+}
+
+.jqplot-yaxis-tick {
+  right: 0px !default;
+
+  /* initial position untill tick is drawn in proper place */
+  top: 15px !default;
+
+  /*    padding-right: 10px !default;*/
+  text-align: right !default;
+
+  &.jqplot-breakTick {
+    right: -20px !default;
+    margin-right: 0px !default;
+    padding: 1px 5px 1px 5px !default;
+
+    /*background-color: white !default;*/
+    z-index: 2 !default;
+    font-size: 1.5em !default;
+  }
+}
+
+.jqplot-y2axis-tick, .jqplot-y3axis-tick, .jqplot-y4axis-tick, .jqplot-y5axis-tick, .jqplot-y6axis-tick, .jqplot-y7axis-tick, .jqplot-y8axis-tick, .jqplot-y9axis-tick {
+  left: 0px !default;
+
+  /* initial position untill tick is drawn in proper place */
+  top: 15px !default;
+
+  /*    padding-left: 10px !default;*/
+  /*    padding-right: 15px !default;*/
+  text-align: left !default;
+}
+
+.jqplot-yMidAxis-tick {
+  text-align: center !default;
+  white-space: nowrap !default;
+}
+
+.jqplot-xaxis-label {
+  margin-top: 10px !default;
+  font-size: 11pt !default;
+  position: absolute !default;
+}
+
+.jqplot-x2axis-label {
+  margin-bottom: 10px !default;
+  font-size: 11pt !default;
+  position: absolute !default;
+}
+
+.jqplot-yaxis-label {
+  margin-right: 10px !default;
+
+  /*    text-align: center !default;*/
+  font-size: 11pt !default;
+  position: absolute !default;
+}
+
+.jqplot-yMidAxis-label {
+  font-size: 11pt !default;
+  position: absolute !default;
+}
+
+.jqplot-y2axis-label, .jqplot-y3axis-label, .jqplot-y4axis-label, .jqplot-y5axis-label, .jqplot-y6axis-label, .jqplot-y7axis-label, .jqplot-y8axis-label, .jqplot-y9axis-label {
+  /*    text-align: center !default;*/
+  font-size: 11pt !default;
+  margin-left: 10px !default;
+  position: absolute !default;
+}
+
+.jqplot-meterGauge-tick {
+  font-size: 0.75em !default;
+  color: #999999 !default;
+}
+
+.jqplot-meterGauge-label {
+  font-size: 1em !default;
+  color: #999999 !default;
+}
+
+table {
+  &.jqplot-table-legend {
+    margin-top: 12px !default;
+    margin-bottom: 12px !default;
+    margin-left: 12px !default;
+    margin-right: 12px !default;
+    background-color: rgba(255, 255, 255, 0.6) !default;
+    border: 1px solid #cccccc !default;
+    position: absolute !default;
+    font-size: 0.75em !default;
+  }
+
+  &.jqplot-cursor-legend {
+    background-color: rgba(255, 255, 255, 0.6) !default;
+    border: 1px solid #cccccc !default;
+    position: absolute !default;
+    font-size: 0.75em !default;
+  }
+}
+
+td {
+  &.jqplot-table-legend {
+    vertical-align: middle !default;
+  }
+
+  &.jqplot-seriesToggle {
+    &:hover, &:active {
+      cursor: pointer !default;
+    }
+  }
+}
+
+/*
+These rules could be used instead of assigning
+element styles and relying on js object properties.
+*/
+
+/*
+td.jqplot-table-legend-swatch {
+    padding-top: 0.5em !default;
+    text-align: center !default;
+}
+
+tr.jqplot-table-legend:first td.jqplot-table-legend-swatch {
+    padding-top: 0px !default;
+}
+*/
+
+.jqplot-table-legend .jqplot-series-hidden {
+  text-decoration: line-through !default;
+}
+
+div {
+  &.jqplot-table-legend-swatch-outline {
+    border: 1px solid #cccccc !default;
+    padding: 1px !default;
+  }
+
+  &.jqplot-table-legend-swatch {
+    width: 0px !default;
+    height: 0px !default;
+    border-top-width: 5px !default;
+    border-bottom-width: 5px !default;
+    border-left-width: 6px !default;
+    border-right-width: 6px !default;
+    border-top-style: solid !default;
+    border-bottom-style: solid !default;
+    border-left-style: solid !default;
+    border-right-style: solid !default;
+  }
+}
+
+.jqplot-title {
+  top: 0px !default;
+  left: 0px !default;
+  padding-bottom: 0.5em !default;
+  font-size: 1.2em !default;
+}
+
+table.jqplot-cursor-tooltip {
+  border: 1px solid #cccccc !default;
+  font-size: 0.75em !default;
+}
+
+.jqplot-cursor-tooltip {
+  border: 1px solid #cccccc !default;
+  font-size: 0.75em !default;
+  white-space: nowrap !default;
+  background: rgba(208, 208, 208, 0.5) !default;
+  padding: 1px !default;
+}
+
+.jqplot-highlighter-tooltip, .jqplot-canvasOverlay-tooltip {
+  border: 1px solid #cccccc !default;
+  font-size: 0.75em !default;
+  white-space: nowrap !default;
+  background: rgba(208, 208, 208, 0.5) !default;
+  padding: 1px !default;
+  z-index: 1 !default;
+}
+
+.jqplot-point-label {
+  font-size: 0.75em !default;
+  z-index: 2 !default;
+}
+
+td.jqplot-cursor-legend-swatch {
+  vertical-align: middle !default;
+  text-align: center !default;
+}
+
+div.jqplot-cursor-legend-swatch {
+  width: 1.2em !default;
+  height: 0.7em !default;
+}
+
+.jqplot-error {
+  /*   Styles added to the plot target container when there is an error go here.*/
+  text-align: center !default;
+}
+
+.jqplot-error-message {
+  /*    Styling of the custom error message div goes here.*/
+  position: relative !default;
+  top: 46% !default;
+  display: inline-block !default;
+}
+
+div {
+  &.jqplot-bubble-label {
+    font-size: 0.8em !default;
+
+    /*    background: rgba(90%, 90%, 90%, 0.15) !default;*/
+    padding-left: 2px !default;
+    padding-right: 2px !default;
+    color: rgb(20%, 20%, 20%) !default;
+
+    &.jqplot-bubble-label-highlight {
+      background: rgba(90%, 90%, 90%, 0.7) !default;
+    }
+  }
+
+  &.jqplot-noData-container {
+    text-align: center !default;
+    background-color: rgba(96%, 96%, 96%, 0.3) !default;
+  }
+}

@@ -1,0 +1,57 @@
+.ui-accordion {
+  .ui-accordion-header {
+    cursor: pointer !default;
+    position: relative !default;
+    margin-top: 1px !default;
+    min-height: 0 !default;
+    padding: .5em .5em .5em 2.2em !default;
+
+    .ui-icon {
+      position: absolute !default;
+      left: .5em !default;
+      top: 50% !default;
+      margin-top: -8px !default;
+    }
+  }
+
+  .ui-accordion-content {
+    padding: 1em 2.2em !default;
+    border-top: 0 !default;
+    margin-top: -2px !default;
+    position: relative !default;
+    top: 1px !default;
+    margin-bottom: 2px !default;
+    overflow: auto !default;
+    zoom: 1 !default;
+  }
+
+  .ui-accordion-header.ui-state-disabled {
+    cursor: default !default;
+
+    a {
+      cursor: default !default;
+    }
+  }
+
+  &.ui-accordion-rtl {
+    direction: rtl !default;
+
+    .ui-accordion-header {
+      .ui-icon {
+        right: 0.5m !default;
+        left: auto !default;
+      }
+
+      a {
+        padding: 0.5em 2.2em 0.5em 0.5em !default;
+      }
+    }
+  }
+}
+
+/** RTL **/
+
+.ui-tabs-outline {
+  outline: dotted thin !default;
+  z-index: 1 !default;
+}

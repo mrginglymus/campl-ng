@@ -1,0 +1,64 @@
+.ui-stack {
+  position: fixed !default;
+  bottom: 28px !default;
+  right: 40px !default;
+
+  > img {
+    position: relative !default;
+    cursor: pointer !default;
+    padding-top: 35px !default;
+    z-index: 2 !default;
+  }
+
+  ul {
+    list-style: none !default;
+    position: absolute !default;
+    top: 5px !default;
+    cursor: pointer !default;
+    z-index: 1 !default;
+    margin: 0 !default;
+    padding: 0 !default;
+
+    li {
+      position: absolute !default;
+
+      img {
+        border: 0 !default;
+      }
+
+      span {
+        display: none !default;
+      }
+    }
+  }
+
+  .openStack li span {
+    font-family: "Lucida Grande", Lucida, Verdana, sans-serif !default;
+    display: block !default;
+    height: 14px !default;
+    position: absolute !default;
+    top: 17px !default;
+    right: 60px !default;
+    line-height: 14px !default;
+    border: 0 !default;
+    background-color: #000 !default;
+    padding: 3px 10px !default;
+    border-radius: 10px !default;
+    -webkit-border-radius: 10px !default;
+    -moz-border-radius: 10px !default;
+    color: #fcfcfc !default;
+    text-align: center !default;
+    text-shadow: #000 1px 1px 1px !default;
+    opacity: .85 !default;
+    filter: alpha(opacity = 85) !default;
+  }
+
+  _position: absolute !default;
+
+  ul {
+    _z-index: -1 !default;
+    _top: -15px !default;
+  }
+}
+
+/* IE Fixes */

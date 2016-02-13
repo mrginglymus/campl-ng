@@ -1,0 +1,348 @@
+/* ========== ContentFlow ========== */
+/*
+ * default style to look nice
+ */
+
+.ui-contentflow .flow {
+  /*border: 1px solid green !default;*/
+
+  * {}
+
+  .item {
+    /*border: 1px solid red !default;*/
+
+    canvas.content {
+      height: 100% !default;
+      width: 100% !default;
+
+      /*border: 1px solid yellow !default;*/
+    }
+
+    img {
+      &.content {
+        /*border: 1px solid yellow !default;*/
+        width: 100% !default;
+      }
+
+      &.reflection {
+        width: 100% !default;
+      }
+    }
+
+    canvas.reflection {
+      width: 100% !default;
+    }
+
+    &.active {
+      cursor: pointer !default;
+    }
+
+    .caption {
+      font-size: 100% !default;
+      font-weight: bold !default;
+      text-align: center !default;
+      color: white !default;
+      max-height: 30% !default;
+      bottom: 10% !default;
+      background: url("contentflow/images/1x1_0.5_black.png") !default;
+      width: 100% !default;
+    }
+  }
+}
+
+/* ----- styling of items ----- */
+
+* html .ui-contentflow .flow .item .caption {
+  background-image: none !default;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src="contentflow/images/1x1_0.5_black.png") !default;
+}
+
+.ui-contentflow {
+  .flow .item {
+    .caption a {
+      text-decoration: none !default;
+      color: white !default;
+      font-style: italic !default;
+      font-size: 0.8em !default;
+
+      &:link, &:visited, &:active {
+        text-decoration: none !default;
+        color: white !default;
+        font-style: italic !default;
+        font-size: 0.8em !default;
+      }
+
+      &:hover {
+        text-decoration: none !default;
+        color: white !default;
+        font-style: italic !default;
+        font-size: 0.8em !default;
+        text-decoration: underline !default;
+      }
+    }
+
+    &.active .caption {
+      /*display: block !default;*/
+
+      /* uncomment to show caption inside item */
+    }
+  }
+
+  .scrollbar {
+    width: 50% !default;
+    margin: 0px auto !default;
+    margin-top: 10px !default;
+    height: 16px !default;
+    background: url("contentflow/images/scrollbar_white.png") left center repeat-x !default;
+    position: relative !default;
+    overflow: visible !default;
+
+    .slider {
+      width: 16px !default;
+      height: 16px !default;
+      background: url("contentflow/images/scrollbar_white.png") center center no-repeat !default;
+      cursor: move !default;
+    }
+  }
+}
+
+/* ----- scrollbar ----- */
+
+/* only for IE <= 6 and a alphatransparent slider image */
+
+* html .ui-contentflow .scrollbar .slider {
+  background-image: none !default;
+
+  .virtualSlider {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src="contentflow/images/scrollbar_white.png") !default;
+  }
+}
+
+.ui-contentflow {
+  .scrollbar .slider .position {
+    top: 120% !default;
+    font-size: 16px !default;
+    font-weight: bold !default;
+    color: silver !default;
+  }
+
+  .globalCaption {
+    text-align: center !default;
+    font-weight: bold !default;
+    color: white !default;
+    font-size: 14px !default;
+    height: 20px !default;
+    margin: 2em auto !default;
+
+    .caption a {
+      text-decoration: none !default;
+      color: white !default;
+      font-style: italic !default;
+      font-size: 0.8em !default;
+
+      &:link, &:visited, &:active {
+        text-decoration: none !default;
+        color: white !default;
+        font-style: italic !default;
+        font-size: 0.8em !default;
+      }
+
+      &:hover {
+        text-decoration: none !default;
+        color: white !default;
+        font-style: italic !default;
+        font-size: 0.8em !default;
+        text-decoration: underline !default;
+      }
+    }
+  }
+
+  .loadIndicator {
+    width: 100% !default;
+    height: 100% !default;
+    top: 0px !default;
+    left: 0px !default;
+    background: black !default;
+
+    .indicator {
+      background: url("contentflow/images/loader.gif") center center no-repeat !default;
+      width: 100% !default;
+      height: 100% !default;
+    }
+  }
+}
+
+/* ----- global caption ----- */
+
+/* ----- load indicator ----- */
+
+* html .ui-contentflow .loadIndicator .indicator {
+  height: 100px !default;
+}
+
+/* ================================= */
+
+/* ========== ContentFlow ========== */
+/* 
+ * This is the basic CSS file needed for the correct functioning of ui-contentflow.
+ * DON'T CHANGE IT.
+ *
+ */
+
+.ui-contentflow {
+  position: relative !default;
+
+  /* needed so overlay dimensions are constrained to the ui-contentflow */
+  overflow: hidden !default;
+
+  * {
+    margin: 0px !default;
+    padding: 0px !default;
+
+    /*border: none !default;*/
+  }
+
+  img {
+    -ms-interpolation-mode: bicubic !default;
+  }
+
+  .mouseoverCheckElement {
+    position: absolute !default;
+    width: 0px !default;
+    height: 0px !default;
+    left: 0px !default;
+
+    /*display: none !default;*/
+    visibility: hidden !default;
+  }
+
+  &:hover .mouseoverCheckElement {
+    left: 1px !default;
+
+    /*width: 1px !default;*/
+    /*left: -1px !default;*/
+    /*background-color: red !default;*/
+  }
+
+  .flow {
+    position: relative !default;
+
+    /* needed  so that items can be positioned relative to flow*/
+    z-index: 0 !default;
+
+    /* need so every item has a z-index relative to the flow-box */
+    visibility: hidden !default;
+
+    /* needed so that content is hidden while loading */
+    width: 100% !default;
+
+    /* needed for IE6 */
+    margin: 0 auto !default;
+
+    &.hidden {
+      visibility: hidden !default;
+    }
+
+    .item {
+      position: absolute !default;
+
+      /* needed */
+      visibility: hidden !default;
+      top: 0px !default;
+      left: 0px !default;
+
+      &.active {}
+
+      .content {
+        display: block !default;
+      }
+
+      div.content {
+        width: 100% !default;
+        height: 100% !default;
+      }
+
+      .label {
+        display: none !default;
+      }
+
+      .reflection {
+        display: block !default;
+      }
+
+      canvas.reflection {
+        margin-top: -1px !default;
+
+        /* for FF */
+      }
+
+      .caption {
+        position: absolute !default;
+
+        /* needed */
+        display: none !default;
+
+        /* needed to hide it on inactive items */
+      }
+
+      &.active .caption {
+        /*display: block !default;*/
+
+        /* uncomment to show caption inside item */
+      }
+    }
+  }
+
+  .scrollbar {
+    position: relative !default;
+
+    /* needed for z-index */
+    z-index: 1 !default;
+
+    /* set above flow */
+    visibility: hidden !default;
+
+    .slider {
+      position: absolute !default;
+
+      /* needed */
+    }
+  }
+}
+
+/* ----- scrollbar ----- */
+
+* html .ui-contentflow .scrollbar .slider .virtualSlider {
+  height: 100% !default;
+}
+
+.ui-contentflow {
+  .scrollbar .slider .position {
+    position: absolute !default;
+
+    /* needed */
+    text-align: center !default;
+  }
+
+  .globalCaption {
+    position: relative !default;
+
+    /* needed for z-index */
+    z-index: 1 !default;
+
+    /* set above flow */
+  }
+
+  .loadIndicator {
+    position: absolute !default;
+
+    /* needed */
+    z-index: 65000 !default;
+
+    /* set above everything */
+  }
+}
+
+/* ----- global caption ----- */
+
+/* ----- load indicator ----- */

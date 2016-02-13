@@ -1,0 +1,75 @@
+.ui-galleria {
+  overflow: hidden !default;
+  visibility: hidden !default;
+  position: relative !default;
+}
+
+.ui-galleria-panel-wrapper {
+  position: relative !default;
+  padding: 0px !default;
+  margin: 0px !default;
+}
+
+.ui-galleria-panel {
+  filter: inherit !default;
+  position: absolute !default;
+  top: 0px !default;
+  left: 0px !default;
+  list-style-type: none !default;
+}
+
+.ui-galleria-filmstrip-wrapper {
+  overflow: hidden !default;
+  margin: 5px auto !default;
+  position: relative !default;
+}
+
+.ui-galleria-filmstrip {
+  list-style: none outside none !default;
+  margin: 0 !default;
+  padding: 0 !default;
+  width: 2340px !default;
+  z-index: 900 !default;
+  position: absolute !default;
+  top: 0px !default;
+  left: 0px !default;
+}
+
+.ui-galleria-frame {
+  float: left !default;
+  margin-right: 5px !default;
+  opacity: 0.3 !default;
+  cursor: pointer !default;
+}
+
+.ui-galleria-frame-active {
+  opacity: 1 !default;
+}
+
+.ui-galleria-frame-content {
+  overflow: hidden !default;
+}
+
+.ui-galleria-nav-next {
+  cursor: pointer !default;
+  position: absolute !default;
+}
+
+.ui-galleria-nav-prev {
+  cursor: pointer !default;
+  position: absolute !default;
+  left: 5px !default;
+}
+
+.ui-galleria-nav-next {
+  right: 5px !default;
+}
+
+.ui-galleria-caption {
+  position: absolute !default;
+  left: 1px !default;
+  background-color: rgba(0, 0, 0, 0.5) !default;
+  display: none !default;
+  color: #FFFFFF !default;
+  padding: 0.2em 1em !default;
+}

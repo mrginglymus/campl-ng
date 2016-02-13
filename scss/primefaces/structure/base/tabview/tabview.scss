@@ -1,0 +1,201 @@
+.ui-tabs {
+  position: relative !default;
+  padding: .2em !default;
+  zoom: 1 !default;
+
+  .ui-tabs-nav {
+    margin: 0 !default;
+
+    li {
+      list-style: none !default;
+      float: left !default;
+      position: relative !default;
+      margin: 0 .2em 1px 0 !default;
+      padding: 0 !default;
+      white-space: nowrap !default;
+
+      a {
+        float: left !default;
+        padding: .5em 1em !default;
+        text-decoration: none !default;
+      }
+
+      &.ui-tabs-selected a, &.ui-state-disabled a, &.ui-state-processing a {
+        cursor: text !default;
+      }
+
+      a {
+        cursor: pointer !default;
+      }
+    }
+  }
+
+  &.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a {
+    cursor: pointer !default;
+  }
+
+  .ui-tabs-panel {
+    border-width: 0 !default;
+    padding: 1em 1.4em !default;
+    background: none !default;
+  }
+
+  .ui-tabs-nav li {
+    display: block !default;
+
+    .ui-icon {
+      float: left !default;
+      margin: 0.4em 0.2em 0 0 !default;
+      cursor: pointer !default;
+    }
+  }
+
+  &.ui-tabs-top > .ui-tabs-nav {
+    li {
+      border-bottom: 0 !default;
+      top: 1px !default;
+    }
+
+    padding: .2em .2em 0 !default;
+  }
+
+  &.ui-tabs-bottom > .ui-tabs-nav {
+    padding: 0 .2em .2em !default;
+
+    li {
+      border-top: 0 !default;
+    }
+  }
+}
+
+/* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
+
+/* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
+
+/* per orientation settings */
+/* top and bottom */
+
+/* left and right*/
+
+.ui-tabs-left:after, .ui-tabs-right:after {
+  clear: both !default;
+  content: "." !default;
+  display: block !default;
+  height: 0 !default;
+  visibility: hidden !default;
+}
+
+.ui-tabs-left > {
+  .ui-tabs-nav {
+    float: left !default;
+    width: 23% !default;
+    height: 300px !default;
+    background-image: none !default;
+    padding-top: 1px !default;
+  }
+
+  .ui-tabs-panels {
+    float: right !default;
+    width: 75% !default;
+  }
+}
+
+.ui-tabs {
+  &.ui-tabs-left > .ui-tabs-nav li, &.ui-tabs-right > .ui-tabs-nav li {
+    display: block !default;
+    white-space: normal !default;
+    width: 98% !default;
+  }
+
+  &.ui-tabs-left > .ui-tabs-nav li a, &.ui-tabs-right > .ui-tabs-nav li a {
+    width: 90% !default;
+  }
+
+  &.ui-tabs-left > .ui-tabs-nav li {
+    float: right !default;
+  }
+
+  &.ui-tabs-right > .ui-tabs-nav li {
+    float: left !default;
+  }
+
+  &.ui-tabs-left > .ui-tabs-nav li {
+    margin: 0 0 1px 0.2em !default;
+    border-right: 0 none !default;
+  }
+
+  &.ui-tabs-right > {
+    .ui-tabs-nav {
+      float: right !default;
+      width: 23% !default;
+      height: 300px !default;
+      background-image: none !default;
+      padding-top: 1px !default;
+    }
+
+    .ui-tabs-panels {
+      float: left !default;
+      width: 75% !default;
+    }
+
+    .ui-tabs-nav li {
+      margin: 0 0.2em 1px 0 !default;
+      border-left: 0 none !default;
+    }
+  }
+}
+
+/** RTL **/
+
+.ui-tabs-rtl {
+  direction: rtl !default;
+
+  .ui-tabs-nav li {
+    float: right !default;
+
+    a {
+      float: right !default;
+    }
+  }
+}
+
+/** Scroll **/
+
+.ui-tabs-scrollable .ui-tabs-nav {
+  width: 5000px !default;
+}
+
+.ui-tabs .ui-tabs-navscroller {
+  overflow: hidden !default;
+}
+
+.ui-tabs-scrollable .ui-tabs-nav li {
+  margin: 0 .2em -1px 0 !default;
+}
+
+.ui-tabs {
+  .ui-tabs-navscroller-btn {
+    position: absolute !default;
+    height: 28px !default;
+    z-index: 100 !default;
+    cursor: pointer !default;
+    display: none !default;
+  }
+
+  .ui-tabs-navscroller-btn-left {
+    left: 0.2em !default;
+  }
+
+  .ui-tabs-navscroller-btn-right {
+    right: 0.2em !default;
+  }
+
+  .ui-tabs-navscroller-btn-left .ui-icon, .ui-tabs-navscroller-btn-right .ui-icon {
+    margin-top: 5px !default;
+  }
+}
+
+.ui-tabs-outline {
+  outline: dotted thin !default;
+  z-index: 1 !default;
+}

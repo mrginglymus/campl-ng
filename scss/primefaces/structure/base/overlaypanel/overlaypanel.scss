@@ -1,0 +1,18 @@
+.ui-overlaypanel {
+  padding: 0 !default;
+  margin: 0 !default;
+  position: absolute !default;
+}
+
+.ui-overlaypanel-content {
+  padding: 0.5em 1em !default;
+}
+
+.ui-overlaypanel-close {
+  position: absolute !default;
+  top: -10px !default;
+  right: -10px !default;
+  -moz-border-radius: 10px !default;
+  -webkit-border-radius: 10px !default;
+  border-radius: 10px !default;
+}

@@ -1,0 +1,16 @@
+.ui-toolbar {
+  padding: 0.2em !default;
+
+  .ui-separator {
+    display: inline-block !default;
+    vertical-align: middle !default;
+  }
+}
+
+.ui-toolbar-group-left {
+  float: left !default;
+}
+
+.ui-toolbar-group-right {
+  float: right !default;
+}

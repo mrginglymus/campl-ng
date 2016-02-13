@@ -1,0 +1,83 @@
+.ui-orderlist {
+  display: table !default;
+
+  .ui-orderlist-caption {
+    width: 180px !default;
+  }
+
+  .ui-orderlist-list {
+    list-style-type: none !default;
+    margin: 0 !default;
+    padding: 0 !default;
+    overflow: auto !default;
+    height: 200px !default;
+    width: 200px !default;
+
+    li {
+      margin: 1px !default;
+      padding: 2px !default;
+    }
+  }
+
+  .ui-button {
+    display: block !default;
+    margin-bottom: 0.3em !default;
+  }
+
+  .ui-orderlist-button.ui-button-text-icon-primary {
+    width: 100% !default;
+  }
+
+  .ui-orderlist-item {
+    cursor: pointer !default;
+    border: 0px none !default;
+    font-weight: inherit !default;
+  }
+
+  .ui-orderlist-caption {
+    text-align: center !default;
+    padding: 4px 0px !default;
+    border-bottom: 0px none !default;
+  }
+
+  table {
+    width: 100% !default;
+    border-collapse: collapse !default;
+  }
+
+  &.ui-state-disabled {
+    .ui-orderlist-item, .ui-button {
+      cursor: default !default;
+    }
+
+    .ui-orderlist-list {
+      overflow: hidden !default;
+    }
+  }
+
+  &.ui-grid-responsive {
+    display: block !default;
+    width: 100% !default;
+
+    .ui-orderlist-controls {
+      margin-right: 10px !default;
+    }
+
+    .ui-orderlist-list, .ui-orderlist-caption, .ui-orderlist-controls .ui-button {
+      width: 100% !default;
+    }
+  }
+}
+
+/* Responsive */
+
+@media (max-width: 640px) {
+  .ui-orderlist.ui-grid-responsive .ui-orderlist-controls {
+    text-align: center !default;
+
+    .ui-button {
+      display: inline !default;
+      width: 20% !default;
+    }
+  }
+}

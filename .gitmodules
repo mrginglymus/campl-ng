@@ -7,3 +7,6 @@
 [submodule "lib/datetimepicker"]
 	path = lib/datetimepicker
 	url = https://github.com/mrginglymus/bootstrap-datetimepicker.git
+[submodule "lib/primefaces"]
+	path = lib/primefaces
+	url = https://github.com/primefaces/primefaces.git

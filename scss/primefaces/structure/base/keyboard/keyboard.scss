@@ -1,0 +1,139 @@
+/* Main style sheet for jQuery Keypad v1.2.4 */
+
+button.keypad-trigger {
+  width: 25px !default;
+  padding: 0px !default;
+}
+
+img.keypad-trigger {
+  margin: 2px !default;
+  vertical-align: middle !default;
+}
+
+#keypad-div {
+  display: none !default;
+  z-index: 10 !default;
+  margin: 0 !default;
+  padding: 0 !default;
+}
+
+.keypad-keyentry {
+  display: none !default;
+}
+
+.keypad-inline {
+  background-color: #f4f4f4 !default;
+  border: 1px solid #888 !default;
+  border-radius: 4px !default;
+  -moz-border-radius: 4px !default;
+  -webkit-border-radius: 4px !default;
+}
+
+.keypad-disabled {
+  position: absolute !default;
+  z-index: 100 !default;
+  background-color: white !default;
+  opacity: 0.5 !default;
+  filter: alpha(opacity = 50) !default;
+}
+
+.keypad-rtl {
+  direction: rtl !default;
+}
+
+.keypad-prompt {
+  clear: both !default;
+  width: 100% !default;
+  text-align: center !default;
+}
+
+.keypad-row {
+  clear: both !default;
+  float: left !default;
+  width: 100% !default;
+}
+
+.keypad-space {
+  float: left !default;
+  margin: 2px !default;
+  width: 24px !default;
+}
+
+* html .keypad-space {
+  /* IE6 */
+  margin: 0px !default;
+  width: 28px !default;
+}
+
+.keypad-half-space {
+  float: left !default;
+  margin: 1px !default;
+  width: 12px !default;
+}
+
+* html .keypad-half-space {
+  /* IE6 */
+  margin: 0px !default;
+  width: 14px !default;
+}
+
+.keypad-key {
+  float: left !default;
+  margin: 2px !default;
+  padding: 0px !default;
+  width: 24px !default;
+  background-color: #f4f4f4 !default;
+  border-radius: 4px !default;
+  -moz-border-radius: 4px !default;
+  -webkit-border-radius: 4px !default;
+  text-align: center !default;
+  cursor: pointer !default;
+
+  &[disabled] {
+    border: 2px outset !default;
+  }
+}
+
+.keypad-key-down {}
+
+.keypad-spacebar {
+  width: 164px !default;
+}
+
+.keypad-enter {
+  width: 52px !default;
+}
+
+.keypad-clear, .keypad-back, .keypad-close, .keypad-shift {
+  width: 52px !default;
+  color: #fff !default;
+  font-weight: bold !default;
+}
+
+.keypad-clear {
+  background-color: #a00 !default;
+}
+
+.keypad-back {
+  background-color: #00a !default;
+}
+
+.keypad-close {
+  background-color: #0a0 !default;
+}
+
+.keypad-shift {
+  background-color: #0aa !default;
+}
+
+.keypad-cover {
+  display: none !default;
+  display/**/: block !default;
+  position: absolute !default;
+  z-index: -1 !default;
+  filter: mask() !default;
+  top: -4px !default;
+  left: -4px !default;
+  width: 125px !default;
+  height: 200px !default;
+}

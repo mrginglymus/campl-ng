@@ -1,0 +1,58 @@
+.ui-spinner {
+  display: inline-block !default;
+  overflow: visible !default;
+  padding: 0 !default;
+  position: relative !default;
+  vertical-align: middle !default;
+}
+
+.ui-spinner-input {
+  vertical-align: middle !default;
+  text-align: right !default;
+  padding-right: 20px !default;
+}
+
+.ui-spinner-button {
+  cursor: default !default;
+  display: block !default;
+  font-size: 0.5em !default;
+  height: 50% !default;
+  margin: 0 !default;
+  overflow: hidden !default;
+  padding: 0 !default;
+  position: absolute !default;
+  right: 0 !default;
+  text-align: center !default;
+  vertical-align: middle !default;
+  width: 16px !default;
+  z-index: 100 !default;
+}
+
+.ui-spinner .ui-icon {
+  left: 0 !default;
+  margin-top: -8px !default;
+  position: absolute !default;
+  top: 50% !default;
+}
+
+.ui-spinner-up {
+  top: 0 !default;
+}
+
+.ui-spinner-down {
+  bottom: 0 !default;
+}
+
+.ui-spinner {
+  .ui-icon-triangle-1-s {
+    background-position: -65px -16px !default;
+  }
+
+  .ui-icon-triangle-1-n {
+    margin-top: -9px !default;
+  }
+}
+
+.ui-spinner-input::-ms-clear {
+  display: none !default;
+}

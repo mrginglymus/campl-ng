@@ -1,0 +1,20 @@
+.ui-inplace {
+  .ui-inplace-display {
+    cursor: pointer !default;
+    border: 0px none !important !default;
+  }
+
+  .ui-inplace-disabled {
+    cursor: default !default;
+  }
+
+  .ui-inplace-content {}
+
+  .ui-inplace-editor {
+    margin-left: 0.1em !default;
+
+    .ui-button-icon-only .ui-button-text {
+      padding: 0 !default;
+    }
+  }
+}

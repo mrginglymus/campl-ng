@@ -30,6 +30,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-webdriver'
   grunt.loadNpmTasks 'grunt-env'
   grunt.loadNpmTasks 'grunt-http-server'
+  grunt.loadNpmTasks 'grunt-sass-convert'
 
   grunt.initConfig
     pkg: grunt.file.readJSON('package.json')
@@ -37,6 +38,8 @@ module.exports = (grunt) ->
     clean:
       dist: 'dist',
       build: 'build',
+      primefaces_css: 'scss/primefaces/structure/base/**/*.css'
+      primefaces_base: 'scss/primefaces/structure/base'
 
     env:
       local:
@@ -76,6 +79,12 @@ module.exports = (grunt) ->
             'build/**/*.{js,css}'
           ]
 
+    'sass-convert':
+      options:
+        from: 'css'
+        to: 'scss'
+      files: 
+        src: ['scss/primefaces/structure/base/**/*.css']
 
     sass_globbing:
       core:
@@ -180,6 +189,20 @@ module.exports = (grunt) ->
           ]
 
     replace:
+      primefaces_pre:
+        src: ['scss/primefaces/structure/base/**/*.css'],
+        overwrite: true,
+        replacements: [
+          from: /#{resource\['primefaces:([\w\/.]*)']}/g
+          to: "$1"
+        ]
+      primefaces_post:
+        src: ['scss/primefaces/structure/base/**/*.scss'],
+        overwrite: true,
+        replacements: [
+          from: /;/g
+          to: " !default;"
+        ]
       image_cache:
         src: ['build/**/*.html', '!build/templates/**/*.html'],
         overwrite: true,
@@ -204,6 +227,11 @@ module.exports = (grunt) ->
         cmd: 'python make.py'
 
     copy:
+      primefaces:
+        expand: true
+        cwd: 'lib/primefaces/src/main/resources/META-INF/resources/primefaces'
+        src: ['**/*.css']
+        dest: 'scss/primefaces/structure/base'
       favicon:
         src: 'favicon.ico',
         dest: 'build/favicon.ico'
@@ -300,6 +328,8 @@ module.exports = (grunt) ->
   grunt.registerTask 'dist', ['clean:dist', 'build', 'copy:dist']
   
   grunt.registerTask 'cache-images', ['replace:image_cache']
+
+  grunt.registerTask 'primefaces', ['clean:primefaces_base', 'copy:primefaces', 'replace:primefaces_pre', 'sass-convert', 'replace:primefaces_post', 'clean:primefaces_css']
 
   grunt.registerTask 'test', ['http-server', 'coffee:test', 'webdriver']
 

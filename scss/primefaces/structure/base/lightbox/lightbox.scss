@@ -1,0 +1,55 @@
+.ui-lightbox {
+  position: fixed !default;
+}
+
+.ui-lightbox-content-wrapper {
+  position: relative !default;
+}
+
+.ui-lightbox-content {
+  position: relative !default;
+  margin: 0 !default;
+  padding: 0 !default;
+  background-color: #000000 !default;
+}
+
+.ui-lightbox-nav-right {
+  position: absolute !default;
+  top: 50% !default;
+  cursor: pointer !default;
+}
+
+.ui-lightbox-nav-left {
+  position: absolute !default;
+  top: 50% !default;
+  cursor: pointer !default;
+  left: 0 !default;
+}
+
+.ui-lightbox-nav-right {
+  right: 0 !default;
+}
+
+.ui-lightbox-loading {
+  background: url("lightbox/images/loading.gif") #000000 center center no-repeat !default;
+}
+
+.ui-lightbox-caption {
+  padding: 0.2em 0.4em !default;
+  display: none !default;
+}
+
+.ui-lightbox-caption-text {
+  margin: 0.3em 0 0.1em 0 !default;
+  float: left !default;
+}
+
+.ui-lightbox-close {
+  float: right !default;
+  margin: 0 !default;
+  padding: 1px !default;
+
+  &.ui-state-hover {
+    padding: 0 !default;
+  }
+}

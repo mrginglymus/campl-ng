@@ -1,0 +1,40 @@
+.ui-datagrid .ui-paginator {
+  text-align: center !default;
+}
+
+.ui-datagrid-column {
+  padding: 3px !default;
+}
+
+.ui-datagrid-content-empty {
+  padding: 4px 10px !default;
+}
+
+.ui-datagrid {
+  .ui-datagrid-header, .ui-datagrid-footer {
+    text-align: center !default;
+    padding: 4px 10px !default;
+  }
+
+  .ui-datagrid-header {
+    border-bottom: 0px none !default;
+  }
+
+  .ui-datagrid-footer {
+    border-top: 0px none !default;
+  }
+
+  .ui-paginator-top {
+    border-bottom: 0px none !default;
+  }
+
+  .ui-paginator-bottom {
+    border-top: 0px none !default;
+  }
+}
+
+/** Table Layout **/
+
+.ui-datagrid-data {
+  width: 100% !default;
+}

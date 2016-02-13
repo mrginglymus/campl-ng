@@ -1,0 +1,126 @@
+.ui-editor {
+  border: 1px solid #999 !default;
+  padding: 0 1px 1px !default;
+  background-color: white !default;
+  -moz-box-sizing: content-box !default;
+  -webkit-box-sizing: content-box !default;
+  box-sizing: content-box !default;
+}
+
+.ui-editor-popup {
+  -moz-box-sizing: content-box !default;
+  -webkit-box-sizing: content-box !default;
+  box-sizing: content-box !default;
+}
+
+.ui-editor {
+  * {
+    -moz-box-sizing: content-box !default;
+    -webkit-box-sizing: content-box !default;
+    box-sizing: content-box !default;
+  }
+
+  iframe {
+    border: none !default;
+    margin: 0 !default;
+    padding: 0 !default;
+  }
+
+  textarea {
+    overflow-y: scroll !default;
+    font: 10pt Arial,Verdana !default;
+    resize: none !default;
+    outline: none !default;
+  }
+}
+
+.ui-editor-toolbar {
+  background: url("editor/images/toolbar.gif") repeat !default;
+}
+
+.ui-editor-group {
+  float: left !default;
+  height: 26px !default;
+}
+
+.ui-editor-button {
+  float: left !default;
+  width: 24px !default;
+  height: 24px !default;
+  margin: 1px 0 1px 0 !default;
+  background: url("editor/images/buttons.gif") !default;
+}
+
+.ui-editor-disabled {
+  opacity: 0.3 !default;
+  filter: alpha(opacity = 30) !default;
+}
+
+.ui-editor-divider {
+  float: left !default;
+  width: 1px !default;
+  height: 23px !default;
+  margin: 1px 0 1px 0 !default;
+  background: #CCC !default;
+}
+
+.ui-editor-popup {
+  border: solid 1px #999 !default;
+  background-color: white !default;
+  color: #333333 !default;
+  position: absolute !default;
+  font: 10pt Arial,Verdana !default;
+  cursor: default !default;
+  z-index: 10000 !default;
+}
+
+.ui-editor-list {
+  div {
+    padding: 2px 4px 2px 4px !default;
+  }
+
+  p, h1, h2, h3, h4, h5, h6, font {
+    padding: 0 !default;
+    margin: 0 !default;
+    background-color: Transparent !default;
+  }
+}
+
+.ui-editor-color {
+  width: 150px !default;
+  padding: 1px 0 0 1px !default;
+
+  div {
+    float: left !default;
+    width: 14px !default;
+    height: 14px !default;
+    margin: 0 1px 1px 0 !default;
+  }
+}
+
+.ui-editor-prompt {
+  background-color: #F6F7F9 !default;
+  padding: 8px !default;
+  font-size: 8.5pt !default;
+
+  label {
+    padding-bottom: 8px !default;
+  }
+}
+
+.ui-editor-message {
+  background-color: #FDFCEE !default;
+  width: 150px !default;
+  padding: 4px !default;
+  font-size: 8.5pt !default;
+}
+
+/** IE fix within overlays **/
+
+.ui-overlay-hidden .ui-editor iframe {
+  display: none !important !default;
+}
+
+.ui-overlay-visible .ui-editor iframe {
+  display: inline !important !default;
+}

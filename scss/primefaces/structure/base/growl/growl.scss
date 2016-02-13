@@ -1,0 +1,89 @@
+/* ie6 */
+
+* html {
+  .ui-growl {
+    position: absolute !default;
+  }
+
+  .ui-growl-item {
+    padding-bottom: 0 !default;
+  }
+
+  .ui-growl-icon-close {
+    top: 7px !default;
+    right: 7px !default;
+  }
+}
+
+.ui-growl {
+  position: fixed !default;
+  top: 20px !default;
+  right: 20px !default;
+  width: 301px !default;
+}
+
+.ui-growl-item-container {
+  position: relative !default;
+  margin: 0 0 10px 0 !default;
+  opacity: 0.85 !default;
+  filter: alpha(opacity = 85) !default;
+}
+
+.ui-growl-item {
+  display: block !default;
+  padding: 10px 15px !default;
+
+  p {
+    padding: 0 !default;
+    margin: 0 !default;
+  }
+}
+
+.ui-growl-icon-close {
+  position: absolute !default;
+  top: 5px !default;
+  right: 3px !default;
+  cursor: pointer !default;
+}
+
+.ui-growl-title {
+  font-weight: bold !default;
+  padding: 0 0 7px 0 !default;
+  display: block !default;
+}
+
+.ui-growl-image {
+  width: 32px !default;
+  height: 32px !default;
+  float: left !default;
+  margin: 0 !default;
+  padding: 0 !default;
+  display: block !default;
+  background: url("messages/messages.png") no-repeat !default;
+}
+
+.ui-growl-image-info {
+  background-position: 0 -264px !default;
+}
+
+.ui-growl-image-warn {
+  background-position: 0 -396px !default;
+}
+
+.ui-growl-image-error {
+  background-position: 0 0 !default;
+}
+
+.ui-growl-image-fatal {
+  background-position: 0 -132px !default;
+}
+
+.ui-growl-message {
+  padding: 0 0 5px 0 !default;
+  width: 220px !default;
+  float: right !default;
+
+  p {
+    font-weight: normal !default;
+  }
+}

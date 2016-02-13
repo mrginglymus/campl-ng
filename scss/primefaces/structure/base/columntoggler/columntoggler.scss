@@ -1,0 +1,104 @@
+.ui-columntoggler {
+  padding: 0 !default;
+  position: absolute !default;
+  overflow: auto !default;
+  display: none !default;
+
+  .ui-columntoggler-items {
+    border: 0 none !default;
+    padding: 0.4em !default;
+    margin: 0 !default;
+  }
+
+  .ui-columntoggler-item {
+    border: 0px none !default;
+    cursor: pointer !default;
+    font-weight: normal !default;
+    margin: 1px 0 !default;
+    padding: 3px 5px !default;
+    text-align: left !default;
+    white-space: nowrap !default;
+    display: block !default;
+    position: relative !default;
+
+    .ui-chkbox {
+      position: absolute !default;
+      top: 50% !default;
+      margin-top: -8px !default;
+    }
+
+    label {
+      display: block !default;
+      padding-left: 2.2em !default;
+    }
+  }
+
+  .ui-columntoggler-close {
+    float: right !default;
+    margin-top: 1px !default;
+    margin-right: 1px !default;
+
+    &:focus {
+      outline: dotted thin !default;
+    }
+  }
+
+  .ui-columntoggler-items {
+    padding: 1em 0.4em 0.4em 0.4em !default;
+  }
+}
+
+/* Column Priorities */
+@media only all {
+  .ui-columntoggler .ui-columntoggler-item {
+    &.ui-column-p-1, &.ui-column-p-2, &.ui-column-p-3, &.ui-column-p-4, &.ui-column-p-5, &.ui-column-p-6 {
+      display: none !default;
+    }
+  }
+
+  th.ui-helper-hidden, td.ui-helper-hidden {
+    display: none !default;
+  }
+}
+
+/* Show priority 1 at 320px (20em x 16px) */
+@media screen and (min-width: 20em) {
+  .ui-columntoggler .ui-columntoggler-item.ui-column-p-1 {
+    display: block !default;
+  }
+}
+
+/* Show priority 2 at 480px (30em x 16px) */
+@media screen and (min-width: 30em) {
+  .ui-columntoggler .ui-columntoggler-item.ui-column-p-2 {
+    display: block !default;
+  }
+}
+
+/* Show priority 3 at 640px (40em x 16px) */
+@media screen and (min-width: 40em) {
+  .ui-columntoggler .ui-columntoggler-item.ui-column-p-3 {
+    display: block !default;
+  }
+}
+
+/* Show priority 4 at 800px (50em x 16px) */
+@media screen and (min-width: 50em) {
+  .ui-columntoggler .ui-columntoggler-item.ui-column-p-4 {
+    display: block !default;
+  }
+}
+
+/* Show priority 5 at 960px (60em x 16px) */
+@media screen and (min-width: 60em) {
+  .ui-columntoggler .ui-columntoggler-item.ui-column-p-5 {
+    display: block !default;
+  }
+}
+
+/* Show priority 6 at 1,120px (70em x 16px) */
+@media screen and (min-width: 70em) {
+  .ui-columntoggler .ui-columntoggler-item.ui-column-p-6 {
+    display: block !default;
+  }
+}
