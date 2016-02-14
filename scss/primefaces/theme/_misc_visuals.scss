@@ -1,0 +1,191 @@
+/* Misc visuals
+----------------------------------*/
+
+/* Corner radius */
+.ui-corner-tl
+{
+    border-top-left-radius: 0px;
+}
+.ui-corner-tr
+{
+    border-top-right-radius: 0px;
+}
+.ui-corner-bl
+{
+    border-bottom-left-radius: 0px;
+}
+.ui-corner-br
+{
+    border-bottom-right-radius: 0px;
+}
+.ui-corner-top
+{
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+.ui-corner-bottom
+{
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+.ui-corner-right
+{
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+.ui-corner-left
+{
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+.ui-corner-all
+{
+    border-radius: 0px;
+}
+.ui-round-all
+{
+    border-radius: 0px;
+}
+
+/* Overlays */
+.ui-widget-overlay
+{
+    background: #2d5972;
+    opacity: .30;
+}
+.ui-widget-shadow
+{
+    /*no styles here!*/
+}
+
+
+/**
+ * Widget Extensions
+ */
+.ui-accordion .ui-accordion-header {
+    margin: 0;
+    border-radius: 0;
+}
+
+.ui-accordion .ui-accordion-content {
+    margin-bottom: 0;
+}
+
+.ui-dialog .ui-dialog-titlebar {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-radius: 0;
+}
+
+.ui-slider {
+    border-radius: 0px;
+    background: #cbcbcb;
+    box-shadow: none;
+}
+.ui-slider .ui-slider-handle {
+    border-radius: 0px;
+}
+.ui-slider .ui-slider-range {
+    background: #a3cae0;
+    box-shadow: none;
+}
+
+.ui-slider-vertical {
+    background: #cbcbcb;
+    box-shadow: none;
+}
+
+.ui-slider-vertical .ui-slider-range {
+    background: #a3cae0;
+    box-shadow: none;
+}
+
+.ui-slider .ui-slider-handle span {
+    height: 16px !important;
+    width: 16px !important;
+    float: none !important;
+    margin: 0 auto !important;
+}
+
+.ui-slider .ui-slider-handle {
+    background: #85b2cb;
+}
+
+.ui-tabs .ui-tabs-nav li {
+    border: 1px solid #a8a8a8;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected {
+    border: 1px solid #a8a8a8;
+}
+
+.ui-tabs.ui-tabs-top .ui-tabs-nav li.ui-tabs-selected {
+    border-bottom: 0;
+}
+
+.ui-tabs .ui-tabs-panel {
+    border-width: 0;
+    padding: 1em 1.4em;
+    background: none;
+}
+
+.ui-tabs .ui-tabs-nav {
+    background: #e3e3e3;
+    border-radius: 0;
+}
+
+.ui-tabs .ui-tabs-nav .ui-tabs-selected {
+    background: #fff;
+    border-bottom: none;
+    box-shadow: none;
+}
+
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {
+    cursor: pointer;
+}
+
+.ui-datepicker table {
+    table-layout: fixed;
+}
+
+.ui-datepicker .ui-datepicker-calendar .ui-state-default {
+    background: none;
+    border: none;
+    color: #5F83B9;
+}
+
+.ui-datepicker .ui-datepicker-calendar .ui-state-hover {
+    color: #1C4257;
+    box-shadow: none;
+}
+
+.ui-datepicker .ui-datepicker-current-day .ui-state-highlight, .ui-datepicker .ui-datepicker-current-day .ui-state-default {
+    background: #5F83B9;
+    color: #FFFFFF !important;
+    font-weight: bold;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+.ui-datepicker .ui-datepicker-header {
+    background: #e3e3e3;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    border-radius: 0;
+}
+
+.ui-datepicker .ui-datepicker-next-hover, .ui-datepicker .ui-datepicker-prev-hover {
+    background: none;
+    border: solid 1px transparent;
+}
+
+.ui-progressbar {
+    border-radius: 0px;
+}
+
+.ui-progressbar .ui-widget-header {
+    background: #85b2cb;
+    border-radius: 0px;
+}

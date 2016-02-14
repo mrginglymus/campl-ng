@@ -1,0 +1,38 @@
+/* Component containers
+----------------------------------*/
+.ui-widget
+{
+    font-family: inherit;
+    font-size: inherit;
+}
+.ui-widget .ui-widget
+{
+    font-size: inherit;
+}
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button
+{
+    font-family: inherit;
+    font-size: inherit;
+}
+.ui-widget-content
+{
+    border: 1px solid #a8a8a8;
+    background: #ffffff;
+    color: #4f4f4f;
+}
+.ui-widget-content a
+{
+    color: #4f4f4f;
+}
+.ui-widget-header
+{
+    border: 1px solid #a8a8a8;
+    background: #c4c4c4;
+    color: #333;
+    font-weight: bold;
+    text-shadow: none;
+}
+.ui-widget-header a
+{
+    color: #4f4f4f;
+}

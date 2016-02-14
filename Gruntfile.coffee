@@ -41,6 +41,7 @@ module.exports = (grunt) ->
       primefaces_css: 'scss/primefaces/structure/base/**/*.css'
       primefaces_base: 'scss/primefaces/structure/base'
       primefaces_fa: 'scss/primefaces/structure/base/fa'
+      primefaces_jqm: 'scss/primefaces/structure/base/mobile'
 
     env:
       local:
@@ -120,7 +121,8 @@ module.exports = (grunt) ->
           sourcemap: 'inline'
           style: 'expanded'
         files:
-          'build/css/primefaces.min.css': 'scss/primefaces/primefaces.scss'
+          'build/css/primefaces.css': 'scss/primefaces/primefaces.scss'
+          'build/css/theme.css': 'scss/primefaces/theme.scss'
 
     postcss:
       options:
@@ -231,11 +233,17 @@ module.exports = (grunt) ->
         cmd: 'python make.py'
 
     copy:
-      primefaces:
+      'primefaces-init':
         expand: true
         cwd: 'lib/primefaces/src/main/resources/META-INF/resources/primefaces'
         src: ['**/*.css']
         dest: 'scss/primefaces/structure/base'
+      'primefaces-theme':
+        src: 'build/css/theme.css'
+        dest: '../showcase/src/main/webapp/resources/primefaces-campl-ng/theme.css'
+      primefaces:
+        src: 'build/css/primefaces.css'
+        dest: '../showcase/src/main/webapp/resources/primefaces/primefaces.css'
       favicon:
         src: 'favicon.ico',
         dest: 'build/favicon.ico'
@@ -340,8 +348,9 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'primefaces-init', [
     'clean:primefaces_base',
-    'copy:primefaces',
+    'copy:primefaces-init',
     'clean:primefaces_fa',
+    'clean:primefaces_jqm',
     'replace:primefaces_pre',
     'sass-convert',
     'clean:primefaces_css',
@@ -349,7 +358,12 @@ module.exports = (grunt) ->
     'sass_globbing:primefaces',
   ]
 
-  grunt.registerTask 'primefaces', ['sass_globbing:primefaces', 'sass:primefaces']
+  grunt.registerTask 'primefaces', [
+    'sass_globbing:primefaces',
+    'sass:primefaces'
+    'copy:primefaces'
+    'copy:primefaces-theme'
+  ]
 
   grunt.registerTask 'test', ['http-server', 'coffee:test', 'webdriver']
 

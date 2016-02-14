@@ -1,0 +1,91 @@
+
+/* PrimeFaces Extensions */
+.ui-inputfield, .ui-widget-content .ui-inputfield, .ui-widget-header .ui-inputfield {
+    background: #ffffff;
+    box-shadow: none;
+    color: #313131;
+}
+
+.ui-inputfield.ui-state-focus, .ui-widget-content .ui-inputfield.ui-state-focus, .ui-widget-header .ui-inputfield.ui-state-focus {
+    box-shadow: none;
+}
+
+.ui-menu, .ui-menu .ui-menu-child {
+    background: #c4c4c4;
+}
+
+.ui-menu .ui-menu-list {
+    background: none;
+}
+
+.ui-menubar .ui-menu-child {
+    background: #ffffff;
+}
+
+.ui-menu .ui-menuitem-link {
+    border-color: #c4c4c4;
+    filter: chroma(color=#c4c4c4);
+}
+
+.ui-datatable-odd {
+    background: none repeat scroll 0 0 #F2F5F9;
+}
+
+/** Liferay Support **/
+.aui .ui-helper-hidden {
+    display: none;
+}
+
+/*Autocomplete*/
+.aui .ui-helper-reset {
+    margin: 0;
+}
+
+/*Menubar*/
+.aui .ui-widget-content .ui-widget a { 
+    color: #4f4f4f;
+}
+
+/*SelectOneMenu*/
+.aui .ui-selectonemenu .ui-widget {
+    font-size: 1.1em;
+}
+
+.aui .ui-selectonemenu-label .ui-inputfield {
+    color: #313131;
+}
+
+.aui .ui-selectonemenu-label {
+    margin-bottom: 0px;
+}
+
+/*Spinner*/
+.aui .ui-spinner .ui-corner-all {
+    border-radius: 0px;
+}
+
+.aui .ui-spinner .ui-inputfield {
+    box-shadow: none;
+    color: #313131;
+    margin: 0;
+    padding: 4px;
+    font-weight: normal;
+}
+
+.aui .ui-spinner .ui-spinner-input {
+    vertical-align: middle;
+    padding-right: 20px;
+}
+
+.aui .ui-widget input {
+    font-size: 1em;
+}
+
+.aui .ui-spinner .ui-inputfield.ui-state-focus {
+    box-shadow: none;
+}
+
+/*Tabs*/
+.aui .ui-tabs .ui-state-default a {
+	color: #4f4f4f;
+}

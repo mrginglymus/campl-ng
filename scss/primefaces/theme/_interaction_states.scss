@@ -1,0 +1,58 @@
+/* Interaction states
+----------------------------------*/
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default
+{
+    border: 1px solid #a8a8a8;
+    background: #c4c4c4;
+    font-weight: bold;
+    color: #4f4f4f;
+    text-shadow: none;
+}
+.ui-state-default
+{
+    box-shadow: none;
+}
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited
+{
+    color: #4f4f4f;
+    text-decoration: none;
+    text-shadow: none;
+}
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus
+{
+    border: 1px solid #7096ab;
+    background: #85b2cb;
+    font-weight: bold;
+    color: #313131;
+    box-shadow: none;
+}
+.ui-state-hover
+{
+    box-shadow: none;
+}
+.ui-state-hover a, .ui-state-hover a:hover
+{
+    color: #2f556a;
+    text-decoration: none;
+}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active
+{
+    border: 1px solid #7096ab;
+    background: #85b2cb;
+    font-weight: bold;
+    color: #1C4257;
+    text-shadow: none;
+}
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited
+{
+    color: #2f556a;
+    text-decoration: none;
+}
+.ui-widget :active
+{
+    outline: none;
+}
+.ui-state-active
+{
+    box-shadow: none;
+}
