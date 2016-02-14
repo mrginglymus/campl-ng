@@ -213,7 +213,7 @@ module.exports = (grunt) ->
         src: ['build/css/primefaces.css', 'build/css/theme.css'],
         overwrite: true,
         replacements: [
-          from: /"(.*):(.*)"/g
+          from: /"(.+):(.+)"/g
           to: '"#{resource[\'$1:$2\']}"'
         ]
       image_cache:
