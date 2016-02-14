@@ -206,8 +206,15 @@ module.exports = (grunt) ->
         src: ['scss/primefaces/structure/base/**/*.css'],
         overwrite: true,
         replacements: [
-          from: /#{resource\['primefaces:([\w\/.-]*)']}/g
+          from: /#\{resource\['(.*)'\]\}/g
           to: "$1"
+        ]
+      primefaces_post:
+        src: ['build/css/primefaces.css', 'build/css/theme.css'],
+        overwrite: true,
+        replacements: [
+          from: /"(.*):(.*)"/g
+          to: '"#{resource[\'$1:$2\']}"'
         ]
       image_cache:
         src: ['build/**/*.html', '!build/templates/**/*.html'],
@@ -360,9 +367,10 @@ module.exports = (grunt) ->
 
   grunt.registerTask 'primefaces', [
     'sass_globbing:primefaces',
-    'sass:primefaces'
-    'copy:primefaces'
-    'copy:primefaces-theme'
+    'sass:primefaces',
+    'replace:primefaces_post',
+    'copy:primefaces',
+    'copy:primefaces-theme',
   ]
 
   grunt.registerTask 'test', ['http-server', 'coffee:test', 'webdriver']
