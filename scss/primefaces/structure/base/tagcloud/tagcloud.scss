@@ -1,46 +1,63 @@
+$_ui_tagcloud___width: 250px !default;
+$_ui_tagcloud_ul___margin: 1em !default;
+$_ui_tagcloud_ul___padding: 0.1em !default;
+$_ui_tagcloud_ul___text_align: center !default;
+$_ui_tagcloud_li___margin: 0 !default;
+$_ui_tagcloud_li___padding: 0 !default;
+$_ui_tagcloud_li___list_style: none !default;
+$_ui_tagcloud_li___display: inline-block !default;
+$_ui_tagcloud_li_a___text_decoration: none !default;
+$_ui_tagcloud_li_a___padding: 0 5px !default;
+$_ui_tagcloud_strength_1___font_size: 100% !default;
+$_ui_tagcloud_strength_2___font_size: 120% !default;
+$_ui_tagcloud_strength_3___font_size: 140% !default;
+$_ui_tagcloud_strength_4___font_size: 160% !default;
+$_ui_tagcloud_strength_5___font_size: 180% !default;
+$_ui_tagcloud_li_a_ui_state_hover___border: 0px none !default;
+$_ui_tagcloud_li_a_ui_state_hover___font_weight: inherit !default;
 .ui-tagcloud {
-  width: 250px;
+  width: $_ui_tagcloud___width;
 
   ul {
-    margin: 1em;
-    padding: 0.1em;
-    text-align: center;
+    margin: $_ui_tagcloud_ul___margin;
+    padding: $_ui_tagcloud_ul___padding;
+    text-align: $_ui_tagcloud_ul___text_align;
   }
 
   li {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: inline-block;
+    margin: $_ui_tagcloud_li___margin;
+    padding: $_ui_tagcloud_li___padding;
+    list-style: $_ui_tagcloud_li___list_style;
+    display: $_ui_tagcloud_li___display;
 
     a {
-      text-decoration: none;
-      padding: 0 5px;
+      text-decoration: $_ui_tagcloud_li_a___text_decoration;
+      padding: $_ui_tagcloud_li_a___padding;
     }
   }
 }
 
 .ui-tagcloud-strength-1 {
-  font-size: 100%;
+  font-size: $_ui_tagcloud_strength_1___font_size;
 }
 
 .ui-tagcloud-strength-2 {
-  font-size: 120%;
+  font-size: $_ui_tagcloud_strength_2___font_size;
 }
 
 .ui-tagcloud-strength-3 {
-  font-size: 140%;
+  font-size: $_ui_tagcloud_strength_3___font_size;
 }
 
 .ui-tagcloud-strength-4 {
-  font-size: 160%;
+  font-size: $_ui_tagcloud_strength_4___font_size;
 }
 
 .ui-tagcloud-strength-5 {
-  font-size: 180%;
+  font-size: $_ui_tagcloud_strength_5___font_size;
 }
 
 .ui-tagcloud li a.ui-state-hover {
-  border: 0px none;
-  font-weight: inherit;
+  border: $_ui_tagcloud_li_a_ui_state_hover___border;
+  font-weight: $_ui_tagcloud_li_a_ui_state_hover___font_weight;
 }

@@ -1,24 +1,37 @@
+$_ui_terminal___height: 300px !default;
+$_ui_terminal___overflow: auto !default;
+$_ui_terminal___padding: 3px !default;
+$_ui_terminal_input___border: 0 none !default;
+$_ui_terminal_input___background_color: transparent !default;
+$_ui_terminal_input___color: inherit !default;
+$_ui_terminal_input___padding: 0 !default;
+$_ui_terminal_input___margin: 0 0 0 2px !default;
+$_ui_terminal_input___width: 75% !default;
+$_ui_terminal_input___outline: none !default;
+$_ui_terminal_command___margin_left: 2px !default;
+$_ui_terminal_command____moz_margin_start: 3px !default;
+$_ui_terminal_input___ms_clear___display: none !default;
 .ui-terminal {
-  height: 300px;
-  overflow: auto;
-  padding: 3px;
+  height: $_ui_terminal___height;
+  overflow: $_ui_terminal___overflow;
+  padding: $_ui_terminal___padding;
 }
 
 .ui-terminal-input {
-  border: 0 none;
-  background-color: transparent;
-  color: inherit;
-  padding: 0;
-  margin: 0 0 0 2px;
-  width: 75%;
-  outline: none;
+  border: $_ui_terminal_input___border;
+  background-color: $_ui_terminal_input___background_color;
+  color: $_ui_terminal_input___color;
+  padding: $_ui_terminal_input___padding;
+  margin: $_ui_terminal_input___margin;
+  width: $_ui_terminal_input___width;
+  outline: $_ui_terminal_input___outline;
 }
 
 .ui-terminal-command {
-  margin-left: 2px;
-  -moz-margin-start: 3px;
+  margin-left: $_ui_terminal_command___margin_left;
+  -moz-margin-start: $_ui_terminal_command____moz_margin_start;
 }
 
 .ui-terminal-input::-ms-clear {
-  display: none;
+  display: $_ui_terminal_input___ms_clear___display;
 }

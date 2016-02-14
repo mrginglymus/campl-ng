@@ -1,168 +1,251 @@
+$_ui_tree___width: 300px !default;
+$_ui_tree___position: relative !default;
+$_ui_tree__ui_tree_container___margin: 0 !default;
+$_ui_tree__ui_tree_container___padding: 3px !default;
+$_ui_tree__ui_tree_container___white_space: nowrap !default;
+$_ui_tree__ui_tree_container___overflow: auto !default;
+$_ui_tree__ui_treenode_children___margin: 0 !default;
+$_ui_tree__ui_treenode_children___padding: 0 0 0 16px !default;
+$_ui_tree__ui_treenode___background_attachment: scroll !default;
+$_ui_tree__ui_treenode___background_color: transparent !default;
+$_ui_tree__ui_treenode___background_image: none !default;
+$_ui_tree__ui_treenode___background_position: 0 0 !default;
+$_ui_tree__ui_treenode___background_repeat: repeat-y !default;
+$_ui_tree__ui_treenode___list_style: none outside none !default;
+$_ui_tree__ui_treenode___margin: 0 !default;
+$_ui_tree__ui_treenode___padding: 1px 0 0 !default;
+$_ui_tree__ui_tree_toggler___cursor: pointer !default;
+$_ui_tree__ui_tree_toggler___display: inline-block !default;
+$_ui_tree__ui_tree_toggler___vertical_align: top !default;
+$_ui_tree__ui_treenode_icon___display: inline-block !default;
+$_ui_tree__ui_treenode_icon___vertical_align: top !default;
+$_ui_tree__ui_treenode_label___display: inline-block !default;
+$_ui_tree__ui_treenode_label___margin: 2px 0 0 0 !default;
+$_ui_tree__ui_treenode_label___vertical_align: top !default;
+$_ui_tree__ui_treenode_label___padding: 0 3px !default;
+$_ui_tree__ui_tree_selectable__ui_treenode_label___ui_tree__ui_tree_selectable__ui_treenode_icon___cursor: pointer !default;
+$_ui_tree__ui_treenode_label_ui_state_hover___ui_tree__ui_treenode_label_ui_state_highlight___font_weight: normal !default;
+$_ui_tree__ui_treenode_label_ui_state_hover___ui_tree__ui_treenode_label_ui_state_highlight___border: 0 none !default;
+$_ui_tree__ui_treenode_leaf_icon___width: 16px !default;
+$_ui_tree__ui_treenode_leaf_icon___height: 16px !default;
+$_ui_tree__ui_treenode_leaf_icon___display: inline-block !default;
+$_ui_tree__ui_chkbox_box___cursor: pointer !default;
+$_ui_tree__ui_chkbox_box___width: 15px !default;
+$_ui_tree__ui_chkbox_box___height: 15px !default;
+$_ui_tree__ui_chkbox_box___float: left !default;
+$_ui_tree__ui_chkbox___display: inline-block !default;
+$_ui_tree__ui_chkbox___zoom: 1 !default;
+$_ui_tree_horizontal___width: auto !default;
+$_ui_tree_horizontal___padding: 10px 0px !default;
+$_ui_tree_horizontal___overflow: auto !default;
+$_ui_tree_ui_tree_horizontal_table___ui_tree_ui_tree_horizontal_tr___ui_tree_ui_tree_horizontal_td___border_collapse: collapse !default;
+$_ui_tree_ui_tree_horizontal_table___ui_tree_ui_tree_horizontal_tr___ui_tree_ui_tree_horizontal_td___margin: 0 !default;
+$_ui_tree_ui_tree_horizontal_table___ui_tree_ui_tree_horizontal_tr___ui_tree_ui_tree_horizontal_td___padding: 0 !default;
+$_ui_tree_ui_tree_horizontal_table___ui_tree_ui_tree_horizontal_tr___ui_tree_ui_tree_horizontal_td___vertical_align: middle !default;
+$_ui_tree_ui_tree_horizontal__ui_tree_toggler___vertical_align: bottom !default;
+$_ui_tree_horizontal__ui_treenode_content___font_weight: normal !default;
+$_ui_tree_horizontal__ui_treenode_content_ui_tree_selectable___cursor: pointer !default;
+$_ui_tree_horizontal__ui_treenode_parent__ui_treenode_content___font_weight: normal !default;
+$_ui_tree_horizontal__ui_treenode_parent__ui_treenode_content___white_space: nowrap !default;
+$_ui_tree_horizontal__ui_treenode_parent__ui_treenode_content___padding: 0.4em 1em 0.4em 0.2em !default;
+$_ui_tree_horizontal__ui_treenode_leaf__ui_treenode_content___padding: 0.4em 1em !default;
+$_ui_tree_ui_tree_horizontal__ui_treenode___background: url("tree/images/line.gif") repeat-x scroll center center transparent !default;
+$_ui_tree_ui_tree_horizontal__ui_treenode___padding: 5px 40px !default;
+$_ui_tree_ui_tree_horizontal__ui_treenode_ui_treenode_leaf___ui_tree_ui_tree_horizontal__ui_treenode_ui_treenode_collapsed___padding_right: 0px !default;
+$_ui_tree_ui_tree_horizontal__ui_treenode_children___padding: 0 !default;
+$_ui_tree_ui_tree_horizontal__ui_treenode_children___margin: 0 !default;
+$_ui_tree_ui_tree_horizontal__ui_treenode_connector___width: 1px !default;
+$_ui_tree_ui_tree_horizontal__ui_treenode_connector_table___height: 100% !default;
+$_ui_tree_ui_tree_horizontal__ui_treenode_connector_table___width: 1px !default;
+$_ui_tree_ui_tree_horizontal__ui_treenode_connector_line___background: url("tree/images/line.gif") repeat-y scroll 0 0 transparent !default;
+$_ui_tree_ui_tree_horizontal__ui_treenode_connector_line___width: 1px !default;
+$_ui_tree_ui_tree_horizontal_table___height: 0px !default;
+$_ui_tree_ui_tree_horizontal__ui_chkbox___vertical_align: bottom !default;
+$_ui_tree_ui_tree_horizontal__ui_chkbox___margin_right: 3px !default;
+$_ui_tree_ui_tree_rtl___direction: rtl !default;
+$_ui_tree_ui_tree_rtl__ui_treenode_children___padding: 0 16px 0 0 !default;
+$_ui_tree_droppoint___list_style: none outside none !default;
+$_ui_tree_droppoint___height: 4px !default;
+$_ui_tree_droppoint___margin: 0 !default;
+$_ui_tree_droppoint___padding: 0 !default;
+$_ui_tree_droppoint_ui_state_hover___border: 0 none !default;
+$_ui_treenode_content_ui_state_hover___font_weight: inherit !default;
+$_ui_tree_draghelper_ui_state_highlight___background: none transparent !default;
+$_ui_tree__ui_tree_scrollertop___ui_tree__ui_tree_scrollerbottom___height: 10px !default;
+$_ui_tree__ui_tree_scrollertop___ui_tree__ui_tree_scrollerbottom___width: 100% !default;
+$_ui_tree__ui_tree_scrollertop___ui_tree__ui_tree_scrollerbottom___position: absolute !default;
+$_ui_tree__ui_tree_scrollertop___top: 0 !default;
+$_ui_tree__ui_tree_scrollerbottom___bottom: 0 !default;
+$_ui_tree__ui_treenode_content__ui_chkbox_ui_selection___display: none !default;
+$_ui_tree__ui_treenode_content_ui_tree_selectable__ui_chkbox_ui_selection___display: inline-block !default;
+$_ui_tree_ui_tree_checkbox_all__ui_treenode_content__ui_chkbox_ui_selection___display: inline-block !default;
+$_ui_tree__ui_treenode_outline___outline: 1px dotted !default;
+$_ui_fluid__ui_tree___width: 100% !default;
 .ui-tree {
-  width: 300px;
-  position: relative;
+  width: $_ui_tree___width;
+  position: $_ui_tree___position;
 
   .ui-tree-container {
-    margin: 0;
-    padding: 3px;
-    white-space: nowrap;
-    overflow: auto;
+    margin: $_ui_tree__ui_tree_container___margin;
+    padding: $_ui_tree__ui_tree_container___padding;
+    white-space: $_ui_tree__ui_tree_container___white_space;
+    overflow: $_ui_tree__ui_tree_container___overflow;
   }
 
   .ui-treenode-children {
-    margin: 0;
-    padding: 0 0 0 16px;
+    margin: $_ui_tree__ui_treenode_children___margin;
+    padding: $_ui_tree__ui_treenode_children___padding;
   }
 
   .ui-treenode {
-    background-attachment: scroll;
-    background-color: transparent;
-    background-image: none;
-    background-position: 0 0;
-    background-repeat: repeat-y;
-    list-style: none outside none;
-    margin: 0;
-    padding: 1px 0 0;
+    background-attachment: $_ui_tree__ui_treenode___background_attachment;
+    background-color: $_ui_tree__ui_treenode___background_color;
+    background-image: $_ui_tree__ui_treenode___background_image;
+    background-position: $_ui_tree__ui_treenode___background_position;
+    background-repeat: $_ui_tree__ui_treenode___background_repeat;
+    list-style: $_ui_tree__ui_treenode___list_style;
+    margin: $_ui_tree__ui_treenode___margin;
+    padding: $_ui_tree__ui_treenode___padding;
   }
 
   .ui-treenode-content {}
 
   .ui-tree-toggler {
-    cursor: pointer;
-    display: inline-block;
-    vertical-align: top;
+    cursor: $_ui_tree__ui_tree_toggler___cursor;
+    display: $_ui_tree__ui_tree_toggler___display;
+    vertical-align: $_ui_tree__ui_tree_toggler___vertical_align;
   }
 
   .ui-treenode-icon {
-    display: inline-block;
-    vertical-align: top;
+    display: $_ui_tree__ui_treenode_icon___display;
+    vertical-align: $_ui_tree__ui_treenode_icon___vertical_align;
   }
 
   .ui-treenode-label {
-    display: inline-block;
-    margin: 2px 0 0 0;
-    vertical-align: top;
-    padding: 0 3px;
+    display: $_ui_tree__ui_treenode_label___display;
+    margin: $_ui_tree__ui_treenode_label___margin;
+    vertical-align: $_ui_tree__ui_treenode_label___vertical_align;
+    padding: $_ui_tree__ui_treenode_label___padding;
   }
 
   .ui-tree-selectable {
     .ui-treenode-label, .ui-treenode-icon {
-      cursor: pointer;
+      cursor: $_ui_tree__ui_tree_selectable__ui_treenode_label___ui_tree__ui_tree_selectable__ui_treenode_icon___cursor;
     }
   }
 
   .ui-treenode-label {
     &.ui-state-hover, &.ui-state-highlight {
-      font-weight: normal;
-      border: 0 none;
+      font-weight: $_ui_tree__ui_treenode_label_ui_state_hover___ui_tree__ui_treenode_label_ui_state_highlight___font_weight;
+      border: $_ui_tree__ui_treenode_label_ui_state_hover___ui_tree__ui_treenode_label_ui_state_highlight___border;
     }
   }
 
   .ui-treenode-leaf-icon {
-    width: 16px;
-    height: 16px;
-    display: inline-block;
+    width: $_ui_tree__ui_treenode_leaf_icon___width;
+    height: $_ui_tree__ui_treenode_leaf_icon___height;
+    display: $_ui_tree__ui_treenode_leaf_icon___display;
   }
 
   .ui-chkbox-box {
-    cursor: pointer;
-    width: 15px;
-    height: 15px;
-    float: left;
+    cursor: $_ui_tree__ui_chkbox_box___cursor;
+    width: $_ui_tree__ui_chkbox_box___width;
+    height: $_ui_tree__ui_chkbox_box___height;
+    float: $_ui_tree__ui_chkbox_box___float;
   }
 
   .ui-chkbox {
-    display: inline-block;
-    zoom: 1;
+    display: $_ui_tree__ui_chkbox___display;
+    zoom: $_ui_tree__ui_chkbox___zoom;
   }
 }
 
 /** Horizontal Tree **/
 
 .ui-tree-horizontal {
-  width: auto;
-  padding: 10px 0px;
-  overflow: auto;
+  width: $_ui_tree_horizontal___width;
+  padding: $_ui_tree_horizontal___padding;
+  overflow: $_ui_tree_horizontal___overflow;
 }
 
 .ui-tree.ui-tree-horizontal {
   table, tr, td {
-    border-collapse: collapse;
-    margin: 0;
-    padding: 0;
-    vertical-align: middle;
+    border-collapse: $_ui_tree_ui_tree_horizontal_table___ui_tree_ui_tree_horizontal_tr___ui_tree_ui_tree_horizontal_td___border_collapse;
+    margin: $_ui_tree_ui_tree_horizontal_table___ui_tree_ui_tree_horizontal_tr___ui_tree_ui_tree_horizontal_td___margin;
+    padding: $_ui_tree_ui_tree_horizontal_table___ui_tree_ui_tree_horizontal_tr___ui_tree_ui_tree_horizontal_td___padding;
+    vertical-align: $_ui_tree_ui_tree_horizontal_table___ui_tree_ui_tree_horizontal_tr___ui_tree_ui_tree_horizontal_td___vertical_align;
   }
 
   .ui-tree-toggler {
-    vertical-align: bottom;
+    vertical-align: $_ui_tree_ui_tree_horizontal__ui_tree_toggler___vertical_align;
   }
 }
 
 .ui-tree-horizontal {
   .ui-treenode-content {
-    font-weight: normal;
+    font-weight: $_ui_tree_horizontal__ui_treenode_content___font_weight;
 
     &.ui-tree-selectable {
-      cursor: pointer;
+      cursor: $_ui_tree_horizontal__ui_treenode_content_ui_tree_selectable___cursor;
     }
   }
 
   .ui-treenode-parent .ui-treenode-content {
-    font-weight: normal;
-    white-space: nowrap;
-    padding: 0.4em 1em 0.4em 0.2em;
+    font-weight: $_ui_tree_horizontal__ui_treenode_parent__ui_treenode_content___font_weight;
+    white-space: $_ui_tree_horizontal__ui_treenode_parent__ui_treenode_content___white_space;
+    padding: $_ui_tree_horizontal__ui_treenode_parent__ui_treenode_content___padding;
   }
 
   .ui-treenode-leaf .ui-treenode-content {
-    padding: 0.4em 1em;
+    padding: $_ui_tree_horizontal__ui_treenode_leaf__ui_treenode_content___padding;
   }
 }
 
 .ui-tree {
   &.ui-tree-horizontal {
     .ui-treenode {
-      background: url("tree/images/line.gif") repeat-x scroll center center transparent;
-      padding: 5px 40px;
+      background: $_ui_tree_ui_tree_horizontal__ui_treenode___background;
+      padding: $_ui_tree_ui_tree_horizontal__ui_treenode___padding;
 
       &.ui-treenode-leaf, &.ui-treenode-collapsed {
-        padding-right: 0px;
+        padding-right: $_ui_tree_ui_tree_horizontal__ui_treenode_ui_treenode_leaf___ui_tree_ui_tree_horizontal__ui_treenode_ui_treenode_collapsed___padding_right;
       }
     }
 
     .ui-treenode-children {
-      padding: 0;
-      margin: 0;
+      padding: $_ui_tree_ui_tree_horizontal__ui_treenode_children___padding;
+      margin: $_ui_tree_ui_tree_horizontal__ui_treenode_children___margin;
     }
 
     .ui-treenode-connector {
-      width: 1px;
+      width: $_ui_tree_ui_tree_horizontal__ui_treenode_connector___width;
     }
 
     .ui-treenode-connector-table {
-      height: 100%;
-      width: 1px;
+      height: $_ui_tree_ui_tree_horizontal__ui_treenode_connector_table___height;
+      width: $_ui_tree_ui_tree_horizontal__ui_treenode_connector_table___width;
     }
 
     .ui-treenode-connector-line {
-      background: url("tree/images/line.gif") repeat-y scroll 0 0 transparent;
-      width: 1px;
+      background: $_ui_tree_ui_tree_horizontal__ui_treenode_connector_line___background;
+      width: $_ui_tree_ui_tree_horizontal__ui_treenode_connector_line___width;
     }
 
     table {
-      height: 0px;
+      height: $_ui_tree_ui_tree_horizontal_table___height;
     }
 
     .ui-chkbox {
-      vertical-align: bottom;
-      margin-right: 3px;
+      vertical-align: $_ui_tree_ui_tree_horizontal__ui_chkbox___vertical_align;
+      margin-right: $_ui_tree_ui_tree_horizontal__ui_chkbox___margin_right;
     }
   }
 
   &.ui-tree-rtl {
-    direction: rtl;
+    direction: $_ui_tree_ui_tree_rtl___direction;
 
     .ui-treenode-children {
-      padding: 0 16px 0 0;
+      padding: $_ui_tree_ui_tree_rtl__ui_treenode_children___padding;
     }
   }
 }
@@ -172,60 +255,60 @@
 /** DragDrop **/
 
 .ui-tree-droppoint {
-  list-style: none outside none;
-  height: 4px;
-  margin: 0;
-  padding: 0;
+  list-style: $_ui_tree_droppoint___list_style;
+  height: $_ui_tree_droppoint___height;
+  margin: $_ui_tree_droppoint___margin;
+  padding: $_ui_tree_droppoint___padding;
 
   &.ui-state-hover {
-    border: 0 none;
+    border: $_ui_tree_droppoint_ui_state_hover___border;
   }
 }
 
 .ui-treenode-content.ui-state-hover {
-  font-weight: inherit;
+  font-weight: $_ui_treenode_content_ui_state_hover___font_weight;
 }
 
 .ui-tree-draghelper.ui-state-highlight {
-  background: none transparent;
+  background: $_ui_tree_draghelper_ui_state_highlight___background;
 }
 
 .ui-tree {
   .ui-tree-scrollertop, .ui-tree-scrollerbottom {
-    height: 10px;
-    width: 100%;
-    position: absolute;
+    height: $_ui_tree__ui_tree_scrollertop___ui_tree__ui_tree_scrollerbottom___height;
+    width: $_ui_tree__ui_tree_scrollertop___ui_tree__ui_tree_scrollerbottom___width;
+    position: $_ui_tree__ui_tree_scrollertop___ui_tree__ui_tree_scrollerbottom___position;
   }
 
   .ui-tree-scrollertop {
-    top: 0;
+    top: $_ui_tree__ui_tree_scrollertop___top;
   }
 
   .ui-tree-scrollerbottom {
-    bottom: 0;
+    bottom: $_ui_tree__ui_tree_scrollerbottom___bottom;
   }
 
   .ui-treenode-content {
     .ui-chkbox.ui-selection {
-      display: none;
+      display: $_ui_tree__ui_treenode_content__ui_chkbox_ui_selection___display;
     }
 
     &.ui-tree-selectable .ui-chkbox.ui-selection {
-      display: inline-block;
+      display: $_ui_tree__ui_treenode_content_ui_tree_selectable__ui_chkbox_ui_selection___display;
     }
   }
 
   &.ui-tree-checkbox-all .ui-treenode-content .ui-chkbox.ui-selection {
-    display: inline-block;
+    display: $_ui_tree_ui_tree_checkbox_all__ui_treenode_content__ui_chkbox_ui_selection___display;
   }
 
   .ui-treenode-outline {
-    outline: 1px dotted;
+    outline: $_ui_tree__ui_treenode_outline___outline;
   }
 }
 
 /** Fluid **/
 
 .ui-fluid .ui-tree {
-  width: 100%;
+  width: $_ui_fluid__ui_tree___width;
 }

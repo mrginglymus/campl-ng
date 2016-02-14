@@ -1,157 +1,255 @@
+$_ui_colorpicker_container___width: 356px !default;
+$_ui_colorpicker_container___height: 176px !default;
+$_ui_colorpicker_container___overflow: hidden !default;
+$_ui_colorpicker_container___position: absolute !default;
+$_ui_colorpicker_container___background: url("colorpicker/images/colorpicker_background.png") !default;
+$_ui_colorpicker_container___font_family: Arial, Helvetica, sans-serif !default;
+$_ui_colorpicker_container___display: none !default;
+$_ui_colorpicker_color___width: 150px !default;
+$_ui_colorpicker_color___height: 150px !default;
+$_ui_colorpicker_color___left: 14px !default;
+$_ui_colorpicker_color___top: 13px !default;
+$_ui_colorpicker_color___position: absolute !default;
+$_ui_colorpicker_color___background: #f00 !default;
+$_ui_colorpicker_color___overflow: hidden !default;
+$_ui_colorpicker_color___cursor: crosshair !default;
+$_ui_colorpicker_color_div___position: absolute !default;
+$_ui_colorpicker_color_div___top: 0 !default;
+$_ui_colorpicker_color_div___left: 0 !default;
+$_ui_colorpicker_color_div___width: 150px !default;
+$_ui_colorpicker_color_div___height: 150px !default;
+$_ui_colorpicker_color_div___background: url("colorpicker/images/colorpicker_overlay.png") !default;
+$_ui_colorpicker_color_div_div___position: absolute !default;
+$_ui_colorpicker_color_div_div___top: 0 !default;
+$_ui_colorpicker_color_div_div___left: 0 !default;
+$_ui_colorpicker_color_div_div___width: 11px !default;
+$_ui_colorpicker_color_div_div___height: 11px !default;
+$_ui_colorpicker_color_div_div___overflow: hidden !default;
+$_ui_colorpicker_color_div_div___background: url("colorpicker/images/colorpicker_select.gif") !default;
+$_ui_colorpicker_color_div_div___margin: -5px 0 0 -5px !default;
+$_ui_colorpicker_hue___position: absolute !default;
+$_ui_colorpicker_hue___top: 13px !default;
+$_ui_colorpicker_hue___left: 171px !default;
+$_ui_colorpicker_hue___width: 35px !default;
+$_ui_colorpicker_hue___height: 150px !default;
+$_ui_colorpicker_hue___cursor: n-resize !default;
+$_ui_colorpicker_hue_div___position: absolute !default;
+$_ui_colorpicker_hue_div___width: 35px !default;
+$_ui_colorpicker_hue_div___height: 9px !default;
+$_ui_colorpicker_hue_div___overflow: hidden !default;
+$_ui_colorpicker_hue_div___background: url("colorpicker/images/colorpicker_indic.gif") left top !default;
+$_ui_colorpicker_hue_div___margin: -4px 0 0 0 !default;
+$_ui_colorpicker_hue_div___left: 0px !default;
+$_ui_colorpicker_new_color___position: absolute !default;
+$_ui_colorpicker_new_color___width: 130px !default;
+$_ui_colorpicker_new_color___height: 30px !default;
+$_ui_colorpicker_new_color___left: 213px !default;
+$_ui_colorpicker_new_color___top: 13px !default;
+$_ui_colorpicker_new_color___background: #f00 !default;
+$_ui_colorpicker_container_input___background_color: transparent !default;
+$_ui_colorpicker_container_input___border: 1px solid transparent !default;
+$_ui_colorpicker_container_input___position: absolute !default;
+$_ui_colorpicker_container_input___font_size: 10px !default;
+$_ui_colorpicker_container_input___font_family: Arial, Helvetica, sans-serif !default;
+$_ui_colorpicker_container_input___color: #898989 !default;
+$_ui_colorpicker_container_input___top: 4px !default;
+$_ui_colorpicker_container_input___right: 11px !default;
+$_ui_colorpicker_container_input___text_align: right !default;
+$_ui_colorpicker_container_input___margin: 0 !default;
+$_ui_colorpicker_container_input___padding: 0 !default;
+$_ui_colorpicker_container_input___height: 11px !default;
+$_ui_colorpicker_hex___position: absolute !default;
+$_ui_colorpicker_hex___width: 72px !default;
+$_ui_colorpicker_hex___height: 22px !default;
+$_ui_colorpicker_hex___background: url("colorpicker/images/colorpicker_hex.png") top !default;
+$_ui_colorpicker_hex___left: 212px !default;
+$_ui_colorpicker_hex___top: 142px !default;
+$_ui_colorpicker_hex_input___right: 6px !default;
+$_ui_colorpicker_field___height: 22px !default;
+$_ui_colorpicker_field___width: 62px !default;
+$_ui_colorpicker_field___background_position: top !default;
+$_ui_colorpicker_field___position: absolute !default;
+$_ui_colorpicker_field_span___position: absolute !default;
+$_ui_colorpicker_field_span___width: 12px !default;
+$_ui_colorpicker_field_span___height: 22px !default;
+$_ui_colorpicker_field_span___overflow: hidden !default;
+$_ui_colorpicker_field_span___top: 0 !default;
+$_ui_colorpicker_field_span___right: 0 !default;
+$_ui_colorpicker_field_span___cursor: n-resize !default;
+$_ui_colorpicker_rgb_r___background_image: url("colorpicker/images/colorpicker_rgb_r.png") !default;
+$_ui_colorpicker_rgb_r___top: 52px !default;
+$_ui_colorpicker_rgb_r___left: 212px !default;
+$_ui_colorpicker_rgb_g___background_image: url("colorpicker/images/colorpicker_rgb_g.png") !default;
+$_ui_colorpicker_rgb_g___top: 82px !default;
+$_ui_colorpicker_rgb_g___left: 212px !default;
+$_ui_colorpicker_rgb_b___background_image: url("colorpicker/images/colorpicker_rgb_b.png") !default;
+$_ui_colorpicker_rgb_b___top: 112px !default;
+$_ui_colorpicker_rgb_b___left: 212px !default;
+$_ui_colorpicker_hsb_h___background_image: url("colorpicker/images/colorpicker_hsb_h.png") !default;
+$_ui_colorpicker_hsb_h___top: 52px !default;
+$_ui_colorpicker_hsb_h___left: 282px !default;
+$_ui_colorpicker_hsb_s___background_image: url("colorpicker/images/colorpicker_hsb_s.png") !default;
+$_ui_colorpicker_hsb_s___top: 82px !default;
+$_ui_colorpicker_hsb_s___left: 282px !default;
+$_ui_colorpicker_hsb_b___background_image: url("colorpicker/images/colorpicker_hsb_b.png") !default;
+$_ui_colorpicker_hsb_b___top: 112px !default;
+$_ui_colorpicker_hsb_b___left: 282px !default;
+$_ui_colorpicker_focus___background_position: center !default;
+$_ui_colorpicker_hex_ui_colorpicker_focus___ui_colorpicker_submit_ui_colorpicker_focus___ui_colorpicker_slider___background_position: bottom !default;
 .ui-colorpicker-container {
-  width: 356px;
-  height: 176px;
-  overflow: hidden;
-  position: absolute;
-  background: url("colorpicker/images/colorpicker_background.png");
-  font-family: Arial, Helvetica, sans-serif;
-  display: none;
+  width: $_ui_colorpicker_container___width;
+  height: $_ui_colorpicker_container___height;
+  overflow: $_ui_colorpicker_container___overflow;
+  position: $_ui_colorpicker_container___position;
+  background: $_ui_colorpicker_container___background;
+  font-family: $_ui_colorpicker_container___font_family;
+  display: $_ui_colorpicker_container___display;
 }
 
 .ui-colorpicker_color {
-  width: 150px;
-  height: 150px;
-  left: 14px;
-  top: 13px;
-  position: absolute;
-  background: #f00;
-  overflow: hidden;
-  cursor: crosshair;
+  width: $_ui_colorpicker_color___width;
+  height: $_ui_colorpicker_color___height;
+  left: $_ui_colorpicker_color___left;
+  top: $_ui_colorpicker_color___top;
+  position: $_ui_colorpicker_color___position;
+  background: $_ui_colorpicker_color___background;
+  overflow: $_ui_colorpicker_color___overflow;
+  cursor: $_ui_colorpicker_color___cursor;
 
   div {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 150px;
-    height: 150px;
-    background: url("colorpicker/images/colorpicker_overlay.png");
+    position: $_ui_colorpicker_color_div___position;
+    top: $_ui_colorpicker_color_div___top;
+    left: $_ui_colorpicker_color_div___left;
+    width: $_ui_colorpicker_color_div___width;
+    height: $_ui_colorpicker_color_div___height;
+    background: $_ui_colorpicker_color_div___background;
 
     div {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 11px;
-      height: 11px;
-      overflow: hidden;
-      background: url("colorpicker/images/colorpicker_select.gif");
-      margin: -5px 0 0 -5px;
+      position: $_ui_colorpicker_color_div_div___position;
+      top: $_ui_colorpicker_color_div_div___top;
+      left: $_ui_colorpicker_color_div_div___left;
+      width: $_ui_colorpicker_color_div_div___width;
+      height: $_ui_colorpicker_color_div_div___height;
+      overflow: $_ui_colorpicker_color_div_div___overflow;
+      background: $_ui_colorpicker_color_div_div___background;
+      margin: $_ui_colorpicker_color_div_div___margin;
     }
   }
 }
 
 .ui-colorpicker_hue {
-  position: absolute;
-  top: 13px;
-  left: 171px;
-  width: 35px;
-  height: 150px;
-  cursor: n-resize;
+  position: $_ui_colorpicker_hue___position;
+  top: $_ui_colorpicker_hue___top;
+  left: $_ui_colorpicker_hue___left;
+  width: $_ui_colorpicker_hue___width;
+  height: $_ui_colorpicker_hue___height;
+  cursor: $_ui_colorpicker_hue___cursor;
 
   div {
-    position: absolute;
-    width: 35px;
-    height: 9px;
-    overflow: hidden;
-    background: url("colorpicker/images/colorpicker_indic.gif") left top;
-    margin: -4px 0 0 0;
-    left: 0px;
+    position: $_ui_colorpicker_hue_div___position;
+    width: $_ui_colorpicker_hue_div___width;
+    height: $_ui_colorpicker_hue_div___height;
+    overflow: $_ui_colorpicker_hue_div___overflow;
+    background: $_ui_colorpicker_hue_div___background;
+    margin: $_ui_colorpicker_hue_div___margin;
+    left: $_ui_colorpicker_hue_div___left;
   }
 }
 
 .ui-colorpicker_new_color {
-  position: absolute;
-  width: 130px;
-  height: 30px;
-  left: 213px;
-  top: 13px;
-  background: #f00;
+  position: $_ui_colorpicker_new_color___position;
+  width: $_ui_colorpicker_new_color___width;
+  height: $_ui_colorpicker_new_color___height;
+  left: $_ui_colorpicker_new_color___left;
+  top: $_ui_colorpicker_new_color___top;
+  background: $_ui_colorpicker_new_color___background;
 }
 
 .ui-colorpicker-container input {
-  background-color: transparent;
-  border: 1px solid transparent;
-  position: absolute;
-  font-size: 10px;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #898989;
-  top: 4px;
-  right: 11px;
-  text-align: right;
-  margin: 0;
-  padding: 0;
-  height: 11px;
+  background-color: $_ui_colorpicker_container_input___background_color;
+  border: $_ui_colorpicker_container_input___border;
+  position: $_ui_colorpicker_container_input___position;
+  font-size: $_ui_colorpicker_container_input___font_size;
+  font-family: $_ui_colorpicker_container_input___font_family;
+  color: $_ui_colorpicker_container_input___color;
+  top: $_ui_colorpicker_container_input___top;
+  right: $_ui_colorpicker_container_input___right;
+  text-align: $_ui_colorpicker_container_input___text_align;
+  margin: $_ui_colorpicker_container_input___margin;
+  padding: $_ui_colorpicker_container_input___padding;
+  height: $_ui_colorpicker_container_input___height;
 }
 
 .ui-colorpicker_hex {
-  position: absolute;
-  width: 72px;
-  height: 22px;
-  background: url("colorpicker/images/colorpicker_hex.png") top;
-  left: 212px;
-  top: 142px;
+  position: $_ui_colorpicker_hex___position;
+  width: $_ui_colorpicker_hex___width;
+  height: $_ui_colorpicker_hex___height;
+  background: $_ui_colorpicker_hex___background;
+  left: $_ui_colorpicker_hex___left;
+  top: $_ui_colorpicker_hex___top;
 
   input {
-    right: 6px;
+    right: $_ui_colorpicker_hex_input___right;
   }
 }
 
 .ui-colorpicker_field {
-  height: 22px;
-  width: 62px;
-  background-position: top;
-  position: absolute;
+  height: $_ui_colorpicker_field___height;
+  width: $_ui_colorpicker_field___width;
+  background-position: $_ui_colorpicker_field___background_position;
+  position: $_ui_colorpicker_field___position;
 
   span {
-    position: absolute;
-    width: 12px;
-    height: 22px;
-    overflow: hidden;
-    top: 0;
-    right: 0;
-    cursor: n-resize;
+    position: $_ui_colorpicker_field_span___position;
+    width: $_ui_colorpicker_field_span___width;
+    height: $_ui_colorpicker_field_span___height;
+    overflow: $_ui_colorpicker_field_span___overflow;
+    top: $_ui_colorpicker_field_span___top;
+    right: $_ui_colorpicker_field_span___right;
+    cursor: $_ui_colorpicker_field_span___cursor;
   }
 }
 
 .ui-colorpicker_rgb_r {
-  background-image: url("colorpicker/images/colorpicker_rgb_r.png");
-  top: 52px;
-  left: 212px;
+  background-image: $_ui_colorpicker_rgb_r___background_image;
+  top: $_ui_colorpicker_rgb_r___top;
+  left: $_ui_colorpicker_rgb_r___left;
 }
 
 .ui-colorpicker_rgb_g {
-  background-image: url("colorpicker/images/colorpicker_rgb_g.png");
-  top: 82px;
-  left: 212px;
+  background-image: $_ui_colorpicker_rgb_g___background_image;
+  top: $_ui_colorpicker_rgb_g___top;
+  left: $_ui_colorpicker_rgb_g___left;
 }
 
 .ui-colorpicker_rgb_b {
-  background-image: url("colorpicker/images/colorpicker_rgb_b.png");
-  top: 112px;
-  left: 212px;
+  background-image: $_ui_colorpicker_rgb_b___background_image;
+  top: $_ui_colorpicker_rgb_b___top;
+  left: $_ui_colorpicker_rgb_b___left;
 }
 
 .ui-colorpicker_hsb_h {
-  background-image: url("colorpicker/images/colorpicker_hsb_h.png");
-  top: 52px;
-  left: 282px;
+  background-image: $_ui_colorpicker_hsb_h___background_image;
+  top: $_ui_colorpicker_hsb_h___top;
+  left: $_ui_colorpicker_hsb_h___left;
 }
 
 .ui-colorpicker_hsb_s {
-  background-image: url("colorpicker/images/colorpicker_hsb_s.png");
-  top: 82px;
-  left: 282px;
+  background-image: $_ui_colorpicker_hsb_s___background_image;
+  top: $_ui_colorpicker_hsb_s___top;
+  left: $_ui_colorpicker_hsb_s___left;
 }
 
 .ui-colorpicker_hsb_b {
-  background-image: url("colorpicker/images/colorpicker_hsb_b.png");
-  top: 112px;
-  left: 282px;
+  background-image: $_ui_colorpicker_hsb_b___background_image;
+  top: $_ui_colorpicker_hsb_b___top;
+  left: $_ui_colorpicker_hsb_b___left;
 }
 
 .ui-colorpicker_focus {
-  background-position: center;
+  background-position: $_ui_colorpicker_focus___background_position;
 }
 
 .ui-colorpicker_hex.ui-colorpicker_focus, .ui-colorpicker_submit.ui-colorpicker_focus, .ui-colorpicker_slider {
-  background-position: bottom;
+  background-position: $_ui_colorpicker_hex_ui_colorpicker_focus___ui_colorpicker_submit_ui_colorpicker_focus___ui_colorpicker_slider___background_position;
 }

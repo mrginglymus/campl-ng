@@ -1,89 +1,127 @@
+$__html__ui_growl___position: absolute !default;
+$__html__ui_growl_item___padding_bottom: 0 !default;
+$__html__ui_growl_icon_close___top: 7px !default;
+$__html__ui_growl_icon_close___right: 7px !default;
+$_ui_growl___position: fixed !default;
+$_ui_growl___top: 20px !default;
+$_ui_growl___right: 20px !default;
+$_ui_growl___width: 301px !default;
+$_ui_growl_item_container___position: relative !default;
+$_ui_growl_item_container___margin: 0 0 10px 0 !default;
+$_ui_growl_item_container___opacity: 0.85 !default;
+$_ui_growl_item_container___filter: alpha(opacity=85) !default;
+$_ui_growl_item___display: block !default;
+$_ui_growl_item___padding: 10px 15px !default;
+$_ui_growl_item_p___padding: 0 !default;
+$_ui_growl_item_p___margin: 0 !default;
+$_ui_growl_icon_close___position: absolute !default;
+$_ui_growl_icon_close___top: 5px !default;
+$_ui_growl_icon_close___right: 3px !default;
+$_ui_growl_icon_close___cursor: pointer !default;
+$_ui_growl_title___font_weight: bold !default;
+$_ui_growl_title___padding: 0 0 7px 0 !default;
+$_ui_growl_title___display: block !default;
+$_ui_growl_image___width: 32px !default;
+$_ui_growl_image___height: 32px !default;
+$_ui_growl_image___float: left !default;
+$_ui_growl_image___margin: 0 !default;
+$_ui_growl_image___padding: 0 !default;
+$_ui_growl_image___display: block !default;
+$_ui_growl_image___background: url("messages/messages.png") no-repeat !default;
+$_ui_growl_image_info___background_position: 0 -264px !default;
+$_ui_growl_image_warn___background_position: 0 -396px !default;
+$_ui_growl_image_error___background_position: 0 0 !default;
+$_ui_growl_image_fatal___background_position: 0 -132px !default;
+$_ui_growl_message___padding: 0 0 5px 0 !default;
+$_ui_growl_message___width: 220px !default;
+$_ui_growl_message___float: right !default;
+$_ui_growl_message_p___font_weight: normal !default;
 /* ie6 */
 
 * html {
   .ui-growl {
-    position: absolute;
+    position: $__html__ui_growl___position;
   }
 
   .ui-growl-item {
-    padding-bottom: 0;
+    padding-bottom: $__html__ui_growl_item___padding_bottom;
   }
 
   .ui-growl-icon-close {
-    top: 7px;
-    right: 7px;
+    top: $__html__ui_growl_icon_close___top;
+    right: $__html__ui_growl_icon_close___right;
   }
 }
 
 .ui-growl {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  width: 301px;
+  position: $_ui_growl___position;
+  top: $_ui_growl___top;
+  right: $_ui_growl___right;
+  width: $_ui_growl___width;
 }
 
 .ui-growl-item-container {
-  position: relative;
-  margin: 0 0 10px 0;
-  opacity: 0.85;
+  position: $_ui_growl_item_container___position;
+  margin: $_ui_growl_item_container___margin;
+  opacity: $_ui_growl_item_container___opacity;
   filter: alpha(opacity = 85);
 }
 
 .ui-growl-item {
-  display: block;
-  padding: 10px 15px;
+  display: $_ui_growl_item___display;
+  padding: $_ui_growl_item___padding;
 
   p {
-    padding: 0;
-    margin: 0;
+    padding: $_ui_growl_item_p___padding;
+    margin: $_ui_growl_item_p___margin;
   }
 }
 
 .ui-growl-icon-close {
-  position: absolute;
-  top: 5px;
-  right: 3px;
-  cursor: pointer;
+  position: $_ui_growl_icon_close___position;
+  top: $_ui_growl_icon_close___top;
+  right: $_ui_growl_icon_close___right;
+  cursor: $_ui_growl_icon_close___cursor;
 }
 
 .ui-growl-title {
-  font-weight: bold;
-  padding: 0 0 7px 0;
-  display: block;
+  font-weight: $_ui_growl_title___font_weight;
+  padding: $_ui_growl_title___padding;
+  display: $_ui_growl_title___display;
 }
 
 .ui-growl-image {
-  width: 32px;
-  height: 32px;
-  float: left;
-  margin: 0;
-  padding: 0;
-  display: block;
-  background: url("messages/messages.png") no-repeat;
+  width: $_ui_growl_image___width;
+  height: $_ui_growl_image___height;
+  float: $_ui_growl_image___float;
+  margin: $_ui_growl_image___margin;
+  padding: $_ui_growl_image___padding;
+  display: $_ui_growl_image___display;
+  background: $_ui_growl_image___background;
 }
 
 .ui-growl-image-info {
-  background-position: 0 -264px;
+  background-position: $_ui_growl_image_info___background_position;
 }
 
 .ui-growl-image-warn {
-  background-position: 0 -396px;
+  background-position: $_ui_growl_image_warn___background_position;
 }
 
 .ui-growl-image-error {
-  background-position: 0 0;
+  background-position: $_ui_growl_image_error___background_position;
 }
 
 .ui-growl-image-fatal {
-  background-position: 0 -132px;
+  background-position: $_ui_growl_image_fatal___background_position;
 }
 
 .ui-growl-message {
-  padding: 0 0 5px 0;
-  width: 220px;
-  float: right;
+  padding: $_ui_growl_message___padding;
+  width: $_ui_growl_message___width;
+  float: $_ui_growl_message___float;
 
   p {
-    font-weight: normal;
+    font-weight: $_ui_growl_message_p___font_weight;
   }
 }

@@ -1,6 +1,8 @@
+$_kbw_signature___display: inline-block !default;
+$_kbw_signature___border: 1px solid #a0a0a0 !default;
 /* Styles for signature plugin v1.1.0. */
 
 .kbw-signature {
-  display: inline-block;
-  border: 1px solid #a0a0a0;
+  display: $_kbw_signature___display;
+  border: $_kbw_signature___border;
 }

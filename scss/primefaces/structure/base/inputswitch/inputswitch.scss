@@ -1,77 +1,134 @@
+$_ui_inputswitch___display: inline-block !default;
+$_ui_inputswitch___padding: 0 !default;
+$_ui_inputswitch___position: relative !default;
+$_ui_inputswitch___overflow: hidden !default;
+$_ui_inputswitch___cursor: pointer !default;
+$_ui_inputswitch___user_select: none !default;
+$_ui_inputswitch____moz_user_select: none !default;
+$_ui_inputswitch____khtml_user_select: none !default;
+$_ui_inputswitch____webkit_user_select: none !default;
+$_ui_inputswitch___height: 24px !default;
+$_ui_inputswitch__ui_inputswitch_on___white_space: nowrap !default;
+$_ui_inputswitch__ui_inputswitch_on___display: block !default;
+$_ui_inputswitch__ui_inputswitch_on___position: absolute !default;
+$_ui_inputswitch__ui_inputswitch_on___top: 0 !default;
+$_ui_inputswitch__ui_inputswitch_on___width: auto !default;
+$_ui_inputswitch__ui_inputswitch_on___overflow: hidden !default;
+$_ui_inputswitch__ui_inputswitch_on___user_select: none !default;
+$_ui_inputswitch__ui_inputswitch_on____moz_user_select: none !default;
+$_ui_inputswitch__ui_inputswitch_on____khtml_user_select: none !default;
+$_ui_inputswitch__ui_inputswitch_on____webkit_user_select: none !default;
+$_ui_inputswitch__ui_inputswitch_on___font_weight: bold !default;
+$_ui_inputswitch__ui_inputswitch_on___height: 20px !default;
+$_ui_inputswitch__ui_inputswitch_on___padding_top: 4px !default;
+$_ui_inputswitch__ui_inputswitch_off___white_space: nowrap !default;
+$_ui_inputswitch__ui_inputswitch_off___display: block !default;
+$_ui_inputswitch__ui_inputswitch_off___position: absolute !default;
+$_ui_inputswitch__ui_inputswitch_off___top: 0 !default;
+$_ui_inputswitch__ui_inputswitch_off___width: auto !default;
+$_ui_inputswitch__ui_inputswitch_off___overflow: hidden !default;
+$_ui_inputswitch__ui_inputswitch_off___user_select: none !default;
+$_ui_inputswitch__ui_inputswitch_off____moz_user_select: none !default;
+$_ui_inputswitch__ui_inputswitch_off____khtml_user_select: none !default;
+$_ui_inputswitch__ui_inputswitch_off____webkit_user_select: none !default;
+$_ui_inputswitch__ui_inputswitch_off___font_weight: bold !default;
+$_ui_inputswitch__ui_inputswitch_off___height: 20px !default;
+$_ui_inputswitch__ui_inputswitch_off___padding_top: 4px !default;
+$_ui_inputswitch__ui_inputswitch_off___right: 0 !default;
+$_ui_inputswitch__ui_inputswitch_off___text_align: right !default;
+$_ui_inputswitch__ui_inputswitch_off_span___display: inline-block !default;
+$_ui_inputswitch__ui_inputswitch_off_span___text_align: center !default;
+$_ui_inputswitch__ui_inputswitch_off_span___padding_left: 2px !default;
+$_ui_inputswitch__ui_inputswitch_off_span___padding_right: 3px !default;
+$_ui_inputswitch__ui_inputswitch_on___left: 0 !default;
+$_ui_inputswitch__ui_inputswitch_on___padding_right: 4px !default;
+$_ui_inputswitch__ui_inputswitch_on___border: 0 none !default;
+$_ui_inputswitch__ui_inputswitch_on_span___display: inline-block !default;
+$_ui_inputswitch__ui_inputswitch_on_span___text_align: center !default;
+$_ui_inputswitch__ui_inputswitch_on_span___padding_left: 3px !default;
+$_ui_inputswitch__ui_inputswitch_on_span___padding_right: 2px !default;
+$_ui_inputswitch__ui_inputswitch_handle___display: block !default;
+$_ui_inputswitch__ui_inputswitch_handle___width: 0 !default;
+$_ui_inputswitch__ui_inputswitch_handle___position: absolute !default;
+$_ui_inputswitch__ui_inputswitch_handle___top: 0 !default;
+$_ui_inputswitch__ui_inputswitch_handle___left: 0 !default;
+$_ui_inputswitch__ui_inputswitch_handle___height: 24px !default;
+$_ui_inputswitch__ui_inputswitch_handle___border_top: 0 none !default;
+$_ui_inputswitch__ui_inputswitch_handle___border_bottom: 0 none !default;
 .ui-inputswitch {
-  display: inline-block;
-  padding: 0;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  user-select: none;
-  -moz-user-select: none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-  height: 24px;
+  display: $_ui_inputswitch___display;
+  padding: $_ui_inputswitch___padding;
+  position: $_ui_inputswitch___position;
+  overflow: $_ui_inputswitch___overflow;
+  cursor: $_ui_inputswitch___cursor;
+  user-select: $_ui_inputswitch___user_select;
+  -moz-user-select: $_ui_inputswitch____moz_user_select;
+  -khtml-user-select: $_ui_inputswitch____khtml_user_select;
+  -webkit-user-select: $_ui_inputswitch____webkit_user_select;
+  height: $_ui_inputswitch___height;
 
   .ui-inputswitch-on {
-    white-space: nowrap;
-    display: block;
-    position: absolute;
-    top: 0;
-    width: auto;
-    overflow: hidden;
-    user-select: none;
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    font-weight: bold;
-    height: 20px;
-    padding-top: 4px;
+    white-space: $_ui_inputswitch__ui_inputswitch_on___white_space;
+    display: $_ui_inputswitch__ui_inputswitch_on___display;
+    position: $_ui_inputswitch__ui_inputswitch_on___position;
+    top: $_ui_inputswitch__ui_inputswitch_on___top;
+    width: $_ui_inputswitch__ui_inputswitch_on___width;
+    overflow: $_ui_inputswitch__ui_inputswitch_on___overflow;
+    user-select: $_ui_inputswitch__ui_inputswitch_on___user_select;
+    -moz-user-select: $_ui_inputswitch__ui_inputswitch_on____moz_user_select;
+    -khtml-user-select: $_ui_inputswitch__ui_inputswitch_on____khtml_user_select;
+    -webkit-user-select: $_ui_inputswitch__ui_inputswitch_on____webkit_user_select;
+    font-weight: $_ui_inputswitch__ui_inputswitch_on___font_weight;
+    height: $_ui_inputswitch__ui_inputswitch_on___height;
+    padding-top: $_ui_inputswitch__ui_inputswitch_on___padding_top;
   }
 
   .ui-inputswitch-off {
-    white-space: nowrap;
-    display: block;
-    position: absolute;
-    top: 0;
-    width: auto;
-    overflow: hidden;
-    user-select: none;
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    font-weight: bold;
-    height: 20px;
-    padding-top: 4px;
-    right: 0;
-    text-align: right;
+    white-space: $_ui_inputswitch__ui_inputswitch_off___white_space;
+    display: $_ui_inputswitch__ui_inputswitch_off___display;
+    position: $_ui_inputswitch__ui_inputswitch_off___position;
+    top: $_ui_inputswitch__ui_inputswitch_off___top;
+    width: $_ui_inputswitch__ui_inputswitch_off___width;
+    overflow: $_ui_inputswitch__ui_inputswitch_off___overflow;
+    user-select: $_ui_inputswitch__ui_inputswitch_off___user_select;
+    -moz-user-select: $_ui_inputswitch__ui_inputswitch_off____moz_user_select;
+    -khtml-user-select: $_ui_inputswitch__ui_inputswitch_off____khtml_user_select;
+    -webkit-user-select: $_ui_inputswitch__ui_inputswitch_off____webkit_user_select;
+    font-weight: $_ui_inputswitch__ui_inputswitch_off___font_weight;
+    height: $_ui_inputswitch__ui_inputswitch_off___height;
+    padding-top: $_ui_inputswitch__ui_inputswitch_off___padding_top;
+    right: $_ui_inputswitch__ui_inputswitch_off___right;
+    text-align: $_ui_inputswitch__ui_inputswitch_off___text_align;
 
     span {
-      display: inline-block;
-      text-align: center;
-      padding-left: 2px;
-      padding-right: 3px;
+      display: $_ui_inputswitch__ui_inputswitch_off_span___display;
+      text-align: $_ui_inputswitch__ui_inputswitch_off_span___text_align;
+      padding-left: $_ui_inputswitch__ui_inputswitch_off_span___padding_left;
+      padding-right: $_ui_inputswitch__ui_inputswitch_off_span___padding_right;
     }
   }
 
   .ui-inputswitch-on {
-    left: 0;
-    padding-right: 4px;
-    border: 0 none;
+    left: $_ui_inputswitch__ui_inputswitch_on___left;
+    padding-right: $_ui_inputswitch__ui_inputswitch_on___padding_right;
+    border: $_ui_inputswitch__ui_inputswitch_on___border;
 
     span {
-      display: inline-block;
-      text-align: center;
-      padding-left: 3px;
-      padding-right: 2px;
+      display: $_ui_inputswitch__ui_inputswitch_on_span___display;
+      text-align: $_ui_inputswitch__ui_inputswitch_on_span___text_align;
+      padding-left: $_ui_inputswitch__ui_inputswitch_on_span___padding_left;
+      padding-right: $_ui_inputswitch__ui_inputswitch_on_span___padding_right;
     }
   }
 
   .ui-inputswitch-handle {
-    display: block;
-    width: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 24px;
-    border-top: 0 none;
-    border-bottom: 0 none;
+    display: $_ui_inputswitch__ui_inputswitch_handle___display;
+    width: $_ui_inputswitch__ui_inputswitch_handle___width;
+    position: $_ui_inputswitch__ui_inputswitch_handle___position;
+    top: $_ui_inputswitch__ui_inputswitch_handle___top;
+    left: $_ui_inputswitch__ui_inputswitch_handle___left;
+    height: $_ui_inputswitch__ui_inputswitch_handle___height;
+    border-top: $_ui_inputswitch__ui_inputswitch_handle___border_top;
+    border-bottom: $_ui_inputswitch__ui_inputswitch_handle___border_bottom;
   }
 }

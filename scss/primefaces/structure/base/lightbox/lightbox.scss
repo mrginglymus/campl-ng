@@ -1,55 +1,78 @@
+$_ui_lightbox___position: fixed !default;
+$_ui_lightbox_content_wrapper___position: relative !default;
+$_ui_lightbox_content___position: relative !default;
+$_ui_lightbox_content___margin: 0 !default;
+$_ui_lightbox_content___padding: 0 !default;
+$_ui_lightbox_content___background_color: #000000 !default;
+$_ui_lightbox_nav_right___position: absolute !default;
+$_ui_lightbox_nav_right___top: 50% !default;
+$_ui_lightbox_nav_right___cursor: pointer !default;
+$_ui_lightbox_nav_left___position: absolute !default;
+$_ui_lightbox_nav_left___top: 50% !default;
+$_ui_lightbox_nav_left___cursor: pointer !default;
+$_ui_lightbox_nav_left___left: 0 !default;
+$_ui_lightbox_nav_right___right: 0 !default;
+$_ui_lightbox_loading___background: url("lightbox/images/loading.gif") #000000 center center no-repeat !default;
+$_ui_lightbox_caption___padding: 0.2em 0.4em !default;
+$_ui_lightbox_caption___display: none !default;
+$_ui_lightbox_caption_text___margin: 0.3em 0 0.1em 0 !default;
+$_ui_lightbox_caption_text___float: left !default;
+$_ui_lightbox_close___float: right !default;
+$_ui_lightbox_close___margin: 0 !default;
+$_ui_lightbox_close___padding: 1px !default;
+$_ui_lightbox_close_ui_state_hover___padding: 0 !default;
 .ui-lightbox {
-  position: fixed;
+  position: $_ui_lightbox___position;
 }
 
 .ui-lightbox-content-wrapper {
-  position: relative;
+  position: $_ui_lightbox_content_wrapper___position;
 }
 
 .ui-lightbox-content {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  background-color: #000000;
+  position: $_ui_lightbox_content___position;
+  margin: $_ui_lightbox_content___margin;
+  padding: $_ui_lightbox_content___padding;
+  background-color: $_ui_lightbox_content___background_color;
 }
 
 .ui-lightbox-nav-right {
-  position: absolute;
-  top: 50%;
-  cursor: pointer;
+  position: $_ui_lightbox_nav_right___position;
+  top: $_ui_lightbox_nav_right___top;
+  cursor: $_ui_lightbox_nav_right___cursor;
 }
 
 .ui-lightbox-nav-left {
-  position: absolute;
-  top: 50%;
-  cursor: pointer;
-  left: 0;
+  position: $_ui_lightbox_nav_left___position;
+  top: $_ui_lightbox_nav_left___top;
+  cursor: $_ui_lightbox_nav_left___cursor;
+  left: $_ui_lightbox_nav_left___left;
 }
 
 .ui-lightbox-nav-right {
-  right: 0;
+  right: $_ui_lightbox_nav_right___right;
 }
 
 .ui-lightbox-loading {
-  background: url("lightbox/images/loading.gif") #000000 center center no-repeat;
+  background: $_ui_lightbox_loading___background;
 }
 
 .ui-lightbox-caption {
-  padding: 0.2em 0.4em;
-  display: none;
+  padding: $_ui_lightbox_caption___padding;
+  display: $_ui_lightbox_caption___display;
 }
 
 .ui-lightbox-caption-text {
-  margin: 0.3em 0 0.1em 0;
-  float: left;
+  margin: $_ui_lightbox_caption_text___margin;
+  float: $_ui_lightbox_caption_text___float;
 }
 
 .ui-lightbox-close {
-  float: right;
-  margin: 0;
-  padding: 1px;
+  float: $_ui_lightbox_close___float;
+  margin: $_ui_lightbox_close___margin;
+  padding: $_ui_lightbox_close___padding;
 
   &.ui-state-hover {
-    padding: 0;
+    padding: $_ui_lightbox_close_ui_state_hover___padding;
   }
 }

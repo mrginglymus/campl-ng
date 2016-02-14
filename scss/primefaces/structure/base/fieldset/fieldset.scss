@@ -1,19 +1,27 @@
+$_ui_fieldset___padding: 0.6em 1em !default;
+$_ui_fieldset__ui_fieldset_legend___padding: 0.6em 1em !default;
+$_ui_fieldset_toggleable__ui_fieldset_legend___padding: 0.5em 1em 0.5em 0.5em !default;
+$_ui_fieldset_toggleable__ui_fieldset_legend___cursor: pointer !default;
+$_ui_fieldset_toggleable__ui_fieldset_legend___outline: 0 !default;
+$_ui_fieldset__ui_fieldset_toggler___padding_right: .1em !default;
+$_ui_fieldset__ui_fieldset_toggler___margin_top: -0.1em !default;
+$_ui_fieldset__ui_fieldset_toggler___float: left !default;
 .ui-fieldset {
-  padding: 0.6em 1em;
+  padding: $_ui_fieldset___padding;
 
   .ui-fieldset-legend {
-    padding: 0.6em 1em;
+    padding: $_ui_fieldset__ui_fieldset_legend___padding;
   }
 }
 
 .ui-fieldset-toggleable .ui-fieldset-legend {
-  padding: 0.5em 1em 0.5em 0.5em;
-  cursor: pointer;
-  outline: 0;
+  padding: $_ui_fieldset_toggleable__ui_fieldset_legend___padding;
+  cursor: $_ui_fieldset_toggleable__ui_fieldset_legend___cursor;
+  outline: $_ui_fieldset_toggleable__ui_fieldset_legend___outline;
 }
 
 .ui-fieldset .ui-fieldset-toggler {
-  padding-right: .1em;
-  margin-top: -0.1em;
-  float: left;
+  padding-right: $_ui_fieldset__ui_fieldset_toggler___padding_right;
+  margin-top: $_ui_fieldset__ui_fieldset_toggler___margin_top;
+  float: $_ui_fieldset__ui_fieldset_toggler___float;
 }

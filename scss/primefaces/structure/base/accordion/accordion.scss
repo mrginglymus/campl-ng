@@ -1,49 +1,74 @@
+$_ui_accordion__ui_accordion_header___cursor: pointer !default;
+$_ui_accordion__ui_accordion_header___position: relative !default;
+$_ui_accordion__ui_accordion_header___margin_top: 1px !default;
+$_ui_accordion__ui_accordion_header___min_height: 0 !default;
+$_ui_accordion__ui_accordion_header___padding: .5em .5em .5em 2.2em !default;
+$_ui_accordion__ui_accordion_header__ui_icon___position: absolute !default;
+$_ui_accordion__ui_accordion_header__ui_icon___left: .5em !default;
+$_ui_accordion__ui_accordion_header__ui_icon___top: 50% !default;
+$_ui_accordion__ui_accordion_header__ui_icon___margin_top: -8px !default;
+$_ui_accordion__ui_accordion_content___padding: 1em 2.2em !default;
+$_ui_accordion__ui_accordion_content___border_top: 0 !default;
+$_ui_accordion__ui_accordion_content___margin_top: -2px !default;
+$_ui_accordion__ui_accordion_content___position: relative !default;
+$_ui_accordion__ui_accordion_content___top: 1px !default;
+$_ui_accordion__ui_accordion_content___margin_bottom: 2px !default;
+$_ui_accordion__ui_accordion_content___overflow: auto !default;
+$_ui_accordion__ui_accordion_content___zoom: 1 !default;
+$_ui_accordion__ui_accordion_header_ui_state_disabled___cursor: default !default;
+$_ui_accordion__ui_accordion_header_ui_state_disabled_a___cursor: default !default;
+$_ui_accordion_ui_accordion_rtl___direction: rtl !default;
+$_ui_accordion_ui_accordion_rtl__ui_accordion_header__ui_icon___right: 0.5m !default;
+$_ui_accordion_ui_accordion_rtl__ui_accordion_header__ui_icon___left: auto !default;
+$_ui_accordion_ui_accordion_rtl__ui_accordion_header_a___padding: 0.5em 2.2em 0.5em 0.5em !default;
+$_ui_tabs_outline___outline: dotted thin !default;
+$_ui_tabs_outline___z_index: 1 !default;
 .ui-accordion {
   .ui-accordion-header {
-    cursor: pointer;
-    position: relative;
-    margin-top: 1px;
-    min-height: 0;
-    padding: .5em .5em .5em 2.2em;
+    cursor: $_ui_accordion__ui_accordion_header___cursor;
+    position: $_ui_accordion__ui_accordion_header___position;
+    margin-top: $_ui_accordion__ui_accordion_header___margin_top;
+    min-height: $_ui_accordion__ui_accordion_header___min_height;
+    padding: $_ui_accordion__ui_accordion_header___padding;
 
     .ui-icon {
-      position: absolute;
-      left: .5em;
-      top: 50%;
-      margin-top: -8px;
+      position: $_ui_accordion__ui_accordion_header__ui_icon___position;
+      left: $_ui_accordion__ui_accordion_header__ui_icon___left;
+      top: $_ui_accordion__ui_accordion_header__ui_icon___top;
+      margin-top: $_ui_accordion__ui_accordion_header__ui_icon___margin_top;
     }
   }
 
   .ui-accordion-content {
-    padding: 1em 2.2em;
-    border-top: 0;
-    margin-top: -2px;
-    position: relative;
-    top: 1px;
-    margin-bottom: 2px;
-    overflow: auto;
-    zoom: 1;
+    padding: $_ui_accordion__ui_accordion_content___padding;
+    border-top: $_ui_accordion__ui_accordion_content___border_top;
+    margin-top: $_ui_accordion__ui_accordion_content___margin_top;
+    position: $_ui_accordion__ui_accordion_content___position;
+    top: $_ui_accordion__ui_accordion_content___top;
+    margin-bottom: $_ui_accordion__ui_accordion_content___margin_bottom;
+    overflow: $_ui_accordion__ui_accordion_content___overflow;
+    zoom: $_ui_accordion__ui_accordion_content___zoom;
   }
 
   .ui-accordion-header.ui-state-disabled {
-    cursor: default;
+    cursor: $_ui_accordion__ui_accordion_header_ui_state_disabled___cursor;
 
     a {
-      cursor: default;
+      cursor: $_ui_accordion__ui_accordion_header_ui_state_disabled_a___cursor;
     }
   }
 
   &.ui-accordion-rtl {
-    direction: rtl;
+    direction: $_ui_accordion_ui_accordion_rtl___direction;
 
     .ui-accordion-header {
       .ui-icon {
-        right: 0.5m;
-        left: auto;
+        right: $_ui_accordion_ui_accordion_rtl__ui_accordion_header__ui_icon___right;
+        left: $_ui_accordion_ui_accordion_rtl__ui_accordion_header__ui_icon___left;
       }
 
       a {
-        padding: 0.5em 2.2em 0.5em 0.5em;
+        padding: $_ui_accordion_ui_accordion_rtl__ui_accordion_header_a___padding;
       }
     }
   }
@@ -52,6 +77,6 @@
 /** RTL **/
 
 .ui-tabs-outline {
-  outline: dotted thin;
-  z-index: 1;
+  outline: $_ui_tabs_outline___outline;
+  z-index: $_ui_tabs_outline___z_index;
 }

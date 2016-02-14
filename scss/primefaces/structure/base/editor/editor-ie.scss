@@ -1,4 +1,6 @@
+$p___margin_top: 0px !default;
+$p___margin_bottom: 0px !default;
 p {
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin-top: $p___margin_top;
+  margin-bottom: $p___margin_bottom;
 }

@@ -1,103 +1,172 @@
+$_ui_picklist___display: table !default;
+$_ui_picklist___div___float: left !default;
+$_ui_picklist__ui_picklist_buttons___height: 200px !default;
+$_ui_picklist__ui_picklist_buttons___padding: 0px 5px !default;
+$_ui_picklist__ui_picklist_list___list_style_type: none !default;
+$_ui_picklist__ui_picklist_list___margin: 0 !default;
+$_ui_picklist__ui_picklist_list___padding: 0 !default;
+$_ui_picklist__ui_picklist_list___overflow: auto !default;
+$_ui_picklist__ui_picklist_list___height: 200px !default;
+$_ui_picklist__ui_picklist_list___width: 200px !default;
+$_ui_picklist__ui_picklist_list_li___margin: 1px !default;
+$_ui_picklist__ui_picklist_list_li___padding: 2px !default;
+$_ui_picklist__ui_button___display: block !default;
+$_ui_picklist__ui_button___margin_bottom: 0.3em !default;
+$_ui_picklist__ui_button_text_icon_left___width: 100% !default;
+$_ui_picklist__ui_picklist_item___cursor: pointer !default;
+$_ui_picklist__ui_picklist_item___border: 0px none !default;
+$_ui_picklist__ui_picklist_item___font_weight: inherit !default;
+$_ui_picklist__ui_picklist_caption___text_align: center !default;
+$_ui_picklist__ui_picklist_caption___padding: 4px 0px !default;
+$_ui_picklist__ui_picklist_caption___border_bottom: 0px none !default;
+$_ui_picklist_table___width: 100% !default;
+$_ui_picklist_table___border_collapse: collapse !default;
+$_ui_picklist__ui_picklist_filter___padding_right: 15px !default;
+$_ui_picklist__ui_picklist_filter___width: 100% !default;
+$_ui_picklist__ui_picklist_filter___box_sizing: border-box !default;
+$_ui_picklist__ui_picklist_filter_container___position: relative !default;
+$_ui_picklist__ui_picklist_filter_container___margin: 0 !default;
+$_ui_picklist__ui_picklist_filter_container___padding: 0 !default;
+$_ui_picklist__ui_picklist_filter_container__ui_icon___position: absolute !default;
+$_ui_picklist__ui_picklist_filter_container__ui_icon___top: 5px !default;
+$_ui_picklist__ui_picklist_filter_container__ui_icon___right: 2px !default;
+$_ui_picklist___div___float: none !default;
+$_ui_picklist___div___display: table-cell !default;
+$_ui_picklist___div___vertical_align: top !default;
+$_ui_picklist__ui_picklist_buttons___vertical_align: middle !default;
+$_ui_picklist_ui_picklist_vertical___display: table !default;
+$_ui_picklist_ui_picklist_vertical___div___float: none !default;
+$_ui_picklist_ui_picklist_vertical___div___display: table-row !default;
+$_ui_picklist_ui_picklist_vertical___div___vertical_align: top !default;
+$_ui_picklist_ui_picklist_vertical__ui_picklist_buttons___text_align: center !default;
+$_ui_picklist_ui_picklist_vertical__ui_picklist_buttons___height: auto !default;
+$_ui_picklist_ui_picklist_vertical__ui_picklist_buttons__ui_button___display: inline-block !default;
+$_ui_picklist_ui_picklist_vertical__ui_button___margin_top: 0.3em !default;
+$_ui_picklist_outline___outline: 1px dotted black !default;
+$_ui_picklist_outline___z_index: 1 !default;
+$_ui_picklist_list_ui_picklist_source___ui_picklist_list_ui_picklist_target___outline: none !default;
+$_ui_picklist_ui_picklist_responsive___width: 100% !default;
+$_ui_picklist_ui_picklist_responsive_____box_sizing: border-box !default;
+$_ui_picklist_ui_picklist_responsive__ui_picklist_list_wrapper___width: 35% !default;
+$_ui_picklist_ui_picklist_responsive__ui_picklist_buttons___width: 10% !default;
+$_ui_picklist_ui_picklist_responsive__ui_picklist_buttons_button___width: 100% !default;
+$_ui_picklist_ui_picklist_responsive__ui_picklist_list___width: auto !default;
+$_ui_picklist_ui_picklist_responsive__ui_chkbox_box___width: 18px !default;
+$_ui_picklist_ui_picklist_responsive__ui_chkbox_box___height: 18px !default;
+$_ui_picklist_ui_picklist_responsive___display: block !default;
+$_ui_picklist_ui_picklist_responsive___div___display: block !default;
+$_ui_picklist_ui_picklist_responsive___div___width: 100% !important !default;
+$_ui_picklist_ui_picklist_responsive__ui_picklist_buttons___text_align: center !default;
+$_ui_picklist_ui_picklist_responsive__ui_picklist_buttons___height: auto !default;
+$_ui_picklist_ui_picklist_responsive__ui_picklist_buttons___padding: 5px 0px !default;
+$_ui_picklist_ui_picklist_responsive__ui_picklist_buttons_button___display: inline !default;
+$_ui_picklist_ui_picklist_responsive__ui_picklist_buttons_button___width: 20% !default;
+$_ui_picklist_ui_picklist_responsive__ui_picklist_source_controls_ui_picklist_buttons___padding_bottom: 5px !default;
+$_ui_picklist_ui_picklist_responsive__ui_picklist_target_controls_ui_picklist_buttons___padding_top: 5px !default;
+$_ui_picklist_ui_picklist_responsive__ui_picklist_buttons__ui_icon_arrow_1_e___background_position: -64px -32px !default;
+$_ui_picklist_ui_picklist_responsive__ui_picklist_buttons__ui_icon_arrowstop_1_e___background_position: -224px -32px !default;
+$_ui_picklist_ui_picklist_responsive__ui_picklist_buttons__ui_icon_arrow_1_w___background_position: 0 -32px !default;
+$_ui_picklist_ui_picklist_responsive__ui_picklist_buttons__ui_icon_arrowstop_1_w___background_position: -192px -32px !default;
 .ui-picklist {
   > div {
-    float: left;
+    float: $_ui_picklist___div___float;
   }
 
   .ui-picklist-buttons {
-    height: 200px;
-    padding: 0px 5px;
+    height: $_ui_picklist__ui_picklist_buttons___height;
+    padding: $_ui_picklist__ui_picklist_buttons___padding;
   }
 
   .ui-picklist-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: auto;
-    height: 200px;
-    width: 200px;
+    list-style-type: $_ui_picklist__ui_picklist_list___list_style_type;
+    margin: $_ui_picklist__ui_picklist_list___margin;
+    padding: $_ui_picklist__ui_picklist_list___padding;
+    overflow: $_ui_picklist__ui_picklist_list___overflow;
+    height: $_ui_picklist__ui_picklist_list___height;
+    width: $_ui_picklist__ui_picklist_list___width;
 
     li {
-      margin: 1px;
-      padding: 2px;
+      margin: $_ui_picklist__ui_picklist_list_li___margin;
+      padding: $_ui_picklist__ui_picklist_list_li___padding;
     }
   }
 
   .ui-button {
-    display: block;
-    margin-bottom: 0.3em;
+    display: $_ui_picklist__ui_button___display;
+    margin-bottom: $_ui_picklist__ui_button___margin_bottom;
   }
 
   .ui-button-text-icon-left {
-    width: 100%;
+    width: $_ui_picklist__ui_button_text_icon_left___width;
   }
 
   .ui-picklist-item {
-    cursor: pointer;
-    border: 0px none;
-    font-weight: inherit;
+    cursor: $_ui_picklist__ui_picklist_item___cursor;
+    border: $_ui_picklist__ui_picklist_item___border;
+    font-weight: $_ui_picklist__ui_picklist_item___font_weight;
   }
 
   .ui-picklist-caption {
-    text-align: center;
-    padding: 4px 0px;
-    border-bottom: 0px none;
+    text-align: $_ui_picklist__ui_picklist_caption___text_align;
+    padding: $_ui_picklist__ui_picklist_caption___padding;
+    border-bottom: $_ui_picklist__ui_picklist_caption___border_bottom;
   }
 
   table {
-    width: 100%;
-    border-collapse: collapse;
+    width: $_ui_picklist_table___width;
+    border-collapse: $_ui_picklist_table___border_collapse;
   }
 
   .ui-picklist-filter {
-    padding-right: 15px;
-    width: 100%;
-    box-sizing: border-box;
+    padding-right: $_ui_picklist__ui_picklist_filter___padding_right;
+    width: $_ui_picklist__ui_picklist_filter___width;
+    box-sizing: $_ui_picklist__ui_picklist_filter___box_sizing;
   }
 
   .ui-picklist-filter-container {
-    position: relative;
-    margin: 0;
-    padding: 0;
+    position: $_ui_picklist__ui_picklist_filter_container___position;
+    margin: $_ui_picklist__ui_picklist_filter_container___margin;
+    padding: $_ui_picklist__ui_picklist_filter_container___padding;
 
     .ui-icon {
-      position: absolute;
-      top: 5px;
-      right: 2px;
+      position: $_ui_picklist__ui_picklist_filter_container__ui_icon___position;
+      top: $_ui_picklist__ui_picklist_filter_container__ui_icon___top;
+      right: $_ui_picklist__ui_picklist_filter_container__ui_icon___right;
     }
   }
 
-  display: table;
+  display: $_ui_picklist___display;
 
   > div {
-    float: none;
-    display: table-cell;
-    vertical-align: top;
+    float: $_ui_picklist___div___float;
+    display: $_ui_picklist___div___display;
+    vertical-align: $_ui_picklist___div___vertical_align;
   }
 
   .ui-picklist-buttons {
-    vertical-align: middle;
+    vertical-align: $_ui_picklist__ui_picklist_buttons___vertical_align;
   }
 
   &.ui-picklist-vertical {
-    display: table;
+    display: $_ui_picklist_ui_picklist_vertical___display;
 
     > div {
-      float: none;
-      display: table-row;
-      vertical-align: top;
+      float: $_ui_picklist_ui_picklist_vertical___div___float;
+      display: $_ui_picklist_ui_picklist_vertical___div___display;
+      vertical-align: $_ui_picklist_ui_picklist_vertical___div___vertical_align;
     }
 
     .ui-picklist-buttons {
-      text-align: center;
-      height: auto;
+      text-align: $_ui_picklist_ui_picklist_vertical__ui_picklist_buttons___text_align;
+      height: $_ui_picklist_ui_picklist_vertical__ui_picklist_buttons___height;
 
       .ui-button {
-        display: inline-block;
+        display: $_ui_picklist_ui_picklist_vertical__ui_picklist_buttons__ui_button___display;
       }
     }
 
     .ui-button {
-      margin-top: 0.3em;
+      margin-top: $_ui_picklist_ui_picklist_vertical__ui_button___margin_top;
     }
   }
 }
@@ -105,13 +174,13 @@
 /* Vertical */
 
 .ui-picklist-outline {
-  outline: 1px dotted black;
-  z-index: 1;
+  outline: $_ui_picklist_outline___outline;
+  z-index: $_ui_picklist_outline___z_index;
 }
 
 .ui-picklist-list {
   &.ui-picklist-source, &.ui-picklist-target {
-    outline: none;
+    outline: $_ui_picklist_list_ui_picklist_source___ui_picklist_list_ui_picklist_target___outline;
   }
 }
 
@@ -119,77 +188,77 @@
 
 .ui-picklist.ui-picklist-responsive {
   * {
-    box-sizing: border-box;
+    box-sizing: $_ui_picklist_ui_picklist_responsive_____box_sizing;
   }
 
-  width: 100%;
+  width: $_ui_picklist_ui_picklist_responsive___width;
 
   .ui-picklist-list-wrapper {
-    width: 35%;
+    width: $_ui_picklist_ui_picklist_responsive__ui_picklist_list_wrapper___width;
   }
 
   .ui-picklist-buttons {
-    width: 10%;
+    width: $_ui_picklist_ui_picklist_responsive__ui_picklist_buttons___width;
 
     button {
-      width: 100%;
+      width: $_ui_picklist_ui_picklist_responsive__ui_picklist_buttons_button___width;
     }
   }
 
   .ui-picklist-list {
-    width: auto;
+    width: $_ui_picklist_ui_picklist_responsive__ui_picklist_list___width;
   }
 
   .ui-chkbox-box {
-    width: 18px;
-    height: 18px;
+    width: $_ui_picklist_ui_picklist_responsive__ui_chkbox_box___width;
+    height: $_ui_picklist_ui_picklist_responsive__ui_chkbox_box___height;
   }
 }
 
 /* Responsive */
 @media (max-width: 640px) {
   .ui-picklist.ui-picklist-responsive {
-    display: block;
+    display: $_ui_picklist_ui_picklist_responsive___display;
 
     > div {
-      display: block;
-      width: 100% !important;
+      display: $_ui_picklist_ui_picklist_responsive___div___display;
+      width: $_ui_picklist_ui_picklist_responsive___div___width;
     }
 
     .ui-picklist-buttons {
-      text-align: center;
-      height: auto;
-      padding: 5px 0px;
+      text-align: $_ui_picklist_ui_picklist_responsive__ui_picklist_buttons___text_align;
+      height: $_ui_picklist_ui_picklist_responsive__ui_picklist_buttons___height;
+      padding: $_ui_picklist_ui_picklist_responsive__ui_picklist_buttons___padding;
 
       button {
-        display: inline;
-        width: 20%;
+        display: $_ui_picklist_ui_picklist_responsive__ui_picklist_buttons_button___display;
+        width: $_ui_picklist_ui_picklist_responsive__ui_picklist_buttons_button___width;
       }
     }
 
     .ui-picklist-source-controls.ui-picklist-buttons {
-      padding-bottom: 5px;
+      padding-bottom: $_ui_picklist_ui_picklist_responsive__ui_picklist_source_controls_ui_picklist_buttons___padding_bottom;
     }
 
     .ui-picklist-target-controls.ui-picklist-buttons {
-      padding-top: 5px;
+      padding-top: $_ui_picklist_ui_picklist_responsive__ui_picklist_target_controls_ui_picklist_buttons___padding_top;
     }
 
     .ui-picklist-buttons {
       .ui-icon-arrow-1-e {
-        background-position: -64px -32px;
+        background-position: $_ui_picklist_ui_picklist_responsive__ui_picklist_buttons__ui_icon_arrow_1_e___background_position;
       }
 
       .ui-icon-arrowstop-1-e {
-        background-position: -224px -32px;
+        background-position: $_ui_picklist_ui_picklist_responsive__ui_picklist_buttons__ui_icon_arrowstop_1_e___background_position;
       }
 
       .ui-icon-arrow-1-w {
-        background-position: 0 -32px;
+        background-position: $_ui_picklist_ui_picklist_responsive__ui_picklist_buttons__ui_icon_arrow_1_w___background_position;
       }
 
       .ui-icon-arrowstop-1-w {
-        background-position: -192px -32px;
+        background-position: $_ui_picklist_ui_picklist_responsive__ui_picklist_buttons__ui_icon_arrowstop_1_w___background_position;
       }
     }
   }

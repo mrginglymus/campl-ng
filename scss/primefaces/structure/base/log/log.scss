@@ -1,80 +1,115 @@
+$_ui_log___position: fixed !default;
+$_ui_log___width: 400px !default;
+$_ui_log___height: 300px !default;
+$_ui_log___left: 50px !default;
+$_ui_log___top: 50px !default;
+$_ui_log____moz_box_shadow: 0px 5px 10px rgba(0, 0, 0, 0.8) !default;
+$_ui_log____webkit_box_shadow: 0px 5px 10px rgba(0, 0, 0, 0.8) !default;
+$_ui_log___box_shadow: 0px 5px 10px rgba(0, 0, 0, 0.8) !default;
+$_ui_log_header___padding: .4em .4em .4em 1em !default;
+$_ui_log_header___position: relative !default;
+$_ui_log_header___border: 0px !default;
+$_ui_log_header___height: 18px !default;
+$_ui_log_content___overflow: auto !default;
+$_ui_log_content___height: 274px !default;
+$_ui_log__ui_log_header__ui_log_button___position: absolute !default;
+$_ui_log__ui_log_header__ui_log_button___display: block !default;
+$_ui_log__ui_log_header__ui_log_button___padding: 1px !default;
+$_ui_log__ui_log_header__ui_log_button_ui_log_clear___top: 4px !default;
+$_ui_log__ui_log_header__ui_log_button_ui_log_clear___left: 10px !default;
+$_ui_log__ui_log_header__ui_log_button_ui_log_all___top: 4px !default;
+$_ui_log__ui_log_header__ui_log_button_ui_log_all___left: 30px !default;
+$_ui_log__ui_log_header__ui_log_button_ui_log_info___top: 4px !default;
+$_ui_log__ui_log_header__ui_log_button_ui_log_info___left: 50px !default;
+$_ui_log__ui_log_header__ui_log_button_ui_log_warn___top: 4px !default;
+$_ui_log__ui_log_header__ui_log_button_ui_log_warn___left: 70px !default;
+$_ui_log__ui_log_header__ui_log_button_ui_log_debug___top: 4px !default;
+$_ui_log__ui_log_header__ui_log_button_ui_log_debug___left: 90px !default;
+$_ui_log__ui_log_header__ui_log_button_ui_log_error___top: 4px !default;
+$_ui_log__ui_log_header__ui_log_button_ui_log_error___left: 110px !default;
+$_ui_log__ui_log_button_hover___ui_log__ui_log_button_ui_state_active___padding: 0 !default;
+$_ui_log__ui_log_items___list_style_type: none !default;
+$_ui_log__ui_log_items___padding_left: 10px !default;
+$_ui_log__ui_log_item___margin_bottom: 5px !default;
+$_ui_log__ui_log_item__ui_icon___float: left !default;
+$_ui_log__ui_log_item__ui_icon___margin_right: 10px !default;
 .ui-log {
-  position: fixed;
-  width: 400px;
-  height: 300px;
-  left: 50px;
-  top: 50px;
-  -moz-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
-  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
+  position: $_ui_log___position;
+  width: $_ui_log___width;
+  height: $_ui_log___height;
+  left: $_ui_log___left;
+  top: $_ui_log___top;
+  -moz-box-shadow: $_ui_log____moz_box_shadow;
+  -webkit-box-shadow: $_ui_log____webkit_box_shadow;
+  box-shadow: $_ui_log___box_shadow;
 }
 
 .ui-log-header {
-  padding: .4em .4em .4em 1em;
-  position: relative;
-  border: 0px;
-  height: 18px;
+  padding: $_ui_log_header___padding;
+  position: $_ui_log_header___position;
+  border: $_ui_log_header___border;
+  height: $_ui_log_header___height;
 }
 
 .ui-log-content {
-  overflow: auto;
-  height: 274px;
+  overflow: $_ui_log_content___overflow;
+  height: $_ui_log_content___height;
 }
 
 .ui-log {
   .ui-log-header .ui-log-button {
-    position: absolute;
-    display: block;
-    padding: 1px;
+    position: $_ui_log__ui_log_header__ui_log_button___position;
+    display: $_ui_log__ui_log_header__ui_log_button___display;
+    padding: $_ui_log__ui_log_header__ui_log_button___padding;
 
     &.ui-log-clear {
-      top: 4px;
-      left: 10px;
+      top: $_ui_log__ui_log_header__ui_log_button_ui_log_clear___top;
+      left: $_ui_log__ui_log_header__ui_log_button_ui_log_clear___left;
     }
 
     &.ui-log-all {
-      top: 4px;
-      left: 30px;
+      top: $_ui_log__ui_log_header__ui_log_button_ui_log_all___top;
+      left: $_ui_log__ui_log_header__ui_log_button_ui_log_all___left;
     }
 
     &.ui-log-info {
-      top: 4px;
-      left: 50px;
+      top: $_ui_log__ui_log_header__ui_log_button_ui_log_info___top;
+      left: $_ui_log__ui_log_header__ui_log_button_ui_log_info___left;
     }
 
     &.ui-log-warn {
-      top: 4px;
-      left: 70px;
+      top: $_ui_log__ui_log_header__ui_log_button_ui_log_warn___top;
+      left: $_ui_log__ui_log_header__ui_log_button_ui_log_warn___left;
     }
 
     &.ui-log-debug {
-      top: 4px;
-      left: 90px;
+      top: $_ui_log__ui_log_header__ui_log_button_ui_log_debug___top;
+      left: $_ui_log__ui_log_header__ui_log_button_ui_log_debug___left;
     }
 
     &.ui-log-error {
-      top: 4px;
-      left: 110px;
+      top: $_ui_log__ui_log_header__ui_log_button_ui_log_error___top;
+      left: $_ui_log__ui_log_header__ui_log_button_ui_log_error___left;
     }
   }
 
   .ui-log-button {
     &:hover, &.ui-state-active {
-      padding: 0;
+      padding: $_ui_log__ui_log_button_hover___ui_log__ui_log_button_ui_state_active___padding;
     }
   }
 
   .ui-log-items {
-    list-style-type: none;
-    padding-left: 10px;
+    list-style-type: $_ui_log__ui_log_items___list_style_type;
+    padding-left: $_ui_log__ui_log_items___padding_left;
   }
 
   .ui-log-item {
-    margin-bottom: 5px;
+    margin-bottom: $_ui_log__ui_log_item___margin_bottom;
 
     .ui-icon {
-      float: left;
-      margin-right: 10px;
+      float: $_ui_log__ui_log_item__ui_icon___float;
+      margin-right: $_ui_log__ui_log_item__ui_icon___margin_right;
     }
   }
 }

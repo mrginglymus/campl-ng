@@ -1,16 +1,21 @@
+$_ui_toolbar___padding: 0.2em !default;
+$_ui_toolbar__ui_separator___display: inline-block !default;
+$_ui_toolbar__ui_separator___vertical_align: middle !default;
+$_ui_toolbar_group_left___float: left !default;
+$_ui_toolbar_group_right___float: right !default;
 .ui-toolbar {
-  padding: 0.2em;
+  padding: $_ui_toolbar___padding;
 
   .ui-separator {
-    display: inline-block;
-    vertical-align: middle;
+    display: $_ui_toolbar__ui_separator___display;
+    vertical-align: $_ui_toolbar__ui_separator___vertical_align;
   }
 }
 
 .ui-toolbar-group-left {
-  float: left;
+  float: $_ui_toolbar_group_left___float;
 }
 
 .ui-toolbar-group-right {
-  float: right;
+  float: $_ui_toolbar_group_right___float;
 }

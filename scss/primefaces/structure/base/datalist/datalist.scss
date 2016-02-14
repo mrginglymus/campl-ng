@@ -1,30 +1,38 @@
+$_ui_datalist__ui_datalist_header___ui_datalist__ui_datalist_footer___text_align: center !default;
+$_ui_datalist__ui_datalist_header___ui_datalist__ui_datalist_footer___padding: 4px 10px !default;
+$_ui_datalist__ui_datalist_header___border_bottom: 0px none !default;
+$_ui_datalist__ui_datalist_footer___border_top: 0px none !default;
+$_ui_datalist__ui_paginator_top___border_bottom: 0px none !default;
+$_ui_datalist__ui_paginator_bottom___border_top: 0px none !default;
+$_ui_datalist__ui_datalist_empty_message___padding: 4px 10px !default;
+$_ui_datalist__ui_datalist_nobullets___list_style_type: none !default;
 .ui-datalist {
   .ui-datalist-header, .ui-datalist-footer {
-    text-align: center;
-    padding: 4px 10px;
+    text-align: $_ui_datalist__ui_datalist_header___ui_datalist__ui_datalist_footer___text_align;
+    padding: $_ui_datalist__ui_datalist_header___ui_datalist__ui_datalist_footer___padding;
   }
 
   .ui-datalist-header {
-    border-bottom: 0px none;
+    border-bottom: $_ui_datalist__ui_datalist_header___border_bottom;
   }
 
   .ui-datalist-footer {
-    border-top: 0px none;
+    border-top: $_ui_datalist__ui_datalist_footer___border_top;
   }
 
   .ui-paginator-top {
-    border-bottom: 0px none;
+    border-bottom: $_ui_datalist__ui_paginator_top___border_bottom;
   }
 
   .ui-paginator-bottom {
-    border-top: 0px none;
+    border-top: $_ui_datalist__ui_paginator_bottom___border_top;
   }
 
   .ui-datalist-empty-message {
-    padding: 4px 10px;
+    padding: $_ui_datalist__ui_datalist_empty_message___padding;
   }
 
   .ui-datalist-nobullets {
-    list-style-type: none;
+    list-style-type: $_ui_datalist__ui_datalist_nobullets___list_style_type;
   }
 }

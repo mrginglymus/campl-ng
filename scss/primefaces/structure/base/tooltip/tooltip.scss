@@ -1,5 +1,8 @@
+$_ui_tooltip___position: absolute !default;
+$_ui_tooltip___display: none !default;
+$_ui_tooltip___padding: 3px 5px !default;
 .ui-tooltip {
-  position: absolute;
-  display: none;
-  padding: 3px 5px;
+  position: $_ui_tooltip___position;
+  display: $_ui_tooltip___display;
+  padding: $_ui_tooltip___padding;
 }

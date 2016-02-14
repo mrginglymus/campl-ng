@@ -1,72 +1,107 @@
+$_ui_dock_top___ui_dock_bottom___position: relative !default;
+$_ui_dock_top___ui_dock_bottom___height: 50px !default;
+$_ui_dock_top___ui_dock_bottom___text_align: center !default;
+$_ui_dock_container_top___position: fixed !default;
+$_ui_dock_container_top___height: 50px !default;
+$_ui_dock_container_top___padding_left: 20px !default;
+$_ui_dock_top__ui_menuitem_link___display: block !default;
+$_ui_dock_top__ui_menuitem_link___width: 40px !default;
+$_ui_dock_top__ui_menuitem_link___position: absolute !default;
+$_ui_dock_top__ui_menuitem_link___top: 0px !default;
+$_ui_dock_top__ui_menuitem_link___text_align: center !default;
+$_ui_dock_top__ui_menuitem_link___text_decoration: none !default;
+$_ui_dock_top_img___border: none !default;
+$_ui_dock_top_img___margin: 5px 10px 0px !default;
+$_ui_dock_top_img___width: 100% !default;
+$_ui_dock_top_span___display: none !default;
+$_ui_dock_top_span___padding_left: 20px !default;
+$_ui_dock_bottom___width: 100% !default;
+$_ui_dock_bottom___bottom: 0px !default;
+$_ui_dock_bottom___position: absolute !default;
+$_ui_dock_bottom___left: 0px !default;
+$_ui_dock_container_bottom___position: fixed !default;
+$_ui_dock_container_bottom___height: 50px !default;
+$_ui_dock_container_bottom___padding_left: 20px !default;
+$_ui_dock_bottom__ui_menuitem_link___display: block !default;
+$_ui_dock_bottom__ui_menuitem_link___width: 40px !default;
+$_ui_dock_bottom__ui_menuitem_link___bottom: 0px !default;
+$_ui_dock_bottom__ui_menuitem_link___position: absolute !default;
+$_ui_dock_bottom__ui_menuitem_link___text_align: center !default;
+$_ui_dock_bottom__ui_menuitem_link___text_decoration: none !default;
+$_ui_dock_bottom_span___display: none !default;
+$_ui_dock_bottom_span___padding_left: 20px !default;
+$_ui_dock_bottom_img___border: none !default;
+$_ui_dock_bottom_img___margin: 5px 10px 0px !default;
+$_ui_dock_bottom_img___width: 100% !default;
 /* top */
 
 .ui-dock-top, .ui-dock-bottom {
-  position: relative;
-  height: 50px;
-  text-align: center;
+  position: $_ui_dock_top___ui_dock_bottom___position;
+  height: $_ui_dock_top___ui_dock_bottom___height;
+  text-align: $_ui_dock_top___ui_dock_bottom___text_align;
 }
 
 .ui-dock-container-top {
-  position: fixed;
-  height: 50px;
-  padding-left: 20px;
+  position: $_ui_dock_container_top___position;
+  height: $_ui_dock_container_top___height;
+  padding-left: $_ui_dock_container_top___padding_left;
 }
 
 .ui-dock-top {
   .ui-menuitem-link {
-    display: block;
-    width: 40px;
-    position: absolute;
-    top: 0px;
-    text-align: center;
-    text-decoration: none;
+    display: $_ui_dock_top__ui_menuitem_link___display;
+    width: $_ui_dock_top__ui_menuitem_link___width;
+    position: $_ui_dock_top__ui_menuitem_link___position;
+    top: $_ui_dock_top__ui_menuitem_link___top;
+    text-align: $_ui_dock_top__ui_menuitem_link___text_align;
+    text-decoration: $_ui_dock_top__ui_menuitem_link___text_decoration;
   }
 
   img {
-    border: none;
-    margin: 5px 10px 0px;
-    width: 100%;
+    border: $_ui_dock_top_img___border;
+    margin: $_ui_dock_top_img___margin;
+    width: $_ui_dock_top_img___width;
   }
 
   span {
-    display: none;
-    padding-left: 20px;
+    display: $_ui_dock_top_span___display;
+    padding-left: $_ui_dock_top_span___padding_left;
   }
 }
 
 /* bottom */
 
 .ui-dock-bottom {
-  width: 100%;
-  bottom: 0px;
-  position: absolute;
-  left: 0px;
+  width: $_ui_dock_bottom___width;
+  bottom: $_ui_dock_bottom___bottom;
+  position: $_ui_dock_bottom___position;
+  left: $_ui_dock_bottom___left;
 }
 
 .ui-dock-container-bottom {
-  position: fixed;
-  height: 50px;
-  padding-left: 20px;
+  position: $_ui_dock_container_bottom___position;
+  height: $_ui_dock_container_bottom___height;
+  padding-left: $_ui_dock_container_bottom___padding_left;
 }
 
 .ui-dock-bottom {
   .ui-menuitem-link {
-    display: block;
-    width: 40px;
-    bottom: 0px;
-    position: absolute;
-    text-align: center;
-    text-decoration: none;
+    display: $_ui_dock_bottom__ui_menuitem_link___display;
+    width: $_ui_dock_bottom__ui_menuitem_link___width;
+    bottom: $_ui_dock_bottom__ui_menuitem_link___bottom;
+    position: $_ui_dock_bottom__ui_menuitem_link___position;
+    text-align: $_ui_dock_bottom__ui_menuitem_link___text_align;
+    text-decoration: $_ui_dock_bottom__ui_menuitem_link___text_decoration;
   }
 
   span {
-    display: none;
-    padding-left: 20px;
+    display: $_ui_dock_bottom_span___display;
+    padding-left: $_ui_dock_bottom_span___padding_left;
   }
 
   img {
-    border: none;
-    margin: 5px 10px 0px;
-    width: 100%;
+    border: $_ui_dock_bottom_img___border;
+    margin: $_ui_dock_bottom_img___margin;
+    width: $_ui_dock_bottom_img___width;
   }
 }

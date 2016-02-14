@@ -1,18 +1,28 @@
+$_ui_overlaypanel___padding: 0 !default;
+$_ui_overlaypanel___margin: 0 !default;
+$_ui_overlaypanel___position: absolute !default;
+$_ui_overlaypanel_content___padding: 0.5em 1em !default;
+$_ui_overlaypanel_close___position: absolute !default;
+$_ui_overlaypanel_close___top: -10px !default;
+$_ui_overlaypanel_close___right: -10px !default;
+$_ui_overlaypanel_close____moz_border_radius: 10px !default;
+$_ui_overlaypanel_close____webkit_border_radius: 10px !default;
+$_ui_overlaypanel_close___border_radius: 10px !default;
 .ui-overlaypanel {
-  padding: 0;
-  margin: 0;
-  position: absolute;
+  padding: $_ui_overlaypanel___padding;
+  margin: $_ui_overlaypanel___margin;
+  position: $_ui_overlaypanel___position;
 }
 
 .ui-overlaypanel-content {
-  padding: 0.5em 1em;
+  padding: $_ui_overlaypanel_content___padding;
 }
 
 .ui-overlaypanel-close {
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
+  position: $_ui_overlaypanel_close___position;
+  top: $_ui_overlaypanel_close___top;
+  right: $_ui_overlaypanel_close___right;
+  -moz-border-radius: $_ui_overlaypanel_close____moz_border_radius;
+  -webkit-border-radius: $_ui_overlaypanel_close____webkit_border_radius;
+  border-radius: $_ui_overlaypanel_close___border_radius;
 }

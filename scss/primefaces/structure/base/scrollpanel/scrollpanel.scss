@@ -1,103 +1,149 @@
+$_ui_scrollpanel___overflow: hidden !default;
+$_ui_scrollpanel___outline: none !default;
+$_ui_scrollpanel___background_image: none !default;
+$_ui_scrollpanel_native___overflow: auto !default;
+$_ui_scrollpanel_container___overflow: hidden !default;
+$_ui_scrollpanel_container___position: relative !default;
+$_ui_scrollpanel_content___position: absolute !default;
+$_ui_scrollpanel_vbar___position: absolute !default;
+$_ui_scrollpanel_vbar___top: 0 !default;
+$_ui_scrollpanel_vbar___right: 0 !default;
+$_ui_scrollpanel_vbar___width: 16px !default;
+$_ui_scrollpanel_vbar___height: 100% !default;
+$_ui_scrollpanel_hbar___position: absolute !default;
+$_ui_scrollpanel_hbar___bottom: 0 !default;
+$_ui_scrollpanel_hbar___left: 0 !default;
+$_ui_scrollpanel_hbar___width: 100% !default;
+$_ui_scrollpanel_hbar___height: 16px !default;
+$_ui_scrollpanel_cap___display: none !default;
+$_ui_scrollpanel_hbar__ui_scrollpanel_cap___float: left !default;
+$_ui_scrollpanel_track___background_image: none !default;
+$_ui_scrollpanel_track___position: relative !default;
+$_ui_scrollpanel_track___border: 0 none !default;
+$_ui_scrollpanel__ui_scrollpanel_drag___position: relative !default;
+$_ui_scrollpanel__ui_scrollpanel_drag___top: 0 !default;
+$_ui_scrollpanel__ui_scrollpanel_drag___left: 0 !default;
+$_ui_scrollpanel__ui_scrollpanel_drag___cursor: pointer !default;
+$_ui_scrollpanel__ui_scrollpanel_drag___border: 0px none !default;
+$_ui_scrollpanel_hbar__ui_scrollpanel_track___ui_scrollpanel_hbar__ui_scrollpanel_drag___float: left !default;
+$_ui_scrollpanel_hbar__ui_scrollpanel_track___ui_scrollpanel_hbar__ui_scrollpanel_drag___height: 100% !default;
+$_jspArrow___background: #50506d !default;
+$_jspArrow___text_indent: -20000px !default;
+$_jspArrow___display: block !default;
+$_jspArrow___cursor: pointer !default;
+$_jspArrow___padding: 0 !default;
+$_jspArrow___margin: 0 !default;
+$_jspArrow_jspDisabled___cursor: default !default;
+$_jspArrow_jspDisabled___background: #80808d !default;
+$_ui_scrollpanel_vbar__jspArrow___height: 16px !default;
+$_ui_scrollpanel_hbar__jspArrow___width: 16px !default;
+$_ui_scrollpanel_hbar__jspArrow___float: left !default;
+$_ui_scrollpanel_hbar__jspArrow___height: 100% !default;
+$_ui_scrollpanel_vbar__jspArrow_focus___outline: none !default;
+$_ui_scrollpanel_corner___float: left !default;
+$_ui_scrollpanel_corner___height: 100% !default;
+$_ui_scrollpanel_corner___border: 0 none !default;
+$__html__ui_scrollpanel_corner___margin: 0 -3px 0 0 !default;
 .ui-scrollpanel {
-  overflow: hidden;
-  outline: none;
-  background-image: none;
+  overflow: $_ui_scrollpanel___overflow;
+  outline: $_ui_scrollpanel___outline;
+  background-image: $_ui_scrollpanel___background_image;
 }
 
 .ui-scrollpanel-native {
-  overflow: auto;
+  overflow: $_ui_scrollpanel_native___overflow;
 }
 
 .ui-scrollpanel-container {
-  overflow: hidden;
-  position: relative;
+  overflow: $_ui_scrollpanel_container___overflow;
+  position: $_ui_scrollpanel_container___position;
 }
 
 .ui-scrollpanel-content {
-  position: absolute;
+  position: $_ui_scrollpanel_content___position;
 }
 
 .ui-scrollpanel-vbar {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 16px;
-  height: 100%;
+  position: $_ui_scrollpanel_vbar___position;
+  top: $_ui_scrollpanel_vbar___top;
+  right: $_ui_scrollpanel_vbar___right;
+  width: $_ui_scrollpanel_vbar___width;
+  height: $_ui_scrollpanel_vbar___height;
 }
 
 .ui-scrollpanel-hbar {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 16px;
+  position: $_ui_scrollpanel_hbar___position;
+  bottom: $_ui_scrollpanel_hbar___bottom;
+  left: $_ui_scrollpanel_hbar___left;
+  width: $_ui_scrollpanel_hbar___width;
+  height: $_ui_scrollpanel_hbar___height;
 }
 
 .ui-scrollpanel-cap {
-  display: none;
+  display: $_ui_scrollpanel_cap___display;
 }
 
 .ui-scrollpanel-hbar .ui-scrollpanel-cap {
-  float: left;
+  float: $_ui_scrollpanel_hbar__ui_scrollpanel_cap___float;
 }
 
 .ui-scrollpanel-track {
-  background-image: none;
-  position: relative;
-  border: 0 none;
+  background-image: $_ui_scrollpanel_track___background_image;
+  position: $_ui_scrollpanel_track___position;
+  border: $_ui_scrollpanel_track___border;
 }
 
 .ui-scrollpanel .ui-scrollpanel-drag {
-  position: relative;
-  top: 0;
-  left: 0;
-  cursor: pointer;
-  border: 0px none;
+  position: $_ui_scrollpanel__ui_scrollpanel_drag___position;
+  top: $_ui_scrollpanel__ui_scrollpanel_drag___top;
+  left: $_ui_scrollpanel__ui_scrollpanel_drag___left;
+  cursor: $_ui_scrollpanel__ui_scrollpanel_drag___cursor;
+  border: $_ui_scrollpanel__ui_scrollpanel_drag___border;
 }
 
 .ui-scrollpanel-hbar {
   .ui-scrollpanel-track, .ui-scrollpanel-drag {
-    float: left;
-    height: 100%;
+    float: $_ui_scrollpanel_hbar__ui_scrollpanel_track___ui_scrollpanel_hbar__ui_scrollpanel_drag___float;
+    height: $_ui_scrollpanel_hbar__ui_scrollpanel_track___ui_scrollpanel_hbar__ui_scrollpanel_drag___height;
   }
 }
 
 .jspArrow {
-  background: #50506d;
-  text-indent: -20000px;
-  display: block;
-  cursor: pointer;
-  padding: 0;
-  margin: 0;
+  background: $_jspArrow___background;
+  text-indent: $_jspArrow___text_indent;
+  display: $_jspArrow___display;
+  cursor: $_jspArrow___cursor;
+  padding: $_jspArrow___padding;
+  margin: $_jspArrow___margin;
 
   &.jspDisabled {
-    cursor: default;
-    background: #80808d;
+    cursor: $_jspArrow_jspDisabled___cursor;
+    background: $_jspArrow_jspDisabled___background;
   }
 }
 
 .ui-scrollpanel-vbar .jspArrow {
-  height: 16px;
+  height: $_ui_scrollpanel_vbar__jspArrow___height;
 }
 
 .ui-scrollpanel-hbar .jspArrow {
-  width: 16px;
-  float: left;
-  height: 100%;
+  width: $_ui_scrollpanel_hbar__jspArrow___width;
+  float: $_ui_scrollpanel_hbar__jspArrow___float;
+  height: $_ui_scrollpanel_hbar__jspArrow___height;
 }
 
 .ui-scrollpanel-vbar .jspArrow:focus {
-  outline: none;
+  outline: $_ui_scrollpanel_vbar__jspArrow_focus___outline;
 }
 
 .ui-scrollpanel-corner {
-  float: left;
-  height: 100%;
-  border: 0 none;
+  float: $_ui_scrollpanel_corner___float;
+  height: $_ui_scrollpanel_corner___height;
+  border: $_ui_scrollpanel_corner___border;
 }
 
 /* Yuk! CSS Hack for IE6 3 pixel bug :( */
 
 * html .ui-scrollpanel-corner {
-  margin: 0 -3px 0 0;
+  margin: $__html__ui_scrollpanel_corner___margin;
 }

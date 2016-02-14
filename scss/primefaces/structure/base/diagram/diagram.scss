@@ -1,8 +1,11 @@
+$_ui_diagram___position: relative !default;
+$_ui_diagram___overflow: auto !default;
+$_ui_diagram_element___position: absolute !default;
 .ui-diagram {
-  position: relative;
-  overflow: auto;
+  position: $_ui_diagram___position;
+  overflow: $_ui_diagram___overflow;
 }
 
 .ui-diagram-element {
-  position: absolute;
+  position: $_ui_diagram_element___position;
 }

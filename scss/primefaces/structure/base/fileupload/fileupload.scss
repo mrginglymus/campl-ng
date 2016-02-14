@@ -1,3 +1,49 @@
+$_ui_fileupload_buttonbar__ui_fileupload_choose_input___position: absolute !default;
+$_ui_fileupload_buttonbar__ui_fileupload_choose_input___top: 0 !default;
+$_ui_fileupload_buttonbar__ui_fileupload_choose_input___right: 0 !default;
+$_ui_fileupload_buttonbar__ui_fileupload_choose_input___margin: 0 !default;
+$_ui_fileupload_buttonbar__ui_fileupload_choose_input___opacity: 0 !default;
+$_ui_fileupload_buttonbar__ui_fileupload_choose_input___filter: alpha(opacity=0) !default;
+$_ui_fileupload_buttonbar__ui_fileupload_choose_input___font_size: 200px !default;
+$_ui_fileupload_buttonbar__ui_fileupload_choose_input___direction: ltr !default;
+$_ui_fileupload_buttonbar__ui_fileupload_choose_input___cursor: pointer !default;
+$_ui_fileupload_buttonbar__ui_fileupload_choose_ui_state_disabled_input___cursor: default !default;
+$_ui_fileupload_choose___position: relative !default;
+$_ui_fileupload_choose___overflow: hidden !default;
+$_ui_fileupload_buttonbar___padding: 0.2em 0.4em !default;
+$_ui_fileupload_buttonbar__ui_button___vertical_align: middle !default;
+$_ui_fileupload_buttonbar__ui_button___margin_right: 0.2em !default;
+$_ui_fileupload_content___padding: 0.2em 0.4em !default;
+$_ui_fileupload_content___border_top_width: 0 !default;
+$_ui_fileupload_content__ui_progressbar___width: 200px !default;
+$_ui_fileupload_content__ui_progressbar___height: 20px !default;
+$_ui_fileupload_content__ui_progressbar___margin: 0px !default;
+$_ui_fileupload_content__ui_progressbar__ui_progressbar_value___height: 100% !default;
+$_ui_fileupload_content__ui_progressbar_value_legacy___background: url("fileupload/ie-anim.gif") repeat-x !default;
+$_ui_fileupload_files___margin: 10px 0 !default;
+$_ui_fileupload_files___border_collapse: collapse !default;
+$_ui_fileupload_files_td___padding: 4px 10px !default;
+$_ui_fileupload_files_img___border: none !default;
+$_ui_state_disabled__ui_state_disabled___opacity: 1 !default;
+$_ui_state_disabled__ui_state_disabled___filter: alpha(opacity=100) !default;
+$_ui_state_disabled_input___cursor: default !default;
+$_ui_fileupload_simple___position: relative !default;
+$_ui_fileupload_simple___overflow: hidden !default;
+$_ui_fileupload_simple__ui_button___overflow: hidden !default;
+$_ui_fileupload_simple_input_type_file____position: absolute !default;
+$_ui_fileupload_simple_input_type_file____top: 0 !default;
+$_ui_fileupload_simple_input_type_file____right: 0 !default;
+$_ui_fileupload_simple_input_type_file____min_width: 100% !default;
+$_ui_fileupload_simple_input_type_file____min_height: 100% !default;
+$_ui_fileupload_simple_input_type_file____font_size: 100px !default;
+$_ui_fileupload_simple_input_type_file____text_align: right !default;
+$_ui_fileupload_simple_input_type_file____filter: alpha(opacity=0) !default;
+$_ui_fileupload_simple_input_type_file____opacity: 0 !default;
+$_ui_fileupload_simple_input_type_file____outline: none !default;
+$_ui_fileupload_simple_input_type_file____background: white !default;
+$_ui_fileupload_simple_input_type_file____cursor: inherit !default;
+$_ui_fileupload_simple_input_type_file____display: block !default;
+$_ui_fileupload_simple__ui_fileupload_filename___margin_left: 0.5em !default;
 /*
  * jQuery File Upload UI Plugin CSS 5.0.6
  * https://github.com/blueimp/jQuery-File-Upload
@@ -11,106 +57,106 @@
 
 .ui-fileupload-buttonbar .ui-fileupload-choose {
   input {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 0;
-    opacity: 0;
+    position: $_ui_fileupload_buttonbar__ui_fileupload_choose_input___position;
+    top: $_ui_fileupload_buttonbar__ui_fileupload_choose_input___top;
+    right: $_ui_fileupload_buttonbar__ui_fileupload_choose_input___right;
+    margin: $_ui_fileupload_buttonbar__ui_fileupload_choose_input___margin;
+    opacity: $_ui_fileupload_buttonbar__ui_fileupload_choose_input___opacity;
     filter: alpha(opacity = 0);
-    font-size: 200px;
-    direction: ltr;
-    cursor: pointer;
+    font-size: $_ui_fileupload_buttonbar__ui_fileupload_choose_input___font_size;
+    direction: $_ui_fileupload_buttonbar__ui_fileupload_choose_input___direction;
+    cursor: $_ui_fileupload_buttonbar__ui_fileupload_choose_input___cursor;
   }
 
   &.ui-state-disabled input {
-    cursor: default;
+    cursor: $_ui_fileupload_buttonbar__ui_fileupload_choose_ui_state_disabled_input___cursor;
   }
 }
 
 .ui-fileupload-choose {
-  position: relative;
-  overflow: hidden;
+  position: $_ui_fileupload_choose___position;
+  overflow: $_ui_fileupload_choose___overflow;
 }
 
 .ui-fileupload-buttonbar {
-  padding: 0.2em 0.4em;
+  padding: $_ui_fileupload_buttonbar___padding;
 
   .ui-button {
-    vertical-align: middle;
-    margin-right: 0.2em;
+    vertical-align: $_ui_fileupload_buttonbar__ui_button___vertical_align;
+    margin-right: $_ui_fileupload_buttonbar__ui_button___margin_right;
   }
 }
 
 .ui-fileupload-content {
-  padding: 0.2em 0.4em;
-  border-top-width: 0;
+  padding: $_ui_fileupload_content___padding;
+  border-top-width: $_ui_fileupload_content___border_top_width;
 
   .ui-progressbar {
-    width: 200px;
-    height: 20px;
-    margin: 0px;
+    width: $_ui_fileupload_content__ui_progressbar___width;
+    height: $_ui_fileupload_content__ui_progressbar___height;
+    margin: $_ui_fileupload_content__ui_progressbar___margin;
 
     .ui-progressbar-value {
-      height: 100%;
+      height: $_ui_fileupload_content__ui_progressbar__ui_progressbar_value___height;
     }
   }
 
   .ui-progressbar-value-legacy {
-    background: url("#{resource['primefaces:fileupload/ie-anim.gif']}") repeat-x;
+    background: $_ui_fileupload_content__ui_progressbar_value_legacy___background;
   }
 }
 
 .ui-fileupload-files {
-  margin: 10px 0;
-  border-collapse: collapse;
+  margin: $_ui_fileupload_files___margin;
+  border-collapse: $_ui_fileupload_files___border_collapse;
 
   td {
-    padding: 4px 10px;
+    padding: $_ui_fileupload_files_td___padding;
   }
 
   img {
-    border: none;
+    border: $_ui_fileupload_files_img___border;
   }
 }
 
 .ui-state-disabled {
   .ui-state-disabled {
-    opacity: 1;
+    opacity: $_ui_state_disabled__ui_state_disabled___opacity;
     filter: alpha(opacity = 100);
   }
 
   input {
-    cursor: default;
+    cursor: $_ui_state_disabled_input___cursor;
   }
 }
 
 /** Simple **/
 
 .ui-fileupload-simple {
-  position: relative;
-  overflow: hidden;
+  position: $_ui_fileupload_simple___position;
+  overflow: $_ui_fileupload_simple___overflow;
 
   .ui-button {
-    overflow: hidden;
+    overflow: $_ui_fileupload_simple__ui_button___overflow;
   }
 
   input[type=file] {
-    position: absolute;
-    top: 0;
-    right: 0;
-    min-width: 100%;
-    min-height: 100%;
-    font-size: 100px;
-    text-align: right;
+    position: $_ui_fileupload_simple_input_type_file____position;
+    top: $_ui_fileupload_simple_input_type_file____top;
+    right: $_ui_fileupload_simple_input_type_file____right;
+    min-width: $_ui_fileupload_simple_input_type_file____min_width;
+    min-height: $_ui_fileupload_simple_input_type_file____min_height;
+    font-size: $_ui_fileupload_simple_input_type_file____font_size;
+    text-align: $_ui_fileupload_simple_input_type_file____text_align;
     filter: alpha(opacity = 0);
-    opacity: 0;
-    outline: none;
-    background: white;
-    cursor: inherit;
-    display: block;
+    opacity: $_ui_fileupload_simple_input_type_file____opacity;
+    outline: $_ui_fileupload_simple_input_type_file____outline;
+    background: $_ui_fileupload_simple_input_type_file____background;
+    cursor: $_ui_fileupload_simple_input_type_file____cursor;
+    display: $_ui_fileupload_simple_input_type_file____display;
   }
 
   .ui-fileupload-filename {
-    margin-left: 0.5em;
+    margin-left: $_ui_fileupload_simple__ui_fileupload_filename___margin_left;
   }
 }

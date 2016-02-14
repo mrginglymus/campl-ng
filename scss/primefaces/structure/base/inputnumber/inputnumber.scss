@@ -1,3 +1,4 @@
+$_ui_inputnumber____ui_inputtext___ms_clear___display: none !default;
 .ui-inputnumber > .ui-inputtext::-ms-clear {
-  display: none;
+  display: $_ui_inputnumber____ui_inputtext___ms_clear___display;
 }

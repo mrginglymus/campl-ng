@@ -1,55 +1,77 @@
+$_jcrop_holder___text_align: left !default;
+$_jcrop_vline___jcrop_hline___font_size: 0px !default;
+$_jcrop_vline___jcrop_hline___position: absolute !default;
+$_jcrop_vline___jcrop_hline___background: white url("imagecropper/crop.gif") top left repeat !default;
+$_jcrop_vline___height: 100% !default;
+$_jcrop_vline___width: 1px !important !default;
+$_jcrop_hline___width: 100% !default;
+$_jcrop_hline___height: 1px !important !default;
+$_jcrop_vline_right___right: 0px !default;
+$_jcrop_hline_bottom___bottom: 0px !default;
+$_jcrop_handle___font_size: 1px !default;
+$_jcrop_handle___width: 7px !important !default;
+$_jcrop_handle___height: 7px !important !default;
+$_jcrop_handle___border: 1px #eee solid !default;
+$_jcrop_handle___background_color: #333 !default;
+$_jcrop_tracker___width: 100% !default;
+$_jcrop_tracker___height: 100% !default;
+$_custom__jcrop_vline___custom__jcrop_hline___background: yellow !default;
+$_custom__jcrop_handle___border_color: black !default;
+$_custom__jcrop_handle___background_color: #C7BB00 !default;
+$_custom__jcrop_handle____moz_border_radius: 3px !default;
+$_custom__jcrop_handle____webkit_border_radius: 3px !default;
 /* Fixes issue here http://code.google.com/p/jcrop/issues/detail?id=1 */
 
 .jcrop-holder {
-  text-align: left;
+  text-align: $_jcrop_holder___text_align;
 }
 
 .jcrop-vline, .jcrop-hline {
-  font-size: 0px;
-  position: absolute;
-  background: white url("imagecropper/crop.gif") top left repeat;
+  font-size: $_jcrop_vline___jcrop_hline___font_size;
+  position: $_jcrop_vline___jcrop_hline___position;
+  background: $_jcrop_vline___jcrop_hline___background;
 }
 
 .jcrop-vline {
-  height: 100%;
-  width: 1px !important;
+  height: $_jcrop_vline___height;
+  width: $_jcrop_vline___width;
 }
 
 .jcrop-hline {
-  width: 100%;
-  height: 1px !important;
+  width: $_jcrop_hline___width;
+  height: $_jcrop_hline___height;
 }
 
 .jcrop-vline.right {
-  right: 0px;
+  right: $_jcrop_vline_right___right;
 }
 
 .jcrop-hline.bottom {
-  bottom: 0px;
+  bottom: $_jcrop_hline_bottom___bottom;
 }
 
 .jcrop-handle {
-  font-size: 1px;
-  width: 7px !important;
-  height: 7px !important;
-  border: 1px #eee solid;
-  background-color: #333;
+  font-size: $_jcrop_handle___font_size;
+  width: $_jcrop_handle___width;
+  height: $_jcrop_handle___height;
+  border: $_jcrop_handle___border;
+  background-color: $_jcrop_handle___background_color;
 }
 
 .jcrop-tracker {
-  width: 100%;
-  height: 100%;
+  width: $_jcrop_tracker___width;
+  height: $_jcrop_tracker___height;
 }
 
 .custom {
   .jcrop-vline, .jcrop-hline {
-    background: yellow;
+    background: $_custom__jcrop_vline___custom__jcrop_hline___background;
   }
 
   .jcrop-handle {
-    border-color: black;
-    background-color: #C7BB00;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
+    border-color: $_custom__jcrop_handle___border_color;
+    background-color: $_custom__jcrop_handle___background_color;
+    -moz-border-radius: $_custom__jcrop_handle____moz_border_radius;
+    -webkit-border-radius: $_custom__jcrop_handle____webkit_border_radius;
   }
 }

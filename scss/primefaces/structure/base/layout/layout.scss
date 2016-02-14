@@ -1,35 +1,51 @@
+$_ui_layout_unit___visibility: hidden !default;
+$_ui_layout_unit___padding: 0.2em !default;
+$_ui_layout_unit_header___ui_layout_unit_footer___padding: 0.4em 0.2em 0.4em 0.4em !default;
+$_ui_layout_unit__ui_layout_unit_content___padding: 0.2em 0em !default;
+$_ui_layout_unit__ui_layout_unit_content___border: 0px none !default;
+$_ui_layout_unit__ui_layout_unit_content___overflow: auto !default;
+$_ui_layout_unit_header_icon___float: right !default;
+$_ui_layout_unit_header_icon___margin_right: 0.2em !default;
+$_ui_layout_unit_header_icon___margin_top: -0.2em !default;
+$_ui_layout_unit_header_icon_hover___ui_layout_unit_header_icon_focus___margin_right: 0.2em !default;
+$_ui_layout_unit_header_icon_hover___ui_layout_unit_header_icon_focus___margin_top: -0.2em !default;
+$_ui_layout_unit_expand_icon___display: block !default;
+$_ui_layout_unit_expand_icon___width: 16px !default;
+$_ui_layout_unit_expand_icon___position: absolute !default;
+$_ui_layout_unit_expand_icon___left: 4px !default;
+$_ui_layout_unit_expand_icon___top: 2px !default;
 .ui-layout-unit {
-  visibility: hidden;
-  padding: 0.2em;
+  visibility: $_ui_layout_unit___visibility;
+  padding: $_ui_layout_unit___padding;
 }
 
 .ui-layout-unit-header, .ui-layout-unit-footer {
-  padding: 0.4em 0.2em 0.4em 0.4em;
+  padding: $_ui_layout_unit_header___ui_layout_unit_footer___padding;
 }
 
 .ui-layout-unit-header-title, .ui-layout-unit-footer-title {}
 
 .ui-layout-unit .ui-layout-unit-content {
-  padding: 0.2em 0em;
-  border: 0px none;
-  overflow: auto;
+  padding: $_ui_layout_unit__ui_layout_unit_content___padding;
+  border: $_ui_layout_unit__ui_layout_unit_content___border;
+  overflow: $_ui_layout_unit__ui_layout_unit_content___overflow;
 }
 
 .ui-layout-unit-header-icon {
-  float: right;
-  margin-right: 0.2em;
-  margin-top: -0.2em;
+  float: $_ui_layout_unit_header_icon___float;
+  margin-right: $_ui_layout_unit_header_icon___margin_right;
+  margin-top: $_ui_layout_unit_header_icon___margin_top;
 
   &:hover, &:focus {
-    margin-right: 0.2em;
-    margin-top: -0.2em;
+    margin-right: $_ui_layout_unit_header_icon_hover___ui_layout_unit_header_icon_focus___margin_right;
+    margin-top: $_ui_layout_unit_header_icon_hover___ui_layout_unit_header_icon_focus___margin_top;
   }
 }
 
 .ui-layout-unit-expand-icon {
-  display: block;
-  width: 16px;
-  position: absolute;
-  left: 4px;
-  top: 2px;
+  display: $_ui_layout_unit_expand_icon___display;
+  width: $_ui_layout_unit_expand_icon___width;
+  position: $_ui_layout_unit_expand_icon___position;
+  left: $_ui_layout_unit_expand_icon___left;
+  top: $_ui_layout_unit_expand_icon___top;
 }

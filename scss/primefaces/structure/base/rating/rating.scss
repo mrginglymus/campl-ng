@@ -1,36 +1,50 @@
+$_ui_rating_star___ui_rating_cancel___float: left !default;
+$_ui_rating_star___ui_rating_cancel___display: block !default;
+$_ui_rating_star___ui_rating_cancel___overflow: hidden !default;
+$_ui_rating_star___ui_rating_cancel___text_indent: -999em !default;
+$_ui_rating_star___ui_rating_cancel___cursor: pointer !default;
+$_ui_rating_star_a___ui_rating_cancel_a___width: 16px !default;
+$_ui_rating_star_a___ui_rating_cancel_a___height: 15px !default;
+$_ui_rating_star_a___ui_rating_cancel_a___display: block !default;
+$_ui_rating_star_a___ui_rating_cancel_a___background: url("rating/rating.png") no-repeat 0 0 !default;
+$_ui_rating_star_a___background_position: 0 -32px !default;
+$_ui_rating_star_on_a___background_position: 0 -48px !default;
+$_ui_rating_star_hover_a___background_position: 0 -64px !default;
+$_ui_rating_cancel_hover_a___background_position: 0 -16px !default;
+$_ui_rating_ui_state_disabled__ui_rating_star___ui_rating_ui_state_disabled__ui_rating_cancel___cursor: default !default;
 .ui-rating-star, .ui-rating-cancel {
-  float: left;
-  display: block;
-  overflow: hidden;
-  text-indent: -999em;
-  cursor: pointer;
+  float: $_ui_rating_star___ui_rating_cancel___float;
+  display: $_ui_rating_star___ui_rating_cancel___display;
+  overflow: $_ui_rating_star___ui_rating_cancel___overflow;
+  text-indent: $_ui_rating_star___ui_rating_cancel___text_indent;
+  cursor: $_ui_rating_star___ui_rating_cancel___cursor;
 }
 
 .ui-rating-star a, .ui-rating-cancel a {
-  width: 16px;
-  height: 15px;
-  display: block;
-  background: url("rating/rating.png") no-repeat 0 0;
+  width: $_ui_rating_star_a___ui_rating_cancel_a___width;
+  height: $_ui_rating_star_a___ui_rating_cancel_a___height;
+  display: $_ui_rating_star_a___ui_rating_cancel_a___display;
+  background: $_ui_rating_star_a___ui_rating_cancel_a___background;
 }
 
 .ui-rating-star a {
-  background-position: 0 -32px;
+  background-position: $_ui_rating_star_a___background_position;
 }
 
 .ui-rating-star-on a {
-  background-position: 0 -48px;
+  background-position: $_ui_rating_star_on_a___background_position;
 }
 
 .ui-rating-star-hover a {
-  background-position: 0 -64px;
+  background-position: $_ui_rating_star_hover_a___background_position;
 }
 
 .ui-rating-cancel-hover a {
-  background-position: 0 -16px;
+  background-position: $_ui_rating_cancel_hover_a___background_position;
 }
 
 .ui-rating.ui-state-disabled {
   .ui-rating-star, .ui-rating-cancel {
-    cursor: default;
+    cursor: $_ui_rating_ui_state_disabled__ui_rating_star___ui_rating_ui_state_disabled__ui_rating_cancel___cursor;
   }
 }

@@ -1,54 +1,76 @@
+$_ui_panel___padding: 0.2em !default;
+$_ui_panel__ui_panel_titlebar___padding: 0.5em 1em 0.3em !default;
+$_ui_panel__ui_panel_title___margin: 0.1em 16px 0.2em 0 !default;
+$_ui_panel__ui_panel_titlebar_icon___float: right !default;
+$_ui_panel__ui_panel_titlebar_icon___cursor: pointer !default;
+$_ui_panel__ui_panel_titlebar_icon___margin_left: 0.2em !default;
+$_ui_panel__ui_panel_titlebar_icon___margin_top: -0.2em !default;
+$_ui_panel__ui_panel_titlebar_icon____margin: -1.5em 0em 0em 0.2em !default;
+$_ui_panel__ui_panel_titlebar_icon_hover___ui_panel__ui_panel_titlebar_icon_focus___margin_left: 0.2em !default;
+$_ui_panel__ui_panel_titlebar_icon_hover___ui_panel__ui_panel_titlebar_icon_focus___margin_top: -0.2em !default;
+$_ui_panel__ui_panel_titlebar_icon_hover___ui_panel__ui_panel_titlebar_icon_focus____margin: -1.5em 0em 0em 0.2em !default;
+$_ui_panel__ui_panel_content___border: 0 !default;
+$_ui_panel__ui_panel_content___background: none !default;
+$_ui_panel__ui_panel_content___padding: 0.5em 1em !default;
+$_ui_panel__ui_panel_footer___border_width: 1px 0 0 !default;
+$_ui_panel__ui_panel_footer___margin: 0.5em 0 0 !default;
+$_ui_panel__ui_panel_footer___padding: 0.5em 1em !default;
+$_ui_panel__ui_panel_footer___text_align: left !default;
+$_ui_panel_collapsed_h__ui_panel_titlebar_icon____margin: -0.2em 0em 0em 0.1em !default;
+$_ui_panel_collapsed_h__ui_panel_titlebar_icon_hover___ui_panel_collapsed_h__ui_panel_titlebar_icon_focus____margin: -0.2em 0em 0em 0.1em !default;
+$_ui_panel_ui_panel_collapsed_h___width: 42px !default;
+$_ui_panel_ui_panel_collapsed_h__ui_panel_title___display: none !default;
 .ui-panel {
-  padding: 0.2em;
+  padding: $_ui_panel___padding;
 
   .ui-panel-titlebar {
-    padding: 0.5em 1em 0.3em;
+    padding: $_ui_panel__ui_panel_titlebar___padding;
   }
 
   .ui-panel-title {
-    margin: 0.1em 16px 0.2em 0;
+    margin: $_ui_panel__ui_panel_title___margin;
   }
 
   .ui-panel-titlebar-icon {
-    float: right;
-    cursor: pointer;
-    margin-left: 0.2em;
-    margin-top: -0.2em;
-    *margin: -1.5em 0em 0em 0.2em;
+    float: $_ui_panel__ui_panel_titlebar_icon___float;
+    cursor: $_ui_panel__ui_panel_titlebar_icon___cursor;
+    margin-left: $_ui_panel__ui_panel_titlebar_icon___margin_left;
+    margin-top: $_ui_panel__ui_panel_titlebar_icon___margin_top;
+    *margin: $_ui_panel__ui_panel_titlebar_icon____margin;
 
     &:hover, &:focus {
-      margin-left: 0.2em;
-      margin-top: -0.2em;
-      *margin: -1.5em 0em 0em 0.2em;
+      margin-left: $_ui_panel__ui_panel_titlebar_icon_hover___ui_panel__ui_panel_titlebar_icon_focus___margin_left;
+      margin-top: $_ui_panel__ui_panel_titlebar_icon_hover___ui_panel__ui_panel_titlebar_icon_focus___margin_top;
+      *margin: $_ui_panel__ui_panel_titlebar_icon_hover___ui_panel__ui_panel_titlebar_icon_focus____margin;
     }
   }
 
   .ui-panel-content {
-    border: 0;
-    background: none;
-    padding: 0.5em 1em;
+    border: $_ui_panel__ui_panel_content___border;
+    background: $_ui_panel__ui_panel_content___background;
+    padding: $_ui_panel__ui_panel_content___padding;
   }
 
   .ui-panel-footer {
-    border-width: 1px 0 0;
-    margin: 0.5em 0 0;
-    padding: 0.5em 1em;
-    text-align: left;
+    border-width: $_ui_panel__ui_panel_footer___border_width;
+    margin: $_ui_panel__ui_panel_footer___margin;
+    padding: $_ui_panel__ui_panel_footer___padding;
+    text-align: $_ui_panel__ui_panel_footer___text_align;
   }
 }
 
 .ui-panel-collapsed-h .ui-panel-titlebar-icon {
-  *margin: -0.2em 0em 0em 0.1em;
+  *margin: $_ui_panel_collapsed_h__ui_panel_titlebar_icon____margin;
 
   &:hover, &:focus {
-    *margin: -0.2em 0em 0em 0.1em;
+    *margin: $_ui_panel_collapsed_h__ui_panel_titlebar_icon_hover___ui_panel_collapsed_h__ui_panel_titlebar_icon_focus____margin;
   }
 }
 
 .ui-panel.ui-panel-collapsed-h {
-  width: 42px;
+  width: $_ui_panel_ui_panel_collapsed_h___width;
 
   .ui-panel-title {
-    display: none;
+    display: $_ui_panel_ui_panel_collapsed_h__ui_panel_title___display;
   }
 }

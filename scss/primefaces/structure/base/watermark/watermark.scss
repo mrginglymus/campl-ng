@@ -1,3 +1,4 @@
+$_ui_watermark___color: #999 !important !default;
 .ui-watermark {
-  color: #999 !important;
+  color: $_ui_watermark___color;
 }

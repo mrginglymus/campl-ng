@@ -40,6 +40,7 @@ module.exports = (grunt) ->
       build: 'build',
       primefaces_css: 'scss/primefaces/structure/base/**/*.css'
       primefaces_base: 'scss/primefaces/structure/base'
+      primefaces_fa: 'scss/primefaces/structure/base/fa'
 
     env:
       local:
@@ -93,6 +94,10 @@ module.exports = (grunt) ->
           'scss/_core_elements.scss': 'scss/core_elements/**/*.scss',
           'scss/_layout.scss': 'scss/layout/**/*.scss',
           'scss/_navigation.scss': 'scss/navigation/**/*.scss'
+      primefaces:
+        files:
+          'scss/primefaces/structure/_base.scss': 'scss/primefaces/structure/base/**/*.scss'
+          'scss/primefaces/structure/_custom.scss': 'scss/primefaces/structure/custom/**/*.scss'
 
     sass:
       core:
@@ -110,6 +115,11 @@ module.exports = (grunt) ->
           sass_options
         files:
           'build/css/meta.min.css': 'scss/meta.scss'
+      primefaces:
+        options:
+          sass_options
+        files:
+          'build/css/primefaces.min.css': 'scss/primefaces/primefaces.scss'
 
     postcss:
       options:
@@ -193,7 +203,7 @@ module.exports = (grunt) ->
         src: ['scss/primefaces/structure/base/**/*.css'],
         overwrite: true,
         replacements: [
-          from: /#{resource\['primefaces:([\w\/.]*)']}/g
+          from: /#{resource\['primefaces:([\w\/.-]*)']}/g
           to: "$1"
         ]
       image_cache:
@@ -279,7 +289,7 @@ module.exports = (grunt) ->
     watch:
       css:
         files: 'scss/**/*.scss'
-        tasks: ['sass_globbing', 'sass:core', 'sass:meta', 'deploy']
+        tasks: ['sass_globbing:core', 'sass:core', 'sass:meta', 'deploy']
       html:
         files: 'templates/**/*.html'
         tasks: ['build-html', 'deploy']
@@ -292,6 +302,11 @@ module.exports = (grunt) ->
       coffeelint:
         files: ['coffee/**/*.coffee']
         tasks: ['coffeelint']
+
+    mkvariables:
+      files:
+        expand: true
+        src: ['scss/primefaces/structure/base/**/*.scss']
 
   grunt.registerTask 'setenv', "Set environment", ->
     grunt.config('RELEASE_DIR', process.env.RELEASE_DIR)
@@ -306,7 +321,7 @@ module.exports = (grunt) ->
         
   grunt.registerTask 'default', ['clean:build', 'sass:core', 'coffee:core']
 
-  grunt.registerTask 'build-css', ['sass_globbing', 'sass', 'postcss']
+  grunt.registerTask 'build-css', ['sass_globbing:core', 'sass', 'postcss']
 
   grunt.registerTask 'build-js', ['coffee:core', 'coffee:meta', 'uglify']
 
@@ -322,8 +337,35 @@ module.exports = (grunt) ->
   
   grunt.registerTask 'cache-images', ['replace:image_cache']
 
-  grunt.registerTask 'primefaces', ['clean:primefaces_base', 'copy:primefaces', 'replace:primefaces_pre', 'sass-convert', 'clean:primefaces_css']
+  grunt.registerTask 'primefaces-init', [
+    'clean:primefaces_base',
+    'copy:primefaces',
+    'clean:primefaces_fa',
+    'replace:primefaces_pre',
+    'sass-convert',
+    'clean:primefaces_css',
+    'mkvariables',
+    'sass_globbing:primefaces',
+  ]
+
+  grunt.registerTask 'primefaces', ['sass_globbing:primefaces', 'sass:primefaces']
 
   grunt.registerTask 'test', ['http-server', 'coffee:test', 'webdriver']
 
+  grunt.registerMultiTask 'mkvariables', 'test', ->
+    @files.forEach (file) ->
+      file.src.forEach (src) ->
+        grunt.util.spawn
+          cmd: 'ruby'
+          args: [
+            'lib/mkvariables.rb'
+            src
+          ]
+
+
+
+
   grunt.task.run('env:' + grunt.option('target'), 'setenv')
+
+
+

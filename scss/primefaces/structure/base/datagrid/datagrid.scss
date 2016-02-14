@@ -1,40 +1,50 @@
+$_ui_datagrid__ui_paginator___text_align: center !default;
+$_ui_datagrid_column___padding: 3px !default;
+$_ui_datagrid_content_empty___padding: 4px 10px !default;
+$_ui_datagrid__ui_datagrid_header___ui_datagrid__ui_datagrid_footer___text_align: center !default;
+$_ui_datagrid__ui_datagrid_header___ui_datagrid__ui_datagrid_footer___padding: 4px 10px !default;
+$_ui_datagrid__ui_datagrid_header___border_bottom: 0px none !default;
+$_ui_datagrid__ui_datagrid_footer___border_top: 0px none !default;
+$_ui_datagrid__ui_paginator_top___border_bottom: 0px none !default;
+$_ui_datagrid__ui_paginator_bottom___border_top: 0px none !default;
+$_ui_datagrid_data___width: 100% !default;
 .ui-datagrid .ui-paginator {
-  text-align: center;
+  text-align: $_ui_datagrid__ui_paginator___text_align;
 }
 
 .ui-datagrid-column {
-  padding: 3px;
+  padding: $_ui_datagrid_column___padding;
 }
 
 .ui-datagrid-content-empty {
-  padding: 4px 10px;
+  padding: $_ui_datagrid_content_empty___padding;
 }
 
 .ui-datagrid {
   .ui-datagrid-header, .ui-datagrid-footer {
-    text-align: center;
-    padding: 4px 10px;
+    text-align: $_ui_datagrid__ui_datagrid_header___ui_datagrid__ui_datagrid_footer___text_align;
+    padding: $_ui_datagrid__ui_datagrid_header___ui_datagrid__ui_datagrid_footer___padding;
   }
 
   .ui-datagrid-header {
-    border-bottom: 0px none;
+    border-bottom: $_ui_datagrid__ui_datagrid_header___border_bottom;
   }
 
   .ui-datagrid-footer {
-    border-top: 0px none;
+    border-top: $_ui_datagrid__ui_datagrid_footer___border_top;
   }
 
   .ui-paginator-top {
-    border-bottom: 0px none;
+    border-bottom: $_ui_datagrid__ui_paginator_top___border_bottom;
   }
 
   .ui-paginator-bottom {
-    border-top: 0px none;
+    border-top: $_ui_datagrid__ui_paginator_bottom___border_top;
   }
 }
 
 /** Table Layout **/
 
 .ui-datagrid-data {
-  width: 100%;
+  width: $_ui_datagrid_data___width;
 }

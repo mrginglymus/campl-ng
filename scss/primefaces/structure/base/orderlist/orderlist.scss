@@ -1,70 +1,100 @@
+$_ui_orderlist___display: table !default;
+$_ui_orderlist__ui_orderlist_caption___width: 180px !default;
+$_ui_orderlist__ui_orderlist_list___list_style_type: none !default;
+$_ui_orderlist__ui_orderlist_list___margin: 0 !default;
+$_ui_orderlist__ui_orderlist_list___padding: 0 !default;
+$_ui_orderlist__ui_orderlist_list___overflow: auto !default;
+$_ui_orderlist__ui_orderlist_list___height: 200px !default;
+$_ui_orderlist__ui_orderlist_list___width: 200px !default;
+$_ui_orderlist__ui_orderlist_list_li___margin: 1px !default;
+$_ui_orderlist__ui_orderlist_list_li___padding: 2px !default;
+$_ui_orderlist__ui_button___display: block !default;
+$_ui_orderlist__ui_button___margin_bottom: 0.3em !default;
+$_ui_orderlist__ui_orderlist_button_ui_button_text_icon_primary___width: 100% !default;
+$_ui_orderlist__ui_orderlist_item___cursor: pointer !default;
+$_ui_orderlist__ui_orderlist_item___border: 0px none !default;
+$_ui_orderlist__ui_orderlist_item___font_weight: inherit !default;
+$_ui_orderlist__ui_orderlist_caption___text_align: center !default;
+$_ui_orderlist__ui_orderlist_caption___padding: 4px 0px !default;
+$_ui_orderlist__ui_orderlist_caption___border_bottom: 0px none !default;
+$_ui_orderlist_table___width: 100% !default;
+$_ui_orderlist_table___border_collapse: collapse !default;
+$_ui_orderlist_ui_state_disabled__ui_orderlist_item___ui_orderlist_ui_state_disabled__ui_button___cursor: default !default;
+$_ui_orderlist_ui_state_disabled__ui_orderlist_list___overflow: hidden !default;
+$_ui_orderlist_ui_grid_responsive___display: block !default;
+$_ui_orderlist_ui_grid_responsive___width: 100% !default;
+$_ui_orderlist_ui_grid_responsive__ui_orderlist_controls___margin_right: 10px !default;
+$_ui_orderlist_ui_grid_responsive__ui_orderlist_list___ui_orderlist_ui_grid_responsive__ui_orderlist_caption___ui_orderlist_ui_grid_responsive__ui_orderlist_controls__ui_button___width: 100% !default;
+$_ui_orderlist_ui_grid_responsive__ui_orderlist_controls___text_align: center !default;
+$_ui_orderlist_ui_grid_responsive__ui_orderlist_controls__ui_button___display: inline !default;
+$_ui_orderlist_ui_grid_responsive__ui_orderlist_controls__ui_button___width: 20% !default;
 .ui-orderlist {
-  display: table;
+  display: $_ui_orderlist___display;
 
   .ui-orderlist-caption {
-    width: 180px;
+    width: $_ui_orderlist__ui_orderlist_caption___width;
   }
 
   .ui-orderlist-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: auto;
-    height: 200px;
-    width: 200px;
+    list-style-type: $_ui_orderlist__ui_orderlist_list___list_style_type;
+    margin: $_ui_orderlist__ui_orderlist_list___margin;
+    padding: $_ui_orderlist__ui_orderlist_list___padding;
+    overflow: $_ui_orderlist__ui_orderlist_list___overflow;
+    height: $_ui_orderlist__ui_orderlist_list___height;
+    width: $_ui_orderlist__ui_orderlist_list___width;
 
     li {
-      margin: 1px;
-      padding: 2px;
+      margin: $_ui_orderlist__ui_orderlist_list_li___margin;
+      padding: $_ui_orderlist__ui_orderlist_list_li___padding;
     }
   }
 
   .ui-button {
-    display: block;
-    margin-bottom: 0.3em;
+    display: $_ui_orderlist__ui_button___display;
+    margin-bottom: $_ui_orderlist__ui_button___margin_bottom;
   }
 
   .ui-orderlist-button.ui-button-text-icon-primary {
-    width: 100%;
+    width: $_ui_orderlist__ui_orderlist_button_ui_button_text_icon_primary___width;
   }
 
   .ui-orderlist-item {
-    cursor: pointer;
-    border: 0px none;
-    font-weight: inherit;
+    cursor: $_ui_orderlist__ui_orderlist_item___cursor;
+    border: $_ui_orderlist__ui_orderlist_item___border;
+    font-weight: $_ui_orderlist__ui_orderlist_item___font_weight;
   }
 
   .ui-orderlist-caption {
-    text-align: center;
-    padding: 4px 0px;
-    border-bottom: 0px none;
+    text-align: $_ui_orderlist__ui_orderlist_caption___text_align;
+    padding: $_ui_orderlist__ui_orderlist_caption___padding;
+    border-bottom: $_ui_orderlist__ui_orderlist_caption___border_bottom;
   }
 
   table {
-    width: 100%;
-    border-collapse: collapse;
+    width: $_ui_orderlist_table___width;
+    border-collapse: $_ui_orderlist_table___border_collapse;
   }
 
   &.ui-state-disabled {
     .ui-orderlist-item, .ui-button {
-      cursor: default;
+      cursor: $_ui_orderlist_ui_state_disabled__ui_orderlist_item___ui_orderlist_ui_state_disabled__ui_button___cursor;
     }
 
     .ui-orderlist-list {
-      overflow: hidden;
+      overflow: $_ui_orderlist_ui_state_disabled__ui_orderlist_list___overflow;
     }
   }
 
   &.ui-grid-responsive {
-    display: block;
-    width: 100%;
+    display: $_ui_orderlist_ui_grid_responsive___display;
+    width: $_ui_orderlist_ui_grid_responsive___width;
 
     .ui-orderlist-controls {
-      margin-right: 10px;
+      margin-right: $_ui_orderlist_ui_grid_responsive__ui_orderlist_controls___margin_right;
     }
 
     .ui-orderlist-list, .ui-orderlist-caption, .ui-orderlist-controls .ui-button {
-      width: 100%;
+      width: $_ui_orderlist_ui_grid_responsive__ui_orderlist_list___ui_orderlist_ui_grid_responsive__ui_orderlist_caption___ui_orderlist_ui_grid_responsive__ui_orderlist_controls__ui_button___width;
     }
   }
 }
@@ -73,11 +103,11 @@
 
 @media (max-width: 640px) {
   .ui-orderlist.ui-grid-responsive .ui-orderlist-controls {
-    text-align: center;
+    text-align: $_ui_orderlist_ui_grid_responsive__ui_orderlist_controls___text_align;
 
     .ui-button {
-      display: inline;
-      width: 20%;
+      display: $_ui_orderlist_ui_grid_responsive__ui_orderlist_controls__ui_button___display;
+      width: $_ui_orderlist_ui_grid_responsive__ui_orderlist_controls__ui_button___width;
     }
   }
 }

@@ -1,131 +1,198 @@
+$_ui_autocomplete___width: auto !default;
+$_ui_autocomplete___zoom: 1 !default;
+$_ui_autocomplete___cursor: pointer !default;
+$_ui_autocomplete____moz_box_shadow: none !default;
+$_ui_autocomplete____webkit_box_shadow: none !default;
+$_ui_autocomplete___box_shadow: none !default;
+$_ui_autocomplete___position: relative !default;
+$_ui_autocomplete___display: inline-block !default;
+$_ui_autocomplete__ui_autocomplete_dropdown___position: absolute !default;
+$_ui_autocomplete__ui_autocomplete_dropdown___height: 100% !default;
+$_ui_autocomplete__ui_autocomplete_dropdown___width: 2.4em !default;
+$_ui_autocomplete_query___font_weight: bold !default;
+$_ui_autocomplete_panel___position: absolute !default;
+$_ui_autocomplete_panel___overflow: auto !default;
+$_ui_autocomplete_panel__ui_autocomplete_item___cursor: pointer !default;
+$_ui_autocomplete_panel__ui_autocomplete_list___padding: 0.4em !default;
+$_ui_autocomplete_panel__ui_autocomplete_list___border: 0 none !default;
+$_ui_autocomplete_panel__ui_autocomplete_list_item___border: 0px none !default;
+$_ui_autocomplete_panel__ui_autocomplete_list_item___font_weight: normal !default;
+$_ui_autocomplete_panel__ui_autocomplete_list_item___margin: 1px 0 !default;
+$_ui_autocomplete_panel__ui_autocomplete_list_item___padding: 3px 5px !default;
+$_ui_autocomplete_panel__ui_autocomplete_list_item___text_align: left !default;
+$_ui_autocomplete_panel__ui_autocomplete_table___border_collapse: collapse !default;
+$_ui_autocomplete_panel__ui_autocomplete_table___width: 100% !default;
+$_ui_autocomplete_panel__ui_autocomplete_table_th___ui_autocomplete_panel__ui_autocomplete_table_td___border_width: 1px !default;
+$_ui_autocomplete_panel__ui_autocomplete_table_th___ui_autocomplete_panel__ui_autocomplete_table_td___border_style: solid !default;
+$_ui_autocomplete_panel__ui_autocomplete_table_th___ui_autocomplete_panel__ui_autocomplete_table_td___border_color: inherit !default;
+$_ui_autocomplete_panel__ui_autocomplete_table_th___ui_autocomplete_panel__ui_autocomplete_table_td___padding: 4px 10px 4px 10px !default;
+$_ui_autocomplete__ui_button_icon_only__ui_button_text___padding: 0.29em !default;
+$_ui_autocomplete_multiple_container___clear: left !default;
+$_ui_autocomplete_multiple_container___cursor: text !default;
+$_ui_autocomplete_multiple_container___list_style_type: none !default;
+$_ui_autocomplete_multiple_container___margin: 0 !default;
+$_ui_autocomplete_multiple_container___min_height: 1px !default;
+$_ui_autocomplete_multiple_container___overflow: hidden !default;
+$_ui_autocomplete_multiple_container___width: 400px !default;
+$_ui_autocomplete_multiple_container_ui_inputfield___padding: 0 !default;
+$_ui_autocomplete_token___cursor: default !default;
+$_ui_autocomplete_token___float: left !default;
+$_ui_autocomplete_token___overflow: hidden !default;
+$_ui_autocomplete_token___padding: 1px 3px !default;
+$_ui_autocomplete_token___white_space: nowrap !default;
+$_ui_autocomplete_token___position: relative !default;
+$_ui_autocomplete_token___margin: 2px !default;
+$_ui_autocomplete_token_label___display: block !default;
+$_ui_autocomplete_token_label___padding: 0em 2.1em 0em 0.5em !default;
+$_ui_autocomplete_token_icon___margin_top: -9px !default;
+$_ui_autocomplete_token_icon___position: absolute !default;
+$_ui_autocomplete_token_icon___right: 0.2em !default;
+$_ui_autocomplete_token_icon___top: 50% !default;
+$_ui_autocomplete_token_icon___cursor: pointer !default;
+$_ui_autocomplete_input_token___float: left !default;
+$_ui_autocomplete_input_token___list_style_type: none !default;
+$_ui_autocomplete_input_token___margin: 1px !default;
+$_ui_autocomplete_input_token___padding: 0 !default;
+$_ui_autocomplete_input_token_input___border: 0 none !default;
+$_ui_autocomplete_input_token_input___width: 140px !default;
+$_ui_autocomplete_input_token_input___outline: medium none !default;
+$_ui_autocomplete_input_token_input___background_color: transparent !default;
+$_ui_autocomplete_input_token_input___margin: 2px !default;
+$_ui_autocomplete_itemtip_content___display: none !default;
+$_ui_autocomplete_itemtip___position: absolute !default;
+$_ui_autocomplete_itemtip___display: none !default;
+$_ui_autocomplete_itemtip___padding: 0.4em !default;
+$_ui_autocomplete_emptyMessage___padding: 3px 5px !default;
+$_ui_autocomplete_panel__ui_autocomplete_group___font_weight: bold !default;
+$_ui_autocomplete_panel__ui_autocomplete_group___cursor: default !default;
 .ui-autocomplete {
-  width: auto;
-  zoom: 1;
-  cursor: pointer;
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  position: relative;
-  display: inline-block;
+  width: $_ui_autocomplete___width;
+  zoom: $_ui_autocomplete___zoom;
+  cursor: $_ui_autocomplete___cursor;
+  -moz-box-shadow: $_ui_autocomplete____moz_box_shadow;
+  -webkit-box-shadow: $_ui_autocomplete____webkit_box_shadow;
+  box-shadow: $_ui_autocomplete___box_shadow;
+  position: $_ui_autocomplete___position;
+  display: $_ui_autocomplete___display;
 
   .ui-autocomplete-dropdown {
-    position: absolute;
-    height: 100%;
-    width: 2.4em;
+    position: $_ui_autocomplete__ui_autocomplete_dropdown___position;
+    height: $_ui_autocomplete__ui_autocomplete_dropdown___height;
+    width: $_ui_autocomplete__ui_autocomplete_dropdown___width;
   }
 }
 
 .ui-autocomplete-query {
-  font-weight: bold;
+  font-weight: $_ui_autocomplete_query___font_weight;
 }
 
 .ui-autocomplete-panel {
-  position: absolute;
-  overflow: auto;
+  position: $_ui_autocomplete_panel___position;
+  overflow: $_ui_autocomplete_panel___overflow;
 
   .ui-autocomplete-item {
-    cursor: pointer;
+    cursor: $_ui_autocomplete_panel__ui_autocomplete_item___cursor;
   }
 
   .ui-autocomplete-list {
-    padding: 0.4em;
-    border: 0 none;
+    padding: $_ui_autocomplete_panel__ui_autocomplete_list___padding;
+    border: $_ui_autocomplete_panel__ui_autocomplete_list___border;
   }
 
   .ui-autocomplete-list-item {
-    border: 0px none;
-    font-weight: normal;
-    margin: 1px 0;
-    padding: 3px 5px;
-    text-align: left;
+    border: $_ui_autocomplete_panel__ui_autocomplete_list_item___border;
+    font-weight: $_ui_autocomplete_panel__ui_autocomplete_list_item___font_weight;
+    margin: $_ui_autocomplete_panel__ui_autocomplete_list_item___margin;
+    padding: $_ui_autocomplete_panel__ui_autocomplete_list_item___padding;
+    text-align: $_ui_autocomplete_panel__ui_autocomplete_list_item___text_align;
   }
 
   .ui-autocomplete-table {
-    border-collapse: collapse;
-    width: 100%;
+    border-collapse: $_ui_autocomplete_panel__ui_autocomplete_table___border_collapse;
+    width: $_ui_autocomplete_panel__ui_autocomplete_table___width;
 
     th, td {
-      border-width: 1px;
-      border-style: solid;
-      border-color: inherit;
-      padding: 4px 10px 4px 10px;
+      border-width: $_ui_autocomplete_panel__ui_autocomplete_table_th___ui_autocomplete_panel__ui_autocomplete_table_td___border_width;
+      border-style: $_ui_autocomplete_panel__ui_autocomplete_table_th___ui_autocomplete_panel__ui_autocomplete_table_td___border_style;
+      border-color: $_ui_autocomplete_panel__ui_autocomplete_table_th___ui_autocomplete_panel__ui_autocomplete_table_td___border_color;
+      padding: $_ui_autocomplete_panel__ui_autocomplete_table_th___ui_autocomplete_panel__ui_autocomplete_table_td___padding;
     }
   }
 }
 
 .ui-autocomplete .ui-button-icon-only .ui-button-text {
-  padding: 0.29em;
+  padding: $_ui_autocomplete__ui_button_icon_only__ui_button_text___padding;
 }
 
 /* Multiple Selection */
 
 .ui-autocomplete-multiple-container {
-  clear: left;
-  cursor: text;
-  list-style-type: none;
-  margin: 0;
-  min-height: 1px;
-  overflow: hidden;
-  width: 400px;
+  clear: $_ui_autocomplete_multiple_container___clear;
+  cursor: $_ui_autocomplete_multiple_container___cursor;
+  list-style-type: $_ui_autocomplete_multiple_container___list_style_type;
+  margin: $_ui_autocomplete_multiple_container___margin;
+  min-height: $_ui_autocomplete_multiple_container___min_height;
+  overflow: $_ui_autocomplete_multiple_container___overflow;
+  width: $_ui_autocomplete_multiple_container___width;
 
   &.ui-inputfield {
-    padding: 0;
+    padding: $_ui_autocomplete_multiple_container_ui_inputfield___padding;
   }
 }
 
 .ui-autocomplete-token {
-  cursor: default;
-  float: left;
-  overflow: hidden;
-  padding: 1px 3px;
-  white-space: nowrap;
-  position: relative;
-  margin: 2px;
+  cursor: $_ui_autocomplete_token___cursor;
+  float: $_ui_autocomplete_token___float;
+  overflow: $_ui_autocomplete_token___overflow;
+  padding: $_ui_autocomplete_token___padding;
+  white-space: $_ui_autocomplete_token___white_space;
+  position: $_ui_autocomplete_token___position;
+  margin: $_ui_autocomplete_token___margin;
 }
 
 .ui-autocomplete-token-label {
-  display: block;
-  padding: 0em 2.1em 0em 0.5em;
+  display: $_ui_autocomplete_token_label___display;
+  padding: $_ui_autocomplete_token_label___padding;
 }
 
 .ui-autocomplete-token-icon {
-  margin-top: -9px;
-  position: absolute;
-  right: 0.2em;
-  top: 50%;
-  cursor: pointer;
+  margin-top: $_ui_autocomplete_token_icon___margin_top;
+  position: $_ui_autocomplete_token_icon___position;
+  right: $_ui_autocomplete_token_icon___right;
+  top: $_ui_autocomplete_token_icon___top;
+  cursor: $_ui_autocomplete_token_icon___cursor;
 }
 
 .ui-autocomplete-input-token {
-  float: left;
-  list-style-type: none;
-  margin: 1px;
-  padding: 0;
+  float: $_ui_autocomplete_input_token___float;
+  list-style-type: $_ui_autocomplete_input_token___list_style_type;
+  margin: $_ui_autocomplete_input_token___margin;
+  padding: $_ui_autocomplete_input_token___padding;
 
   input {
-    border: 0 none;
-    width: 140px;
-    outline: medium none;
-    background-color: transparent;
-    margin: 2px;
+    border: $_ui_autocomplete_input_token_input___border;
+    width: $_ui_autocomplete_input_token_input___width;
+    outline: $_ui_autocomplete_input_token_input___outline;
+    background-color: $_ui_autocomplete_input_token_input___background_color;
+    margin: $_ui_autocomplete_input_token_input___margin;
   }
 }
 
 .ui-autocomplete-itemtip-content {
-  display: none;
+  display: $_ui_autocomplete_itemtip_content___display;
 }
 
 .ui-autocomplete-itemtip {
-  position: absolute;
-  display: none;
-  padding: 0.4em;
+  position: $_ui_autocomplete_itemtip___position;
+  display: $_ui_autocomplete_itemtip___display;
+  padding: $_ui_autocomplete_itemtip___padding;
 }
 
 .ui-autocomplete-emptyMessage {
-  padding: 3px 5px;
+  padding: $_ui_autocomplete_emptyMessage___padding;
 }
 
 .ui-autocomplete-panel .ui-autocomplete-group {
-  font-weight: bold;
-  cursor: default;
+  font-weight: $_ui_autocomplete_panel__ui_autocomplete_group___font_weight;
+  cursor: $_ui_autocomplete_panel__ui_autocomplete_group___cursor;
 }

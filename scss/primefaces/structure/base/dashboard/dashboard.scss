@@ -1,8 +1,11 @@
+$_ui_dashboard_column___float: left !default;
+$_ui_dashboard_column___padding_bottom: 100px !default;
+$_ui_dashboard_column__ui_panel_titlebar___cursor: move !default;
 .ui-dashboard-column {
-  float: left;
-  padding-bottom: 100px;
+  float: $_ui_dashboard_column___float;
+  padding-bottom: $_ui_dashboard_column___padding_bottom;
 
   .ui-panel-titlebar {
-    cursor: move;
+    cursor: $_ui_dashboard_column__ui_panel_titlebar___cursor;
   }
 }

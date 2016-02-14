@@ -1,109 +1,178 @@
+$_ui_ribbon___font_size: 11px !default;
+$_ui_ribbon___padding: 0 !default;
+$_ui_ribbon__ui_tabs_panel___padding: 0 !default;
+$_ui_ribbon__ui_ribbon_group___float: left !default;
+$_ui_ribbon__ui_ribbon_group___background: none !default;
+$_ui_ribbon__ui_ribbon_group___border: none !default;
+$_ui_ribbon__ui_ribbon_group___border_right: solid 1px #BCC7CF !default;
+$_ui_ribbon__ui_ribbon_group___box_shadow: none !default;
+$_ui_ribbon__ui_ribbon_group____moz_box_shadow: none !default;
+$_ui_ribbon__ui_ribbon_group____webkit_box_shadow: none !default;
+$_ui_ribbon__ui_ribbon_group___padding: 0.2em !default;
+$_ui_ribbon__ui_ribbon_group__ui_ribbon_group_content___height: 6em !default;
+$_ui_ribbon__ui_ribbon_group__ui_ribbon_group_content___background: none !default;
+$_ui_ribbon__ui_ribbon_group__ui_ribbon_group_content___border: none !default;
+$_ui_ribbon__ui_ribbon_group__ui_ribbon_group_content___box_shadow: none !default;
+$_ui_ribbon__ui_ribbon_group__ui_ribbon_group_content____moz_box_shadow: none !default;
+$_ui_ribbon__ui_ribbon_group__ui_ribbon_group_content____webkit_box_shadow: none !default;
+$_ui_ribbon__ui_ribbon_group__ui_ribbon_group_content___border_width: 0 !default;
+$_ui_ribbon__ui_ribbon_group__ui_ribbon_group_content___padding: 0.2em 0.2em 0 !default;
+$_ui_ribbon__ui_ribbon_group__ui_ribbon_group_label___text_align: center !default;
+$_ui_ribbon__ui_ribbon_group__ui_ribbon_group_label___font_weight: 400 !default;
+$_ui_ribbon__ui_ribbon_group__ui_ribbon_group_label___white_space: nowrap !default;
+$_ui_ribbon__ui_ribbon_group__ui_ribbon_group_label___margin_top: -1px !default;
+$_ui_ribbon__ui_ribbon_group__ui_ribbon_group_label___border_width: 1px 0 0 !default;
+$_ui_ribbon__ui_ribbon_group__ui_ribbon_group_label___color: #333333 !default;
+$_ui_ribbon__ui_button___background: none !default;
+$_ui_ribbon__ui_button___box_shadow: none !default;
+$_ui_ribbon__ui_button____webkit_box_shadow: none !default;
+$_ui_ribbon__ui_button____moz_box_shadow: none !default;
+$_ui_ribbon__ui_button___color: #333 !default;
+$_ui_ribbon_bigbutton___background: none !default;
+$_ui_ribbon_bigbutton___border: solid 1px transparent !default;
+$_ui_ribbon_bigbutton___width: 3.5em !default;
+$_ui_ribbon_bigbutton___height: 52px !default;
+$_ui_ribbon_bigbutton___text_decoration: none !default;
+$_ui_ribbon_bigbutton__ui_icon___height: 32px !default;
+$_ui_ribbon_bigbutton__ui_icon___left: 50% !default;
+$_ui_ribbon_bigbutton__ui_icon___margin_left: -17px !default;
+$_ui_ribbon_bigbutton__ui_icon___margin_top: -24px !default;
+$_ui_ribbon_bigbutton__ui_icon___width: 32px !default;
+$_ui_ribbon_bigbutton__ui_button_text___padding: 3em 0 0 !default;
+$_ui_ribbon_bigbutton__ui_button_text___font_size: 10px !default;
+$_ui_ribbon__ui_button___float: left !default;
+$_ui_ribbon__ui_button___margin: 1px 2px !default;
+$_ui_ribbon__ui_selectonemenu___float: left !default;
+$_ui_ribbon__ui_selectonemenu___margin: 1px 2px !default;
+$_ui_ribbon__ui_selectonemenu___float: left !default;
+$_ui_ribbon__ui_selectonemenu____moz_border_radius_bottomright: 0px !default;
+$_ui_ribbon__ui_selectonemenu____webkit_border_bottom_right_radius: 0px !default;
+$_ui_ribbon__ui_selectonemenu___border_radius: 3px 0px 0px 3px !default;
+$_ui_ribbon__ui_buttonset__ui_button___margin: 0 !default;
+$_ui_ribbon__ui_buttonset__ui_button___margin_right: -1px !default;
+$_ui_ribbon__ui_inputfield___background: none !default;
+$_ui_ribbon__ui_inputfield___box_shadow: none !default;
+$_ui_ribbon__ui_selectonemenu_ui_state_default___background: none !default;
+$_ui_ribbon__ui_selectonemenu_ui_state_default___box_shadow: none !default;
+$_ui_ribbon__ui_selectonemenu__ui_selectonemenu_trigger___background_image: none !default;
+$_ui_ribbon__ui_selectonemenu__ui_selectonemenu_trigger___box_shadow: none !default;
+$_ui_ribbon__ui_selectonemenu__ui_selectonemenu_trigger____moz_border_radius_bottomright: 0px !default;
+$_ui_ribbon__ui_selectonemenu__ui_selectonemenu_trigger____webkit_border_bottom_right_radius: 0px !default;
+$_ui_ribbon__ui_selectonemenu__ui_selectonemenu_trigger___border_radius: 0px !default;
+$_ui_ribbon_groups_ui_widget_content___background: white !default;
+$_ui_ribbon_groups_ui_widget_content___background: -moz-linear-gradient(top, white 0%, white 58%, #f9f9f9 71%, #ededed 88%, #e8e8e8 100%) !default;
+$_ui_ribbon_groups_ui_widget_content___background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(58%, white), color-stop(71%, #f9f9f9), color-stop(88%, #ededed), color-stop(100%, #e8e8e8)) !default;
+$_ui_ribbon_groups_ui_widget_content___background: -webkit-linear-gradient(top, white 0%, white 58%, #f9f9f9 71%, #ededed 88%, #e8e8e8 100%) !default;
+$_ui_ribbon_groups_ui_widget_content___background: -o-linear-gradient(top, white 0%, white 58%, #f9f9f9 71%, #ededed 88%, #e8e8e8 100%) !default;
+$_ui_ribbon_groups_ui_widget_content___background: -ms-linear-gradient(top, white 0%, white 58%, #f9f9f9 71%, #ededed 88%, #e8e8e8 100%) !default;
+$_ui_ribbon_groups_ui_widget_content___background: linear-gradient(top, white 0%, white 58%, #f9f9f9 71%, #ededed 88%, #e8e8e8 100%) !default;
+$_ui_ribbon_groups_ui_widget_content___filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e8e8e8',GradientType=0 ) !default;
 .ui-ribbon {
-  font-size: 11px;
-  padding: 0;
+  font-size: $_ui_ribbon___font_size;
+  padding: $_ui_ribbon___padding;
 
   .ui-tabs-panel {
-    padding: 0;
+    padding: $_ui_ribbon__ui_tabs_panel___padding;
   }
 
   .ui-ribbon-group {
-    float: left;
-    background: none;
-    border: none;
-    border-right: solid 1px #BCC7CF;
-    box-shadow: none;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    padding: 0.2em;
+    float: $_ui_ribbon__ui_ribbon_group___float;
+    background: $_ui_ribbon__ui_ribbon_group___background;
+    border: $_ui_ribbon__ui_ribbon_group___border;
+    border-right: $_ui_ribbon__ui_ribbon_group___border_right;
+    box-shadow: $_ui_ribbon__ui_ribbon_group___box_shadow;
+    -moz-box-shadow: $_ui_ribbon__ui_ribbon_group____moz_box_shadow;
+    -webkit-box-shadow: $_ui_ribbon__ui_ribbon_group____webkit_box_shadow;
+    padding: $_ui_ribbon__ui_ribbon_group___padding;
 
     .ui-ribbon-group-content {
-      height: 6em;
-      background: none;
-      border: none;
-      box-shadow: none;
-      -moz-box-shadow: none;
-      -webkit-box-shadow: none;
-      border-width: 0;
-      padding: 0.2em 0.2em 0;
+      height: $_ui_ribbon__ui_ribbon_group__ui_ribbon_group_content___height;
+      background: $_ui_ribbon__ui_ribbon_group__ui_ribbon_group_content___background;
+      border: $_ui_ribbon__ui_ribbon_group__ui_ribbon_group_content___border;
+      box-shadow: $_ui_ribbon__ui_ribbon_group__ui_ribbon_group_content___box_shadow;
+      -moz-box-shadow: $_ui_ribbon__ui_ribbon_group__ui_ribbon_group_content____moz_box_shadow;
+      -webkit-box-shadow: $_ui_ribbon__ui_ribbon_group__ui_ribbon_group_content____webkit_box_shadow;
+      border-width: $_ui_ribbon__ui_ribbon_group__ui_ribbon_group_content___border_width;
+      padding: $_ui_ribbon__ui_ribbon_group__ui_ribbon_group_content___padding;
     }
 
     .ui-ribbon-group-label {
-      text-align: center;
-      font-weight: 400;
-      white-space: nowrap;
-      margin-top: -1px;
-      border-width: 1px 0 0;
-      color: #333333;
+      text-align: $_ui_ribbon__ui_ribbon_group__ui_ribbon_group_label___text_align;
+      font-weight: $_ui_ribbon__ui_ribbon_group__ui_ribbon_group_label___font_weight;
+      white-space: $_ui_ribbon__ui_ribbon_group__ui_ribbon_group_label___white_space;
+      margin-top: $_ui_ribbon__ui_ribbon_group__ui_ribbon_group_label___margin_top;
+      border-width: $_ui_ribbon__ui_ribbon_group__ui_ribbon_group_label___border_width;
+      color: $_ui_ribbon__ui_ribbon_group__ui_ribbon_group_label___color;
     }
   }
 
   .ui-button {
-    background: none;
-    box-shadow: none;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    color: #333;
+    background: $_ui_ribbon__ui_button___background;
+    box-shadow: $_ui_ribbon__ui_button___box_shadow;
+    -webkit-box-shadow: $_ui_ribbon__ui_button____webkit_box_shadow;
+    -moz-box-shadow: $_ui_ribbon__ui_button____moz_box_shadow;
+    color: $_ui_ribbon__ui_button___color;
   }
 }
 
 .ui-ribbon-bigbutton {
-  background: none;
-  border: solid 1px transparent;
-  width: 3.5em;
-  height: 52px;
-  text-decoration: none;
+  background: $_ui_ribbon_bigbutton___background;
+  border: $_ui_ribbon_bigbutton___border;
+  width: $_ui_ribbon_bigbutton___width;
+  height: $_ui_ribbon_bigbutton___height;
+  text-decoration: $_ui_ribbon_bigbutton___text_decoration;
 
   .ui-icon {
-    height: 32px;
-    left: 50%;
-    margin-left: -17px;
-    margin-top: -24px;
-    width: 32px;
+    height: $_ui_ribbon_bigbutton__ui_icon___height;
+    left: $_ui_ribbon_bigbutton__ui_icon___left;
+    margin-left: $_ui_ribbon_bigbutton__ui_icon___margin_left;
+    margin-top: $_ui_ribbon_bigbutton__ui_icon___margin_top;
+    width: $_ui_ribbon_bigbutton__ui_icon___width;
   }
 
   .ui-button-text {
-    padding: 3em 0 0;
-    font-size: 10px;
+    padding: $_ui_ribbon_bigbutton__ui_button_text___padding;
+    font-size: $_ui_ribbon_bigbutton__ui_button_text___font_size;
   }
 }
 
 .ui-ribbon {
   .ui-button {
-    float: left;
-    margin: 1px 2px;
+    float: $_ui_ribbon__ui_button___float;
+    margin: $_ui_ribbon__ui_button___margin;
   }
 
   .ui-selectonemenu {
-    float: left;
-    margin: 1px 2px;
-    float: left;
-    -moz-border-radius-bottomright: 0px;
-    -webkit-border-bottom-right-radius: 0px;
-    border-radius: 3px 0px 0px 3px;
+    float: $_ui_ribbon__ui_selectonemenu___float;
+    margin: $_ui_ribbon__ui_selectonemenu___margin;
+    float: $_ui_ribbon__ui_selectonemenu___float;
+    -moz-border-radius-bottomright: $_ui_ribbon__ui_selectonemenu____moz_border_radius_bottomright;
+    -webkit-border-bottom-right-radius: $_ui_ribbon__ui_selectonemenu____webkit_border_bottom_right_radius;
+    border-radius: $_ui_ribbon__ui_selectonemenu___border_radius;
   }
 
   .ui-buttonset .ui-button {
-    margin: 0;
-    margin-right: -1px;
+    margin: $_ui_ribbon__ui_buttonset__ui_button___margin;
+    margin-right: $_ui_ribbon__ui_buttonset__ui_button___margin_right;
   }
 
   .ui-inputfield {
-    background: none;
-    box-shadow: none;
+    background: $_ui_ribbon__ui_inputfield___background;
+    box-shadow: $_ui_ribbon__ui_inputfield___box_shadow;
   }
 
   .ui-selectonemenu {
     &.ui-state-default {
-      background: none;
-      box-shadow: none;
+      background: $_ui_ribbon__ui_selectonemenu_ui_state_default___background;
+      box-shadow: $_ui_ribbon__ui_selectonemenu_ui_state_default___box_shadow;
     }
 
     .ui-selectonemenu-trigger {
-      background-image: none;
-      box-shadow: none;
-      -moz-border-radius-bottomright: 0px;
-      -webkit-border-bottom-right-radius: 0px;
-      border-radius: 0px;
+      background-image: $_ui_ribbon__ui_selectonemenu__ui_selectonemenu_trigger___background_image;
+      box-shadow: $_ui_ribbon__ui_selectonemenu__ui_selectonemenu_trigger___box_shadow;
+      -moz-border-radius-bottomright: $_ui_ribbon__ui_selectonemenu__ui_selectonemenu_trigger____moz_border_radius_bottomright;
+      -webkit-border-bottom-right-radius: $_ui_ribbon__ui_selectonemenu__ui_selectonemenu_trigger____webkit_border_bottom_right_radius;
+      border-radius: $_ui_ribbon__ui_selectonemenu__ui_selectonemenu_trigger___border_radius;
     }
   }
 }
@@ -116,5 +185,5 @@
   background: -o-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 58%, rgba(249, 249, 249, 1) 71%, rgba(237, 237, 237, 1) 88%, rgba(232, 232, 232, 1) 100%);
   background: -ms-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 58%, rgba(249, 249, 249, 1) 71%, rgba(237, 237, 237, 1) 88%, rgba(232, 232, 232, 1) 100%);
   background: linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 58%, rgba(249, 249, 249, 1) 71%, rgba(237, 237, 237, 1) 88%, rgba(232, 232, 232, 1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e8e8e8',GradientType=0 );
+  filter: $_ui_ribbon_groups_ui_widget_content___filter;
 }

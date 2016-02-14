@@ -1,112 +1,157 @@
+$_ui_messages_info___ui_messages_warn___ui_messages_error___ui_messages_fatal___border: 1px solid !default;
+$_ui_messages_info___ui_messages_warn___ui_messages_error___ui_messages_fatal___margin: 10px 0px !default;
+$_ui_messages_info___ui_messages_warn___ui_messages_error___ui_messages_fatal___padding: 10px 10px 10px 10px !default;
+$_ui_message_info___ui_message_error___ui_message_warn___ui_message_fatal___border: 1px solid !default;
+$_ui_message_info___ui_message_error___ui_message_warn___ui_message_fatal___margin: 0px 5px !default;
+$_ui_message_info___ui_message_error___ui_message_warn___ui_message_fatal___padding: 2px 5px !default;
+$_ui_messages_info_icon___ui_messages_warn_icon___ui_messages_error_icon___ui_messages_fatal_icon___ui_message_info_icon___ui_message_warn_icon___ui_message_error_icon___ui_message_fatal_icon___background: url("messages/messages.png") no-repeat !default;
+$_ui_messages_info_icon___ui_messages_warn_icon___ui_messages_error_icon___ui_messages_fatal_icon___ui_message_info_icon___ui_message_warn_icon___ui_message_error_icon___ui_message_fatal_icon___display: block !default;
+$_ui_messages_info_icon___ui_messages_warn_icon___ui_messages_error_icon___ui_messages_fatal_icon___ui_message_info_icon___ui_message_warn_icon___ui_message_error_icon___ui_message_fatal_icon___float: left !default;
+$_ui_messages_info_icon___ui_messages_warn_icon___ui_messages_error_icon___ui_messages_fatal_icon___ui_message_info_icon___ui_message_warn_icon___ui_message_error_icon___ui_message_fatal_icon___margin: 0 !default;
+$_ui_messages_info_icon___ui_messages_warn_icon___ui_messages_error_icon___ui_messages_fatal_icon___ui_message_info_icon___ui_message_warn_icon___ui_message_error_icon___ui_message_fatal_icon___padding: 0 !default;
+$_ui_messages_info_icon___ui_messages_warn_icon___ui_messages_error_icon___ui_messages_fatal_icon___ui_message_info_icon___ui_message_warn_icon___ui_message_error_icon___ui_message_fatal_icon___position: relative !default;
+$_ui_messages_info_icon___ui_messages_warn_icon___ui_messages_error_icon___ui_messages_fatal_icon___height: 24px !default;
+$_ui_messages_info_icon___ui_messages_warn_icon___ui_messages_error_icon___ui_messages_fatal_icon___width: 24px !default;
+$_ui_messages_info_icon___ui_messages_warn_icon___ui_messages_error_icon___ui_messages_fatal_icon___margin_top: -4px !default;
+$_ui_message_info_icon___ui_message_warn_icon___ui_message_error_icon___ui_message_fatal_icon___height: 16px !default;
+$_ui_message_info_icon___ui_message_warn_icon___ui_message_error_icon___ui_message_fatal_icon___width: 16px !default;
+$_ui_messages_info_summary___ui_messages_warn_summary___ui_messages_error_summary___ui_messages_fatal_summary___ui_message_info_summary___ui_message_warn_summary___ui_message_error_summary___ui_message_fatal_summary___margin_left: 10px !default;
+$_ui_messages_info_summary___ui_messages_warn_summary___ui_messages_error_summary___ui_messages_fatal_summary___ui_message_info_summary___ui_message_warn_summary___ui_message_error_summary___ui_message_fatal_summary___font_weight: bold !default;
+$_ui_messages_info_detail___ui_messages_warn_detail___ui_messages_error_detail___ui_messages_fatal_detail___ui_message_info_detail___ui_message_warn_detail___ui_message_error_detail___ui_message_fatal_detail___margin_left: 5px !default;
+$_ui_messages_info___ui_message_info___color: #3a87ad !default;
+$_ui_messages_info___ui_message_info___background_color: #d9edf7 !default;
+$_ui_messages_info___ui_message_info___border_color: #bce8f1 !default;
+$_ui_messages_warn___ui_message_warn___color: #c09853 !default;
+$_ui_messages_warn___ui_message_warn___background_color: #fcf8e3 !default;
+$_ui_messages_warn___ui_message_warn___border_color: #fbeed5 !default;
+$_ui_messages_error___ui_message_error___ui_messages_fatal___ui_message_fatal___color: #b94a48 !default;
+$_ui_messages_error___ui_message_error___ui_messages_fatal___ui_message_fatal___background_color: #f2dede !default;
+$_ui_messages_error___ui_message_error___ui_messages_fatal___ui_message_fatal___border_color: #eed3d7 !default;
+$_ui_messages_ul___margin: 0 25px !default;
+$_ui_messages_ul___padding: 0 !default;
+$_ui_messages_ul___list_style_type: none !default;
+$_ui_messages_ui_messages_noicon_ul___margin: 0 25px 0 0 !default;
+$_ui_message_icon_only___width: 16px !default;
+$_ui_message_icon_only___height: 16px !default;
+$_ui_messages_info_icon___background_position: 0px -316px !default;
+$_ui_messages_warn_icon___background_position: 0px -448px !default;
+$_ui_messages_error_icon___background_position: 0px -52px !default;
+$_ui_messages_fatal_icon___background_position: 0px -184px !default;
+$_ui_message_info_icon___background_position: 0px -360px !default;
+$_ui_message_warn_icon___background_position: 0px -492px !default;
+$_ui_message_error_icon___background_position: 0px -96px !default;
+$_ui_message_fatal_icon___background_position: 0px -228px !default;
+$_ui_messages__ui_messages_close___float: right !default;
+$_ui_messages__ui_messages_close___cursor: pointer !default;
 .ui-messages-info, .ui-messages-warn, .ui-messages-error, .ui-messages-fatal {
-  border: 1px solid;
-  margin: 10px 0px;
-  padding: 10px 10px 10px 10px;
+  border: $_ui_messages_info___ui_messages_warn___ui_messages_error___ui_messages_fatal___border;
+  margin: $_ui_messages_info___ui_messages_warn___ui_messages_error___ui_messages_fatal___margin;
+  padding: $_ui_messages_info___ui_messages_warn___ui_messages_error___ui_messages_fatal___padding;
 }
 
 .ui-message-info, .ui-message-error, .ui-message-warn, .ui-message-fatal {
-  border: 1px solid;
-  margin: 0px 5px;
-  padding: 2px 5px;
+  border: $_ui_message_info___ui_message_error___ui_message_warn___ui_message_fatal___border;
+  margin: $_ui_message_info___ui_message_error___ui_message_warn___ui_message_fatal___margin;
+  padding: $_ui_message_info___ui_message_error___ui_message_warn___ui_message_fatal___padding;
 }
 
 .ui-messages-info-icon, .ui-messages-warn-icon, .ui-messages-error-icon, .ui-messages-fatal-icon, .ui-message-info-icon, .ui-message-warn-icon, .ui-message-error-icon, .ui-message-fatal-icon {
-  background: url("messages/messages.png") no-repeat;
-  display: block;
-  float: left;
-  margin: 0;
-  padding: 0;
-  position: relative;
+  background: $_ui_messages_info_icon___ui_messages_warn_icon___ui_messages_error_icon___ui_messages_fatal_icon___ui_message_info_icon___ui_message_warn_icon___ui_message_error_icon___ui_message_fatal_icon___background;
+  display: $_ui_messages_info_icon___ui_messages_warn_icon___ui_messages_error_icon___ui_messages_fatal_icon___ui_message_info_icon___ui_message_warn_icon___ui_message_error_icon___ui_message_fatal_icon___display;
+  float: $_ui_messages_info_icon___ui_messages_warn_icon___ui_messages_error_icon___ui_messages_fatal_icon___ui_message_info_icon___ui_message_warn_icon___ui_message_error_icon___ui_message_fatal_icon___float;
+  margin: $_ui_messages_info_icon___ui_messages_warn_icon___ui_messages_error_icon___ui_messages_fatal_icon___ui_message_info_icon___ui_message_warn_icon___ui_message_error_icon___ui_message_fatal_icon___margin;
+  padding: $_ui_messages_info_icon___ui_messages_warn_icon___ui_messages_error_icon___ui_messages_fatal_icon___ui_message_info_icon___ui_message_warn_icon___ui_message_error_icon___ui_message_fatal_icon___padding;
+  position: $_ui_messages_info_icon___ui_messages_warn_icon___ui_messages_error_icon___ui_messages_fatal_icon___ui_message_info_icon___ui_message_warn_icon___ui_message_error_icon___ui_message_fatal_icon___position;
 }
 
 .ui-messages-info-icon, .ui-messages-warn-icon, .ui-messages-error-icon, .ui-messages-fatal-icon {
-  height: 24px;
-  width: 24px;
-  margin-top: -4px;
+  height: $_ui_messages_info_icon___ui_messages_warn_icon___ui_messages_error_icon___ui_messages_fatal_icon___height;
+  width: $_ui_messages_info_icon___ui_messages_warn_icon___ui_messages_error_icon___ui_messages_fatal_icon___width;
+  margin-top: $_ui_messages_info_icon___ui_messages_warn_icon___ui_messages_error_icon___ui_messages_fatal_icon___margin_top;
 }
 
 .ui-message-info-icon, .ui-message-warn-icon, .ui-message-error-icon, .ui-message-fatal-icon {
-  height: 16px;
-  width: 16px;
+  height: $_ui_message_info_icon___ui_message_warn_icon___ui_message_error_icon___ui_message_fatal_icon___height;
+  width: $_ui_message_info_icon___ui_message_warn_icon___ui_message_error_icon___ui_message_fatal_icon___width;
 }
 
 .ui-messages-info-summary, .ui-messages-warn-summary, .ui-messages-error-summary, .ui-messages-fatal-summary, .ui-message-info-summary, .ui-message-warn-summary, .ui-message-error-summary, .ui-message-fatal-summary {
-  margin-left: 10px;
-  font-weight: bold;
+  margin-left: $_ui_messages_info_summary___ui_messages_warn_summary___ui_messages_error_summary___ui_messages_fatal_summary___ui_message_info_summary___ui_message_warn_summary___ui_message_error_summary___ui_message_fatal_summary___margin_left;
+  font-weight: $_ui_messages_info_summary___ui_messages_warn_summary___ui_messages_error_summary___ui_messages_fatal_summary___ui_message_info_summary___ui_message_warn_summary___ui_message_error_summary___ui_message_fatal_summary___font_weight;
 }
 
 .ui-messages-info-detail, .ui-messages-warn-detail, .ui-messages-error-detail, .ui-messages-fatal-detail, .ui-message-info-detail, .ui-message-warn-detail, .ui-message-error-detail, .ui-message-fatal-detail {
-  margin-left: 5px;
+  margin-left: $_ui_messages_info_detail___ui_messages_warn_detail___ui_messages_error_detail___ui_messages_fatal_detail___ui_message_info_detail___ui_message_warn_detail___ui_message_error_detail___ui_message_fatal_detail___margin_left;
 }
 
 .ui-messages-info, .ui-message-info {
-  color: #3a87ad;
-  background-color: #d9edf7;
-  border-color: #bce8f1;
+  color: $_ui_messages_info___ui_message_info___color;
+  background-color: $_ui_messages_info___ui_message_info___background_color;
+  border-color: $_ui_messages_info___ui_message_info___border_color;
 }
 
 .ui-messages-warn, .ui-message-warn {
-  color: #c09853;
-  background-color: #fcf8e3;
-  border-color: #fbeed5;
+  color: $_ui_messages_warn___ui_message_warn___color;
+  background-color: $_ui_messages_warn___ui_message_warn___background_color;
+  border-color: $_ui_messages_warn___ui_message_warn___border_color;
 }
 
 .ui-messages-error, .ui-message-error, .ui-messages-fatal, .ui-message-fatal {
-  color: #b94a48;
-  background-color: #f2dede;
-  border-color: #eed3d7;
+  color: $_ui_messages_error___ui_message_error___ui_messages_fatal___ui_message_fatal___color;
+  background-color: $_ui_messages_error___ui_message_error___ui_messages_fatal___ui_message_fatal___background_color;
+  border-color: $_ui_messages_error___ui_message_error___ui_messages_fatal___ui_message_fatal___border_color;
 }
 
 .ui-messages {
   ul {
-    margin: 0 25px;
-    padding: 0;
-    list-style-type: none;
+    margin: $_ui_messages_ul___margin;
+    padding: $_ui_messages_ul___padding;
+    list-style-type: $_ui_messages_ul___list_style_type;
   }
 
   &.ui-messages-noicon ul {
-    margin: 0 25px 0 0;
+    margin: $_ui_messages_ui_messages_noicon_ul___margin;
   }
 }
 
 .ui-message-icon-only {
-  width: 16px;
-  height: 16px;
+  width: $_ui_message_icon_only___width;
+  height: $_ui_message_icon_only___height;
 }
 
 .ui-messages-info-icon {
-  background-position: 0px -316px;
+  background-position: $_ui_messages_info_icon___background_position;
 }
 
 .ui-messages-warn-icon {
-  background-position: 0px -448px;
+  background-position: $_ui_messages_warn_icon___background_position;
 }
 
 .ui-messages-error-icon {
-  background-position: 0px -52px;
+  background-position: $_ui_messages_error_icon___background_position;
 }
 
 .ui-messages-fatal-icon {
-  background-position: 0px -184px;
+  background-position: $_ui_messages_fatal_icon___background_position;
 }
 
 .ui-message-info-icon {
-  background-position: 0px -360px;
+  background-position: $_ui_message_info_icon___background_position;
 }
 
 .ui-message-warn-icon {
-  background-position: 0px -492px;
+  background-position: $_ui_message_warn_icon___background_position;
 }
 
 .ui-message-error-icon {
-  background-position: 0px -96px;
+  background-position: $_ui_message_error_icon___background_position;
 }
 
 .ui-message-fatal-icon {
-  background-position: 0px -228px;
+  background-position: $_ui_message_fatal_icon___background_position;
 }
 
 .ui-messages .ui-messages-close {
-  float: right;
-  cursor: pointer;
+  float: $_ui_messages__ui_messages_close___float;
+  cursor: $_ui_messages__ui_messages_close___cursor;
 }

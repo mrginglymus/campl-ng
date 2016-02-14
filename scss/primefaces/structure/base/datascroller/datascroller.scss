@@ -1,41 +1,58 @@
+$_ui_datascroller__ui_datascroller_header___text_align: center !default;
+$_ui_datascroller__ui_datascroller_header___padding: 4px 10px !default;
+$_ui_datascroller__ui_datascroller_header___border_bottom: 0px none !default;
+$_ui_datascroller__ui_datascroller_content___padding: 4px 10px !default;
+$_ui_datascroller_inline__ui_datascroller_content___overflow: auto !default;
+$_ui_datascroller__ui_datascroller_list___list_style_type: none !default;
+$_ui_datascroller__ui_datascroller_list___margin: 0 !default;
+$_ui_datascroller__ui_datascroller_list___padding: 0 !default;
+$_ui_datascroller__ui_datascroller_item___border: 0 none !default;
+$_ui_datascroller__ui_datascroller_loader___text_align: center !default;
+$_ui_datascroller__ui_datascroller_loader___padding: 4px 10px !default;
+$_ui_datascroller__ui_datascroller_loading___background: url("datascroller/images/loading.gif") center center no-repeat !default;
+$_ui_datascroller__ui_datascroller_loading___width: 220px !default;
+$_ui_datascroller__ui_datascroller_loading___height: 19px !default;
+$_ui_datascroller__ui_datascroller_loading___padding: 0 !default;
+$_ui_datascroller__ui_datascroller_loading___margin: 0 !default;
+$_ui_datascroller__ui_datascroller_loading___display: inline-block !default;
 .ui-datascroller {
   .ui-datascroller-header {
-    text-align: center;
-    padding: 4px 10px;
-    border-bottom: 0px none;
+    text-align: $_ui_datascroller__ui_datascroller_header___text_align;
+    padding: $_ui_datascroller__ui_datascroller_header___padding;
+    border-bottom: $_ui_datascroller__ui_datascroller_header___border_bottom;
   }
 
   .ui-datascroller-content {
-    padding: 4px 10px;
+    padding: $_ui_datascroller__ui_datascroller_content___padding;
   }
 }
 
 .ui-datascroller-inline .ui-datascroller-content {
-  overflow: auto;
+  overflow: $_ui_datascroller_inline__ui_datascroller_content___overflow;
 }
 
 .ui-datascroller {
   .ui-datascroller-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+    list-style-type: $_ui_datascroller__ui_datascroller_list___list_style_type;
+    margin: $_ui_datascroller__ui_datascroller_list___margin;
+    padding: $_ui_datascroller__ui_datascroller_list___padding;
   }
 
   .ui-datascroller-item {
-    border: 0 none;
+    border: $_ui_datascroller__ui_datascroller_item___border;
   }
 
   .ui-datascroller-loader {
-    text-align: center;
-    padding: 4px 10px;
+    text-align: $_ui_datascroller__ui_datascroller_loader___text_align;
+    padding: $_ui_datascroller__ui_datascroller_loader___padding;
   }
 
   .ui-datascroller-loading {
-    background: url("datascroller/images/loading.gif") center center no-repeat;
-    width: 220px;
-    height: 19px;
-    padding: 0;
-    margin: 0;
-    display: inline-block;
+    background: $_ui_datascroller__ui_datascroller_loading___background;
+    width: $_ui_datascroller__ui_datascroller_loading___width;
+    height: $_ui_datascroller__ui_datascroller_loading___height;
+    padding: $_ui_datascroller__ui_datascroller_loading___padding;
+    margin: $_ui_datascroller__ui_datascroller_loading___margin;
+    display: $_ui_datascroller__ui_datascroller_loading___display;
   }
 }

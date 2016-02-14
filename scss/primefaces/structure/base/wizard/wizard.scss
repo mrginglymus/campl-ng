@@ -1,31 +1,42 @@
+$_ui_wizard___margin: 0 !default;
+$_ui_wizard___padding: 0 !default;
+$_ui_wizard_content___margin: 3px 0 !default;
+$_ui_wizard_navbar___text_align: right !default;
+$_ui_wizard_nav_back___ui_wizard_nav_next___cursor: pointer !default;
+$_ui_wizard_nav_back___float: left !default;
+$_ui_wizard_nav_next___float: right !default;
+$_ui_wizard_step_title___font_size: 18px !default;
+$_ui_wizard_step_title___margin: 0 3px 0 0 !default;
+$_ui_wizard_step_title___padding: 0.4em !default;
+$_ui_wizard_step_title___float: left !default;
 .ui-wizard {
-  margin: 0;
-  padding: 0;
+  margin: $_ui_wizard___margin;
+  padding: $_ui_wizard___padding;
 }
 
 .ui-wizard-content {
-  margin: 3px 0;
+  margin: $_ui_wizard_content___margin;
 }
 
 .ui-wizard-navbar {
-  text-align: right;
+  text-align: $_ui_wizard_navbar___text_align;
 }
 
 .ui-wizard-nav-back, .ui-wizard-nav-next {
-  cursor: pointer;
+  cursor: $_ui_wizard_nav_back___ui_wizard_nav_next___cursor;
 }
 
 .ui-wizard-nav-back {
-  float: left;
+  float: $_ui_wizard_nav_back___float;
 }
 
 .ui-wizard-nav-next {
-  float: right;
+  float: $_ui_wizard_nav_next___float;
 }
 
 .ui-wizard-step-title {
-  font-size: 18px;
-  margin: 0 3px 0 0;
-  padding: 0.4em;
-  float: left;
+  font-size: $_ui_wizard_step_title___font_size;
+  margin: $_ui_wizard_step_title___margin;
+  padding: $_ui_wizard_step_title___padding;
+  float: $_ui_wizard_step_title___float;
 }

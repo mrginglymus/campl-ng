@@ -1,14 +1,23 @@
+$_ui_blockui___position: absolute !default;
+$_ui_blockui___top: 0 !default;
+$_ui_blockui___left: 0 !default;
+$_ui_blockui___text_align: center !default;
+$_ui_blockui___width: 100% !default;
+$_ui_blockui___height: 100% !default;
+$_ui_blockui_content___position: absolute !default;
+$_ui_blockui_content___text_align: center !default;
+$_ui_blockui_content___padding: 1em !default;
 .ui-blockui {
-  position: absolute;
-  top: 0;
-  left: 0;
-  text-align: center;
-  width: 100%;
-  height: 100%;
+  position: $_ui_blockui___position;
+  top: $_ui_blockui___top;
+  left: $_ui_blockui___left;
+  text-align: $_ui_blockui___text_align;
+  width: $_ui_blockui___width;
+  height: $_ui_blockui___height;
 }
 
 .ui-blockui-content {
-  position: absolute;
-  text-align: center;
-  padding: 1em;
+  position: $_ui_blockui_content___position;
+  text-align: $_ui_blockui_content___text_align;
+  padding: $_ui_blockui_content___padding;
 }

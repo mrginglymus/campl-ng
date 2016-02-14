@@ -1,20 +1,25 @@
+$_ui_inplace__ui_inplace_display___cursor: pointer !default;
+$_ui_inplace__ui_inplace_display___border: 0px none !important !default;
+$_ui_inplace__ui_inplace_disabled___cursor: default !default;
+$_ui_inplace__ui_inplace_editor___margin_left: 0.1em !default;
+$_ui_inplace__ui_inplace_editor__ui_button_icon_only__ui_button_text___padding: 0 !default;
 .ui-inplace {
   .ui-inplace-display {
-    cursor: pointer;
-    border: 0px none !important;
+    cursor: $_ui_inplace__ui_inplace_display___cursor;
+    border: $_ui_inplace__ui_inplace_display___border;
   }
 
   .ui-inplace-disabled {
-    cursor: default;
+    cursor: $_ui_inplace__ui_inplace_disabled___cursor;
   }
 
   .ui-inplace-content {}
 
   .ui-inplace-editor {
-    margin-left: 0.1em;
+    margin-left: $_ui_inplace__ui_inplace_editor___margin_left;
 
     .ui-button-icon-only .ui-button-text {
-      padding: 0;
+      padding: $_ui_inplace__ui_inplace_editor__ui_button_icon_only__ui_button_text___padding;
     }
   }
 }

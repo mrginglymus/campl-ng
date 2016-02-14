@@ -1,5 +1,8 @@
+$_ui_outputpanel_loading___background: url("outputpanel/images/loading.gif") center center no-repeat !default;
+$_ui_outputpanel_loading___width: 32px !default;
+$_ui_outputpanel_loading___height: 32px !default;
 .ui-outputpanel-loading {
-  background: url("outputpanel/images/loading.gif") center center no-repeat;
-  width: 32px;
-  height: 32px;
+  background: $_ui_outputpanel_loading___background;
+  width: $_ui_outputpanel_loading___width;
+  height: $_ui_outputpanel_loading___height;
 }

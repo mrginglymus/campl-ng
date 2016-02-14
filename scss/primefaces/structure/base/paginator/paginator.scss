@@ -1,53 +1,77 @@
+$_ui_paginator___margin: 0px !default;
+$_ui_paginator___text_align: center !default;
+$_ui_paginator___padding: 2px !default;
+$_ui_paginator_ui_paginator_top___border_bottom: 0px none !default;
+$_ui_paginator_ui_paginator_bottom___border_top: 0px none !default;
+$_ui_paginator__ui_paginator_page___ui_paginator__ui_paginator_pages___ui_paginator__ui_paginator_next___ui_paginator__ui_paginator_last___ui_paginator__ui_paginator_first___ui_paginator__ui_paginator_prev___ui_paginator__ui_paginator_current___display: inline-block !default;
+$_ui_paginator__ui_paginator_page___ui_paginator__ui_paginator_pages___ui_paginator__ui_paginator_next___ui_paginator__ui_paginator_last___ui_paginator__ui_paginator_first___ui_paginator__ui_paginator_prev___ui_paginator__ui_paginator_current___padding: 2px 6px !default;
+$_ui_paginator__ui_paginator_page___ui_paginator__ui_paginator_pages___ui_paginator__ui_paginator_next___ui_paginator__ui_paginator_last___ui_paginator__ui_paginator_first___ui_paginator__ui_paginator_prev___ui_paginator__ui_paginator_current___zoom: 1 !default;
+$_ui_paginator__ui_paginator_page___ui_paginator__ui_paginator_pages___ui_paginator__ui_paginator_next___ui_paginator__ui_paginator_last___ui_paginator__ui_paginator_first___ui_paginator__ui_paginator_prev___ui_paginator__ui_paginator_current___margin_left: 1px !default;
+$_ui_paginator__ui_paginator_page___ui_paginator__ui_paginator_pages___ui_paginator__ui_paginator_next___ui_paginator__ui_paginator_last___ui_paginator__ui_paginator_first___ui_paginator__ui_paginator_prev___ui_paginator__ui_paginator_current___margin_right: 1px !default;
+$_ui_paginator__ui_paginator_page___ui_paginator__ui_paginator_pages___ui_paginator__ui_paginator_next___ui_paginator__ui_paginator_last___ui_paginator__ui_paginator_first___ui_paginator__ui_paginator_prev___ui_paginator__ui_paginator_current___text_decoration: none !default;
+$_ui_paginator__ui_paginator_page___ui_paginator__ui_paginator_pages___ui_paginator__ui_paginator_next___ui_paginator__ui_paginator_last___ui_paginator__ui_paginator_first___ui_paginator__ui_paginator_prev___ui_paginator__ui_paginator_current___outline: none !default;
+$_ui_paginator__ui_paginator_page___ui_paginator__ui_paginator_next___ui_paginator__ui_paginator_last___ui_paginator__ui_paginator_first___ui_paginator__ui_paginator_prev___cursor: pointer !default;
+$_ui_paginator__ui_paginator_current___ui_paginator__ui_paginator_rpp_options___margin_left: 1em !default;
+$_ui_paginator__ui_paginator_current___ui_paginator__ui_paginator_rpp_options___margin_right: 1em !default;
+$_ui_paginator__ui_paginator_current___ui_paginator__ui_paginator_rpp_options___background_image: none !default;
+$_ui_paginator__ui_paginator_next__ui_icon___ui_paginator__ui_paginator_prev__ui_icon___ui_paginator__ui_paginator_first__ui_icon___ui_paginator__ui_paginator_last__ui_icon___height: auto !default;
+$_ui_paginator__ui_paginator_next__ui_icon___ui_paginator__ui_paginator_prev__ui_icon___ui_paginator__ui_paginator_first__ui_icon___ui_paginator__ui_paginator_last__ui_icon___overflow: inherit !default;
+$_ui_paginator__ui_paginator_jtp_select_option___ui_paginator__ui_paginator_rpp_options_option___background_image: none !default;
+$_ui_paginator__ui_paginator_jtp_select_option___ui_paginator__ui_paginator_rpp_options_option___border: 0 none !default;
+$_ui_paginator__ui_paginator_jtp_select_option___ui_paginator__ui_paginator_rpp_options_option___box_shadow: none !default;
+$_ui_paginator__ui_paginator_jtp_select_option___ui_paginator__ui_paginator_rpp_options_option____moz_box_shadow: none !default;
+$_ui_paginator__ui_paginator_jtp_select_option___ui_paginator__ui_paginator_rpp_options_option____webkit_box_shadow: none !default;
+$_ui_paginator__ui_paginator_pages___display: none !default;
 .ui-paginator {
-  margin: 0px;
-  text-align: center;
-  padding: 2px;
+  margin: $_ui_paginator___margin;
+  text-align: $_ui_paginator___text_align;
+  padding: $_ui_paginator___padding;
 
   &.ui-paginator-top {
-    border-bottom: 0px none;
+    border-bottom: $_ui_paginator_ui_paginator_top___border_bottom;
   }
 
   &.ui-paginator-bottom {
-    border-top: 0px none;
+    border-top: $_ui_paginator_ui_paginator_bottom___border_top;
   }
 
   .ui-paginator-page, .ui-paginator-pages, .ui-paginator-next, .ui-paginator-last, .ui-paginator-first, .ui-paginator-prev, .ui-paginator-current {
-    display: inline-block;
-    padding: 2px 6px;
-    zoom: 1;
-    margin-left: 1px;
-    margin-right: 1px;
-    text-decoration: none;
-    outline: none;
+    display: $_ui_paginator__ui_paginator_page___ui_paginator__ui_paginator_pages___ui_paginator__ui_paginator_next___ui_paginator__ui_paginator_last___ui_paginator__ui_paginator_first___ui_paginator__ui_paginator_prev___ui_paginator__ui_paginator_current___display;
+    padding: $_ui_paginator__ui_paginator_page___ui_paginator__ui_paginator_pages___ui_paginator__ui_paginator_next___ui_paginator__ui_paginator_last___ui_paginator__ui_paginator_first___ui_paginator__ui_paginator_prev___ui_paginator__ui_paginator_current___padding;
+    zoom: $_ui_paginator__ui_paginator_page___ui_paginator__ui_paginator_pages___ui_paginator__ui_paginator_next___ui_paginator__ui_paginator_last___ui_paginator__ui_paginator_first___ui_paginator__ui_paginator_prev___ui_paginator__ui_paginator_current___zoom;
+    margin-left: $_ui_paginator__ui_paginator_page___ui_paginator__ui_paginator_pages___ui_paginator__ui_paginator_next___ui_paginator__ui_paginator_last___ui_paginator__ui_paginator_first___ui_paginator__ui_paginator_prev___ui_paginator__ui_paginator_current___margin_left;
+    margin-right: $_ui_paginator__ui_paginator_page___ui_paginator__ui_paginator_pages___ui_paginator__ui_paginator_next___ui_paginator__ui_paginator_last___ui_paginator__ui_paginator_first___ui_paginator__ui_paginator_prev___ui_paginator__ui_paginator_current___margin_right;
+    text-decoration: $_ui_paginator__ui_paginator_page___ui_paginator__ui_paginator_pages___ui_paginator__ui_paginator_next___ui_paginator__ui_paginator_last___ui_paginator__ui_paginator_first___ui_paginator__ui_paginator_prev___ui_paginator__ui_paginator_current___text_decoration;
+    outline: $_ui_paginator__ui_paginator_page___ui_paginator__ui_paginator_pages___ui_paginator__ui_paginator_next___ui_paginator__ui_paginator_last___ui_paginator__ui_paginator_first___ui_paginator__ui_paginator_prev___ui_paginator__ui_paginator_current___outline;
   }
 
   .ui-paginator-page, .ui-paginator-next, .ui-paginator-last, .ui-paginator-first, .ui-paginator-prev {
-    cursor: pointer;
+    cursor: $_ui_paginator__ui_paginator_page___ui_paginator__ui_paginator_next___ui_paginator__ui_paginator_last___ui_paginator__ui_paginator_first___ui_paginator__ui_paginator_prev___cursor;
   }
 
   .ui-paginator-current, .ui-paginator-rpp-options {
-    margin-left: 1em;
-    margin-right: 1em;
-    background-image: none;
+    margin-left: $_ui_paginator__ui_paginator_current___ui_paginator__ui_paginator_rpp_options___margin_left;
+    margin-right: $_ui_paginator__ui_paginator_current___ui_paginator__ui_paginator_rpp_options___margin_right;
+    background-image: $_ui_paginator__ui_paginator_current___ui_paginator__ui_paginator_rpp_options___background_image;
   }
 
   .ui-paginator-next .ui-icon, .ui-paginator-prev .ui-icon, .ui-paginator-first .ui-icon, .ui-paginator-last .ui-icon {
-    height: auto;
-    overflow: inherit;
+    height: $_ui_paginator__ui_paginator_next__ui_icon___ui_paginator__ui_paginator_prev__ui_icon___ui_paginator__ui_paginator_first__ui_icon___ui_paginator__ui_paginator_last__ui_icon___height;
+    overflow: $_ui_paginator__ui_paginator_next__ui_icon___ui_paginator__ui_paginator_prev__ui_icon___ui_paginator__ui_paginator_first__ui_icon___ui_paginator__ui_paginator_last__ui_icon___overflow;
   }
 
   .ui-paginator-jtp-select option, .ui-paginator-rpp-options option {
-    background-image: none;
-    border: 0 none;
-    box-shadow: none;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
+    background-image: $_ui_paginator__ui_paginator_jtp_select_option___ui_paginator__ui_paginator_rpp_options_option___background_image;
+    border: $_ui_paginator__ui_paginator_jtp_select_option___ui_paginator__ui_paginator_rpp_options_option___border;
+    box-shadow: $_ui_paginator__ui_paginator_jtp_select_option___ui_paginator__ui_paginator_rpp_options_option___box_shadow;
+    -moz-box-shadow: $_ui_paginator__ui_paginator_jtp_select_option___ui_paginator__ui_paginator_rpp_options_option____moz_box_shadow;
+    -webkit-box-shadow: $_ui_paginator__ui_paginator_jtp_select_option___ui_paginator__ui_paginator_rpp_options_option____webkit_box_shadow;
   }
 }
 
 /* Responsive */
 @media (max-width: 640px) {
   .ui-paginator .ui-paginator-pages {
-    display: none;
+    display: $_ui_paginator__ui_paginator_pages___display;
   }
 }

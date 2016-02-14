@@ -1,14 +1,23 @@
+$_ui_notificationbar___position: fixed !default;
+$_ui_notificationbar___width: 100% !default;
+$_ui_notificationbar___height: 100px !default;
+$_ui_notificationbar___display: none !default;
+$_ui_notificationbar___padding: 10px !default;
+$_ui_notificationbar_close___position: absolute !default;
+$_ui_notificationbar_close___right: 3em !default;
+$_ui_notificationbar_close___top: 1em !default;
+$_ui_notificationbar_close___cursor: pointer !default;
 .ui-notificationbar {
-  position: fixed;
-  width: 100%;
-  height: 100px;
-  display: none;
-  padding: 10px;
+  position: $_ui_notificationbar___position;
+  width: $_ui_notificationbar___width;
+  height: $_ui_notificationbar___height;
+  display: $_ui_notificationbar___display;
+  padding: $_ui_notificationbar___padding;
 }
 
 .ui-notificationbar-close {
-  position: absolute;
-  right: 3em;
-  top: 1em;
-  cursor: pointer;
+  position: $_ui_notificationbar_close___position;
+  right: $_ui_notificationbar_close___right;
+  top: $_ui_notificationbar_close___top;
+  cursor: $_ui_notificationbar_close___cursor;
 }

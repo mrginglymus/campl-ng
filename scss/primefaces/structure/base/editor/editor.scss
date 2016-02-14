@@ -1,126 +1,187 @@
+$_ui_editor___border: 1px solid #999 !default;
+$_ui_editor___padding: 0 1px 1px !default;
+$_ui_editor___background_color: white !default;
+$_ui_editor____moz_box_sizing: content-box !default;
+$_ui_editor____webkit_box_sizing: content-box !default;
+$_ui_editor___box_sizing: content-box !default;
+$_ui_editor_popup____moz_box_sizing: content-box !default;
+$_ui_editor_popup____webkit_box_sizing: content-box !default;
+$_ui_editor_popup___box_sizing: content-box !default;
+$_ui_editor______moz_box_sizing: content-box !default;
+$_ui_editor______webkit_box_sizing: content-box !default;
+$_ui_editor_____box_sizing: content-box !default;
+$_ui_editor_iframe___border: none !default;
+$_ui_editor_iframe___margin: 0 !default;
+$_ui_editor_iframe___padding: 0 !default;
+$_ui_editor_textarea___overflow_y: scroll !default;
+$_ui_editor_textarea___font: 10pt Arial,Verdana !default;
+$_ui_editor_textarea___resize: none !default;
+$_ui_editor_textarea___outline: none !default;
+$_ui_editor_toolbar___background: url("editor/images/toolbar.gif") repeat !default;
+$_ui_editor_group___float: left !default;
+$_ui_editor_group___height: 26px !default;
+$_ui_editor_button___float: left !default;
+$_ui_editor_button___width: 24px !default;
+$_ui_editor_button___height: 24px !default;
+$_ui_editor_button___margin: 1px 0 1px 0 !default;
+$_ui_editor_button___background: url("editor/images/buttons.gif") !default;
+$_ui_editor_disabled___opacity: 0.3 !default;
+$_ui_editor_disabled___filter: alpha(opacity=30) !default;
+$_ui_editor_divider___float: left !default;
+$_ui_editor_divider___width: 1px !default;
+$_ui_editor_divider___height: 23px !default;
+$_ui_editor_divider___margin: 1px 0 1px 0 !default;
+$_ui_editor_divider___background: #CCC !default;
+$_ui_editor_popup___border: solid 1px #999 !default;
+$_ui_editor_popup___background_color: white !default;
+$_ui_editor_popup___color: #333333 !default;
+$_ui_editor_popup___position: absolute !default;
+$_ui_editor_popup___font: 10pt Arial,Verdana !default;
+$_ui_editor_popup___cursor: default !default;
+$_ui_editor_popup___z_index: 10000 !default;
+$_ui_editor_list_div___padding: 2px 4px 2px 4px !default;
+$_ui_editor_list_p___ui_editor_list_h1___ui_editor_list_h2___ui_editor_list_h3___ui_editor_list_h4___ui_editor_list_h5___ui_editor_list_h6___ui_editor_list_font___padding: 0 !default;
+$_ui_editor_list_p___ui_editor_list_h1___ui_editor_list_h2___ui_editor_list_h3___ui_editor_list_h4___ui_editor_list_h5___ui_editor_list_h6___ui_editor_list_font___margin: 0 !default;
+$_ui_editor_list_p___ui_editor_list_h1___ui_editor_list_h2___ui_editor_list_h3___ui_editor_list_h4___ui_editor_list_h5___ui_editor_list_h6___ui_editor_list_font___background_color: Transparent !default;
+$_ui_editor_color___width: 150px !default;
+$_ui_editor_color___padding: 1px 0 0 1px !default;
+$_ui_editor_color_div___float: left !default;
+$_ui_editor_color_div___width: 14px !default;
+$_ui_editor_color_div___height: 14px !default;
+$_ui_editor_color_div___margin: 0 1px 1px 0 !default;
+$_ui_editor_prompt___background_color: #F6F7F9 !default;
+$_ui_editor_prompt___padding: 8px !default;
+$_ui_editor_prompt___font_size: 8.5pt !default;
+$_ui_editor_prompt_label___padding_bottom: 8px !default;
+$_ui_editor_message___background_color: #FDFCEE !default;
+$_ui_editor_message___width: 150px !default;
+$_ui_editor_message___padding: 4px !default;
+$_ui_editor_message___font_size: 8.5pt !default;
+$_ui_overlay_hidden__ui_editor_iframe___display: none !important !default;
+$_ui_overlay_visible__ui_editor_iframe___display: inline !important !default;
 .ui-editor {
-  border: 1px solid #999;
-  padding: 0 1px 1px;
-  background-color: white;
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
+  border: $_ui_editor___border;
+  padding: $_ui_editor___padding;
+  background-color: $_ui_editor___background_color;
+  -moz-box-sizing: $_ui_editor____moz_box_sizing;
+  -webkit-box-sizing: $_ui_editor____webkit_box_sizing;
+  box-sizing: $_ui_editor___box_sizing;
 }
 
 .ui-editor-popup {
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
+  -moz-box-sizing: $_ui_editor_popup____moz_box_sizing;
+  -webkit-box-sizing: $_ui_editor_popup____webkit_box_sizing;
+  box-sizing: $_ui_editor_popup___box_sizing;
 }
 
 .ui-editor {
   * {
-    -moz-box-sizing: content-box;
-    -webkit-box-sizing: content-box;
-    box-sizing: content-box;
+    -moz-box-sizing: $_ui_editor______moz_box_sizing;
+    -webkit-box-sizing: $_ui_editor______webkit_box_sizing;
+    box-sizing: $_ui_editor_____box_sizing;
   }
 
   iframe {
-    border: none;
-    margin: 0;
-    padding: 0;
+    border: $_ui_editor_iframe___border;
+    margin: $_ui_editor_iframe___margin;
+    padding: $_ui_editor_iframe___padding;
   }
 
   textarea {
-    overflow-y: scroll;
-    font: 10pt Arial,Verdana;
-    resize: none;
-    outline: none;
+    overflow-y: $_ui_editor_textarea___overflow_y;
+    font: $_ui_editor_textarea___font;
+    resize: $_ui_editor_textarea___resize;
+    outline: $_ui_editor_textarea___outline;
   }
 }
 
 .ui-editor-toolbar {
-  background: url("editor/images/toolbar.gif") repeat;
+  background: $_ui_editor_toolbar___background;
 }
 
 .ui-editor-group {
-  float: left;
-  height: 26px;
+  float: $_ui_editor_group___float;
+  height: $_ui_editor_group___height;
 }
 
 .ui-editor-button {
-  float: left;
-  width: 24px;
-  height: 24px;
-  margin: 1px 0 1px 0;
-  background: url("editor/images/buttons.gif");
+  float: $_ui_editor_button___float;
+  width: $_ui_editor_button___width;
+  height: $_ui_editor_button___height;
+  margin: $_ui_editor_button___margin;
+  background: $_ui_editor_button___background;
 }
 
 .ui-editor-disabled {
-  opacity: 0.3;
+  opacity: $_ui_editor_disabled___opacity;
   filter: alpha(opacity = 30);
 }
 
 .ui-editor-divider {
-  float: left;
-  width: 1px;
-  height: 23px;
-  margin: 1px 0 1px 0;
-  background: #CCC;
+  float: $_ui_editor_divider___float;
+  width: $_ui_editor_divider___width;
+  height: $_ui_editor_divider___height;
+  margin: $_ui_editor_divider___margin;
+  background: $_ui_editor_divider___background;
 }
 
 .ui-editor-popup {
-  border: solid 1px #999;
-  background-color: white;
-  color: #333333;
-  position: absolute;
-  font: 10pt Arial,Verdana;
-  cursor: default;
-  z-index: 10000;
+  border: $_ui_editor_popup___border;
+  background-color: $_ui_editor_popup___background_color;
+  color: $_ui_editor_popup___color;
+  position: $_ui_editor_popup___position;
+  font: $_ui_editor_popup___font;
+  cursor: $_ui_editor_popup___cursor;
+  z-index: $_ui_editor_popup___z_index;
 }
 
 .ui-editor-list {
   div {
-    padding: 2px 4px 2px 4px;
+    padding: $_ui_editor_list_div___padding;
   }
 
   p, h1, h2, h3, h4, h5, h6, font {
-    padding: 0;
-    margin: 0;
-    background-color: Transparent;
+    padding: $_ui_editor_list_p___ui_editor_list_h1___ui_editor_list_h2___ui_editor_list_h3___ui_editor_list_h4___ui_editor_list_h5___ui_editor_list_h6___ui_editor_list_font___padding;
+    margin: $_ui_editor_list_p___ui_editor_list_h1___ui_editor_list_h2___ui_editor_list_h3___ui_editor_list_h4___ui_editor_list_h5___ui_editor_list_h6___ui_editor_list_font___margin;
+    background-color: $_ui_editor_list_p___ui_editor_list_h1___ui_editor_list_h2___ui_editor_list_h3___ui_editor_list_h4___ui_editor_list_h5___ui_editor_list_h6___ui_editor_list_font___background_color;
   }
 }
 
 .ui-editor-color {
-  width: 150px;
-  padding: 1px 0 0 1px;
+  width: $_ui_editor_color___width;
+  padding: $_ui_editor_color___padding;
 
   div {
-    float: left;
-    width: 14px;
-    height: 14px;
-    margin: 0 1px 1px 0;
+    float: $_ui_editor_color_div___float;
+    width: $_ui_editor_color_div___width;
+    height: $_ui_editor_color_div___height;
+    margin: $_ui_editor_color_div___margin;
   }
 }
 
 .ui-editor-prompt {
-  background-color: #F6F7F9;
-  padding: 8px;
-  font-size: 8.5pt;
+  background-color: $_ui_editor_prompt___background_color;
+  padding: $_ui_editor_prompt___padding;
+  font-size: $_ui_editor_prompt___font_size;
 
   label {
-    padding-bottom: 8px;
+    padding-bottom: $_ui_editor_prompt_label___padding_bottom;
   }
 }
 
 .ui-editor-message {
-  background-color: #FDFCEE;
-  width: 150px;
-  padding: 4px;
-  font-size: 8.5pt;
+  background-color: $_ui_editor_message___background_color;
+  width: $_ui_editor_message___width;
+  padding: $_ui_editor_message___padding;
+  font-size: $_ui_editor_message___font_size;
 }
 
 /** IE fix within overlays **/
 
 .ui-overlay-hidden .ui-editor iframe {
-  display: none !important;
+  display: $_ui_overlay_hidden__ui_editor_iframe___display;
 }
 
 .ui-overlay-visible .ui-editor iframe {
-  display: inline !important;
+  display: $_ui_overlay_visible__ui_editor_iframe___display;
 }

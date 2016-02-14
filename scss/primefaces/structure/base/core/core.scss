@@ -1,95 +1,115 @@
+$_ui_shadow____moz_box_shadow: 0px 5px 10px rgba(0, 0, 0, 0.8) !default;
+$_ui_shadow____webkit_box_shadow: 0px 5px 10px rgba(0, 0, 0, 0.8) !default;
+$_ui_shadow___box_shadow: 0px 5px 10px rgba(0, 0, 0, 0.8) !default;
+$_ui_overlay_visible___visibility: visible !default;
+$ui_overlay_visible_____visibility: visible !important !default;
+$_ui_overlay_hidden___visibility: hidden !default;
+$_ui_overlay_hidden_____visibility: hidden !important !default;
+$_ui_overlay_visible_table____border_collapse: collapse !important !default;
+$_ui_overlay_hidden_table____border_collapse: separate !important !default;
+$_ui_datepicker__ui_datepicker_current_ui_priority_secondary___opacity: 1 !default;
+$_ui_icon_blank___background_position: 16px 16px !default;
+$th_ui_column_p_6__td_ui_column_p_6__th_ui_column_p_5__td_ui_column_p_5__th_ui_column_p_4__td_ui_column_p_4__th_ui_column_p_3__td_ui_column_p_3__th_ui_column_p_2__td_ui_column_p_2__th_ui_column_p_1__td_ui_column_p_1___display: none !default;
+$th_ui_column_p_1__td_ui_column_p_1___display: table-cell !default;
+$th_ui_column_p_2__td_ui_column_p_2___display: table-cell !default;
+$th_ui_column_p_3__td_ui_column_p_3___display: table-cell !default;
+$th_ui_column_p_4__td_ui_column_p_4___display: table-cell !default;
+$th_ui_column_p_5__td_ui_column_p_5___display: table-cell !default;
+$th_ui_column_p_6__td_ui_column_p_6___display: table-cell !default;
+$_ui_widget__ui_icon_fa___ui_icon_fa___background: none repeat scroll 0 0 transparent !important !default;
+$_ui_widget__ui_icon_fa___ui_icon_fa___text_indent: 0px !important !default;
 .ui-shadow {
-  -moz-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
-  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: $_ui_shadow____moz_box_shadow;
+  -webkit-box-shadow: $_ui_shadow____webkit_box_shadow;
+  box-shadow: $_ui_shadow___box_shadow;
 }
 
 .ui-overlay-visible {
-  visibility: visible;
+  visibility: $_ui_overlay_visible___visibility;
 }
 
 ui-overlay-visible * {
-  visibility: visible !important;
+  visibility: $ui_overlay_visible_____visibility;
 }
 
 .ui-overlay-hidden {
-  visibility: hidden;
+  visibility: $_ui_overlay_hidden___visibility;
 
   * {
-    visibility: hidden !important;
+    visibility: $_ui_overlay_hidden_____visibility;
   }
 }
 
 /* IE7 Fixes */
 
 .ui-overlay-visible table {
-  *border-collapse: collapse !important;
+  *border-collapse: $_ui_overlay_visible_table____border_collapse;
 }
 
 .ui-overlay-hidden table {
-  *border-collapse: separate !important;
+  *border-collapse: $_ui_overlay_hidden_table____border_collapse;
 }
 
 .ui-datepicker .ui-datepicker-current.ui-priority-secondary {
-  opacity: 1;
+  opacity: $_ui_datepicker__ui_datepicker_current_ui_priority_secondary___opacity;
 }
 
 .ui-icon-blank {
-  background-position: 16px 16px;
+  background-position: $_ui_icon_blank___background_position;
 }
 
 /* Column Priorities */
 @media only all {
   th.ui-column-p-6, td.ui-column-p-6, th.ui-column-p-5, td.ui-column-p-5, th.ui-column-p-4, td.ui-column-p-4, th.ui-column-p-3, td.ui-column-p-3, th.ui-column-p-2, td.ui-column-p-2, th.ui-column-p-1, td.ui-column-p-1 {
-    display: none;
+    display: $th_ui_column_p_6__td_ui_column_p_6__th_ui_column_p_5__td_ui_column_p_5__th_ui_column_p_4__td_ui_column_p_4__th_ui_column_p_3__td_ui_column_p_3__th_ui_column_p_2__td_ui_column_p_2__th_ui_column_p_1__td_ui_column_p_1___display;
   }
 }
 
 /* Show priority 1 at 320px (20em x 16px) */
 @media screen and (min-width: 20em) {
   th.ui-column-p-1, td.ui-column-p-1 {
-    display: table-cell;
+    display: $th_ui_column_p_1__td_ui_column_p_1___display;
   }
 }
 
 /* Show priority 2 at 480px (30em x 16px) */
 @media screen and (min-width: 30em) {
   th.ui-column-p-2, td.ui-column-p-2 {
-    display: table-cell;
+    display: $th_ui_column_p_2__td_ui_column_p_2___display;
   }
 }
 
 /* Show priority 3 at 640px (40em x 16px) */
 @media screen and (min-width: 40em) {
   th.ui-column-p-3, td.ui-column-p-3 {
-    display: table-cell;
+    display: $th_ui_column_p_3__td_ui_column_p_3___display;
   }
 }
 
 /* Show priority 4 at 800px (50em x 16px) */
 @media screen and (min-width: 50em) {
   th.ui-column-p-4, td.ui-column-p-4 {
-    display: table-cell;
+    display: $th_ui_column_p_4__td_ui_column_p_4___display;
   }
 }
 
 /* Show priority 5 at 960px (60em x 16px) */
 @media screen and (min-width: 60em) {
   th.ui-column-p-5, td.ui-column-p-5 {
-    display: table-cell;
+    display: $th_ui_column_p_5__td_ui_column_p_5___display;
   }
 }
 
 /* Show priority 6 at 1,120px (70em x 16px) */
 @media screen and (min-width: 70em) {
   th.ui-column-p-6, td.ui-column-p-6 {
-    display: table-cell;
+    display: $th_ui_column_p_6__td_ui_column_p_6___display;
   }
 }
 
 /* FontAwesome */
 
 .ui-widget .ui-icon.fa, .ui-icon.fa {
-  background: none repeat scroll 0 0 transparent !important;
-  text-indent: 0px !important;
+  background: $_ui_widget__ui_icon_fa___ui_icon_fa___background;
+  text-indent: $_ui_widget__ui_icon_fa___ui_icon_fa___text_indent;
 }

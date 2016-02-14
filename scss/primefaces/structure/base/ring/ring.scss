@@ -1,16 +1,24 @@
+$_ui_ring___list_style: none !default;
+$_ui_ring___width: 75% !default;
+$_ui_ring___height: 10em !default;
+$_ui_ring___margin: 1em auto !default;
+$_ui_ring_item___height: 4em !default;
+$_ui_ring_item___width: 8em !default;
+$_ui_ring_item___cursor: pointer !default;
+$_ui_ring_item_focus___cursor: auto !default;
 .ui-ring {
-  list-style: none;
-  width: 75%;
-  height: 10em;
-  margin: 1em auto;
+  list-style: $_ui_ring___list_style;
+  width: $_ui_ring___width;
+  height: $_ui_ring___height;
+  margin: $_ui_ring___margin;
 }
 
 .ui-ring-item {
-  height: 4em;
-  width: 8em;
-  cursor: pointer;
+  height: $_ui_ring_item___height;
+  width: $_ui_ring_item___width;
+  cursor: $_ui_ring_item___cursor;
 }
 
 .ui-ring-item-focus {
-  cursor: auto;
+  cursor: $_ui_ring_item_focus___cursor;
 }

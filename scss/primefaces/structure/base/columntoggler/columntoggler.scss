@@ -1,50 +1,84 @@
+$_ui_columntoggler___padding: 0 !default;
+$_ui_columntoggler___position: absolute !default;
+$_ui_columntoggler___overflow: auto !default;
+$_ui_columntoggler___display: none !default;
+$_ui_columntoggler__ui_columntoggler_items___border: 0 none !default;
+$_ui_columntoggler__ui_columntoggler_items___padding: 0.4em !default;
+$_ui_columntoggler__ui_columntoggler_items___margin: 0 !default;
+$_ui_columntoggler__ui_columntoggler_item___border: 0px none !default;
+$_ui_columntoggler__ui_columntoggler_item___cursor: pointer !default;
+$_ui_columntoggler__ui_columntoggler_item___font_weight: normal !default;
+$_ui_columntoggler__ui_columntoggler_item___margin: 1px 0 !default;
+$_ui_columntoggler__ui_columntoggler_item___padding: 3px 5px !default;
+$_ui_columntoggler__ui_columntoggler_item___text_align: left !default;
+$_ui_columntoggler__ui_columntoggler_item___white_space: nowrap !default;
+$_ui_columntoggler__ui_columntoggler_item___display: block !default;
+$_ui_columntoggler__ui_columntoggler_item___position: relative !default;
+$_ui_columntoggler__ui_columntoggler_item__ui_chkbox___position: absolute !default;
+$_ui_columntoggler__ui_columntoggler_item__ui_chkbox___top: 50% !default;
+$_ui_columntoggler__ui_columntoggler_item__ui_chkbox___margin_top: -8px !default;
+$_ui_columntoggler__ui_columntoggler_item_label___display: block !default;
+$_ui_columntoggler__ui_columntoggler_item_label___padding_left: 2.2em !default;
+$_ui_columntoggler__ui_columntoggler_close___float: right !default;
+$_ui_columntoggler__ui_columntoggler_close___margin_top: 1px !default;
+$_ui_columntoggler__ui_columntoggler_close___margin_right: 1px !default;
+$_ui_columntoggler__ui_columntoggler_close_focus___outline: dotted thin !default;
+$_ui_columntoggler__ui_columntoggler_items___padding: 1em 0.4em 0.4em 0.4em !default;
+$_ui_columntoggler__ui_columntoggler_item_ui_column_p_1___ui_columntoggler__ui_columntoggler_item_ui_column_p_2___ui_columntoggler__ui_columntoggler_item_ui_column_p_3___ui_columntoggler__ui_columntoggler_item_ui_column_p_4___ui_columntoggler__ui_columntoggler_item_ui_column_p_5___ui_columntoggler__ui_columntoggler_item_ui_column_p_6___display: none !default;
+$th_ui_helper_hidden__td_ui_helper_hidden___display: none !default;
+$_ui_columntoggler__ui_columntoggler_item_ui_column_p_1___display: block !default;
+$_ui_columntoggler__ui_columntoggler_item_ui_column_p_2___display: block !default;
+$_ui_columntoggler__ui_columntoggler_item_ui_column_p_3___display: block !default;
+$_ui_columntoggler__ui_columntoggler_item_ui_column_p_4___display: block !default;
+$_ui_columntoggler__ui_columntoggler_item_ui_column_p_5___display: block !default;
+$_ui_columntoggler__ui_columntoggler_item_ui_column_p_6___display: block !default;
 .ui-columntoggler {
-  padding: 0;
-  position: absolute;
-  overflow: auto;
-  display: none;
+  padding: $_ui_columntoggler___padding;
+  position: $_ui_columntoggler___position;
+  overflow: $_ui_columntoggler___overflow;
+  display: $_ui_columntoggler___display;
 
   .ui-columntoggler-items {
-    border: 0 none;
-    padding: 0.4em;
-    margin: 0;
+    border: $_ui_columntoggler__ui_columntoggler_items___border;
+    padding: $_ui_columntoggler__ui_columntoggler_items___padding;
+    margin: $_ui_columntoggler__ui_columntoggler_items___margin;
   }
 
   .ui-columntoggler-item {
-    border: 0px none;
-    cursor: pointer;
-    font-weight: normal;
-    margin: 1px 0;
-    padding: 3px 5px;
-    text-align: left;
-    white-space: nowrap;
-    display: block;
-    position: relative;
+    border: $_ui_columntoggler__ui_columntoggler_item___border;
+    cursor: $_ui_columntoggler__ui_columntoggler_item___cursor;
+    font-weight: $_ui_columntoggler__ui_columntoggler_item___font_weight;
+    margin: $_ui_columntoggler__ui_columntoggler_item___margin;
+    padding: $_ui_columntoggler__ui_columntoggler_item___padding;
+    text-align: $_ui_columntoggler__ui_columntoggler_item___text_align;
+    white-space: $_ui_columntoggler__ui_columntoggler_item___white_space;
+    display: $_ui_columntoggler__ui_columntoggler_item___display;
+    position: $_ui_columntoggler__ui_columntoggler_item___position;
 
     .ui-chkbox {
-      position: absolute;
-      top: 50%;
-      margin-top: -8px;
+      position: $_ui_columntoggler__ui_columntoggler_item__ui_chkbox___position;
+      top: $_ui_columntoggler__ui_columntoggler_item__ui_chkbox___top;
+      margin-top: $_ui_columntoggler__ui_columntoggler_item__ui_chkbox___margin_top;
     }
 
     label {
-      display: block;
-      padding-left: 2.2em;
+      display: $_ui_columntoggler__ui_columntoggler_item_label___display;
+      padding-left: $_ui_columntoggler__ui_columntoggler_item_label___padding_left;
     }
   }
 
   .ui-columntoggler-close {
-    float: right;
-    margin-top: 1px;
-    margin-right: 1px;
+    float: $_ui_columntoggler__ui_columntoggler_close___float;
+    margin-top: $_ui_columntoggler__ui_columntoggler_close___margin_top;
+    margin-right: $_ui_columntoggler__ui_columntoggler_close___margin_right;
 
     &:focus {
-      outline: dotted thin;
+      outline: $_ui_columntoggler__ui_columntoggler_close_focus___outline;
     }
   }
 
   .ui-columntoggler-items {
-    padding: 1em 0.4em 0.4em 0.4em;
+    padding: $_ui_columntoggler__ui_columntoggler_items___padding;
   }
 }
 
@@ -52,53 +86,53 @@
 @media only all {
   .ui-columntoggler .ui-columntoggler-item {
     &.ui-column-p-1, &.ui-column-p-2, &.ui-column-p-3, &.ui-column-p-4, &.ui-column-p-5, &.ui-column-p-6 {
-      display: none;
+      display: $_ui_columntoggler__ui_columntoggler_item_ui_column_p_1___ui_columntoggler__ui_columntoggler_item_ui_column_p_2___ui_columntoggler__ui_columntoggler_item_ui_column_p_3___ui_columntoggler__ui_columntoggler_item_ui_column_p_4___ui_columntoggler__ui_columntoggler_item_ui_column_p_5___ui_columntoggler__ui_columntoggler_item_ui_column_p_6___display;
     }
   }
 
   th.ui-helper-hidden, td.ui-helper-hidden {
-    display: none;
+    display: $th_ui_helper_hidden__td_ui_helper_hidden___display;
   }
 }
 
 /* Show priority 1 at 320px (20em x 16px) */
 @media screen and (min-width: 20em) {
   .ui-columntoggler .ui-columntoggler-item.ui-column-p-1 {
-    display: block;
+    display: $_ui_columntoggler__ui_columntoggler_item_ui_column_p_1___display;
   }
 }
 
 /* Show priority 2 at 480px (30em x 16px) */
 @media screen and (min-width: 30em) {
   .ui-columntoggler .ui-columntoggler-item.ui-column-p-2 {
-    display: block;
+    display: $_ui_columntoggler__ui_columntoggler_item_ui_column_p_2___display;
   }
 }
 
 /* Show priority 3 at 640px (40em x 16px) */
 @media screen and (min-width: 40em) {
   .ui-columntoggler .ui-columntoggler-item.ui-column-p-3 {
-    display: block;
+    display: $_ui_columntoggler__ui_columntoggler_item_ui_column_p_3___display;
   }
 }
 
 /* Show priority 4 at 800px (50em x 16px) */
 @media screen and (min-width: 50em) {
   .ui-columntoggler .ui-columntoggler-item.ui-column-p-4 {
-    display: block;
+    display: $_ui_columntoggler__ui_columntoggler_item_ui_column_p_4___display;
   }
 }
 
 /* Show priority 5 at 960px (60em x 16px) */
 @media screen and (min-width: 60em) {
   .ui-columntoggler .ui-columntoggler-item.ui-column-p-5 {
-    display: block;
+    display: $_ui_columntoggler__ui_columntoggler_item_ui_column_p_5___display;
   }
 }
 
 /* Show priority 6 at 1,120px (70em x 16px) */
 @media screen and (min-width: 70em) {
   .ui-columntoggler .ui-columntoggler-item.ui-column-p-6 {
-    display: block;
+    display: $_ui_columntoggler__ui_columntoggler_item_ui_column_p_6___display;
   }
 }

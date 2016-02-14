@@ -1,120 +1,345 @@
+$_ui_menu___width: 12.5em !default;
+$_ui_menu___padding: 0.3em !default;
+$_ui_menu___position: relative !default;
+$_ui_menu___outline: 0 none !default;
+$_ui_menu_ui_menu_dynamic___position: absolute !default;
+$_ui_menu_ui_menu_dynamic___display: none !default;
+$_ui_menu_ui_menu_dynamic___z_index: 100000 !default;
+$_ui_menu_list___position: static !default;
+$_ui_menu__ui_menu_list__ui_menuitem___border: none !default;
+$_ui_menu__ui_menu_list__ui_widget_header___clear: both !default;
+$_ui_menu__ui_menu_list__ui_widget_header___float: left !default;
+$_ui_menu__ui_menu_list__ui_widget_header___width: 98% !default;
+$_ui_menu__ui_menu_list__ui_widget_header___margin: 1px 0 !default;
+$_ui_menu__ui_menuitem___ui_menu__ui_menuitem_parent___width: 100% !default;
+$_ui_menu__ui_menuitem___ui_menu__ui_menuitem_parent___float: left !default;
+$_ui_menu__ui_menuitem___ui_menu__ui_menuitem_parent___clear: both !default;
+$_ui_menu__ui_menuitem___ui_menu__ui_menuitem_parent___margin: 1px 0 !default;
+$_ui_menu__ui_menuitem___ui_menu__ui_menuitem_parent___padding: 0 !default;
+$_ui_menu__ui_menuitem_link___display: block !default;
+$_ui_menu__ui_menuitem_link___width: 92% !default;
+$_ui_menu__ui_menuitem_link___outline: none !default;
+$_ui_menu__ui_menuitem_link___text_decoration: none !default;
+$_ui_menu__ui_menuitem_link___font_weight: 400 !default;
+$_ui_menu__ui_menuitem_link___border: solid 1px transparent !default;
+$_ui_menu__ui_menuitem_link___float: left !default;
+$_ui_menu__ui_menuitem_link___line_height: 16px !default;
+$_ui_menu__ui_menuitem_link___padding: 0.3em !default;
+$_ui_menu__ui_menuitem_link___cursor: pointer !default;
+$_ui_menu__ui_menuitem_link__ui_menuitem_icon___display: inline-block !default;
+$_ui_menu__ui_menuitem_link__ui_menuitem_icon___float: left !default;
+$_ui_menu__ui_submenu_icon___display: inline-block !default;
+$_ui_menu__ui_submenu_icon___float: left !default;
+$_ui_menu__ui_submenu_icon___margin_top: 1px !default;
+$_ui_menu__ui_menuitem_text___float: left !default;
+$_ui_menu__ui_widget_header_h1___ui_menu__ui_widget_header_h2___ui_menu__ui_widget_header_h3___ui_menu__ui_widget_header_h4___ui_menu__ui_widget_header_h5___ui_menu__ui_widget_header_h6___float: left !default;
+$_ui_menu__ui_widget_header_h1___ui_menu__ui_widget_header_h2___ui_menu__ui_widget_header_h3___ui_menu__ui_widget_header_h4___ui_menu__ui_widget_header_h5___ui_menu__ui_widget_header_h6___display: block !default;
+$_ui_menu__ui_widget_header_h1___ui_menu__ui_widget_header_h2___ui_menu__ui_widget_header_h3___ui_menu__ui_widget_header_h4___ui_menu__ui_widget_header_h5___ui_menu__ui_widget_header_h6___font_size: 1em !default;
+$_ui_menu__ui_widget_header_h1___ui_menu__ui_widget_header_h2___ui_menu__ui_widget_header_h3___ui_menu__ui_widget_header_h4___ui_menu__ui_widget_header_h5___ui_menu__ui_widget_header_h6___margin: 0 auto !default;
+$_ui_menu__ui_widget_header_h1___ui_menu__ui_widget_header_h2___ui_menu__ui_widget_header_h3___ui_menu__ui_widget_header_h4___ui_menu__ui_widget_header_h5___ui_menu__ui_widget_header_h6___padding: 0.3em 3% !default;
+$_ui_menu__ui_menu_parent___position: relative !default;
+$_ui_menu__ui_menu_parent__ui_menu_child___display: none !default;
+$_ui_menu__ui_menu_parent__ui_menu_child___width: 12.5em !default;
+$_ui_menu__ui_menu_parent__ui_menu_child___padding: 0.3em !default;
+$_ui_menu__ui_menu_parent__ui_menu_child___position: absolute !default;
+$_ui_menu__ui_menu_parent__ui_menu_child___margin: 0 !default;
+$_ui_menu__ui_menu_parent__ui_menu_child___outline: 0 !default;
+$_ui_menu__ui_menu_parent__ui_menu_child___line_height: 1.3 !default;
+$_ui_menu__ui_menu_parent__ui_menu_child___text_decoration: none !default;
+$_ui_menu__ui_menu_parent__ui_menu_child___font_size: 100% !default;
+$_ui_menu__ui_menu_parent__ui_menu_child___list_style: none !default;
+$_ui_menu_ui_menu_toggleable_li_ui_widget_header___position: relative !default;
+$_ui_menu_ui_menu_toggleable_li_ui_widget_header___min_height: 0 !default;
+$_ui_menu_ui_menu_toggleable_li_ui_widget_header_h3___padding_left: 2em !default;
+$_ui_menu_ui_menu_toggleable_li_ui_widget_header_ui_state_hover___cursor: pointer !default;
+$_ui_menu_ui_menu_toggleable_li_ui_widget_header__ui_icon___position: absolute !default;
+$_ui_menu_ui_menu_toggleable_li_ui_widget_header__ui_icon___left: .5em !default;
+$_ui_menu_ui_menu_toggleable_li_ui_widget_header__ui_icon___top: 50% !default;
+$_ui_menu_ui_menu_toggleable_li_ui_widget_header__ui_icon___margin_top: -8px !default;
+$_ui_menu__ui_menu_parent__ui_icon_triangle_1_e___ui_menu__ui_menu_parent__ui_icon_triangle_1_s___float: right !default;
+$_ui_menubar__ui_menu_child__ui_icon_triangle_1_s___float: right !default;
+$_ui_menubutton___padding: 0 !default;
+$_ui_menubutton___position: relative !default;
+$_ui_menubutton___display: inline-block !default;
+$_ui_menubutton__ui_button___margin: 0 !default;
+$_ui_menubar___width: auto !default;
+$_ui_menubar__ui_menuitem___width: auto !default;
+$_ui_menubar__ui_menuitem___clear: none !default;
+$_ui_menubar__ui_menu_child___top: 25px !default;
+$_ui_menubar__ui_menu_child___left: 0 !default;
+$_ui_menubar__ui_menu_child__ui_menuitem___width: 100% !default;
+$_ui_menubar__ui_menuitem_link___width: auto !default;
+$_ui_menubar__ui_menuitem_link___padding: 0.4em 0.3em !default;
+$_ui_menubar__ui_menu_child__ui_menuitem_link___width: 92% !default;
+$_ui_menubar__ui_widget_header___clear: none !default;
+$_ui_menubar__ui_widget_header___width: auto !default;
+$_ui_menubar__ui_widget_header___margin: 0 3px 0 0 !default;
+$_ui_menubar__ui_widget_header_h1___ui_menubar__ui_widget_header_h2___ui_menubar__ui_widget_header_h3___ui_menubar__ui_widget_header_h4___ui_menubar__ui_widget_header_h5___ui_menubar__ui_widget_header_h6___padding: 0.4em 0.3em !default;
+$_ui_menubar__ui_menubar_options___float: right !default;
+$_ui_menubar____ui_menu_list____ui_menuitem____ui_menuitem_link_span_ui_icon_triangle_1_e___ui_menubar____ui_menu_list____ui_menuitem____ui_menuitem_link_span_ui_icon_triangle_1_s____float: none !default;
+$_ui_menu__ui_separator___width: 98% !default;
+$_ui_menu__ui_separator___height: 0px !default;
+$_ui_menu__ui_separator___float: left !default;
+$_ui_menu__ui_separator___clear: both !default;
+$_ui_menu__ui_separator___margin: 1px 0 0 0 !default;
+$_ui_menu__ui_separator___padding: 0 !default;
+$_ui_menu__ui_separator___border_top: 0px none !default;
+$_ui_megamenu_td___vertical_align: top !default;
+$_ui_menu_ui_megamenu__ui_menu_parent__ui_menu_child___width: auto !default;
+$_ui_menu_ui_megamenu__ui_menu_child___table___width: auto !default;
+$_ui_menu_ui_megamenu__ui_menu_child__ui_menu_list___width: 12.5em !default;
+$_ui_megamenu_vertical___width: 12.5em !default;
+$_ui_megamenu_vertical__ui_menu_parent___clear: both !default;
+$_ui_megamenu_vertical__ui_menu_parent___width: 100% !default;
+$_ui_megamenu_vertical__ui_submenu_link_ui_menuitem_link___width: 92% !default;
+$_ui_breadcrumb___margin: 0 !default;
+$_ui_breadcrumb___padding: 0 !default;
+$_ui_breadcrumb___overflow: hidden !default;
+$_ui_breadcrumb___padding: 5px 5px 7px 5px !default;
+$_ui_breadcrumb_ul___margin: 0 !default;
+$_ui_breadcrumb_ul___padding: 0 !default;
+$_ui_breadcrumb_ul___display: block !default;
+$_ui_breadcrumb_ul_li___display: block !default;
+$_ui_breadcrumb_ul_li___float: left !default;
+$_ui_breadcrumb_ul_li___position: relative !default;
+$_ui_breadcrumb_ul_li___overflow: hidden !default;
+$_ui_breadcrumb_ul_li_span___display: block !default;
+$_ui_breadcrumb_ul_li_span___overflow: hidden !default;
+$_ui_breadcrumb_ul_li__ui_menuitem_link___display: block !default;
+$_ui_breadcrumb_ul_li__ui_menuitem_link___position: relative !default;
+$_ui_breadcrumb_ul_li__ui_menuitem_link___overflow: hidden !default;
+$_ui_breadcrumb_ul_li__ui_menuitem_link___float: left !default;
+$_ui_breadcrumb_ul_li__ui_menuitem_link____cursor: pointer !default;
+$_ui_breadcrumb_ul_li__ui_menuitem_link___margin_top: 3px !default;
+$_ui_breadcrumb_ul_li_a_ui_icon_home___padding: 0 !default;
+$_ui_breadcrumb_ul_li_a_ui_icon_home___margin_top: 1px !default;
+$_ui_breadcrumb_ul_li_a_ui_icon_home___overflow: hidden !default;
+$_ui_breadcrumb_chevron___float: left !default;
+$_ui_breadcrumb_chevron___margin_top: 2px !default;
+$_ui_breadcrumb__ui_breadcrumb_options___float: right !default;
+$_ui_slidemenu__ui_slidemenu_wrapper___position: relative !default;
+$_ui_slidemenu__ui_slidemenu_content___overflow_x: hidden !default;
+$_ui_slidemenu__ui_slidemenu_content___overflow_y: auto !default;
+$_ui_slidemenu__ui_slidemenu_content___position: relative !default;
+$_ui_slidemenu__ui_menu_list___position: absolute !default;
+$_ui_slidemenu__ui_menu_list___top: 0 !default;
+$_ui_slidemenu__ui_menu_parent___position: static !default;
+$_ui_slidemenu__ui_menu_child___box_shadow: none !default;
+$_ui_slidemenu__ui_menu_child___border: 0 none !default;
+$_ui_slidemenu__ui_menu_child___background: none repeat scroll 0 0 transparent !default;
+$_ui_slidemenu_backward___position: absolute !default;
+$_ui_slidemenu_backward___bottom: 0 !default;
+$_ui_slidemenu_backward___width: 95% !default;
+$_ui_slidemenu_backward___margin_bottom: 0.4em !default;
+$_ui_slidemenu_backward___padding: 0.2em !default;
+$_ui_slidemenu_backward___cursor: pointer !default;
+$_ui_slidemenu_backward___display: none !default;
+$_ui_slidemenu_backward__ui_icon___float: left !default;
+$_ui_panelmenu___width: auto !default;
+$_ui_panelmenu__ui_panelmenu_panel___padding: 0 !default;
+$_ui_panelmenu__ui_panelmenu_panel___margin: 0 !default;
+$_ui_panelmenu__ui_panelmenu_header___cursor: pointer !default;
+$_ui_panelmenu__ui_panelmenu_header___position: relative !default;
+$_ui_panelmenu__ui_panelmenu_header___margin: 0 !default;
+$_ui_panelmenu__ui_panelmenu_header___zoom: 1 !default;
+$_ui_panelmenu__ui_panelmenu_header_a___display: block !default;
+$_ui_panelmenu__ui_panelmenu_header_a___padding: .5em .5em .5em 2.2em !default;
+$_ui_panelmenu__ui_panelmenu_header__ui_icon___position: absolute !default;
+$_ui_panelmenu__ui_panelmenu_header__ui_icon___left: .5em !default;
+$_ui_panelmenu__ui_panelmenu_header__ui_icon___top: 50% !default;
+$_ui_panelmenu__ui_panelmenu_header__ui_icon___margin_top: -8px !default;
+$_ui_panelmenu__ui_panelmenu_content___padding: 0.2em 0 !default;
+$_ui_panelmenu__ui_panelmenu_content___border_top: 0 !default;
+$_ui_panelmenu__ui_panelmenu_content___margin_top: -2px !default;
+$_ui_panelmenu__ui_panelmenu_content___position: relative !default;
+$_ui_panelmenu__ui_panelmenu_content___top: 1px !default;
+$_ui_panelmenu__ui_panelmenu_content___overflow: auto !default;
+$_ui_panelmenu__ui_panelmenu_content___zoom: 1 !default;
+$_ui_panelmenu__ui_panelmenu_content___outline: none !default;
+$_ui_panelmenu__ui_panelmenu_header_ui_state_disabled___cursor: default !default;
+$_ui_panelmenu__ui_panelmenu_header_ui_state_disabled_a___cursor: default !default;
+$_ui_panelmenu__ui_menu_list___position: static !default;
+$_ui_panelmenu__ui_menuitem___margin: 1px 0 !default;
+$_ui_panelmenu__ui_menuitem___padding: 0 !default;
+$_ui_panelmenu__ui_menuitem_link___display: block !default;
+$_ui_panelmenu__ui_menuitem_link___outline: none !default;
+$_ui_panelmenu__ui_menuitem_link___text_decoration: none !default;
+$_ui_panelmenu__ui_menuitem_link___font_weight: 400 !default;
+$_ui_panelmenu__ui_menuitem_link___border: solid 1px transparent !default;
+$_ui_panelmenu__ui_menuitem_link___line_height: 16px !default;
+$_ui_panelmenu__ui_menuitem_link___cursor: pointer !default;
+$_ui_panelmenu__ui_menuitem_link___position: relative !default;
+$_ui_panelmenu__ui_menuitem_link___padding: 0.3em 0.3em 0.3em 2em !default;
+$_ui_panelmenu__ui_menu_parent__ui_menuitem_link_hasicon___padding_left: 2.8em !default;
+$_ui_panelmenu__ui_icon___position: absolute !default;
+$_ui_panelmenu__ui_icon___right: auto !default;
+$_ui_panelmenu__ui_icon___top: 0 !default;
+$_ui_panelmenu__ui_icon___bottom: 0 !default;
+$_ui_panelmenu__ui_icon___margin: auto 0 !default;
+$_ui_panelmenu__ui_icon___left: 0.5em !default;
+$_ui_panelmenu__ui_menu_parent____ui_menuitem_link____ui_icon___left: 1.5em !default;
+$_ui_panelmenu__ui_menu_parent__ui_panelmenu_icon_ui_icon___left: 0.5em !default;
+$_ui_panelmenu__ui_menuitem_text___float: none !default;
+$_ui_panelmenu__ui_menu_parent__ui_menu_list___margin_left: 20px !default;
+$_ui_menuitem_outline___outline: 1px dotted !default;
+$_ui_menuitem_outline___z_index: 1 !default;
+$_ui_tabmenu___position: relative !default;
+$_ui_tabmenu___zoom: 1 !default;
+$_ui_tabmenu__ui_tabmenu_nav___margin: 0 !default;
+$_ui_tabmenu__ui_tabmenu_nav___padding: .2em .2em 0 !default;
+$_ui_tabmenu__ui_tabmenu_nav__ui_tabmenuitem___list_style: none !default;
+$_ui_tabmenu__ui_tabmenu_nav__ui_tabmenuitem___float: left !default;
+$_ui_tabmenu__ui_tabmenu_nav__ui_tabmenuitem___position: relative !default;
+$_ui_tabmenu__ui_tabmenu_nav__ui_tabmenuitem___margin: 0 .2em 1px 0 !default;
+$_ui_tabmenu__ui_tabmenu_nav__ui_tabmenuitem___padding: 0 !default;
+$_ui_tabmenu__ui_tabmenu_nav__ui_tabmenuitem___white_space: nowrap !default;
+$_ui_tabmenu__ui_tabmenu_nav__ui_tabmenuitem___display: block !default;
+$_ui_tabmenu__ui_tabmenu_nav__ui_tabmenuitem___border_bottom: 0 !default;
+$_ui_tabmenu__ui_tabmenu_nav__ui_tabmenuitem___top: 1px !default;
+$_ui_tabmenu__ui_tabmenu_nav__ui_tabmenuitem_a___float: left !default;
+$_ui_tabmenu__ui_tabmenu_nav__ui_tabmenuitem_a___padding: 0.5em 1em !default;
+$_ui_tabmenu__ui_tabmenu_nav__ui_tabmenuitem_a___text_decoration: none !default;
+$_ui_tabmenu__ui_tabmenu_nav__ui_tabmenuitem_hasicon_a___padding: 0.5em 1em 0.5em 0.2em !default;
+$_ui_tabmenu__ui_tabmenu_nav__ui_tabmenuitem__ui_icon___float: left !default;
+$_ui_tabmenu__ui_tabmenu_nav__ui_tabmenuitem__ui_icon___cursor: pointer !default;
+$_ui_steps_ul___list_style_type: none !default;
+$_ui_steps_ul___padding: 0 !default;
+$_ui_steps_ul___margin: 0 !default;
+$_ui_steps__ui_steps_item___float: left !default;
+$_ui_steps__ui_steps_item___box_sizing: border-box !default;
+$_ui_steps__ui_steps_item__ui_menuitem_link___text_decoration: none !default;
+$_ui_steps__ui_steps_item__ui_menuitem_link___display: block !default;
+$_ui_steps__ui_steps_item__ui_menuitem_link___padding: 1em !default;
+$_ui_steps__ui_steps_item__ui_menuitem_link___position: relative !default;
+$_ui_steps__ui_steps_item__ui_menuitem_link___text_align: center !default;
+$_ui_steps__ui_steps_item_ui_state_highlight__ui_menuitem_link___ui_steps__ui_steps_item_ui_state_disabled__ui_menuitem_link___cursor: default !default;
+$_ui_steps__ui_steps_number___font_size: 200% !default;
+$_ui_steps__ui_steps_number___display: block !default;
+$_ui_steps__ui_steps_title___display: block !default;
+$_ui_steps__ui_steps_title___white_space: nowrap !default;
+$_ui_steps__ui_steps_item__ui_menuitem_link___padding: 0.5em !default;
+$_ui_steps__ui_steps_item__ui_steps_title___display: none !default;
+$_ui_fluid__ui_menu___width: 100% !default;
+$_ui_fluid__ui_menu___box_sizing: border-box !default;
+$_ui_fluid__ui_menu____webkit_box_sizing: border-box !default;
+$_ui_fluid__ui_menu____moz_box_sizing: border-box !default;
 .ui-menu {
-  width: 12.5em;
-  padding: 0.3em;
-  position: relative;
-  outline: 0 none;
+  width: $_ui_menu___width;
+  padding: $_ui_menu___padding;
+  position: $_ui_menu___position;
+  outline: $_ui_menu___outline;
 
   &.ui-menu-dynamic {
-    position: absolute;
-    display: none;
-    z-index: 100000;
+    position: $_ui_menu_ui_menu_dynamic___position;
+    display: $_ui_menu_ui_menu_dynamic___display;
+    z-index: $_ui_menu_ui_menu_dynamic___z_index;
   }
 }
 
 .ui-menu-list {
-  position: static;
+  position: $_ui_menu_list___position;
 }
 
 .ui-menu {
   .ui-menu-list {
     .ui-menuitem {
-      border: none;
+      border: $_ui_menu__ui_menu_list__ui_menuitem___border;
     }
 
     .ui-widget-header {
-      clear: both;
-      float: left;
-      width: 98%;
-      margin: 1px 0;
+      clear: $_ui_menu__ui_menu_list__ui_widget_header___clear;
+      float: $_ui_menu__ui_menu_list__ui_widget_header___float;
+      width: $_ui_menu__ui_menu_list__ui_widget_header___width;
+      margin: $_ui_menu__ui_menu_list__ui_widget_header___margin;
     }
   }
 
   .ui-menuitem, .ui-menuitem-parent {
-    width: 100%;
-    float: left;
-    clear: both;
-    margin: 1px 0;
-    padding: 0;
+    width: $_ui_menu__ui_menuitem___ui_menu__ui_menuitem_parent___width;
+    float: $_ui_menu__ui_menuitem___ui_menu__ui_menuitem_parent___float;
+    clear: $_ui_menu__ui_menuitem___ui_menu__ui_menuitem_parent___clear;
+    margin: $_ui_menu__ui_menuitem___ui_menu__ui_menuitem_parent___margin;
+    padding: $_ui_menu__ui_menuitem___ui_menu__ui_menuitem_parent___padding;
   }
 
   .ui-menuitem-link {
-    display: block;
-    width: 92%;
-    outline: none;
-    text-decoration: none;
-    font-weight: 400;
-    border: solid 1px transparent;
-    float: left;
-    line-height: 16px;
-    padding: 0.3em;
-    cursor: pointer;
+    display: $_ui_menu__ui_menuitem_link___display;
+    width: $_ui_menu__ui_menuitem_link___width;
+    outline: $_ui_menu__ui_menuitem_link___outline;
+    text-decoration: $_ui_menu__ui_menuitem_link___text_decoration;
+    font-weight: $_ui_menu__ui_menuitem_link___font_weight;
+    border: $_ui_menu__ui_menuitem_link___border;
+    float: $_ui_menu__ui_menuitem_link___float;
+    line-height: $_ui_menu__ui_menuitem_link___line_height;
+    padding: $_ui_menu__ui_menuitem_link___padding;
+    cursor: $_ui_menu__ui_menuitem_link___cursor;
 
     .ui-menuitem-icon {
-      display: inline-block;
-      float: left;
+      display: $_ui_menu__ui_menuitem_link__ui_menuitem_icon___display;
+      float: $_ui_menu__ui_menuitem_link__ui_menuitem_icon___float;
     }
   }
 
   .ui-submenu-icon {
-    display: inline-block;
-    float: left;
-    margin-top: 1px;
+    display: $_ui_menu__ui_submenu_icon___display;
+    float: $_ui_menu__ui_submenu_icon___float;
+    margin-top: $_ui_menu__ui_submenu_icon___margin_top;
   }
 
   .ui-menuitem-text {
-    float: left;
+    float: $_ui_menu__ui_menuitem_text___float;
   }
 
   .ui-widget-header {
     h1, h2, h3, h4, h5, h6 {
-      float: left;
-      display: block;
-      font-size: 1em;
-      margin: 0 auto;
-      padding: 0.3em 3%;
+      float: $_ui_menu__ui_widget_header_h1___ui_menu__ui_widget_header_h2___ui_menu__ui_widget_header_h3___ui_menu__ui_widget_header_h4___ui_menu__ui_widget_header_h5___ui_menu__ui_widget_header_h6___float;
+      display: $_ui_menu__ui_widget_header_h1___ui_menu__ui_widget_header_h2___ui_menu__ui_widget_header_h3___ui_menu__ui_widget_header_h4___ui_menu__ui_widget_header_h5___ui_menu__ui_widget_header_h6___display;
+      font-size: $_ui_menu__ui_widget_header_h1___ui_menu__ui_widget_header_h2___ui_menu__ui_widget_header_h3___ui_menu__ui_widget_header_h4___ui_menu__ui_widget_header_h5___ui_menu__ui_widget_header_h6___font_size;
+      margin: $_ui_menu__ui_widget_header_h1___ui_menu__ui_widget_header_h2___ui_menu__ui_widget_header_h3___ui_menu__ui_widget_header_h4___ui_menu__ui_widget_header_h5___ui_menu__ui_widget_header_h6___margin;
+      padding: $_ui_menu__ui_widget_header_h1___ui_menu__ui_widget_header_h2___ui_menu__ui_widget_header_h3___ui_menu__ui_widget_header_h4___ui_menu__ui_widget_header_h5___ui_menu__ui_widget_header_h6___padding;
     }
   }
 
   .ui-menu-parent {
     .ui-menu-child {
-      display: none;
-      width: 12.5em;
-      padding: 0.3em;
-      position: absolute;
-      margin: 0;
-      outline: 0;
-      line-height: 1.3;
-      text-decoration: none;
-      font-size: 100%;
-      list-style: none;
+      display: $_ui_menu__ui_menu_parent__ui_menu_child___display;
+      width: $_ui_menu__ui_menu_parent__ui_menu_child___width;
+      padding: $_ui_menu__ui_menu_parent__ui_menu_child___padding;
+      position: $_ui_menu__ui_menu_parent__ui_menu_child___position;
+      margin: $_ui_menu__ui_menu_parent__ui_menu_child___margin;
+      outline: $_ui_menu__ui_menu_parent__ui_menu_child___outline;
+      line-height: $_ui_menu__ui_menu_parent__ui_menu_child___line_height;
+      text-decoration: $_ui_menu__ui_menu_parent__ui_menu_child___text_decoration;
+      font-size: $_ui_menu__ui_menu_parent__ui_menu_child___font_size;
+      list-style: $_ui_menu__ui_menu_parent__ui_menu_child___list_style;
     }
 
-    position: relative;
+    position: $_ui_menu__ui_menu_parent___position;
   }
 
   &.ui-menu-toggleable li.ui-widget-header {
-    position: relative;
-    min-height: 0;
+    position: $_ui_menu_ui_menu_toggleable_li_ui_widget_header___position;
+    min-height: $_ui_menu_ui_menu_toggleable_li_ui_widget_header___min_height;
 
     h3 {
-      padding-left: 2em;
+      padding-left: $_ui_menu_ui_menu_toggleable_li_ui_widget_header_h3___padding_left;
     }
 
     &.ui-state-hover {
-      cursor: pointer;
+      cursor: $_ui_menu_ui_menu_toggleable_li_ui_widget_header_ui_state_hover___cursor;
     }
 
     .ui-icon {
-      position: absolute;
-      left: .5em;
-      top: 50%;
-      margin-top: -8px;
+      position: $_ui_menu_ui_menu_toggleable_li_ui_widget_header__ui_icon___position;
+      left: $_ui_menu_ui_menu_toggleable_li_ui_widget_header__ui_icon___left;
+      top: $_ui_menu_ui_menu_toggleable_li_ui_widget_header__ui_icon___top;
+      margin-top: $_ui_menu_ui_menu_toggleable_li_ui_widget_header__ui_icon___margin_top;
     }
   }
 
   .ui-menu-parent {
     .ui-icon-triangle-1-e, .ui-icon-triangle-1-s {
-      float: right;
+      float: $_ui_menu__ui_menu_parent__ui_icon_triangle_1_e___ui_menu__ui_menu_parent__ui_icon_triangle_1_s___float;
     }
   }
 }
@@ -122,348 +347,348 @@
 /* Toggleable Menu */
 
 .ui-menubar .ui-menu-child .ui-icon-triangle-1-s {
-  float: right;
+  float: $_ui_menubar__ui_menu_child__ui_icon_triangle_1_s___float;
 }
 
 .ui-menubutton {
-  padding: 0;
-  position: relative;
-  display: inline-block;
+  padding: $_ui_menubutton___padding;
+  position: $_ui_menubutton___position;
+  display: $_ui_menubutton___display;
 
   .ui-button {
-    margin: 0;
+    margin: $_ui_menubutton__ui_button___margin;
   }
 }
 
 /** Menubar **/
 
 .ui-menubar {
-  width: auto;
+  width: $_ui_menubar___width;
 
   .ui-menuitem {
-    width: auto;
-    clear: none;
+    width: $_ui_menubar__ui_menuitem___width;
+    clear: $_ui_menubar__ui_menuitem___clear;
   }
 
   .ui-menu-child {
     .ui-menuitem {
-      width: 100%;
+      width: $_ui_menubar__ui_menu_child__ui_menuitem___width;
     }
 
-    top: 25px;
-    left: 0;
+    top: $_ui_menubar__ui_menu_child___top;
+    left: $_ui_menubar__ui_menu_child___left;
   }
 
   .ui-menuitem-link {
-    width: auto;
-    padding: 0.4em 0.3em;
+    width: $_ui_menubar__ui_menuitem_link___width;
+    padding: $_ui_menubar__ui_menuitem_link___padding;
   }
 
   .ui-menu-child .ui-menuitem-link {
-    width: 92%;
+    width: $_ui_menubar__ui_menu_child__ui_menuitem_link___width;
   }
 
   .ui-widget-header {
-    clear: none;
-    width: auto;
-    margin: 0 3px 0 0;
+    clear: $_ui_menubar__ui_widget_header___clear;
+    width: $_ui_menubar__ui_widget_header___width;
+    margin: $_ui_menubar__ui_widget_header___margin;
 
     h1, h2, h3, h4, h5, h6 {
-      padding: 0.4em 0.3em;
+      padding: $_ui_menubar__ui_widget_header_h1___ui_menubar__ui_widget_header_h2___ui_menubar__ui_widget_header_h3___ui_menubar__ui_widget_header_h4___ui_menubar__ui_widget_header_h5___ui_menubar__ui_widget_header_h6___padding;
     }
   }
 
   .ui-menubar-options {
-    float: right;
+    float: $_ui_menubar__ui_menubar_options___float;
   }
 
   > .ui-menu-list > .ui-menuitem > .ui-menuitem-link span {
     &.ui-icon-triangle-1-e, &.ui-icon-triangle-1-s {
-      *float: none;
+      *float: $_ui_menubar____ui_menu_list____ui_menuitem____ui_menuitem_link_span_ui_icon_triangle_1_e___ui_menubar____ui_menu_list____ui_menuitem____ui_menuitem_link_span_ui_icon_triangle_1_s____float;
     }
   }
 }
 
 .ui-menu .ui-separator {
-  width: 98%;
-  height: 0px;
-  float: left;
-  clear: both;
-  margin: 1px 0 0 0;
-  padding: 0;
-  border-top: 0px none;
+  width: $_ui_menu__ui_separator___width;
+  height: $_ui_menu__ui_separator___height;
+  float: $_ui_menu__ui_separator___float;
+  clear: $_ui_menu__ui_separator___clear;
+  margin: $_ui_menu__ui_separator___margin;
+  padding: $_ui_menu__ui_separator___padding;
+  border-top: $_ui_menu__ui_separator___border_top;
 }
 
 /** MegaMenu **/
 
 .ui-megamenu td {
-  vertical-align: top;
+  vertical-align: $_ui_megamenu_td___vertical_align;
 }
 
 .ui-menu.ui-megamenu {
   .ui-menu-parent .ui-menu-child {
-    width: auto;
+    width: $_ui_menu_ui_megamenu__ui_menu_parent__ui_menu_child___width;
   }
 
   .ui-menu-child {
     > table {
-      width: auto;
+      width: $_ui_menu_ui_megamenu__ui_menu_child___table___width;
     }
 
     .ui-menu-list {
-      width: 12.5em;
+      width: $_ui_menu_ui_megamenu__ui_menu_child__ui_menu_list___width;
     }
   }
 }
 
 .ui-megamenu-vertical {
-  width: 12.5em;
+  width: $_ui_megamenu_vertical___width;
 
   .ui-menu-parent {
-    clear: both;
-    width: 100%;
+    clear: $_ui_megamenu_vertical__ui_menu_parent___clear;
+    width: $_ui_megamenu_vertical__ui_menu_parent___width;
   }
 
   .ui-submenu-link.ui-menuitem-link {
-    width: 92%;
+    width: $_ui_megamenu_vertical__ui_submenu_link_ui_menuitem_link___width;
   }
 }
 
 /** Breadcrumb **/
 
 .ui-breadcrumb {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  padding: 5px 5px 7px 5px;
+  margin: $_ui_breadcrumb___margin;
+  padding: $_ui_breadcrumb___padding;
+  overflow: $_ui_breadcrumb___overflow;
+  padding: $_ui_breadcrumb___padding;
 
   ul {
-    margin: 0;
-    padding: 0;
-    display: block;
+    margin: $_ui_breadcrumb_ul___margin;
+    padding: $_ui_breadcrumb_ul___padding;
+    display: $_ui_breadcrumb_ul___display;
 
     li {
-      display: block;
-      float: left;
-      position: relative;
-      overflow: hidden;
+      display: $_ui_breadcrumb_ul_li___display;
+      float: $_ui_breadcrumb_ul_li___float;
+      position: $_ui_breadcrumb_ul_li___position;
+      overflow: $_ui_breadcrumb_ul_li___overflow;
 
       span {
-        display: block;
-        overflow: hidden;
+        display: $_ui_breadcrumb_ul_li_span___display;
+        overflow: $_ui_breadcrumb_ul_li_span___overflow;
       }
 
       .ui-menuitem-link {
-        display: block;
-        position: relative;
-        overflow: hidden;
-        float: left;
-        *cursor: pointer;
-        margin-top: 3px;
+        display: $_ui_breadcrumb_ul_li__ui_menuitem_link___display;
+        position: $_ui_breadcrumb_ul_li__ui_menuitem_link___position;
+        overflow: $_ui_breadcrumb_ul_li__ui_menuitem_link___overflow;
+        float: $_ui_breadcrumb_ul_li__ui_menuitem_link___float;
+        *cursor: $_ui_breadcrumb_ul_li__ui_menuitem_link____cursor;
+        margin-top: $_ui_breadcrumb_ul_li__ui_menuitem_link___margin_top;
       }
 
       a.ui-icon-home {
-        padding: 0;
-        margin-top: 1px;
-        overflow: hidden;
+        padding: $_ui_breadcrumb_ul_li_a_ui_icon_home___padding;
+        margin-top: $_ui_breadcrumb_ul_li_a_ui_icon_home___margin_top;
+        overflow: $_ui_breadcrumb_ul_li_a_ui_icon_home___overflow;
       }
     }
   }
 }
 
 .ui-breadcrumb-chevron {
-  float: left;
-  margin-top: 2px;
+  float: $_ui_breadcrumb_chevron___float;
+  margin-top: $_ui_breadcrumb_chevron___margin_top;
 }
 
 .ui-breadcrumb .ui-breadcrumb-options {
-  float: right;
+  float: $_ui_breadcrumb__ui_breadcrumb_options___float;
 }
 
 /** SlideMenu **/
 
 .ui-slidemenu {
   .ui-slidemenu-wrapper {
-    position: relative;
+    position: $_ui_slidemenu__ui_slidemenu_wrapper___position;
   }
 
   .ui-slidemenu-content {
-    overflow-x: hidden;
-    overflow-y: auto;
-    position: relative;
+    overflow-x: $_ui_slidemenu__ui_slidemenu_content___overflow_x;
+    overflow-y: $_ui_slidemenu__ui_slidemenu_content___overflow_y;
+    position: $_ui_slidemenu__ui_slidemenu_content___position;
   }
 
   .ui-menu-list {
-    position: absolute;
-    top: 0;
+    position: $_ui_slidemenu__ui_menu_list___position;
+    top: $_ui_slidemenu__ui_menu_list___top;
   }
 
   .ui-menu-parent {
-    position: static;
+    position: $_ui_slidemenu__ui_menu_parent___position;
   }
 
   .ui-menu-child {
-    box-shadow: none;
-    border: 0 none;
-    background: none repeat scroll 0 0 transparent;
+    box-shadow: $_ui_slidemenu__ui_menu_child___box_shadow;
+    border: $_ui_slidemenu__ui_menu_child___border;
+    background: $_ui_slidemenu__ui_menu_child___background;
   }
 }
 
 .ui-slidemenu-backward {
-  position: absolute;
-  bottom: 0;
-  width: 95%;
-  margin-bottom: 0.4em;
-  padding: 0.2em;
-  cursor: pointer;
-  display: none;
+  position: $_ui_slidemenu_backward___position;
+  bottom: $_ui_slidemenu_backward___bottom;
+  width: $_ui_slidemenu_backward___width;
+  margin-bottom: $_ui_slidemenu_backward___margin_bottom;
+  padding: $_ui_slidemenu_backward___padding;
+  cursor: $_ui_slidemenu_backward___cursor;
+  display: $_ui_slidemenu_backward___display;
 
   .ui-icon {
-    float: left;
+    float: $_ui_slidemenu_backward__ui_icon___float;
   }
 }
 
 /** PanelMenu **/
 
 .ui-panelmenu {
-  width: auto;
+  width: $_ui_panelmenu___width;
 
   .ui-panelmenu-panel {
-    padding: 0;
-    margin: 0;
+    padding: $_ui_panelmenu__ui_panelmenu_panel___padding;
+    margin: $_ui_panelmenu__ui_panelmenu_panel___margin;
   }
 
   .ui-panelmenu-header {
-    cursor: pointer;
-    position: relative;
-    margin: 0;
-    zoom: 1;
+    cursor: $_ui_panelmenu__ui_panelmenu_header___cursor;
+    position: $_ui_panelmenu__ui_panelmenu_header___position;
+    margin: $_ui_panelmenu__ui_panelmenu_header___margin;
+    zoom: $_ui_panelmenu__ui_panelmenu_header___zoom;
 
     a {
-      display: block;
-      padding: .5em .5em .5em 2.2em;
+      display: $_ui_panelmenu__ui_panelmenu_header_a___display;
+      padding: $_ui_panelmenu__ui_panelmenu_header_a___padding;
     }
 
     .ui-icon {
-      position: absolute;
-      left: .5em;
-      top: 50%;
-      margin-top: -8px;
+      position: $_ui_panelmenu__ui_panelmenu_header__ui_icon___position;
+      left: $_ui_panelmenu__ui_panelmenu_header__ui_icon___left;
+      top: $_ui_panelmenu__ui_panelmenu_header__ui_icon___top;
+      margin-top: $_ui_panelmenu__ui_panelmenu_header__ui_icon___margin_top;
     }
   }
 
   .ui-panelmenu-content {
-    padding: 0.2em 0;
-    border-top: 0;
-    margin-top: -2px;
-    position: relative;
-    top: 1px;
-    overflow: auto;
-    zoom: 1;
-    outline: none;
+    padding: $_ui_panelmenu__ui_panelmenu_content___padding;
+    border-top: $_ui_panelmenu__ui_panelmenu_content___border_top;
+    margin-top: $_ui_panelmenu__ui_panelmenu_content___margin_top;
+    position: $_ui_panelmenu__ui_panelmenu_content___position;
+    top: $_ui_panelmenu__ui_panelmenu_content___top;
+    overflow: $_ui_panelmenu__ui_panelmenu_content___overflow;
+    zoom: $_ui_panelmenu__ui_panelmenu_content___zoom;
+    outline: $_ui_panelmenu__ui_panelmenu_content___outline;
   }
 
   .ui-panelmenu-header.ui-state-disabled {
-    cursor: default;
+    cursor: $_ui_panelmenu__ui_panelmenu_header_ui_state_disabled___cursor;
 
     a {
-      cursor: default;
+      cursor: $_ui_panelmenu__ui_panelmenu_header_ui_state_disabled_a___cursor;
     }
   }
 
   .ui-menu-list {
-    position: static;
+    position: $_ui_panelmenu__ui_menu_list___position;
   }
 
   .ui-menuitem {
-    margin: 1px 0;
-    padding: 0;
+    margin: $_ui_panelmenu__ui_menuitem___margin;
+    padding: $_ui_panelmenu__ui_menuitem___padding;
   }
 
   .ui-menuitem-link {
-    display: block;
-    outline: none;
-    text-decoration: none;
-    font-weight: 400;
-    border: solid 1px transparent;
-    line-height: 16px;
-    cursor: pointer;
-    position: relative;
-    padding: 0.3em 0.3em 0.3em 2em;
+    display: $_ui_panelmenu__ui_menuitem_link___display;
+    outline: $_ui_panelmenu__ui_menuitem_link___outline;
+    text-decoration: $_ui_panelmenu__ui_menuitem_link___text_decoration;
+    font-weight: $_ui_panelmenu__ui_menuitem_link___font_weight;
+    border: $_ui_panelmenu__ui_menuitem_link___border;
+    line-height: $_ui_panelmenu__ui_menuitem_link___line_height;
+    cursor: $_ui_panelmenu__ui_menuitem_link___cursor;
+    position: $_ui_panelmenu__ui_menuitem_link___position;
+    padding: $_ui_panelmenu__ui_menuitem_link___padding;
   }
 
   .ui-menu-parent .ui-menuitem-link-hasicon {
-    padding-left: 2.8em;
+    padding-left: $_ui_panelmenu__ui_menu_parent__ui_menuitem_link_hasicon___padding_left;
   }
 
   .ui-icon {
-    position: absolute;
-    right: auto;
-    top: 0;
-    bottom: 0;
-    margin: auto 0;
-    left: 0.5em;
+    position: $_ui_panelmenu__ui_icon___position;
+    right: $_ui_panelmenu__ui_icon___right;
+    top: $_ui_panelmenu__ui_icon___top;
+    bottom: $_ui_panelmenu__ui_icon___bottom;
+    margin: $_ui_panelmenu__ui_icon___margin;
+    left: $_ui_panelmenu__ui_icon___left;
   }
 
   .ui-menu-parent {
     > .ui-menuitem-link > .ui-icon {
-      left: 1.5em;
+      left: $_ui_panelmenu__ui_menu_parent____ui_menuitem_link____ui_icon___left;
     }
 
     .ui-panelmenu-icon.ui-icon {
-      left: 0.5em;
+      left: $_ui_panelmenu__ui_menu_parent__ui_panelmenu_icon_ui_icon___left;
     }
   }
 
   .ui-menuitem-text {
-    float: none;
+    float: $_ui_panelmenu__ui_menuitem_text___float;
   }
 
   .ui-menu-parent .ui-menu-list {
-    margin-left: 20px;
+    margin-left: $_ui_panelmenu__ui_menu_parent__ui_menu_list___margin_left;
   }
 }
 
 .ui-menuitem-outline {
-  outline: 1px dotted;
-  z-index: 1;
+  outline: $_ui_menuitem_outline___outline;
+  z-index: $_ui_menuitem_outline___z_index;
 }
 
 /** TabMenu **/
 
 .ui-tabmenu {
-  position: relative;
-  zoom: 1;
+  position: $_ui_tabmenu___position;
+  zoom: $_ui_tabmenu___zoom;
 
   .ui-tabmenu-nav {
-    margin: 0;
-    padding: .2em .2em 0;
+    margin: $_ui_tabmenu__ui_tabmenu_nav___margin;
+    padding: $_ui_tabmenu__ui_tabmenu_nav___padding;
 
     .ui-tabmenuitem {
-      list-style: none;
-      float: left;
-      position: relative;
-      margin: 0 .2em 1px 0;
-      padding: 0;
-      white-space: nowrap;
-      display: block;
-      border-bottom: 0;
-      top: 1px;
+      list-style: $_ui_tabmenu__ui_tabmenu_nav__ui_tabmenuitem___list_style;
+      float: $_ui_tabmenu__ui_tabmenu_nav__ui_tabmenuitem___float;
+      position: $_ui_tabmenu__ui_tabmenu_nav__ui_tabmenuitem___position;
+      margin: $_ui_tabmenu__ui_tabmenu_nav__ui_tabmenuitem___margin;
+      padding: $_ui_tabmenu__ui_tabmenu_nav__ui_tabmenuitem___padding;
+      white-space: $_ui_tabmenu__ui_tabmenu_nav__ui_tabmenuitem___white_space;
+      display: $_ui_tabmenu__ui_tabmenu_nav__ui_tabmenuitem___display;
+      border-bottom: $_ui_tabmenu__ui_tabmenu_nav__ui_tabmenuitem___border_bottom;
+      top: $_ui_tabmenu__ui_tabmenu_nav__ui_tabmenuitem___top;
 
       a {
-        float: left;
-        padding: 0.5em 1em;
-        text-decoration: none;
+        float: $_ui_tabmenu__ui_tabmenu_nav__ui_tabmenuitem_a___float;
+        padding: $_ui_tabmenu__ui_tabmenu_nav__ui_tabmenuitem_a___padding;
+        text-decoration: $_ui_tabmenu__ui_tabmenu_nav__ui_tabmenuitem_a___text_decoration;
       }
     }
 
     .ui-tabmenuitem-hasicon a {
-      padding: 0.5em 1em 0.5em 0.2em;
+      padding: $_ui_tabmenu__ui_tabmenu_nav__ui_tabmenuitem_hasicon_a___padding;
     }
 
     .ui-tabmenuitem .ui-icon {
-      float: left;
-      cursor: pointer;
+      float: $_ui_tabmenu__ui_tabmenu_nav__ui_tabmenuitem__ui_icon___float;
+      cursor: $_ui_tabmenu__ui_tabmenu_nav__ui_tabmenuitem__ui_icon___cursor;
     }
   }
 }
@@ -472,36 +697,36 @@
 
 .ui-steps {
   ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+    list-style-type: $_ui_steps_ul___list_style_type;
+    padding: $_ui_steps_ul___padding;
+    margin: $_ui_steps_ul___margin;
   }
 
   .ui-steps-item {
-    float: left;
-    box-sizing: border-box;
+    float: $_ui_steps__ui_steps_item___float;
+    box-sizing: $_ui_steps__ui_steps_item___box_sizing;
 
     .ui-menuitem-link {
-      text-decoration: none;
-      display: block;
-      padding: 1em;
-      position: relative;
-      text-align: center;
+      text-decoration: $_ui_steps__ui_steps_item__ui_menuitem_link___text_decoration;
+      display: $_ui_steps__ui_steps_item__ui_menuitem_link___display;
+      padding: $_ui_steps__ui_steps_item__ui_menuitem_link___padding;
+      position: $_ui_steps__ui_steps_item__ui_menuitem_link___position;
+      text-align: $_ui_steps__ui_steps_item__ui_menuitem_link___text_align;
     }
 
     &.ui-state-highlight .ui-menuitem-link, &.ui-state-disabled .ui-menuitem-link {
-      cursor: default;
+      cursor: $_ui_steps__ui_steps_item_ui_state_highlight__ui_menuitem_link___ui_steps__ui_steps_item_ui_state_disabled__ui_menuitem_link___cursor;
     }
   }
 
   .ui-steps-number {
-    font-size: 200%;
-    display: block;
+    font-size: $_ui_steps__ui_steps_number___font_size;
+    display: $_ui_steps__ui_steps_number___display;
   }
 
   .ui-steps-title {
-    display: block;
-    white-space: nowrap;
+    display: $_ui_steps__ui_steps_title___display;
+    white-space: $_ui_steps__ui_steps_title___white_space;
   }
 }
 
@@ -509,11 +734,11 @@
 @media (max-width: 640px) {
   .ui-steps .ui-steps-item {
     .ui-menuitem-link {
-      padding: 0.5em;
+      padding: $_ui_steps__ui_steps_item__ui_menuitem_link___padding;
     }
 
     .ui-steps-title {
-      display: none;
+      display: $_ui_steps__ui_steps_item__ui_steps_title___display;
     }
   }
 }
@@ -521,8 +746,8 @@
 /** Fluid **/
 
 .ui-fluid .ui-menu {
-  width: 100%;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
+  width: $_ui_fluid__ui_menu___width;
+  box-sizing: $_ui_fluid__ui_menu___box_sizing;
+  -webkit-box-sizing: $_ui_fluid__ui_menu____webkit_box_sizing;
+  -moz-box-sizing: $_ui_fluid__ui_menu____moz_box_sizing;
 }

@@ -1,22 +1,36 @@
+$_ui_progressbar___height: 1.2em !default;
+$_ui_progressbar___text_align: left !default;
+$_ui_progressbar___position: relative !default;
+$_ui_progressbar__ui_progressbar_value___margin: -1px !default;
+$_ui_progressbar__ui_progressbar_value___height: 100% !default;
+$_ui_progressbar__ui_progressbar_value___width: 0% !default;
+$_ui_progressbar__ui_progressbar_value___position: absolute !default;
+$_ui_progressbar__ui_progressbar_value___display: none !default;
+$_ui_progressbar__ui_progressbar_label___text_align: center !default;
+$_ui_progressbar__ui_progressbar_label___height: 100% !default;
+$_ui_progressbar__ui_progressbar_label___width: 100% !default;
+$_ui_progressbar__ui_progressbar_label___position: absolute !default;
+$_ui_progressbar__ui_progressbar_label___display: none !default;
+$_ui_progressbar__ui_progressbar_label___font_weight: bold !default;
 .ui-progressbar {
-  height: 1.2em;
-  text-align: left;
-  position: relative;
+  height: $_ui_progressbar___height;
+  text-align: $_ui_progressbar___text_align;
+  position: $_ui_progressbar___position;
 
   .ui-progressbar-value {
-    margin: -1px;
-    height: 100%;
-    width: 0%;
-    position: absolute;
-    display: none;
+    margin: $_ui_progressbar__ui_progressbar_value___margin;
+    height: $_ui_progressbar__ui_progressbar_value___height;
+    width: $_ui_progressbar__ui_progressbar_value___width;
+    position: $_ui_progressbar__ui_progressbar_value___position;
+    display: $_ui_progressbar__ui_progressbar_value___display;
   }
 
   .ui-progressbar-label {
-    text-align: center;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    display: none;
-    font-weight: bold;
+    text-align: $_ui_progressbar__ui_progressbar_label___text_align;
+    height: $_ui_progressbar__ui_progressbar_label___height;
+    width: $_ui_progressbar__ui_progressbar_label___width;
+    position: $_ui_progressbar__ui_progressbar_label___position;
+    display: $_ui_progressbar__ui_progressbar_label___display;
+    font-weight: $_ui_progressbar__ui_progressbar_label___font_weight;
   }
 }

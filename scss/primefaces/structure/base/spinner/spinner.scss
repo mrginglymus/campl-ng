@@ -1,58 +1,88 @@
+$_ui_spinner___display: inline-block !default;
+$_ui_spinner___overflow: visible !default;
+$_ui_spinner___padding: 0 !default;
+$_ui_spinner___position: relative !default;
+$_ui_spinner___vertical_align: middle !default;
+$_ui_spinner_input___vertical_align: middle !default;
+$_ui_spinner_input___text_align: right !default;
+$_ui_spinner_input___padding_right: 20px !default;
+$_ui_spinner_button___cursor: default !default;
+$_ui_spinner_button___display: block !default;
+$_ui_spinner_button___font_size: 0.5em !default;
+$_ui_spinner_button___height: 50% !default;
+$_ui_spinner_button___margin: 0 !default;
+$_ui_spinner_button___overflow: hidden !default;
+$_ui_spinner_button___padding: 0 !default;
+$_ui_spinner_button___position: absolute !default;
+$_ui_spinner_button___right: 0 !default;
+$_ui_spinner_button___text_align: center !default;
+$_ui_spinner_button___vertical_align: middle !default;
+$_ui_spinner_button___width: 16px !default;
+$_ui_spinner_button___z_index: 100 !default;
+$_ui_spinner__ui_icon___left: 0 !default;
+$_ui_spinner__ui_icon___margin_top: -8px !default;
+$_ui_spinner__ui_icon___position: absolute !default;
+$_ui_spinner__ui_icon___top: 50% !default;
+$_ui_spinner_up___top: 0 !default;
+$_ui_spinner_down___bottom: 0 !default;
+$_ui_spinner__ui_icon_triangle_1_s___background_position: -65px -16px !default;
+$_ui_spinner__ui_icon_triangle_1_n___margin_top: -9px !default;
+$_ui_spinner_input___ms_clear___display: none !default;
 .ui-spinner {
-  display: inline-block;
-  overflow: visible;
-  padding: 0;
-  position: relative;
-  vertical-align: middle;
+  display: $_ui_spinner___display;
+  overflow: $_ui_spinner___overflow;
+  padding: $_ui_spinner___padding;
+  position: $_ui_spinner___position;
+  vertical-align: $_ui_spinner___vertical_align;
 }
 
 .ui-spinner-input {
-  vertical-align: middle;
-  text-align: right;
-  padding-right: 20px;
+  vertical-align: $_ui_spinner_input___vertical_align;
+  text-align: $_ui_spinner_input___text_align;
+  padding-right: $_ui_spinner_input___padding_right;
 }
 
 .ui-spinner-button {
-  cursor: default;
-  display: block;
-  font-size: 0.5em;
-  height: 50%;
-  margin: 0;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  right: 0;
-  text-align: center;
-  vertical-align: middle;
-  width: 16px;
-  z-index: 100;
+  cursor: $_ui_spinner_button___cursor;
+  display: $_ui_spinner_button___display;
+  font-size: $_ui_spinner_button___font_size;
+  height: $_ui_spinner_button___height;
+  margin: $_ui_spinner_button___margin;
+  overflow: $_ui_spinner_button___overflow;
+  padding: $_ui_spinner_button___padding;
+  position: $_ui_spinner_button___position;
+  right: $_ui_spinner_button___right;
+  text-align: $_ui_spinner_button___text_align;
+  vertical-align: $_ui_spinner_button___vertical_align;
+  width: $_ui_spinner_button___width;
+  z-index: $_ui_spinner_button___z_index;
 }
 
 .ui-spinner .ui-icon {
-  left: 0;
-  margin-top: -8px;
-  position: absolute;
-  top: 50%;
+  left: $_ui_spinner__ui_icon___left;
+  margin-top: $_ui_spinner__ui_icon___margin_top;
+  position: $_ui_spinner__ui_icon___position;
+  top: $_ui_spinner__ui_icon___top;
 }
 
 .ui-spinner-up {
-  top: 0;
+  top: $_ui_spinner_up___top;
 }
 
 .ui-spinner-down {
-  bottom: 0;
+  bottom: $_ui_spinner_down___bottom;
 }
 
 .ui-spinner {
   .ui-icon-triangle-1-s {
-    background-position: -65px -16px;
+    background-position: $_ui_spinner__ui_icon_triangle_1_s___background_position;
   }
 
   .ui-icon-triangle-1-n {
-    margin-top: -9px;
+    margin-top: $_ui_spinner__ui_icon_triangle_1_n___margin_top;
   }
 }
 
 .ui-spinner-input::-ms-clear {
-  display: none;
+  display: $_ui_spinner_input___ms_clear___display;
 }

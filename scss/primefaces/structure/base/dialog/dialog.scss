@@ -1,163 +1,224 @@
+$_ui_dialog___position: fixed !default;
+$_ui_dialog___padding: 0 !default;
+$_ui_dialog___overflow: hidden !default;
+$_ui_dialog___display: none !default;
+$_ui_dialog_ui_dialog_absolute___position: absolute !default;
+$_ui_dialog_ui_overlay_hidden___display: block !default;
+$_ui_dialog__ui_dialog_titlebar___padding: .4em .4em .4em 1em !default;
+$_ui_dialog__ui_dialog_titlebar___position: relative !default;
+$_ui_dialog__ui_dialog_titlebar___border: 0px !default;
+$_ui_dialog__ui_dialog_title___float: left !default;
+$_ui_dialog__ui_dialog_title___margin: .3em 16px .1em 0 !default;
+$_ui_dialog__ui_dialog_content___position: relative !default;
+$_ui_dialog__ui_dialog_content___border: 0 !default;
+$_ui_dialog__ui_dialog_content___padding: .5em 1em !default;
+$_ui_dialog__ui_dialog_content___background: none !default;
+$_ui_dialog__ui_dialog_content___overflow: auto !default;
+$_ui_dialog__ui_dialog_content___zoom: 1 !default;
+$_ui_dialog__ui_dialog_content_ui_df_content___overflow: hidden !default;
+$_ui_dialog__ui_dialog_content_ui_df_content___padding: 0 !default;
+$_ui_dialog__ui_dialog_footer___padding: .4em 1em !default;
+$_ui_dialog__ui_dialog_footer___border_width: 1px 0 0 0 !default;
+$_ui_dialog__ui_dialog_footer___text_align: left !default;
+$_ui_dialog__ui_dialog_buttonpane___text_align: left !default;
+$_ui_dialog__ui_dialog_buttonpane___background_image: none !default;
+$_ui_dialog__ui_dialog_buttonpane___margin: .5em 0 0 0 !default;
+$_ui_dialog__ui_dialog_buttonpane___padding: .3em 1em .5em .4em !default;
+$_ui_dialog__ui_dialog_buttonpane_button___margin: .5em .4em .5em 0 !default;
+$_ui_dialog__ui_dialog_buttonpane_button___cursor: pointer !default;
+$_ui_dialog__ui_resizable_se___width: 14px !default;
+$_ui_dialog__ui_resizable_se___height: 14px !default;
+$_ui_dialog__ui_resizable_se___right: 3px !default;
+$_ui_dialog__ui_resizable_se___bottom: 3px !default;
+$_ui_draggable__ui_dialog_titlebar___cursor: move !default;
+$_ui_dialog__ui_dialog_titlebar_close___ui_dialog__ui_dialog_titlebar_minimize___ui_dialog__ui_dialog_titlebar_maximize___float: right !default;
+$_ui_dialog__ui_dialog_titlebar_close___ui_dialog__ui_dialog_titlebar_minimize___ui_dialog__ui_dialog_titlebar_maximize___margin: 0px !default;
+$_ui_dialog__ui_dialog_titlebar_close___ui_dialog__ui_dialog_titlebar_minimize___ui_dialog__ui_dialog_titlebar_maximize___top: 0px !default;
+$_ui_dialog__ui_dialog_titlebar_close___ui_dialog__ui_dialog_titlebar_minimize___ui_dialog__ui_dialog_titlebar_maximize___padding: 1px !default;
+$_ui_dialog__ui_dialog_titlebar_close___ui_dialog__ui_dialog_titlebar_minimize___ui_dialog__ui_dialog_titlebar_maximize___cursor: pointer !default;
+$_ui_dialog__ui_dialog_titlebar_close_span___ui_dialog__ui_dialog_titlebar_minimize_span___ui_dialog__ui_dialog_titlebar_maximize_span___display: block !default;
+$_ui_dialog__ui_dialog_titlebar_close_span___ui_dialog__ui_dialog_titlebar_minimize_span___ui_dialog__ui_dialog_titlebar_maximize_span___margin: 0px !default;
+$_ui_dialog__ui_dialog_titlebar_close_hover___ui_dialog__ui_dialog_titlebar_close_focus___padding: 0 !default;
+$_ui_dialog__ui_dialog_titlebar_minimize_hover___ui_dialog__ui_dialog_titlebar_minimize_focus___padding: 0 !default;
+$_ui_dialog__ui_dialog_titlebar_maximize_hover___ui_dialog__ui_dialog_titlebar_maximize_focus___padding: 0 !default;
+$_ui_dialog_docking_zone___position: fixed !default;
+$_ui_dialog_docking_zone___bottom: 0 !default;
+$_ui_dialog_docking_zone___left: 0 !default;
+$_ui_dialog_minimizing___border: 2px dotted gray !default;
+$_ui_dialog__ui_dialog_message___margin_right: .5em !default;
+$_ui_dialog_mask___position: fixed !default;
+$_ui_dialog_mask___width: 100% !default;
+$_ui_dialog_mask___height: 100% !default;
+$_ui_confirm_dialog__ui_dialog_content___padding: 1em !default;
+$_ui_confirm_dialog_severity___float: left !default;
+$_ui_confirm_dialog_severity___margin_right: 4px !default;
+$_ui_confirm_dialog_message___display: inline-block !default;
+$_ui_confirm_dialog_message___margin_top: 1px !default;
+$_ui_dialog_rtl___direction: rtl !default;
+$_ui_dialog_ui_dialog_rtl__ui_dialog_title___float: right !default;
+$_ui_dialog_ui_dialog_rtl__ui_dialog_titlebar_close___ui_dialog_ui_dialog_rtl__ui_dialog_titlebar_minimize___ui_dialog_ui_dialog_rtl__ui_dialog_titlebar_maximize___float: left !default;
+$_ui_dialog_ui_dialog_rtl__ui_dialog_footer___text_align: right !default;
+$_ui_message_dialog__ui_dialog_content___padding: 1em !default;
 .ui-dialog {
-  position: fixed;
-  padding: 0;
-  overflow: hidden;
-  display: none;
+  position: $_ui_dialog___position;
+  padding: $_ui_dialog___padding;
+  overflow: $_ui_dialog___overflow;
+  display: $_ui_dialog___display;
 
   &.ui-dialog-absolute {
-    position: absolute;
+    position: $_ui_dialog_ui_dialog_absolute___position;
   }
 
   &.ui-overlay-hidden {
-    display: block;
+    display: $_ui_dialog_ui_overlay_hidden___display;
   }
 
   .ui-dialog-titlebar {
-    padding: .4em .4em .4em 1em;
-    position: relative;
-    border: 0px;
+    padding: $_ui_dialog__ui_dialog_titlebar___padding;
+    position: $_ui_dialog__ui_dialog_titlebar___position;
+    border: $_ui_dialog__ui_dialog_titlebar___border;
   }
 
   .ui-dialog-title {
-    float: left;
-    margin: .3em 16px .1em 0;
+    float: $_ui_dialog__ui_dialog_title___float;
+    margin: $_ui_dialog__ui_dialog_title___margin;
   }
 
   .ui-dialog-content {
-    position: relative;
-    border: 0;
-    padding: .5em 1em;
-    background: none;
-    overflow: auto;
-    zoom: 1;
+    position: $_ui_dialog__ui_dialog_content___position;
+    border: $_ui_dialog__ui_dialog_content___border;
+    padding: $_ui_dialog__ui_dialog_content___padding;
+    background: $_ui_dialog__ui_dialog_content___background;
+    overflow: $_ui_dialog__ui_dialog_content___overflow;
+    zoom: $_ui_dialog__ui_dialog_content___zoom;
 
     &.ui-df-content {
-      overflow: hidden;
-      padding: 0;
+      overflow: $_ui_dialog__ui_dialog_content_ui_df_content___overflow;
+      padding: $_ui_dialog__ui_dialog_content_ui_df_content___padding;
     }
   }
 
   .ui-dialog-footer {
-    padding: .4em 1em;
-    border-width: 1px 0 0 0;
-    text-align: left;
+    padding: $_ui_dialog__ui_dialog_footer___padding;
+    border-width: $_ui_dialog__ui_dialog_footer___border_width;
+    text-align: $_ui_dialog__ui_dialog_footer___text_align;
   }
 
   .ui-dialog-buttonpane {
-    text-align: left;
-    background-image: none;
-    margin: .5em 0 0 0;
-    padding: .3em 1em .5em .4em;
+    text-align: $_ui_dialog__ui_dialog_buttonpane___text_align;
+    background-image: $_ui_dialog__ui_dialog_buttonpane___background_image;
+    margin: $_ui_dialog__ui_dialog_buttonpane___margin;
+    padding: $_ui_dialog__ui_dialog_buttonpane___padding;
 
     button {
-      margin: .5em .4em .5em 0;
-      cursor: pointer;
+      margin: $_ui_dialog__ui_dialog_buttonpane_button___margin;
+      cursor: $_ui_dialog__ui_dialog_buttonpane_button___cursor;
     }
   }
 
   .ui-resizable-se {
-    width: 14px;
-    height: 14px;
-    right: 3px;
-    bottom: 3px;
+    width: $_ui_dialog__ui_resizable_se___width;
+    height: $_ui_dialog__ui_resizable_se___height;
+    right: $_ui_dialog__ui_resizable_se___right;
+    bottom: $_ui_dialog__ui_resizable_se___bottom;
   }
 }
 
 .ui-draggable .ui-dialog-titlebar {
-  cursor: move;
+  cursor: $_ui_draggable__ui_dialog_titlebar___cursor;
 }
 
 .ui-dialog {
   .ui-dialog-titlebar-close, .ui-dialog-titlebar-minimize, .ui-dialog-titlebar-maximize {
-    float: right;
-    margin: 0px;
-    top: 0px;
-    padding: 1px;
-    cursor: pointer;
+    float: $_ui_dialog__ui_dialog_titlebar_close___ui_dialog__ui_dialog_titlebar_minimize___ui_dialog__ui_dialog_titlebar_maximize___float;
+    margin: $_ui_dialog__ui_dialog_titlebar_close___ui_dialog__ui_dialog_titlebar_minimize___ui_dialog__ui_dialog_titlebar_maximize___margin;
+    top: $_ui_dialog__ui_dialog_titlebar_close___ui_dialog__ui_dialog_titlebar_minimize___ui_dialog__ui_dialog_titlebar_maximize___top;
+    padding: $_ui_dialog__ui_dialog_titlebar_close___ui_dialog__ui_dialog_titlebar_minimize___ui_dialog__ui_dialog_titlebar_maximize___padding;
+    cursor: $_ui_dialog__ui_dialog_titlebar_close___ui_dialog__ui_dialog_titlebar_minimize___ui_dialog__ui_dialog_titlebar_maximize___cursor;
   }
 
   .ui-dialog-titlebar-close span, .ui-dialog-titlebar-minimize span, .ui-dialog-titlebar-maximize span {
-    display: block;
-    margin: 0px;
+    display: $_ui_dialog__ui_dialog_titlebar_close_span___ui_dialog__ui_dialog_titlebar_minimize_span___ui_dialog__ui_dialog_titlebar_maximize_span___display;
+    margin: $_ui_dialog__ui_dialog_titlebar_close_span___ui_dialog__ui_dialog_titlebar_minimize_span___ui_dialog__ui_dialog_titlebar_maximize_span___margin;
   }
 
   .ui-dialog-titlebar-close {
     &:hover, &:focus {
-      padding: 0;
+      padding: $_ui_dialog__ui_dialog_titlebar_close_hover___ui_dialog__ui_dialog_titlebar_close_focus___padding;
     }
   }
 
   .ui-dialog-titlebar-minimize {
     &:hover, &:focus {
-      padding: 0;
+      padding: $_ui_dialog__ui_dialog_titlebar_minimize_hover___ui_dialog__ui_dialog_titlebar_minimize_focus___padding;
     }
   }
 
   .ui-dialog-titlebar-maximize {
     &:hover, &:focus {
-      padding: 0;
+      padding: $_ui_dialog__ui_dialog_titlebar_maximize_hover___ui_dialog__ui_dialog_titlebar_maximize_focus___padding;
     }
   }
 }
 
 .ui-dialog-docking-zone {
-  position: fixed;
-  bottom: 0;
-  left: 0;
+  position: $_ui_dialog_docking_zone___position;
+  bottom: $_ui_dialog_docking_zone___bottom;
+  left: $_ui_dialog_docking_zone___left;
 }
 
 .ui-dialog-minimizing {
-  border: 2px dotted gray;
+  border: $_ui_dialog_minimizing___border;
 }
 
 .ui-dialog .ui-dialog-message {
-  margin-right: .5em;
+  margin-right: $_ui_dialog__ui_dialog_message___margin_right;
 }
 
 .ui-dialog-mask {
-  position: fixed;
-  width: 100%;
-  height: 100%;
+  position: $_ui_dialog_mask___position;
+  width: $_ui_dialog_mask___width;
+  height: $_ui_dialog_mask___height;
 }
 
 /** Confirm Dialog **/
 
 .ui-confirm-dialog .ui-dialog-content {
-  padding: 1em;
+  padding: $_ui_confirm_dialog__ui_dialog_content___padding;
 }
 
 .ui-confirm-dialog-severity {
-  float: left;
-  margin-right: 4px;
+  float: $_ui_confirm_dialog_severity___float;
+  margin-right: $_ui_confirm_dialog_severity___margin_right;
 }
 
 .ui-confirm-dialog-message {
-  display: inline-block;
-  margin-top: 1px;
+  display: $_ui_confirm_dialog_message___display;
+  margin-top: $_ui_confirm_dialog_message___margin_top;
 }
 
 /** RTL **/
 
 .ui-dialog-rtl {
-  direction: rtl;
+  direction: $_ui_dialog_rtl___direction;
 }
 
 .ui-dialog.ui-dialog-rtl {
   .ui-dialog-title {
-    float: right;
+    float: $_ui_dialog_ui_dialog_rtl__ui_dialog_title___float;
   }
 
   .ui-dialog-titlebar-close, .ui-dialog-titlebar-minimize, .ui-dialog-titlebar-maximize {
-    float: left;
+    float: $_ui_dialog_ui_dialog_rtl__ui_dialog_titlebar_close___ui_dialog_ui_dialog_rtl__ui_dialog_titlebar_minimize___ui_dialog_ui_dialog_rtl__ui_dialog_titlebar_maximize___float;
   }
 
   .ui-dialog-footer {
-    text-align: right;
+    text-align: $_ui_dialog_ui_dialog_rtl__ui_dialog_footer___text_align;
   }
 }
 
 /* Message Dialog */
 
 .ui-message-dialog .ui-dialog-content {
-  padding: 1em;
+  padding: $_ui_message_dialog__ui_dialog_content___padding;
 }

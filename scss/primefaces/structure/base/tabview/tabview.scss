@@ -1,69 +1,142 @@
+$_ui_tabs___position: relative !default;
+$_ui_tabs___padding: .2em !default;
+$_ui_tabs___zoom: 1 !default;
+$_ui_tabs__ui_tabs_nav___margin: 0 !default;
+$_ui_tabs__ui_tabs_nav_li___list_style: none !default;
+$_ui_tabs__ui_tabs_nav_li___float: left !default;
+$_ui_tabs__ui_tabs_nav_li___position: relative !default;
+$_ui_tabs__ui_tabs_nav_li___margin: 0 .2em 1px 0 !default;
+$_ui_tabs__ui_tabs_nav_li___padding: 0 !default;
+$_ui_tabs__ui_tabs_nav_li___white_space: nowrap !default;
+$_ui_tabs__ui_tabs_nav_li_a___float: left !default;
+$_ui_tabs__ui_tabs_nav_li_a___padding: .5em 1em !default;
+$_ui_tabs__ui_tabs_nav_li_a___text_decoration: none !default;
+$_ui_tabs__ui_tabs_nav_li_ui_tabs_selected_a___ui_tabs__ui_tabs_nav_li_ui_state_disabled_a___ui_tabs__ui_tabs_nav_li_ui_state_processing_a___cursor: text !default;
+$_ui_tabs__ui_tabs_nav_li_a___cursor: pointer !default;
+$_ui_tabs_ui_tabs_collapsible__ui_tabs_nav_li_ui_tabs_selected_a___cursor: pointer !default;
+$_ui_tabs__ui_tabs_panel___border_width: 0 !default;
+$_ui_tabs__ui_tabs_panel___padding: 1em 1.4em !default;
+$_ui_tabs__ui_tabs_panel___background: none !default;
+$_ui_tabs__ui_tabs_nav_li___display: block !default;
+$_ui_tabs__ui_tabs_nav_li__ui_icon___float: left !default;
+$_ui_tabs__ui_tabs_nav_li__ui_icon___margin: 0.4em 0.2em 0 0 !default;
+$_ui_tabs__ui_tabs_nav_li__ui_icon___cursor: pointer !default;
+$_ui_tabs_ui_tabs_top____ui_tabs_nav___padding: .2em .2em 0 !default;
+$_ui_tabs_ui_tabs_top____ui_tabs_nav_li___border_bottom: 0 !default;
+$_ui_tabs_ui_tabs_top____ui_tabs_nav_li___top: 1px !default;
+$_ui_tabs_ui_tabs_bottom____ui_tabs_nav___padding: 0 .2em .2em !default;
+$_ui_tabs_ui_tabs_bottom____ui_tabs_nav_li___border_top: 0 !default;
+$_ui_tabs_left_after___ui_tabs_right_after___clear: both !default;
+$_ui_tabs_left_after___ui_tabs_right_after___content: "." !default;
+$_ui_tabs_left_after___ui_tabs_right_after___display: block !default;
+$_ui_tabs_left_after___ui_tabs_right_after___height: 0 !default;
+$_ui_tabs_left_after___ui_tabs_right_after___visibility: hidden !default;
+$_ui_tabs_left____ui_tabs_nav___float: left !default;
+$_ui_tabs_left____ui_tabs_nav___width: 23% !default;
+$_ui_tabs_left____ui_tabs_nav___height: 300px !default;
+$_ui_tabs_left____ui_tabs_nav___background_image: none !default;
+$_ui_tabs_left____ui_tabs_nav___padding_top: 1px !default;
+$_ui_tabs_left____ui_tabs_panels___float: right !default;
+$_ui_tabs_left____ui_tabs_panels___width: 75% !default;
+$_ui_tabs_ui_tabs_left____ui_tabs_nav_li___ui_tabs_ui_tabs_right____ui_tabs_nav_li___display: block !default;
+$_ui_tabs_ui_tabs_left____ui_tabs_nav_li___ui_tabs_ui_tabs_right____ui_tabs_nav_li___white_space: normal !default;
+$_ui_tabs_ui_tabs_left____ui_tabs_nav_li___ui_tabs_ui_tabs_right____ui_tabs_nav_li___width: 98% !default;
+$_ui_tabs_ui_tabs_left____ui_tabs_nav_li_a___ui_tabs_ui_tabs_right____ui_tabs_nav_li_a___width: 90% !default;
+$_ui_tabs_ui_tabs_left____ui_tabs_nav_li___float: right !default;
+$_ui_tabs_ui_tabs_right____ui_tabs_nav_li___float: left !default;
+$_ui_tabs_ui_tabs_left____ui_tabs_nav_li___margin: 0 0 1px 0.2em !default;
+$_ui_tabs_ui_tabs_left____ui_tabs_nav_li___border_right: 0 none !default;
+$_ui_tabs_ui_tabs_right____ui_tabs_nav___float: right !default;
+$_ui_tabs_ui_tabs_right____ui_tabs_nav___width: 23% !default;
+$_ui_tabs_ui_tabs_right____ui_tabs_nav___height: 300px !default;
+$_ui_tabs_ui_tabs_right____ui_tabs_nav___background_image: none !default;
+$_ui_tabs_ui_tabs_right____ui_tabs_nav___padding_top: 1px !default;
+$_ui_tabs_ui_tabs_right____ui_tabs_panels___float: left !default;
+$_ui_tabs_ui_tabs_right____ui_tabs_panels___width: 75% !default;
+$_ui_tabs_ui_tabs_right____ui_tabs_nav_li___margin: 0 0.2em 1px 0 !default;
+$_ui_tabs_ui_tabs_right____ui_tabs_nav_li___border_left: 0 none !default;
+$_ui_tabs_rtl___direction: rtl !default;
+$_ui_tabs_rtl__ui_tabs_nav_li___float: right !default;
+$_ui_tabs_rtl__ui_tabs_nav_li_a___float: right !default;
+$_ui_tabs_scrollable__ui_tabs_nav___width: 5000px !default;
+$_ui_tabs__ui_tabs_navscroller___overflow: hidden !default;
+$_ui_tabs_scrollable__ui_tabs_nav_li___margin: 0 .2em -1px 0 !default;
+$_ui_tabs__ui_tabs_navscroller_btn___position: absolute !default;
+$_ui_tabs__ui_tabs_navscroller_btn___height: 28px !default;
+$_ui_tabs__ui_tabs_navscroller_btn___z_index: 100 !default;
+$_ui_tabs__ui_tabs_navscroller_btn___cursor: pointer !default;
+$_ui_tabs__ui_tabs_navscroller_btn___display: none !default;
+$_ui_tabs__ui_tabs_navscroller_btn_left___left: 0.2em !default;
+$_ui_tabs__ui_tabs_navscroller_btn_right___right: 0.2em !default;
+$_ui_tabs__ui_tabs_navscroller_btn_left__ui_icon___ui_tabs__ui_tabs_navscroller_btn_right__ui_icon___margin_top: 5px !default;
+$_ui_tabs_outline___outline: dotted thin !default;
+$_ui_tabs_outline___z_index: 1 !default;
 .ui-tabs {
-  position: relative;
-  padding: .2em;
-  zoom: 1;
+  position: $_ui_tabs___position;
+  padding: $_ui_tabs___padding;
+  zoom: $_ui_tabs___zoom;
 
   .ui-tabs-nav {
-    margin: 0;
+    margin: $_ui_tabs__ui_tabs_nav___margin;
 
     li {
-      list-style: none;
-      float: left;
-      position: relative;
-      margin: 0 .2em 1px 0;
-      padding: 0;
-      white-space: nowrap;
+      list-style: $_ui_tabs__ui_tabs_nav_li___list_style;
+      float: $_ui_tabs__ui_tabs_nav_li___float;
+      position: $_ui_tabs__ui_tabs_nav_li___position;
+      margin: $_ui_tabs__ui_tabs_nav_li___margin;
+      padding: $_ui_tabs__ui_tabs_nav_li___padding;
+      white-space: $_ui_tabs__ui_tabs_nav_li___white_space;
 
       a {
-        float: left;
-        padding: .5em 1em;
-        text-decoration: none;
+        float: $_ui_tabs__ui_tabs_nav_li_a___float;
+        padding: $_ui_tabs__ui_tabs_nav_li_a___padding;
+        text-decoration: $_ui_tabs__ui_tabs_nav_li_a___text_decoration;
       }
 
       &.ui-tabs-selected a, &.ui-state-disabled a, &.ui-state-processing a {
-        cursor: text;
+        cursor: $_ui_tabs__ui_tabs_nav_li_ui_tabs_selected_a___ui_tabs__ui_tabs_nav_li_ui_state_disabled_a___ui_tabs__ui_tabs_nav_li_ui_state_processing_a___cursor;
       }
 
       a {
-        cursor: pointer;
+        cursor: $_ui_tabs__ui_tabs_nav_li_a___cursor;
       }
     }
   }
 
   &.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a {
-    cursor: pointer;
+    cursor: $_ui_tabs_ui_tabs_collapsible__ui_tabs_nav_li_ui_tabs_selected_a___cursor;
   }
 
   .ui-tabs-panel {
-    border-width: 0;
-    padding: 1em 1.4em;
-    background: none;
+    border-width: $_ui_tabs__ui_tabs_panel___border_width;
+    padding: $_ui_tabs__ui_tabs_panel___padding;
+    background: $_ui_tabs__ui_tabs_panel___background;
   }
 
   .ui-tabs-nav li {
-    display: block;
+    display: $_ui_tabs__ui_tabs_nav_li___display;
 
     .ui-icon {
-      float: left;
-      margin: 0.4em 0.2em 0 0;
-      cursor: pointer;
+      float: $_ui_tabs__ui_tabs_nav_li__ui_icon___float;
+      margin: $_ui_tabs__ui_tabs_nav_li__ui_icon___margin;
+      cursor: $_ui_tabs__ui_tabs_nav_li__ui_icon___cursor;
     }
   }
 
   &.ui-tabs-top > .ui-tabs-nav {
     li {
-      border-bottom: 0;
-      top: 1px;
+      border-bottom: $_ui_tabs_ui_tabs_top____ui_tabs_nav_li___border_bottom;
+      top: $_ui_tabs_ui_tabs_top____ui_tabs_nav_li___top;
     }
 
-    padding: .2em .2em 0;
+    padding: $_ui_tabs_ui_tabs_top____ui_tabs_nav___padding;
   }
 
   &.ui-tabs-bottom > .ui-tabs-nav {
-    padding: 0 .2em .2em;
+    padding: $_ui_tabs_ui_tabs_bottom____ui_tabs_nav___padding;
 
     li {
-      border-top: 0;
+      border-top: $_ui_tabs_ui_tabs_bottom____ui_tabs_nav_li___border_top;
     }
   }
 }
@@ -78,69 +151,69 @@
 /* left and right*/
 
 .ui-tabs-left:after, .ui-tabs-right:after {
-  clear: both;
-  content: ".";
-  display: block;
-  height: 0;
-  visibility: hidden;
+  clear: $_ui_tabs_left_after___ui_tabs_right_after___clear;
+  content: $_ui_tabs_left_after___ui_tabs_right_after___content;
+  display: $_ui_tabs_left_after___ui_tabs_right_after___display;
+  height: $_ui_tabs_left_after___ui_tabs_right_after___height;
+  visibility: $_ui_tabs_left_after___ui_tabs_right_after___visibility;
 }
 
 .ui-tabs-left > {
   .ui-tabs-nav {
-    float: left;
-    width: 23%;
-    height: 300px;
-    background-image: none;
-    padding-top: 1px;
+    float: $_ui_tabs_left____ui_tabs_nav___float;
+    width: $_ui_tabs_left____ui_tabs_nav___width;
+    height: $_ui_tabs_left____ui_tabs_nav___height;
+    background-image: $_ui_tabs_left____ui_tabs_nav___background_image;
+    padding-top: $_ui_tabs_left____ui_tabs_nav___padding_top;
   }
 
   .ui-tabs-panels {
-    float: right;
-    width: 75%;
+    float: $_ui_tabs_left____ui_tabs_panels___float;
+    width: $_ui_tabs_left____ui_tabs_panels___width;
   }
 }
 
 .ui-tabs {
   &.ui-tabs-left > .ui-tabs-nav li, &.ui-tabs-right > .ui-tabs-nav li {
-    display: block;
-    white-space: normal;
-    width: 98%;
+    display: $_ui_tabs_ui_tabs_left____ui_tabs_nav_li___ui_tabs_ui_tabs_right____ui_tabs_nav_li___display;
+    white-space: $_ui_tabs_ui_tabs_left____ui_tabs_nav_li___ui_tabs_ui_tabs_right____ui_tabs_nav_li___white_space;
+    width: $_ui_tabs_ui_tabs_left____ui_tabs_nav_li___ui_tabs_ui_tabs_right____ui_tabs_nav_li___width;
   }
 
   &.ui-tabs-left > .ui-tabs-nav li a, &.ui-tabs-right > .ui-tabs-nav li a {
-    width: 90%;
+    width: $_ui_tabs_ui_tabs_left____ui_tabs_nav_li_a___ui_tabs_ui_tabs_right____ui_tabs_nav_li_a___width;
   }
 
   &.ui-tabs-left > .ui-tabs-nav li {
-    float: right;
+    float: $_ui_tabs_ui_tabs_left____ui_tabs_nav_li___float;
   }
 
   &.ui-tabs-right > .ui-tabs-nav li {
-    float: left;
+    float: $_ui_tabs_ui_tabs_right____ui_tabs_nav_li___float;
   }
 
   &.ui-tabs-left > .ui-tabs-nav li {
-    margin: 0 0 1px 0.2em;
-    border-right: 0 none;
+    margin: $_ui_tabs_ui_tabs_left____ui_tabs_nav_li___margin;
+    border-right: $_ui_tabs_ui_tabs_left____ui_tabs_nav_li___border_right;
   }
 
   &.ui-tabs-right > {
     .ui-tabs-nav {
-      float: right;
-      width: 23%;
-      height: 300px;
-      background-image: none;
-      padding-top: 1px;
+      float: $_ui_tabs_ui_tabs_right____ui_tabs_nav___float;
+      width: $_ui_tabs_ui_tabs_right____ui_tabs_nav___width;
+      height: $_ui_tabs_ui_tabs_right____ui_tabs_nav___height;
+      background-image: $_ui_tabs_ui_tabs_right____ui_tabs_nav___background_image;
+      padding-top: $_ui_tabs_ui_tabs_right____ui_tabs_nav___padding_top;
     }
 
     .ui-tabs-panels {
-      float: left;
-      width: 75%;
+      float: $_ui_tabs_ui_tabs_right____ui_tabs_panels___float;
+      width: $_ui_tabs_ui_tabs_right____ui_tabs_panels___width;
     }
 
     .ui-tabs-nav li {
-      margin: 0 0.2em 1px 0;
-      border-left: 0 none;
+      margin: $_ui_tabs_ui_tabs_right____ui_tabs_nav_li___margin;
+      border-left: $_ui_tabs_ui_tabs_right____ui_tabs_nav_li___border_left;
     }
   }
 }
@@ -148,13 +221,13 @@
 /** RTL **/
 
 .ui-tabs-rtl {
-  direction: rtl;
+  direction: $_ui_tabs_rtl___direction;
 
   .ui-tabs-nav li {
-    float: right;
+    float: $_ui_tabs_rtl__ui_tabs_nav_li___float;
 
     a {
-      float: right;
+      float: $_ui_tabs_rtl__ui_tabs_nav_li_a___float;
     }
   }
 }
@@ -162,40 +235,40 @@
 /** Scroll **/
 
 .ui-tabs-scrollable .ui-tabs-nav {
-  width: 5000px;
+  width: $_ui_tabs_scrollable__ui_tabs_nav___width;
 }
 
 .ui-tabs .ui-tabs-navscroller {
-  overflow: hidden;
+  overflow: $_ui_tabs__ui_tabs_navscroller___overflow;
 }
 
 .ui-tabs-scrollable .ui-tabs-nav li {
-  margin: 0 .2em -1px 0;
+  margin: $_ui_tabs_scrollable__ui_tabs_nav_li___margin;
 }
 
 .ui-tabs {
   .ui-tabs-navscroller-btn {
-    position: absolute;
-    height: 28px;
-    z-index: 100;
-    cursor: pointer;
-    display: none;
+    position: $_ui_tabs__ui_tabs_navscroller_btn___position;
+    height: $_ui_tabs__ui_tabs_navscroller_btn___height;
+    z-index: $_ui_tabs__ui_tabs_navscroller_btn___z_index;
+    cursor: $_ui_tabs__ui_tabs_navscroller_btn___cursor;
+    display: $_ui_tabs__ui_tabs_navscroller_btn___display;
   }
 
   .ui-tabs-navscroller-btn-left {
-    left: 0.2em;
+    left: $_ui_tabs__ui_tabs_navscroller_btn_left___left;
   }
 
   .ui-tabs-navscroller-btn-right {
-    right: 0.2em;
+    right: $_ui_tabs__ui_tabs_navscroller_btn_right___right;
   }
 
   .ui-tabs-navscroller-btn-left .ui-icon, .ui-tabs-navscroller-btn-right .ui-icon {
-    margin-top: 5px;
+    margin-top: $_ui_tabs__ui_tabs_navscroller_btn_left__ui_icon___ui_tabs__ui_tabs_navscroller_btn_right__ui_icon___margin_top;
   }
 }
 
 .ui-tabs-outline {
-  outline: dotted thin;
-  z-index: 1;
+  outline: $_ui_tabs_outline___outline;
+  z-index: $_ui_tabs_outline___z_index;
 }
