@@ -12,70 +12,70 @@
 ----------------------------------*/
 
 .ui-helper-hidden {
-  display: none !default;
+  display: none;
 }
 
 .ui-helper-hidden-accessible {
-  border: 0 !default;
-  clip: rect(0 0 0 0) !default;
-  height: 0px !default;
-  margin: -1px !default;
-  overflow: hidden !default;
-  padding: 0 !default;
-  position: absolute !default;
-  width: 0px !default;
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 0px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 0px;
 }
 
 .ui-helper-reset {
-  margin: 0 !default;
-  padding: 0 !default;
-  border: 0 !default;
-  outline: 0 !default;
-  line-height: 1.3 !default;
-  text-decoration: none !default;
-  font-size: 100% !default;
-  list-style: none !default;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  line-height: 1.3;
+  text-decoration: none;
+  font-size: 100%;
+  list-style: none;
 }
 
 .ui-helper-clearfix {
   &:after {
-    content: "." !default;
-    display: block !default;
-    height: 0 !default;
-    clear: both !default;
-    visibility: hidden !default;
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
   }
 
-  display: inline-block !default;
+  display: inline-block;
 }
 
 /* required comment for clearfix to work in Opera \*/
 
 * html .ui-helper-clearfix {
-  height: 1% !default;
+  height: 1%;
 }
 
 .ui-helper-clearfix {
-  display: block !default;
+  display: block;
 }
 
 /* end clearfix */
 
 .ui-helper-zfix {
-  width: 100% !default;
-  height: 100% !default;
-  top: 0 !default;
-  left: 0 !default;
-  position: absolute !default;
-  opacity: 0 !default;
-  filter: Alpha(Opacity = 0) !default;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  opacity: 0;
+  filter: Alpha(Opacity = 0);
 }
 
 /* Interaction Cues
 ----------------------------------*/
 
 .ui-state-disabled {
-  cursor: default !important !default;
+  cursor: default !important;
 }
 
 /* Icons
@@ -84,10 +84,10 @@
 /* states and images */
 
 .ui-icon {
-  display: block !default;
-  text-indent: -99999px !default;
-  overflow: hidden !default;
-  background-repeat: no-repeat !default;
+  display: block;
+  text-indent: -99999px;
+  overflow: hidden;
+  background-repeat: no-repeat;
 }
 
 /* Misc visuals
@@ -96,11 +96,11 @@
 /* Overlays */
 
 .ui-widget-overlay {
-  position: absolute !default;
-  top: 0 !default;
-  left: 0 !default;
-  width: 100% !default;
-  height: 100% !default;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /*!
@@ -114,81 +114,81 @@
  */
 
 .ui-resizable {
-  position: relative !default;
+  position: relative;
 }
 
 .ui-resizable-handle {
-  position: absolute !default;
-  font-size: 0.1px !default;
-  display: block !default;
+  position: absolute;
+  font-size: 0.1px;
+  display: block;
 }
 
 .ui-resizable-disabled .ui-resizable-handle, .ui-resizable-autohide .ui-resizable-handle {
-  display: none !default;
+  display: none;
 }
 
 .ui-resizable-n {
-  cursor: n-resize !default;
-  height: 7px !default;
-  width: 100% !default;
-  top: -5px !default;
-  left: 0 !default;
+  cursor: n-resize;
+  height: 7px;
+  width: 100%;
+  top: -5px;
+  left: 0;
 }
 
 .ui-resizable-s {
-  cursor: s-resize !default;
-  height: 7px !default;
-  width: 100% !default;
-  bottom: -5px !default;
-  left: 0 !default;
+  cursor: s-resize;
+  height: 7px;
+  width: 100%;
+  bottom: -5px;
+  left: 0;
 }
 
 .ui-resizable-e {
-  cursor: e-resize !default;
-  width: 7px !default;
-  right: -5px !default;
-  top: 0 !default;
-  height: 100% !default;
+  cursor: e-resize;
+  width: 7px;
+  right: -5px;
+  top: 0;
+  height: 100%;
 }
 
 .ui-resizable-w {
-  cursor: w-resize !default;
-  width: 7px !default;
-  left: -5px !default;
-  top: 0 !default;
-  height: 100% !default;
+  cursor: w-resize;
+  width: 7px;
+  left: -5px;
+  top: 0;
+  height: 100%;
 }
 
 .ui-resizable-se {
-  cursor: se-resize !default;
-  width: 12px !default;
-  height: 12px !default;
-  right: 1px !default;
-  bottom: 1px !default;
+  cursor: se-resize;
+  width: 12px;
+  height: 12px;
+  right: 1px;
+  bottom: 1px;
 }
 
 .ui-resizable-sw {
-  cursor: sw-resize !default;
-  width: 9px !default;
-  height: 9px !default;
-  left: -5px !default;
-  bottom: -5px !default;
+  cursor: sw-resize;
+  width: 9px;
+  height: 9px;
+  left: -5px;
+  bottom: -5px;
 }
 
 .ui-resizable-nw {
-  cursor: nw-resize !default;
-  width: 9px !default;
-  height: 9px !default;
-  left: -5px !default;
-  top: -5px !default;
+  cursor: nw-resize;
+  width: 9px;
+  height: 9px;
+  left: -5px;
+  top: -5px;
 }
 
 .ui-resizable-ne {
-  cursor: ne-resize !default;
-  width: 9px !default;
-  height: 9px !default;
-  right: -5px !default;
-  top: -5px !default;
+  cursor: ne-resize;
+  width: 9px;
+  height: 9px;
+  right: -5px;
+  top: -5px;
 }
 
 /*!
@@ -202,9 +202,9 @@
  */
 
 .ui-selectable-helper {
-  position: absolute !default;
-  z-index: 100 !default;
-  border: 1px dotted black !default;
+  position: absolute;
+  z-index: 100;
+  border: 1px dotted black;
 }
 
 /*!
@@ -218,70 +218,70 @@
  */
 
 .ui-slider {
-  position: relative !default;
-  text-align: left !default;
+  position: relative;
+  text-align: left;
 
   .ui-slider-handle {
-    position: absolute !default;
-    z-index: 2 !default;
-    width: 1.2em !default;
-    height: 1.2em !default;
-    cursor: default !default;
+    position: absolute;
+    z-index: 2;
+    width: 1.2em;
+    height: 1.2em;
+    cursor: default;
   }
 
   .ui-slider-range {
-    position: absolute !default;
-    z-index: 1 !default;
-    font-size: .7em !default;
-    display: block !default;
-    border: 0 !default;
-    background-position: 0 0 !default;
+    position: absolute;
+    z-index: 1;
+    font-size: .7em;
+    display: block;
+    border: 0;
+    background-position: 0 0;
   }
 }
 
 .ui-slider-horizontal {
-  height: .8em !default;
+  height: .8em;
 
   .ui-slider-handle {
-    top: -.3em !default;
-    margin-left: -.6em !default;
+    top: -.3em;
+    margin-left: -.6em;
   }
 
   .ui-slider-range {
-    top: 0 !default;
-    height: 100% !default;
+    top: 0;
+    height: 100%;
   }
 
   .ui-slider-range-min {
-    left: 0 !default;
+    left: 0;
   }
 
   .ui-slider-range-max {
-    right: 0 !default;
+    right: 0;
   }
 }
 
 .ui-slider-vertical {
-  width: .8em !default;
-  height: 100px !default;
+  width: .8em;
+  height: 100px;
 
   .ui-slider-handle {
-    left: -.3em !default;
-    margin-left: 0 !default;
-    margin-bottom: -.6em !default;
+    left: -.3em;
+    margin-left: 0;
+    margin-bottom: -.6em;
   }
 
   .ui-slider-range {
-    left: 0 !default;
-    width: 100% !default;
+    left: 0;
+    width: 100%;
   }
 
   .ui-slider-range-min {
-    bottom: 0 !default;
+    bottom: 0;
   }
 
   .ui-slider-range-max {
-    top: 0 !default;
+    top: 0;
   }
 }
 
@@ -296,239 +296,239 @@
  */
 
 .ui-datepicker {
-  width: 17em !default;
-  padding: .2em .2em 0 !default;
-  display: none !default;
+  width: 17em;
+  padding: .2em .2em 0;
+  display: none;
 
   .ui-datepicker-header {
-    position: relative !default;
-    padding: .2em 0 !default;
+    position: relative;
+    padding: .2em 0;
   }
 
   .ui-datepicker-prev, .ui-datepicker-next {
-    position: absolute !default;
-    top: 2px !default;
-    width: 1.8em !default;
-    height: 1.8em !default;
+    position: absolute;
+    top: 2px;
+    width: 1.8em;
+    height: 1.8em;
   }
 
   .ui-datepicker-prev-hover, .ui-datepicker-next-hover {
-    top: 1px !default;
+    top: 1px;
   }
 
   .ui-datepicker-prev {
-    left: 2px !default;
+    left: 2px;
   }
 
   .ui-datepicker-next {
-    right: 2px !default;
+    right: 2px;
   }
 
   .ui-datepicker-prev-hover {
-    left: 1px !default;
+    left: 1px;
   }
 
   .ui-datepicker-next-hover {
-    right: 1px !default;
+    right: 1px;
   }
 
   .ui-datepicker-prev span, .ui-datepicker-next span {
-    display: block !default;
-    position: absolute !default;
-    left: 50% !default;
-    margin-left: -8px !default;
-    top: 50% !default;
-    margin-top: -8px !default;
+    display: block;
+    position: absolute;
+    left: 50%;
+    margin-left: -8px;
+    top: 50%;
+    margin-top: -8px;
   }
 
   .ui-datepicker-title {
-    margin: 0 2.3em !default;
-    line-height: 1.8em !default;
-    text-align: center !default;
+    margin: 0 2.3em;
+    line-height: 1.8em;
+    text-align: center;
 
     select {
-      font-size: 1em !default;
-      margin: 1px 0 !default;
+      font-size: 1em;
+      margin: 1px 0;
     }
   }
 
   select {
     &.ui-datepicker-month-year {
-      width: 100% !default;
+      width: 100%;
     }
 
     &.ui-datepicker-month, &.ui-datepicker-year {
-      width: 49% !default;
+      width: 49%;
     }
   }
 
   table {
-    width: 100% !default;
-    font-size: .9em !default;
-    border-collapse: collapse !default;
-    margin: 0 0 .4em !default;
+    width: 100%;
+    font-size: .9em;
+    border-collapse: collapse;
+    margin: 0 0 .4em;
   }
 
   th {
-    padding: .7em .3em !default;
-    text-align: center !default;
-    font-weight: bold !default;
-    border: 0 !default;
+    padding: .7em .3em;
+    text-align: center;
+    font-weight: bold;
+    border: 0;
   }
 
   td {
-    border: 0 !default;
-    padding: 1px !default;
+    border: 0;
+    padding: 1px;
 
     span, a {
-      display: block !default;
-      padding: .2em !default;
-      text-align: right !default;
-      text-decoration: none !default;
+      display: block;
+      padding: .2em;
+      text-align: right;
+      text-decoration: none;
     }
   }
 
   .ui-datepicker-buttonpane {
-    background-image: none !default;
-    margin: .7em 0 0 0 !default;
-    padding: 0 .2em !default;
-    border-left: 0 !default;
-    border-right: 0 !default;
-    border-bottom: 0 !default;
+    background-image: none;
+    margin: .7em 0 0 0;
+    padding: 0 .2em;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
 
     button {
-      float: right !default;
-      margin: .5em .2em .4em !default;
-      cursor: pointer !default;
-      padding: .2em .6em .3em .6em !default;
-      width: auto !default;
-      overflow: visible !default;
+      float: right;
+      margin: .5em .2em .4em;
+      cursor: pointer;
+      padding: .2em .6em .3em .6em;
+      width: auto;
+      overflow: visible;
 
       &.ui-datepicker-current {
-        float: left !default;
+        float: left;
       }
     }
   }
 
   &.ui-datepicker-multi {
-    width: auto !default;
+    width: auto;
   }
 }
 
 /* with multiple calendars */
 
 .ui-datepicker-multi .ui-datepicker-group {
-  float: left !default;
+  float: left;
 
   table {
-    width: 95% !default;
-    margin: 0 auto .4em !default;
+    width: 95%;
+    margin: 0 auto .4em;
   }
 }
 
 .ui-datepicker-multi-2 .ui-datepicker-group {
-  width: 50% !default;
+  width: 50%;
 }
 
 .ui-datepicker-multi-3 .ui-datepicker-group {
-  width: 33.3% !default;
+  width: 33.3%;
 }
 
 .ui-datepicker-multi-4 .ui-datepicker-group {
-  width: 25% !default;
+  width: 25%;
 }
 
 .ui-datepicker-multi {
   .ui-datepicker-group-last .ui-datepicker-header, .ui-datepicker-group-middle .ui-datepicker-header {
-    border-left-width: 0 !default;
+    border-left-width: 0;
   }
 
   .ui-datepicker-buttonpane {
-    clear: left !default;
+    clear: left;
   }
 }
 
 .ui-datepicker-row-break {
-  clear: both !default;
-  width: 100% !default;
-  font-size: 0em !default;
+  clear: both;
+  width: 100%;
+  font-size: 0em;
 }
 
 /* RTL support */
 
 .ui-datepicker-rtl {
-  direction: rtl !default;
+  direction: rtl;
 
   .ui-datepicker-prev {
-    right: 2px !default;
-    left: auto !default;
+    right: 2px;
+    left: auto;
   }
 
   .ui-datepicker-next {
-    left: 2px !default;
-    right: auto !default;
+    left: 2px;
+    right: auto;
   }
 
   .ui-datepicker-prev:hover {
-    right: 1px !default;
-    left: auto !default;
+    right: 1px;
+    left: auto;
   }
 
   .ui-datepicker-next:hover {
-    left: 1px !default;
-    right: auto !default;
+    left: 1px;
+    right: auto;
   }
 
   .ui-datepicker-buttonpane {
-    clear: right !default;
+    clear: right;
 
     button {
-      float: left !default;
+      float: left;
 
       &.ui-datepicker-current {
-        float: right !default;
+        float: right;
       }
     }
   }
 
   .ui-datepicker-group {
-    float: right !default;
+    float: right;
   }
 
   .ui-datepicker-group-last .ui-datepicker-header, .ui-datepicker-group-middle .ui-datepicker-header {
-    border-right-width: 0 !default;
-    border-left-width: 1px !default;
+    border-right-width: 0;
+    border-left-width: 1px;
   }
 }
 
 /* IE6 IFRAME FIX (taken from datepicker 1.5.3 */
 
 .ui-datepicker-cover {
-  display: none !default;
+  display: none;
 
   /*sorry for IE5*/
-  display/**/: block !default;
+  display/**/: block;
 
   /*sorry for IE5*/
-  position: absolute !default;
+  position: absolute;
 
   /*must have*/
-  z-index: -1 !default;
+  z-index: -1;
 
   /*must have*/
-  filter: mask() !default;
+  filter: mask();
 
   /*must have*/
-  top: -4px !default;
+  top: -4px;
 
   /*must have*/
-  left: -4px !default;
+  left: -4px;
 
   /*must have*/
-  width: 200px !default;
+  width: 200px;
 
   /*must have*/
-  height: 200px !default;
+  height: 200px;
 
   /*must have*/
 }
@@ -537,68 +537,68 @@
 
 .ui-timepicker-div {
   .ui-widget-header {
-    margin-bottom: 8px !default;
+    margin-bottom: 8px;
   }
 
   dl {
-    text-align: left !default;
+    text-align: left;
 
     dt {
-      float: left !default;
-      clear: left !default;
-      padding: 0 0 0 5px !default;
+      float: left;
+      clear: left;
+      padding: 0 0 0 5px;
     }
 
     dd {
-      margin: 0 10px 10px 40% !default;
+      margin: 0 10px 10px 40%;
     }
   }
 
   td {
-    font-size: 90% !default;
+    font-size: 90%;
   }
 }
 
 .ui-tpicker-grid-label {
-  background: none !default;
-  border: none !default;
-  margin: 0 !default;
-  padding: 0 !default;
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
 }
 
 .ui-timepicker-div {
   .ui_tpicker_unit_hide {
-    display: none !default;
+    display: none;
   }
 
   .ui_tpicker_time .ui_tpicker_time_input {
-    background: none !default;
-    color: inherit !default;
-    border: none !default;
-    outline: none !default;
-    border-bottom: solid 1px #555 !default;
-    width: 95% !default;
+    background: none;
+    color: inherit;
+    border: none;
+    outline: none;
+    border-bottom: solid 1px #555;
+    width: 95%;
 
     &:focus {
-      border-bottom-color: #aaa !default;
+      border-bottom-color: #aaa;
     }
   }
 }
 
 .ui-timepicker-rtl {
-  direction: rtl !default;
+  direction: rtl;
 
   dl {
-    text-align: right !default;
-    padding: 0 5px 0 0 !default;
+    text-align: right;
+    padding: 0 5px 0 0;
 
     dt {
-      float: right !default;
-      clear: right !default;
+      float: right;
+      clear: right;
     }
 
     dd {
-      margin: 0 40% 10px 10px !default;
+      margin: 0 40% 10px 10px;
     }
   }
 }
@@ -606,46 +606,46 @@
 /* Shortened version style */
 
 .ui-timepicker-div.ui-timepicker-oneLine {
-  padding-right: 2px !default;
+  padding-right: 2px;
 
   .ui_tpicker_time, dt {
-    display: none !default;
+    display: none;
   }
 
   .ui_tpicker_time_label {
-    display: block !default;
-    padding-top: 2px !default;
+    display: block;
+    padding-top: 2px;
   }
 
   dl {
-    text-align: right !default;
+    text-align: right;
 
     dd {
-      display: inline-block !default;
-      margin: 0 !default;
+      display: inline-block;
+      margin: 0;
 
       > div {
-        display: inline-block !default;
-        margin: 0 !default;
+        display: inline-block;
+        margin: 0;
       }
 
       &.ui_tpicker_minute:before, &.ui_tpicker_second:before {
-        content: ':' !default;
-        display: inline-block !default;
+        content: ':';
+        display: inline-block;
       }
 
       &.ui_tpicker_millisec:before, &.ui_tpicker_microsec:before {
-        content: '.' !default;
-        display: inline-block !default;
+        content: '.';
+        display: inline-block;
       }
     }
   }
 
   .ui_tpicker_unit_hide {
-    display: none !default;
+    display: none;
 
     &:before {
-      display: none !default;
+      display: none;
     }
   }
 }
@@ -653,5 +653,5 @@
 /* PrimeFaces Extensions */
 
 .ui-datepicker-trigger.ui-button-icon-only .ui-button-text {
-  padding: 0.3em !default;
+  padding: 0.3em;
 }

@@ -1,75 +1,75 @@
 .ui-galleria {
-  overflow: hidden !default;
-  visibility: hidden !default;
-  position: relative !default;
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
 }
 
 .ui-galleria-panel-wrapper {
-  position: relative !default;
-  padding: 0px !default;
-  margin: 0px !default;
+  position: relative;
+  padding: 0px;
+  margin: 0px;
 }
 
 .ui-galleria-panel {
-  filter: inherit !default;
-  position: absolute !default;
-  top: 0px !default;
-  left: 0px !default;
-  list-style-type: none !default;
+  filter: inherit;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  list-style-type: none;
 }
 
 .ui-galleria-filmstrip-wrapper {
-  overflow: hidden !default;
-  margin: 5px auto !default;
-  position: relative !default;
+  overflow: hidden;
+  margin: 5px auto;
+  position: relative;
 }
 
 .ui-galleria-filmstrip {
-  list-style: none outside none !default;
-  margin: 0 !default;
-  padding: 0 !default;
-  width: 2340px !default;
-  z-index: 900 !default;
-  position: absolute !default;
-  top: 0px !default;
-  left: 0px !default;
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+  width: 2340px;
+  z-index: 900;
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
 
 .ui-galleria-frame {
-  float: left !default;
-  margin-right: 5px !default;
-  opacity: 0.3 !default;
-  cursor: pointer !default;
+  float: left;
+  margin-right: 5px;
+  opacity: 0.3;
+  cursor: pointer;
 }
 
 .ui-galleria-frame-active {
-  opacity: 1 !default;
+  opacity: 1;
 }
 
 .ui-galleria-frame-content {
-  overflow: hidden !default;
+  overflow: hidden;
 }
 
 .ui-galleria-nav-next {
-  cursor: pointer !default;
-  position: absolute !default;
+  cursor: pointer;
+  position: absolute;
 }
 
 .ui-galleria-nav-prev {
-  cursor: pointer !default;
-  position: absolute !default;
-  left: 5px !default;
+  cursor: pointer;
+  position: absolute;
+  left: 5px;
 }
 
 .ui-galleria-nav-next {
-  right: 5px !default;
+  right: 5px;
 }
 
 .ui-galleria-caption {
-  position: absolute !default;
-  left: 1px !default;
-  background-color: rgba(0, 0, 0, 0.5) !default;
-  display: none !default;
-  color: #FFFFFF !default;
-  padding: 0.2em 1em !default;
+  position: absolute;
+  left: 1px;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  color: #FFFFFF;
+  padding: 0.2em 1em;
 }

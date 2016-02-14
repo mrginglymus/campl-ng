@@ -1,77 +1,77 @@
 .ui-inputswitch {
-  display: inline-block !default;
-  padding: 0 !default;
-  position: relative !default;
-  overflow: hidden !default;
-  cursor: pointer !default;
-  user-select: none !default;
-  -moz-user-select: none !default;
-  -khtml-user-select: none !default;
-  -webkit-user-select: none !default;
-  height: 24px !default;
+  display: inline-block;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  height: 24px;
 
   .ui-inputswitch-on {
-    white-space: nowrap !default;
-    display: block !default;
-    position: absolute !default;
-    top: 0 !default;
-    width: auto !default;
-    overflow: hidden !default;
-    user-select: none !default;
-    -moz-user-select: none !default;
-    -khtml-user-select: none !default;
-    -webkit-user-select: none !default;
-    font-weight: bold !default;
-    height: 20px !default;
-    padding-top: 4px !default;
+    white-space: nowrap;
+    display: block;
+    position: absolute;
+    top: 0;
+    width: auto;
+    overflow: hidden;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    font-weight: bold;
+    height: 20px;
+    padding-top: 4px;
   }
 
   .ui-inputswitch-off {
-    white-space: nowrap !default;
-    display: block !default;
-    position: absolute !default;
-    top: 0 !default;
-    width: auto !default;
-    overflow: hidden !default;
-    user-select: none !default;
-    -moz-user-select: none !default;
-    -khtml-user-select: none !default;
-    -webkit-user-select: none !default;
-    font-weight: bold !default;
-    height: 20px !default;
-    padding-top: 4px !default;
-    right: 0 !default;
-    text-align: right !default;
+    white-space: nowrap;
+    display: block;
+    position: absolute;
+    top: 0;
+    width: auto;
+    overflow: hidden;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    font-weight: bold;
+    height: 20px;
+    padding-top: 4px;
+    right: 0;
+    text-align: right;
 
     span {
-      display: inline-block !default;
-      text-align: center !default;
-      padding-left: 2px !default;
-      padding-right: 3px !default;
+      display: inline-block;
+      text-align: center;
+      padding-left: 2px;
+      padding-right: 3px;
     }
   }
 
   .ui-inputswitch-on {
-    left: 0 !default;
-    padding-right: 4px !default;
-    border: 0 none !default;
+    left: 0;
+    padding-right: 4px;
+    border: 0 none;
 
     span {
-      display: inline-block !default;
-      text-align: center !default;
-      padding-left: 3px !default;
-      padding-right: 2px !default;
+      display: inline-block;
+      text-align: center;
+      padding-left: 3px;
+      padding-right: 2px;
     }
   }
 
   .ui-inputswitch-handle {
-    display: block !default;
-    width: 0 !default;
-    position: absolute !default;
-    top: 0 !default;
-    left: 0 !default;
-    height: 24px !default;
-    border-top: 0 none !default;
-    border-bottom: 0 none !default;
+    display: block;
+    width: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 24px;
+    border-top: 0 none;
+    border-bottom: 0 none;
   }
 }

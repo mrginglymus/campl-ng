@@ -1,53 +1,53 @@
 .ui-panelgrid {
-  border-collapse: collapse !default;
+  border-collapse: collapse;
 
   .ui-panelgrid-header {
-    text-align: center !default;
-    padding: 4px 10px !default;
+    text-align: center;
+    padding: 4px 10px;
   }
 
   .ui-panelgrid-footer {
-    text-align: left !default;
-    padding: 2px 5px !default;
+    text-align: left;
+    padding: 2px 5px;
   }
 
   .ui-panelgrid-cell {
-    border-width: 1px !default;
-    border-style: solid !default;
-    border-color: inherit !default;
-    padding: 4px 10px !default;
+    border-width: 1px;
+    border-style: solid;
+    border-color: inherit;
+    padding: 4px 10px;
   }
 
   &.ui-noborder {
     .ui-panelgrid-cell, .ui-widget-content, .ui-widget-header {
-      border: 0px none !default;
+      border: 0px none;
     }
   }
 
   &.ui-panelgrid-blank {
     .ui-panelgrid-content.ui-widget-content, .ui-panelgrid-header.ui-widget-header, .ui-panelgrid-footer.ui-widget-header, .ui-panelgrid-header > tr.ui-widget-header {
-      background: none !default;
-      border: 0 none !default;
+      background: none;
+      border: 0 none;
     }
 
     tbody > tr.ui-widget-content {
-      background: none !default;
-      border: 0 none !default;
+      background: none;
+      border: 0 none;
 
       > td.ui-panelgrid-cell {
-        background: none !default;
-        border: 0 none !default;
+        background: none;
+        border: 0 none;
       }
     }
 
     .ui-panelgrid-footer > tr.ui-widget-footer {
-      background: none !default;
-      border: 0 none !default;
+      background: none;
+      border: 0 none;
     }
   }
 
   .ui-grid-responsive .ui-panelgrid-cell {
-    border: 0 none !default;
+    border: 0 none;
   }
 }
 
@@ -57,15 +57,15 @@
 @media (max-width: 640px) {
   .ui-panelgrid {
     .ui-grid-responsive .ui-grid-row {
-      border-top: 1px solid #BCC7CF !default;
+      border-top: 1px solid #BCC7CF;
 
       &:first-child {
-        border-top: 0 none !default;
+        border-top: 0 none;
       }
     }
 
     &.ui-noborder .ui-grid-responsive .ui-grid-row {
-      border: 0 none !default;
+      border: 0 none;
     }
   }
 }

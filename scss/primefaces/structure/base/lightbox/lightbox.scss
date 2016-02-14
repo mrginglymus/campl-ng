@@ -1,55 +1,55 @@
 .ui-lightbox {
-  position: fixed !default;
+  position: fixed;
 }
 
 .ui-lightbox-content-wrapper {
-  position: relative !default;
+  position: relative;
 }
 
 .ui-lightbox-content {
-  position: relative !default;
-  margin: 0 !default;
-  padding: 0 !default;
-  background-color: #000000 !default;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
 }
 
 .ui-lightbox-nav-right {
-  position: absolute !default;
-  top: 50% !default;
-  cursor: pointer !default;
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
 }
 
 .ui-lightbox-nav-left {
-  position: absolute !default;
-  top: 50% !default;
-  cursor: pointer !default;
-  left: 0 !default;
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  left: 0;
 }
 
 .ui-lightbox-nav-right {
-  right: 0 !default;
+  right: 0;
 }
 
 .ui-lightbox-loading {
-  background: url("lightbox/images/loading.gif") #000000 center center no-repeat !default;
+  background: url("lightbox/images/loading.gif") #000000 center center no-repeat;
 }
 
 .ui-lightbox-caption {
-  padding: 0.2em 0.4em !default;
-  display: none !default;
+  padding: 0.2em 0.4em;
+  display: none;
 }
 
 .ui-lightbox-caption-text {
-  margin: 0.3em 0 0.1em 0 !default;
-  float: left !default;
+  margin: 0.3em 0 0.1em 0;
+  float: left;
 }
 
 .ui-lightbox-close {
-  float: right !default;
-  margin: 0 !default;
-  padding: 1px !default;
+  float: right;
+  margin: 0;
+  padding: 1px;
 
   &.ui-state-hover {
-    padding: 0 !default;
+    padding: 0;
   }
 }

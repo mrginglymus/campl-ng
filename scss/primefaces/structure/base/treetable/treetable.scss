@@ -1,171 +1,171 @@
 .ui-treetable {
   table {
-    border-collapse: collapse !default;
-    width: 100% !default;
-    table-layout: fixed !default;
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
   }
 
   .ui-treetable-header, .ui-treetable-footer {
-    text-align: center !default;
-    padding: 4px 10px !default;
+    text-align: center;
+    padding: 4px 10px;
   }
 
   .ui-treetable-header {
-    border-bottom: 0px none !default;
+    border-bottom: 0px none;
   }
 
   .ui-treetable-footer {
-    border-top: 0px none !default;
+    border-top: 0px none;
   }
 
   th, tfoot td {
-    text-align: center !default;
+    text-align: center;
   }
 
   thead th, tbody td, tfoot td {
-    padding: 4px 10px !default;
-    overflow: hidden !default;
-    white-space: nowrap !default;
-    border-width: 1px !default;
-    border-style: solid !default;
+    padding: 4px 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-width: 1px;
+    border-style: solid;
   }
 
   tbody td {
-    border-color: inherit !default;
+    border-color: inherit;
   }
 
   .ui-treetable-toggler {
-    float: left !default;
-    margin-top: -2px !default;
-    cursor: pointer !default;
+    float: left;
+    margin-top: -2px;
+    cursor: pointer;
   }
 
   .ui-treetable-data tr {
     &.ui-state-highlight, &.ui-state-hover {
-      cursor: pointer !default;
+      cursor: pointer;
     }
   }
 }
 
 .ui-treetable-scrollable-body {
-  overflow: auto !default;
+  overflow: auto;
 }
 
 .ui-treetable-scrollable-header, .ui-treetable-scrollable-footer {
-  overflow: hidden !default;
-  border: 0 none !default;
+  overflow: hidden;
+  border: 0 none;
 }
 
 .ui-treetable.ui-treetable-scrollable table {
-  table-layout: fixed !default;
+  table-layout: fixed;
 }
 
 .ui-treetable-scrollable {
   .ui-treetable-scrollable-header, .ui-treetable-scrollable-footer {
-    position: relative !default;
+    position: relative;
   }
 }
 
 .ui-treetable .ui-treetable-data tr.ui-state-hover {
-  border-color: inherit !default;
-  font-weight: inherit !default;
+  border-color: inherit;
+  font-weight: inherit;
 }
 
 /** Resizable Columns **/
 
 .ui-treetable-resizable {
-  padding-bottom: 1px !default;
+  padding-bottom: 1px;
 
   /*fix for webkit overlow*/
-  overflow: auto !default;
+  overflow: auto;
 }
 
 .ui-treetable {
   &.ui-treetable-resizable table {
-    table-layout: fixed !default;
+    table-layout: fixed;
   }
 
   .ui-column-resizer {
-    width: 8px !default;
-    height: 20px !default;
-    padding: 0px !default;
-    cursor: col-resize !default;
-    background-image: url("spacer/dot_clear.gif") !default;
-    margin: -4px -10px -4px 0px !default;
-    float: right !default;
+    width: 8px;
+    height: 20px;
+    padding: 0px;
+    cursor: col-resize;
+    background-image: url("spacer/dot_clear.gif");
+    margin: -4px -10px -4px 0px;
+    float: right;
   }
 
   .ui-column-resizer-helper {
-    width: 1px !default;
-    position: absolute !default;
-    z-index: 10 !default;
-    display: none !default;
+    width: 1px;
+    position: absolute;
+    z-index: 10;
+    display: none;
   }
 
   .ui-chkbox {
-    margin-right: 3px !default;
+    margin-right: 3px;
   }
 
   .ui-treetable-indent {
-    width: 16px !default;
-    height: 16px !default;
-    float: left !default;
+    width: 16px;
+    height: 16px;
+    float: left;
   }
 }
 
 .ui-treetable-scrollable-body {
   &::-webkit-scrollbar {
-    -webkit-appearance: none !default;
-    width: 15px !default;
-    background-color: transparent !default;
+    -webkit-appearance: none;
+    width: 15px;
+    background-color: transparent;
   }
 
   &::-webkit-scrollbar-thumb {
-    border-radius: 8px !default;
-    border: 1px solid white !default;
-    background-color: rgba(194, 194, 194, 0.5) !default;
+    border-radius: 8px;
+    border: 1px solid white;
+    background-color: rgba(194, 194, 194, 0.5);
   }
 }
 
 .ui-treetable {
   .ui-sortable-column {
-    cursor: pointer !default;
+    cursor: pointer;
   }
 
   .ui-sortable-column-icon {
-    display: inline-block !default;
-    margin: -3px 0px -3px 2px !default;
+    display: inline-block;
+    margin: -3px 0px -3px 2px;
   }
 
   .ui-chkbox.ui-selection {
-    display: none !default;
+    display: none;
   }
 
   .ui-treetable-selectable-node .ui-chkbox.ui-selection, &.ui-treetable-checkbox-all .ui-chkbox.ui-selection {
-    display: inline-block !default;
+    display: inline-block;
   }
 }
 
 .ui-treetable-scrollable-theadclone {
-  height: 0px !default;
+  height: 0px;
 
   tr {
-    height: 0px !default;
+    height: 0px;
   }
 
   th {
     &.ui-state-default {
-      height: 0px !default;
-      border-bottom-width: 0px !default;
-      border-top-width: 0px !default;
-      padding-top: 0px !default;
-      padding-bottom: 0px !default;
-      outline: 0 none !default;
+      height: 0px;
+      border-bottom-width: 0px;
+      border-top-width: 0px;
+      padding-top: 0px;
+      padding-bottom: 0px;
+      outline: 0 none;
     }
 
     span {
-      display: block !default;
-      height: 0px !default;
+      display: block;
+      height: 0px;
     }
   }
 }
@@ -173,42 +173,42 @@
 /** Reflow **/
 
 .ui-treetable-reflow .ui-treetable-data td .ui-column-title {
-  display: none !default;
+  display: none;
 }
 
 @media (max-width: 640px) {
   .ui-treetable-reflow {
     thead th, tfoot td {
-      display: none !default;
+      display: none;
     }
 
     .ui-treetable-data {
       td {
-        text-align: left !default;
-        display: block !default;
-        border: 0px none !default;
-        width: 100% !default;
-        -webkit-box-sizing: border-box !default;
-        -moz-box-sizing: border-box !default;
-        box-sizing: border-box !default;
-        float: left !default;
-        clear: left !default;
+        text-align: left;
+        display: block;
+        border: 0px none;
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        float: left;
+        clear: left;
       }
 
       &.ui-widget-content {
-        border: 0px none !default;
+        border: 0px none;
       }
 
       tr.ui-widget-content {
-        border-left: 0px none !default;
-        border-right: 0px none !default;
+        border-left: 0px none;
+        border-right: 0px none;
       }
 
       td .ui-column-title {
-        padding: .4em !default;
-        min-width: 30% !default;
-        display: inline-block !default;
-        margin: -.4em 1em -.4em -.4em !default;
+        padding: .4em;
+        min-width: 30%;
+        display: inline-block;
+        margin: -.4em 1em -.4em -.4em;
       }
     }
   }

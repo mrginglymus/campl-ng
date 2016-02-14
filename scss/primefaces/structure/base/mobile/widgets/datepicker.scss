@@ -1,100 +1,100 @@
 div.hasDatepicker {
-  display: block !default;
-  padding: 0 !default;
-  overflow: visible !default;
-  margin: 8px 0 !default;
-  max-width: 340px !default;
+  display: block;
+  padding: 0;
+  overflow: visible;
+  margin: 8px 0;
+  max-width: 340px;
 }
 
 .ui-datepicker {
-  overflow: visible !default;
-  margin: 0 !default;
+  overflow: visible;
+  margin: 0;
 
   .ui-datepicker-header {
-    position: relative !default;
-    padding: .6em 0 !default;
-    border-bottom: 0 !default;
-    font-weight: bold !default;
+    position: relative;
+    padding: .6em 0;
+    border-bottom: 0;
+    font-weight: bold;
   }
 
   .ui-datepicker-prev, .ui-datepicker-next {
-    padding: 1px 0 1px 2px !default;
-    position: absolute !default;
-    top: .6em !default;
-    margin-top: 0 !default;
-    text-indent: -9999px !default;
+    padding: 1px 0 1px 2px;
+    position: absolute;
+    top: .6em;
+    margin-top: 0;
+    text-indent: -9999px;
   }
 
   .ui-datepicker-prev {
-    left: 9px !default;
+    left: 9px;
   }
 
   .ui-datepicker-next {
-    right: 2px !default;
+    right: 2px;
   }
 
   .ui-datepicker-title {
-    margin: 0 2.3em !default;
-    line-height: 1.8em !default;
-    text-align: center !default;
+    margin: 0 2.3em;
+    line-height: 1.8em;
+    text-align: center;
 
     select {
-      font-size: 1em !default;
-      margin: 1px 0 !default;
+      font-size: 1em;
+      margin: 1px 0;
     }
   }
 
   select {
     &.ui-datepicker-month-year {
-      width: 100% !default;
+      width: 100%;
     }
 
     &.ui-datepicker-month, &.ui-datepicker-year {
-      width: 49% !default;
+      width: 49%;
     }
   }
 
   table {
-    width: 100% !default;
-    border-collapse: collapse !default;
-    margin: 0 !default;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
   }
 
   td {
-    border-width: 1px !default;
-    padding: 0 !default;
-    text-align: center !default;
-    min-width: 41px !default;
+    border-width: 1px;
+    padding: 0;
+    text-align: center;
+    min-width: 41px;
 
     span, a {
-      display: block !default;
-      padding: .2em 0 !default;
-      font-weight: bold !default;
-      margin: 0 !default;
-      border-width: 0 !default;
-      text-align: center !default;
-      text-decoration: none !default;
+      display: block;
+      padding: .2em 0;
+      font-weight: bold;
+      margin: 0;
+      border-width: 0;
+      text-align: center;
+      text-decoration: none;
     }
   }
 }
 
 .ui-datepicker-calendar {
   th {
-    padding-top: .4em !default;
-    padding-bottom: .4em !default;
+    padding-top: .4em;
+    padding-bottom: .4em;
 
     span {
-      opacity: .7 !default;
+      opacity: .7;
     }
   }
 
   span.ui-state-default {
-    opacity: .7 !default;
+    opacity: .7;
   }
 
   td {
     a, span {
-      padding: .6em .5em !default;
+      padding: .6em .5em;
     }
   }
 }

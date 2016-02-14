@@ -2,54 +2,54 @@
 
 .ui-panel-m {
   .ui-panel-m-titlebar-icon {
-    top: 50% !default;
-    margin-top: -15px !default;
+    top: 50%;
+    margin-top: -15px;
   }
 
   .ui-panel-m-titlebar {
-    border-top-left-radius: inherit !default;
-    border-top-right-radius: inherit !default;
-    border-style: solid !default;
-    border-width: 1px !default;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    border-style: solid;
+    border-width: 1px;
   }
 
   .ui-panel-m-content {
-    border-bottom-left-radius: inherit !default;
-    border-bottom-right-radius: inherit !default;
-    border-style: solid !default;
-    border-width: 1px !default;
-    border-top-width: 0 !default;
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+    border-style: solid;
+    border-width: 1px;
+    border-top-width: 0;
   }
 }
 
 /** Growl **/
 
 .ui-growl-message {
-  padding: 0.5em !default;
+  padding: 0.5em;
 }
 
 .ui-growl-summary {
-  font-weight: bold !default;
+  font-weight: bold;
 }
 
 .ui-growl-detail {
-  font-weight: normal !default;
+  font-weight: normal;
 }
 
 .ui-growl-item.ui-grid-a > {
   .ui-block-a {
-    width: 20% !default;
+    width: 20%;
   }
 
   .ui-block-b {
-    width: 80% !default;
+    width: 80%;
   }
 }
 
 /** Dialog **/
 
 .ui-dialog-container, .ui-calendar-inline .ui-input-text {
-  display: none !default;
+  display: none;
 }
 
 /** Calendar **/
@@ -57,39 +57,39 @@
 /** DataTable **/
 
 .ui-table {
-  table-layout: fixed !default;
+  table-layout: fixed;
 
   th.ui-sortable-column {
-    position: relative !default;
+    position: relative;
   }
 
   tr.ui-bar-b {
-    border: 0 none !default;
-    font-weight: normal !default;
+    border: 0 none;
+    font-weight: normal;
   }
 }
 
 .ui-datatable .ui-paginator .ui-controlgroup, .ui-datagrid .ui-paginator .ui-controlgroup, .ui-datalist .ui-paginator .ui-controlgroup {
-  margin: 0 !default;
-  padding: 0.1em 0em !default;
-  text-align: center !default;
+  margin: 0;
+  padding: 0.1em 0em;
+  text-align: center;
 }
 
 .ui-datatable .ui-reflow-dropdown {
-  display: none !default;
+  display: none;
 }
 
 .ui-datatable-tablewrapper {
-  overflow: auto !default;
+  overflow: auto;
 }
 
 @media (max-width: 35em) {
   .ui-paginator .ui-paginator-page {
-    display: none !default;
+    display: none;
   }
 
   .ui-datatable .ui-reflow-dropdown {
-    display: block !default;
+    display: block;
   }
 }
 
@@ -97,7 +97,7 @@
 
 .ui-datagrid {
   .ui-datagrid-header, .ui-datagrid-footer {
-    text-align: center !default;
+    text-align: center;
   }
 }
 
@@ -105,15 +105,15 @@
 
 .ui-datalist {
   .ui-listview {
-    margin-top: 0 !default;
-    margin-bottom: 0 !default;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   &.ui-datalist-topbar .ui-listview > li.ui-first-child, &.ui-datalist-bottombar .ui-listview > li.ui-last-child {
-    border-radius: 0 !default;
+    border-radius: 0;
 
     > a.ui-btn {
-      border-radius: 0 !default;
+      border-radius: 0;
     }
   }
 }
@@ -121,114 +121,114 @@
 /** Messages **/
 
 .ui-messages-info, .ui-messages-warn, .ui-messages-error, .ui-messages-fatal {
-  border: 1px solid !default;
-  margin: 10px 0px !default;
-  padding: 10px 10px 10px 10px !default;
+  border: 1px solid;
+  margin: 10px 0px;
+  padding: 10px 10px 10px 10px;
 }
 
 .ui-message-info, .ui-message-error, .ui-message-warn, .ui-message-fatal {
-  border: 1px solid !default;
-  margin: 0px 5px !default;
-  padding: 2px 5px !default;
+  border: 1px solid;
+  margin: 0px 5px;
+  padding: 2px 5px;
 }
 
 .ui-messages-info-icon, .ui-messages-warn-icon, .ui-messages-error-icon, .ui-messages-fatal-icon, .ui-message-info-icon, .ui-message-warn-icon, .ui-message-error-icon, .ui-message-fatal-icon {
-  background: url("messages/messages.png") no-repeat !default;
-  display: block !default;
-  float: left !default;
-  margin: 0 !default;
-  padding: 0 !default;
-  position: relative !default;
+  background: url("messages/messages.png") no-repeat;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  position: relative;
 }
 
 .ui-messages-info-icon, .ui-messages-warn-icon, .ui-messages-error-icon, .ui-messages-fatal-icon {
-  height: 24px !default;
-  width: 24px !default;
-  margin-top: -4px !default;
+  height: 24px;
+  width: 24px;
+  margin-top: -4px;
 }
 
 .ui-message-info-icon, .ui-message-warn-icon, .ui-message-error-icon, .ui-message-fatal-icon {
-  height: 16px !default;
-  width: 16px !default;
+  height: 16px;
+  width: 16px;
 }
 
 .ui-messages-info-summary, .ui-messages-warn-summary, .ui-messages-error-summary, .ui-messages-fatal-summary, .ui-message-info-summary, .ui-message-warn-summary, .ui-message-error-summary, .ui-message-fatal-summary {
-  margin-left: 10px !default;
-  font-weight: bold !default;
+  margin-left: 10px;
+  font-weight: bold;
 }
 
 .ui-messages-info-detail, .ui-messages-warn-detail, .ui-messages-error-detail, .ui-messages-fatal-detail, .ui-message-info-detail, .ui-message-warn-detail, .ui-message-error-detail, .ui-message-fatal-detail {
-  margin-left: 5px !default;
+  margin-left: 5px;
 }
 
 .ui-messages-info, .ui-message-info {
-  color: #3a87ad !default;
-  background-color: #d9edf7 !default;
-  border-color: #bce8f1 !default;
+  color: #3a87ad;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
 }
 
 .ui-messages-warn, .ui-message-warn {
-  color: #c09853 !default;
-  background-color: #fcf8e3 !default;
-  border-color: #fbeed5 !default;
+  color: #c09853;
+  background-color: #fcf8e3;
+  border-color: #fbeed5;
 }
 
 .ui-messages-error, .ui-message-error, .ui-messages-fatal, .ui-message-fatal {
-  color: #b94a48 !default;
-  background-color: #f2dede !default;
-  border-color: #eed3d7 !default;
+  color: #b94a48;
+  background-color: #f2dede;
+  border-color: #eed3d7;
 }
 
 .ui-messages {
   ul {
-    margin: 0 25px !default;
-    padding: 0 !default;
-    list-style-type: none !default;
+    margin: 0 25px;
+    padding: 0;
+    list-style-type: none;
   }
 
   &.ui-messages-noicon ul {
-    margin: 0 25px 0 0 !default;
+    margin: 0 25px 0 0;
   }
 }
 
 .ui-message-icon-only {
-  width: 16px !default;
-  height: 16px !default;
+  width: 16px;
+  height: 16px;
 }
 
 .ui-messages-info-icon {
-  background-position: 0px -316px !default;
+  background-position: 0px -316px;
 }
 
 .ui-messages-warn-icon {
-  background-position: 0px -448px !default;
+  background-position: 0px -448px;
 }
 
 .ui-messages-error-icon {
-  background-position: 0px -52px !default;
+  background-position: 0px -52px;
 }
 
 .ui-messages-fatal-icon {
-  background-position: 0px -184px !default;
+  background-position: 0px -184px;
 }
 
 .ui-message-info-icon {
-  background-position: 0px -360px !default;
+  background-position: 0px -360px;
 }
 
 .ui-message-warn-icon {
-  background-position: 0px -492px !default;
+  background-position: 0px -492px;
 }
 
 .ui-message-error-icon {
-  background-position: 0px -96px !default;
+  background-position: 0px -96px;
 }
 
 .ui-message-fatal-icon {
-  background-position: 0px -228px !default;
+  background-position: 0px -228px;
 }
 
 .ui-messages .ui-messages-close {
-  float: right !default;
-  cursor: pointer !default;
+  float: right;
+  cursor: pointer;
 }

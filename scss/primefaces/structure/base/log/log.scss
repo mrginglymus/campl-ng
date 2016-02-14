@@ -1,80 +1,80 @@
 .ui-log {
-  position: fixed !default;
-  width: 400px !default;
-  height: 300px !default;
-  left: 50px !default;
-  top: 50px !default;
-  -moz-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8) !default;
-  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8) !default;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8) !default;
+  position: fixed;
+  width: 400px;
+  height: 300px;
+  left: 50px;
+  top: 50px;
+  -moz-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
 }
 
 .ui-log-header {
-  padding: .4em .4em .4em 1em !default;
-  position: relative !default;
-  border: 0px !default;
-  height: 18px !default;
+  padding: .4em .4em .4em 1em;
+  position: relative;
+  border: 0px;
+  height: 18px;
 }
 
 .ui-log-content {
-  overflow: auto !default;
-  height: 274px !default;
+  overflow: auto;
+  height: 274px;
 }
 
 .ui-log {
   .ui-log-header .ui-log-button {
-    position: absolute !default;
-    display: block !default;
-    padding: 1px !default;
+    position: absolute;
+    display: block;
+    padding: 1px;
 
     &.ui-log-clear {
-      top: 4px !default;
-      left: 10px !default;
+      top: 4px;
+      left: 10px;
     }
 
     &.ui-log-all {
-      top: 4px !default;
-      left: 30px !default;
+      top: 4px;
+      left: 30px;
     }
 
     &.ui-log-info {
-      top: 4px !default;
-      left: 50px !default;
+      top: 4px;
+      left: 50px;
     }
 
     &.ui-log-warn {
-      top: 4px !default;
-      left: 70px !default;
+      top: 4px;
+      left: 70px;
     }
 
     &.ui-log-debug {
-      top: 4px !default;
-      left: 90px !default;
+      top: 4px;
+      left: 90px;
     }
 
     &.ui-log-error {
-      top: 4px !default;
-      left: 110px !default;
+      top: 4px;
+      left: 110px;
     }
   }
 
   .ui-log-button {
     &:hover, &.ui-state-active {
-      padding: 0 !default;
+      padding: 0;
     }
   }
 
   .ui-log-items {
-    list-style-type: none !default;
-    padding-left: 10px !default;
+    list-style-type: none;
+    padding-left: 10px;
   }
 
   .ui-log-item {
-    margin-bottom: 5px !default;
+    margin-bottom: 5px;
 
     .ui-icon {
-      float: left !default;
-      margin-right: 10px !default;
+      float: left;
+      margin-right: 10px;
     }
   }
 }

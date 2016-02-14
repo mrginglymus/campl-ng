@@ -1,89 +1,89 @@
 .ui-inputfield {
-  margin: 0 !default;
-  outline: medium none !default;
-  padding: 4px !default;
-  font-weight: normal !default;
+  margin: 0;
+  outline: medium none;
+  padding: 4px;
+  font-weight: normal;
 }
 
 .ui-widget-header .ui-inputfield, .ui-widget-content .ui-inputfield {
-  font-weight: normal !default;
+  font-weight: normal;
 }
 
 .ui-inputtextarea-resizable {
-  overflow: hidden !default;
-  resize: none !default;
+  overflow: hidden;
+  resize: none;
 }
 
 .ui-selectonelistbox, .ui-selectmanymenu, .ui-multiselectlistbox-listcontainer {
-  padding: 2px !default;
-  width: 150px !default;
+  padding: 2px;
+  width: 150px;
 }
 
 .ui-selectonelistbox .ui-selectlistbox-listcontainer, .ui-selectmanymenu .ui-selectlistbox-listcontainer, .ui-multiselectlistbox-listcontainer {
-  overflow: auto !default;
+  overflow: auto;
 }
 
 .ui-selectonelistbox.ui-state-disabled .ui-selectlistbox-listcontainer, .ui-selectmanymenu.ui-state-disabled .ui-selectlistbox-listcontainer {
-  overflow: hidden !default;
+  overflow: hidden;
 }
 
 .ui-selectonelistbox .ui-selectlistbox-list, .ui-selectmanymenu .ui-selectlistbox-list, .ui-multiselectlistbox .ui-multiselectlistbox-list {
-  list-style-type: none !default;
-  margin: 0 !default;
-  padding: 0 !default;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .ui-selectonelistbox .ui-selectlistbox-item, .ui-selectmanymenu .ui-selectlistbox-item, .ui-multiselectlistbox .ui-multiselectlistbox-item {
-  margin: 2px !default;
-  border: 0 none !default;
-  cursor: pointer !default;
-  font-weight: normal !default;
+  margin: 2px;
+  border: 0 none;
+  cursor: pointer;
+  font-weight: normal;
 }
 
 .ui-selectonelistbox table.ui-selectlistbox-list, .ui-selectmanymenu table.ui-selectlistbox-list {
-  border-collapse: collapse !default;
-  width: 100% !default;
+  border-collapse: collapse;
+  width: 100%;
 }
 
 .ui-selectlistbox-filter.ui-inputfield {
-  padding-right: 12% !default;
-  padding-left: 2% !default;
-  width: 85% !default;
-  -moz-box-shadow: none !default;
-  -webkit-box-shadow: none !default;
-  box-shadow: none !default;
+  padding-right: 12%;
+  padding-left: 2%;
+  width: 85%;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 .ui-selectlistbox-filter-container {
-  position: relative !default;
-  margin: 0.1em 0 0.1em 0 !default;
-  padding: 0 !default;
+  position: relative;
+  margin: 0.1em 0 0.1em 0;
+  padding: 0;
 
   .ui-icon {
-    position: absolute !default;
-    top: 5px !default;
-    right: 2px !default;
+    position: absolute;
+    top: 5px;
+    right: 2px;
   }
 }
 
 .ui-multiselectlistbox {
   .ui-multiselectlistbox-listcontainer {
-    float: left !default;
-    margin-right: 4px !default;
+    float: left;
+    margin-right: 4px;
   }
 
   .ui-multiselectlistbox-item {
-    white-space: nowrap !default;
+    white-space: nowrap;
   }
 
   &.ui-state-disabled .ui-multiselectlistbox-item {
-    cursor: default !default;
+    cursor: default;
   }
 
   .ui-multiselectlistbox-header {
-    text-align: center !default;
-    padding: 2px 10px !default;
-    border-bottom: 0px none !default;
+    text-align: center;
+    padding: 2px 10px;
+    border-bottom: 0px none;
   }
 }
 
@@ -92,305 +92,305 @@
  */
 
 .ui-chkbox {
-  display: inline-block !default;
+  display: inline-block;
 
   .ui-chkbox-box {
-    width: 16px !default;
-    height: 16px !default;
-    display: inline-block !default;
-    -moz-border-radius: 2px !default;
-    -webkit-border-radius: 2px !default;
-    border-radius: 2px !default;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
   }
 }
 
 .ui-chkbox-icon.ui-icon {
-  overflow: visible !default;
+  overflow: visible;
 }
 
 .ui-chkbox .ui-chkbox-label {
-  cursor: pointer !default;
-  margin: 3px 0 0 3px !default;
-  outline: medium none !default;
-  z-index: 1 !default;
-  display: inline-block !default;
-  vertical-align: top !default;
+  cursor: pointer;
+  margin: 3px 0 0 3px;
+  outline: medium none;
+  z-index: 1;
+  display: inline-block;
+  vertical-align: top;
 }
 
 .ui-selectoneradio label {
-  display: block !default;
-  margin-top: 4px !default;
+  display: block;
+  margin-top: 4px;
 }
 
 .ui-selectmanycheckbox.ui-widget td, .ui-selectoneradio.ui-widget td {
-  border: 0 none !default;
+  border: 0 none;
 }
 
 .ui-selectmanycheckbox.ui-grid label, .ui-selectoneradio.ui-grid label {
-  display: inline-block !default;
-  margin-left: 4px !default;
-  vertical-align: top !default;
+  display: inline-block;
+  margin-left: 4px;
+  vertical-align: top;
 }
 
 .ui-panelgrid {
   .ui-selectoneradio.ui-grid-responsive .ui-grid-row, .ui-selectmanycheckbox.ui-grid-responsive .ui-grid-row {
-    border-top: 0px none !default;
+    border-top: 0px none;
   }
 }
 
 /** RadioButton **/
 
 .ui-radiobutton {
-  margin: 3px 0 !default;
-  width: 16px !default;
-  line-height: 16px !default;
-  display: inline-block !default;
+  margin: 3px 0;
+  width: 16px;
+  line-height: 16px;
+  display: inline-block;
 
   .ui-radiobutton-box {
-    width: 16px !default;
-    height: 16px !default;
-    line-height: 16px !default;
-    -moz-border-radius: 10px !default;
-    -webkit-border-radius: 10px !default;
-    border-radius: 10px !default;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
   }
 }
 
 .ui-radiobutton-icon {
-  margin-left: 1px !default;
+  margin-left: 1px;
 }
 
 .ui-radiobutton.ui-radiobutton-native {
-  margin: 0 !default;
-  padding: 0 !default;
+  margin: 0;
+  padding: 0;
 
   .ui-helper-hidden-accessible {
-    clip: auto !default;
-    position: static !important !default;
-    width: auto !default;
-    height: auto !default;
-    overflow: visible !default;
-    margin: 0 !default;
-    padding: 0 !default;
+    clip: auto;
+    position: static !important;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    margin: 0;
+    padding: 0;
   }
 
   .ui-radiobutton-box {
-    display: none !default;
+    display: none;
   }
 
   .ui-helper-hidden-accessible input {
-    margin: 0 !default;
+    margin: 0;
   }
 }
 
 .ui-selectoneradio-native label {
-  margin: 0 !default;
+  margin: 0;
 }
 
 /** SelectOneMenu **/
 
 .ui-selectonemenu {
-  display: inline-block !default;
-  position: relative !default;
-  width: auto !default;
-  zoom: 1 !default;
-  cursor: pointer !default;
-  padding-right: 2em !default;
+  display: inline-block;
+  position: relative;
+  width: auto;
+  zoom: 1;
+  cursor: pointer;
+  padding-right: 2em;
 
   .ui-selectonemenu-trigger {
-    border-right: none !default;
-    border-top: none !default;
-    border-bottom: none !default;
-    cursor: pointer !default;
-    width: 16px !default;
-    height: 100% !default;
-    position: absolute !default;
-    right: 0 !default;
-    top: 0 !default;
-    padding: 0 3px !default;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+    cursor: pointer;
+    width: 16px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0 3px;
 
     .ui-icon {
-      margin-top: 3px !default;
+      margin-top: 3px;
     }
   }
 
   .ui-selectonemenu-label {
-    display: block !default;
-    border: none !default;
-    white-space: nowrap !default;
-    overflow: hidden !default;
-    font-weight: normal !default;
-    width: 100% !default;
-    text-align: left !default;
+    display: block;
+    border: none;
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight: normal;
+    width: 100%;
+    text-align: left;
   }
 
   &.ui-state-disabled {
     .ui-selectonemenu-trigger, .ui-selectonemenu-label {
-      cursor: default !default;
+      cursor: default;
     }
   }
 
   label.ui-selectonemenu-label {
-    cursor: pointer !default;
+    cursor: pointer;
   }
 
   input.ui-selectonemenu-label {
-    cursor: default !default;
+    cursor: default;
   }
 }
 
 .ui-selectonemenu-panel {
-  position: absolute !default;
-  height: auto !default;
+  position: absolute;
+  height: auto;
 
   .ui-selectonemenu-items-wrapper {
-    overflow: auto !default;
+    overflow: auto;
   }
 
   .ui-selectonemenu-item {
-    font-weight: normal !default;
-    cursor: pointer !default;
+    font-weight: normal;
+    cursor: pointer;
   }
 
   .ui-selectonemenu-item-group {
-    font-weight: bold !default;
+    font-weight: bold;
   }
 
   .ui-selectonemenu-list {
-    padding: 0.4em !default;
-    border: 0 none !default;
+    padding: 0.4em;
+    border: 0 none;
   }
 
   .ui-selectonemenu-list-item {
-    border: 0px none !default;
-    margin: 1px 0 !default;
-    padding: 3px 5px !default;
-    text-align: left !default;
-    white-space: nowrap !default;
+    border: 0px none;
+    margin: 1px 0;
+    padding: 3px 5px;
+    text-align: left;
+    white-space: nowrap;
   }
 
   .ui-selectonemenu-table {
-    border-collapse: collapse !default;
-    width: 100% !default;
+    border-collapse: collapse;
+    width: 100%;
 
     td {
-      border-width: 1px !default;
-      border-style: solid !default;
-      border-color: inherit !default;
-      padding: 4px 10px 4px 10px !default;
+      border-width: 1px;
+      border-style: solid;
+      border-color: inherit;
+      padding: 4px 10px 4px 10px;
     }
   }
 
   .ui-selectonemenu-filter {
-    width: 85% !default;
-    padding-right: 15px !default;
+    width: 85%;
+    padding-right: 15px;
   }
 
   .ui-selectonemenu-filter-container {
-    position: relative !default;
-    margin: 0 !default;
-    padding: 0.4em !default;
-    display: inline-block !default;
+    position: relative;
+    margin: 0;
+    padding: 0.4em;
+    display: inline-block;
 
     .ui-icon {
-      position: absolute !default;
-      top: 10px !default;
-      right: 10px !default;
+      position: absolute;
+      top: 10px;
+      right: 10px;
     }
   }
 }
 
 .ui-state-disabled a {
-  outline: none !default;
+  outline: none;
 }
 
 /* Button */
 
 .ui-button {
-  display: inline-block !default;
-  position: relative !default;
-  padding: 0 !default;
-  margin-right: .1em !default;
-  text-decoration: none !important !default;
-  cursor: pointer !default;
-  text-align: center !default;
-  zoom: 1 !default;
-  overflow: visible !default;
+  display: inline-block;
+  position: relative;
+  padding: 0;
+  margin-right: .1em;
+  text-decoration: none !important;
+  cursor: pointer;
+  text-align: center;
+  zoom: 1;
+  overflow: visible;
 
   /* the overflow property removes extra width in IE */
 }
 
 .ui-button-icon-only {
-  width: 2.4em !default;
+  width: 2.4em;
 }
 
 /*button text element */
 
 .ui-button .ui-button-text {
-  display: block !default;
-  line-height: normal !default;
+  display: block;
+  line-height: normal;
 }
 
 .ui-button-text-only .ui-button-text {
-  padding: .3em 1em !default;
+  padding: .3em 1em;
 }
 
 .ui-button-icon-only .ui-button-text {
-  padding: .3em !default;
-  text-indent: -9999999px !default;
+  padding: .3em;
+  text-indent: -9999999px;
 }
 
 .ui-button-text-icon-left .ui-button-text {
-  padding: .3em 1em .3em 2.1em !default;
+  padding: .3em 1em .3em 2.1em;
 }
 
 .ui-button-text-icon-right .ui-button-text {
-  padding: .3em 2.1em .3em 1em !default;
+  padding: .3em 2.1em .3em 1em;
 }
 
 /*button icon element(s) */
 
 .ui-button-icon-only .ui-icon, .ui-button-text-icon-left .ui-icon, .ui-button-text-icon-right .ui-icon {
-  position: absolute !default;
-  top: 50% !default;
-  margin-top: -8px !default;
+  position: absolute;
+  top: 50%;
+  margin-top: -8px;
 }
 
 /* FontAwesome icon */
 
 .ui-button-icon-only .ui-icon.fa, .ui-button-text-icon-left .ui-icon.fa, .ui-button-text-icon-right .ui-icon.fa {
-  margin-top: -7px !default;
+  margin-top: -7px;
 }
 
 .ui-button-icon-only .ui-icon {
-  left: 50% !default;
-  margin-left: -8px !default;
+  left: 50%;
+  margin-left: -8px;
 }
 
 .ui-button-icon-left {
-  left: .5em !default;
+  left: .5em;
 }
 
 .ui-button-icon-right {
-  right: .5em !default;
+  right: .5em;
 }
 
 /*button sets*/
 
 .ui-buttonset {
-  margin-right: 7px !default;
+  margin-right: 7px;
 
   .ui-button {
-    margin-left: 0 !default;
-    margin-right: 0 !default;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
 /* workarounds */
 
 button.ui-button::-moz-focus-inner {
-  border: 0 !default;
-  padding: 0 !default;
+  border: 0;
+  padding: 0;
 
   /* reset extra padding in Firefox */
 }
@@ -398,202 +398,202 @@ button.ui-button::-moz-focus-inner {
 /** SelectCheckbox Menu **/
 
 .ui-selectcheckboxmenu {
-  display: inline-block !default;
-  position: relative !default;
-  width: auto !default;
-  zoom: 1 !default;
-  cursor: pointer !default;
+  display: inline-block;
+  position: relative;
+  width: auto;
+  zoom: 1;
+  cursor: pointer;
 
   .ui-selectcheckboxmenu-trigger {
-    border-right: none !default;
-    border-top: none !default;
-    border-bottom: none !default;
-    cursor: pointer !default;
-    width: 16px !default;
-    height: 100% !default;
-    position: absolute !default;
-    right: 0 !default;
-    top: 0 !default;
-    padding: 0 3px !default;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+    cursor: pointer;
+    width: 16px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0 3px;
 
     .ui-icon {
-      margin-top: 3px !default;
+      margin-top: 3px;
     }
   }
 
   .ui-selectcheckboxmenu-label {
-    display: block !default;
-    padding: 3px 26px 3px 5px !default;
-    width: auto !default;
-    border: none !default;
-    cursor: pointer !default;
+    display: block;
+    padding: 3px 26px 3px 5px;
+    width: auto;
+    border: none;
+    cursor: pointer;
   }
 
   &.ui-state-disabled {
     .ui-selectcheckboxmenu-trigger, .ui-selectcheckboxmenu-label {
-      cursor: auto !default;
+      cursor: auto;
     }
   }
 }
 
 .ui-selectcheckboxmenu-panel {
-  padding: 0.2em !default;
-  position: absolute !default;
-  overflow: hidden !default;
-  -moz-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8) !default;
-  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8) !default;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8) !default;
+  padding: 0.2em;
+  position: absolute;
+  overflow: hidden;
+  -moz-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
 
   .ui-selectcheckboxmenu-items-wrapper {
-    overflow: auto !default;
-    position: relative !default;
-    padding: 0.2em 0 !default;
+    overflow: auto;
+    position: relative;
+    padding: 0.2em 0;
   }
 
   .ui-selectcheckboxmenu-list {
-    border: 0 none !default;
+    border: 0 none;
   }
 
   .ui-selectcheckboxmenu-list-item {
-    border: 0px none !default;
-    cursor: pointer !default;
-    font-weight: normal !default;
-    margin: 1px 0 !default;
-    padding: 3px 5px !default;
-    text-align: left !default;
-    white-space: nowrap !default;
-    display: block !default;
-    position: relative !default;
+    border: 0px none;
+    cursor: pointer;
+    font-weight: normal;
+    margin: 1px 0;
+    padding: 3px 5px;
+    text-align: left;
+    white-space: nowrap;
+    display: block;
+    position: relative;
 
     .ui-chkbox {
-      position: absolute !default;
-      top: 50% !default;
-      margin-top: -8px !default;
+      position: absolute;
+      top: 50%;
+      margin-top: -8px;
     }
 
     label {
-      display: block !default;
-      padding-left: 2.2em !default;
+      display: block;
+      padding-left: 2.2em;
     }
   }
 }
 
 .ui-selectcheckboxmenu-header {
-  margin-bottom: 0.3em !default;
-  padding: 0.3em 0 0.3em 0.4em !default;
+  margin-bottom: 0.3em;
+  padding: 0.3em 0 0.3em 0.4em;
 
   .ui-chkbox {
-    float: left !default;
-    cursor: pointer !default;
+    float: left;
+    cursor: pointer;
   }
 
   .ui-selectcheckboxmenu-filter-container {
-    float: left !default;
-    position: relative !default;
-    margin-left: 5px !default;
+    float: left;
+    position: relative;
+    margin-left: 5px;
 
     .ui-icon {
-      position: absolute !default;
-      right: 5px !default;
-      top: 2px !default;
+      position: absolute;
+      right: 5px;
+      top: 2px;
     }
   }
 
   .ui-inputfield {
-    padding: 1px 20px 1px 2px !default;
+    padding: 1px 20px 1px 2px;
   }
 
   span.ui-icon {
-    float: left !default;
+    float: left;
   }
 
   a {
     &.ui-selectcheckboxmenu-all, &.ui-selectcheckboxmenu-none {
-      float: left !default;
-      margin-right: 10px !default;
-      display: block !default;
+      float: left;
+      margin-right: 10px;
+      display: block;
     }
   }
 
   .ui-selectcheckboxmenu-close {
-    float: right !default;
-    padding: 1px !default;
-    margin-right: 0.2em !default;
-    display: block !default;
+    float: right;
+    padding: 1px;
+    margin-right: 0.2em;
+    display: block;
 
     &.ui-state-hover {
-      padding: 0px !default;
+      padding: 0px;
     }
   }
 }
 
 .ui-splitbutton {
-  position: relative !default;
-  padding-right: 2em !default;
+  position: relative;
+  padding-right: 2em;
 
   .ui-button.ui-splitbutton-menubutton {
-    width: 32px !default;
-    position: absolute !default;
-    top: 0px !default;
-    margin-left: -1px !default;
-    right: 0px !default;
+    width: 32px;
+    position: absolute;
+    top: 0px;
+    margin-left: -1px;
+    right: 0px;
   }
 }
 
 /** IE Hacks **/
 
 div.ui-button, .ui-splitbutton {
-  display: inline-block !default;
-  zoom: 1 !default;
+  display: inline-block;
+  zoom: 1;
 }
 
 /** Password **/
 
 .ui-password-panel {
-  padding: 4px 10px !default;
-  width: 150px !default;
-  margin-top: 2px !default;
+  padding: 4px 10px;
+  width: 150px;
+  margin-top: 2px;
 
   .ui-password-meter {
-    height: 10px !default;
-    background: transparent url("#{resource['primefaces:forms/password-meter.png']}") no-repeat left top !default;
-    padding: 0 !default;
-    margin: 0 !default;
+    height: 10px;
+    background: transparent url("#{resource['primefaces:forms/password-meter.png']}") no-repeat left top;
+    padding: 0;
+    margin: 0;
   }
 }
 
 .ui-password-info {
-  margin-top: 4px !default;
+  margin-top: 4px;
 }
 
 .ui-password-panel-overlay {
-  position: absolute !default;
+  position: absolute;
 }
 
 /* OutputLabel */
 
 .ui-outputlabel {
   &.ui-state-error {
-    border: 0 none !default;
+    border: 0 none;
   }
 
   .ui-outputlabel-rfi {
-    margin-left: 0.4em !default;
+    margin-left: 0.4em;
   }
 }
 
 /* SelectOneButton */
 
 .ui-selectonebutton, .ui-selectmanybutton {
-  display: inline-block !default;
-  padding: 1px !default;
+  display: inline-block;
+  padding: 1px;
 
   &.ui-state-error {
-    padding: 0px !default;
+    padding: 0px;
   }
 
   .ui-button.ui-state-focus {
-    outline: none !default;
+    outline: none;
   }
 }
 
@@ -603,141 +603,141 @@ div.ui-button, .ui-splitbutton {
 
 .ui-fluid {
   .ui-inputfield {
-    box-sizing: border-box !default;
-    -webkit-box-sizing: border-box !default;
-    -moz-box-sizing: border-box !default;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
   }
 
   .ui-inputtext, .ui-inputtextarea {
-    width: 100% !default;
+    width: 100%;
   }
 
   .ui-selectonemenu {
-    width: 100% !default;
-    box-sizing: border-box !default;
-    -webkit-box-sizing: border-box !default;
-    -moz-box-sizing: border-box !default;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
 
     .ui-selectonemenu-trigger {
-      width: 32px !default;
-      padding: 0 6px !default;
-      box-sizing: border-box !default;
-      -webkit-box-sizing: border-box !default;
-      -moz-box-sizing: border-box !default;
+      width: 32px;
+      padding: 0 6px;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
     }
   }
 
   .ui-calendar {
-    width: 100% !default;
+    width: 100%;
 
     input {
-      width: 100% !default;
+      width: 100%;
     }
   }
 
   .ui-spinner {
-    width: 100% !default;
+    width: 100%;
 
     .ui-spinner-input {
-      padding-right: 36px !default;
-      width: 100% !default;
+      padding-right: 36px;
+      width: 100%;
     }
 
     .ui-spinner-button {
-      width: auto !default;
+      width: auto;
 
       .ui-icon {
-        left: 6px !default;
+        left: 6px;
       }
     }
   }
 
   .ui-autocomplete, .ui-autocomplete-input {
-    width: 100% !default;
+    width: 100%;
   }
 
   .ui-autocomplete .ui-autocomplete-dropdown.ui-button {
-    width: 2.4em !default;
+    width: 2.4em;
   }
 
   .ui-inputmask, .ui-password, .ui-keyboard-input {
-    width: 100% !default;
+    width: 100%;
   }
 
   .ui-selectcheckboxmenu {
-    width: 100% !default;
-    box-sizing: border-box !default;
-    -webkit-box-sizing: border-box !default;
-    -moz-box-sizing: border-box !default;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
 
     .ui-selectcheckboxmenu-trigger .ui-icon {
-      margin-left: auto !default;
-      margin-right: auto !default;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 
   .ui-selectcheckboxmenu-trigger {
-    width: 32px !default;
-    box-sizing: border-box !default;
-    -webkit-box-sizing: border-box !default;
-    -moz-box-sizing: border-box !default;
+    width: 32px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
   }
 
   .ui-button {
-    width: 100% !default;
-    box-sizing: border-box !default;
-    -webkit-box-sizing: border-box !default;
-    -moz-box-sizing: border-box !default;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
   }
 
   .ui-buttonset {
-    width: 100% !default;
+    width: 100%;
 
     &.ui-buttonset-1 .ui-button {
-      width: 100% !default;
+      width: 100%;
     }
 
     &.ui-buttonset-2 .ui-button {
-      width: 50% !default;
+      width: 50%;
     }
 
     &.ui-buttonset-3 .ui-button {
-      width: 33.3% !default;
+      width: 33.3%;
     }
 
     &.ui-buttonset-4 .ui-button {
-      width: 25% !default;
+      width: 25%;
     }
 
     &.ui-buttonset-5 .ui-button {
-      width: 20% !default;
+      width: 20%;
     }
 
     &.ui-buttonset-6 .ui-button {
-      width: 16.6% !default;
+      width: 16.6%;
     }
   }
 
   .ui-splitbutton {
-    width: 100% !default;
-    box-sizing: border-box !default;
-    -webkit-box-sizing: border-box !default;
-    -moz-box-sizing: border-box !default;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
 
     .ui-button {
-      width: 100% !default;
+      width: 100%;
 
       &.ui-splitbutton-menubutton {
-        width: 32px !default;
-        box-sizing: border-box !default;
-        -webkit-box-sizing: border-box !default;
-        -moz-box-sizing: border-box !default;
+        width: 32px;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
       }
     }
   }
 
   .ui-selectonelistbox, .ui-selectmanymenu {
-    width: 100% !default;
+    width: 100%;
   }
 }
 
@@ -768,7 +768,7 @@ div.ui-button, .ui-splitbutton {
 @media (max-width: 640px) {
   .ui-fluid .ui-buttonset {
     &.ui-buttonset-1 .ui-button, &.ui-buttonset-2 .ui-button, &.ui-buttonset-3 .ui-button, &.ui-buttonset-4 .ui-button, &.ui-buttonset-5 .ui-button, &.ui-buttonset-6 .ui-button {
-      width: 100% !default;
+      width: 100%;
     }
   }
 }

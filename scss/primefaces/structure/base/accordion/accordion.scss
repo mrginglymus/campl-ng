@@ -1,49 +1,49 @@
 .ui-accordion {
   .ui-accordion-header {
-    cursor: pointer !default;
-    position: relative !default;
-    margin-top: 1px !default;
-    min-height: 0 !default;
-    padding: .5em .5em .5em 2.2em !default;
+    cursor: pointer;
+    position: relative;
+    margin-top: 1px;
+    min-height: 0;
+    padding: .5em .5em .5em 2.2em;
 
     .ui-icon {
-      position: absolute !default;
-      left: .5em !default;
-      top: 50% !default;
-      margin-top: -8px !default;
+      position: absolute;
+      left: .5em;
+      top: 50%;
+      margin-top: -8px;
     }
   }
 
   .ui-accordion-content {
-    padding: 1em 2.2em !default;
-    border-top: 0 !default;
-    margin-top: -2px !default;
-    position: relative !default;
-    top: 1px !default;
-    margin-bottom: 2px !default;
-    overflow: auto !default;
-    zoom: 1 !default;
+    padding: 1em 2.2em;
+    border-top: 0;
+    margin-top: -2px;
+    position: relative;
+    top: 1px;
+    margin-bottom: 2px;
+    overflow: auto;
+    zoom: 1;
   }
 
   .ui-accordion-header.ui-state-disabled {
-    cursor: default !default;
+    cursor: default;
 
     a {
-      cursor: default !default;
+      cursor: default;
     }
   }
 
   &.ui-accordion-rtl {
-    direction: rtl !default;
+    direction: rtl;
 
     .ui-accordion-header {
       .ui-icon {
-        right: 0.5m !default;
-        left: auto !default;
+        right: 0.5m;
+        left: auto;
       }
 
       a {
-        padding: 0.5em 2.2em 0.5em 0.5em !default;
+        padding: 0.5em 2.2em 0.5em 0.5em;
       }
     }
   }
@@ -52,6 +52,6 @@
 /** RTL **/
 
 .ui-tabs-outline {
-  outline: dotted thin !default;
-  z-index: 1 !default;
+  outline: dotted thin;
+  z-index: 1;
 }

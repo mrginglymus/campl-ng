@@ -1,131 +1,131 @@
 .ui-autocomplete {
-  width: auto !default;
-  zoom: 1 !default;
-  cursor: pointer !default;
-  -moz-box-shadow: none !default;
-  -webkit-box-shadow: none !default;
-  box-shadow: none !default;
-  position: relative !default;
-  display: inline-block !default;
+  width: auto;
+  zoom: 1;
+  cursor: pointer;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  position: relative;
+  display: inline-block;
 
   .ui-autocomplete-dropdown {
-    position: absolute !default;
-    height: 100% !default;
-    width: 2.4em !default;
+    position: absolute;
+    height: 100%;
+    width: 2.4em;
   }
 }
 
 .ui-autocomplete-query {
-  font-weight: bold !default;
+  font-weight: bold;
 }
 
 .ui-autocomplete-panel {
-  position: absolute !default;
-  overflow: auto !default;
+  position: absolute;
+  overflow: auto;
 
   .ui-autocomplete-item {
-    cursor: pointer !default;
+    cursor: pointer;
   }
 
   .ui-autocomplete-list {
-    padding: 0.4em !default;
-    border: 0 none !default;
+    padding: 0.4em;
+    border: 0 none;
   }
 
   .ui-autocomplete-list-item {
-    border: 0px none !default;
-    font-weight: normal !default;
-    margin: 1px 0 !default;
-    padding: 3px 5px !default;
-    text-align: left !default;
+    border: 0px none;
+    font-weight: normal;
+    margin: 1px 0;
+    padding: 3px 5px;
+    text-align: left;
   }
 
   .ui-autocomplete-table {
-    border-collapse: collapse !default;
-    width: 100% !default;
+    border-collapse: collapse;
+    width: 100%;
 
     th, td {
-      border-width: 1px !default;
-      border-style: solid !default;
-      border-color: inherit !default;
-      padding: 4px 10px 4px 10px !default;
+      border-width: 1px;
+      border-style: solid;
+      border-color: inherit;
+      padding: 4px 10px 4px 10px;
     }
   }
 }
 
 .ui-autocomplete .ui-button-icon-only .ui-button-text {
-  padding: 0.29em !default;
+  padding: 0.29em;
 }
 
 /* Multiple Selection */
 
 .ui-autocomplete-multiple-container {
-  clear: left !default;
-  cursor: text !default;
-  list-style-type: none !default;
-  margin: 0 !default;
-  min-height: 1px !default;
-  overflow: hidden !default;
-  width: 400px !default;
+  clear: left;
+  cursor: text;
+  list-style-type: none;
+  margin: 0;
+  min-height: 1px;
+  overflow: hidden;
+  width: 400px;
 
   &.ui-inputfield {
-    padding: 0 !default;
+    padding: 0;
   }
 }
 
 .ui-autocomplete-token {
-  cursor: default !default;
-  float: left !default;
-  overflow: hidden !default;
-  padding: 1px 3px !default;
-  white-space: nowrap !default;
-  position: relative !default;
-  margin: 2px !default;
+  cursor: default;
+  float: left;
+  overflow: hidden;
+  padding: 1px 3px;
+  white-space: nowrap;
+  position: relative;
+  margin: 2px;
 }
 
 .ui-autocomplete-token-label {
-  display: block !default;
-  padding: 0em 2.1em 0em 0.5em !default;
+  display: block;
+  padding: 0em 2.1em 0em 0.5em;
 }
 
 .ui-autocomplete-token-icon {
-  margin-top: -9px !default;
-  position: absolute !default;
-  right: 0.2em !default;
-  top: 50% !default;
-  cursor: pointer !default;
+  margin-top: -9px;
+  position: absolute;
+  right: 0.2em;
+  top: 50%;
+  cursor: pointer;
 }
 
 .ui-autocomplete-input-token {
-  float: left !default;
-  list-style-type: none !default;
-  margin: 1px !default;
-  padding: 0 !default;
+  float: left;
+  list-style-type: none;
+  margin: 1px;
+  padding: 0;
 
   input {
-    border: 0 none !default;
-    width: 140px !default;
-    outline: medium none !default;
-    background-color: transparent !default;
-    margin: 2px !default;
+    border: 0 none;
+    width: 140px;
+    outline: medium none;
+    background-color: transparent;
+    margin: 2px;
   }
 }
 
 .ui-autocomplete-itemtip-content {
-  display: none !default;
+  display: none;
 }
 
 .ui-autocomplete-itemtip {
-  position: absolute !default;
-  display: none !default;
-  padding: 0.4em !default;
+  position: absolute;
+  display: none;
+  padding: 0.4em;
 }
 
 .ui-autocomplete-emptyMessage {
-  padding: 3px 5px !default;
+  padding: 3px 5px;
 }
 
 .ui-autocomplete-panel .ui-autocomplete-group {
-  font-weight: bold !default;
-  cursor: default !default;
+  font-weight: bold;
+  cursor: default;
 }

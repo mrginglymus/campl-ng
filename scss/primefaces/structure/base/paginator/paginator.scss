@@ -1,53 +1,53 @@
 .ui-paginator {
-  margin: 0px !default;
-  text-align: center !default;
-  padding: 2px !default;
+  margin: 0px;
+  text-align: center;
+  padding: 2px;
 
   &.ui-paginator-top {
-    border-bottom: 0px none !default;
+    border-bottom: 0px none;
   }
 
   &.ui-paginator-bottom {
-    border-top: 0px none !default;
+    border-top: 0px none;
   }
 
   .ui-paginator-page, .ui-paginator-pages, .ui-paginator-next, .ui-paginator-last, .ui-paginator-first, .ui-paginator-prev, .ui-paginator-current {
-    display: inline-block !default;
-    padding: 2px 6px !default;
-    zoom: 1 !default;
-    margin-left: 1px !default;
-    margin-right: 1px !default;
-    text-decoration: none !default;
-    outline: none !default;
+    display: inline-block;
+    padding: 2px 6px;
+    zoom: 1;
+    margin-left: 1px;
+    margin-right: 1px;
+    text-decoration: none;
+    outline: none;
   }
 
   .ui-paginator-page, .ui-paginator-next, .ui-paginator-last, .ui-paginator-first, .ui-paginator-prev {
-    cursor: pointer !default;
+    cursor: pointer;
   }
 
   .ui-paginator-current, .ui-paginator-rpp-options {
-    margin-left: 1em !default;
-    margin-right: 1em !default;
-    background-image: none !default;
+    margin-left: 1em;
+    margin-right: 1em;
+    background-image: none;
   }
 
   .ui-paginator-next .ui-icon, .ui-paginator-prev .ui-icon, .ui-paginator-first .ui-icon, .ui-paginator-last .ui-icon {
-    height: auto !default;
-    overflow: inherit !default;
+    height: auto;
+    overflow: inherit;
   }
 
   .ui-paginator-jtp-select option, .ui-paginator-rpp-options option {
-    background-image: none !default;
-    border: 0 none !default;
-    box-shadow: none !default;
-    -moz-box-shadow: none !default;
-    -webkit-box-shadow: none !default;
+    background-image: none;
+    border: 0 none;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
   }
 }
 
 /* Responsive */
 @media (max-width: 640px) {
   .ui-paginator .ui-paginator-pages {
-    display: none !default;
+    display: none;
   }
 }

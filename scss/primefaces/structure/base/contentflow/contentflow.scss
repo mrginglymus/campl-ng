@@ -4,48 +4,48 @@
  */
 
 .ui-contentflow .flow {
-  /*border: 1px solid green !default;*/
+  /*border: 1px solid green;*/
 
   * {}
 
   .item {
-    /*border: 1px solid red !default;*/
+    /*border: 1px solid red;*/
 
     canvas.content {
-      height: 100% !default;
-      width: 100% !default;
+      height: 100%;
+      width: 100%;
 
-      /*border: 1px solid yellow !default;*/
+      /*border: 1px solid yellow;*/
     }
 
     img {
       &.content {
-        /*border: 1px solid yellow !default;*/
-        width: 100% !default;
+        /*border: 1px solid yellow;*/
+        width: 100%;
       }
 
       &.reflection {
-        width: 100% !default;
+        width: 100%;
       }
     }
 
     canvas.reflection {
-      width: 100% !default;
+      width: 100%;
     }
 
     &.active {
-      cursor: pointer !default;
+      cursor: pointer;
     }
 
     .caption {
-      font-size: 100% !default;
-      font-weight: bold !default;
-      text-align: center !default;
-      color: white !default;
-      max-height: 30% !default;
-      bottom: 10% !default;
-      background: url("contentflow/images/1x1_0.5_black.png") !default;
-      width: 100% !default;
+      font-size: 100%;
+      font-weight: bold;
+      text-align: center;
+      color: white;
+      max-height: 30%;
+      bottom: 10%;
+      background: url("contentflow/images/1x1_0.5_black.png");
+      width: 100%;
     }
   }
 }
@@ -53,55 +53,55 @@
 /* ----- styling of items ----- */
 
 * html .ui-contentflow .flow .item .caption {
-  background-image: none !default;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src="contentflow/images/1x1_0.5_black.png") !default;
+  background-image: none;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src="contentflow/images/1x1_0.5_black.png");
 }
 
 .ui-contentflow {
   .flow .item {
     .caption a {
-      text-decoration: none !default;
-      color: white !default;
-      font-style: italic !default;
-      font-size: 0.8em !default;
+      text-decoration: none;
+      color: white;
+      font-style: italic;
+      font-size: 0.8em;
 
       &:link, &:visited, &:active {
-        text-decoration: none !default;
-        color: white !default;
-        font-style: italic !default;
-        font-size: 0.8em !default;
+        text-decoration: none;
+        color: white;
+        font-style: italic;
+        font-size: 0.8em;
       }
 
       &:hover {
-        text-decoration: none !default;
-        color: white !default;
-        font-style: italic !default;
-        font-size: 0.8em !default;
-        text-decoration: underline !default;
+        text-decoration: none;
+        color: white;
+        font-style: italic;
+        font-size: 0.8em;
+        text-decoration: underline;
       }
     }
 
     &.active .caption {
-      /*display: block !default;*/
+      /*display: block;*/
 
       /* uncomment to show caption inside item */
     }
   }
 
   .scrollbar {
-    width: 50% !default;
-    margin: 0px auto !default;
-    margin-top: 10px !default;
-    height: 16px !default;
-    background: url("contentflow/images/scrollbar_white.png") left center repeat-x !default;
-    position: relative !default;
-    overflow: visible !default;
+    width: 50%;
+    margin: 0px auto;
+    margin-top: 10px;
+    height: 16px;
+    background: url("contentflow/images/scrollbar_white.png") left center repeat-x;
+    position: relative;
+    overflow: visible;
 
     .slider {
-      width: 16px !default;
-      height: 16px !default;
-      background: url("contentflow/images/scrollbar_white.png") center center no-repeat !default;
-      cursor: move !default;
+      width: 16px;
+      height: 16px;
+      background: url("contentflow/images/scrollbar_white.png") center center no-repeat;
+      cursor: move;
     }
   }
 }
@@ -111,63 +111,63 @@
 /* only for IE <= 6 and a alphatransparent slider image */
 
 * html .ui-contentflow .scrollbar .slider {
-  background-image: none !default;
+  background-image: none;
 
   .virtualSlider {
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src="contentflow/images/scrollbar_white.png") !default;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src="contentflow/images/scrollbar_white.png");
   }
 }
 
 .ui-contentflow {
   .scrollbar .slider .position {
-    top: 120% !default;
-    font-size: 16px !default;
-    font-weight: bold !default;
-    color: silver !default;
+    top: 120%;
+    font-size: 16px;
+    font-weight: bold;
+    color: silver;
   }
 
   .globalCaption {
-    text-align: center !default;
-    font-weight: bold !default;
-    color: white !default;
-    font-size: 14px !default;
-    height: 20px !default;
-    margin: 2em auto !default;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+    height: 20px;
+    margin: 2em auto;
 
     .caption a {
-      text-decoration: none !default;
-      color: white !default;
-      font-style: italic !default;
-      font-size: 0.8em !default;
+      text-decoration: none;
+      color: white;
+      font-style: italic;
+      font-size: 0.8em;
 
       &:link, &:visited, &:active {
-        text-decoration: none !default;
-        color: white !default;
-        font-style: italic !default;
-        font-size: 0.8em !default;
+        text-decoration: none;
+        color: white;
+        font-style: italic;
+        font-size: 0.8em;
       }
 
       &:hover {
-        text-decoration: none !default;
-        color: white !default;
-        font-style: italic !default;
-        font-size: 0.8em !default;
-        text-decoration: underline !default;
+        text-decoration: none;
+        color: white;
+        font-style: italic;
+        font-size: 0.8em;
+        text-decoration: underline;
       }
     }
   }
 
   .loadIndicator {
-    width: 100% !default;
-    height: 100% !default;
-    top: 0px !default;
-    left: 0px !default;
-    background: black !default;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: black;
 
     .indicator {
-      background: url("contentflow/images/loader.gif") center center no-repeat !default;
-      width: 100% !default;
-      height: 100% !default;
+      background: url("contentflow/images/loader.gif") center center no-repeat;
+      width: 100%;
+      height: 100%;
     }
   }
 }
@@ -177,7 +177,7 @@
 /* ----- load indicator ----- */
 
 * html .ui-contentflow .loadIndicator .indicator {
-  height: 100px !default;
+  height: 100px;
 }
 
 /* ================================= */
@@ -190,103 +190,103 @@
  */
 
 .ui-contentflow {
-  position: relative !default;
+  position: relative;
 
   /* needed so overlay dimensions are constrained to the ui-contentflow */
-  overflow: hidden !default;
+  overflow: hidden;
 
   * {
-    margin: 0px !default;
-    padding: 0px !default;
+    margin: 0px;
+    padding: 0px;
 
-    /*border: none !default;*/
+    /*border: none;*/
   }
 
   img {
-    -ms-interpolation-mode: bicubic !default;
+    -ms-interpolation-mode: bicubic;
   }
 
   .mouseoverCheckElement {
-    position: absolute !default;
-    width: 0px !default;
-    height: 0px !default;
-    left: 0px !default;
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    left: 0px;
 
-    /*display: none !default;*/
-    visibility: hidden !default;
+    /*display: none;*/
+    visibility: hidden;
   }
 
   &:hover .mouseoverCheckElement {
-    left: 1px !default;
+    left: 1px;
 
-    /*width: 1px !default;*/
-    /*left: -1px !default;*/
-    /*background-color: red !default;*/
+    /*width: 1px;*/
+    /*left: -1px;*/
+    /*background-color: red;*/
   }
 
   .flow {
-    position: relative !default;
+    position: relative;
 
     /* needed  so that items can be positioned relative to flow*/
-    z-index: 0 !default;
+    z-index: 0;
 
     /* need so every item has a z-index relative to the flow-box */
-    visibility: hidden !default;
+    visibility: hidden;
 
     /* needed so that content is hidden while loading */
-    width: 100% !default;
+    width: 100%;
 
     /* needed for IE6 */
-    margin: 0 auto !default;
+    margin: 0 auto;
 
     &.hidden {
-      visibility: hidden !default;
+      visibility: hidden;
     }
 
     .item {
-      position: absolute !default;
+      position: absolute;
 
       /* needed */
-      visibility: hidden !default;
-      top: 0px !default;
-      left: 0px !default;
+      visibility: hidden;
+      top: 0px;
+      left: 0px;
 
       &.active {}
 
       .content {
-        display: block !default;
+        display: block;
       }
 
       div.content {
-        width: 100% !default;
-        height: 100% !default;
+        width: 100%;
+        height: 100%;
       }
 
       .label {
-        display: none !default;
+        display: none;
       }
 
       .reflection {
-        display: block !default;
+        display: block;
       }
 
       canvas.reflection {
-        margin-top: -1px !default;
+        margin-top: -1px;
 
         /* for FF */
       }
 
       .caption {
-        position: absolute !default;
+        position: absolute;
 
         /* needed */
-        display: none !default;
+        display: none;
 
         /* needed to hide it on inactive items */
       }
 
       &.active .caption {
-        /*display: block !default;*/
+        /*display: block;*/
 
         /* uncomment to show caption inside item */
       }
@@ -294,16 +294,16 @@
   }
 
   .scrollbar {
-    position: relative !default;
+    position: relative;
 
     /* needed for z-index */
-    z-index: 1 !default;
+    z-index: 1;
 
     /* set above flow */
-    visibility: hidden !default;
+    visibility: hidden;
 
     .slider {
-      position: absolute !default;
+      position: absolute;
 
       /* needed */
     }
@@ -313,31 +313,31 @@
 /* ----- scrollbar ----- */
 
 * html .ui-contentflow .scrollbar .slider .virtualSlider {
-  height: 100% !default;
+  height: 100%;
 }
 
 .ui-contentflow {
   .scrollbar .slider .position {
-    position: absolute !default;
+    position: absolute;
 
     /* needed */
-    text-align: center !default;
+    text-align: center;
   }
 
   .globalCaption {
-    position: relative !default;
+    position: relative;
 
     /* needed for z-index */
-    z-index: 1 !default;
+    z-index: 1;
 
     /* set above flow */
   }
 
   .loadIndicator {
-    position: absolute !default;
+    position: absolute;
 
     /* needed */
-    z-index: 65000 !default;
+    z-index: 65000;
 
     /* set above everything */
   }

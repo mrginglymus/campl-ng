@@ -12,31 +12,31 @@
 /* Some unsets */
 
 .ui-mobile {
-  height: 99.9% !default;
+  height: 99.9%;
 
   body {
-    height: 99.9% !default;
+    height: 99.9%;
   }
 
   fieldset {
-    padding: 0 !default;
-    margin: 0 !default;
+    padding: 0;
+    margin: 0;
   }
 }
 
 .ui-page {
-  padding: 0 !default;
-  margin: 0 !default;
+  padding: 0;
+  margin: 0;
 }
 
 .ui-mobile {
   a img {
-    border-width: 0 !default;
+    border-width: 0;
   }
 
   fieldset {
-    border-width: 0 !default;
-    min-width: 0 !default;
+    border-width: 0;
+    min-width: 0;
   }
 }
 
@@ -44,486 +44,486 @@
 
 @-moz-document url-prefix() {
   .ui-mobile fieldset {
-    display: table-column !default;
-    vertical-align: middle !default;
+    display: table-column;
+    vertical-align: middle;
   }
 }
 
 /* Viewport */
 
 .ui-mobile-viewport {
-  margin: 0 !default;
-  overflow-x: visible !default;
-  -webkit-text-size-adjust: 100% !default;
-  -ms-text-size-adjust: none !default;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !default;
+  margin: 0;
+  overflow-x: visible;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 /* Issue #2066 */
 
 body.ui-mobile-viewport, div.ui-mobile-viewport {
-  overflow-x: hidden !default;
+  overflow-x: hidden;
 }
 
 /* "page" containers - full-screen views, one should always be in view post-pageload */
 
 .ui-mobile {
   [data-role=page], [data-role=dialog] {
-    top: 0 !default;
-    left: 0 !default;
-    width: 100% !default;
-    min-height: 100% !default;
-    position: absolute !default;
-    display: none !default;
-    border: 0 !default;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+    display: none;
+    border: 0;
   }
 }
 
 .ui-page {
-  top: 0 !default;
-  left: 0 !default;
-  width: 100% !default;
-  min-height: 100% !default;
-  position: absolute !default;
-  display: none !default;
-  border: 0 !default;
-  outline: none !default;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  position: absolute;
+  display: none;
+  border: 0;
+  outline: none;
 }
 
 /* On ios4, setting focus on the page element causes flashing during transitions when there is an outline, so we turn off outlines */
 
 .ui-mobile .ui-page-active {
-  display: block !default;
-  overflow: visible !default;
-  overflow-x: hidden !default;
+  display: block;
+  overflow: visible;
+  overflow-x: hidden;
 }
 
 @media screen and (orientation: portrait) {
   .ui-mobile .ui-page {
-    min-height: 420px !default;
+    min-height: 420px;
   }
 }
 
 @media screen and (orientation: landscape) {
   .ui-mobile .ui-page {
-    min-height: 300px !default;
+    min-height: 300px;
   }
 }
 
 /* Fouc */
 
 .ui-mobile-rendering > * {
-  visibility: hidden !default;
+  visibility: hidden;
 }
 
 /* Non-js content hiding */
 
 .ui-nojs {
-  position: absolute !important !default;
-  height: 1px !default;
-  width: 1px !default;
-  overflow: hidden !default;
-  clip: rect(1px, 1px, 1px, 1px) !default;
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
 }
 
 /* Loading screen */
 
 .ui-loading .ui-loader {
-  display: block !default;
+  display: block;
 }
 
 .ui-loader {
-  display: none !default;
-  z-index: 9999999 !default;
-  position: fixed !default;
-  top: 50% !default;
-  left: 50% !default;
-  border: 0 !default;
+  display: none;
+  z-index: 9999999;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  border: 0;
 }
 
 .ui-loader-default {
-  background: none !default;
-  filter: Alpha(Opacity = 18) !default;
-  opacity: .18 !default;
-  width: 2.875em !default;
-  height: 2.875em !default;
-  margin-left: -1.4375em !default;
-  margin-top: -1.4375em !default;
+  background: none;
+  filter: Alpha(Opacity = 18);
+  opacity: .18;
+  width: 2.875em;
+  height: 2.875em;
+  margin-left: -1.4375em;
+  margin-top: -1.4375em;
 }
 
 .ui-loader-verbose {
-  width: 12.5em !default;
-  filter: Alpha(Opacity = 88) !default;
-  opacity: .88 !default;
-  box-shadow: 0 1px 1px -1px #fff !default;
-  height: auto !default;
-  margin-left: -6.875em !default;
-  margin-top: -2.6875em !default;
-  padding: .625em !default;
+  width: 12.5em;
+  filter: Alpha(Opacity = 88);
+  opacity: .88;
+  box-shadow: 0 1px 1px -1px #fff;
+  height: auto;
+  margin-left: -6.875em;
+  margin-top: -2.6875em;
+  padding: .625em;
 }
 
 .ui-loader-default h1 {
-  font-size: 0 !default;
-  width: 0 !default;
-  height: 0 !default;
-  overflow: hidden !default;
+  font-size: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 .ui-loader-verbose h1 {
-  font-size: 1em !default;
-  margin: 0 !default;
-  text-align: center !default;
+  font-size: 1em;
+  margin: 0;
+  text-align: center;
 }
 
 .ui-loader .ui-icon-loading {
-  background-color: #000 !default;
-  display: block !default;
-  margin: 0 !default;
-  width: 2.75em !default;
-  height: 2.75em !default;
-  padding: .0625em !default;
-  -webkit-border-radius: 2.25em !default;
-  border-radius: 2.25em !default;
+  background-color: #000;
+  display: block;
+  margin: 0;
+  width: 2.75em;
+  height: 2.75em;
+  padding: .0625em;
+  -webkit-border-radius: 2.25em;
+  border-radius: 2.25em;
 }
 
 .ui-loader-verbose .ui-icon-loading {
-  margin: 0 auto .625em !default;
-  filter: Alpha(Opacity = 75) !default;
-  opacity: .75 !default;
+  margin: 0 auto .625em;
+  filter: Alpha(Opacity = 75);
+  opacity: .75;
 }
 
 .ui-loader-textonly {
-  padding: .9375em !default;
-  margin-left: -7.1875em !default;
+  padding: .9375em;
+  margin-left: -7.1875em;
 
   .ui-icon-loading {
-    display: none !default;
+    display: none;
   }
 }
 
 .ui-loader-fakefix {
-  position: absolute !default;
+  position: absolute;
 }
 
 /* Headers, content panels */
 
 .ui-bar, .ui-body {
-  position: relative !default;
-  padding: .4em 1em !default;
-  overflow: hidden !default;
-  display: block !default;
-  clear: both !default;
+  position: relative;
+  padding: .4em 1em;
+  overflow: hidden;
+  display: block;
+  clear: both;
 }
 
 .ui-bar {
   h1, h2, h3, h4, h5, h6 {
-    margin: 0 !default;
-    padding: 0 !default;
-    font-size: 1em !default;
-    display: inline-block !default;
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    display: inline-block;
   }
 }
 
 .ui-header, .ui-footer {
-  border-width: 1px 0 !default;
-  border-style: solid !default;
-  position: relative !default;
+  border-width: 1px 0;
+  border-style: solid;
+  position: relative;
 }
 
 .ui-header:empty, .ui-footer:empty {
-  min-height: 2.6875em !default;
+  min-height: 2.6875em;
 }
 
 .ui-header .ui-title {
-  font-size: 1em !default;
-  min-height: 1.1em !default;
-  text-align: center !default;
-  display: block !default;
-  margin: 0 30% !default;
-  padding: .7em 0 !default;
-  text-overflow: ellipsis !default;
-  overflow: hidden !default;
-  white-space: nowrap !default;
-  outline: 0 !important !default;
+  font-size: 1em;
+  min-height: 1.1em;
+  text-align: center;
+  display: block;
+  margin: 0 30%;
+  padding: .7em 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  outline: 0 !important;
 }
 
 .ui-footer .ui-title {
-  font-size: 1em !default;
-  min-height: 1.1em !default;
-  text-align: center !default;
-  display: block !default;
-  margin: 0 30% !default;
-  padding: .7em 0 !default;
-  text-overflow: ellipsis !default;
-  overflow: hidden !default;
-  white-space: nowrap !default;
-  outline: 0 !important !default;
-  margin: 0 1em !default;
+  font-size: 1em;
+  min-height: 1.1em;
+  text-align: center;
+  display: block;
+  margin: 0 30%;
+  padding: .7em 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  outline: 0 !important;
+  margin: 0 1em;
 }
 
 .ui-content {
-  border-width: 0 !default;
-  overflow: visible !default;
-  overflow-x: hidden !default;
-  padding: 1em !default;
+  border-width: 0;
+  overflow: visible;
+  overflow-x: hidden;
+  padding: 1em;
 }
 
 /* Corner styling for dialogs and popups */
 
 .ui-corner-all > {
   .ui-header:first-child, .ui-content:first-child, .ui-footer:first-child {
-    -webkit-border-top-left-radius: inherit !default;
-    border-top-left-radius: inherit !default;
-    -webkit-border-top-right-radius: inherit !default;
-    border-top-right-radius: inherit !default;
+    -webkit-border-top-left-radius: inherit;
+    border-top-left-radius: inherit;
+    -webkit-border-top-right-radius: inherit;
+    border-top-right-radius: inherit;
   }
 
   .ui-header:last-child, .ui-content:last-child, .ui-footer:last-child {
-    -webkit-border-bottom-left-radius: inherit !default;
-    border-bottom-left-radius: inherit !default;
-    -webkit-border-bottom-right-radius: inherit !default;
-    border-bottom-right-radius: inherit !default;
+    -webkit-border-bottom-left-radius: inherit;
+    border-bottom-left-radius: inherit;
+    -webkit-border-bottom-right-radius: inherit;
+    border-bottom-right-radius: inherit;
   }
 }
 
 /* Buttons and icons */
 
 .ui-btn {
-  font-size: 16px !default;
-  margin: .5em 0 !default;
-  padding: .7em 1em !default;
-  display: block !default;
-  position: relative !default;
-  text-align: center !default;
-  text-overflow: ellipsis !default;
-  overflow: hidden !default;
-  white-space: nowrap !default;
-  cursor: pointer !default;
-  -webkit-user-select: none !default;
-  -moz-user-select: none !default;
-  -ms-user-select: none !default;
-  user-select: none !default;
+  font-size: 16px;
+  margin: .5em 0;
+  padding: .7em 1em;
+  display: block;
+  position: relative;
+  text-align: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .ui-btn-icon-notext, .ui-header button.ui-btn.ui-btn-icon-notext, .ui-footer button.ui-btn.ui-btn-icon-notext {
-  padding: 0 !default;
-  width: 1.75em !default;
-  height: 1.75em !default;
-  text-indent: -9999px !default;
-  white-space: nowrap !important !default;
+  padding: 0;
+  width: 1.75em;
+  height: 1.75em;
+  text-indent: -9999px;
+  white-space: nowrap !important;
 }
 
 .ui-mini {
-  font-size: 12.5px !default;
+  font-size: 12.5px;
 
   .ui-btn {
-    font-size: inherit !default;
+    font-size: inherit;
   }
 }
 
 /* Make buttons in toolbars default to mini and inline. */
 
 .ui-header .ui-btn, .ui-footer .ui-btn {
-  font-size: 12.5px !default;
-  display: inline-block !default;
-  vertical-align: middle !default;
+  font-size: 12.5px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .ui-header .ui-controlgroup .ui-btn-icon-notext, .ui-footer .ui-controlgroup .ui-btn-icon-notext {
-  font-size: 12.5px !default;
+  font-size: 12.5px;
 }
 
 /* To ensure same top and left/right position when ui-btn-left/right are added to something other than buttons. */
 
 .ui-header {
   .ui-btn-left, .ui-btn-right {
-    font-size: 12.5px !default;
+    font-size: 12.5px;
   }
 }
 
 .ui-mini {
   &.ui-btn-icon-notext, .ui-btn-icon-notext {
-    font-size: 16px !default;
-    padding: 0 !default;
+    font-size: 16px;
+    padding: 0;
   }
 }
 
 .ui-header .ui-btn-icon-notext, .ui-footer .ui-btn-icon-notext {
-  font-size: 16px !default;
-  padding: 0 !default;
+  font-size: 16px;
+  padding: 0;
 }
 
 .ui-btn-inline {
-  display: inline-block !default;
-  vertical-align: middle !default;
-  margin-right: .625em !default;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: .625em;
 }
 
 .ui-btn-icon-left {
-  padding-left: 2.5em !default;
+  padding-left: 2.5em;
 }
 
 .ui-btn-icon-right {
-  padding-right: 2.5em !default;
+  padding-right: 2.5em;
 }
 
 .ui-btn-icon-top {
-  padding-top: 2.5em !default;
+  padding-top: 2.5em;
 }
 
 .ui-btn-icon-bottom {
-  padding-bottom: 2.5em !default;
+  padding-bottom: 2.5em;
 }
 
 .ui-header .ui-btn-icon-top, .ui-footer .ui-btn-icon-top, .ui-header .ui-btn-icon-bottom, .ui-footer .ui-btn-icon-bottom {
-  padding-left: .3125em !default;
-  padding-right: .3125em !default;
+  padding-left: .3125em;
+  padding-right: .3125em;
 }
 
 .ui-btn-icon-left:after, .ui-btn-icon-right:after, .ui-btn-icon-top:after, .ui-btn-icon-bottom:after {
-  content: "" !default;
-  position: absolute !default;
-  display: block !default;
-  width: 22px !default;
-  height: 22px !default;
+  content: "";
+  position: absolute;
+  display: block;
+  width: 22px;
+  height: 22px;
 }
 
 .ui-btn-icon-notext:after {
-  content: "" !default;
-  position: absolute !default;
-  display: block !default;
-  width: 22px !default;
-  height: 22px !default;
-  top: 50% !default;
-  margin-top: -11px !default;
+  content: "";
+  position: absolute;
+  display: block;
+  width: 22px;
+  height: 22px;
+  top: 50%;
+  margin-top: -11px;
 }
 
 .ui-btn-icon-left:after, .ui-btn-icon-right:after {
-  top: 50% !default;
-  margin-top: -11px !default;
+  top: 50%;
+  margin-top: -11px;
 }
 
 .ui-btn-icon-left:after {
-  left: .5625em !default;
+  left: .5625em;
 }
 
 .ui-btn-icon-right:after {
-  right: .5625em !default;
+  right: .5625em;
 }
 
 .ui-mini {
   &.ui-btn-icon-left:after, .ui-btn-icon-left:after {
-    left: .37em !default;
+    left: .37em;
   }
 }
 
 .ui-header .ui-btn-icon-left:after, .ui-footer .ui-btn-icon-left:after {
-  left: .37em !default;
+  left: .37em;
 }
 
 .ui-mini {
   &.ui-btn-icon-right:after, .ui-btn-icon-right:after {
-    right: .37em !default;
+    right: .37em;
   }
 }
 
 .ui-header .ui-btn-icon-right:after, .ui-footer .ui-btn-icon-right:after {
-  right: .37em !default;
+  right: .37em;
 }
 
 .ui-btn-icon-notext:after, .ui-btn-icon-top:after, .ui-btn-icon-bottom:after {
-  left: 50% !default;
-  margin-left: -11px !default;
+  left: 50%;
+  margin-left: -11px;
 }
 
 .ui-btn-icon-top:after {
-  top: .5625em !default;
+  top: .5625em;
 }
 
 .ui-btn-icon-bottom:after {
-  top: auto !default;
-  bottom: .5625em !default;
+  top: auto;
+  bottom: .5625em;
 }
 
 /* Buttons in header position classes */
 
 .ui-header {
   .ui-btn-left, .ui-btn-right {
-    margin: 0 !default;
+    margin: 0;
   }
 }
 
 .ui-btn-left > [class*="ui-"], .ui-btn-right > [class*="ui-"] {
-  margin: 0 !default;
+  margin: 0;
 }
 
 .ui-btn-left, .ui-btn-right {
-  position: absolute !default;
-  top: .24em !default;
+  position: absolute;
+  top: .24em;
 }
 
 .ui-btn-left {
-  left: .4em !default;
+  left: .4em;
 }
 
 .ui-btn-right {
-  right: .4em !default;
+  right: .4em;
 }
 
 .ui-btn-icon-notext {
   &.ui-btn-left {
-    top: .3125em !default;
-    left: .3125em !default;
+    top: .3125em;
+    left: .3125em;
   }
 
   &.ui-btn-right {
-    top: .3125em !default;
-    right: .3125em !default;
+    top: .3125em;
+    right: .3125em;
   }
 }
 
 /* Button elements */
 
 button.ui-btn, .ui-controlgroup-controls button.ui-btn-icon-notext {
-  -webkit-box-sizing: border-box !default;
-  -moz-box-sizing: border-box !default;
-  box-sizing: border-box !default;
-  -webkit-appearance: none !default;
-  -moz-appearance: none !default;
-  width: 100% !default;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
 }
 
 button.ui-btn-inline, .ui-header button.ui-btn, .ui-footer button.ui-btn {
-  width: auto !default;
+  width: auto;
 }
 
 /* Firefox adds a 1px border in a button element. We negate this to make sure they have the same height as other buttons in controlgroups. */
 
 button {
   &.ui-btn::-moz-focus-inner {
-    border: 0 !default;
+    border: 0;
   }
 
   &.ui-btn-icon-notext {
-    -webkit-box-sizing: content-box !default;
-    -moz-box-sizing: content-box !default;
-    box-sizing: content-box !default;
-    width: 1.75em !default;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    width: 1.75em;
   }
 }
 
 .ui-controlgroup-horizontal .ui-controlgroup-controls button.ui-btn {
-  -webkit-box-sizing: content-box !default;
-  -moz-box-sizing: content-box !default;
-  box-sizing: content-box !default;
-  width: 1.75em !default;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 1.75em;
 }
 
 /* Form labels */
 
 .ui-mobile label, .ui-controlgroup-label {
-  display: block !default;
-  margin: 0 0 .4em !default;
+  display: block;
+  margin: 0 0 .4em;
 }
 
 /* Accessible content hiding */
@@ -531,484 +531,484 @@ button {
 
 .ui-hide-label {
   > label, .ui-controlgroup-label, .ui-rangeslider label {
-    position: absolute !important !default;
-    height: 1px !default;
-    width: 1px !default;
-    overflow: hidden !default;
-    clip: rect(1px, 1px, 1px, 1px) !default;
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
   }
 }
 
 .ui-hidden-accessible {
-  position: absolute !important !default;
-  height: 1px !default;
-  width: 1px !default;
-  overflow: hidden !default;
-  clip: rect(1px, 1px, 1px, 1px) !default;
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
 }
 
-/* Used for hiding elements by the filterable widget. You can also use this class to hide list items or buttons in controlgroups !default; this ensures correct corner styling. */
+/* Used for hiding elements by the filterable widget. You can also use this class to hide list items or buttons in controlgroups; this ensures correct corner styling. */
 
 .ui-screen-hidden {
-  display: none !important !default;
+  display: none !important;
 }
 
 /* Transitions originally inspired by those from jQtouch, nice work, folks */
 
 .ui-mobile-viewport-transitioning {
-  width: 100% !default;
-  height: 100% !default;
-  overflow: hidden !default;
-  -webkit-box-sizing: border-box !default;
-  -moz-box-sizing: border-box !default;
-  box-sizing: border-box !default;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 
   .ui-page {
-    width: 100% !default;
-    height: 100% !default;
-    overflow: hidden !default;
-    -webkit-box-sizing: border-box !default;
-    -moz-box-sizing: border-box !default;
-    box-sizing: border-box !default;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
   }
 }
 
 .ui-page-pre-in {
-  opacity: 0 !default;
+  opacity: 0;
 }
 
 .in {
-  -webkit-animation-timing-function: ease-out !default;
-  -webkit-animation-duration: 350ms !default;
-  -moz-animation-timing-function: ease-out !default;
-  -moz-animation-duration: 350ms !default;
-  animation-timing-function: ease-out !default;
-  animation-duration: 350ms !default;
+  -webkit-animation-timing-function: ease-out;
+  -webkit-animation-duration: 350ms;
+  -moz-animation-timing-function: ease-out;
+  -moz-animation-duration: 350ms;
+  animation-timing-function: ease-out;
+  animation-duration: 350ms;
 }
 
 .out {
-  -webkit-animation-timing-function: ease-in !default;
-  -webkit-animation-duration: 225ms !default;
-  -moz-animation-timing-function: ease-in !default;
-  -moz-animation-duration: 225ms !default;
-  animation-timing-function: ease-in !default;
-  animation-duration: 225ms !default;
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-duration: 225ms;
+  -moz-animation-timing-function: ease-in;
+  -moz-animation-duration: 225ms;
+  animation-timing-function: ease-in;
+  animation-duration: 225ms;
 }
 
 @-webkit-keyframes fadein {
   from {
-    opacity: 0 !default;
+    opacity: 0;
   }
 
   to {
-    opacity: 1 !default;
+    opacity: 1;
   }
 }
 
 @-moz-keyframes fadein {
   from {
-    opacity: 0 !default;
+    opacity: 0;
   }
 
   to {
-    opacity: 1 !default;
+    opacity: 1;
   }
 }
 
 @keyframes fadein {
   from {
-    opacity: 0 !default;
+    opacity: 0;
   }
 
   to {
-    opacity: 1 !default;
+    opacity: 1;
   }
 }
 
 @-webkit-keyframes fadeout {
   from {
-    opacity: 1 !default;
+    opacity: 1;
   }
 
   to {
-    opacity: 0 !default;
+    opacity: 0;
   }
 }
 
 @-moz-keyframes fadeout {
   from {
-    opacity: 1 !default;
+    opacity: 1;
   }
 
   to {
-    opacity: 0 !default;
+    opacity: 0;
   }
 }
 
 @keyframes fadeout {
   from {
-    opacity: 1 !default;
+    opacity: 1;
   }
 
   to {
-    opacity: 0 !default;
+    opacity: 0;
   }
 }
 
 .fade {
   &.out {
-    opacity: 0 !default;
-    -webkit-animation-duration: 125ms !default;
-    -webkit-animation-name: fadeout !default;
-    -moz-animation-duration: 125ms !default;
-    -moz-animation-name: fadeout !default;
-    animation-duration: 125ms !default;
-    animation-name: fadeout !default;
+    opacity: 0;
+    -webkit-animation-duration: 125ms;
+    -webkit-animation-name: fadeout;
+    -moz-animation-duration: 125ms;
+    -moz-animation-name: fadeout;
+    animation-duration: 125ms;
+    animation-name: fadeout;
   }
 
   &.in {
-    opacity: 1 !default;
-    -webkit-animation-duration: 225ms !default;
-    -webkit-animation-name: fadein !default;
-    -moz-animation-duration: 225ms !default;
-    -moz-animation-name: fadein !default;
-    animation-duration: 225ms !default;
-    animation-name: fadein !default;
+    opacity: 1;
+    -webkit-animation-duration: 225ms;
+    -webkit-animation-name: fadein;
+    -moz-animation-duration: 225ms;
+    -moz-animation-name: fadein;
+    animation-duration: 225ms;
+    animation-name: fadein;
   }
 }
 
 .pop {
-  -webkit-transform-origin: 50% 50% !default;
-  -moz-transform-origin: 50% 50% !default;
-  transform-origin: 50% 50% !default;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
 
   &.in {
-    -webkit-transform: scale(1) !default;
-    -webkit-animation-name: popin !default;
-    -webkit-animation-duration: 350ms !default;
-    -moz-transform: scale(1) !default;
-    -moz-animation-name: popin !default;
-    -moz-animation-duration: 350ms !default;
-    transform: scale(1) !default;
-    animation-name: popin !default;
-    animation-duration: 350ms !default;
-    opacity: 1 !default;
+    -webkit-transform: scale(1);
+    -webkit-animation-name: popin;
+    -webkit-animation-duration: 350ms;
+    -moz-transform: scale(1);
+    -moz-animation-name: popin;
+    -moz-animation-duration: 350ms;
+    transform: scale(1);
+    animation-name: popin;
+    animation-duration: 350ms;
+    opacity: 1;
   }
 
   &.out {
-    -webkit-animation-name: fadeout !default;
-    -webkit-animation-duration: 100ms !default;
-    -moz-animation-name: fadeout !default;
-    -moz-animation-duration: 100ms !default;
-    animation-name: fadeout !default;
-    animation-duration: 100ms !default;
-    opacity: 0 !default;
+    -webkit-animation-name: fadeout;
+    -webkit-animation-duration: 100ms;
+    -moz-animation-name: fadeout;
+    -moz-animation-duration: 100ms;
+    animation-name: fadeout;
+    animation-duration: 100ms;
+    opacity: 0;
   }
 
   &.in.reverse {
-    -webkit-animation-name: fadein !default;
-    -moz-animation-name: fadein !default;
-    animation-name: fadein !default;
+    -webkit-animation-name: fadein;
+    -moz-animation-name: fadein;
+    animation-name: fadein;
   }
 
   &.out.reverse {
-    -webkit-transform: scale(0.8) !default;
-    -webkit-animation-name: popout !default;
-    -moz-transform: scale(0.8) !default;
-    -moz-animation-name: popout !default;
-    transform: scale(0.8) !default;
-    animation-name: popout !default;
+    -webkit-transform: scale(0.8);
+    -webkit-animation-name: popout;
+    -moz-transform: scale(0.8);
+    -moz-animation-name: popout;
+    transform: scale(0.8);
+    animation-name: popout;
   }
 }
 
 @-webkit-keyframes popin {
   from {
-    -webkit-transform: scale(0.8) !default;
-    opacity: 0 !default;
+    -webkit-transform: scale(0.8);
+    opacity: 0;
   }
 
   to {
-    -webkit-transform: scale(1) !default;
-    opacity: 1 !default;
+    -webkit-transform: scale(1);
+    opacity: 1;
   }
 }
 
 @-moz-keyframes popin {
   from {
-    -moz-transform: scale(0.8) !default;
-    opacity: 0 !default;
+    -moz-transform: scale(0.8);
+    opacity: 0;
   }
 
   to {
-    -moz-transform: scale(1) !default;
-    opacity: 1 !default;
+    -moz-transform: scale(1);
+    opacity: 1;
   }
 }
 
 @keyframes popin {
   from {
-    transform: scale(0.8) !default;
-    opacity: 0 !default;
+    transform: scale(0.8);
+    opacity: 0;
   }
 
   to {
-    transform: scale(1) !default;
-    opacity: 1 !default;
+    transform: scale(1);
+    opacity: 1;
   }
 }
 
 @-webkit-keyframes popout {
   from {
-    -webkit-transform: scale(1) !default;
-    opacity: 1 !default;
+    -webkit-transform: scale(1);
+    opacity: 1;
   }
 
   to {
-    -webkit-transform: scale(0.8) !default;
-    opacity: 0 !default;
+    -webkit-transform: scale(0.8);
+    opacity: 0;
   }
 }
 
 @-moz-keyframes popout {
   from {
-    -moz-transform: scale(1) !default;
-    opacity: 1 !default;
+    -moz-transform: scale(1);
+    opacity: 1;
   }
 
   to {
-    -moz-transform: scale(0.8) !default;
-    opacity: 0 !default;
+    -moz-transform: scale(0.8);
+    opacity: 0;
   }
 }
 
 @keyframes popout {
   from {
-    transform: scale(1) !default;
-    opacity: 1 !default;
+    transform: scale(1);
+    opacity: 1;
   }
 
   to {
-    transform: scale(0.8) !default;
-    opacity: 0 !default;
+    transform: scale(0.8);
+    opacity: 0;
   }
 }
 
 /* keyframes for slidein from sides */
 @-webkit-keyframes slideinfromright {
   from {
-    -webkit-transform: translate3d(100%, 0, 0) !default;
+    -webkit-transform: translate3d(100%, 0, 0);
   }
 
   to {
-    -webkit-transform: translate3d(0, 0, 0) !default;
+    -webkit-transform: translate3d(0, 0, 0);
   }
 }
 
 @-moz-keyframes slideinfromright {
   from {
-    -moz-transform: translateX(100%) !default;
+    -moz-transform: translateX(100%);
   }
 
   to {
-    -moz-transform: translateX(0) !default;
+    -moz-transform: translateX(0);
   }
 }
 
 @keyframes slideinfromright {
   from {
-    transform: translateX(100%) !default;
+    transform: translateX(100%);
   }
 
   to {
-    transform: translateX(0) !default;
+    transform: translateX(0);
   }
 }
 
 @-webkit-keyframes slideinfromleft {
   from {
-    -webkit-transform: translate3d(-100%, 0, 0) !default;
+    -webkit-transform: translate3d(-100%, 0, 0);
   }
 
   to {
-    -webkit-transform: translate3d(0, 0, 0) !default;
+    -webkit-transform: translate3d(0, 0, 0);
   }
 }
 
 @-moz-keyframes slideinfromleft {
   from {
-    -moz-transform: translateX(-100%) !default;
+    -moz-transform: translateX(-100%);
   }
 
   to {
-    -moz-transform: translateX(0) !default;
+    -moz-transform: translateX(0);
   }
 }
 
 @keyframes slideinfromleft {
   from {
-    transform: translateX(-100%) !default;
+    transform: translateX(-100%);
   }
 
   to {
-    transform: translateX(0) !default;
+    transform: translateX(0);
   }
 }
 
 /* keyframes for slideout to sides */
 @-webkit-keyframes slideouttoleft {
   from {
-    -webkit-transform: translate3d(0, 0, 0) !default;
+    -webkit-transform: translate3d(0, 0, 0);
   }
 
   to {
-    -webkit-transform: translate3d(-100%, 0, 0) !default;
+    -webkit-transform: translate3d(-100%, 0, 0);
   }
 }
 
 @-moz-keyframes slideouttoleft {
   from {
-    -moz-transform: translateX(0) !default;
+    -moz-transform: translateX(0);
   }
 
   to {
-    -moz-transform: translateX(-100%) !default;
+    -moz-transform: translateX(-100%);
   }
 }
 
 @keyframes slideouttoleft {
   from {
-    transform: translateX(0) !default;
+    transform: translateX(0);
   }
 
   to {
-    transform: translateX(-100%) !default;
+    transform: translateX(-100%);
   }
 }
 
 @-webkit-keyframes slideouttoright {
   from {
-    -webkit-transform: translate3d(0, 0, 0) !default;
+    -webkit-transform: translate3d(0, 0, 0);
   }
 
   to {
-    -webkit-transform: translate3d(100%, 0, 0) !default;
+    -webkit-transform: translate3d(100%, 0, 0);
   }
 }
 
 @-moz-keyframes slideouttoright {
   from {
-    -moz-transform: translateX(0) !default;
+    -moz-transform: translateX(0);
   }
 
   to {
-    -moz-transform: translateX(100%) !default;
+    -moz-transform: translateX(100%);
   }
 }
 
 @keyframes slideouttoright {
   from {
-    transform: translateX(0) !default;
+    transform: translateX(0);
   }
 
   to {
-    transform: translateX(100%) !default;
+    transform: translateX(100%);
   }
 }
 
 .slide {
   &.out, &.in {
-    -webkit-animation-timing-function: ease-out !default;
-    -webkit-animation-duration: 350ms !default;
-    -moz-animation-timing-function: ease-out !default;
-    -moz-animation-duration: 350ms !default;
-    animation-timing-function: ease-out !default;
-    animation-duration: 350ms !default;
+    -webkit-animation-timing-function: ease-out;
+    -webkit-animation-duration: 350ms;
+    -moz-animation-timing-function: ease-out;
+    -moz-animation-duration: 350ms;
+    animation-timing-function: ease-out;
+    animation-duration: 350ms;
   }
 
   &.out {
-    -webkit-transform: translate3d(-100%, 0, 0) !default;
-    -webkit-animation-name: slideouttoleft !default;
-    -moz-transform: translateX(-100%) !default;
-    -moz-animation-name: slideouttoleft !default;
-    transform: translateX(-100%) !default;
-    animation-name: slideouttoleft !default;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    -webkit-animation-name: slideouttoleft;
+    -moz-transform: translateX(-100%);
+    -moz-animation-name: slideouttoleft;
+    transform: translateX(-100%);
+    animation-name: slideouttoleft;
   }
 
   &.in {
-    -webkit-transform: translate3d(0, 0, 0) !default;
-    -webkit-animation-name: slideinfromright !default;
-    -moz-transform: translateX(0) !default;
-    -moz-animation-name: slideinfromright !default;
-    transform: translateX(0) !default;
-    animation-name: slideinfromright !default;
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-animation-name: slideinfromright;
+    -moz-transform: translateX(0);
+    -moz-animation-name: slideinfromright;
+    transform: translateX(0);
+    animation-name: slideinfromright;
   }
 
   &.out.reverse {
-    -webkit-transform: translate3d(100%, 0, 0) !default;
-    -webkit-animation-name: slideouttoright !default;
-    -moz-transform: translateX(100%) !default;
-    -moz-animation-name: slideouttoright !default;
-    transform: translateX(100%) !default;
-    animation-name: slideouttoright !default;
+    -webkit-transform: translate3d(100%, 0, 0);
+    -webkit-animation-name: slideouttoright;
+    -moz-transform: translateX(100%);
+    -moz-animation-name: slideouttoright;
+    transform: translateX(100%);
+    animation-name: slideouttoright;
   }
 
   &.in.reverse {
-    -webkit-transform: translate3d(0, 0, 0) !default;
-    -webkit-animation-name: slideinfromleft !default;
-    -moz-transform: translateX(0) !default;
-    -moz-animation-name: slideinfromleft !default;
-    transform: translateX(0) !default;
-    animation-name: slideinfromleft !default;
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-animation-name: slideinfromleft;
+    -moz-transform: translateX(0);
+    -moz-animation-name: slideinfromleft;
+    transform: translateX(0);
+    animation-name: slideinfromleft;
   }
 }
 
 .slidefade {
   &.out {
-    -webkit-transform: translateX(-100%) !default;
-    -webkit-animation-name: slideouttoleft !default;
-    -webkit-animation-duration: 225ms !default;
-    -moz-transform: translateX(-100%) !default;
-    -moz-animation-name: slideouttoleft !default;
-    -moz-animation-duration: 225ms !default;
-    transform: translateX(-100%) !default;
-    animation-name: slideouttoleft !default;
-    animation-duration: 225ms !default;
+    -webkit-transform: translateX(-100%);
+    -webkit-animation-name: slideouttoleft;
+    -webkit-animation-duration: 225ms;
+    -moz-transform: translateX(-100%);
+    -moz-animation-name: slideouttoleft;
+    -moz-animation-duration: 225ms;
+    transform: translateX(-100%);
+    animation-name: slideouttoleft;
+    animation-duration: 225ms;
   }
 
   &.in {
-    -webkit-transform: translateX(0) !default;
-    -webkit-animation-name: fadein !default;
-    -webkit-animation-duration: 200ms !default;
-    -moz-transform: translateX(0) !default;
-    -moz-animation-name: fadein !default;
-    -moz-animation-duration: 200ms !default;
-    transform: translateX(0) !default;
-    animation-name: fadein !default;
-    animation-duration: 200ms !default;
+    -webkit-transform: translateX(0);
+    -webkit-animation-name: fadein;
+    -webkit-animation-duration: 200ms;
+    -moz-transform: translateX(0);
+    -moz-animation-name: fadein;
+    -moz-animation-duration: 200ms;
+    transform: translateX(0);
+    animation-name: fadein;
+    animation-duration: 200ms;
   }
 
   &.out.reverse {
-    -webkit-transform: translateX(100%) !default;
-    -webkit-animation-name: slideouttoright !default;
-    -webkit-animation-duration: 200ms !default;
-    -moz-transform: translateX(100%) !default;
-    -moz-animation-name: slideouttoright !default;
-    -moz-animation-duration: 200ms !default;
-    transform: translateX(100%) !default;
-    animation-name: slideouttoright !default;
-    animation-duration: 200ms !default;
+    -webkit-transform: translateX(100%);
+    -webkit-animation-name: slideouttoright;
+    -webkit-animation-duration: 200ms;
+    -moz-transform: translateX(100%);
+    -moz-animation-name: slideouttoright;
+    -moz-animation-duration: 200ms;
+    transform: translateX(100%);
+    animation-name: slideouttoright;
+    animation-duration: 200ms;
   }
 
   &.in.reverse {
-    -webkit-transform: translateX(0) !default;
-    -webkit-animation-name: fadein !default;
-    -webkit-animation-duration: 200ms !default;
-    -moz-transform: translateX(0) !default;
-    -moz-animation-name: fadein !default;
-    -moz-animation-duration: 200ms !default;
-    transform: translateX(0) !default;
-    animation-name: fadein !default;
-    animation-duration: 200ms !default;
+    -webkit-transform: translateX(0);
+    -webkit-animation-name: fadein;
+    -webkit-animation-duration: 200ms;
+    -moz-transform: translateX(0);
+    -moz-animation-name: fadein;
+    -moz-animation-duration: 200ms;
+    transform: translateX(0);
+    animation-name: fadein;
+    animation-duration: 200ms;
   }
 }
 
@@ -1016,105 +1016,105 @@ button {
 
 .slidedown {
   &.out {
-    -webkit-animation-name: fadeout !default;
-    -webkit-animation-duration: 100ms !default;
-    -moz-animation-name: fadeout !default;
-    -moz-animation-duration: 100ms !default;
-    animation-name: fadeout !default;
-    animation-duration: 100ms !default;
+    -webkit-animation-name: fadeout;
+    -webkit-animation-duration: 100ms;
+    -moz-animation-name: fadeout;
+    -moz-animation-duration: 100ms;
+    animation-name: fadeout;
+    animation-duration: 100ms;
   }
 
   &.in {
-    -webkit-transform: translateY(0) !default;
-    -webkit-animation-name: slideinfromtop !default;
-    -webkit-animation-duration: 250ms !default;
-    -moz-transform: translateY(0) !default;
-    -moz-animation-name: slideinfromtop !default;
-    -moz-animation-duration: 250ms !default;
-    transform: translateY(0) !default;
-    animation-name: slideinfromtop !default;
-    animation-duration: 250ms !default;
+    -webkit-transform: translateY(0);
+    -webkit-animation-name: slideinfromtop;
+    -webkit-animation-duration: 250ms;
+    -moz-transform: translateY(0);
+    -moz-animation-name: slideinfromtop;
+    -moz-animation-duration: 250ms;
+    transform: translateY(0);
+    animation-name: slideinfromtop;
+    animation-duration: 250ms;
 
     &.reverse {
-      -webkit-animation-name: fadein !default;
-      -webkit-animation-duration: 150ms !default;
-      -moz-animation-name: fadein !default;
-      -moz-animation-duration: 150ms !default;
-      animation-name: fadein !default;
-      animation-duration: 150ms !default;
+      -webkit-animation-name: fadein;
+      -webkit-animation-duration: 150ms;
+      -moz-animation-name: fadein;
+      -moz-animation-duration: 150ms;
+      animation-name: fadein;
+      animation-duration: 150ms;
     }
   }
 
   &.out.reverse {
-    -webkit-transform: translateY(-100%) !default;
-    -webkit-animation-name: slideouttotop !default;
-    -webkit-animation-duration: 200ms !default;
-    -moz-transform: translateY(-100%) !default;
-    -moz-animation-name: slideouttotop !default;
-    -moz-animation-duration: 200ms !default;
-    transform: translateY(-100%) !default;
-    animation-name: slideouttotop !default;
-    animation-duration: 200ms !default;
+    -webkit-transform: translateY(-100%);
+    -webkit-animation-name: slideouttotop;
+    -webkit-animation-duration: 200ms;
+    -moz-transform: translateY(-100%);
+    -moz-animation-name: slideouttotop;
+    -moz-animation-duration: 200ms;
+    transform: translateY(-100%);
+    animation-name: slideouttotop;
+    animation-duration: 200ms;
   }
 }
 
 @-webkit-keyframes slideinfromtop {
   from {
-    -webkit-transform: translateY(-100%) !default;
+    -webkit-transform: translateY(-100%);
   }
 
   to {
-    -webkit-transform: translateY(0) !default;
+    -webkit-transform: translateY(0);
   }
 }
 
 @-moz-keyframes slideinfromtop {
   from {
-    -moz-transform: translateY(-100%) !default;
+    -moz-transform: translateY(-100%);
   }
 
   to {
-    -moz-transform: translateY(0) !default;
+    -moz-transform: translateY(0);
   }
 }
 
 @keyframes slideinfromtop {
   from {
-    transform: translateY(-100%) !default;
+    transform: translateY(-100%);
   }
 
   to {
-    transform: translateY(0) !default;
+    transform: translateY(0);
   }
 }
 
 @-webkit-keyframes slideouttotop {
   from {
-    -webkit-transform: translateY(0) !default;
+    -webkit-transform: translateY(0);
   }
 
   to {
-    -webkit-transform: translateY(-100%) !default;
+    -webkit-transform: translateY(-100%);
   }
 }
 
 @-moz-keyframes slideouttotop {
   from {
-    -moz-transform: translateY(0) !default;
+    -moz-transform: translateY(0);
   }
 
   to {
-    -moz-transform: translateY(-100%) !default;
+    -moz-transform: translateY(-100%);
   }
 }
 
 @keyframes slideouttotop {
   from {
-    transform: translateY(0) !default;
+    transform: translateY(0);
   }
 
   to {
-    transform: translateY(-100%) !default;
+    transform: translateY(-100%);
   }
 }
 
@@ -1122,105 +1122,105 @@ button {
 
 .slideup {
   &.out {
-    -webkit-animation-name: fadeout !default;
-    -webkit-animation-duration: 100ms !default;
-    -moz-animation-name: fadeout !default;
-    -moz-animation-duration: 100ms !default;
-    animation-name: fadeout !default;
-    animation-duration: 100ms !default;
+    -webkit-animation-name: fadeout;
+    -webkit-animation-duration: 100ms;
+    -moz-animation-name: fadeout;
+    -moz-animation-duration: 100ms;
+    animation-name: fadeout;
+    animation-duration: 100ms;
   }
 
   &.in {
-    -webkit-transform: translateY(0) !default;
-    -webkit-animation-name: slideinfrombottom !default;
-    -webkit-animation-duration: 250ms !default;
-    -moz-transform: translateY(0) !default;
-    -moz-animation-name: slideinfrombottom !default;
-    -moz-animation-duration: 250ms !default;
-    transform: translateY(0) !default;
-    animation-name: slideinfrombottom !default;
-    animation-duration: 250ms !default;
+    -webkit-transform: translateY(0);
+    -webkit-animation-name: slideinfrombottom;
+    -webkit-animation-duration: 250ms;
+    -moz-transform: translateY(0);
+    -moz-animation-name: slideinfrombottom;
+    -moz-animation-duration: 250ms;
+    transform: translateY(0);
+    animation-name: slideinfrombottom;
+    animation-duration: 250ms;
 
     &.reverse {
-      -webkit-animation-name: fadein !default;
-      -webkit-animation-duration: 150ms !default;
-      -moz-animation-name: fadein !default;
-      -moz-animation-duration: 150ms !default;
-      animation-name: fadein !default;
-      animation-duration: 150ms !default;
+      -webkit-animation-name: fadein;
+      -webkit-animation-duration: 150ms;
+      -moz-animation-name: fadein;
+      -moz-animation-duration: 150ms;
+      animation-name: fadein;
+      animation-duration: 150ms;
     }
   }
 
   &.out.reverse {
-    -webkit-transform: translateY(100%) !default;
-    -webkit-animation-name: slideouttobottom !default;
-    -webkit-animation-duration: 200ms !default;
-    -moz-transform: translateY(100%) !default;
-    -moz-animation-name: slideouttobottom !default;
-    -moz-animation-duration: 200ms !default;
-    transform: translateY(100%) !default;
-    animation-name: slideouttobottom !default;
-    animation-duration: 200ms !default;
+    -webkit-transform: translateY(100%);
+    -webkit-animation-name: slideouttobottom;
+    -webkit-animation-duration: 200ms;
+    -moz-transform: translateY(100%);
+    -moz-animation-name: slideouttobottom;
+    -moz-animation-duration: 200ms;
+    transform: translateY(100%);
+    animation-name: slideouttobottom;
+    animation-duration: 200ms;
   }
 }
 
 @-webkit-keyframes slideinfrombottom {
   from {
-    -webkit-transform: translateY(100%) !default;
+    -webkit-transform: translateY(100%);
   }
 
   to {
-    -webkit-transform: translateY(0) !default;
+    -webkit-transform: translateY(0);
   }
 }
 
 @-moz-keyframes slideinfrombottom {
   from {
-    -moz-transform: translateY(100%) !default;
+    -moz-transform: translateY(100%);
   }
 
   to {
-    -moz-transform: translateY(0) !default;
+    -moz-transform: translateY(0);
   }
 }
 
 @keyframes slideinfrombottom {
   from {
-    transform: translateY(100%) !default;
+    transform: translateY(100%);
   }
 
   to {
-    transform: translateY(0) !default;
+    transform: translateY(0);
   }
 }
 
 @-webkit-keyframes slideouttobottom {
   from {
-    -webkit-transform: translateY(0) !default;
+    -webkit-transform: translateY(0);
   }
 
   to {
-    -webkit-transform: translateY(100%) !default;
+    -webkit-transform: translateY(100%);
   }
 }
 
 @-moz-keyframes slideouttobottom {
   from {
-    -moz-transform: translateY(0) !default;
+    -moz-transform: translateY(0);
   }
 
   to {
-    -moz-transform: translateY(100%) !default;
+    -moz-transform: translateY(100%);
   }
 }
 
 @keyframes slideouttobottom {
   from {
-    transform: translateY(0) !default;
+    transform: translateY(0);
   }
 
   to {
-    transform: translateY(100%) !default;
+    transform: translateY(100%);
   }
 }
 
@@ -1232,176 +1232,176 @@ button {
  */
 
 .viewport-flip {
-  -webkit-perspective: 1000 !default;
-  -moz-perspective: 1000 !default;
-  perspective: 1000 !default;
-  position: absolute !default;
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  perspective: 1000;
+  position: absolute;
 }
 
 .flip {
-  -webkit-backface-visibility: hidden !default;
-  -webkit-transform: translateX(0) !default;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateX(0);
 
   /* Needed to work around an iOS 3.1 bug that causes listview thumbs to disappear when -webkit-visibility:hidden is used. */
-  -moz-backface-visibility: hidden !default;
-  -moz-transform: translateX(0) !default;
-  backface-visibility: hidden !default;
-  transform: translateX(0) !default;
+  -moz-backface-visibility: hidden;
+  -moz-transform: translateX(0);
+  backface-visibility: hidden;
+  transform: translateX(0);
 
   &.out {
-    -webkit-transform: rotateY(-90deg) scale(0.9) !default;
-    -webkit-animation-name: flipouttoleft !default;
-    -webkit-animation-duration: 175ms !default;
-    -moz-transform: rotateY(-90deg) scale(0.9) !default;
-    -moz-animation-name: flipouttoleft !default;
-    -moz-animation-duration: 175ms !default;
-    transform: rotateY(-90deg) scale(0.9) !default;
-    animation-name: flipouttoleft !default;
-    animation-duration: 175ms !default;
+    -webkit-transform: rotateY(-90deg) scale(0.9);
+    -webkit-animation-name: flipouttoleft;
+    -webkit-animation-duration: 175ms;
+    -moz-transform: rotateY(-90deg) scale(0.9);
+    -moz-animation-name: flipouttoleft;
+    -moz-animation-duration: 175ms;
+    transform: rotateY(-90deg) scale(0.9);
+    animation-name: flipouttoleft;
+    animation-duration: 175ms;
   }
 
   &.in {
-    -webkit-animation-name: flipintoright !default;
-    -webkit-animation-duration: 225ms !default;
-    -moz-animation-name: flipintoright !default;
-    -moz-animation-duration: 225ms !default;
-    animation-name: flipintoright !default;
-    animation-duration: 225ms !default;
+    -webkit-animation-name: flipintoright;
+    -webkit-animation-duration: 225ms;
+    -moz-animation-name: flipintoright;
+    -moz-animation-duration: 225ms;
+    animation-name: flipintoright;
+    animation-duration: 225ms;
   }
 
   &.out.reverse {
-    -webkit-transform: rotateY(90deg) scale(0.9) !default;
-    -webkit-animation-name: flipouttoright !default;
-    -moz-transform: rotateY(90deg) scale(0.9) !default;
-    -moz-animation-name: flipouttoright !default;
-    transform: rotateY(90deg) scale(0.9) !default;
-    animation-name: flipouttoright !default;
+    -webkit-transform: rotateY(90deg) scale(0.9);
+    -webkit-animation-name: flipouttoright;
+    -moz-transform: rotateY(90deg) scale(0.9);
+    -moz-animation-name: flipouttoright;
+    transform: rotateY(90deg) scale(0.9);
+    animation-name: flipouttoright;
   }
 
   &.in.reverse {
-    -webkit-animation-name: flipintoleft !default;
-    -moz-animation-name: flipintoleft !default;
-    animation-name: flipintoleft !default;
+    -webkit-animation-name: flipintoleft;
+    -moz-animation-name: flipintoleft;
+    animation-name: flipintoleft;
   }
 }
 
 @-webkit-keyframes flipouttoleft {
   from {
-    -webkit-transform: rotateY(0) !default;
+    -webkit-transform: rotateY(0);
   }
 
   to {
-    -webkit-transform: rotateY(-90deg) scale(0.9) !default;
+    -webkit-transform: rotateY(-90deg) scale(0.9);
   }
 }
 
 @-moz-keyframes flipouttoleft {
   from {
-    -moz-transform: rotateY(0) !default;
+    -moz-transform: rotateY(0);
   }
 
   to {
-    -moz-transform: rotateY(-90deg) scale(0.9) !default;
+    -moz-transform: rotateY(-90deg) scale(0.9);
   }
 }
 
 @keyframes flipouttoleft {
   from {
-    transform: rotateY(0) !default;
+    transform: rotateY(0);
   }
 
   to {
-    transform: rotateY(-90deg) scale(0.9) !default;
+    transform: rotateY(-90deg) scale(0.9);
   }
 }
 
 @-webkit-keyframes flipouttoright {
   from {
-    -webkit-transform: rotateY(0) !default;
+    -webkit-transform: rotateY(0);
   }
 
   to {
-    -webkit-transform: rotateY(90deg) scale(0.9) !default;
+    -webkit-transform: rotateY(90deg) scale(0.9);
   }
 }
 
 @-moz-keyframes flipouttoright {
   from {
-    -moz-transform: rotateY(0) !default;
+    -moz-transform: rotateY(0);
   }
 
   to {
-    -moz-transform: rotateY(90deg) scale(0.9) !default;
+    -moz-transform: rotateY(90deg) scale(0.9);
   }
 }
 
 @keyframes flipouttoright {
   from {
-    transform: rotateY(0) !default;
+    transform: rotateY(0);
   }
 
   to {
-    transform: rotateY(90deg) scale(0.9) !default;
+    transform: rotateY(90deg) scale(0.9);
   }
 }
 
 @-webkit-keyframes flipintoleft {
   from {
-    -webkit-transform: rotateY(-90deg) scale(0.9) !default;
+    -webkit-transform: rotateY(-90deg) scale(0.9);
   }
 
   to {
-    -webkit-transform: rotateY(0) !default;
+    -webkit-transform: rotateY(0);
   }
 }
 
 @-moz-keyframes flipintoleft {
   from {
-    -moz-transform: rotateY(-90deg) scale(0.9) !default;
+    -moz-transform: rotateY(-90deg) scale(0.9);
   }
 
   to {
-    -moz-transform: rotateY(0) !default;
+    -moz-transform: rotateY(0);
   }
 }
 
 @keyframes flipintoleft {
   from {
-    transform: rotateY(-90deg) scale(0.9) !default;
+    transform: rotateY(-90deg) scale(0.9);
   }
 
   to {
-    transform: rotateY(0) !default;
+    transform: rotateY(0);
   }
 }
 
 @-webkit-keyframes flipintoright {
   from {
-    -webkit-transform: rotateY(90deg) scale(0.9) !default;
+    -webkit-transform: rotateY(90deg) scale(0.9);
   }
 
   to {
-    -webkit-transform: rotateY(0) !default;
+    -webkit-transform: rotateY(0);
   }
 }
 
 @-moz-keyframes flipintoright {
   from {
-    -moz-transform: rotateY(90deg) scale(0.9) !default;
+    -moz-transform: rotateY(90deg) scale(0.9);
   }
 
   to {
-    -moz-transform: rotateY(0) !default;
+    -moz-transform: rotateY(0);
   }
 }
 
 @keyframes flipintoright {
   from {
-    transform: rotateY(90deg) scale(0.9) !default;
+    transform: rotateY(90deg) scale(0.9);
   }
 
   to {
-    transform: rotateY(0) !default;
+    transform: rotateY(0);
   }
 }
 
@@ -1413,477 +1413,477 @@ button {
  */
 
 .viewport-turn {
-  -webkit-perspective: 200px !default;
-  -moz-perspective: 200px !default;
-  -ms-perspective: 200px !default;
-  perspective: 200px !default;
-  position: absolute !default;
+  -webkit-perspective: 200px;
+  -moz-perspective: 200px;
+  -ms-perspective: 200px;
+  perspective: 200px;
+  position: absolute;
 }
 
 .turn {
-  -webkit-backface-visibility: hidden !default;
-  -webkit-transform: translateX(0) !default;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateX(0);
 
   /* Needed to work around an iOS 3.1 bug that causes listview thumbs to disappear when -webkit-visibility:hidden is used. */
-  -webkit-transform-origin: 0 !default;
-  -moz-backface-visibility: hidden !default;
-  -moz-transform: translateX(0) !default;
-  -moz-transform-origin: 0 !default;
-  backface-visibility: hidden !default;
-  transform: translateX(0) !default;
-  transform-origin: 0 !default;
+  -webkit-transform-origin: 0;
+  -moz-backface-visibility: hidden;
+  -moz-transform: translateX(0);
+  -moz-transform-origin: 0;
+  backface-visibility: hidden;
+  transform: translateX(0);
+  transform-origin: 0;
 
   &.out {
-    -webkit-transform: rotateY(-90deg) scale(0.9) !default;
-    -webkit-animation-name: flipouttoleft !default;
-    -webkit-animation-duration: 125ms !default;
-    -moz-transform: rotateY(-90deg) scale(0.9) !default;
-    -moz-animation-name: flipouttoleft !default;
-    -moz-animation-duration: 125ms !default;
-    transform: rotateY(-90deg) scale(0.9) !default;
-    animation-name: flipouttoleft !default;
-    animation-duration: 125ms !default;
+    -webkit-transform: rotateY(-90deg) scale(0.9);
+    -webkit-animation-name: flipouttoleft;
+    -webkit-animation-duration: 125ms;
+    -moz-transform: rotateY(-90deg) scale(0.9);
+    -moz-animation-name: flipouttoleft;
+    -moz-animation-duration: 125ms;
+    transform: rotateY(-90deg) scale(0.9);
+    animation-name: flipouttoleft;
+    animation-duration: 125ms;
   }
 
   &.in {
-    -webkit-animation-name: flipintoright !default;
-    -webkit-animation-duration: 250ms !default;
-    -moz-animation-name: flipintoright !default;
-    -moz-animation-duration: 250ms !default;
-    animation-name: flipintoright !default;
-    animation-duration: 250ms !default;
+    -webkit-animation-name: flipintoright;
+    -webkit-animation-duration: 250ms;
+    -moz-animation-name: flipintoright;
+    -moz-animation-duration: 250ms;
+    animation-name: flipintoright;
+    animation-duration: 250ms;
   }
 
   &.out.reverse {
-    -webkit-transform: rotateY(90deg) scale(0.9) !default;
-    -webkit-animation-name: flipouttoright !default;
-    -moz-transform: rotateY(90deg) scale(0.9) !default;
-    -moz-animation-name: flipouttoright !default;
-    transform: rotateY(90deg) scale(0.9) !default;
-    animation-name: flipouttoright !default;
+    -webkit-transform: rotateY(90deg) scale(0.9);
+    -webkit-animation-name: flipouttoright;
+    -moz-transform: rotateY(90deg) scale(0.9);
+    -moz-animation-name: flipouttoright;
+    transform: rotateY(90deg) scale(0.9);
+    animation-name: flipouttoright;
   }
 
   &.in.reverse {
-    -webkit-animation-name: flipintoleft !default;
-    -moz-animation-name: flipintoleft !default;
-    animation-name: flipintoleft !default;
+    -webkit-animation-name: flipintoleft;
+    -moz-animation-name: flipintoleft;
+    animation-name: flipintoleft;
   }
 }
 
 @-webkit-keyframes flipouttoleft {
   from {
-    -webkit-transform: rotateY(0) !default;
+    -webkit-transform: rotateY(0);
   }
 
   to {
-    -webkit-transform: rotateY(-90deg) scale(0.9) !default;
+    -webkit-transform: rotateY(-90deg) scale(0.9);
   }
 }
 
 @-moz-keyframes flipouttoleft {
   from {
-    -moz-transform: rotateY(0) !default;
+    -moz-transform: rotateY(0);
   }
 
   to {
-    -moz-transform: rotateY(-90deg) scale(0.9) !default;
+    -moz-transform: rotateY(-90deg) scale(0.9);
   }
 }
 
 @keyframes flipouttoleft {
   from {
-    transform: rotateY(0) !default;
+    transform: rotateY(0);
   }
 
   to {
-    transform: rotateY(-90deg) scale(0.9) !default;
+    transform: rotateY(-90deg) scale(0.9);
   }
 }
 
 @-webkit-keyframes flipouttoright {
   from {
-    -webkit-transform: rotateY(0) !default;
+    -webkit-transform: rotateY(0);
   }
 
   to {
-    -webkit-transform: rotateY(90deg) scale(0.9) !default;
+    -webkit-transform: rotateY(90deg) scale(0.9);
   }
 }
 
 @-moz-keyframes flipouttoright {
   from {
-    -moz-transform: rotateY(0) !default;
+    -moz-transform: rotateY(0);
   }
 
   to {
-    -moz-transform: rotateY(90deg) scale(0.9) !default;
+    -moz-transform: rotateY(90deg) scale(0.9);
   }
 }
 
 @keyframes flipouttoright {
   from {
-    transform: rotateY(0) !default;
+    transform: rotateY(0);
   }
 
   to {
-    transform: rotateY(90deg) scale(0.9) !default;
+    transform: rotateY(90deg) scale(0.9);
   }
 }
 
 @-webkit-keyframes flipintoleft {
   from {
-    -webkit-transform: rotateY(-90deg) scale(0.9) !default;
+    -webkit-transform: rotateY(-90deg) scale(0.9);
   }
 
   to {
-    -webkit-transform: rotateY(0) !default;
+    -webkit-transform: rotateY(0);
   }
 }
 
 @-moz-keyframes flipintoleft {
   from {
-    -moz-transform: rotateY(-90deg) scale(0.9) !default;
+    -moz-transform: rotateY(-90deg) scale(0.9);
   }
 
   to {
-    -moz-transform: rotateY(0) !default;
+    -moz-transform: rotateY(0);
   }
 }
 
 @keyframes flipintoleft {
   from {
-    transform: rotateY(-90deg) scale(0.9) !default;
+    transform: rotateY(-90deg) scale(0.9);
   }
 
   to {
-    transform: rotateY(0) !default;
+    transform: rotateY(0);
   }
 }
 
 @-webkit-keyframes flipintoright {
   from {
-    -webkit-transform: rotateY(90deg) scale(0.9) !default;
+    -webkit-transform: rotateY(90deg) scale(0.9);
   }
 
   to {
-    -webkit-transform: rotateY(0) !default;
+    -webkit-transform: rotateY(0);
   }
 }
 
 @-moz-keyframes flipintoright {
   from {
-    -moz-transform: rotateY(90deg) scale(0.9) !default;
+    -moz-transform: rotateY(90deg) scale(0.9);
   }
 
   to {
-    -moz-transform: rotateY(0) !default;
+    -moz-transform: rotateY(0);
   }
 }
 
 @keyframes flipintoright {
   from {
-    transform: rotateY(90deg) scale(0.9) !default;
+    transform: rotateY(90deg) scale(0.9);
   }
 
   to {
-    transform: rotateY(0) !default;
+    transform: rotateY(0);
   }
 }
 
 /* flow transition */
 
 .flow {
-  -webkit-transform-origin: 50% 30% !default;
-  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.4) !default;
-  -moz-transform-origin: 50% 30% !default;
-  -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.4) !default;
-  transform-origin: 50% 30% !default;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4) !default;
+  -webkit-transform-origin: 50% 30%;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  -moz-transform-origin: 50% 30%;
+  -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  transform-origin: 50% 30%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
 
 .ui-dialog.flow {
-  -webkit-transform-origin: none !default;
-  -webkit-box-shadow: none !default;
-  -moz-transform-origin: none !default;
-  -moz-box-shadow: none !default;
-  transform-origin: none !default;
-  box-shadow: none !default;
+  -webkit-transform-origin: none;
+  -webkit-box-shadow: none;
+  -moz-transform-origin: none;
+  -moz-box-shadow: none;
+  transform-origin: none;
+  box-shadow: none;
 }
 
 .flow {
   &.out {
-    -webkit-transform: translateX(-100%) scale(0.7) !default;
-    -webkit-animation-name: flowouttoleft !default;
-    -webkit-animation-timing-function: ease !default;
-    -webkit-animation-duration: 350ms !default;
-    -moz-transform: translateX(-100%) scale(0.7) !default;
-    -moz-animation-name: flowouttoleft !default;
-    -moz-animation-timing-function: ease !default;
-    -moz-animation-duration: 350ms !default;
-    transform: translateX(-100%) scale(0.7) !default;
-    animation-name: flowouttoleft !default;
-    animation-timing-function: ease !default;
-    animation-duration: 350ms !default;
+    -webkit-transform: translateX(-100%) scale(0.7);
+    -webkit-animation-name: flowouttoleft;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-duration: 350ms;
+    -moz-transform: translateX(-100%) scale(0.7);
+    -moz-animation-name: flowouttoleft;
+    -moz-animation-timing-function: ease;
+    -moz-animation-duration: 350ms;
+    transform: translateX(-100%) scale(0.7);
+    animation-name: flowouttoleft;
+    animation-timing-function: ease;
+    animation-duration: 350ms;
   }
 
   &.in {
-    -webkit-transform: translateX(0) scale(1) !default;
-    -webkit-animation-name: flowinfromright !default;
-    -webkit-animation-timing-function: ease !default;
-    -webkit-animation-duration: 350ms !default;
-    -moz-transform: translateX(0) scale(1) !default;
-    -moz-animation-name: flowinfromright !default;
-    -moz-animation-timing-function: ease !default;
-    -moz-animation-duration: 350ms !default;
-    transform: translateX(0) scale(1) !default;
-    animation-name: flowinfromright !default;
-    animation-timing-function: ease !default;
-    animation-duration: 350ms !default;
+    -webkit-transform: translateX(0) scale(1);
+    -webkit-animation-name: flowinfromright;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-duration: 350ms;
+    -moz-transform: translateX(0) scale(1);
+    -moz-animation-name: flowinfromright;
+    -moz-animation-timing-function: ease;
+    -moz-animation-duration: 350ms;
+    transform: translateX(0) scale(1);
+    animation-name: flowinfromright;
+    animation-timing-function: ease;
+    animation-duration: 350ms;
   }
 
   &.out.reverse {
-    -webkit-transform: translateX(100%) !default;
-    -webkit-animation-name: flowouttoright !default;
-    -moz-transform: translateX(100%) !default;
-    -moz-animation-name: flowouttoright !default;
-    transform: translateX(100%) !default;
-    animation-name: flowouttoright !default;
+    -webkit-transform: translateX(100%);
+    -webkit-animation-name: flowouttoright;
+    -moz-transform: translateX(100%);
+    -moz-animation-name: flowouttoright;
+    transform: translateX(100%);
+    animation-name: flowouttoright;
   }
 
   &.in.reverse {
-    -webkit-animation-name: flowinfromleft !default;
-    -moz-animation-name: flowinfromleft !default;
-    animation-name: flowinfromleft !default;
+    -webkit-animation-name: flowinfromleft;
+    -moz-animation-name: flowinfromleft;
+    animation-name: flowinfromleft;
   }
 }
 
 @-webkit-keyframes flowouttoleft {
   0% {
-    -webkit-transform: translateX(0) scale(1) !default;
+    -webkit-transform: translateX(0) scale(1);
   }
 
   60%, 70% {
-    -webkit-transform: translateX(0) scale(0.7) !default;
+    -webkit-transform: translateX(0) scale(0.7);
   }
 
   100% {
-    -webkit-transform: translateX(-100%) scale(0.7) !default;
+    -webkit-transform: translateX(-100%) scale(0.7);
   }
 }
 
 @-moz-keyframes flowouttoleft {
   0% {
-    -moz-transform: translateX(0) scale(1) !default;
+    -moz-transform: translateX(0) scale(1);
   }
 
   60%, 70% {
-    -moz-transform: translateX(0) scale(0.7) !default;
+    -moz-transform: translateX(0) scale(0.7);
   }
 
   100% {
-    -moz-transform: translateX(-100%) scale(0.7) !default;
+    -moz-transform: translateX(-100%) scale(0.7);
   }
 }
 
 @keyframes flowouttoleft {
   0% {
-    transform: translateX(0) scale(1) !default;
+    transform: translateX(0) scale(1);
   }
 
   60%, 70% {
-    transform: translateX(0) scale(0.7) !default;
+    transform: translateX(0) scale(0.7);
   }
 
   100% {
-    transform: translateX(-100%) scale(0.7) !default;
+    transform: translateX(-100%) scale(0.7);
   }
 }
 
 @-webkit-keyframes flowouttoright {
   0% {
-    -webkit-transform: translateX(0) scale(1) !default;
+    -webkit-transform: translateX(0) scale(1);
   }
 
   60%, 70% {
-    -webkit-transform: translateX(0) scale(0.7) !default;
+    -webkit-transform: translateX(0) scale(0.7);
   }
 
   100% {
-    -webkit-transform: translateX(100%) scale(0.7) !default;
+    -webkit-transform: translateX(100%) scale(0.7);
   }
 }
 
 @-moz-keyframes flowouttoright {
   0% {
-    -moz-transform: translateX(0) scale(1) !default;
+    -moz-transform: translateX(0) scale(1);
   }
 
   60%, 70% {
-    -moz-transform: translateX(0) scale(0.7) !default;
+    -moz-transform: translateX(0) scale(0.7);
   }
 
   100% {
-    -moz-transform: translateX(100%) scale(0.7) !default;
+    -moz-transform: translateX(100%) scale(0.7);
   }
 }
 
 @keyframes flowouttoright {
   0% {
-    transform: translateX(0) scale(1) !default;
+    transform: translateX(0) scale(1);
   }
 
   60%, 70% {
-    transform: translateX(0) scale(0.7) !default;
+    transform: translateX(0) scale(0.7);
   }
 
   100% {
-    transform: translateX(100%) scale(0.7) !default;
+    transform: translateX(100%) scale(0.7);
   }
 }
 
 @-webkit-keyframes flowinfromleft {
   0% {
-    -webkit-transform: translateX(-100%) scale(0.7) !default;
+    -webkit-transform: translateX(-100%) scale(0.7);
   }
 
   30%, 40% {
-    -webkit-transform: translateX(0) scale(0.7) !default;
+    -webkit-transform: translateX(0) scale(0.7);
   }
 
   100% {
-    -webkit-transform: translateX(0) scale(1) !default;
+    -webkit-transform: translateX(0) scale(1);
   }
 }
 
 @-moz-keyframes flowinfromleft {
   0% {
-    -moz-transform: translateX(-100%) scale(0.7) !default;
+    -moz-transform: translateX(-100%) scale(0.7);
   }
 
   30%, 40% {
-    -moz-transform: translateX(0) scale(0.7) !default;
+    -moz-transform: translateX(0) scale(0.7);
   }
 
   100% {
-    -moz-transform: translateX(0) scale(1) !default;
+    -moz-transform: translateX(0) scale(1);
   }
 }
 
 @keyframes flowinfromleft {
   0% {
-    transform: translateX(-100%) scale(0.7) !default;
+    transform: translateX(-100%) scale(0.7);
   }
 
   30%, 40% {
-    transform: translateX(0) scale(0.7) !default;
+    transform: translateX(0) scale(0.7);
   }
 
   100% {
-    transform: translateX(0) scale(1) !default;
+    transform: translateX(0) scale(1);
   }
 }
 
 @-webkit-keyframes flowinfromright {
   0% {
-    -webkit-transform: translateX(100%) scale(0.7) !default;
+    -webkit-transform: translateX(100%) scale(0.7);
   }
 
   30%, 40% {
-    -webkit-transform: translateX(0) scale(0.7) !default;
+    -webkit-transform: translateX(0) scale(0.7);
   }
 
   100% {
-    -webkit-transform: translateX(0) scale(1) !default;
+    -webkit-transform: translateX(0) scale(1);
   }
 }
 
 @-moz-keyframes flowinfromright {
   0% {
-    -moz-transform: translateX(100%) scale(0.7) !default;
+    -moz-transform: translateX(100%) scale(0.7);
   }
 
   30%, 40% {
-    -moz-transform: translateX(0) scale(0.7) !default;
+    -moz-transform: translateX(0) scale(0.7);
   }
 
   100% {
-    -moz-transform: translateX(0) scale(1) !default;
+    -moz-transform: translateX(0) scale(1);
   }
 }
 
 @keyframes flowinfromright {
   0% {
-    transform: translateX(100%) scale(0.7) !default;
+    transform: translateX(100%) scale(0.7);
   }
 
   30%, 40% {
-    transform: translateX(0) scale(0.7) !default;
+    transform: translateX(0) scale(0.7);
   }
 
   100% {
-    transform: translateX(0) scale(1) !default;
+    transform: translateX(0) scale(1);
   }
 }
 
 .ui-field-contain, .ui-mobile fieldset.ui-field-contain {
-  display: block !default;
-  position: relative !default;
-  overflow: visible !default;
-  clear: both !default;
-  padding: .8em 0 !default;
+  display: block;
+  position: relative;
+  overflow: visible;
+  clear: both;
+  padding: .8em 0;
 }
 
 .ui-field-contain {
   > label ~ [class*="ui-"], .ui-controlgroup-controls {
-    margin: 0 !default;
+    margin: 0;
   }
 
   &:last-child {
-    border-bottom-width: 0 !default;
+    border-bottom-width: 0;
   }
 }
 
 @media (min-width: 28em) {
   .ui-field-contain, .ui-mobile fieldset.ui-field-contain {
-    padding: 0 !default;
-    margin: 1em 0 !default;
-    border-bottom-width: 0 !default;
+    padding: 0;
+    margin: 1em 0;
+    border-bottom-width: 0;
   }
 
   .ui-field-contain {
     &:before {
-      content: "" !default;
-      display: table !default;
+      content: "";
+      display: table;
     }
 
     &:after {
-      content: "" !default;
-      display: table !default;
-      clear: both !default;
+      content: "";
+      display: table;
+      clear: both;
     }
 
     > label, .ui-controlgroup-label, > .ui-rangeslider > label {
-      float: left !default;
-      width: 20% !default;
-      margin: .5em 2% 0 0 !default;
+      float: left;
+      width: 20%;
+      margin: .5em 2% 0 0;
     }
   }
 
   .ui-popup .ui-field-contain {
     > label, .ui-controlgroup-label, > .ui-rangeslider > label {
-      float: none !default;
-      width: auto !default;
-      margin: 0 0 .4em !default;
+      float: none;
+      width: auto;
+      margin: 0 0 .4em;
     }
   }
 
   .ui-field-contain {
     > label ~ [class*="ui-"], .ui-controlgroup-controls {
-      float: left !default;
-      width: 78% !default;
-      -webkit-box-sizing: border-box !default;
-      -moz-box-sizing: border-box !default;
-      box-sizing: border-box !default;
+      float: left;
+      width: 78%;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
     }
   }
 
@@ -1891,24 +1891,24 @@ button {
 
   .ui-hide-label {
     > label ~ [class*="ui-"], .ui-controlgroup-controls {
-      float: none !default;
-      width: 100% !default;
+      float: none;
+      width: 100%;
     }
   }
 
   .ui-popup .ui-field-contain {
     > label ~ [class*="ui-"], .ui-controlgroup-controls {
-      float: none !default;
-      width: 100% !default;
+      float: none;
+      width: 100%;
     }
   }
 
   .ui-field-contain > label ~ .ui-btn-inline {
-    width: auto !default;
-    margin-right: .625em !default;
+    width: auto;
+    margin-right: .625em;
 
     &.ui-btn-icon-notext {
-      width: 1.75em !default;
+      width: 1.75em;
     }
   }
 }
@@ -1916,112 +1916,112 @@ button {
 /* content configurations. */
 
 .ui-grid-a, .ui-grid-b, .ui-grid-c, .ui-grid-d, .ui-grid-solo {
-  overflow: hidden !default;
+  overflow: hidden;
 }
 
 .ui-block-a, .ui-block-b, .ui-block-c, .ui-block-d, .ui-block-e {
-  margin: 0 !default;
-  padding: 0 !default;
-  border: 0 !default;
-  float: left !default;
-  min-height: 1px !default;
-  -webkit-box-sizing: border-box !default;
-  -moz-box-sizing: border-box !default;
-  box-sizing: border-box !default;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  float: left;
+  min-height: 1px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* force new row */
 
 .ui-block-a {
-  clear: left !default;
+  clear: left;
 }
 
 ul {
   &.ui-grid-a, &.ui-grid-b, &.ui-grid-c, &.ui-grid-d, &.ui-grid-solo {
-    margin-left: 0 !default;
-    margin-right: 0 !default;
-    padding: 0 !default;
-    list-style: none !default;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    list-style: none;
   }
 }
 
 li {
   &.ui-block-a, &.ui-block-b, &.ui-block-c, &.ui-block-d, &.ui-block-e {
-    margin-left: 0 !default;
-    margin-right: 0 !default;
-    padding: 0 !default;
-    list-style: none !default;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    list-style: none;
   }
 }
 
-/* No margin in grids for 100% width button elements until we can use max-width: fill-available !default; */
+/* No margin in grids for 100% width button elements until we can use max-width: fill-available; */
 
 [class*="ui-block-"] > {
   button.ui-btn {
-    margin-right: 0 !default;
-    margin-left: 0 !default;
+    margin-right: 0;
+    margin-left: 0;
   }
 
   .ui-btn, .ui-select, .ui-checkbox, .ui-radio {
-    margin-right: .3125em !default;
-    margin-left: .3125em !default;
+    margin-right: .3125em;
+    margin-left: .3125em;
   }
 
   button {
     &.ui-btn-inline, &.ui-btn-icon-notext {
-      margin-right: .3125em !default;
-      margin-left: .3125em !default;
+      margin-right: .3125em;
+      margin-left: .3125em;
     }
   }
 }
 
 .ui-header [class*="ui-block-"] > button.ui-btn, .ui-footer [class*="ui-block-"] > button.ui-btn {
-  margin-right: .3125em !default;
-  margin-left: .3125em !default;
+  margin-right: .3125em;
+  margin-left: .3125em;
 }
 
 .ui-grid-a > {
   .ui-block-a, .ui-block-b {
-    /* width: 49.95% !default; IE7 */
-    /* margin-right: -.5px !default; BB5 */
-    width: 50% !default;
+    /* width: 49.95%; IE7 */
+    /* margin-right: -.5px; BB5 */
+    width: 50%;
   }
 }
 
 .ui-grid-b > {
   .ui-block-a, .ui-block-b, .ui-block-c {
-    /* width: 33.25% !default; IE7 */
-    /* margin-right: -.5px !default; BB5 */
-    width: 33.333% !default;
+    /* width: 33.25%; IE7 */
+    /* margin-right: -.5px; BB5 */
+    width: 33.333%;
   }
 }
 
 .ui-grid-c > {
   .ui-block-a, .ui-block-b, .ui-block-c, .ui-block-d {
-    /* width: 24.925% !default; IE7 */
-    /* margin-right: -.5px !default; BB5 */
-    width: 25% !default;
+    /* width: 24.925%; IE7 */
+    /* margin-right: -.5px; BB5 */
+    width: 25%;
   }
 }
 
 .ui-grid-d > {
   .ui-block-a, .ui-block-b, .ui-block-c, .ui-block-d, .ui-block-e {
-    /* width: 19.925% !default; IE7 */
-    width: 20% !default;
+    /* width: 19.925%; IE7 */
+    width: 20%;
   }
 }
 
 .ui-grid-solo > .ui-block-a {
-  width: 100% !default;
-  float: none !default;
+  width: 100%;
+  float: none;
 }
 
 /* preset breakpoint to switch to stacked grid styles below 35em (560px) */
 @media (max-width: 35em) {
   .ui-responsive > {
     .ui-block-a, .ui-block-b, .ui-block-c, .ui-block-d, .ui-block-e {
-      width: 100% !default;
-      float: none !default;
+      width: 100%;
+      float: none;
     }
   }
 }
@@ -2029,142 +2029,142 @@ li {
 /* fixed page header & footer configuration */
 
 .ui-header-fixed, .ui-footer-fixed {
-  left: 0 !default;
-  right: 0 !default;
-  width: 100% !default;
-  position: fixed !default;
-  z-index: 1000 !default;
+  left: 0;
+  right: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
 }
 
 .ui-header-fixed {
-  top: -1px !default;
-  padding-top: 1px !default;
+  top: -1px;
+  padding-top: 1px;
 
   &.ui-fixed-hidden {
-    top: 0 !default;
-    padding-top: 0 !default;
+    top: 0;
+    padding-top: 0;
   }
 
   .ui-btn-left, .ui-btn-right {
-    margin-top: 1px !default;
+    margin-top: 1px;
   }
 
   &.ui-fixed-hidden {
     .ui-btn-left, .ui-btn-right {
-      margin-top: 0 !default;
+      margin-top: 0;
     }
   }
 }
 
 .ui-footer-fixed {
-  bottom: -1px !default;
-  padding-bottom: 1px !default;
+  bottom: -1px;
+  padding-bottom: 1px;
 
   &.ui-fixed-hidden {
-    bottom: 0 !default;
-    padding-bottom: 0 !default;
+    bottom: 0;
+    padding-bottom: 0;
   }
 }
 
 .ui-header-fullscreen, .ui-footer-fullscreen {
-  filter: Alpha(Opacity = 90) !default;
-  opacity: .9 !default;
+  filter: Alpha(Opacity = 90);
+  opacity: .9;
 }
 
 /* updatePagePadding() will update the padding to actual height of header and footer. */
 
 .ui-page-header-fixed {
-  padding-top: 2.8125em !default;
+  padding-top: 2.8125em;
 }
 
 .ui-page-footer-fixed {
-  padding-bottom: 2.8125em !default;
+  padding-bottom: 2.8125em;
 }
 
 .ui-page-header-fullscreen > .ui-content, .ui-page-footer-fullscreen > .ui-content {
-  padding: 0 !default;
+  padding: 0;
 }
 
 .ui-fixed-hidden {
-  position: absolute !default;
+  position: absolute;
 }
 
 /* Tap toggle: hide external fixed footer. See issue #6604 */
 
 .ui-footer-fixed.ui-fixed-hidden {
-  display: none !default;
+  display: none;
 }
 
 .ui-page .ui-footer-fixed.ui-fixed-hidden {
-  display: block !default;
+  display: block;
 }
 
 .ui-page-header-fullscreen .ui-fixed-hidden, .ui-page-footer-fullscreen .ui-fixed-hidden {
-  position: absolute !important !default;
-  height: 1px !default;
-  width: 1px !default;
-  overflow: hidden !default;
-  clip: rect(1px, 1px, 1px, 1px) !default;
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
 }
 
 .ui-header-fixed .ui-btn, .ui-footer-fixed .ui-btn {
-  z-index: 10 !default;
+  z-index: 10;
 }
 
 /* workarounds for other widgets */
 
 .ui-android-2x-fixed .ui-li-has-thumb {
-  -webkit-transform: translate3d(0, 0, 0) !default;
+  -webkit-transform: translate3d(0, 0, 0);
 }
 
 .ui-navbar {
-  max-width: 100% !default;
+  max-width: 100%;
 
   ul {
     &:before {
-      content: "" !default;
-      display: table !default;
+      content: "";
+      display: table;
     }
 
     &:after {
-      content: "" !default;
-      display: table !default;
-      clear: both !default;
+      content: "";
+      display: table;
+      clear: both;
     }
 
-    list-style: none !default;
-    margin: 0 !default;
-    padding: 0 !default;
-    position: relative !default;
-    display: block !default;
-    border: 0 !default;
-    max-width: 100% !default;
-    overflow: visible !default;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: block;
+    border: 0;
+    max-width: 100%;
+    overflow: visible;
   }
 
   li .ui-btn {
-    font-size: 12.5px !default;
-    display: block !default;
-    margin: 0 !default;
-    border-right-width: 0 !default;
+    font-size: 12.5px;
+    display: block;
+    margin: 0;
+    border-right-width: 0;
   }
 }
 
 .ui-header .ui-navbar li button.ui-btn, .ui-footer .ui-navbar li button.ui-btn {
-  margin: 0 !default;
-  width: 100% !default;
+  margin: 0;
+  width: 100%;
 }
 
 .ui-navbar {
   .ui-btn:focus {
-    z-index: 1 !default;
+    z-index: 1;
   }
 
   li:last-child .ui-btn {
-    margin-right: -4px !default;
+    margin-right: -4px;
 
     &:after {
-      margin-right: 4px !default;
+      margin-right: 4px;
     }
   }
 }
@@ -2173,550 +2173,550 @@ li {
 
 .ui-content .ui-navbar {
   li:last-child .ui-btn, .ui-grid-duo .ui-block-b .ui-btn {
-    border-right-width: 1px !default;
-    margin-right: 0 !default;
+    border-right-width: 1px;
+    margin-right: 0;
   }
 
   li:last-child .ui-btn:after, .ui-grid-duo .ui-block-b .ui-btn:after {
-    margin-right: 0 !default;
+    margin-right: 0;
   }
 }
 
 .ui-navbar .ui-grid-duo {
   .ui-block-a:last-child .ui-btn {
-    border-right-width: 1px !default;
-    margin-right: -1px !default;
+    border-right-width: 1px;
+    margin-right: -1px;
 
     &:after {
-      margin-right: 1px !default;
+      margin-right: 1px;
     }
   }
 
   .ui-btn {
-    border-top-width: 0 !default;
+    border-top-width: 0;
   }
 
   .ui-block-a:first-child {
     .ui-btn, + .ui-block-b .ui-btn {
-      border-top-width: 1px !default;
+      border-top-width: 1px;
     }
   }
 }
 
 .ui-header .ui-navbar .ui-btn, .ui-footer .ui-navbar .ui-btn {
-  border-top-width: 0 !default;
-  border-bottom-width: 0 !default;
+  border-top-width: 0;
+  border-bottom-width: 0;
 }
 
 .ui-header .ui-navbar .ui-grid-duo .ui-block-a:first-child .ui-btn, .ui-footer .ui-navbar .ui-grid-duo .ui-block-a:first-child .ui-btn, .ui-header .ui-navbar .ui-grid-duo .ui-block-a:first-child + .ui-block-b .ui-btn, .ui-footer .ui-navbar .ui-grid-duo .ui-block-a:first-child + .ui-block-b .ui-btn {
-  border-top-width: 0 !default;
+  border-top-width: 0;
 }
 
 .ui-header .ui-title ~ .ui-navbar .ui-btn, .ui-footer .ui-title ~ .ui-navbar .ui-btn, .ui-header .ui-navbar .ui-grid-duo .ui-btn, .ui-footer .ui-navbar .ui-grid-duo .ui-btn, .ui-header .ui-title ~ .ui-navbar .ui-grid-duo .ui-block-a:first-child .ui-btn, .ui-footer .ui-title ~ .ui-navbar .ui-grid-duo .ui-block-a:first-child .ui-btn, .ui-header .ui-title ~ .ui-navbar .ui-grid-duo .ui-block-a:first-child + .ui-block-b .ui-btn, .ui-footer .ui-title ~ .ui-navbar .ui-grid-duo .ui-block-a:first-child + .ui-block-b .ui-btn {
-  border-top-width: 1px !default;
+  border-top-width: 1px;
 }
 
 /* Hide the native input element */
 
 .ui-input-btn {
   input {
-    position: absolute !default;
-    top: 0 !default;
-    left: 0 !default;
-    width: 100% !default;
-    height: 100% !default;
-    padding: 0 !default;
-    border: 0 !default;
-    outline: 0 !default;
-    -webkit-border-radius: inherit !default;
-    border-radius: inherit !default;
-    -webkit-appearance: none !default;
-    -moz-appearance: none !default;
-    cursor: pointer !default;
-    background: #fff !default;
-    background: rgba(255, 255, 255, 0) !default;
-    filter: Alpha(Opacity = 0) !default;
-    opacity: .1 !default;
-    font-size: 1px !default;
-    text-indent: -9999px !default;
-    z-index: 2 !default;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    -webkit-border-radius: inherit;
+    border-radius: inherit;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    background: #fff;
+    background: rgba(255, 255, 255, 0);
+    filter: Alpha(Opacity = 0);
+    opacity: .1;
+    font-size: 1px;
+    text-indent: -9999px;
+    z-index: 2;
   }
 
   &.ui-state-disabled input {
-    position: absolute !important !default;
-    height: 1px !default;
-    width: 1px !default;
-    overflow: hidden !default;
-    clip: rect(1px, 1px, 1px, 1px) !default;
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
   }
 }
 
 /* Fixes IE/WP filter alpha opacity bugs */
 
 .ui-collapsible {
-  margin: 0 -1em !default;
+  margin: 0 -1em;
 }
 
 .ui-collapsible-inset, .ui-collapsible-set {
-  margin: .5em 0 !default;
+  margin: .5em 0;
 }
 
 .ui-collapsible-heading {
-  display: block !default;
-  margin: 0 !default;
-  padding: 0 !default;
-  position: relative !default;
+  display: block;
+  margin: 0;
+  padding: 0;
+  position: relative;
 
   .ui-btn {
-    text-align: left !default;
-    margin: 0 !default;
-    border-left-width: 0 !default;
-    border-right-width: 0 !default;
+    text-align: left;
+    margin: 0;
+    border-left-width: 0;
+    border-right-width: 0;
   }
 
   .ui-btn-icon-top, .ui-btn-icon-bottom {
-    text-align: center !default;
+    text-align: center;
   }
 }
 
 .ui-collapsible-inset .ui-collapsible-heading .ui-btn {
-  border-right-width: 1px !default;
-  border-left-width: 1px !default;
+  border-right-width: 1px;
+  border-left-width: 1px;
 }
 
 .ui-collapsible-collapsed + .ui-collapsible:not(.ui-collapsible-inset) > .ui-collapsible-heading .ui-btn {
-  border-top-width: 0 !default;
+  border-top-width: 0;
 }
 
 .ui-collapsible-set .ui-collapsible:not(.ui-collapsible-inset) .ui-collapsible-heading .ui-btn {
-  border-top-width: 1px !default;
+  border-top-width: 1px;
 }
 
 .ui-collapsible-heading-status {
-  position: absolute !important !default;
-  height: 1px !default;
-  width: 1px !default;
-  overflow: hidden !default;
-  clip: rect(1px, 1px, 1px, 1px) !default;
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
 }
 
 .ui-collapsible-content {
-  display: block !default;
-  margin: 0 !default;
-  padding: .5em 1em !default;
+  display: block;
+  margin: 0;
+  padding: .5em 1em;
 }
 
 .ui-collapsible-themed-content .ui-collapsible-content {
-  border-left-width: 0 !default;
-  border-right-width: 0 !default;
-  border-top-width: 0 !default;
-  border-bottom-width: 1px !default;
-  border-style: solid !default;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-top-width: 0;
+  border-bottom-width: 1px;
+  border-style: solid;
 }
 
 .ui-collapsible-inset {
   &.ui-collapsible-themed-content .ui-collapsible-content {
-    border-left-width: 1px !default;
-    border-right-width: 1px !default;
+    border-left-width: 1px;
+    border-right-width: 1px;
   }
 
   .ui-collapsible-content {
-    margin: 0 !default;
+    margin: 0;
   }
 }
 
 .ui-collapsible-content-collapsed {
-  display: none !default;
+  display: none;
 }
 
 .ui-collapsible-set > .ui-collapsible.ui-corner-all {
-  -webkit-border-radius: 0 !default;
-  border-radius: 0 !default;
+  -webkit-border-radius: 0;
+  border-radius: 0;
 }
 
 .ui-collapsible-heading {
-  -webkit-border-radius: inherit !default;
-  border-radius: inherit !default;
+  -webkit-border-radius: inherit;
+  border-radius: inherit;
 
   > .ui-btn {
-    -webkit-border-radius: inherit !default;
-    border-radius: inherit !default;
+    -webkit-border-radius: inherit;
+    border-radius: inherit;
   }
 }
 
 .ui-collapsible-set .ui-collapsible.ui-first-child {
-  -webkit-border-top-right-radius: inherit !default;
-  border-top-right-radius: inherit !default;
-  -webkit-border-top-left-radius: inherit !default;
-  border-top-left-radius: inherit !default;
+  -webkit-border-top-right-radius: inherit;
+  border-top-right-radius: inherit;
+  -webkit-border-top-left-radius: inherit;
+  border-top-left-radius: inherit;
 }
 
 .ui-collapsible-content, .ui-collapsible-set .ui-collapsible.ui-last-child {
-  -webkit-border-bottom-right-radius: inherit !default;
-  border-bottom-right-radius: inherit !default;
-  -webkit-border-bottom-left-radius: inherit !default;
-  border-bottom-left-radius: inherit !default;
+  -webkit-border-bottom-right-radius: inherit;
+  border-bottom-right-radius: inherit;
+  -webkit-border-bottom-left-radius: inherit;
+  border-bottom-left-radius: inherit;
 }
 
 .ui-collapsible-themed-content:not(.ui-collapsible-collapsed) > .ui-collapsible-heading {
-  -webkit-border-bottom-right-radius: 0 !default;
-  border-bottom-right-radius: 0 !default;
-  -webkit-border-bottom-left-radius: 0 !default;
-  border-bottom-left-radius: 0 !default;
+  -webkit-border-bottom-right-radius: 0;
+  border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .ui-collapsible-set {
   .ui-collapsible {
-    margin: -1px -1em 0 !default;
+    margin: -1px -1em 0;
   }
 
   .ui-collapsible-inset {
-    margin: -1px 0 0 !default;
+    margin: -1px 0 0;
   }
 
   .ui-collapsible.ui-first-child {
-    margin-top: 0 !default;
+    margin-top: 0;
   }
 }
 
 .ui-controlgroup, fieldset.ui-controlgroup {
-  padding: 0 !default;
-  margin: .5em 0 !default;
+  padding: 0;
+  margin: .5em 0;
 }
 
 .ui-field-contain {
   .ui-controlgroup, fieldset.ui-controlgroup {
-    margin: 0 !default;
+    margin: 0;
   }
 }
 
 .ui-mini .ui-controlgroup-label {
-  font-size: 16px !default;
+  font-size: 16px;
 }
 
 .ui-controlgroup {
   &.ui-mini .ui-btn-icon-notext, .ui-mini.ui-btn-icon-notext {
-    font-size: inherit !default;
+    font-size: inherit;
   }
 }
 
 .ui-controlgroup-controls {
   .ui-btn, .ui-checkbox, .ui-radio, .ui-select {
-    margin: 0 !default;
+    margin: 0;
   }
 
   .ui-btn {
     &:focus, &.ui-focus {
-      z-index: 1 !default;
+      z-index: 1;
     }
   }
 
   li {
-    list-style: none !default;
+    list-style: none;
   }
 }
 
 .ui-controlgroup-horizontal .ui-controlgroup-controls {
-  display: inline-block !default;
-  vertical-align: middle !default;
+  display: inline-block;
+  vertical-align: middle;
 
   &:before {
-    content: "" !default;
-    display: table !default;
+    content: "";
+    display: table;
   }
 
   &:after {
-    content: "" !default;
-    display: table !default;
-    clear: both !default;
+    content: "";
+    display: table;
+    clear: both;
   }
 
   > .ui-btn, li > .ui-btn, .ui-checkbox, .ui-radio, .ui-select {
-    float: left !default;
-    clear: none !default;
+    float: left;
+    clear: none;
   }
 
   button.ui-btn {
-    width: auto !default;
+    width: auto;
   }
 }
 
 .ui-controlgroup-controls .ui-btn-icon-notext {
-  width: auto !default;
+  width: auto;
 }
 
 .ui-controlgroup-horizontal .ui-controlgroup-controls {
   .ui-btn-icon-notext, button.ui-btn-icon-notext {
-    width: 1.5em !default;
+    width: 1.5em;
   }
 }
 
 .ui-controlgroup-controls .ui-btn-icon-notext {
-  height: auto !default;
-  padding: .7em 1em !default;
+  height: auto;
+  padding: .7em 1em;
 }
 
 .ui-controlgroup-vertical .ui-controlgroup-controls .ui-btn {
-  border-bottom-width: 0 !default;
+  border-bottom-width: 0;
 
   &.ui-last-child {
-    border-bottom-width: 1px !default;
+    border-bottom-width: 1px;
   }
 }
 
 .ui-controlgroup-horizontal .ui-controlgroup-controls .ui-btn {
-  border-right-width: 0 !default;
+  border-right-width: 0;
 
   &.ui-last-child {
-    border-right-width: 1px !default;
+    border-right-width: 1px;
   }
 }
 
 .ui-controlgroup-controls {
   .ui-btn-corner-all, .ui-btn.ui-corner-all {
-    -webkit-border-radius: 0 !default;
-    border-radius: 0 !default;
+    -webkit-border-radius: 0;
+    border-radius: 0;
   }
 
-  -webkit-border-radius: inherit !default;
-  border-radius: inherit !default;
+  -webkit-border-radius: inherit;
+  border-radius: inherit;
 
   .ui-radio, .ui-checkbox, .ui-select, li {
-    -webkit-border-radius: inherit !default;
-    border-radius: inherit !default;
+    -webkit-border-radius: inherit;
+    border-radius: inherit;
   }
 }
 
 .ui-controlgroup-vertical .ui-btn {
   &.ui-first-child {
-    -webkit-border-top-left-radius: inherit !default;
-    border-top-left-radius: inherit !default;
-    -webkit-border-top-right-radius: inherit !default;
-    border-top-right-radius: inherit !default;
+    -webkit-border-top-left-radius: inherit;
+    border-top-left-radius: inherit;
+    -webkit-border-top-right-radius: inherit;
+    border-top-right-radius: inherit;
   }
 
   &.ui-last-child {
-    -webkit-border-bottom-left-radius: inherit !default;
-    border-bottom-left-radius: inherit !default;
-    -webkit-border-bottom-right-radius: inherit !default;
-    border-bottom-right-radius: inherit !default;
+    -webkit-border-bottom-left-radius: inherit;
+    border-bottom-left-radius: inherit;
+    -webkit-border-bottom-right-radius: inherit;
+    border-bottom-right-radius: inherit;
   }
 }
 
 .ui-controlgroup-horizontal .ui-btn {
   &.ui-first-child {
-    -webkit-border-top-left-radius: inherit !default;
-    border-top-left-radius: inherit !default;
-    -webkit-border-bottom-left-radius: inherit !default;
-    border-bottom-left-radius: inherit !default;
+    -webkit-border-top-left-radius: inherit;
+    border-top-left-radius: inherit;
+    -webkit-border-bottom-left-radius: inherit;
+    border-bottom-left-radius: inherit;
   }
 
   &.ui-last-child {
-    -webkit-border-top-right-radius: inherit !default;
-    border-top-right-radius: inherit !default;
-    -webkit-border-bottom-right-radius: inherit !default;
-    border-bottom-right-radius: inherit !default;
+    -webkit-border-top-right-radius: inherit;
+    border-top-right-radius: inherit;
+    -webkit-border-bottom-right-radius: inherit;
+    border-bottom-right-radius: inherit;
   }
 }
 
 .ui-controlgroup-controls {
   a.ui-shadow:not(:focus), button.ui-shadow:not(:focus), div.ui-shadow:not(.ui-focus) {
-    -moz-box-shadow: none !default;
-    -webkit-box-shadow: none !default;
-    box-shadow: none !default;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
   }
 }
 
 /* Fixes legend not wrapping on IE10 */
 
 .ui-controlgroup-label legend {
-  max-width: 100% !default;
+  max-width: 100%;
 }
 
 .ui-controlgroup-controls > label {
-  position: absolute !important !default;
-  height: 1px !default;
-  width: 1px !default;
-  overflow: hidden !default;
-  clip: rect(1px, 1px, 1px, 1px) !default;
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
 }
 
 .ui-dialog {
-  background: none !important !default;
+  background: none !important;
 
   /* this is to ensure that dialog theming does not apply (by default at least) on the page div */
 }
 
 .ui-dialog-contain {
-  width: 92.5% !default;
-  max-width: 500px !default;
-  margin: 10% auto 1em auto !default;
-  padding: 0 !default;
-  position: relative !default;
-  top: -1em !default;
+  width: 92.5%;
+  max-width: 500px;
+  margin: 10% auto 1em auto;
+  padding: 0;
+  position: relative;
+  top: -1em;
 
   > {
     .ui-header, .ui-content, .ui-footer {
-      display: block !default;
-      position: relative !default;
-      width: auto !default;
-      margin: 0 !default;
+      display: block;
+      position: relative;
+      width: auto;
+      margin: 0;
     }
 
     .ui-header {
-      overflow: hidden !default;
-      z-index: 10 !default;
-      padding: 0 !default;
-      border-top-width: 0 !default;
+      overflow: hidden;
+      z-index: 10;
+      padding: 0;
+      border-top-width: 0;
     }
 
     .ui-footer {
-      z-index: 10 !default;
-      padding: 0 1em !default;
-      border-bottom-width: 0 !default;
+      z-index: 10;
+      padding: 0 1em;
+      border-bottom-width: 0;
     }
   }
 }
 
 .ui-popup-open {
   .ui-header-fixed, .ui-footer-fixed {
-    position: absolute !important !default;
+    position: absolute !important;
 
     /* See issues #4816, #4844 and #4874 and popup.js */
   }
 }
 
 .ui-popup-screen {
-  background-image: url("data:image/gif !default;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==") !default;
+  background-image: url("data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==");
 
   /* Necessary to set some form of background to ensure element is clickable in IE6/7. While legacy IE won't understand the data-URI'd image, it ensures no additional requests occur in all other browsers with little overhead. */
-  top: 0 !default;
-  left: 0 !default;
-  right: 0 !default;
-  bottom: 1px !default;
-  position: absolute !default;
-  filter: Alpha(Opacity = 0) !default;
-  opacity: 0 !default;
-  z-index: 1099 !default;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 1px;
+  position: absolute;
+  filter: Alpha(Opacity = 0);
+  opacity: 0;
+  z-index: 1099;
 
   &.in {
-    opacity: 0.5 !default;
-    filter: Alpha(Opacity = 50) !default;
+    opacity: 0.5;
+    filter: Alpha(Opacity = 50);
   }
 
   &.out {
-    opacity: 0 !default;
-    filter: Alpha(Opacity = 0) !default;
+    opacity: 0;
+    filter: Alpha(Opacity = 0);
   }
 }
 
 .ui-popup-container {
-  z-index: 1100 !default;
-  display: inline-block !default;
-  position: absolute !default;
-  padding: 0 !default;
-  outline: 0 !default;
+  z-index: 1100;
+  display: inline-block;
+  position: absolute;
+  padding: 0;
+  outline: 0;
 }
 
 .ui-popup {
-  position: relative !default;
+  position: relative;
 
   &.ui-body-inherit {
-    border-width: 1px !default;
-    border-style: solid !default;
+    border-width: 1px;
+    border-style: solid;
   }
 }
 
 .ui-popup-hidden {
-  left: 0 !default;
-  top: 0 !default;
-  position: absolute !important !default;
-  visibility: hidden !default;
+  left: 0;
+  top: 0;
+  position: absolute !important;
+  visibility: hidden;
 }
 
 .ui-popup-truncate {
-  height: 1px !default;
-  width: 1px !default;
-  margin: -1px !default;
-  overflow: hidden !default;
-  clip: rect(1px, 1px, 1px, 1px) !default;
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
 }
 
 .ui-popup {
   &.ui-content, .ui-content {
-    overflow: visible !default;
+    overflow: visible;
   }
 
   > {
     .ui-header {
-      border-top-width: 0 !default;
+      border-top-width: 0;
     }
 
     .ui-footer {
-      border-bottom-width: 0 !default;
+      border-bottom-width: 0;
     }
 
     p, h1, h2, h3, h4, h5, h6 {
-      margin: .5em .4375em !default;
+      margin: .5em .4375em;
     }
 
     span {
-      display: block !default;
-      margin: .5em .4375em !default;
+      display: block;
+      margin: .5em .4375em;
     }
   }
 }
 
 .ui-popup-container .ui-content > {
   p, h1, h2, h3, h4, h5, h6 {
-    margin: .5em 0 !default;
+    margin: .5em 0;
   }
 
   span {
-    margin: 0 !default;
+    margin: 0;
   }
 
   p:first-child, h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
-    margin-top: 0 !default;
+    margin-top: 0;
   }
 
   p:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:last-child {
-    margin-bottom: 0 !default;
+    margin-bottom: 0;
   }
 }
 
 .ui-popup {
   > img {
-    max-width: 100% !default;
-    max-height: 100% !default;
-    vertical-align: middle !default;
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle;
   }
 
   &:not(.ui-content) > {
     img:only-child, .ui-btn-left:first-child + img:last-child, .ui-btn-right:first-child + img:last-child {
-      -webkit-border-radius: inherit !default;
-      border-radius: inherit !default;
+      -webkit-border-radius: inherit;
+      border-radius: inherit;
     }
   }
 
   iframe {
-    vertical-align: middle !default;
+    vertical-align: middle;
   }
 
   > {
     .ui-btn-left, .ui-btn-right {
-      position: absolute !default;
-      top: -11px !default;
-      margin: 0 !default;
-      z-index: 1101 !default;
+      position: absolute;
+      top: -11px;
+      margin: 0;
+      z-index: 1101;
     }
 
     .ui-btn-left {
-      left: -11px !default;
+      left: -11px;
     }
 
     .ui-btn-right {
-      right: -11px !default;
+      right: -11px;
     }
   }
 }
@@ -2765,75 +2765,75 @@ li {
  **/
 
 .ui-popup-arrow-container {
-  width: 20px !default;
-  height: 20px !default;
+  width: 20px;
+  height: 20px;
 
   &.ui-popup-arrow-l {
-    left: -10px !default;
-    clip: rect(-1000px, 10px, 2000px, -1000px) !default;
+    left: -10px;
+    clip: rect(-1000px, 10px, 2000px, -1000px);
   }
 
   &.ui-popup-arrow-t {
-    top: -10px !default;
-    clip: rect(-1000px, 2000px, 10px, -1000px) !default;
+    top: -10px;
+    clip: rect(-1000px, 2000px, 10px, -1000px);
   }
 
   &.ui-popup-arrow-r {
-    right: -10px !default;
-    clip: rect(-1000px, 2000px, 2000px, 10px) !default;
+    right: -10px;
+    clip: rect(-1000px, 2000px, 2000px, 10px);
   }
 
   &.ui-popup-arrow-b {
-    bottom: -10px !default;
-    clip: rect(10px, 2000px, 1000px, -1000px) !default;
+    bottom: -10px;
+    clip: rect(10px, 2000px, 1000px, -1000px);
   }
 
   .ui-popup-arrow {
     /* (4*desired triangle height)/sqrt(2) - does not account for border - centred within the outer rectangle */
-    width: 28.284271247px !default;
-    height: 28.284271247px !default;
-    border-width: 1px !default;
-    border-style: solid !default;
+    width: 28.284271247px;
+    height: 28.284271247px;
+    border-width: 1px;
+    border-style: solid;
   }
 
   &.ui-popup-arrow-t .ui-popup-arrow {
-    left: -4.142135623px !default;
-    top: 5.857864376px !default;
+    left: -4.142135623px;
+    top: 5.857864376px;
   }
 
   &.ui-popup-arrow-b .ui-popup-arrow {
-    left: -4.142135623px !default;
-    top: -14.142135623px !default;
+    left: -4.142135623px;
+    top: -14.142135623px;
   }
 
   &.ui-popup-arrow-l .ui-popup-arrow {
-    left: 5.857864376px !default;
-    top: -4.142135623px !default;
+    left: 5.857864376px;
+    top: -4.142135623px;
   }
 
   &.ui-popup-arrow-r .ui-popup-arrow {
-    left: -14.142135623px !default;
-    top: -4.142135623px !default;
+    left: -14.142135623px;
+    top: -4.142135623px;
   }
 
   &.ui-popup-arrow-t.ie .ui-popup-arrow {
-    margin-left: -5.857864376269049px !default;
-    margin-top: -7.0710678118654755px !default;
+    margin-left: -5.857864376269049px;
+    margin-top: -7.0710678118654755px;
   }
 
   &.ui-popup-arrow-b.ie .ui-popup-arrow {
-    margin-left: -5.857864376269049px !default;
-    margin-top: -4.142135623730951px !default;
+    margin-left: -5.857864376269049px;
+    margin-top: -4.142135623730951px;
   }
 
   &.ui-popup-arrow-l.ie .ui-popup-arrow {
-    margin-left: -7.0710678118654755px !default;
-    margin-top: -5.857864376269049px !default;
+    margin-left: -7.0710678118654755px;
+    margin-top: -5.857864376269049px;
   }
 
   &.ui-popup-arrow-r.ie .ui-popup-arrow {
-    margin-left: -4.142135623730951px !default;
-    margin-top: -5.857864376269049px !default;
+    margin-left: -4.142135623730951px;
+    margin-top: -5.857864376269049px;
   }
 }
 
@@ -2865,179 +2865,179 @@ li {
 /* structure */
 
 .ui-popup > .ui-popup-arrow-guide {
-  position: absolute !default;
-  left: 0 !default;
-  right: 0 !default;
-  top: 0 !default;
-  bottom: 0 !default;
-  visibility: hidden !default;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  visibility: hidden;
 }
 
 .ui-popup-arrow-container {
-  position: absolute !default;
+  position: absolute;
 }
 
 .ui-popup-arrow {
-  -webkit-transform: rotate(45deg) !default;
-  -moz-transform: rotate(45deg) !default;
-  -ms-transform: rotate(45deg) !default;
-  transform: rotate(45deg) !default;
-  position: absolute !default;
-  overflow: hidden !default;
-  box-sizing: border-box !default;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .ui-popup-arrow-container.ie .ui-popup-arrow {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.7071067811865474, M12=-0.7071067811865477, M21=0.7071067811865477, M22=0.7071067811865474, SizingMethod='auto expand')" !default;
-  filter: progid:DXImageTransform.Microsoft.Matrix( M11=0.7071067811865474, M12=-0.7071067811865477, M21=0.7071067811865477, M22=0.7071067811865474, SizingMethod='auto expand') !default;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.7071067811865474, M12=-0.7071067811865477, M21=0.7071067811865477, M22=0.7071067811865474, SizingMethod='auto expand')";
+  filter: progid:DXImageTransform.Microsoft.Matrix( M11=0.7071067811865474, M12=-0.7071067811865477, M21=0.7071067811865477, M22=0.7071067811865474, SizingMethod='auto expand');
 }
 
 .ui-checkbox, .ui-radio {
-  margin: .5em 0 !default;
-  position: relative !default;
+  margin: .5em 0;
+  position: relative;
 }
 
 .ui-checkbox .ui-btn, .ui-radio .ui-btn {
-  margin: 0 !default;
-  text-align: left !default;
-  white-space: normal !default;
+  margin: 0;
+  text-align: left;
+  white-space: normal;
 
   /* Nowrap + ellipsis doesn't work on label. Issue #1419. */
-  z-index: 2 !default;
+  z-index: 2;
 }
 
 .ui-controlgroup {
   .ui-checkbox .ui-btn.ui-focus, .ui-radio .ui-btn.ui-focus {
-    z-index: 3 !default;
+    z-index: 3;
   }
 }
 
 .ui-checkbox .ui-btn-icon-top, .ui-radio .ui-btn-icon-top, .ui-checkbox .ui-btn-icon-bottom, .ui-radio .ui-btn-icon-bottom {
-  text-align: center !default;
+  text-align: center;
 }
 
 .ui-controlgroup-horizontal {
   .ui-checkbox .ui-btn:after, .ui-radio .ui-btn:after {
-    content: none !default;
-    display: none !default;
+    content: none;
+    display: none;
   }
 }
 
 /* Native input positioning */
 
 .ui-checkbox input, .ui-radio input {
-  position: absolute !default;
-  left: .466em !default;
-  top: 50% !default;
-  width: 22px !default;
-  height: 22px !default;
-  margin: -11px 0 0 0 !default;
-  outline: 0 !important !default;
-  z-index: 1 !default;
+  position: absolute;
+  left: .466em;
+  top: 50%;
+  width: 22px;
+  height: 22px;
+  margin: -11px 0 0 0;
+  outline: 0 !important;
+  z-index: 1;
 }
 
 .ui-controlgroup-horizontal {
   .ui-checkbox input, .ui-radio input {
-    left: 50% !default;
-    margin-left: -9px !default;
+    left: 50%;
+    margin-left: -9px;
   }
 }
 
 .ui-checkbox input:disabled, .ui-radio input:disabled {
-  position: absolute !important !default;
-  height: 1px !default;
-  width: 1px !default;
-  overflow: hidden !default;
-  clip: rect(1px, 1px, 1px, 1px) !default;
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
 }
 
 .ui-select {
-  margin-top: .5em !default;
-  margin-bottom: .5em !default;
+  margin-top: .5em;
+  margin-bottom: .5em;
 
   /* no shorthand for margin because it would override margin-right for inline selects */
-  position: relative !default;
+  position: relative;
 
   > select {
-    position: absolute !important !default;
-    height: 1px !default;
-    width: 1px !default;
-    overflow: hidden !default;
-    clip: rect(1px, 1px, 1px, 1px) !default;
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
   }
 
   .ui-btn {
-    margin: 0 !default;
-    opacity: 1 !default;
+    margin: 0;
+    opacity: 1;
 
     /* Fixes #2588: When Windows Phone 7.5 (Mango) tries to calculate a numeric opacity for a select (including "inherit") without explicitly specifying an opacity on the parent to give it context, a bug appears where clicking elsewhere on the page after opening the select will open the select again. */
 
     select {
-      position: absolute !default;
-      top: 0 !default;
-      left: 0 !default;
-      width: 100% !default;
-      min-height: 1.5em !default;
-      min-height: 100% !default;
-      height: 3em !default;
-      max-height: 100% !default;
-      outline: 0 !default;
-      -webkit-border-radius: inherit !default;
-      border-radius: inherit !default;
-      -webkit-appearance: none !default;
-      -moz-appearance: none !default;
-      cursor: pointer !default;
-      filter: Alpha(Opacity = 0) !default;
-      opacity: 0 !default;
-      z-index: 2 !default;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      min-height: 1.5em;
+      min-height: 100%;
+      height: 3em;
+      max-height: 100%;
+      outline: 0;
+      -webkit-border-radius: inherit;
+      border-radius: inherit;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      cursor: pointer;
+      filter: Alpha(Opacity = 0);
+      opacity: 0;
+      z-index: 2;
     }
   }
 
   .ui-state-disabled select {
-    display: none !default;
+    display: none;
   }
 
   span.ui-state-disabled {
-    filter: Alpha(Opacity = 100) !default;
-    opacity: 1 !default;
+    filter: Alpha(Opacity = 100);
+    opacity: 1;
   }
 
   .ui-btn.ui-select-nativeonly {
-    border-radius: 0 !default;
-    border: 0 !default;
+    border-radius: 0;
+    border: 0;
 
     select {
-      opacity: 1 !default;
-      text-indent: 0 !default;
-      display: block !default;
+      opacity: 1;
+      text-indent: 0;
+      display: block;
     }
   }
 
   .ui-li-has-count {
     &.ui-btn {
-      padding-right: 2.8125em !default;
+      padding-right: 2.8125em;
     }
 
     &.ui-btn-icon-right {
-      padding-right: 4.6875em !default;
+      padding-right: 4.6875em;
     }
   }
 
   .ui-btn-icon-right .ui-li-count {
-    right: 3.2em !default;
+    right: 3.2em;
   }
 
   .ui-btn > span:not(.ui-li-count) {
-    display: block !default;
-    text-overflow: ellipsis !default;
-    overflow: hidden !important !default;
-    white-space: nowrap !default;
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden !important;
+    white-space: nowrap;
   }
 }
 
 @-moz-document url-prefix() {
   .ui-select .ui-btn select {
-    opacity: 0.0001 !default;
+    opacity: 0.0001;
   }
 }
 
@@ -3051,49 +3051,49 @@ li {
 
 .ui-selectmenu {
   &.ui-popup {
-    min-width: 11em !default;
+    min-width: 11em;
   }
 
   .ui-dialog-contain {
-    overflow: hidden !default;
+    overflow: hidden;
   }
 
   .ui-header {
-    margin: 0 !default;
-    padding: 0 !default;
-    border-width: 0 !default;
+    margin: 0;
+    padding: 0;
+    border-width: 0;
   }
 
   &.ui-dialog .ui-header {
-    z-index: 1 !default;
-    position: relative !default;
+    z-index: 1;
+    position: relative;
   }
 
   &.ui-popup .ui-header {
-    -webkit-border-bottom-right-radius: 0 !default;
-    border-bottom-right-radius: 0 !default;
-    -webkit-border-bottom-left-radius: 0 !default;
-    border-bottom-left-radius: 0 !default;
+    -webkit-border-bottom-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -webkit-border-bottom-left-radius: 0;
+    border-bottom-left-radius: 0;
 
     h1:after {
-      content: '.' !default;
-      visibility: hidden !default;
+      content: '.';
+      visibility: hidden;
     }
   }
 
   .ui-header .ui-title {
-    margin: 0 2.875em !default;
+    margin: 0 2.875em;
   }
 
   &.ui-dialog .ui-content {
-    overflow: visible !default;
-    z-index: 1 !default;
+    overflow: visible;
+    z-index: 1;
   }
 
   .ui-selectmenu-list {
-    margin: 0 !default;
-    -webkit-border-radius: inherit !default;
-    border-radius: inherit !default;
+    margin: 0;
+    -webkit-border-radius: inherit;
+    border-radius: inherit;
   }
 }
 
@@ -3101,226 +3101,226 @@ li {
 
 .ui-header {
   &:not(.ui-screen-hidden) + .ui-selectmenu-list {
-    -webkit-border-top-right-radius: 0 !default;
-    border-top-right-radius: 0 !default;
-    -webkit-border-top-left-radius: 0 !default;
-    border-top-left-radius: 0 !default;
+    -webkit-border-top-right-radius: 0;
+    border-top-right-radius: 0;
+    -webkit-border-top-left-radius: 0;
+    border-top-left-radius: 0;
   }
 
   &.ui-screen-hidden + .ui-selectmenu-list li.ui-first-child .ui-btn {
-    border-top-width: 0 !default;
+    border-top-width: 0;
   }
 }
 
 .ui-selectmenu {
   .ui-selectmenu-list li.ui-last-child .ui-btn {
-    border-bottom-width: 0 !default;
+    border-bottom-width: 0;
   }
 
   .ui-btn.ui-li-divider {
-    cursor: default !default;
+    cursor: default;
   }
 
   .ui-selectmenu-placeholder {
-    display: none !default;
+    display: none;
   }
 }
 
 .ui-listview {
-  margin: 0 !default;
-  padding: 0 !default;
-  list-style: none !default;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 
   > li {
-    margin: 0 !default;
-    padding: 0 !default;
-    list-style: none !default;
+    margin: 0;
+    padding: 0;
+    list-style: none;
   }
 }
 
 .ui-content .ui-listview, .ui-panel-inner > .ui-listview {
-  margin: -1em !default;
+  margin: -1em;
 }
 
 .ui-content .ui-listview-inset, .ui-panel-inner > .ui-listview-inset {
-  margin: 1em 0 !default;
+  margin: 1em 0;
 }
 
 .ui-collapsible-content > {
   .ui-listview {
-    margin: -.5em -1em !default;
+    margin: -.5em -1em;
   }
 
   .ui-listview-inset {
-    margin: .5em 0 !default;
+    margin: .5em 0;
   }
 }
 
 .ui-listview > {
   li {
-    display: block !default;
-    position: relative !default;
-    overflow: visible !default;
+    display: block;
+    position: relative;
+    overflow: visible;
   }
 
   .ui-li-static, .ui-li-divider {
-    margin: 0 !default;
-    display: block !default;
-    position: relative !default;
-    text-align: left !default;
-    text-overflow: ellipsis !default;
-    overflow: hidden !default;
-    white-space: nowrap !default;
+    margin: 0;
+    display: block;
+    position: relative;
+    text-align: left;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
   }
 
   li > {
     a.ui-btn {
-      margin: 0 !default;
-      display: block !default;
-      position: relative !default;
-      text-align: left !default;
-      text-overflow: ellipsis !default;
-      overflow: hidden !default;
-      white-space: nowrap !default;
+      margin: 0;
+      display: block;
+      position: relative;
+      text-align: left;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
     }
 
     .ui-btn:focus {
-      z-index: 1 !default;
+      z-index: 1;
     }
   }
 
   .ui-li-static, .ui-li-divider, li > a.ui-btn {
-    border-width: 1px 0 0 0 !default;
-    border-style: solid !default;
+    border-width: 1px 0 0 0;
+    border-style: solid;
   }
 }
 
 .ui-listview-inset > {
   .ui-li-static, .ui-li-divider, li > a.ui-btn {
-    border-right-width: 1px !default;
-    border-left-width: 1px !default;
+    border-right-width: 1px;
+    border-left-width: 1px;
   }
 }
 
 .ui-listview > {
   .ui-li-static.ui-last-child, .ui-li-divider.ui-last-child, li.ui-last-child > a.ui-btn {
-    border-bottom-width: 1px !default;
+    border-bottom-width: 1px;
   }
 }
 
 .ui-collapsible-content > .ui-listview:not(.ui-listview-inset) > li.ui-first-child {
-  border-top-width: 0 !default;
+  border-top-width: 0;
 
   > a.ui-btn {
-    border-top-width: 0 !default;
+    border-top-width: 0;
   }
 }
 
 .ui-collapsible-themed-content .ui-listview:not(.ui-listview-inset) > li.ui-last-child {
-  border-bottom-width: 0 !default;
+  border-bottom-width: 0;
 
   > a.ui-btn {
-    border-bottom-width: 0 !default;
+    border-bottom-width: 0;
   }
 }
 
 .ui-listview > li {
   &.ui-first-child {
-    -webkit-border-top-right-radius: inherit !default;
-    border-top-right-radius: inherit !default;
-    -webkit-border-top-left-radius: inherit !default;
-    border-top-left-radius: inherit !default;
+    -webkit-border-top-right-radius: inherit;
+    border-top-right-radius: inherit;
+    -webkit-border-top-left-radius: inherit;
+    border-top-left-radius: inherit;
 
     > a.ui-btn {
-      -webkit-border-top-right-radius: inherit !default;
-      border-top-right-radius: inherit !default;
-      -webkit-border-top-left-radius: inherit !default;
-      border-top-left-radius: inherit !default;
+      -webkit-border-top-right-radius: inherit;
+      border-top-right-radius: inherit;
+      -webkit-border-top-left-radius: inherit;
+      border-top-left-radius: inherit;
     }
   }
 
   &.ui-last-child {
-    -webkit-border-bottom-right-radius: inherit !default;
-    border-bottom-right-radius: inherit !default;
-    -webkit-border-bottom-left-radius: inherit !default;
-    border-bottom-left-radius: inherit !default;
+    -webkit-border-bottom-right-radius: inherit;
+    border-bottom-right-radius: inherit;
+    -webkit-border-bottom-left-radius: inherit;
+    border-bottom-left-radius: inherit;
 
     > a.ui-btn {
-      -webkit-border-bottom-right-radius: inherit !default;
-      border-bottom-right-radius: inherit !default;
-      -webkit-border-bottom-left-radius: inherit !default;
-      border-bottom-left-radius: inherit !default;
+      -webkit-border-bottom-right-radius: inherit;
+      border-bottom-right-radius: inherit;
+      -webkit-border-bottom-left-radius: inherit;
+      border-bottom-left-radius: inherit;
     }
   }
 
   &.ui-li-has-alt > a.ui-btn {
-    -webkit-border-top-right-radius: 0 !default;
-    border-top-right-radius: 0 !default;
-    -webkit-border-bottom-right-radius: 0 !default;
-    border-bottom-right-radius: 0 !default;
+    -webkit-border-top-right-radius: 0;
+    border-top-right-radius: 0;
+    -webkit-border-bottom-right-radius: 0;
+    border-bottom-right-radius: 0;
   }
 
   &.ui-first-child > a.ui-btn + a.ui-btn {
-    -webkit-border-top-left-radius: 0 !default;
-    border-top-left-radius: 0 !default;
-    -webkit-border-top-right-radius: inherit !default;
-    border-top-right-radius: inherit !default;
+    -webkit-border-top-left-radius: 0;
+    border-top-left-radius: 0;
+    -webkit-border-top-right-radius: inherit;
+    border-top-right-radius: inherit;
   }
 
   &.ui-last-child > a.ui-btn + a.ui-btn {
-    -webkit-border-bottom-left-radius: 0 !default;
-    border-bottom-left-radius: 0 !default;
-    -webkit-border-bottom-right-radius: inherit !default;
-    border-bottom-right-radius: inherit !default;
+    -webkit-border-bottom-left-radius: 0;
+    border-bottom-left-radius: 0;
+    -webkit-border-bottom-right-radius: inherit;
+    border-bottom-right-radius: inherit;
   }
 
   &.ui-first-child img:first-child:not(.ui-li-icon) {
-    -webkit-border-top-left-radius: inherit !default;
-    border-top-left-radius: inherit !default;
+    -webkit-border-top-left-radius: inherit;
+    border-top-left-radius: inherit;
   }
 
   &.ui-last-child img:first-child:not(.ui-li-icon) {
-    -webkit-border-bottom-left-radius: inherit !default;
-    border-bottom-left-radius: inherit !default;
+    -webkit-border-bottom-left-radius: inherit;
+    border-bottom-left-radius: inherit;
   }
 }
 
 .ui-collapsible-content > .ui-listview:not(.ui-listview-inset) {
-  -webkit-border-radius: inherit !default;
-  border-radius: inherit !default;
+  -webkit-border-radius: inherit;
+  border-radius: inherit;
 }
 
 .ui-listview > {
   .ui-li-static {
-    padding: .7em 1em !default;
+    padding: .7em 1em;
   }
 
   .ui-li-divider {
-    padding: .5em 1.143em !default;
-    font-size: 14px !default;
-    font-weight: bold !default;
-    cursor: default !default;
-    outline: 0 !default;
+    padding: .5em 1.143em;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: default;
+    outline: 0;
 
     /* Dividers in custom selectmenus have tabindex */
   }
 
   .ui-li-has-count > .ui-btn, .ui-li-static.ui-li-has-count, .ui-li-divider.ui-li-has-count {
-    padding-right: 2.8125em !default;
+    padding-right: 2.8125em;
   }
 
   .ui-li-has-count > .ui-btn-icon-right {
-    padding-right: 4.6875em !default;
+    padding-right: 4.6875em;
   }
 
   .ui-li-has-thumb > .ui-btn, .ui-li-static.ui-li-has-thumb {
-    min-height: 3.625em !default;
-    padding-left: 6.25em !default;
+    min-height: 3.625em;
+    padding-left: 6.25em;
   }
 
   .ui-li-has-icon > .ui-btn, .ui-li-static.ui-li-has-icon {
-    min-height: 1.25em !default;
-    padding-left: 2.5em !default;
+    min-height: 1.25em;
+    padding-left: 2.5em;
   }
 }
 
@@ -3329,106 +3329,106 @@ li {
 /* Used by both listview and custom multiple select button */
 
 .ui-li-count {
-  position: absolute !default;
-  font-size: 12.5px !default;
-  font-weight: bold !default;
-  text-align: center !default;
-  border-width: 1px !default;
-  border-style: solid !default;
-  padding: 0 .48em !default;
-  line-height: 1.6em !default;
-  min-height: 1.6em !default;
-  min-width: .64em !default;
-  right: .8em !default;
-  top: 50% !default;
-  margin-top: -.88em !default;
+  position: absolute;
+  font-size: 12.5px;
+  font-weight: bold;
+  text-align: center;
+  border-width: 1px;
+  border-style: solid;
+  padding: 0 .48em;
+  line-height: 1.6em;
+  min-height: 1.6em;
+  min-width: .64em;
+  right: .8em;
+  top: 50%;
+  margin-top: -.88em;
 }
 
 .ui-listview {
   .ui-btn-icon-right .ui-li-count {
-    right: 3.2em !default;
+    right: 3.2em;
   }
 
   .ui-li-has-thumb {
     > {
       img:first-child, .ui-btn > img:first-child {
-        position: absolute !default;
-        left: 0 !default;
-        top: 0 !default;
-        max-height: 5em !default;
-        max-width: 5em !default;
+        position: absolute;
+        left: 0;
+        top: 0;
+        max-height: 5em;
+        max-width: 5em;
       }
     }
 
     .ui-li-thumb {
-      position: absolute !default;
-      left: 0 !default;
-      top: 0 !default;
-      max-height: 5em !default;
-      max-width: 5em !default;
+      position: absolute;
+      left: 0;
+      top: 0;
+      max-height: 5em;
+      max-width: 5em;
     }
   }
 
   > {
     .ui-li-has-icon > {
       img:first-child, .ui-btn > img:first-child {
-        position: absolute !default;
-        left: .625em !default;
-        top: .9em !default;
-        max-height: 1em !default;
-        max-width: 1em !default;
+        position: absolute;
+        left: .625em;
+        top: .9em;
+        max-height: 1em;
+        max-width: 1em;
       }
     }
 
     li {
       h1, h2, h3, h4, h5, h6 {
-        font-size: 1em !default;
-        font-weight: bold !default;
-        display: block !default;
-        margin: .45em 0 !default;
-        text-overflow: ellipsis !default;
-        overflow: hidden !default;
-        white-space: nowrap !default;
+        font-size: 1em;
+        font-weight: bold;
+        display: block;
+        margin: .45em 0;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
       }
 
       p {
-        font-size: .75em !default;
-        font-weight: normal !default;
-        display: block !default;
-        margin: .6em 0 !default;
-        text-overflow: ellipsis !default;
-        overflow: hidden !default;
-        white-space: nowrap !default;
+        font-size: .75em;
+        font-weight: normal;
+        display: block;
+        margin: .6em 0;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
       }
     }
   }
 
   .ui-li-aside {
-    position: absolute !default;
-    top: 1em !default;
-    right: 3.333em !default;
-    margin: 0 !default;
-    text-align: right !default;
+    position: absolute;
+    top: 1em;
+    right: 3.333em;
+    margin: 0;
+    text-align: right;
   }
 
   > li.ui-li-has-alt > .ui-btn {
-    margin-right: 2.5em !default;
-    border-right-width: 0 !default;
+    margin-right: 2.5em;
+    border-right-width: 0;
 
     + .ui-btn {
-      position: absolute !default;
-      width: 2.5em !default;
-      height: 100% !default;
-      min-height: auto !default;
-      -webkit-box-sizing: border-box !default;
-      -moz-box-sizing: border-box !default;
-      box-sizing: border-box !default;
-      border-left-width: 1px !default;
-      top: 0 !default;
-      right: 0 !default;
-      margin: 0 !default;
-      padding: 0 !default;
-      z-index: 2 !default;
+      position: absolute;
+      width: 2.5em;
+      height: 100%;
+      min-height: auto;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      border-left-width: 1px;
+      top: 0;
+      right: 0;
+      margin: 0;
+      padding: 0;
+      z-index: 2;
     }
   }
 }
@@ -3436,83 +3436,83 @@ li {
 /* ui-li-has-icon deprecated in 1.4. TODO: remove in 1.5 */
 
 .ui-listview-inset > li.ui-li-has-alt > .ui-btn + .ui-btn {
-  border-right-width: 1px !default;
+  border-right-width: 1px;
 }
 
 .ui-listview > li.ui-li-has-alt > .ui-btn + .ui-btn:focus {
-  z-index: 3 !default;
+  z-index: 3;
 }
 
 ol.ui-listview {
-  counter-reset: listnumbering !default;
+  counter-reset: listnumbering;
 
   > {
     .ui-li-divider {
-      counter-reset: listnumbering !default;
+      counter-reset: listnumbering;
     }
 
     li {
       > .ui-btn {
-        vertical-align: middle !default;
+        vertical-align: middle;
       }
 
       &.ui-li-static {
-        vertical-align: middle !default;
+        vertical-align: middle;
 
         &:before {
-          display: inline-block !default;
-          font-size: .9em !default;
-          font-weight: normal !default;
-          padding-right: .3em !default;
-          min-width: 1.4em !default;
-          line-height: 1.5 !default;
-          vertical-align: middle !default;
-          counter-increment: listnumbering !default;
-          content: counter(listnumbering) "." !default;
+          display: inline-block;
+          font-size: .9em;
+          font-weight: normal;
+          padding-right: .3em;
+          min-width: 1.4em;
+          line-height: 1.5;
+          vertical-align: middle;
+          counter-increment: listnumbering;
+          content: counter(listnumbering) ".";
         }
       }
 
       > .ui-btn:first-child:before {
-        display: inline-block !default;
-        font-size: .9em !default;
-        font-weight: normal !default;
-        padding-right: .3em !default;
-        min-width: 1.4em !default;
-        line-height: 1.5 !default;
-        vertical-align: middle !default;
-        counter-increment: listnumbering !default;
-        content: counter(listnumbering) "." !default;
+        display: inline-block;
+        font-size: .9em;
+        font-weight: normal;
+        padding-right: .3em;
+        min-width: 1.4em;
+        line-height: 1.5;
+        vertical-align: middle;
+        counter-increment: listnumbering;
+        content: counter(listnumbering) ".";
       }
 
       &.ui-field-contain {
         > {
           label:before, .ui-controlgroup-label:before {
-            display: inline-block !default;
-            font-size: .9em !default;
-            font-weight: normal !default;
-            padding-right: .3em !default;
-            min-width: 1.4em !default;
-            line-height: 1.5 !default;
-            vertical-align: middle !default;
-            counter-increment: listnumbering !default;
-            content: counter(listnumbering) "." !default;
+            display: inline-block;
+            font-size: .9em;
+            font-weight: normal;
+            padding-right: .3em;
+            min-width: 1.4em;
+            line-height: 1.5;
+            vertical-align: middle;
+            counter-increment: listnumbering;
+            content: counter(listnumbering) ".";
           }
         }
 
         &:before {
-          content: none !default;
-          display: none !default;
+          content: none;
+          display: none;
         }
       }
 
       h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child, p:first-child, img:first-child + * {
-        display: inline-block !default;
-        vertical-align: middle !default;
+        display: inline-block;
+        vertical-align: middle;
       }
 
       h1:first-child ~ *, h2:first-child ~ *, h3:first-child ~ *, h4:first-child ~ *, h5:first-child ~ *, h6:first-child ~ *, p:first-child ~ *, img:first-child + * ~ * {
-        margin-top: 0 !default;
-        text-indent: 2.04em !default;
+        margin-top: 0;
+        text-indent: 2.04em;
 
         /* (1.4em + .3em) * .9em / .75em */
       }
@@ -3522,307 +3522,307 @@ ol.ui-listview {
 
 html .ui-filterable {
   + .ui-listview, &.ui-listview {
-    margin-top: .5em !default;
+    margin-top: .5em;
   }
 }
 
 .ui-collapsible-content > {
   form.ui-filterable {
-    margin-top: -.5em !default;
+    margin-top: -.5em;
   }
 
   .ui-input-search.ui-filterable {
-    margin-top: 0 !default;
+    margin-top: 0;
   }
 
   .ui-filterable {
     + .ui-listview:not(.ui-listview-inset) > li.ui-first-child, &.ui-listview:not(.ui-listview-inset) > li.ui-first-child {
-      border-top-width: 1px !default;
+      border-top-width: 1px;
 
       > a.ui-btn {
-        border-top-width: 1px !default;
+        border-top-width: 1px;
       }
     }
   }
 }
 
 div.ui-slider {
-  height: 30px !default;
-  margin: .5em 0 !default;
-  padding: 0 !default;
-  -ms-touch-action: pan-y pinch-zoom double-tap-zoom !default;
+  height: 30px;
+  margin: .5em 0;
+  padding: 0;
+  -ms-touch-action: pan-y pinch-zoom double-tap-zoom;
 
   &:before {
-    content: "" !default;
-    display: table !default;
+    content: "";
+    display: table;
   }
 
   &:after {
-    content: "" !default;
-    display: table !default;
-    clear: both !default;
+    content: "";
+    display: table;
+    clear: both;
   }
 }
 
 input.ui-slider-input {
-  display: block !default;
-  float: left !default;
-  font-size: 14px !default;
-  font-weight: bold !default;
-  margin: 0 !default;
-  padding: 4px !default;
-  width: 40px !default;
-  height: 20px !default;
-  line-height: 20px !default;
-  border-width: 1px !default;
-  border-style: solid !default;
-  outline: 0 !default;
-  text-align: center !default;
-  vertical-align: text-bottom !default;
-  -webkit-appearance: none !default;
-  -moz-appearance: none !default;
-  appearance: none !default;
-  -webkit-box-sizing: content-box !default;
-  -moz-box-sizing: content-box !default;
-  box-sizing: content-box !default;
+  display: block;
+  float: left;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0;
+  padding: 4px;
+  width: 40px;
+  height: 20px;
+  line-height: 20px;
+  border-width: 1px;
+  border-style: solid;
+  outline: 0;
+  text-align: center;
+  vertical-align: text-bottom;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
 }
 
 .ui-slider-input {
   &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
-    -webkit-appearance: none !default;
-    margin: 0 !default;
+    -webkit-appearance: none;
+    margin: 0;
   }
 }
 
 .ui-slider-track {
-  position: relative !default;
-  overflow: visible !default;
-  border-width: 1px !default;
-  border-style: solid !default;
-  height: 15px !default;
-  margin: 0 15px 0 68px !default;
-  top: 6px !default;
+  position: relative;
+  overflow: visible;
+  border-width: 1px;
+  border-style: solid;
+  height: 15px;
+  margin: 0 15px 0 68px;
+  top: 6px;
 
   &.ui-mini {
-    height: 12px !default;
-    top: 8px !default;
+    height: 12px;
+    top: 8px;
   }
 
   .ui-slider-bg {
-    height: 100% !default;
+    height: 100%;
   }
 
   .ui-btn.ui-slider-handle {
-    position: absolute !default;
-    z-index: 1 !default;
-    top: 50% !default;
-    width: 28px !default;
-    height: 28px !default;
-    margin: -15px 0 0 -15px !default;
-    outline: 0 !default;
-    padding: 0 !default;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    width: 28px;
+    height: 28px;
+    margin: -15px 0 0 -15px;
+    outline: 0;
+    padding: 0;
   }
 
   &.ui-mini .ui-slider-handle {
-    height: 14px !default;
-    width: 14px !default;
-    margin: -8px 0 0 -8px !default;
+    height: 14px;
+    width: 14px;
+    margin: -8px 0 0 -8px;
   }
 }
 
 /* High level of specificity to override button margins in grids */
 
 select.ui-slider-switch {
-  position: absolute !important !default;
-  height: 1px !default;
-  width: 1px !default;
-  overflow: hidden !default;
-  clip: rect(1px, 1px, 1px, 1px) !default;
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
 }
 
 div.ui-slider-switch {
-  display: inline-block !default;
-  height: 32px !default;
-  width: 5.8em !default;
-  top: 0 !default;
+  display: inline-block;
+  height: 32px;
+  width: 5.8em;
+  top: 0;
 
   &:before, &:after {
-    display: none !default;
-    clear: none !default;
+    display: none;
+    clear: none;
   }
 
   &.ui-mini {
-    height: 29px !default;
-    top: 0 !default;
+    height: 29px;
+    top: 0;
   }
 }
 
 /* reset the clearfix */
 
 .ui-slider-inneroffset {
-  margin: 0 16px !default;
-  position: relative !default;
-  z-index: 1 !default;
+  margin: 0 16px;
+  position: relative;
+  z-index: 1;
 }
 
 .ui-slider-switch {
   &.ui-mini .ui-slider-inneroffset {
-    margin: 0 15px 0 14px !default;
+    margin: 0 15px 0 14px;
   }
 
   .ui-btn.ui-slider-handle {
-    margin: 1px 0 0 -15px !default;
+    margin: 1px 0 0 -15px;
   }
 
   &.ui-mini .ui-slider-handle {
-    width: 25px !default;
-    height: 25px !default;
-    margin: 1px 0 0 -13px !default;
-    padding: 0 !default;
+    width: 25px;
+    height: 25px;
+    margin: 1px 0 0 -13px;
+    padding: 0;
   }
 }
 
 .ui-slider-handle-snapping {
-  -webkit-transition: left 70ms linear !default;
-  -moz-transition: left 70ms linear !default;
-  transition: left 70ms linear !default;
+  -webkit-transition: left 70ms linear;
+  -moz-transition: left 70ms linear;
+  transition: left 70ms linear;
 }
 
 .ui-slider-switch {
   .ui-slider-label {
-    position: absolute !default;
-    text-align: center !default;
-    width: 100% !default;
-    overflow: hidden !default;
-    font-size: 16px !default;
-    top: 0 !default;
-    line-height: 2 !default;
-    min-height: 100% !default;
-    white-space: nowrap !default;
-    cursor: pointer !default;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    font-size: 16px;
+    top: 0;
+    line-height: 2;
+    min-height: 100%;
+    white-space: nowrap;
+    cursor: pointer;
   }
 
   &.ui-mini .ui-slider-label {
-    font-size: 14px !default;
+    font-size: 14px;
   }
 
   .ui-slider-label-a {
-    z-index: 1 !default;
-    left: 0 !default;
-    text-indent: -1.5em !default;
+    z-index: 1;
+    left: 0;
+    text-indent: -1.5em;
   }
 
   .ui-slider-label-b {
-    z-index: 0 !default;
-    right: 0 !default;
-    text-indent: 1.5em !default;
+    z-index: 0;
+    right: 0;
+    text-indent: 1.5em;
   }
 }
 
 /* The corner radii for ui-slider-switch/track can be specified in theme CSS. The bg and handle inherits. */
 
 .ui-slider-track .ui-slider-bg {
-  -webkit-border-radius: inherit !default;
-  border-radius: inherit !default;
+  -webkit-border-radius: inherit;
+  border-radius: inherit;
 }
 
 .ui-slider-switch {
   .ui-slider-label, .ui-slider-inneroffset {
-    -webkit-border-radius: inherit !default;
-    border-radius: inherit !default;
+    -webkit-border-radius: inherit;
+    border-radius: inherit;
   }
 }
 
 .ui-slider-handle {
-  -webkit-border-radius: inherit !default;
-  border-radius: inherit !default;
+  -webkit-border-radius: inherit;
+  border-radius: inherit;
 }
 
 .ui-field-contain {
   div.ui-slider-switch {
-    margin: 0 !default;
-    display: inline-block !default;
-    width: 5.8em !default;
+    margin: 0;
+    display: inline-block;
+    width: 5.8em;
   }
 
   &.ui-hide-label div.ui-slider-switch {
-    display: inline-block !default;
-    width: 5.8em !default;
+    display: inline-block;
+    width: 5.8em;
   }
 }
 
 /* ui-hide-label deprecated in 1.4. TODO: Remove in 1.5 */
 
 html .ui-popup .ui-field-contain div.ui-slider-switch {
-  display: inline-block !default;
-  width: 5.8em !default;
+  display: inline-block;
+  width: 5.8em;
 }
 
 /* slider tooltip
 -----------------------------------------------------------------------------------------------------------*/
 
 .ui-slider-popup {
-  width: 64px !default;
-  height: 64px !default;
-  font-size: 36px !default;
-  padding-top: 14px !default;
-  opacity: 0.8 !default;
-  position: absolute !important !default;
-  text-align: center !default;
-  z-index: 100 !default;
+  width: 64px;
+  height: 64px;
+  font-size: 36px;
+  padding-top: 14px;
+  opacity: 0.8;
+  position: absolute !important;
+  text-align: center;
+  z-index: 100;
 }
 
 .ui-slider-track .ui-btn.ui-slider-handle {
-  font-size: .9em !default;
-  line-height: 30px !default;
+  font-size: .9em;
+  line-height: 30px;
 }
 
 .ui-rangeslider {
-  margin: .5em 0 !default;
+  margin: .5em 0;
 
   &:before {
-    content: "" !default;
-    display: table !default;
+    content: "";
+    display: table;
   }
 
   &:after {
-    content: "" !default;
-    display: table !default;
-    clear: both !default;
+    content: "";
+    display: table;
+    clear: both;
   }
 
   .ui-slider-input.ui-rangeslider-last {
-    float: right !default;
+    float: right;
   }
 
   .ui-rangeslider-sliders {
-    position: relative !default;
-    overflow: visible !default;
-    height: 30px !default;
-    margin: 0 68px !default;
+    position: relative;
+    overflow: visible;
+    height: 30px;
+    margin: 0 68px;
 
     .ui-slider-track {
-      position: absolute !default;
-      top: 6px !default;
-      right: 0 !default;
-      left: 0 !default;
-      margin: 0 !default;
+      position: absolute;
+      top: 6px;
+      right: 0;
+      left: 0;
+      margin: 0;
     }
   }
 
   &.ui-mini .ui-rangeslider-sliders .ui-slider-track {
-    top: 8px !default;
+    top: 8px;
   }
 
   .ui-slider-track:first-child .ui-slider-bg {
-    display: none !default;
+    display: none;
   }
 
   .ui-rangeslider-sliders .ui-slider-track:first-child {
-    background-color: transparent !default;
-    background: none !default;
-    border-width: 0 !default;
-    height: 0 !default;
+    background-color: transparent;
+    background: none;
+    border-width: 0;
+    height: 0;
   }
 }
 
@@ -3830,169 +3830,169 @@ html .ui-popup .ui-field-contain div.ui-slider-switch {
 
 html > body .ui-rangeslider {
   .ui-rangeslider-sliders .ui-slider-track:first-child {
-    height: 15px !default;
-    border-width: 1px !default;
+    height: 15px;
+    border-width: 1px;
   }
 
   &.ui-mini .ui-rangeslider-sliders .ui-slider-track:first-child {
-    height: 12px !default;
+    height: 12px;
   }
 }
 
 /* Hide the second label (the first is moved outside the div) */
 
 div.ui-rangeslider label {
-  position: absolute !important !default;
-  height: 1px !default;
-  width: 1px !default;
-  overflow: hidden !default;
-  clip: rect(1px, 1px, 1px, 1px) !default;
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
 }
 
 .ui-field-contain .ui-rangeslider {
   input.ui-slider-input, &.ui-mini input.ui-slider-input, .ui-rangeslider-sliders, &.ui-mini .ui-rangeslider-sliders {
-    margin-top: 0 !default;
-    margin-bottom: 0 !default;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
 
 .ui-input-text, .ui-input-search {
-  margin: .5em 0 !default;
-  border-width: 1px !default;
-  border-style: solid !default;
+  margin: .5em 0;
+  border-width: 1px;
+  border-style: solid;
 }
 
 .ui-mini {
-  margin: .446em !default;
+  margin: .446em;
 }
 
 .ui-input-text input, .ui-input-search input, textarea.ui-input-text {
-  padding: .4em !default;
-  line-height: 1.4em !default;
-  display: block !default;
-  width: 100% !default;
-  -webkit-box-sizing: border-box !default;
-  -moz-box-sizing: border-box !default;
-  box-sizing: border-box !default;
-  outline: 0 !default;
+  padding: .4em;
+  line-height: 1.4em;
+  display: block;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: 0;
 }
 
 .ui-input-text input, .ui-input-search input {
-  margin: 0 !default;
-  min-height: 2.2em !default;
-  text-align: left !default;
+  margin: 0;
+  min-height: 2.2em;
+  text-align: left;
 
   /* Opera aligns type="date" right by default */
-  border: 0 !default;
-  background: transparent none !default;
-  -webkit-appearance: none !default;
-  -webkit-border-radius: inherit !default;
-  border-radius: inherit !default;
+  border: 0;
+  background: transparent none;
+  -webkit-appearance: none;
+  -webkit-border-radius: inherit;
+  border-radius: inherit;
 }
 
 textarea.ui-input-text {
-  overflow: auto !default;
-  resize: vertical !default;
+  overflow: auto;
+  resize: vertical;
 }
 
 .ui-mini {
   .ui-input-text input, .ui-input-search input {
-    font-size: 14px !default;
+    font-size: 14px;
   }
 }
 
 .ui-input-text.ui-mini input, .ui-input-search.ui-mini input, .ui-mini textarea.ui-input-text, textarea.ui-mini {
-  font-size: 14px !default;
+  font-size: 14px;
 }
 
 /* Same margin for mini textareas as other mini sized widgets (12.5/14 * 0.5em) */
 
 .ui-mini textarea.ui-input-text, textarea.ui-mini {
-  margin: .446em 0 !default;
+  margin: .446em 0;
 }
 
 .ui-input-has-clear, .ui-input-search {
-  position: relative !default;
+  position: relative;
 }
 
 /* Padding on the div instead of input because of browser spinners etc. */
 
 .ui-input-has-clear {
-  padding-right: 2.375em !default;
+  padding-right: 2.375em;
 }
 
 .ui-mini.ui-input-has-clear {
-  padding-right: 2.923em !default;
+  padding-right: 2.923em;
 }
 
 .ui-input-has-clear input {
-  padding-right: 0 !default;
+  padding-right: 0;
 
   /* Autofill on Chrome has bg color so we unset corners right as well. */
-  -webkit-border-top-right-radius: 0 !default;
-  border-top-right-radius: 0 !default;
-  -webkit-border-bottom-right-radius: 0 !default;
-  border-bottom-right-radius: 0 !default;
+  -webkit-border-top-right-radius: 0;
+  border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 /* Search icon */
 
 .ui-input-search {
   input {
-    padding-left: 1.75em !default;
+    padding-left: 1.75em;
   }
 
   &:after {
-    position: absolute !default;
-    left: .3125em !default;
-    top: 50% !default;
-    margin-top: -7px !default;
-    content: "" !default;
-    background-position: center center !default;
-    background-repeat: no-repeat !default;
-    width: 14px !default;
-    height: 14px !default;
-    filter: Alpha(Opacity = 50) !default;
-    opacity: .5 !default;
+    position: absolute;
+    left: .3125em;
+    top: 50%;
+    margin-top: -7px;
+    content: "";
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 14px;
+    height: 14px;
+    filter: Alpha(Opacity = 50);
+    opacity: .5;
   }
 
   &.ui-input-has-clear .ui-btn.ui-input-clear {
-    position: absolute !default;
-    right: 0 !default;
-    top: 50% !default;
-    margin: -14px .3125em 0 !default;
-    border: 0 !default;
-    background-color: transparent !default;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin: -14px .3125em 0;
+    border: 0;
+    background-color: transparent;
   }
 }
 
 .ui-input-text.ui-input-has-clear .ui-btn.ui-input-clear {
-  position: absolute !default;
-  right: 0 !default;
-  top: 50% !default;
-  margin: -14px .3125em 0 !default;
-  border: 0 !default;
-  background-color: transparent !default;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin: -14px .3125em 0;
+  border: 0;
+  background-color: transparent;
 }
 
 .ui-input-search .ui-input-clear-hidden {
-  display: none !default;
+  display: none;
 }
 
 .ui-input-text {
   .ui-input-clear-hidden {
-    display: none !default;
+    display: none;
   }
 
   input::-moz-placeholder {
-    color: #aaa !default;
+    color: #aaa;
   }
 }
 
 /* Resolves issue #5166: Added to support issue introduced in Firefox 15. We can likely remove this in the future. */
 
 .ui-input-search input::-moz-placeholder, textarea.ui-input-text::-moz-placeholder, .ui-input-text input:-ms-input-placeholder, .ui-input-search input:-ms-input-placeholder, textarea.ui-input-text:-ms-input-placeholder {
-  color: #aaa !default;
+  color: #aaa;
 }
 
 /* Same for IE10 */
@@ -4002,113 +4002,113 @@ for Android 4.1 */
 
 .ui-input-text input {
   &[type=number]::-webkit-outer-spin-button {
-    margin: 0 !default;
+    margin: 0;
   }
 
   &::-ms-clear {
-    display: none !default;
+    display: none;
   }
 }
 
 /* Resolves issue #5756: Textinput in IE10 has a default clear button */
 
 .ui-input-search input::-ms-clear {
-  display: none !default;
+  display: none;
 }
 
 .ui-input-text input:focus, .ui-input-search input:focus {
-  -webkit-box-shadow: none !default;
-  -moz-box-shadow: none !default;
-  box-shadow: none !default;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }
 
 textarea.ui-input-text.ui-textinput-autogrow {
-  overflow: hidden !default;
+  overflow: hidden;
 }
 
 .ui-textinput-autogrow-resize {
-  -webkit-transition: height 0.25s !default;
-  -o-transition: height 0.25s !default;
-  -moz-transition: height 0.25s !default;
-  transition: height 0.25s !default;
+  -webkit-transition: height 0.25s;
+  -o-transition: height 0.25s;
+  -moz-transition: height 0.25s;
+  transition: height 0.25s;
 }
 
 .ui-flipswitch {
-  display: inline-block !default;
-  vertical-align: middle !default;
-  width: 5.875em !default;
+  display: inline-block;
+  vertical-align: middle;
+  width: 5.875em;
 
   /* Override this and padding-left in next rule if you use labels other than "on/off" and need more space */
-  height: 1.875em !default;
-  border-width: 1px !default;
-  border-style: solid !default;
-  margin: .5em 0 !default;
-  overflow: hidden !default;
-  -webkit-transition-property: padding, width, background-color, color, border-color !default;
-  -moz-transition-property: padding, width, background-color, color, border-color !default;
-  -o-transition-property: padding, width, background-color, color, border-color !default;
-  transition-property: padding, width, background-color, color, border-color !default;
-  -webkit-transition-duration: 100ms !default;
-  -moz-transition-duration: 100ms !default;
-  -o-transition-duration: 100ms !default;
-  transition-duration: 100ms !default;
-  -webkit-touch-callout: none !default;
-  -webkit-user-select: none !default;
-  -moz-user-select: none !default;
-  -ms-user-select: none !default;
-  user-select: none !default;
-  cursor: pointer !default;
+  height: 1.875em;
+  border-width: 1px;
+  border-style: solid;
+  margin: .5em 0;
+  overflow: hidden;
+  -webkit-transition-property: padding, width, background-color, color, border-color;
+  -moz-transition-property: padding, width, background-color, color, border-color;
+  -o-transition-property: padding, width, background-color, color, border-color;
+  transition-property: padding, width, background-color, color, border-color;
+  -webkit-transition-duration: 100ms;
+  -moz-transition-duration: 100ms;
+  -o-transition-duration: 100ms;
+  transition-duration: 100ms;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
 
   &.ui-flipswitch-active {
-    padding-left: 4em !default;
+    padding-left: 4em;
 
     /* Override this and width in previous rule if you use labels other than "on/off" and need more space */
-    width: 1.875em !default;
+    width: 1.875em;
   }
 }
 
 .ui-flipswitch-input {
-  position: absolute !default;
-  height: 1px !default;
-  width: 1px !default;
-  margin: -1px !default;
-  overflow: hidden !default;
-  clip: rect(1px, 1px, 1px, 1px) !default;
-  border: 0 !default;
-  outline: 0 !default;
-  filter: Alpha(Opacity = 0) !default;
-  opacity: 0 !default;
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  border: 0;
+  outline: 0;
+  filter: Alpha(Opacity = 0);
+  opacity: 0;
 }
 
 .ui-flipswitch {
   .ui-btn.ui-flipswitch-on, .ui-flipswitch-off {
-    float: left !default;
-    height: 1.75em !default;
-    margin: .0625em !default;
-    line-height: 1.65em !default;
+    float: left;
+    height: 1.75em;
+    margin: .0625em;
+    line-height: 1.65em;
   }
 
   .ui-btn.ui-flipswitch-on {
-    width: 1.75em !default;
-    padding: 0 !default;
-    text-indent: -2.6em !default;
+    width: 1.75em;
+    padding: 0;
+    text-indent: -2.6em;
 
     /* Override this to center text if you use a label other than "on" */
-    text-align: left !default;
-    border-width: 1px !default;
-    border-style: solid !default;
-    -webkit-box-sizing: border-box !default;
-    -moz-box-sizing: border-box !default;
-    box-sizing: border-box !default;
-    border-radius: inherit !default;
-    overflow: visible !default;
-    color: inherit !default;
-    text-shadow: inherit !default;
+    text-align: left;
+    border-width: 1px;
+    border-style: solid;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: inherit;
+    overflow: visible;
+    color: inherit;
+    text-shadow: inherit;
   }
 
   .ui-flipswitch-off {
-    padding: 1px !default;
-    text-indent: 1em !default;
+    padding: 1px;
+    text-indent: 1em;
 
     /* Override this to center text if you use a label other than "off" */
   }
@@ -4118,45 +4118,45 @@ textarea.ui-input-text.ui-textinput-autogrow {
 
 html {
   .ui-field-contain > label + .ui-flipswitch, .ui-popup .ui-field-contain > label + .ui-flipswitch {
-    display: inline-block !default;
-    width: 5.875em !default;
+    display: inline-block;
+    width: 5.875em;
 
     /* If you override the width for .ui-flipswitch you should repeat the same value here */
-    -webkit-box-sizing: content-box !default;
-    -moz-box-sizing: content-box !default;
-    box-sizing: content-box !default;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
   }
 }
 
 .ui-field-contain .ui-flipswitch.ui-flipswitch-active, .ui-popup .ui-field-contain .ui-flipswitch.ui-flipswitch-active {
-  width: 1.875em !default;
+  width: 1.875em;
 }
 
 .ui-table {
-  border: 0 !default;
-  border-collapse: collapse !default;
-  padding: 0 !default;
-  width: 100% !default;
+  border: 0;
+  border-collapse: collapse;
+  padding: 0;
+  width: 100%;
 
   th, td {
-    line-height: 1.5em !default;
-    text-align: left !default;
-    padding: .4em .5em !default;
-    vertical-align: top !default;
+    line-height: 1.5em;
+    text-align: left;
+    padding: .4em .5em;
+    vertical-align: top;
   }
 
   th .ui-btn, td .ui-btn {
-    line-height: normal !default;
+    line-height: normal;
   }
 
   th {
-    font-weight: bold !default;
+    font-weight: bold;
   }
 
   caption {
-    text-align: left !default;
-    margin-bottom: 1.4em !default;
-    opacity: .5 !default;
+    text-align: left;
+    margin-bottom: 1.4em;
+    opacity: .5;
   }
 }
 
@@ -4165,36 +4165,36 @@ html {
 */
 
 .ui-table-columntoggle-btn {
-  float: right !default;
-  margin-bottom: .8em !default;
+  float: right;
+  margin-bottom: .8em;
 }
 
 /* Remove top/bottom margins around the fieldcontain on check list */
 
 .ui-table-columntoggle-popup fieldset {
-  margin: 0 !default;
+  margin: 0;
 }
 
 .ui-table-columntoggle {
-  clear: both !default;
+  clear: both;
 
   th.ui-table-cell-hidden, td.ui-table-cell-hidden {
-    display: none !default;
+    display: none;
   }
 
   &.ui-responsive {
     th.ui-table-cell-hidden, td.ui-table-cell-hidden {
-      display: none !default;
+      display: none;
     }
   }
 
   th.ui-table-cell-visible, td.ui-table-cell-visible {
-    display: table-cell !default;
+    display: table-cell;
   }
 
   &.ui-responsive {
     th.ui-table-cell-visible, td.ui-table-cell-visible {
-      display: table-cell !default;
+      display: table-cell;
     }
   }
 }
@@ -4202,7 +4202,7 @@ html {
 /* Hide all prioritized columns by default */
 @media only all {
   th.ui-table-priority-6, td.ui-table-priority-6, th.ui-table-priority-5, td.ui-table-priority-5, th.ui-table-priority-4, td.ui-table-priority-4, th.ui-table-priority-3, td.ui-table-priority-3, th.ui-table-priority-2, td.ui-table-priority-2, th.ui-table-priority-1, td.ui-table-priority-1 {
-    display: none !default;
+    display: none;
   }
 }
 
@@ -4211,7 +4211,7 @@ html {
 @media screen and (min-width: 20em) {
   .ui-table-columntoggle.ui-responsive {
     th.ui-table-priority-1, td.ui-table-priority-1 {
-      display: table-cell !default;
+      display: table-cell;
     }
   }
 }
@@ -4220,7 +4220,7 @@ html {
 @media screen and (min-width: 30em) {
   .ui-table-columntoggle.ui-responsive {
     th.ui-table-priority-2, td.ui-table-priority-2 {
-      display: table-cell !default;
+      display: table-cell;
     }
   }
 }
@@ -4229,7 +4229,7 @@ html {
 @media screen and (min-width: 40em) {
   .ui-table-columntoggle.ui-responsive {
     th.ui-table-priority-3, td.ui-table-priority-3 {
-      display: table-cell !default;
+      display: table-cell;
     }
   }
 }
@@ -4238,7 +4238,7 @@ html {
 @media screen and (min-width: 50em) {
   .ui-table-columntoggle.ui-responsive {
     th.ui-table-priority-4, td.ui-table-priority-4 {
-      display: table-cell !default;
+      display: table-cell;
     }
   }
 }
@@ -4247,7 +4247,7 @@ html {
 @media screen and (min-width: 60em) {
   .ui-table-columntoggle.ui-responsive {
     th.ui-table-priority-5, td.ui-table-priority-5 {
-      display: table-cell !default;
+      display: table-cell;
     }
   }
 }
@@ -4256,7 +4256,7 @@ html {
 @media screen and (min-width: 70em) {
   .ui-table-columntoggle.ui-responsive {
     th.ui-table-priority-6, td.ui-table-priority-6 {
-      display: table-cell !default;
+      display: table-cell;
     }
   }
 }
@@ -4271,7 +4271,7 @@ html {
 
 .ui-table-reflow {
   td .ui-table-cell-label, th .ui-table-cell-label {
-    display: none !default;
+    display: none;
   }
 }
 
@@ -4282,51 +4282,51 @@ html {
   .ui-table-reflow {
     thead {
       td, th {
-        display: none !default;
+        display: none;
       }
     }
 
     td, th {
-      text-align: left !default;
-      display: block !default;
+      text-align: left;
+      display: block;
     }
 
     tbody th {
-      margin-top: 3em !default;
+      margin-top: 3em;
     }
 
     td .ui-table-cell-label {
-      padding: .4em !default;
-      min-width: 30% !default;
-      display: inline-block !default;
-      margin: -.4em 1em -.4em -.4em !default;
+      padding: .4em;
+      min-width: 30%;
+      display: inline-block;
+      margin: -.4em 1em -.4em -.4em;
     }
 
     th {
       .ui-table-cell-label {
-        padding: .4em !default;
-        min-width: 30% !default;
-        display: inline-block !default;
-        margin: -.4em 1em -.4em -.4em !default;
+        padding: .4em;
+        min-width: 30%;
+        display: inline-block;
+        margin: -.4em 1em -.4em -.4em;
       }
 
       .ui-table-cell-label-top {
-        display: block !default;
-        padding: .4em 0 !default;
-        margin: .4em 0 !default;
-        text-transform: uppercase !default;
-        font-size: .9em !default;
-        font-weight: normal !default;
+        display: block;
+        padding: .4em 0;
+        margin: .4em 0;
+        text-transform: uppercase;
+        font-size: .9em;
+        font-weight: normal;
       }
     }
 
     td .ui-table-cell-label-top {
-      display: block !default;
-      padding: .4em 0 !default;
-      margin: .4em 0 !default;
-      text-transform: uppercase !default;
-      font-size: .9em !default;
-      font-weight: normal !default;
+      display: block;
+      padding: .4em 0;
+      margin: .4em 0;
+      text-transform: uppercase;
+      font-size: .9em;
+      font-weight: normal;
     }
   }
 
@@ -4345,26 +4345,26 @@ html {
 
   .ui-table-reflow.ui-responsive {
     td, th {
-      display: table-cell !default;
-      margin: 0 !default;
+      display: table-cell;
+      margin: 0;
     }
 
     tbody {
       th, td {
-        display: table-cell !default;
-        margin: 0 !default;
+        display: table-cell;
+        margin: 0;
       }
     }
 
     thead {
       td, th {
-        display: table-cell !default;
-        margin: 0 !default;
+        display: table-cell;
+        margin: 0;
       }
     }
 
     td .ui-table-cell-label, th .ui-table-cell-label {
-      display: none !default;
+      display: none;
     }
   }
 
@@ -4376,12 +4376,12 @@ html {
 @media (max-width: 35em) {
   .ui-table-reflow.ui-responsive {
     td, th {
-      width: 100% !default;
-      -webkit-box-sizing: border-box !default;
-      -moz-box-sizing: border-box !default;
-      box-sizing: border-box !default;
-      float: left !default;
-      clear: left !default;
+      width: 100%;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      float: left;
+      clear: left;
     }
   }
 }
@@ -4389,114 +4389,114 @@ html {
 /* Panel */
 
 .ui-panel {
-  width: 17em !default;
-  min-height: 100% !default;
-  max-height: none !default;
-  border-width: 0 !default;
-  position: absolute !default;
-  top: 0 !default;
-  display: block !default;
+  width: 17em;
+  min-height: 100%;
+  max-height: none;
+  border-width: 0;
+  position: absolute;
+  top: 0;
+  display: block;
 }
 
 .ui-panel-closed {
-  width: 0 !default;
-  max-height: 100% !default;
-  overflow: hidden !default;
-  visibility: hidden !default;
-  left: 0 !default;
-  clip: rect(1px, 1px, 1px, 1px) !default;
+  width: 0;
+  max-height: 100%;
+  overflow: hidden;
+  visibility: hidden;
+  left: 0;
+  clip: rect(1px, 1px, 1px, 1px);
 }
 
 .ui-panel-fixed {
-  position: fixed !default;
-  bottom: -1px !default;
+  position: fixed;
+  bottom: -1px;
 
   /* Fixes gap on Chrome for Android */
-  padding-bottom: 1px !default;
+  padding-bottom: 1px;
 }
 
 .ui-panel-display-reveal {
-  z-index: 1 !default;
+  z-index: 1;
 }
 
 .ui-panel-display-push {
-  z-index: 999 !default;
+  z-index: 999;
 }
 
 .ui-panel-display-overlay {
-  z-index: 1001 !default;
+  z-index: 1001;
 
   /* Fixed toolbars have z-index 1000 */
 }
 
 .ui-panel-inner {
-  padding: 1em !default;
+  padding: 1em;
 }
 
 /* Container, page and wrapper */
 
 .ui-panel-page-container {
-  overflow-x: visible !default;
+  overflow-x: visible;
 }
 
 .ui-panel-page-container-themed .ui-page-active {
-  background: none !default;
+  background: none;
 }
 
 .ui-panel-wrapper {
-  position: relative !default;
-  min-height: inherit !default;
-  border: 0 !default;
-  overflow-x: hidden !default;
-  z-index: 999 !default;
+  position: relative;
+  min-height: inherit;
+  border: 0;
+  overflow-x: hidden;
+  z-index: 999;
 }
 
 /* Fixed toolbars */
 
 .ui-panel-fixed-toolbar {
-  overflow-x: hidden !default;
+  overflow-x: hidden;
 }
 
 /* Dismiss */
 
 .ui-panel-dismiss {
-  position: absolute !default;
-  top: 0 !default;
-  left: 0 !default;
-  right: 0 !default;
-  height: 100% !default;
-  z-index: 1002 !default;
-  display: none !default;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  z-index: 1002;
+  display: none;
 }
 
 .ui-panel-dismiss-open {
-  display: block !default;
+  display: block;
 }
 
 /* Animate class is added to panel, wrapper and fixed toolbars */
 
 .ui-panel-animate {
-  -webkit-transition: -webkit-transform 300ms ease !default;
-  -webkit-transition-duration: 300ms !default;
-  -moz-transition: -moz-transform 300ms ease !default;
-  transition: transform 300ms ease !default;
+  -webkit-transition: -webkit-transform 300ms ease;
+  -webkit-transition-duration: 300ms;
+  -moz-transition: -moz-transform 300ms ease;
+  transition: transform 300ms ease;
 
   &.ui-panel:not(.ui-panel-display-reveal) {
-    -webkit-backface-visibility: hidden !default;
-    -webkit-transform: translate3d(0, 0, 0) !default;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
   }
 }
 
 /* Fix for Windows Phone issue #6349: unset the transition for transforms in case of fixed toolbars. */
 @media screen and (max-device-width: 768px) {
   .ui-page-header-fixed .ui-panel-animate.ui-panel-wrapper, .ui-page-footer-fixed .ui-panel-animate.ui-panel-wrapper {
-    -ms-transition: none !default;
+    -ms-transition: none;
   }
 
   .ui-panel-animate.ui-panel-fixed-toolbar {
-    -ms-transition: none !default;
-    -ms-transition: -ms-transform 1ms !default;
-    -ms-transform: rotate(0deg) !default;
+    -ms-transition: none;
+    -ms-transition: -ms-transform 1ms;
+    -ms-transform: rotate(0deg);
   }
 
   /* We need a transitionend event ... */
@@ -4508,50 +4508,50 @@ html {
 /* Panel left closed */
 
 .ui-panel-position-left {
-  left: -17em !default;
+  left: -17em;
 }
 
 /* Panel left closed animated */
 
 .ui-panel-animate.ui-panel-position-left {
   &.ui-panel-display-overlay, &.ui-panel-display-push {
-    left: 0 !default;
-    -webkit-transform: translate3d(-17em, 0, 0) !default;
-    -moz-transform: translate3d(-17em, 0, 0) !default;
-    transform: translate3d(-17em, 0, 0) !default;
+    left: 0;
+    -webkit-transform: translate3d(-17em, 0, 0);
+    -moz-transform: translate3d(-17em, 0, 0);
+    transform: translate3d(-17em, 0, 0);
   }
 }
 
 /* Panel left open */
 
 .ui-panel-position-left.ui-panel-display-reveal, .ui-panel-open.ui-panel-position-left {
-  left: 0 !default;
+  left: 0;
 }
 
 /* Panel left open animated */
 
 .ui-panel-animate.ui-panel-open.ui-panel-position-left {
   &.ui-panel-display-overlay, &.ui-panel-display-push {
-    -webkit-transform: translate3d(0, 0, 0) !default;
-    transform: translate3d(0, 0, 0) !default;
-    -moz-transform: none !default;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -moz-transform: none;
   }
 }
 
 /* Panel right closed */
 
 .ui-panel-position-right {
-  right: -17em !default;
+  right: -17em;
 }
 
 /* Panel right closed animated */
 
 .ui-panel-animate.ui-panel-position-right {
   &.ui-panel-display-overlay, &.ui-panel-display-push {
-    right: 0 !default;
-    -webkit-transform: translate3d(17em, 0, 0) !default;
-    -moz-transform: translate3d(17em, 0, 0) !default;
-    transform: translate3d(17em, 0, 0) !default;
+    right: 0;
+    -webkit-transform: translate3d(17em, 0, 0);
+    -moz-transform: translate3d(17em, 0, 0);
+    transform: translate3d(17em, 0, 0);
   }
 }
 
@@ -4559,7 +4559,7 @@ html {
 
 .ui-panel-position-right {
   &.ui-panel-display-reveal, &.ui-panel-open {
-    right: 0 !default;
+    right: 0;
   }
 }
 
@@ -4567,9 +4567,9 @@ html {
 
 .ui-panel-animate.ui-panel-open.ui-panel-position-right {
   &.ui-panel-display-overlay, &.ui-panel-display-push {
-    -webkit-transform: translate3d(0, 0, 0) !default;
-    transform: translate3d(0, 0, 0) !default;
-    -moz-transform: none !default;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -moz-transform: none;
   }
 }
 
@@ -4577,93 +4577,93 @@ html {
 /* Panel left open */
 
 .ui-panel-page-content-position-left {
-  left: 17em !default;
-  right: -17em !default;
+  left: 17em;
+  right: -17em;
 }
 
 /* Panel left open animated */
 
 .ui-panel-animate.ui-panel-page-content-position-left {
-  left: 0 !default;
-  right: 0 !default;
-  -webkit-transform: translate3d(17em, 0, 0) !default;
-  -moz-transform: translate3d(17em, 0, 0) !default;
-  transform: translate3d(17em, 0, 0) !default;
+  left: 0;
+  right: 0;
+  -webkit-transform: translate3d(17em, 0, 0);
+  -moz-transform: translate3d(17em, 0, 0);
+  transform: translate3d(17em, 0, 0);
 }
 
 /* Panel right open */
 
 .ui-panel-page-content-position-right {
-  left: -17em !default;
-  right: 17em !default;
+  left: -17em;
+  right: 17em;
 }
 
 /* Panel right open animated */
 
 .ui-panel-animate.ui-panel-page-content-position-right {
-  left: 0 !default;
-  right: 0 !default;
-  -webkit-transform: translate3d(-17em, 0, 0) !default;
-  -moz-transform: translate3d(-17em, 0, 0) !default;
-  transform: translate3d(-17em, 0, 0) !default;
+  left: 0;
+  right: 0;
+  -webkit-transform: translate3d(-17em, 0, 0);
+  -moz-transform: translate3d(-17em, 0, 0);
+  transform: translate3d(-17em, 0, 0);
 }
 
 /* Dismiss model open */
 
 .ui-panel-dismiss-open {
   &.ui-panel-dismiss-position-left {
-    left: 17em !default;
+    left: 17em;
   }
 
   &.ui-panel-dismiss-position-right {
-    right: 17em !default;
+    right: 17em;
   }
 }
 
 /* Shadows and borders */
 
 .ui-panel-display-reveal {
-  -webkit-box-shadow: inset -5px 0 5px rgba(0, 0, 0, 0.15) !default;
-  -moz-box-shadow: inset -5px 0 5px rgba(0, 0, 0, 0.15) !default;
-  box-shadow: inset -5px 0 5px rgba(0, 0, 0, 0.15) !default;
+  -webkit-box-shadow: inset -5px 0 5px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset -5px 0 5px rgba(0, 0, 0, 0.15);
+  box-shadow: inset -5px 0 5px rgba(0, 0, 0, 0.15);
 }
 
 .ui-panel-position-right.ui-panel-display-reveal {
-  -webkit-box-shadow: inset 5px 0 5px rgba(0, 0, 0, 0.15) !default;
-  -moz-box-shadow: inset 5px 0 5px rgba(0, 0, 0, 0.15) !default;
-  box-shadow: inset 5px 0 5px rgba(0, 0, 0, 0.15) !default;
+  -webkit-box-shadow: inset 5px 0 5px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 5px 0 5px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 5px 0 5px rgba(0, 0, 0, 0.15);
 }
 
 .ui-panel-display-overlay {
-  -webkit-box-shadow: 5px 0 5px rgba(0, 0, 0, 0.15) !default;
-  -moz-box-shadow: 5px 0 5px rgba(0, 0, 0, 0.15) !default;
-  box-shadow: 5px 0 5px rgba(0, 0, 0, 0.15) !default;
+  -webkit-box-shadow: 5px 0 5px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 5px 0 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 5px 0 5px rgba(0, 0, 0, 0.15);
 }
 
 .ui-panel-position-right.ui-panel-display-overlay {
-  -webkit-box-shadow: -5px 0 5px rgba(0, 0, 0, 0.15) !default;
-  -moz-box-shadow: -5px 0 5px rgba(0, 0, 0, 0.15) !default;
-  box-shadow: -5px 0 5px rgba(0, 0, 0, 0.15) !default;
+  -webkit-box-shadow: -5px 0 5px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: -5px 0 5px rgba(0, 0, 0, 0.15);
+  box-shadow: -5px 0 5px rgba(0, 0, 0, 0.15);
 }
 
 .ui-panel-open.ui-panel-position-left.ui-panel-display-push {
-  border-right-width: 1px !default;
-  margin-right: -1px !default;
+  border-right-width: 1px;
+  margin-right: -1px;
 }
 
 .ui-panel-page-content-position-left.ui-panel-page-content-display-push {
-  margin-left: 1px !default;
-  width: auto !default;
+  margin-left: 1px;
+  width: auto;
 }
 
 .ui-panel-open.ui-panel-position-right.ui-panel-display-push {
-  border-left-width: 1px !default;
-  margin-left: -1px !default;
+  border-left-width: 1px;
+  margin-left: -1px;
 }
 
 .ui-panel-page-content-position-right.ui-panel-page-content-display-push {
-  margin-right: 1px !default;
-  width: auto !default;
+  margin-right: 1px;
+  width: auto;
 }
 
 /* Responsive: wrap on wide viewports once open */
@@ -4671,25 +4671,25 @@ html {
   .ui-responsive-panel {
     .ui-panel-page-content-open {
       &.ui-panel-page-content-position-left {
-        margin-right: 17em !default;
+        margin-right: 17em;
       }
 
       &.ui-panel-page-content-position-right {
-        margin-left: 17em !default;
+        margin-left: 17em;
       }
 
-      width: auto !default;
+      width: auto;
     }
 
     .ui-panel-dismiss-display-push, &.ui-page-active ~ .ui-panel-dismiss-display-push {
-      display: none !default;
+      display: none;
     }
   }
 }
 
 .ui-tabs {
-  position: relative !default;
+  position: relative;
 
   /* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
-  padding: .2em !default;
+  padding: .2em;
 }

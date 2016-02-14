@@ -5,17 +5,17 @@
  */
 
 .fc {
-  direction: ltr !default;
-  text-align: left !default;
+  direction: ltr;
+  text-align: left;
 }
 
 .fc-rtl {
-  text-align: right !default;
+  text-align: right;
 }
 
 body .fc {
   /* extra precedence to overcome jqui */
-  font-size: 1em !default;
+  font-size: 1em;
 }
 
 /* Colors
@@ -23,45 +23,45 @@ body .fc {
 
 .fc-unthemed {
   th, td, hr, thead, tbody, .fc-row {
-    border-color: #ddd !default;
+    border-color: #ddd;
   }
 
   .fc-popover {
-    border-color: #ddd !default;
-    background-color: #fff !default;
+    border-color: #ddd;
+    background-color: #fff;
   }
 
   hr {
-    background: #eee !default;
+    background: #eee;
   }
 
   .fc-popover .fc-header {
-    background: #eee !default;
+    background: #eee;
 
     .fc-close {
-      color: #666 !default;
+      color: #666;
     }
   }
 
   .fc-today {
-    background: #fcf8e3 !default;
+    background: #fcf8e3;
   }
 }
 
 .fc-highlight {
   /* when user is selecting cells */
-  background: #bce8f1 !default;
-  opacity: .3 !default;
-  filter: alpha(opacity = 30) !default;
+  background: #bce8f1;
+  opacity: .3;
+  filter: alpha(opacity = 30);
 
   /* for IE */
 }
 
 .fc-bgevent {
   /* default look for background events */
-  background: rgb(143, 223, 130) !default;
-  opacity: .3 !default;
-  filter: alpha(opacity = 30) !default;
+  background: rgb(143, 223, 130);
+  opacity: .3;
+  filter: alpha(opacity = 30);
 
   /* for IE */
 }
@@ -69,42 +69,42 @@ body .fc {
 .fc-nonbusiness {
   /* default look for non-business-hours areas */
   /* will inherit .fc-bgevent's styles */
-  background: #ccc !default;
+  background: #ccc;
 }
 
 /* Icons (inline elements with styled text that mock arrow icons)
 --------------------------------------------------------------------------------------------------*/
 
 .fc-icon {
-  display: inline-block !default;
-  font-size: 2em !default;
-  line-height: .5em !default;
-  height: .5em !default;
+  display: inline-block;
+  font-size: 2em;
+  line-height: .5em;
+  height: .5em;
 
   /* will make the total height 1em */
-  font-family: "Courier New", Courier, monospace !default;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .fc-icon-left-single-arrow:after {
-  content: "\02039" !default;
-  font-weight: bold !default;
+  content: "\02039";
+  font-weight: bold;
 }
 
 .fc-icon-right-single-arrow:after {
-  content: "\0203A" !default;
-  font-weight: bold !default;
+  content: "\0203A";
+  font-weight: bold;
 }
 
 .fc-icon-left-double-arrow:after {
-  content: "\000AB" !default;
+  content: "\000AB";
 }
 
 .fc-icon-right-double-arrow:after {
-  content: "\000BB" !default;
+  content: "\000BB";
 }
 
 .fc-icon-x:after {
-  content: "\000D7" !default;
+  content: "\000D7";
 }
 
 /* Buttons (styled <button> tags, normalized to work cross-browser)
@@ -112,25 +112,25 @@ body .fc {
 
 .fc button {
   /* force height to include the border and padding */
-  -moz-box-sizing: border-box !default;
-  -webkit-box-sizing: border-box !default;
-  box-sizing: border-box !default;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 
   /* dimensions */
-  margin: 0 !default;
-  height: 2.1em !default;
-  padding: 0 .6em !default;
+  margin: 0;
+  height: 2.1em;
+  padding: 0 .6em;
 
   /* text & cursor */
-  font-size: 1em !default;
+  font-size: 1em;
 
   /* normalize */
-  white-space: nowrap !default;
-  cursor: pointer !default;
+  white-space: nowrap;
+  cursor: pointer;
 
   &::-moz-focus-inner {
-    margin: 0 !default;
-    padding: 0 !default;
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -138,18 +138,18 @@ body .fc {
 
 .fc-state-default {
   /* non-theme */
-  border: 1px solid !default;
+  border: 1px solid;
 
   &.fc-corner-left {
     /* non-theme */
-    border-top-left-radius: 4px !default;
-    border-bottom-left-radius: 4px !default;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
   }
 
   &.fc-corner-right {
     /* non-theme */
-    border-top-right-radius: 4px !default;
-    border-bottom-right-radius: 4px !default;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
   }
 }
 
@@ -157,11 +157,11 @@ body .fc {
 
 .fc button .fc-icon {
   /* non-theme */
-  position: relative !default;
-  top: .05em !default;
+  position: relative;
+  top: .05em;
 
   /* seems to be a good adjustment across browsers */
-  margin: 0 .1em !default;
+  margin: 0 .1em;
 }
 
 /*
@@ -170,54 +170,54 @@ body .fc {
 */
 
 .fc-state-default {
-  background-color: #f5f5f5 !default;
-  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6) !default;
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6)) !default;
-  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6) !default;
-  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6) !default;
-  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6) !default;
-  background-repeat: repeat-x !default;
-  border-color: #e6e6e6 #e6e6e6 #bfbfbf !default;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25) !default;
-  color: #333 !default;
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75) !default;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05) !default;
+  background-color: #f5f5f5;
+  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+  background-repeat: repeat-x;
+  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  color: #333;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
 .fc-state-hover, .fc-state-down, .fc-state-active, .fc-state-disabled {
-  color: #333333 !default;
-  background-color: #e6e6e6 !default;
+  color: #333333;
+  background-color: #e6e6e6;
 }
 
 .fc-state-hover {
-  color: #333333 !default;
-  text-decoration: none !default;
-  background-position: 0 -15px !default;
-  -webkit-transition: background-position 0.1s linear !default;
-  -moz-transition: background-position 0.1s linear !default;
-  -o-transition: background-position 0.1s linear !default;
-  transition: background-position 0.1s linear !default;
+  color: #333333;
+  text-decoration: none;
+  background-position: 0 -15px;
+  -webkit-transition: background-position 0.1s linear;
+  -moz-transition: background-position 0.1s linear;
+  -o-transition: background-position 0.1s linear;
+  transition: background-position 0.1s linear;
 }
 
 .fc-state-down, .fc-state-active {
-  background-color: #cccccc !default;
-  background-image: none !default;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05) !default;
+  background-color: #cccccc;
+  background-image: none;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
 .fc-state-disabled {
-  cursor: default !default;
-  background-image: none !default;
-  opacity: 0.65 !default;
-  filter: alpha(opacity = 65) !default;
-  box-shadow: none !default;
+  cursor: default;
+  background-image: none;
+  opacity: 0.65;
+  filter: alpha(opacity = 65);
+  box-shadow: none;
 }
 
 /* Buttons Groups
 --------------------------------------------------------------------------------------------------*/
 
 .fc-button-group {
-  display: inline-block !default;
+  display: inline-block;
 }
 
 /*
@@ -228,13 +228,13 @@ previous button's border...
 .fc .fc-button-group > {
   * {
     /* extra precedence b/c buttons have margin set to zero */
-    float: left !default;
-    margin: 0 0 0 -1px !default;
+    float: left;
+    margin: 0 0 0 -1px;
   }
 
   :first-child {
     /* same */
-    margin-left: 0 !default;
+    margin-left: 0;
   }
 }
 
@@ -242,56 +242,56 @@ previous button's border...
 --------------------------------------------------------------------------------------------------*/
 
 .fc-popover {
-  position: absolute !default;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !default;
+  position: absolute;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 
   .fc-header {
-    padding: 2px 4px !default;
+    padding: 2px 4px;
 
     .fc-title {
-      margin: 0 2px !default;
+      margin: 0 2px;
     }
 
     .fc-close {
-      cursor: pointer !default;
+      cursor: pointer;
     }
   }
 }
 
 .fc-ltr .fc-popover .fc-header .fc-title {
-  float: left !default;
+  float: left;
 }
 
 .fc-rtl .fc-popover .fc-header {
   .fc-close {
-    float: left !default;
+    float: left;
   }
 
   .fc-title {
-    float: right !default;
+    float: right;
   }
 }
 
 .fc-ltr .fc-popover .fc-header .fc-close {
-  float: right !default;
+  float: right;
 }
 
 /* unthemed */
 
 .fc-unthemed .fc-popover {
-  border-width: 1px !default;
-  border-style: solid !default;
+  border-width: 1px;
+  border-style: solid;
 
   .fc-header .fc-close {
-    font-size: 25px !default;
-    margin-top: 4px !default;
+    font-size: 25px;
+    margin-top: 4px;
   }
 }
 
 /* jqui themed */
 
 .fc-popover > .ui-widget-header + .ui-widget-content {
-  border-top: 0 !default;
+  border-top: 0;
 
   /* where they meet, let the header have the border */
 }
@@ -300,34 +300,34 @@ previous button's border...
 --------------------------------------------------------------------------------------------------*/
 
 .fc hr {
-  height: 0 !default;
-  margin: 0 !default;
-  padding: 0 0 2px !default;
+  height: 0;
+  margin: 0;
+  padding: 0 0 2px;
 
   /* height is unreliable across browsers, so use padding */
-  border-style: solid !default;
-  border-width: 1px 0 !default;
+  border-style: solid;
+  border-width: 1px 0;
 }
 
 .fc-clear {
-  clear: both !default;
+  clear: both;
 }
 
 .fc-bg, .fc-bgevent-skeleton, .fc-highlight-skeleton, .fc-helper-skeleton {
   /* these element should always cling to top-left/right corners */
-  position: absolute !default;
-  top: 0 !default;
-  left: 0 !default;
-  right: 0 !default;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .fc-bg {
-  bottom: 0 !default;
+  bottom: 0;
 
   /* strech bg to bottom edge */
 
   table {
-    height: 100% !default;
+    height: 100%;
 
     /* strech bg to bottom edge */
   }
@@ -338,31 +338,31 @@ previous button's border...
 
 .fc {
   table {
-    width: 100% !default;
-    table-layout: fixed !default;
-    border-collapse: collapse !default;
-    border-spacing: 0 !default;
-    font-size: 1em !default;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 1em;
 
     /* normalize cross-browser */
   }
 
   th {
-    text-align: center !default;
-    border-style: solid !default;
-    border-width: 1px !default;
-    padding: 0 !default;
-    vertical-align: top !default;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    padding: 0;
+    vertical-align: top;
   }
 
   td {
-    border-style: solid !default;
-    border-width: 1px !default;
-    padding: 0 !default;
-    vertical-align: top !default;
+    border-style: solid;
+    border-width: 1px;
+    padding: 0;
+    vertical-align: top;
 
     &.fc-today {
-      border-style: double !default;
+      border-style: double;
 
       /* overcome neighboring borders */
     }
@@ -371,8 +371,8 @@ previous button's border...
   .fc-row {
     /* extra precedence to overcome themes w/ .ui-widget-content forcing a 1px border */
     /* no visible border by default. but make available if need be (scrollbar width compensation) */
-    border-style: solid !default;
-    border-width: 0 !default;
+    border-style: solid;
+    border-width: 0;
   }
 }
 
@@ -383,87 +383,87 @@ previous button's border...
   table {
     /* don't put left/right border on anything within a fake row.
        the outer tbody will worry about this */
-    border-left: 0 hidden transparent !default;
-    border-right: 0 hidden transparent !default;
+    border-left: 0 hidden transparent;
+    border-right: 0 hidden transparent;
 
     /* no bottom borders on rows */
-    border-bottom: 0 hidden transparent !default;
+    border-bottom: 0 hidden transparent;
   }
 
   &:first-child table {
-    border-top: 0 hidden transparent !default;
+    border-top: 0 hidden transparent;
 
     /* no top border on first row */
   }
 
-  position: relative !default;
+  position: relative;
 
   .fc-bg {
-    z-index: 1 !default;
+    z-index: 1;
   }
 
   .fc-bgevent-skeleton, .fc-highlight-skeleton {
-    bottom: 0 !default;
+    bottom: 0;
 
     /* stretch skeleton to bottom of row */
   }
 
   .fc-bgevent-skeleton table {
-    height: 100% !default;
+    height: 100%;
 
     /* stretch skeleton to bottom of row */
   }
 
   .fc-highlight-skeleton {
     table {
-      height: 100% !default;
+      height: 100%;
 
       /* stretch skeleton to bottom of row */
     }
 
     td {
-      border-color: transparent !default;
+      border-color: transparent;
     }
   }
 
   .fc-bgevent-skeleton {
     td {
-      border-color: transparent !default;
+      border-color: transparent;
     }
 
-    z-index: 2 !default;
+    z-index: 2;
   }
 
   .fc-highlight-skeleton {
-    z-index: 3 !default;
+    z-index: 3;
   }
 
   .fc-content-skeleton {
-    position: relative !default;
-    z-index: 4 !default;
-    padding-bottom: 2px !default;
+    position: relative;
+    z-index: 4;
+    padding-bottom: 2px;
 
     /* matches the space above the events */
   }
 
   .fc-helper-skeleton {
-    z-index: 5 !default;
+    z-index: 5;
   }
 
   .fc-content-skeleton td, .fc-helper-skeleton td {
     /* see-through to the background below */
-    background: none !default;
+    background: none;
 
     /* in case <td>s are globally styled */
-    border-color: transparent !default;
+    border-color: transparent;
 
     /* don't put a border between events and/or the day number */
-    border-bottom: 0 !default;
+    border-bottom: 0;
   }
 
   .fc-content-skeleton tbody td, .fc-helper-skeleton tbody td {
     /* don't put a border between event cells */
-    border-top: 0 !default;
+    border-top: 0;
   }
 }
 
@@ -482,18 +482,18 @@ temporary rendered events).
 
 .fc-scroller {
   /* this class goes on elements for guaranteed vertical scrollbars */
-  overflow-y: scroll !default;
-  overflow-x: hidden !default;
+  overflow-y: scroll;
+  overflow-x: hidden;
 
   > * {
     /* we expect an immediate inner element */
-    position: relative !default;
+    position: relative;
 
     /* re-scope all positions */
-    width: 100% !default;
+    width: 100%;
 
     /* hack to force re-sizing this inner element when scrollbars appear/disappear */
-    overflow: hidden !default;
+    overflow: hidden;
 
     /* don't let negative margins or absolute positioning create further scroll */
   }
@@ -503,37 +503,37 @@ temporary rendered events).
 --------------------------------------------------------------------------------------------------*/
 
 .fc-event {
-  position: relative !default;
+  position: relative;
 
   /* for resize handle and other inner positioning */
-  display: block !default;
+  display: block;
 
   /* make the <a> tag block */
-  font-size: .85em !default;
-  line-height: 1.3 !default;
-  border-radius: 3px !default;
-  border: 1px solid #3a87ad !default;
+  font-size: .85em;
+  line-height: 1.3;
+  border-radius: 3px;
+  border: 1px solid #3a87ad;
 
   /* default BORDER color */
-  background-color: #3a87ad !default;
+  background-color: #3a87ad;
 
   /* default BACKGROUND color */
-  font-weight: normal !default;
+  font-weight: normal;
 
   /* undo jqui's ui-widget-header bold */
 
-  color: #fff !default;
+  color: #fff;
 
   /* default TEXT color */
-  text-decoration: none !default;
+  text-decoration: none;
 
   /* if <a> has an href */
 
   &:hover {
-    color: #fff !default;
+    color: #fff;
 
     /* default TEXT color */
-    text-decoration: none !default;
+    text-decoration: none;
 
     /* if <a> has an href */
   }
@@ -542,17 +542,17 @@ temporary rendered events).
 /* overpower some of bootstrap's and jqui's styles on <a> tags */
 
 .ui-widget .fc-event {
-  color: #fff !default;
+  color: #fff;
 
   /* default TEXT color */
-  text-decoration: none !default;
+  text-decoration: none;
 
   /* if <a> has an href */
 }
 
 .fc-event {
   &[href], &.fc-draggable {
-    cursor: pointer !default;
+    cursor: pointer;
 
     /* give events with links and draggable events a hand mouse pointer */
   }
@@ -560,11 +560,11 @@ temporary rendered events).
 
 .fc-not-allowed {
   /* to override an event's custom cursor */
-  cursor: not-allowed !default;
+  cursor: not-allowed;
 
   .fc-event {
     /* to override an event's custom cursor */
-    cursor: not-allowed !default;
+    cursor: not-allowed;
   }
 }
 
@@ -575,63 +575,63 @@ be a descendant of the grid when it is being dragged.
 */
 
 .fc-day-grid-event {
-  margin: 1px 2px 0 !default;
+  margin: 1px 2px 0;
 
   /* spacing between events and edges */
-  padding: 0 1px !default;
+  padding: 0 1px;
 }
 
 /* events that are continuing to/from another week. kill rounded corners and butt up against edge */
 
 .fc-ltr .fc-day-grid-event.fc-not-start, .fc-rtl .fc-day-grid-event.fc-not-end {
-  margin-left: 0 !default;
-  border-left-width: 0 !default;
-  padding-left: 1px !default;
+  margin-left: 0;
+  border-left-width: 0;
+  padding-left: 1px;
 
   /* replace the border with padding */
-  border-top-left-radius: 0 !default;
-  border-bottom-left-radius: 0 !default;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .fc-ltr .fc-day-grid-event.fc-not-end, .fc-rtl .fc-day-grid-event.fc-not-start {
-  margin-right: 0 !default;
-  border-right-width: 0 !default;
-  padding-right: 1px !default;
+  margin-right: 0;
+  border-right-width: 0;
+  padding-right: 1px;
 
   /* replace the border with padding */
-  border-top-right-radius: 0 !default;
-  border-bottom-right-radius: 0 !default;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .fc-day-grid-event {
   > .fc-content {
     /* force events to be one-line tall */
-    white-space: nowrap !default;
-    overflow: hidden !default;
+    white-space: nowrap;
+    overflow: hidden;
   }
 
   .fc-time {
-    font-weight: bold !default;
+    font-weight: bold;
   }
 
   .fc-resizer {
-    position: absolute !default;
-    top: 0 !default;
-    bottom: 0 !default;
-    width: 7px !default;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 7px;
   }
 }
 
 /* resize handle (outside of fc-content, so can go outside of bounds) */
 
 .fc-ltr .fc-day-grid-event .fc-resizer {
-  right: -3px !default;
-  cursor: e-resize !default;
+  right: -3px;
+  cursor: e-resize;
 }
 
 .fc-rtl .fc-day-grid-event .fc-resizer {
-  left: -3px !default;
-  cursor: w-resize !default;
+  left: -3px;
+  cursor: w-resize;
 }
 
 /* Event Limiting
@@ -640,35 +640,35 @@ be a descendant of the grid when it is being dragged.
 /* "more" link that represents hidden events */
 
 a.fc-more {
-  margin: 1px 3px !default;
-  font-size: .85em !default;
-  cursor: pointer !default;
-  text-decoration: none !default;
+  margin: 1px 3px;
+  font-size: .85em;
+  cursor: pointer;
+  text-decoration: none;
 
   &:hover {
-    text-decoration: underline !default;
+    text-decoration: underline;
   }
 }
 
 .fc-limited {
   /* rows and cells that are hidden because of a "more" link */
-  display: none !default;
+  display: none;
 }
 
 /* popover that appears when "more" link is clicked */
 
 .fc-day-grid .fc-row {
-  z-index: 1 !default;
+  z-index: 1;
 
   /* make the "more" popover one higher than this */
 }
 
 .fc-more-popover {
-  z-index: 2 !default;
-  width: 220px !default;
+  z-index: 2;
+  width: 220px;
 
   .fc-event-container {
-    padding: 10px !default;
+    padding: 10px;
   }
 }
 
@@ -676,19 +676,19 @@ a.fc-more {
 --------------------------------------------------------------------------------------------------*/
 
 .fc-toolbar {
-  text-align: center !default;
-  margin-bottom: 1em !default;
+  text-align: center;
+  margin-bottom: 1em;
 
   .fc-left {
-    float: left !default;
+    float: left;
   }
 
   .fc-right {
-    float: right !default;
+    float: right;
   }
 
   .fc-center {
-    display: inline-block !default;
+    display: inline-block;
   }
 }
 
@@ -697,13 +697,13 @@ a.fc-more {
 .fc .fc-toolbar > * > {
   * {
     /* extra precedence to override button border margins */
-    float: left !default;
-    margin-left: .75em !default;
+    float: left;
+    margin-left: .75em;
   }
 
   :first-child {
     /* extra precedence to override button border margins */
-    margin-left: 0 !default;
+    margin-left: 0;
   }
 }
 
@@ -713,27 +713,27 @@ a.fc-more {
 
 .fc-toolbar {
   h2 {
-    margin: 0 !default;
+    margin: 0;
   }
 
   button {
-    position: relative !default;
+    position: relative;
   }
 
   .fc-state-hover, .ui-state-hover {
-    z-index: 2 !default;
+    z-index: 2;
   }
 
   .fc-state-down {
-    z-index: 3 !default;
+    z-index: 3;
   }
 
   .fc-state-active, .ui-state-active {
-    z-index: 4 !default;
+    z-index: 4;
   }
 
   button:focus {
-    z-index: 5 !default;
+    z-index: 5;
   }
 }
 
@@ -746,26 +746,26 @@ a.fc-more {
 /* don't do this for the toolbar because we'll want bootstrap to style those buttons as some pt */
 
 .fc-view-container * {
-  -webkit-box-sizing: content-box !default;
-  -moz-box-sizing: content-box !default;
-  box-sizing: content-box !default;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
 
   &:before, &:after {
-    -webkit-box-sizing: content-box !default;
-    -moz-box-sizing: content-box !default;
-    box-sizing: content-box !default;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
   }
 }
 
 .fc-view {
   /* so dragged elements can be above the view's main element */
-  position: relative !default;
-  z-index: 1 !default;
+  position: relative;
+  z-index: 1;
 
   > table {
     /* so dragged elements can be above the view's main element */
-    position: relative !default;
-    z-index: 1 !default;
+    position: relative;
+    z-index: 1;
   }
 }
 
@@ -776,16 +776,16 @@ a.fc-more {
 
 .fc-basicWeek-view .fc-content-skeleton, .fc-basicDay-view .fc-content-skeleton {
   /* we are sure there are no day numbers in these views, so... */
-  padding-top: 1px !default;
+  padding-top: 1px;
 
   /* add a pixel to make sure there are 2px padding above events */
-  padding-bottom: 1em !default;
+  padding-bottom: 1em;
 
   /* ensure a space at bottom of cell for user selecting/clicking */
 }
 
 .fc-basic-view tbody .fc-row {
-  min-height: 4em !default;
+  min-height: 4em;
 
   /* ensure that all rows are at least this tall */
 }
@@ -793,13 +793,13 @@ a.fc-more {
 /* a "rigid" row will take up a constant amount of height because content-skeleton is absolute */
 
 .fc-row.fc-rigid {
-  overflow: hidden !default;
+  overflow: hidden;
 
   .fc-content-skeleton {
-    position: absolute !default;
-    top: 0 !default;
-    left: 0 !default;
-    right: 0 !default;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
   }
 }
 
@@ -807,38 +807,38 @@ a.fc-more {
 
 .fc-basic-view {
   .fc-week-number, .fc-day-number {
-    padding: 0 2px !default;
+    padding: 0 2px;
   }
 
   td {
     &.fc-week-number span, &.fc-day-number {
-      padding-top: 2px !default;
-      padding-bottom: 2px !default;
+      padding-top: 2px;
+      padding-bottom: 2px;
     }
   }
 
   .fc-week-number {
-    text-align: center !default;
+    text-align: center;
 
     span {
       /* work around the way we do column resizing and ensure a minimum width */
-      display: inline-block !default;
-      min-width: 1.25em !default;
+      display: inline-block;
+      min-width: 1.25em;
     }
   }
 }
 
 .fc-ltr .fc-basic-view .fc-day-number {
-  text-align: right !default;
+  text-align: right;
 }
 
 .fc-rtl .fc-basic-view .fc-day-number {
-  text-align: left !default;
+  text-align: left;
 }
 
 .fc-day-number.fc-other-month {
-  opacity: 0.3 !default;
-  filter: alpha(opacity = 30) !default;
+  opacity: 0.3;
+  filter: alpha(opacity = 30);
 
   /* for IE */
   /* opacity with small font can sometimes look too faded
@@ -850,21 +850,21 @@ a.fc-more {
 --------------------------------------------------------------------------------------------------*/
 
 .fc-agenda-view .fc-day-grid {
-  position: relative !default;
-  z-index: 2 !default;
+  position: relative;
+  z-index: 2;
 
   /* so the "more.." popover will be over the time grid */
 
   .fc-row {
-    min-height: 3em !default;
+    min-height: 3em;
 
     /* all-day section will never get shorter than this */
 
     .fc-content-skeleton {
-      padding-top: 1px !default;
+      padding-top: 1px;
 
       /* add a pixel to make sure there are 2px padding above events */
-      padding-bottom: 1em !default;
+      padding-bottom: 1em;
 
       /* give space underneath events for clicking/selecting days */
     }
@@ -876,21 +876,21 @@ a.fc-more {
 
 .fc .fc-axis {
   /* .fc to overcome default cell styles */
-  vertical-align: middle !default;
-  padding: 0 4px !default;
-  white-space: nowrap !default;
+  vertical-align: middle;
+  padding: 0 4px;
+  white-space: nowrap;
 }
 
 .fc-ltr .fc-axis {
-  text-align: right !default;
+  text-align: right;
 }
 
 .fc-rtl .fc-axis {
-  text-align: left !default;
+  text-align: left;
 }
 
 .ui-widget td.fc-axis {
-  font-weight: normal !default;
+  font-weight: normal;
 
   /* overcome jqui theme making it bold */
 }
@@ -900,54 +900,54 @@ a.fc-more {
 
 .fc-time-grid-container {
   /* so slats/bg/content/etc positions get scoped within here */
-  position: relative !default;
-  z-index: 1 !default;
+  position: relative;
+  z-index: 1;
 }
 
 .fc-time-grid {
   /* so slats/bg/content/etc positions get scoped within here */
-  position: relative !default;
-  z-index: 1 !default;
-  min-height: 100% !default;
+  position: relative;
+  z-index: 1;
+  min-height: 100%;
 
   /* so if height setting is 'auto', .fc-bg stretches to fill height */
 
   table {
     /* don't put outer borders on slats/bg/content/etc */
-    border: 0 hidden transparent !default;
+    border: 0 hidden transparent;
   }
 
   > .fc-bg {
-    z-index: 1 !default;
+    z-index: 1;
   }
 
   .fc-slats, > hr {
     /* the <hr> AgendaView injects when grid is shorter than scroller */
-    position: relative !default;
-    z-index: 2 !default;
+    position: relative;
+    z-index: 2;
   }
 
   .fc-bgevent-skeleton, .fc-content-skeleton {
-    position: absolute !default;
-    top: 0 !default;
-    left: 0 !default;
-    right: 0 !default;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
   }
 
   .fc-bgevent-skeleton {
-    z-index: 3 !default;
+    z-index: 3;
   }
 
   .fc-highlight-skeleton {
-    z-index: 4 !default;
+    z-index: 4;
   }
 
   .fc-content-skeleton {
-    z-index: 5 !default;
+    z-index: 5;
   }
 
   .fc-helper-skeleton {
-    z-index: 6 !default;
+    z-index: 6;
   }
 }
 
@@ -956,19 +956,19 @@ a.fc-more {
 
 .fc-slats {
   td {
-    height: 1.5em !default;
-    border-bottom: 0 !default;
+    height: 1.5em;
+    border-bottom: 0;
 
     /* each cell is responsible for its top border */
   }
 
   .fc-minor td {
-    border-top-style: dotted !default;
+    border-top-style: dotted;
   }
 
   .ui-widget-content {
     /* for jqui theme */
-    background: none !default;
+    background: none;
 
     /* see through to fc-bg */
   }
@@ -980,22 +980,22 @@ a.fc-more {
 .fc-time-grid {
   .fc-highlight-container {
     /* a div within a cell within the fc-highlight-skeleton */
-    position: relative !default;
+    position: relative;
 
     /* scopes the left/right of the fc-highlight to be in the column */
   }
 
   .fc-highlight {
-    position: absolute !default;
-    left: 0 !default;
-    right: 0 !default;
+    position: absolute;
+    left: 0;
+    right: 0;
 
     /* top and bottom will be in by JS */
   }
 
   .fc-event-container, .fc-bgevent-container {
     /* a div within a cell within the fc-bgevent-skeleton */
-    position: relative !default;
+    position: relative;
   }
 }
 
@@ -1004,31 +1004,31 @@ a.fc-more {
 
 .fc-ltr .fc-time-grid .fc-event-container {
   /* space on the sides of events for LTR (default) */
-  margin: 0 2.5% 0 2px !default;
+  margin: 0 2.5% 0 2px;
 }
 
 .fc-rtl .fc-time-grid .fc-event-container {
   /* space on the sides of events for RTL */
-  margin: 0 2px 0 2.5% !default;
+  margin: 0 2px 0 2.5%;
 }
 
 .fc-time-grid {
   .fc-event {
-    position: absolute !default;
-    z-index: 1 !default;
+    position: absolute;
+    z-index: 1;
 
     /* scope inner z-index's */
   }
 
   .fc-bgevent {
-    position: absolute !default;
-    z-index: 1 !default;
+    position: absolute;
+    z-index: 1;
 
     /* scope inner z-index's */
 
     /* background events always span full width */
-    left: 0 !default;
-    right: 0 !default;
+    left: 0;
+    right: 0;
   }
 }
 
@@ -1042,50 +1042,50 @@ be a descendant of the grid when it is being dragged.
   &.fc-not-start {
     /* events that are continuing from another day */
     /* replace space made by the top border with padding */
-    border-top-width: 0 !default;
-    padding-top: 1px !default;
+    border-top-width: 0;
+    padding-top: 1px;
 
     /* remove top rounded corners */
-    border-top-left-radius: 0 !default;
-    border-top-right-radius: 0 !default;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
   }
 
   &.fc-not-end {
     /* replace space made by the top border with padding */
-    border-bottom-width: 0 !default;
-    padding-bottom: 1px !default;
+    border-bottom-width: 0;
+    padding-bottom: 1px;
 
     /* remove bottom rounded corners */
-    border-bottom-left-radius: 0 !default;
-    border-bottom-right-radius: 0 !default;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
 
-  overflow: hidden !default;
+  overflow: hidden;
 
   /* don't let the bg flow over rounded corners */
 
   > .fc-content {
     /* contains the time and title, but no bg and resizer */
-    position: relative !default;
-    z-index: 2 !default;
+    position: relative;
+    z-index: 2;
 
     /* above the bg */
   }
 
   .fc-time, .fc-title {
-    padding: 0 1px !default;
+    padding: 0 1px;
   }
 
   .fc-time {
-    font-size: .85em !default;
-    white-space: nowrap !default;
+    font-size: .85em;
+    white-space: nowrap;
   }
 
   .fc-bg {
-    z-index: 1 !default;
-    background: #fff !default;
-    opacity: .25 !default;
-    filter: alpha(opacity = 25) !default;
+    z-index: 1;
+    background: #fff;
+    opacity: .25;
+    filter: alpha(opacity = 25);
 
     /* for IE */
   }
@@ -1093,63 +1093,63 @@ be a descendant of the grid when it is being dragged.
   &.fc-short {
     .fc-content {
       /* don't wrap to second line (now that contents will be inline) */
-      white-space: nowrap !default;
+      white-space: nowrap;
     }
 
     .fc-time, .fc-title {
       /* put the time and title on the same line */
-      display: inline-block !default;
-      vertical-align: top !default;
+      display: inline-block;
+      vertical-align: top;
     }
 
     .fc-time {
       span {
-        display: none !default;
+        display: none;
 
         /* don't display the full time text... */
       }
 
       &:before {
-        content: attr(data-start) !default;
+        content: attr(data-start);
 
         /* ...instead, display only the start time */
       }
 
       &:after {
-        content: "\000A0-\000A0" !default;
+        content: "\000A0-\000A0";
 
         /* seperate with a dash, wrapped in nbsp's */
       }
     }
 
     .fc-title {
-      font-size: .85em !default;
+      font-size: .85em;
 
       /* make the title text the same size as the time */
-      padding: 0 !default;
+      padding: 0;
 
       /* undo padding from above */
     }
   }
 
   .fc-resizer {
-    position: absolute !default;
-    z-index: 3 !default;
+    position: absolute;
+    z-index: 3;
 
     /* above content */
-    left: 0 !default;
-    right: 0 !default;
-    bottom: 0 !default;
-    height: 8px !default;
-    overflow: hidden !default;
-    line-height: 8px !default;
-    font-size: 11px !default;
-    font-family: monospace !default;
-    text-align: center !default;
-    cursor: s-resize !default;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 8px;
+    overflow: hidden;
+    line-height: 8px;
+    font-size: 11px;
+    font-family: monospace;
+    text-align: center;
+    cursor: s-resize;
 
     &:after {
-      content: "=" !default;
+      content: "=";
     }
   }
 }

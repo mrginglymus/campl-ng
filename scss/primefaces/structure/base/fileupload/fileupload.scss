@@ -11,106 +11,106 @@
 
 .ui-fileupload-buttonbar .ui-fileupload-choose {
   input {
-    position: absolute !default;
-    top: 0 !default;
-    right: 0 !default;
-    margin: 0 !default;
-    opacity: 0 !default;
-    filter: alpha(opacity = 0) !default;
-    font-size: 200px !default;
-    direction: ltr !default;
-    cursor: pointer !default;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    opacity: 0;
+    filter: alpha(opacity = 0);
+    font-size: 200px;
+    direction: ltr;
+    cursor: pointer;
   }
 
   &.ui-state-disabled input {
-    cursor: default !default;
+    cursor: default;
   }
 }
 
 .ui-fileupload-choose {
-  position: relative !default;
-  overflow: hidden !default;
+  position: relative;
+  overflow: hidden;
 }
 
 .ui-fileupload-buttonbar {
-  padding: 0.2em 0.4em !default;
+  padding: 0.2em 0.4em;
 
   .ui-button {
-    vertical-align: middle !default;
-    margin-right: 0.2em !default;
+    vertical-align: middle;
+    margin-right: 0.2em;
   }
 }
 
 .ui-fileupload-content {
-  padding: 0.2em 0.4em !default;
-  border-top-width: 0 !default;
+  padding: 0.2em 0.4em;
+  border-top-width: 0;
 
   .ui-progressbar {
-    width: 200px !default;
-    height: 20px !default;
-    margin: 0px !default;
+    width: 200px;
+    height: 20px;
+    margin: 0px;
 
     .ui-progressbar-value {
-      height: 100% !default;
+      height: 100%;
     }
   }
 
   .ui-progressbar-value-legacy {
-    background: url("#{resource['primefaces:fileupload/ie-anim.gif']}") repeat-x !default;
+    background: url("#{resource['primefaces:fileupload/ie-anim.gif']}") repeat-x;
   }
 }
 
 .ui-fileupload-files {
-  margin: 10px 0 !default;
-  border-collapse: collapse !default;
+  margin: 10px 0;
+  border-collapse: collapse;
 
   td {
-    padding: 4px 10px !default;
+    padding: 4px 10px;
   }
 
   img {
-    border: none !default;
+    border: none;
   }
 }
 
 .ui-state-disabled {
   .ui-state-disabled {
-    opacity: 1 !default;
-    filter: alpha(opacity = 100) !default;
+    opacity: 1;
+    filter: alpha(opacity = 100);
   }
 
   input {
-    cursor: default !default;
+    cursor: default;
   }
 }
 
 /** Simple **/
 
 .ui-fileupload-simple {
-  position: relative !default;
-  overflow: hidden !default;
+  position: relative;
+  overflow: hidden;
 
   .ui-button {
-    overflow: hidden !default;
+    overflow: hidden;
   }
 
   input[type=file] {
-    position: absolute !default;
-    top: 0 !default;
-    right: 0 !default;
-    min-width: 100% !default;
-    min-height: 100% !default;
-    font-size: 100px !default;
-    text-align: right !default;
-    filter: alpha(opacity = 0) !default;
-    opacity: 0 !default;
-    outline: none !default;
-    background: white !default;
-    cursor: inherit !default;
-    display: block !default;
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity = 0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
   }
 
   .ui-fileupload-filename {
-    margin-left: 0.5em !default;
+    margin-left: 0.5em;
   }
 }

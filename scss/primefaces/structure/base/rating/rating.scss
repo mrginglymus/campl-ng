@@ -1,36 +1,36 @@
 .ui-rating-star, .ui-rating-cancel {
-  float: left !default;
-  display: block !default;
-  overflow: hidden !default;
-  text-indent: -999em !default;
-  cursor: pointer !default;
+  float: left;
+  display: block;
+  overflow: hidden;
+  text-indent: -999em;
+  cursor: pointer;
 }
 
 .ui-rating-star a, .ui-rating-cancel a {
-  width: 16px !default;
-  height: 15px !default;
-  display: block !default;
-  background: url("rating/rating.png") no-repeat 0 0 !default;
+  width: 16px;
+  height: 15px;
+  display: block;
+  background: url("rating/rating.png") no-repeat 0 0;
 }
 
 .ui-rating-star a {
-  background-position: 0 -32px !default;
+  background-position: 0 -32px;
 }
 
 .ui-rating-star-on a {
-  background-position: 0 -48px !default;
+  background-position: 0 -48px;
 }
 
 .ui-rating-star-hover a {
-  background-position: 0 -64px !default;
+  background-position: 0 -64px;
 }
 
 .ui-rating-cancel-hover a {
-  background-position: 0 -16px !default;
+  background-position: 0 -16px;
 }
 
 .ui-rating.ui-state-disabled {
   .ui-rating-star, .ui-rating-cancel {
-    cursor: default !default;
+    cursor: default;
   }
 }

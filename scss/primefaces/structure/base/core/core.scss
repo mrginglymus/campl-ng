@@ -1,95 +1,95 @@
 .ui-shadow {
-  -moz-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8) !default;
-  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8) !default;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8) !default;
+  -moz-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
 }
 
 .ui-overlay-visible {
-  visibility: visible !default;
+  visibility: visible;
 }
 
 ui-overlay-visible * {
-  visibility: visible !important !default;
+  visibility: visible !important;
 }
 
 .ui-overlay-hidden {
-  visibility: hidden !default;
+  visibility: hidden;
 
   * {
-    visibility: hidden !important !default;
+    visibility: hidden !important;
   }
 }
 
 /* IE7 Fixes */
 
 .ui-overlay-visible table {
-  *border-collapse: collapse !important !default;
+  *border-collapse: collapse !important;
 }
 
 .ui-overlay-hidden table {
-  *border-collapse: separate !important !default;
+  *border-collapse: separate !important;
 }
 
 .ui-datepicker .ui-datepicker-current.ui-priority-secondary {
-  opacity: 1 !default;
+  opacity: 1;
 }
 
 .ui-icon-blank {
-  background-position: 16px 16px !default;
+  background-position: 16px 16px;
 }
 
 /* Column Priorities */
 @media only all {
   th.ui-column-p-6, td.ui-column-p-6, th.ui-column-p-5, td.ui-column-p-5, th.ui-column-p-4, td.ui-column-p-4, th.ui-column-p-3, td.ui-column-p-3, th.ui-column-p-2, td.ui-column-p-2, th.ui-column-p-1, td.ui-column-p-1 {
-    display: none !default;
+    display: none;
   }
 }
 
 /* Show priority 1 at 320px (20em x 16px) */
 @media screen and (min-width: 20em) {
   th.ui-column-p-1, td.ui-column-p-1 {
-    display: table-cell !default;
+    display: table-cell;
   }
 }
 
 /* Show priority 2 at 480px (30em x 16px) */
 @media screen and (min-width: 30em) {
   th.ui-column-p-2, td.ui-column-p-2 {
-    display: table-cell !default;
+    display: table-cell;
   }
 }
 
 /* Show priority 3 at 640px (40em x 16px) */
 @media screen and (min-width: 40em) {
   th.ui-column-p-3, td.ui-column-p-3 {
-    display: table-cell !default;
+    display: table-cell;
   }
 }
 
 /* Show priority 4 at 800px (50em x 16px) */
 @media screen and (min-width: 50em) {
   th.ui-column-p-4, td.ui-column-p-4 {
-    display: table-cell !default;
+    display: table-cell;
   }
 }
 
 /* Show priority 5 at 960px (60em x 16px) */
 @media screen and (min-width: 60em) {
   th.ui-column-p-5, td.ui-column-p-5 {
-    display: table-cell !default;
+    display: table-cell;
   }
 }
 
 /* Show priority 6 at 1,120px (70em x 16px) */
 @media screen and (min-width: 70em) {
   th.ui-column-p-6, td.ui-column-p-6 {
-    display: table-cell !default;
+    display: table-cell;
   }
 }
 
 /* FontAwesome */
 
 .ui-widget .ui-icon.fa, .ui-icon.fa {
-  background: none repeat scroll 0 0 transparent !important !default;
-  text-indent: 0px !important !default;
+  background: none repeat scroll 0 0 transparent !important;
+  text-indent: 0px !important;
 }

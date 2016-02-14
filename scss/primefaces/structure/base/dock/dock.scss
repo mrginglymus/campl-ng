@@ -1,72 +1,72 @@
 /* top */
 
 .ui-dock-top, .ui-dock-bottom {
-  position: relative !default;
-  height: 50px !default;
-  text-align: center !default;
+  position: relative;
+  height: 50px;
+  text-align: center;
 }
 
 .ui-dock-container-top {
-  position: fixed !default;
-  height: 50px !default;
-  padding-left: 20px !default;
+  position: fixed;
+  height: 50px;
+  padding-left: 20px;
 }
 
 .ui-dock-top {
   .ui-menuitem-link {
-    display: block !default;
-    width: 40px !default;
-    position: absolute !default;
-    top: 0px !default;
-    text-align: center !default;
-    text-decoration: none !default;
+    display: block;
+    width: 40px;
+    position: absolute;
+    top: 0px;
+    text-align: center;
+    text-decoration: none;
   }
 
   img {
-    border: none !default;
-    margin: 5px 10px 0px !default;
-    width: 100% !default;
+    border: none;
+    margin: 5px 10px 0px;
+    width: 100%;
   }
 
   span {
-    display: none !default;
-    padding-left: 20px !default;
+    display: none;
+    padding-left: 20px;
   }
 }
 
 /* bottom */
 
 .ui-dock-bottom {
-  width: 100% !default;
-  bottom: 0px !default;
-  position: absolute !default;
-  left: 0px !default;
+  width: 100%;
+  bottom: 0px;
+  position: absolute;
+  left: 0px;
 }
 
 .ui-dock-container-bottom {
-  position: fixed !default;
-  height: 50px !default;
-  padding-left: 20px !default;
+  position: fixed;
+  height: 50px;
+  padding-left: 20px;
 }
 
 .ui-dock-bottom {
   .ui-menuitem-link {
-    display: block !default;
-    width: 40px !default;
-    bottom: 0px !default;
-    position: absolute !default;
-    text-align: center !default;
-    text-decoration: none !default;
+    display: block;
+    width: 40px;
+    bottom: 0px;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
   }
 
   span {
-    display: none !default;
-    padding-left: 20px !default;
+    display: none;
+    padding-left: 20px;
   }
 
   img {
-    border: none !default;
-    margin: 5px 10px 0px !default;
-    width: 100% !default;
+    border: none;
+    margin: 5px 10px 0px;
+    width: 100%;
   }
 }

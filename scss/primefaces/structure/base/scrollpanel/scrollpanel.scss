@@ -1,103 +1,103 @@
 .ui-scrollpanel {
-  overflow: hidden !default;
-  outline: none !default;
-  background-image: none !default;
+  overflow: hidden;
+  outline: none;
+  background-image: none;
 }
 
 .ui-scrollpanel-native {
-  overflow: auto !default;
+  overflow: auto;
 }
 
 .ui-scrollpanel-container {
-  overflow: hidden !default;
-  position: relative !default;
+  overflow: hidden;
+  position: relative;
 }
 
 .ui-scrollpanel-content {
-  position: absolute !default;
+  position: absolute;
 }
 
 .ui-scrollpanel-vbar {
-  position: absolute !default;
-  top: 0 !default;
-  right: 0 !default;
-  width: 16px !default;
-  height: 100% !default;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 16px;
+  height: 100%;
 }
 
 .ui-scrollpanel-hbar {
-  position: absolute !default;
-  bottom: 0 !default;
-  left: 0 !default;
-  width: 100% !default;
-  height: 16px !default;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 16px;
 }
 
 .ui-scrollpanel-cap {
-  display: none !default;
+  display: none;
 }
 
 .ui-scrollpanel-hbar .ui-scrollpanel-cap {
-  float: left !default;
+  float: left;
 }
 
 .ui-scrollpanel-track {
-  background-image: none !default;
-  position: relative !default;
-  border: 0 none !default;
+  background-image: none;
+  position: relative;
+  border: 0 none;
 }
 
 .ui-scrollpanel .ui-scrollpanel-drag {
-  position: relative !default;
-  top: 0 !default;
-  left: 0 !default;
-  cursor: pointer !default;
-  border: 0px none !default;
+  position: relative;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  border: 0px none;
 }
 
 .ui-scrollpanel-hbar {
   .ui-scrollpanel-track, .ui-scrollpanel-drag {
-    float: left !default;
-    height: 100% !default;
+    float: left;
+    height: 100%;
   }
 }
 
 .jspArrow {
-  background: #50506d !default;
-  text-indent: -20000px !default;
-  display: block !default;
-  cursor: pointer !default;
-  padding: 0 !default;
-  margin: 0 !default;
+  background: #50506d;
+  text-indent: -20000px;
+  display: block;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
 
   &.jspDisabled {
-    cursor: default !default;
-    background: #80808d !default;
+    cursor: default;
+    background: #80808d;
   }
 }
 
 .ui-scrollpanel-vbar .jspArrow {
-  height: 16px !default;
+  height: 16px;
 }
 
 .ui-scrollpanel-hbar .jspArrow {
-  width: 16px !default;
-  float: left !default;
-  height: 100% !default;
+  width: 16px;
+  float: left;
+  height: 100%;
 }
 
 .ui-scrollpanel-vbar .jspArrow:focus {
-  outline: none !default;
+  outline: none;
 }
 
 .ui-scrollpanel-corner {
-  float: left !default;
-  height: 100% !default;
-  border: 0 none !default;
+  float: left;
+  height: 100%;
+  border: 0 none;
 }
 
 /* Yuk! CSS Hack for IE6 3 pixel bug :( */
 
 * html .ui-scrollpanel-corner {
-  margin: 0 -3px 0 0 !default;
+  margin: 0 -3px 0 0;
 }

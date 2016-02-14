@@ -1,168 +1,168 @@
 .ui-tree {
-  width: 300px !default;
-  position: relative !default;
+  width: 300px;
+  position: relative;
 
   .ui-tree-container {
-    margin: 0 !default;
-    padding: 3px !default;
-    white-space: nowrap !default;
-    overflow: auto !default;
+    margin: 0;
+    padding: 3px;
+    white-space: nowrap;
+    overflow: auto;
   }
 
   .ui-treenode-children {
-    margin: 0 !default;
-    padding: 0 0 0 16px !default;
+    margin: 0;
+    padding: 0 0 0 16px;
   }
 
   .ui-treenode {
-    background-attachment: scroll !default;
-    background-color: transparent !default;
-    background-image: none !default;
-    background-position: 0 0 !default;
-    background-repeat: repeat-y !default;
-    list-style: none outside none !default;
-    margin: 0 !default;
-    padding: 1px 0 0 !default;
+    background-attachment: scroll;
+    background-color: transparent;
+    background-image: none;
+    background-position: 0 0;
+    background-repeat: repeat-y;
+    list-style: none outside none;
+    margin: 0;
+    padding: 1px 0 0;
   }
 
   .ui-treenode-content {}
 
   .ui-tree-toggler {
-    cursor: pointer !default;
-    display: inline-block !default;
-    vertical-align: top !default;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
   }
 
   .ui-treenode-icon {
-    display: inline-block !default;
-    vertical-align: top !default;
+    display: inline-block;
+    vertical-align: top;
   }
 
   .ui-treenode-label {
-    display: inline-block !default;
-    margin: 2px 0 0 0 !default;
-    vertical-align: top !default;
-    padding: 0 3px !default;
+    display: inline-block;
+    margin: 2px 0 0 0;
+    vertical-align: top;
+    padding: 0 3px;
   }
 
   .ui-tree-selectable {
     .ui-treenode-label, .ui-treenode-icon {
-      cursor: pointer !default;
+      cursor: pointer;
     }
   }
 
   .ui-treenode-label {
     &.ui-state-hover, &.ui-state-highlight {
-      font-weight: normal !default;
-      border: 0 none !default;
+      font-weight: normal;
+      border: 0 none;
     }
   }
 
   .ui-treenode-leaf-icon {
-    width: 16px !default;
-    height: 16px !default;
-    display: inline-block !default;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
   }
 
   .ui-chkbox-box {
-    cursor: pointer !default;
-    width: 15px !default;
-    height: 15px !default;
-    float: left !default;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    float: left;
   }
 
   .ui-chkbox {
-    display: inline-block !default;
-    zoom: 1 !default;
+    display: inline-block;
+    zoom: 1;
   }
 }
 
 /** Horizontal Tree **/
 
 .ui-tree-horizontal {
-  width: auto !default;
-  padding: 10px 0px !default;
-  overflow: auto !default;
+  width: auto;
+  padding: 10px 0px;
+  overflow: auto;
 }
 
 .ui-tree.ui-tree-horizontal {
   table, tr, td {
-    border-collapse: collapse !default;
-    margin: 0 !default;
-    padding: 0 !default;
-    vertical-align: middle !default;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
   }
 
   .ui-tree-toggler {
-    vertical-align: bottom !default;
+    vertical-align: bottom;
   }
 }
 
 .ui-tree-horizontal {
   .ui-treenode-content {
-    font-weight: normal !default;
+    font-weight: normal;
 
     &.ui-tree-selectable {
-      cursor: pointer !default;
+      cursor: pointer;
     }
   }
 
   .ui-treenode-parent .ui-treenode-content {
-    font-weight: normal !default;
-    white-space: nowrap !default;
-    padding: 0.4em 1em 0.4em 0.2em !default;
+    font-weight: normal;
+    white-space: nowrap;
+    padding: 0.4em 1em 0.4em 0.2em;
   }
 
   .ui-treenode-leaf .ui-treenode-content {
-    padding: 0.4em 1em !default;
+    padding: 0.4em 1em;
   }
 }
 
 .ui-tree {
   &.ui-tree-horizontal {
     .ui-treenode {
-      background: url("tree/images/line.gif") repeat-x scroll center center transparent !default;
-      padding: 5px 40px !default;
+      background: url("tree/images/line.gif") repeat-x scroll center center transparent;
+      padding: 5px 40px;
 
       &.ui-treenode-leaf, &.ui-treenode-collapsed {
-        padding-right: 0px !default;
+        padding-right: 0px;
       }
     }
 
     .ui-treenode-children {
-      padding: 0 !default;
-      margin: 0 !default;
+      padding: 0;
+      margin: 0;
     }
 
     .ui-treenode-connector {
-      width: 1px !default;
+      width: 1px;
     }
 
     .ui-treenode-connector-table {
-      height: 100% !default;
-      width: 1px !default;
+      height: 100%;
+      width: 1px;
     }
 
     .ui-treenode-connector-line {
-      background: url("tree/images/line.gif") repeat-y scroll 0 0 transparent !default;
-      width: 1px !default;
+      background: url("tree/images/line.gif") repeat-y scroll 0 0 transparent;
+      width: 1px;
     }
 
     table {
-      height: 0px !default;
+      height: 0px;
     }
 
     .ui-chkbox {
-      vertical-align: bottom !default;
-      margin-right: 3px !default;
+      vertical-align: bottom;
+      margin-right: 3px;
     }
   }
 
   &.ui-tree-rtl {
-    direction: rtl !default;
+    direction: rtl;
 
     .ui-treenode-children {
-      padding: 0 16px 0 0 !default;
+      padding: 0 16px 0 0;
     }
   }
 }
@@ -172,60 +172,60 @@
 /** DragDrop **/
 
 .ui-tree-droppoint {
-  list-style: none outside none !default;
-  height: 4px !default;
-  margin: 0 !default;
-  padding: 0 !default;
+  list-style: none outside none;
+  height: 4px;
+  margin: 0;
+  padding: 0;
 
   &.ui-state-hover {
-    border: 0 none !default;
+    border: 0 none;
   }
 }
 
 .ui-treenode-content.ui-state-hover {
-  font-weight: inherit !default;
+  font-weight: inherit;
 }
 
 .ui-tree-draghelper.ui-state-highlight {
-  background: none transparent !default;
+  background: none transparent;
 }
 
 .ui-tree {
   .ui-tree-scrollertop, .ui-tree-scrollerbottom {
-    height: 10px !default;
-    width: 100% !default;
-    position: absolute !default;
+    height: 10px;
+    width: 100%;
+    position: absolute;
   }
 
   .ui-tree-scrollertop {
-    top: 0 !default;
+    top: 0;
   }
 
   .ui-tree-scrollerbottom {
-    bottom: 0 !default;
+    bottom: 0;
   }
 
   .ui-treenode-content {
     .ui-chkbox.ui-selection {
-      display: none !default;
+      display: none;
     }
 
     &.ui-tree-selectable .ui-chkbox.ui-selection {
-      display: inline-block !default;
+      display: inline-block;
     }
   }
 
   &.ui-tree-checkbox-all .ui-treenode-content .ui-chkbox.ui-selection {
-    display: inline-block !default;
+    display: inline-block;
   }
 
   .ui-treenode-outline {
-    outline: 1px dotted !default;
+    outline: 1px dotted;
   }
 }
 
 /** Fluid **/
 
 .ui-fluid .ui-tree {
-  width: 100% !default;
+  width: 100%;
 }

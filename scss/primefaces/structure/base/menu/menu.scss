@@ -1,120 +1,120 @@
 .ui-menu {
-  width: 12.5em !default;
-  padding: 0.3em !default;
-  position: relative !default;
-  outline: 0 none !default;
+  width: 12.5em;
+  padding: 0.3em;
+  position: relative;
+  outline: 0 none;
 
   &.ui-menu-dynamic {
-    position: absolute !default;
-    display: none !default;
-    z-index: 100000 !default;
+    position: absolute;
+    display: none;
+    z-index: 100000;
   }
 }
 
 .ui-menu-list {
-  position: static !default;
+  position: static;
 }
 
 .ui-menu {
   .ui-menu-list {
     .ui-menuitem {
-      border: none !default;
+      border: none;
     }
 
     .ui-widget-header {
-      clear: both !default;
-      float: left !default;
-      width: 98% !default;
-      margin: 1px 0 !default;
+      clear: both;
+      float: left;
+      width: 98%;
+      margin: 1px 0;
     }
   }
 
   .ui-menuitem, .ui-menuitem-parent {
-    width: 100% !default;
-    float: left !default;
-    clear: both !default;
-    margin: 1px 0 !default;
-    padding: 0 !default;
+    width: 100%;
+    float: left;
+    clear: both;
+    margin: 1px 0;
+    padding: 0;
   }
 
   .ui-menuitem-link {
-    display: block !default;
-    width: 92% !default;
-    outline: none !default;
-    text-decoration: none !default;
-    font-weight: 400 !default;
-    border: solid 1px transparent !default;
-    float: left !default;
-    line-height: 16px !default;
-    padding: 0.3em !default;
-    cursor: pointer !default;
+    display: block;
+    width: 92%;
+    outline: none;
+    text-decoration: none;
+    font-weight: 400;
+    border: solid 1px transparent;
+    float: left;
+    line-height: 16px;
+    padding: 0.3em;
+    cursor: pointer;
 
     .ui-menuitem-icon {
-      display: inline-block !default;
-      float: left !default;
+      display: inline-block;
+      float: left;
     }
   }
 
   .ui-submenu-icon {
-    display: inline-block !default;
-    float: left !default;
-    margin-top: 1px !default;
+    display: inline-block;
+    float: left;
+    margin-top: 1px;
   }
 
   .ui-menuitem-text {
-    float: left !default;
+    float: left;
   }
 
   .ui-widget-header {
     h1, h2, h3, h4, h5, h6 {
-      float: left !default;
-      display: block !default;
-      font-size: 1em !default;
-      margin: 0 auto !default;
-      padding: 0.3em 3% !default;
+      float: left;
+      display: block;
+      font-size: 1em;
+      margin: 0 auto;
+      padding: 0.3em 3%;
     }
   }
 
   .ui-menu-parent {
     .ui-menu-child {
-      display: none !default;
-      width: 12.5em !default;
-      padding: 0.3em !default;
-      position: absolute !default;
-      margin: 0 !default;
-      outline: 0 !default;
-      line-height: 1.3 !default;
-      text-decoration: none !default;
-      font-size: 100% !default;
-      list-style: none !default;
+      display: none;
+      width: 12.5em;
+      padding: 0.3em;
+      position: absolute;
+      margin: 0;
+      outline: 0;
+      line-height: 1.3;
+      text-decoration: none;
+      font-size: 100%;
+      list-style: none;
     }
 
-    position: relative !default;
+    position: relative;
   }
 
   &.ui-menu-toggleable li.ui-widget-header {
-    position: relative !default;
-    min-height: 0 !default;
+    position: relative;
+    min-height: 0;
 
     h3 {
-      padding-left: 2em !default;
+      padding-left: 2em;
     }
 
     &.ui-state-hover {
-      cursor: pointer !default;
+      cursor: pointer;
     }
 
     .ui-icon {
-      position: absolute !default;
-      left: .5em !default;
-      top: 50% !default;
-      margin-top: -8px !default;
+      position: absolute;
+      left: .5em;
+      top: 50%;
+      margin-top: -8px;
     }
   }
 
   .ui-menu-parent {
     .ui-icon-triangle-1-e, .ui-icon-triangle-1-s {
-      float: right !default;
+      float: right;
     }
   }
 }
@@ -122,348 +122,348 @@
 /* Toggleable Menu */
 
 .ui-menubar .ui-menu-child .ui-icon-triangle-1-s {
-  float: right !default;
+  float: right;
 }
 
 .ui-menubutton {
-  padding: 0 !default;
-  position: relative !default;
-  display: inline-block !default;
+  padding: 0;
+  position: relative;
+  display: inline-block;
 
   .ui-button {
-    margin: 0 !default;
+    margin: 0;
   }
 }
 
 /** Menubar **/
 
 .ui-menubar {
-  width: auto !default;
+  width: auto;
 
   .ui-menuitem {
-    width: auto !default;
-    clear: none !default;
+    width: auto;
+    clear: none;
   }
 
   .ui-menu-child {
     .ui-menuitem {
-      width: 100% !default;
+      width: 100%;
     }
 
-    top: 25px !default;
-    left: 0 !default;
+    top: 25px;
+    left: 0;
   }
 
   .ui-menuitem-link {
-    width: auto !default;
-    padding: 0.4em 0.3em !default;
+    width: auto;
+    padding: 0.4em 0.3em;
   }
 
   .ui-menu-child .ui-menuitem-link {
-    width: 92% !default;
+    width: 92%;
   }
 
   .ui-widget-header {
-    clear: none !default;
-    width: auto !default;
-    margin: 0 3px 0 0 !default;
+    clear: none;
+    width: auto;
+    margin: 0 3px 0 0;
 
     h1, h2, h3, h4, h5, h6 {
-      padding: 0.4em 0.3em !default;
+      padding: 0.4em 0.3em;
     }
   }
 
   .ui-menubar-options {
-    float: right !default;
+    float: right;
   }
 
   > .ui-menu-list > .ui-menuitem > .ui-menuitem-link span {
     &.ui-icon-triangle-1-e, &.ui-icon-triangle-1-s {
-      *float: none !default;
+      *float: none;
     }
   }
 }
 
 .ui-menu .ui-separator {
-  width: 98% !default;
-  height: 0px !default;
-  float: left !default;
-  clear: both !default;
-  margin: 1px 0 0 0 !default;
-  padding: 0 !default;
-  border-top: 0px none !default;
+  width: 98%;
+  height: 0px;
+  float: left;
+  clear: both;
+  margin: 1px 0 0 0;
+  padding: 0;
+  border-top: 0px none;
 }
 
 /** MegaMenu **/
 
 .ui-megamenu td {
-  vertical-align: top !default;
+  vertical-align: top;
 }
 
 .ui-menu.ui-megamenu {
   .ui-menu-parent .ui-menu-child {
-    width: auto !default;
+    width: auto;
   }
 
   .ui-menu-child {
     > table {
-      width: auto !default;
+      width: auto;
     }
 
     .ui-menu-list {
-      width: 12.5em !default;
+      width: 12.5em;
     }
   }
 }
 
 .ui-megamenu-vertical {
-  width: 12.5em !default;
+  width: 12.5em;
 
   .ui-menu-parent {
-    clear: both !default;
-    width: 100% !default;
+    clear: both;
+    width: 100%;
   }
 
   .ui-submenu-link.ui-menuitem-link {
-    width: 92% !default;
+    width: 92%;
   }
 }
 
 /** Breadcrumb **/
 
 .ui-breadcrumb {
-  margin: 0 !default;
-  padding: 0 !default;
-  overflow: hidden !default;
-  padding: 5px 5px 7px 5px !default;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  padding: 5px 5px 7px 5px;
 
   ul {
-    margin: 0 !default;
-    padding: 0 !default;
-    display: block !default;
+    margin: 0;
+    padding: 0;
+    display: block;
 
     li {
-      display: block !default;
-      float: left !default;
-      position: relative !default;
-      overflow: hidden !default;
+      display: block;
+      float: left;
+      position: relative;
+      overflow: hidden;
 
       span {
-        display: block !default;
-        overflow: hidden !default;
+        display: block;
+        overflow: hidden;
       }
 
       .ui-menuitem-link {
-        display: block !default;
-        position: relative !default;
-        overflow: hidden !default;
-        float: left !default;
-        *cursor: pointer !default;
-        margin-top: 3px !default;
+        display: block;
+        position: relative;
+        overflow: hidden;
+        float: left;
+        *cursor: pointer;
+        margin-top: 3px;
       }
 
       a.ui-icon-home {
-        padding: 0 !default;
-        margin-top: 1px !default;
-        overflow: hidden !default;
+        padding: 0;
+        margin-top: 1px;
+        overflow: hidden;
       }
     }
   }
 }
 
 .ui-breadcrumb-chevron {
-  float: left !default;
-  margin-top: 2px !default;
+  float: left;
+  margin-top: 2px;
 }
 
 .ui-breadcrumb .ui-breadcrumb-options {
-  float: right !default;
+  float: right;
 }
 
 /** SlideMenu **/
 
 .ui-slidemenu {
   .ui-slidemenu-wrapper {
-    position: relative !default;
+    position: relative;
   }
 
   .ui-slidemenu-content {
-    overflow-x: hidden !default;
-    overflow-y: auto !default;
-    position: relative !default;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
   }
 
   .ui-menu-list {
-    position: absolute !default;
-    top: 0 !default;
+    position: absolute;
+    top: 0;
   }
 
   .ui-menu-parent {
-    position: static !default;
+    position: static;
   }
 
   .ui-menu-child {
-    box-shadow: none !default;
-    border: 0 none !default;
-    background: none repeat scroll 0 0 transparent !default;
+    box-shadow: none;
+    border: 0 none;
+    background: none repeat scroll 0 0 transparent;
   }
 }
 
 .ui-slidemenu-backward {
-  position: absolute !default;
-  bottom: 0 !default;
-  width: 95% !default;
-  margin-bottom: 0.4em !default;
-  padding: 0.2em !default;
-  cursor: pointer !default;
-  display: none !default;
+  position: absolute;
+  bottom: 0;
+  width: 95%;
+  margin-bottom: 0.4em;
+  padding: 0.2em;
+  cursor: pointer;
+  display: none;
 
   .ui-icon {
-    float: left !default;
+    float: left;
   }
 }
 
 /** PanelMenu **/
 
 .ui-panelmenu {
-  width: auto !default;
+  width: auto;
 
   .ui-panelmenu-panel {
-    padding: 0 !default;
-    margin: 0 !default;
+    padding: 0;
+    margin: 0;
   }
 
   .ui-panelmenu-header {
-    cursor: pointer !default;
-    position: relative !default;
-    margin: 0 !default;
-    zoom: 1 !default;
+    cursor: pointer;
+    position: relative;
+    margin: 0;
+    zoom: 1;
 
     a {
-      display: block !default;
-      padding: .5em .5em .5em 2.2em !default;
+      display: block;
+      padding: .5em .5em .5em 2.2em;
     }
 
     .ui-icon {
-      position: absolute !default;
-      left: .5em !default;
-      top: 50% !default;
-      margin-top: -8px !default;
+      position: absolute;
+      left: .5em;
+      top: 50%;
+      margin-top: -8px;
     }
   }
 
   .ui-panelmenu-content {
-    padding: 0.2em 0 !default;
-    border-top: 0 !default;
-    margin-top: -2px !default;
-    position: relative !default;
-    top: 1px !default;
-    overflow: auto !default;
-    zoom: 1 !default;
-    outline: none !default;
+    padding: 0.2em 0;
+    border-top: 0;
+    margin-top: -2px;
+    position: relative;
+    top: 1px;
+    overflow: auto;
+    zoom: 1;
+    outline: none;
   }
 
   .ui-panelmenu-header.ui-state-disabled {
-    cursor: default !default;
+    cursor: default;
 
     a {
-      cursor: default !default;
+      cursor: default;
     }
   }
 
   .ui-menu-list {
-    position: static !default;
+    position: static;
   }
 
   .ui-menuitem {
-    margin: 1px 0 !default;
-    padding: 0 !default;
+    margin: 1px 0;
+    padding: 0;
   }
 
   .ui-menuitem-link {
-    display: block !default;
-    outline: none !default;
-    text-decoration: none !default;
-    font-weight: 400 !default;
-    border: solid 1px transparent !default;
-    line-height: 16px !default;
-    cursor: pointer !default;
-    position: relative !default;
-    padding: 0.3em 0.3em 0.3em 2em !default;
+    display: block;
+    outline: none;
+    text-decoration: none;
+    font-weight: 400;
+    border: solid 1px transparent;
+    line-height: 16px;
+    cursor: pointer;
+    position: relative;
+    padding: 0.3em 0.3em 0.3em 2em;
   }
 
   .ui-menu-parent .ui-menuitem-link-hasicon {
-    padding-left: 2.8em !default;
+    padding-left: 2.8em;
   }
 
   .ui-icon {
-    position: absolute !default;
-    right: auto !default;
-    top: 0 !default;
-    bottom: 0 !default;
-    margin: auto 0 !default;
-    left: 0.5em !default;
+    position: absolute;
+    right: auto;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    left: 0.5em;
   }
 
   .ui-menu-parent {
     > .ui-menuitem-link > .ui-icon {
-      left: 1.5em !default;
+      left: 1.5em;
     }
 
     .ui-panelmenu-icon.ui-icon {
-      left: 0.5em !default;
+      left: 0.5em;
     }
   }
 
   .ui-menuitem-text {
-    float: none !default;
+    float: none;
   }
 
   .ui-menu-parent .ui-menu-list {
-    margin-left: 20px !default;
+    margin-left: 20px;
   }
 }
 
 .ui-menuitem-outline {
-  outline: 1px dotted !default;
-  z-index: 1 !default;
+  outline: 1px dotted;
+  z-index: 1;
 }
 
 /** TabMenu **/
 
 .ui-tabmenu {
-  position: relative !default;
-  zoom: 1 !default;
+  position: relative;
+  zoom: 1;
 
   .ui-tabmenu-nav {
-    margin: 0 !default;
-    padding: .2em .2em 0 !default;
+    margin: 0;
+    padding: .2em .2em 0;
 
     .ui-tabmenuitem {
-      list-style: none !default;
-      float: left !default;
-      position: relative !default;
-      margin: 0 .2em 1px 0 !default;
-      padding: 0 !default;
-      white-space: nowrap !default;
-      display: block !default;
-      border-bottom: 0 !default;
-      top: 1px !default;
+      list-style: none;
+      float: left;
+      position: relative;
+      margin: 0 .2em 1px 0;
+      padding: 0;
+      white-space: nowrap;
+      display: block;
+      border-bottom: 0;
+      top: 1px;
 
       a {
-        float: left !default;
-        padding: 0.5em 1em !default;
-        text-decoration: none !default;
+        float: left;
+        padding: 0.5em 1em;
+        text-decoration: none;
       }
     }
 
     .ui-tabmenuitem-hasicon a {
-      padding: 0.5em 1em 0.5em 0.2em !default;
+      padding: 0.5em 1em 0.5em 0.2em;
     }
 
     .ui-tabmenuitem .ui-icon {
-      float: left !default;
-      cursor: pointer !default;
+      float: left;
+      cursor: pointer;
     }
   }
 }
@@ -472,36 +472,36 @@
 
 .ui-steps {
   ul {
-    list-style-type: none !default;
-    padding: 0 !default;
-    margin: 0 !default;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
   }
 
   .ui-steps-item {
-    float: left !default;
-    box-sizing: border-box !default;
+    float: left;
+    box-sizing: border-box;
 
     .ui-menuitem-link {
-      text-decoration: none !default;
-      display: block !default;
-      padding: 1em !default;
-      position: relative !default;
-      text-align: center !default;
+      text-decoration: none;
+      display: block;
+      padding: 1em;
+      position: relative;
+      text-align: center;
     }
 
     &.ui-state-highlight .ui-menuitem-link, &.ui-state-disabled .ui-menuitem-link {
-      cursor: default !default;
+      cursor: default;
     }
   }
 
   .ui-steps-number {
-    font-size: 200% !default;
-    display: block !default;
+    font-size: 200%;
+    display: block;
   }
 
   .ui-steps-title {
-    display: block !default;
-    white-space: nowrap !default;
+    display: block;
+    white-space: nowrap;
   }
 }
 
@@ -509,11 +509,11 @@
 @media (max-width: 640px) {
   .ui-steps .ui-steps-item {
     .ui-menuitem-link {
-      padding: 0.5em !default;
+      padding: 0.5em;
     }
 
     .ui-steps-title {
-      display: none !default;
+      display: none;
     }
   }
 }
@@ -521,8 +521,8 @@
 /** Fluid **/
 
 .ui-fluid .ui-menu {
-  width: 100% !default;
-  box-sizing: border-box !default;
-  -webkit-box-sizing: border-box !default;
-  -moz-box-sizing: border-box !default;
+  width: 100%;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
