@@ -112,16 +112,22 @@
     background: #85b2cb;
 }
 
+.ui-tabs {
+    border: 0;
+}
+
 .ui-tabs .ui-tabs-nav li {
-    border: 1px solid #a8a8a8;
+    border: 0;
 }
 
-.ui-tabs .ui-tabs-nav li.ui-tabs-selected {
-    border: 1px solid #a8a8a8;
+.ui-tabs .ui-tabs-nav li a {
+    @include theme-element(color, light-highlight);
+    background-color: white;
 }
 
-.ui-tabs.ui-tabs-top .ui-tabs-nav li.ui-tabs-selected {
-    border-bottom: 0;
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a {
+    color: white;
+    @include theme-element(background-color, light-highlight);
 }
 
 .ui-tabs .ui-tabs-panel {
@@ -131,8 +137,10 @@
 }
 
 .ui-tabs .ui-tabs-nav {
-    background: #e3e3e3;
+    background: #fff;
     border-radius: 0;
+    border-bottom: 2px solid;
+    @include theme-element(border-bottom-color, light-highlight);
 }
 
 .ui-tabs .ui-tabs-nav .ui-tabs-selected {

@@ -119,6 +119,7 @@ module.exports = (grunt) ->
       primefaces:
         options:
           sourcemap: 'inline'
+          require: './lib/loaders.rb'
           style: 'expanded'
         files:
           'build/css/primefaces.css': 'scss/primefaces/primefaces.scss'
