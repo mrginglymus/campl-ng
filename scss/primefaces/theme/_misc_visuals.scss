@@ -140,6 +140,7 @@
     background: #fff;
     border-radius: 0;
     border-bottom: 2px solid;
+    padding-left: 20px !important;
     @include theme-element(border-bottom-color, light-highlight);
 }
 
@@ -147,6 +148,10 @@
     background: #fff;
     border-bottom: none;
     box-shadow: none;
+}
+
+.ui-tabs .ui-tabs-nav .ui-state-hover a {
+    background-color: #eee;
 }
 
 .ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next {

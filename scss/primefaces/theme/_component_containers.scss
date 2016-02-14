@@ -16,7 +16,7 @@
 }
 .ui-widget-content
 {
-    border: 1px solid #a8a8a8;
+    border: 1px solid $border-color;
     background: #ffffff;
     color: #4f4f4f;
 }
@@ -26,8 +26,8 @@
 }
 .ui-widget-header
 {
-    border: 1px solid #a8a8a8;
-    background: #c4c4c4;
+    border: none;
+    background: #fff;
     color: #333;
     font-weight: bold;
     text-shadow: none;
