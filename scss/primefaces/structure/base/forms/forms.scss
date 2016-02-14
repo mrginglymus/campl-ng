@@ -1,89 +1,403 @@
+$_ui_inputfield___margin: 0 !default;
+$_ui_inputfield___outline: medium none !default;
+$_ui_inputfield___padding: 4px !default;
+$_ui_inputfield___font_weight: normal !default;
+$_ui_widget_header__ui_inputfield___ui_widget_content__ui_inputfield___font_weight: normal !default;
+$_ui_inputtextarea_resizable___overflow: hidden !default;
+$_ui_inputtextarea_resizable___resize: none !default;
+$_ui_selectonelistbox___ui_selectmanymenu___ui_multiselectlistbox_listcontainer___padding: 2px !default;
+$_ui_selectonelistbox___ui_selectmanymenu___ui_multiselectlistbox_listcontainer___width: 150px !default;
+$_ui_selectonelistbox__ui_selectlistbox_listcontainer___ui_selectmanymenu__ui_selectlistbox_listcontainer___ui_multiselectlistbox_listcontainer___overflow: auto !default;
+$_ui_selectonelistbox_ui_state_disabled__ui_selectlistbox_listcontainer___ui_selectmanymenu_ui_state_disabled__ui_selectlistbox_listcontainer___overflow: hidden !default;
+$_ui_selectonelistbox__ui_selectlistbox_list___ui_selectmanymenu__ui_selectlistbox_list___ui_multiselectlistbox__ui_multiselectlistbox_list___list_style_type: none !default;
+$_ui_selectonelistbox__ui_selectlistbox_list___ui_selectmanymenu__ui_selectlistbox_list___ui_multiselectlistbox__ui_multiselectlistbox_list___margin: 0 !default;
+$_ui_selectonelistbox__ui_selectlistbox_list___ui_selectmanymenu__ui_selectlistbox_list___ui_multiselectlistbox__ui_multiselectlistbox_list___padding: 0 !default;
+$_ui_selectonelistbox__ui_selectlistbox_item___ui_selectmanymenu__ui_selectlistbox_item___ui_multiselectlistbox__ui_multiselectlistbox_item___margin: 2px !default;
+$_ui_selectonelistbox__ui_selectlistbox_item___ui_selectmanymenu__ui_selectlistbox_item___ui_multiselectlistbox__ui_multiselectlistbox_item___border: 0 none !default;
+$_ui_selectonelistbox__ui_selectlistbox_item___ui_selectmanymenu__ui_selectlistbox_item___ui_multiselectlistbox__ui_multiselectlistbox_item___cursor: pointer !default;
+$_ui_selectonelistbox__ui_selectlistbox_item___ui_selectmanymenu__ui_selectlistbox_item___ui_multiselectlistbox__ui_multiselectlistbox_item___font_weight: normal !default;
+$_ui_selectonelistbox_table_ui_selectlistbox_list___ui_selectmanymenu_table_ui_selectlistbox_list___border_collapse: collapse !default;
+$_ui_selectonelistbox_table_ui_selectlistbox_list___ui_selectmanymenu_table_ui_selectlistbox_list___width: 100% !default;
+$_ui_selectlistbox_filter_ui_inputfield___padding_right: 12% !default;
+$_ui_selectlistbox_filter_ui_inputfield___padding_left: 2% !default;
+$_ui_selectlistbox_filter_ui_inputfield___width: 85% !default;
+$_ui_selectlistbox_filter_ui_inputfield____moz_box_shadow: none !default;
+$_ui_selectlistbox_filter_ui_inputfield____webkit_box_shadow: none !default;
+$_ui_selectlistbox_filter_ui_inputfield___box_shadow: none !default;
+$_ui_selectlistbox_filter_container___position: relative !default;
+$_ui_selectlistbox_filter_container___margin: 0.1em 0 0.1em 0 !default;
+$_ui_selectlistbox_filter_container___padding: 0 !default;
+$_ui_selectlistbox_filter_container__ui_icon___position: absolute !default;
+$_ui_selectlistbox_filter_container__ui_icon___top: 5px !default;
+$_ui_selectlistbox_filter_container__ui_icon___right: 2px !default;
+$_ui_multiselectlistbox__ui_multiselectlistbox_listcontainer___float: left !default;
+$_ui_multiselectlistbox__ui_multiselectlistbox_listcontainer___margin_right: 4px !default;
+$_ui_multiselectlistbox__ui_multiselectlistbox_item___white_space: nowrap !default;
+$_ui_multiselectlistbox_ui_state_disabled__ui_multiselectlistbox_item___cursor: default !default;
+$_ui_multiselectlistbox__ui_multiselectlistbox_header___text_align: center !default;
+$_ui_multiselectlistbox__ui_multiselectlistbox_header___padding: 2px 10px !default;
+$_ui_multiselectlistbox__ui_multiselectlistbox_header___border_bottom: 0px none !default;
+$_ui_chkbox___display: inline-block !default;
+$_ui_chkbox__ui_chkbox_box___width: 16px !default;
+$_ui_chkbox__ui_chkbox_box___height: 16px !default;
+$_ui_chkbox__ui_chkbox_box___display: inline-block !default;
+$_ui_chkbox__ui_chkbox_box____moz_border_radius: 2px !default;
+$_ui_chkbox__ui_chkbox_box____webkit_border_radius: 2px !default;
+$_ui_chkbox__ui_chkbox_box___border_radius: 2px !default;
+$_ui_chkbox_icon_ui_icon___overflow: visible !default;
+$_ui_chkbox__ui_chkbox_label___cursor: pointer !default;
+$_ui_chkbox__ui_chkbox_label___margin: 3px 0 0 3px !default;
+$_ui_chkbox__ui_chkbox_label___outline: medium none !default;
+$_ui_chkbox__ui_chkbox_label___z_index: 1 !default;
+$_ui_chkbox__ui_chkbox_label___display: inline-block !default;
+$_ui_chkbox__ui_chkbox_label___vertical_align: top !default;
+$_ui_selectoneradio_label___display: block !default;
+$_ui_selectoneradio_label___margin_top: 4px !default;
+$_ui_selectmanycheckbox_ui_widget_td___ui_selectoneradio_ui_widget_td___border: 0 none !default;
+$_ui_selectmanycheckbox_ui_grid_label___ui_selectoneradio_ui_grid_label___display: inline-block !default;
+$_ui_selectmanycheckbox_ui_grid_label___ui_selectoneradio_ui_grid_label___margin_left: 4px !default;
+$_ui_selectmanycheckbox_ui_grid_label___ui_selectoneradio_ui_grid_label___vertical_align: top !default;
+$_ui_panelgrid__ui_selectoneradio_ui_grid_responsive__ui_grid_row___ui_panelgrid__ui_selectmanycheckbox_ui_grid_responsive__ui_grid_row___border_top: 0px none !default;
+$_ui_radiobutton___margin: 3px 0 !default;
+$_ui_radiobutton___width: 16px !default;
+$_ui_radiobutton___line_height: 16px !default;
+$_ui_radiobutton___display: inline-block !default;
+$_ui_radiobutton__ui_radiobutton_box___width: 16px !default;
+$_ui_radiobutton__ui_radiobutton_box___height: 16px !default;
+$_ui_radiobutton__ui_radiobutton_box___line_height: 16px !default;
+$_ui_radiobutton__ui_radiobutton_box____moz_border_radius: 10px !default;
+$_ui_radiobutton__ui_radiobutton_box____webkit_border_radius: 10px !default;
+$_ui_radiobutton__ui_radiobutton_box___border_radius: 10px !default;
+$_ui_radiobutton_icon___margin_left: 1px !default;
+$_ui_radiobutton_ui_radiobutton_native___margin: 0 !default;
+$_ui_radiobutton_ui_radiobutton_native___padding: 0 !default;
+$_ui_radiobutton_ui_radiobutton_native__ui_helper_hidden_accessible___clip: auto !default;
+$_ui_radiobutton_ui_radiobutton_native__ui_helper_hidden_accessible___position: static !important !default;
+$_ui_radiobutton_ui_radiobutton_native__ui_helper_hidden_accessible___width: auto !default;
+$_ui_radiobutton_ui_radiobutton_native__ui_helper_hidden_accessible___height: auto !default;
+$_ui_radiobutton_ui_radiobutton_native__ui_helper_hidden_accessible___overflow: visible !default;
+$_ui_radiobutton_ui_radiobutton_native__ui_helper_hidden_accessible___margin: 0 !default;
+$_ui_radiobutton_ui_radiobutton_native__ui_helper_hidden_accessible___padding: 0 !default;
+$_ui_radiobutton_ui_radiobutton_native__ui_radiobutton_box___display: none !default;
+$_ui_radiobutton_ui_radiobutton_native__ui_helper_hidden_accessible_input___margin: 0 !default;
+$_ui_selectoneradio_native_label___margin: 0 !default;
+$_ui_selectonemenu___display: inline-block !default;
+$_ui_selectonemenu___position: relative !default;
+$_ui_selectonemenu___width: auto !default;
+$_ui_selectonemenu___zoom: 1 !default;
+$_ui_selectonemenu___cursor: pointer !default;
+$_ui_selectonemenu___padding_right: 2em !default;
+$_ui_selectonemenu__ui_selectonemenu_trigger___border_right: none !default;
+$_ui_selectonemenu__ui_selectonemenu_trigger___border_top: none !default;
+$_ui_selectonemenu__ui_selectonemenu_trigger___border_bottom: none !default;
+$_ui_selectonemenu__ui_selectonemenu_trigger___cursor: pointer !default;
+$_ui_selectonemenu__ui_selectonemenu_trigger___width: 16px !default;
+$_ui_selectonemenu__ui_selectonemenu_trigger___height: 100% !default;
+$_ui_selectonemenu__ui_selectonemenu_trigger___position: absolute !default;
+$_ui_selectonemenu__ui_selectonemenu_trigger___right: 0 !default;
+$_ui_selectonemenu__ui_selectonemenu_trigger___top: 0 !default;
+$_ui_selectonemenu__ui_selectonemenu_trigger___padding: 0 3px !default;
+$_ui_selectonemenu__ui_selectonemenu_trigger__ui_icon___margin_top: 3px !default;
+$_ui_selectonemenu__ui_selectonemenu_label___display: block !default;
+$_ui_selectonemenu__ui_selectonemenu_label___border: none !default;
+$_ui_selectonemenu__ui_selectonemenu_label___white_space: nowrap !default;
+$_ui_selectonemenu__ui_selectonemenu_label___overflow: hidden !default;
+$_ui_selectonemenu__ui_selectonemenu_label___font_weight: normal !default;
+$_ui_selectonemenu__ui_selectonemenu_label___width: 100% !default;
+$_ui_selectonemenu__ui_selectonemenu_label___text_align: left !default;
+$_ui_selectonemenu_ui_state_disabled__ui_selectonemenu_trigger___ui_selectonemenu_ui_state_disabled__ui_selectonemenu_label___cursor: default !default;
+$_ui_selectonemenu_label_ui_selectonemenu_label___cursor: pointer !default;
+$_ui_selectonemenu_input_ui_selectonemenu_label___cursor: default !default;
+$_ui_selectonemenu_panel___position: absolute !default;
+$_ui_selectonemenu_panel___height: auto !default;
+$_ui_selectonemenu_panel__ui_selectonemenu_items_wrapper___overflow: auto !default;
+$_ui_selectonemenu_panel__ui_selectonemenu_item___font_weight: normal !default;
+$_ui_selectonemenu_panel__ui_selectonemenu_item___cursor: pointer !default;
+$_ui_selectonemenu_panel__ui_selectonemenu_item_group___font_weight: bold !default;
+$_ui_selectonemenu_panel__ui_selectonemenu_list___padding: 0.4em !default;
+$_ui_selectonemenu_panel__ui_selectonemenu_list___border: 0 none !default;
+$_ui_selectonemenu_panel__ui_selectonemenu_list_item___border: 0px none !default;
+$_ui_selectonemenu_panel__ui_selectonemenu_list_item___margin: 1px 0 !default;
+$_ui_selectonemenu_panel__ui_selectonemenu_list_item___padding: 3px 5px !default;
+$_ui_selectonemenu_panel__ui_selectonemenu_list_item___text_align: left !default;
+$_ui_selectonemenu_panel__ui_selectonemenu_list_item___white_space: nowrap !default;
+$_ui_selectonemenu_panel__ui_selectonemenu_table___border_collapse: collapse !default;
+$_ui_selectonemenu_panel__ui_selectonemenu_table___width: 100% !default;
+$_ui_selectonemenu_panel__ui_selectonemenu_table_td___border_width: 1px !default;
+$_ui_selectonemenu_panel__ui_selectonemenu_table_td___border_style: solid !default;
+$_ui_selectonemenu_panel__ui_selectonemenu_table_td___border_color: inherit !default;
+$_ui_selectonemenu_panel__ui_selectonemenu_table_td___padding: 4px 10px 4px 10px !default;
+$_ui_selectonemenu_panel__ui_selectonemenu_filter___width: 85% !default;
+$_ui_selectonemenu_panel__ui_selectonemenu_filter___padding_right: 15px !default;
+$_ui_selectonemenu_panel__ui_selectonemenu_filter_container___position: relative !default;
+$_ui_selectonemenu_panel__ui_selectonemenu_filter_container___margin: 0 !default;
+$_ui_selectonemenu_panel__ui_selectonemenu_filter_container___padding: 0.4em !default;
+$_ui_selectonemenu_panel__ui_selectonemenu_filter_container___display: inline-block !default;
+$_ui_selectonemenu_panel__ui_selectonemenu_filter_container__ui_icon___position: absolute !default;
+$_ui_selectonemenu_panel__ui_selectonemenu_filter_container__ui_icon___top: 10px !default;
+$_ui_selectonemenu_panel__ui_selectonemenu_filter_container__ui_icon___right: 10px !default;
+$_ui_state_disabled_a___outline: none !default;
+$_ui_button___display: inline-block !default;
+$_ui_button___position: relative !default;
+$_ui_button___padding: 0 !default;
+$_ui_button___margin_right: .1em !default;
+$_ui_button___text_decoration: none !important !default;
+$_ui_button___cursor: pointer !default;
+$_ui_button___text_align: center !default;
+$_ui_button___zoom: 1 !default;
+$_ui_button___overflow: visible !default;
+$_ui_button_icon_only___width: 2.4em !default;
+$_ui_button__ui_button_text___display: block !default;
+$_ui_button__ui_button_text___line_height: normal !default;
+$_ui_button_text_only__ui_button_text___padding: .3em 1em !default;
+$_ui_button_icon_only__ui_button_text___padding: .3em !default;
+$_ui_button_icon_only__ui_button_text___text_indent: -9999999px !default;
+$_ui_button_text_icon_left__ui_button_text___padding: .3em 1em .3em 2.1em !default;
+$_ui_button_text_icon_right__ui_button_text___padding: .3em 2.1em .3em 1em !default;
+$_ui_button_icon_only__ui_icon___ui_button_text_icon_left__ui_icon___ui_button_text_icon_right__ui_icon___position: absolute !default;
+$_ui_button_icon_only__ui_icon___ui_button_text_icon_left__ui_icon___ui_button_text_icon_right__ui_icon___top: 50% !default;
+$_ui_button_icon_only__ui_icon___ui_button_text_icon_left__ui_icon___ui_button_text_icon_right__ui_icon___margin_top: -8px !default;
+$_ui_button_icon_only__ui_icon_fa___ui_button_text_icon_left__ui_icon_fa___ui_button_text_icon_right__ui_icon_fa___margin_top: -7px !default;
+$_ui_button_icon_only__ui_icon___left: 50% !default;
+$_ui_button_icon_only__ui_icon___margin_left: -8px !default;
+$_ui_button_icon_left___left: .5em !default;
+$_ui_button_icon_right___right: .5em !default;
+$_ui_buttonset___margin_right: 7px !default;
+$_ui_buttonset__ui_button___margin_left: 0 !default;
+$_ui_buttonset__ui_button___margin_right: 0 !default;
+$button_ui_button___moz_focus_inner___border: 0 !default;
+$button_ui_button___moz_focus_inner___padding: 0 !default;
+$_ui_selectcheckboxmenu___display: inline-block !default;
+$_ui_selectcheckboxmenu___position: relative !default;
+$_ui_selectcheckboxmenu___width: auto !default;
+$_ui_selectcheckboxmenu___zoom: 1 !default;
+$_ui_selectcheckboxmenu___cursor: pointer !default;
+$_ui_selectcheckboxmenu__ui_selectcheckboxmenu_trigger___border_right: none !default;
+$_ui_selectcheckboxmenu__ui_selectcheckboxmenu_trigger___border_top: none !default;
+$_ui_selectcheckboxmenu__ui_selectcheckboxmenu_trigger___border_bottom: none !default;
+$_ui_selectcheckboxmenu__ui_selectcheckboxmenu_trigger___cursor: pointer !default;
+$_ui_selectcheckboxmenu__ui_selectcheckboxmenu_trigger___width: 16px !default;
+$_ui_selectcheckboxmenu__ui_selectcheckboxmenu_trigger___height: 100% !default;
+$_ui_selectcheckboxmenu__ui_selectcheckboxmenu_trigger___position: absolute !default;
+$_ui_selectcheckboxmenu__ui_selectcheckboxmenu_trigger___right: 0 !default;
+$_ui_selectcheckboxmenu__ui_selectcheckboxmenu_trigger___top: 0 !default;
+$_ui_selectcheckboxmenu__ui_selectcheckboxmenu_trigger___padding: 0 3px !default;
+$_ui_selectcheckboxmenu__ui_selectcheckboxmenu_trigger__ui_icon___margin_top: 3px !default;
+$_ui_selectcheckboxmenu__ui_selectcheckboxmenu_label___display: block !default;
+$_ui_selectcheckboxmenu__ui_selectcheckboxmenu_label___padding: 3px 26px 3px 5px !default;
+$_ui_selectcheckboxmenu__ui_selectcheckboxmenu_label___width: auto !default;
+$_ui_selectcheckboxmenu__ui_selectcheckboxmenu_label___border: none !default;
+$_ui_selectcheckboxmenu__ui_selectcheckboxmenu_label___cursor: pointer !default;
+$_ui_selectcheckboxmenu_ui_state_disabled__ui_selectcheckboxmenu_trigger___ui_selectcheckboxmenu_ui_state_disabled__ui_selectcheckboxmenu_label___cursor: auto !default;
+$_ui_selectcheckboxmenu_panel___padding: 0.2em !default;
+$_ui_selectcheckboxmenu_panel___position: absolute !default;
+$_ui_selectcheckboxmenu_panel___overflow: hidden !default;
+$_ui_selectcheckboxmenu_panel____moz_box_shadow: 0px 5px 10px rgba(0, 0, 0, 0.8) !default;
+$_ui_selectcheckboxmenu_panel____webkit_box_shadow: 0px 5px 10px rgba(0, 0, 0, 0.8) !default;
+$_ui_selectcheckboxmenu_panel___box_shadow: 0px 5px 10px rgba(0, 0, 0, 0.8) !default;
+$_ui_selectcheckboxmenu_panel__ui_selectcheckboxmenu_items_wrapper___overflow: auto !default;
+$_ui_selectcheckboxmenu_panel__ui_selectcheckboxmenu_items_wrapper___position: relative !default;
+$_ui_selectcheckboxmenu_panel__ui_selectcheckboxmenu_items_wrapper___padding: 0.2em 0 !default;
+$_ui_selectcheckboxmenu_panel__ui_selectcheckboxmenu_list___border: 0 none !default;
+$_ui_selectcheckboxmenu_panel__ui_selectcheckboxmenu_list_item___border: 0px none !default;
+$_ui_selectcheckboxmenu_panel__ui_selectcheckboxmenu_list_item___cursor: pointer !default;
+$_ui_selectcheckboxmenu_panel__ui_selectcheckboxmenu_list_item___font_weight: normal !default;
+$_ui_selectcheckboxmenu_panel__ui_selectcheckboxmenu_list_item___margin: 1px 0 !default;
+$_ui_selectcheckboxmenu_panel__ui_selectcheckboxmenu_list_item___padding: 3px 5px !default;
+$_ui_selectcheckboxmenu_panel__ui_selectcheckboxmenu_list_item___text_align: left !default;
+$_ui_selectcheckboxmenu_panel__ui_selectcheckboxmenu_list_item___white_space: nowrap !default;
+$_ui_selectcheckboxmenu_panel__ui_selectcheckboxmenu_list_item___display: block !default;
+$_ui_selectcheckboxmenu_panel__ui_selectcheckboxmenu_list_item___position: relative !default;
+$_ui_selectcheckboxmenu_panel__ui_selectcheckboxmenu_list_item__ui_chkbox___position: absolute !default;
+$_ui_selectcheckboxmenu_panel__ui_selectcheckboxmenu_list_item__ui_chkbox___top: 50% !default;
+$_ui_selectcheckboxmenu_panel__ui_selectcheckboxmenu_list_item__ui_chkbox___margin_top: -8px !default;
+$_ui_selectcheckboxmenu_panel__ui_selectcheckboxmenu_list_item_label___display: block !default;
+$_ui_selectcheckboxmenu_panel__ui_selectcheckboxmenu_list_item_label___padding_left: 2.2em !default;
+$_ui_selectcheckboxmenu_header___margin_bottom: 0.3em !default;
+$_ui_selectcheckboxmenu_header___padding: 0.3em 0 0.3em 0.4em !default;
+$_ui_selectcheckboxmenu_header__ui_chkbox___float: left !default;
+$_ui_selectcheckboxmenu_header__ui_chkbox___cursor: pointer !default;
+$_ui_selectcheckboxmenu_header__ui_selectcheckboxmenu_filter_container___float: left !default;
+$_ui_selectcheckboxmenu_header__ui_selectcheckboxmenu_filter_container___position: relative !default;
+$_ui_selectcheckboxmenu_header__ui_selectcheckboxmenu_filter_container___margin_left: 5px !default;
+$_ui_selectcheckboxmenu_header__ui_selectcheckboxmenu_filter_container__ui_icon___position: absolute !default;
+$_ui_selectcheckboxmenu_header__ui_selectcheckboxmenu_filter_container__ui_icon___right: 5px !default;
+$_ui_selectcheckboxmenu_header__ui_selectcheckboxmenu_filter_container__ui_icon___top: 2px !default;
+$_ui_selectcheckboxmenu_header__ui_inputfield___padding: 1px 20px 1px 2px !default;
+$_ui_selectcheckboxmenu_header_span_ui_icon___float: left !default;
+$_ui_selectcheckboxmenu_header_a_ui_selectcheckboxmenu_all___ui_selectcheckboxmenu_header_a_ui_selectcheckboxmenu_none___float: left !default;
+$_ui_selectcheckboxmenu_header_a_ui_selectcheckboxmenu_all___ui_selectcheckboxmenu_header_a_ui_selectcheckboxmenu_none___margin_right: 10px !default;
+$_ui_selectcheckboxmenu_header_a_ui_selectcheckboxmenu_all___ui_selectcheckboxmenu_header_a_ui_selectcheckboxmenu_none___display: block !default;
+$_ui_selectcheckboxmenu_header__ui_selectcheckboxmenu_close___float: right !default;
+$_ui_selectcheckboxmenu_header__ui_selectcheckboxmenu_close___padding: 1px !default;
+$_ui_selectcheckboxmenu_header__ui_selectcheckboxmenu_close___margin_right: 0.2em !default;
+$_ui_selectcheckboxmenu_header__ui_selectcheckboxmenu_close___display: block !default;
+$_ui_selectcheckboxmenu_header__ui_selectcheckboxmenu_close_ui_state_hover___padding: 0px !default;
+$_ui_splitbutton___position: relative !default;
+$_ui_splitbutton___padding_right: 2em !default;
+$_ui_splitbutton__ui_button_ui_splitbutton_menubutton___width: 32px !default;
+$_ui_splitbutton__ui_button_ui_splitbutton_menubutton___position: absolute !default;
+$_ui_splitbutton__ui_button_ui_splitbutton_menubutton___top: 0px !default;
+$_ui_splitbutton__ui_button_ui_splitbutton_menubutton___margin_left: -1px !default;
+$_ui_splitbutton__ui_button_ui_splitbutton_menubutton___right: 0px !default;
+$div_ui_button___ui_splitbutton___display: inline-block !default;
+$div_ui_button___ui_splitbutton___zoom: 1 !default;
+$_ui_password_panel___padding: 4px 10px !default;
+$_ui_password_panel___width: 150px !default;
+$_ui_password_panel___margin_top: 2px !default;
+$_ui_password_panel__ui_password_meter___height: 10px !default;
+$_ui_password_panel__ui_password_meter___background: transparent url("forms/password-meter.png") no-repeat left top !default;
+$_ui_password_panel__ui_password_meter___padding: 0 !default;
+$_ui_password_panel__ui_password_meter___margin: 0 !default;
+$_ui_password_info___margin_top: 4px !default;
+$_ui_password_panel_overlay___position: absolute !default;
+$_ui_outputlabel_ui_state_error___border: 0 none !default;
+$_ui_outputlabel__ui_outputlabel_rfi___margin_left: 0.4em !default;
+$_ui_selectonebutton___ui_selectmanybutton___display: inline-block !default;
+$_ui_selectonebutton___ui_selectmanybutton___padding: 1px !default;
+$_ui_selectonebutton_ui_state_error___ui_selectmanybutton_ui_state_error___padding: 0px !default;
+$_ui_selectonebutton__ui_button_ui_state_focus___ui_selectmanybutton__ui_button_ui_state_focus___outline: none !default;
+$_ui_fluid__ui_inputfield___box_sizing: border-box !default;
+$_ui_fluid__ui_inputfield____webkit_box_sizing: border-box !default;
+$_ui_fluid__ui_inputfield____moz_box_sizing: border-box !default;
+$_ui_fluid__ui_inputtext___ui_fluid__ui_inputtextarea___width: 100% !default;
+$_ui_fluid__ui_selectonemenu___width: 100% !default;
+$_ui_fluid__ui_selectonemenu___box_sizing: border-box !default;
+$_ui_fluid__ui_selectonemenu____webkit_box_sizing: border-box !default;
+$_ui_fluid__ui_selectonemenu____moz_box_sizing: border-box !default;
+$_ui_fluid__ui_selectonemenu__ui_selectonemenu_trigger___width: 32px !default;
+$_ui_fluid__ui_selectonemenu__ui_selectonemenu_trigger___padding: 0 6px !default;
+$_ui_fluid__ui_selectonemenu__ui_selectonemenu_trigger___box_sizing: border-box !default;
+$_ui_fluid__ui_selectonemenu__ui_selectonemenu_trigger____webkit_box_sizing: border-box !default;
+$_ui_fluid__ui_selectonemenu__ui_selectonemenu_trigger____moz_box_sizing: border-box !default;
+$_ui_fluid__ui_calendar___width: 100% !default;
+$_ui_fluid__ui_calendar_input___width: 100% !default;
+$_ui_fluid__ui_spinner___width: 100% !default;
+$_ui_fluid__ui_spinner__ui_spinner_input___padding_right: 36px !default;
+$_ui_fluid__ui_spinner__ui_spinner_input___width: 100% !default;
+$_ui_fluid__ui_spinner__ui_spinner_button___width: auto !default;
+$_ui_fluid__ui_spinner__ui_spinner_button__ui_icon___left: 6px !default;
+$_ui_fluid__ui_autocomplete___ui_fluid__ui_autocomplete_input___width: 100% !default;
+$_ui_fluid__ui_autocomplete__ui_autocomplete_dropdown_ui_button___width: 2.4em !default;
+$_ui_fluid__ui_inputmask___ui_fluid__ui_password___ui_fluid__ui_keyboard_input___width: 100% !default;
+$_ui_fluid__ui_selectcheckboxmenu___width: 100% !default;
+$_ui_fluid__ui_selectcheckboxmenu___box_sizing: border-box !default;
+$_ui_fluid__ui_selectcheckboxmenu____webkit_box_sizing: border-box !default;
+$_ui_fluid__ui_selectcheckboxmenu____moz_box_sizing: border-box !default;
+$_ui_fluid__ui_selectcheckboxmenu__ui_selectcheckboxmenu_trigger__ui_icon___margin_left: auto !default;
+$_ui_fluid__ui_selectcheckboxmenu__ui_selectcheckboxmenu_trigger__ui_icon___margin_right: auto !default;
+$_ui_fluid__ui_selectcheckboxmenu_trigger___width: 32px !default;
+$_ui_fluid__ui_selectcheckboxmenu_trigger___box_sizing: border-box !default;
+$_ui_fluid__ui_selectcheckboxmenu_trigger____webkit_box_sizing: border-box !default;
+$_ui_fluid__ui_selectcheckboxmenu_trigger____moz_box_sizing: border-box !default;
+$_ui_fluid__ui_button___width: 100% !default;
+$_ui_fluid__ui_button___box_sizing: border-box !default;
+$_ui_fluid__ui_button____webkit_box_sizing: border-box !default;
+$_ui_fluid__ui_button____moz_box_sizing: border-box !default;
+$_ui_fluid__ui_buttonset___width: 100% !default;
+$_ui_fluid__ui_buttonset_ui_buttonset_1__ui_button___width: 100% !default;
+$_ui_fluid__ui_buttonset_ui_buttonset_2__ui_button___width: 50% !default;
+$_ui_fluid__ui_buttonset_ui_buttonset_3__ui_button___width: 33.3% !default;
+$_ui_fluid__ui_buttonset_ui_buttonset_4__ui_button___width: 25% !default;
+$_ui_fluid__ui_buttonset_ui_buttonset_5__ui_button___width: 20% !default;
+$_ui_fluid__ui_buttonset_ui_buttonset_6__ui_button___width: 16.6% !default;
+$_ui_fluid__ui_splitbutton___width: 100% !default;
+$_ui_fluid__ui_splitbutton___box_sizing: border-box !default;
+$_ui_fluid__ui_splitbutton____webkit_box_sizing: border-box !default;
+$_ui_fluid__ui_splitbutton____moz_box_sizing: border-box !default;
+$_ui_fluid__ui_splitbutton__ui_button___width: 100% !default;
+$_ui_fluid__ui_splitbutton__ui_button_ui_splitbutton_menubutton___width: 32px !default;
+$_ui_fluid__ui_splitbutton__ui_button_ui_splitbutton_menubutton___box_sizing: border-box !default;
+$_ui_fluid__ui_splitbutton__ui_button_ui_splitbutton_menubutton____webkit_box_sizing: border-box !default;
+$_ui_fluid__ui_splitbutton__ui_button_ui_splitbutton_menubutton____moz_box_sizing: border-box !default;
+$_ui_fluid__ui_selectonelistbox___ui_fluid__ui_selectmanymenu___width: 100% !default;
+$_ui_fluid__ui_buttonset_ui_buttonset_1__ui_button___ui_fluid__ui_buttonset_ui_buttonset_2__ui_button___ui_fluid__ui_buttonset_ui_buttonset_3__ui_button___ui_fluid__ui_buttonset_ui_buttonset_4__ui_button___ui_fluid__ui_buttonset_ui_buttonset_5__ui_button___ui_fluid__ui_buttonset_ui_buttonset_6__ui_button___width: 100% !default;
 .ui-inputfield {
-  margin: 0;
-  outline: medium none;
-  padding: 4px;
-  font-weight: normal;
+  margin: $_ui_inputfield___margin;
+  outline: $_ui_inputfield___outline;
+  padding: $_ui_inputfield___padding;
+  font-weight: $_ui_inputfield___font_weight;
 }
 
 .ui-widget-header .ui-inputfield, .ui-widget-content .ui-inputfield {
-  font-weight: normal;
+  font-weight: $_ui_widget_header__ui_inputfield___ui_widget_content__ui_inputfield___font_weight;
 }
 
 .ui-inputtextarea-resizable {
-  overflow: hidden;
-  resize: none;
+  overflow: $_ui_inputtextarea_resizable___overflow;
+  resize: $_ui_inputtextarea_resizable___resize;
 }
 
 .ui-selectonelistbox, .ui-selectmanymenu, .ui-multiselectlistbox-listcontainer {
-  padding: 2px;
-  width: 150px;
+  padding: $_ui_selectonelistbox___ui_selectmanymenu___ui_multiselectlistbox_listcontainer___padding;
+  width: $_ui_selectonelistbox___ui_selectmanymenu___ui_multiselectlistbox_listcontainer___width;
 }
 
 .ui-selectonelistbox .ui-selectlistbox-listcontainer, .ui-selectmanymenu .ui-selectlistbox-listcontainer, .ui-multiselectlistbox-listcontainer {
-  overflow: auto;
+  overflow: $_ui_selectonelistbox__ui_selectlistbox_listcontainer___ui_selectmanymenu__ui_selectlistbox_listcontainer___ui_multiselectlistbox_listcontainer___overflow;
 }
 
 .ui-selectonelistbox.ui-state-disabled .ui-selectlistbox-listcontainer, .ui-selectmanymenu.ui-state-disabled .ui-selectlistbox-listcontainer {
-  overflow: hidden;
+  overflow: $_ui_selectonelistbox_ui_state_disabled__ui_selectlistbox_listcontainer___ui_selectmanymenu_ui_state_disabled__ui_selectlistbox_listcontainer___overflow;
 }
 
 .ui-selectonelistbox .ui-selectlistbox-list, .ui-selectmanymenu .ui-selectlistbox-list, .ui-multiselectlistbox .ui-multiselectlistbox-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+  list-style-type: $_ui_selectonelistbox__ui_selectlistbox_list___ui_selectmanymenu__ui_selectlistbox_list___ui_multiselectlistbox__ui_multiselectlistbox_list___list_style_type;
+  margin: $_ui_selectonelistbox__ui_selectlistbox_list___ui_selectmanymenu__ui_selectlistbox_list___ui_multiselectlistbox__ui_multiselectlistbox_list___margin;
+  padding: $_ui_selectonelistbox__ui_selectlistbox_list___ui_selectmanymenu__ui_selectlistbox_list___ui_multiselectlistbox__ui_multiselectlistbox_list___padding;
 }
 
 .ui-selectonelistbox .ui-selectlistbox-item, .ui-selectmanymenu .ui-selectlistbox-item, .ui-multiselectlistbox .ui-multiselectlistbox-item {
-  margin: 2px;
-  border: 0 none;
-  cursor: pointer;
-  font-weight: normal;
+  margin: $_ui_selectonelistbox__ui_selectlistbox_item___ui_selectmanymenu__ui_selectlistbox_item___ui_multiselectlistbox__ui_multiselectlistbox_item___margin;
+  border: $_ui_selectonelistbox__ui_selectlistbox_item___ui_selectmanymenu__ui_selectlistbox_item___ui_multiselectlistbox__ui_multiselectlistbox_item___border;
+  cursor: $_ui_selectonelistbox__ui_selectlistbox_item___ui_selectmanymenu__ui_selectlistbox_item___ui_multiselectlistbox__ui_multiselectlistbox_item___cursor;
+  font-weight: $_ui_selectonelistbox__ui_selectlistbox_item___ui_selectmanymenu__ui_selectlistbox_item___ui_multiselectlistbox__ui_multiselectlistbox_item___font_weight;
 }
 
 .ui-selectonelistbox table.ui-selectlistbox-list, .ui-selectmanymenu table.ui-selectlistbox-list {
-  border-collapse: collapse;
-  width: 100%;
+  border-collapse: $_ui_selectonelistbox_table_ui_selectlistbox_list___ui_selectmanymenu_table_ui_selectlistbox_list___border_collapse;
+  width: $_ui_selectonelistbox_table_ui_selectlistbox_list___ui_selectmanymenu_table_ui_selectlistbox_list___width;
 }
 
 .ui-selectlistbox-filter.ui-inputfield {
-  padding-right: 12%;
-  padding-left: 2%;
-  width: 85%;
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
+  padding-right: $_ui_selectlistbox_filter_ui_inputfield___padding_right;
+  padding-left: $_ui_selectlistbox_filter_ui_inputfield___padding_left;
+  width: $_ui_selectlistbox_filter_ui_inputfield___width;
+  -moz-box-shadow: $_ui_selectlistbox_filter_ui_inputfield____moz_box_shadow;
+  -webkit-box-shadow: $_ui_selectlistbox_filter_ui_inputfield____webkit_box_shadow;
+  box-shadow: $_ui_selectlistbox_filter_ui_inputfield___box_shadow;
 }
 
 .ui-selectlistbox-filter-container {
-  position: relative;
-  margin: 0.1em 0 0.1em 0;
-  padding: 0;
+  position: $_ui_selectlistbox_filter_container___position;
+  margin: $_ui_selectlistbox_filter_container___margin;
+  padding: $_ui_selectlistbox_filter_container___padding;
 
   .ui-icon {
-    position: absolute;
-    top: 5px;
-    right: 2px;
+    position: $_ui_selectlistbox_filter_container__ui_icon___position;
+    top: $_ui_selectlistbox_filter_container__ui_icon___top;
+    right: $_ui_selectlistbox_filter_container__ui_icon___right;
   }
 }
 
 .ui-multiselectlistbox {
   .ui-multiselectlistbox-listcontainer {
-    float: left;
-    margin-right: 4px;
+    float: $_ui_multiselectlistbox__ui_multiselectlistbox_listcontainer___float;
+    margin-right: $_ui_multiselectlistbox__ui_multiselectlistbox_listcontainer___margin_right;
   }
 
   .ui-multiselectlistbox-item {
-    white-space: nowrap;
+    white-space: $_ui_multiselectlistbox__ui_multiselectlistbox_item___white_space;
   }
 
   &.ui-state-disabled .ui-multiselectlistbox-item {
-    cursor: default;
+    cursor: $_ui_multiselectlistbox_ui_state_disabled__ui_multiselectlistbox_item___cursor;
   }
 
   .ui-multiselectlistbox-header {
-    text-align: center;
-    padding: 2px 10px;
-    border-bottom: 0px none;
+    text-align: $_ui_multiselectlistbox__ui_multiselectlistbox_header___text_align;
+    padding: $_ui_multiselectlistbox__ui_multiselectlistbox_header___padding;
+    border-bottom: $_ui_multiselectlistbox__ui_multiselectlistbox_header___border_bottom;
   }
 }
 
@@ -92,305 +406,305 @@
  */
 
 .ui-chkbox {
-  display: inline-block;
+  display: $_ui_chkbox___display;
 
   .ui-chkbox-box {
-    width: 16px;
-    height: 16px;
-    display: inline-block;
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
-    border-radius: 2px;
+    width: $_ui_chkbox__ui_chkbox_box___width;
+    height: $_ui_chkbox__ui_chkbox_box___height;
+    display: $_ui_chkbox__ui_chkbox_box___display;
+    -moz-border-radius: $_ui_chkbox__ui_chkbox_box____moz_border_radius;
+    -webkit-border-radius: $_ui_chkbox__ui_chkbox_box____webkit_border_radius;
+    border-radius: $_ui_chkbox__ui_chkbox_box___border_radius;
   }
 }
 
 .ui-chkbox-icon.ui-icon {
-  overflow: visible;
+  overflow: $_ui_chkbox_icon_ui_icon___overflow;
 }
 
 .ui-chkbox .ui-chkbox-label {
-  cursor: pointer;
-  margin: 3px 0 0 3px;
-  outline: medium none;
-  z-index: 1;
-  display: inline-block;
-  vertical-align: top;
+  cursor: $_ui_chkbox__ui_chkbox_label___cursor;
+  margin: $_ui_chkbox__ui_chkbox_label___margin;
+  outline: $_ui_chkbox__ui_chkbox_label___outline;
+  z-index: $_ui_chkbox__ui_chkbox_label___z_index;
+  display: $_ui_chkbox__ui_chkbox_label___display;
+  vertical-align: $_ui_chkbox__ui_chkbox_label___vertical_align;
 }
 
 .ui-selectoneradio label {
-  display: block;
-  margin-top: 4px;
+  display: $_ui_selectoneradio_label___display;
+  margin-top: $_ui_selectoneradio_label___margin_top;
 }
 
 .ui-selectmanycheckbox.ui-widget td, .ui-selectoneradio.ui-widget td {
-  border: 0 none;
+  border: $_ui_selectmanycheckbox_ui_widget_td___ui_selectoneradio_ui_widget_td___border;
 }
 
 .ui-selectmanycheckbox.ui-grid label, .ui-selectoneradio.ui-grid label {
-  display: inline-block;
-  margin-left: 4px;
-  vertical-align: top;
+  display: $_ui_selectmanycheckbox_ui_grid_label___ui_selectoneradio_ui_grid_label___display;
+  margin-left: $_ui_selectmanycheckbox_ui_grid_label___ui_selectoneradio_ui_grid_label___margin_left;
+  vertical-align: $_ui_selectmanycheckbox_ui_grid_label___ui_selectoneradio_ui_grid_label___vertical_align;
 }
 
 .ui-panelgrid {
   .ui-selectoneradio.ui-grid-responsive .ui-grid-row, .ui-selectmanycheckbox.ui-grid-responsive .ui-grid-row {
-    border-top: 0px none;
+    border-top: $_ui_panelgrid__ui_selectoneradio_ui_grid_responsive__ui_grid_row___ui_panelgrid__ui_selectmanycheckbox_ui_grid_responsive__ui_grid_row___border_top;
   }
 }
 
 /** RadioButton **/
 
 .ui-radiobutton {
-  margin: 3px 0;
-  width: 16px;
-  line-height: 16px;
-  display: inline-block;
+  margin: $_ui_radiobutton___margin;
+  width: $_ui_radiobutton___width;
+  line-height: $_ui_radiobutton___line_height;
+  display: $_ui_radiobutton___display;
 
   .ui-radiobutton-box {
-    width: 16px;
-    height: 16px;
-    line-height: 16px;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
+    width: $_ui_radiobutton__ui_radiobutton_box___width;
+    height: $_ui_radiobutton__ui_radiobutton_box___height;
+    line-height: $_ui_radiobutton__ui_radiobutton_box___line_height;
+    -moz-border-radius: $_ui_radiobutton__ui_radiobutton_box____moz_border_radius;
+    -webkit-border-radius: $_ui_radiobutton__ui_radiobutton_box____webkit_border_radius;
+    border-radius: $_ui_radiobutton__ui_radiobutton_box___border_radius;
   }
 }
 
 .ui-radiobutton-icon {
-  margin-left: 1px;
+  margin-left: $_ui_radiobutton_icon___margin_left;
 }
 
 .ui-radiobutton.ui-radiobutton-native {
-  margin: 0;
-  padding: 0;
+  margin: $_ui_radiobutton_ui_radiobutton_native___margin;
+  padding: $_ui_radiobutton_ui_radiobutton_native___padding;
 
   .ui-helper-hidden-accessible {
-    clip: auto;
-    position: static !important;
-    width: auto;
-    height: auto;
-    overflow: visible;
-    margin: 0;
-    padding: 0;
+    clip: $_ui_radiobutton_ui_radiobutton_native__ui_helper_hidden_accessible___clip;
+    position: $_ui_radiobutton_ui_radiobutton_native__ui_helper_hidden_accessible___position;
+    width: $_ui_radiobutton_ui_radiobutton_native__ui_helper_hidden_accessible___width;
+    height: $_ui_radiobutton_ui_radiobutton_native__ui_helper_hidden_accessible___height;
+    overflow: $_ui_radiobutton_ui_radiobutton_native__ui_helper_hidden_accessible___overflow;
+    margin: $_ui_radiobutton_ui_radiobutton_native__ui_helper_hidden_accessible___margin;
+    padding: $_ui_radiobutton_ui_radiobutton_native__ui_helper_hidden_accessible___padding;
   }
 
   .ui-radiobutton-box {
-    display: none;
+    display: $_ui_radiobutton_ui_radiobutton_native__ui_radiobutton_box___display;
   }
 
   .ui-helper-hidden-accessible input {
-    margin: 0;
+    margin: $_ui_radiobutton_ui_radiobutton_native__ui_helper_hidden_accessible_input___margin;
   }
 }
 
 .ui-selectoneradio-native label {
-  margin: 0;
+  margin: $_ui_selectoneradio_native_label___margin;
 }
 
 /** SelectOneMenu **/
 
 .ui-selectonemenu {
-  display: inline-block;
-  position: relative;
-  width: auto;
-  zoom: 1;
-  cursor: pointer;
-  padding-right: 2em;
+  display: $_ui_selectonemenu___display;
+  position: $_ui_selectonemenu___position;
+  width: $_ui_selectonemenu___width;
+  zoom: $_ui_selectonemenu___zoom;
+  cursor: $_ui_selectonemenu___cursor;
+  padding-right: $_ui_selectonemenu___padding_right;
 
   .ui-selectonemenu-trigger {
-    border-right: none;
-    border-top: none;
-    border-bottom: none;
-    cursor: pointer;
-    width: 16px;
-    height: 100%;
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding: 0 3px;
+    border-right: $_ui_selectonemenu__ui_selectonemenu_trigger___border_right;
+    border-top: $_ui_selectonemenu__ui_selectonemenu_trigger___border_top;
+    border-bottom: $_ui_selectonemenu__ui_selectonemenu_trigger___border_bottom;
+    cursor: $_ui_selectonemenu__ui_selectonemenu_trigger___cursor;
+    width: $_ui_selectonemenu__ui_selectonemenu_trigger___width;
+    height: $_ui_selectonemenu__ui_selectonemenu_trigger___height;
+    position: $_ui_selectonemenu__ui_selectonemenu_trigger___position;
+    right: $_ui_selectonemenu__ui_selectonemenu_trigger___right;
+    top: $_ui_selectonemenu__ui_selectonemenu_trigger___top;
+    padding: $_ui_selectonemenu__ui_selectonemenu_trigger___padding;
 
     .ui-icon {
-      margin-top: 3px;
+      margin-top: $_ui_selectonemenu__ui_selectonemenu_trigger__ui_icon___margin_top;
     }
   }
 
   .ui-selectonemenu-label {
-    display: block;
-    border: none;
-    white-space: nowrap;
-    overflow: hidden;
-    font-weight: normal;
-    width: 100%;
-    text-align: left;
+    display: $_ui_selectonemenu__ui_selectonemenu_label___display;
+    border: $_ui_selectonemenu__ui_selectonemenu_label___border;
+    white-space: $_ui_selectonemenu__ui_selectonemenu_label___white_space;
+    overflow: $_ui_selectonemenu__ui_selectonemenu_label___overflow;
+    font-weight: $_ui_selectonemenu__ui_selectonemenu_label___font_weight;
+    width: $_ui_selectonemenu__ui_selectonemenu_label___width;
+    text-align: $_ui_selectonemenu__ui_selectonemenu_label___text_align;
   }
 
   &.ui-state-disabled {
     .ui-selectonemenu-trigger, .ui-selectonemenu-label {
-      cursor: default;
+      cursor: $_ui_selectonemenu_ui_state_disabled__ui_selectonemenu_trigger___ui_selectonemenu_ui_state_disabled__ui_selectonemenu_label___cursor;
     }
   }
 
   label.ui-selectonemenu-label {
-    cursor: pointer;
+    cursor: $_ui_selectonemenu_label_ui_selectonemenu_label___cursor;
   }
 
   input.ui-selectonemenu-label {
-    cursor: default;
+    cursor: $_ui_selectonemenu_input_ui_selectonemenu_label___cursor;
   }
 }
 
 .ui-selectonemenu-panel {
-  position: absolute;
-  height: auto;
+  position: $_ui_selectonemenu_panel___position;
+  height: $_ui_selectonemenu_panel___height;
 
   .ui-selectonemenu-items-wrapper {
-    overflow: auto;
+    overflow: $_ui_selectonemenu_panel__ui_selectonemenu_items_wrapper___overflow;
   }
 
   .ui-selectonemenu-item {
-    font-weight: normal;
-    cursor: pointer;
+    font-weight: $_ui_selectonemenu_panel__ui_selectonemenu_item___font_weight;
+    cursor: $_ui_selectonemenu_panel__ui_selectonemenu_item___cursor;
   }
 
   .ui-selectonemenu-item-group {
-    font-weight: bold;
+    font-weight: $_ui_selectonemenu_panel__ui_selectonemenu_item_group___font_weight;
   }
 
   .ui-selectonemenu-list {
-    padding: 0.4em;
-    border: 0 none;
+    padding: $_ui_selectonemenu_panel__ui_selectonemenu_list___padding;
+    border: $_ui_selectonemenu_panel__ui_selectonemenu_list___border;
   }
 
   .ui-selectonemenu-list-item {
-    border: 0px none;
-    margin: 1px 0;
-    padding: 3px 5px;
-    text-align: left;
-    white-space: nowrap;
+    border: $_ui_selectonemenu_panel__ui_selectonemenu_list_item___border;
+    margin: $_ui_selectonemenu_panel__ui_selectonemenu_list_item___margin;
+    padding: $_ui_selectonemenu_panel__ui_selectonemenu_list_item___padding;
+    text-align: $_ui_selectonemenu_panel__ui_selectonemenu_list_item___text_align;
+    white-space: $_ui_selectonemenu_panel__ui_selectonemenu_list_item___white_space;
   }
 
   .ui-selectonemenu-table {
-    border-collapse: collapse;
-    width: 100%;
+    border-collapse: $_ui_selectonemenu_panel__ui_selectonemenu_table___border_collapse;
+    width: $_ui_selectonemenu_panel__ui_selectonemenu_table___width;
 
     td {
-      border-width: 1px;
-      border-style: solid;
-      border-color: inherit;
-      padding: 4px 10px 4px 10px;
+      border-width: $_ui_selectonemenu_panel__ui_selectonemenu_table_td___border_width;
+      border-style: $_ui_selectonemenu_panel__ui_selectonemenu_table_td___border_style;
+      border-color: $_ui_selectonemenu_panel__ui_selectonemenu_table_td___border_color;
+      padding: $_ui_selectonemenu_panel__ui_selectonemenu_table_td___padding;
     }
   }
 
   .ui-selectonemenu-filter {
-    width: 85%;
-    padding-right: 15px;
+    width: $_ui_selectonemenu_panel__ui_selectonemenu_filter___width;
+    padding-right: $_ui_selectonemenu_panel__ui_selectonemenu_filter___padding_right;
   }
 
   .ui-selectonemenu-filter-container {
-    position: relative;
-    margin: 0;
-    padding: 0.4em;
-    display: inline-block;
+    position: $_ui_selectonemenu_panel__ui_selectonemenu_filter_container___position;
+    margin: $_ui_selectonemenu_panel__ui_selectonemenu_filter_container___margin;
+    padding: $_ui_selectonemenu_panel__ui_selectonemenu_filter_container___padding;
+    display: $_ui_selectonemenu_panel__ui_selectonemenu_filter_container___display;
 
     .ui-icon {
-      position: absolute;
-      top: 10px;
-      right: 10px;
+      position: $_ui_selectonemenu_panel__ui_selectonemenu_filter_container__ui_icon___position;
+      top: $_ui_selectonemenu_panel__ui_selectonemenu_filter_container__ui_icon___top;
+      right: $_ui_selectonemenu_panel__ui_selectonemenu_filter_container__ui_icon___right;
     }
   }
 }
 
 .ui-state-disabled a {
-  outline: none;
+  outline: $_ui_state_disabled_a___outline;
 }
 
 /* Button */
 
 .ui-button {
-  display: inline-block;
-  position: relative;
-  padding: 0;
-  margin-right: .1em;
-  text-decoration: none !important;
-  cursor: pointer;
-  text-align: center;
-  zoom: 1;
-  overflow: visible;
+  display: $_ui_button___display;
+  position: $_ui_button___position;
+  padding: $_ui_button___padding;
+  margin-right: $_ui_button___margin_right;
+  text-decoration: $_ui_button___text_decoration;
+  cursor: $_ui_button___cursor;
+  text-align: $_ui_button___text_align;
+  zoom: $_ui_button___zoom;
+  overflow: $_ui_button___overflow;
 
   /* the overflow property removes extra width in IE */
 }
 
 .ui-button-icon-only {
-  width: 2.4em;
+  width: $_ui_button_icon_only___width;
 }
 
 /*button text element */
 
 .ui-button .ui-button-text {
-  display: block;
-  line-height: normal;
+  display: $_ui_button__ui_button_text___display;
+  line-height: $_ui_button__ui_button_text___line_height;
 }
 
 .ui-button-text-only .ui-button-text {
-  padding: .3em 1em;
+  padding: $_ui_button_text_only__ui_button_text___padding;
 }
 
 .ui-button-icon-only .ui-button-text {
-  padding: .3em;
-  text-indent: -9999999px;
+  padding: $_ui_button_icon_only__ui_button_text___padding;
+  text-indent: $_ui_button_icon_only__ui_button_text___text_indent;
 }
 
 .ui-button-text-icon-left .ui-button-text {
-  padding: .3em 1em .3em 2.1em;
+  padding: $_ui_button_text_icon_left__ui_button_text___padding;
 }
 
 .ui-button-text-icon-right .ui-button-text {
-  padding: .3em 2.1em .3em 1em;
+  padding: $_ui_button_text_icon_right__ui_button_text___padding;
 }
 
 /*button icon element(s) */
 
 .ui-button-icon-only .ui-icon, .ui-button-text-icon-left .ui-icon, .ui-button-text-icon-right .ui-icon {
-  position: absolute;
-  top: 50%;
-  margin-top: -8px;
+  position: $_ui_button_icon_only__ui_icon___ui_button_text_icon_left__ui_icon___ui_button_text_icon_right__ui_icon___position;
+  top: $_ui_button_icon_only__ui_icon___ui_button_text_icon_left__ui_icon___ui_button_text_icon_right__ui_icon___top;
+  margin-top: $_ui_button_icon_only__ui_icon___ui_button_text_icon_left__ui_icon___ui_button_text_icon_right__ui_icon___margin_top;
 }
 
 /* FontAwesome icon */
 
 .ui-button-icon-only .ui-icon.fa, .ui-button-text-icon-left .ui-icon.fa, .ui-button-text-icon-right .ui-icon.fa {
-  margin-top: -7px;
+  margin-top: $_ui_button_icon_only__ui_icon_fa___ui_button_text_icon_left__ui_icon_fa___ui_button_text_icon_right__ui_icon_fa___margin_top;
 }
 
 .ui-button-icon-only .ui-icon {
-  left: 50%;
-  margin-left: -8px;
+  left: $_ui_button_icon_only__ui_icon___left;
+  margin-left: $_ui_button_icon_only__ui_icon___margin_left;
 }
 
 .ui-button-icon-left {
-  left: .5em;
+  left: $_ui_button_icon_left___left;
 }
 
 .ui-button-icon-right {
-  right: .5em;
+  right: $_ui_button_icon_right___right;
 }
 
 /*button sets*/
 
 .ui-buttonset {
-  margin-right: 7px;
+  margin-right: $_ui_buttonset___margin_right;
 
   .ui-button {
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: $_ui_buttonset__ui_button___margin_left;
+    margin-right: $_ui_buttonset__ui_button___margin_right;
   }
 }
 
 /* workarounds */
 
 button.ui-button::-moz-focus-inner {
-  border: 0;
-  padding: 0;
+  border: $button_ui_button___moz_focus_inner___border;
+  padding: $button_ui_button___moz_focus_inner___padding;
 
   /* reset extra padding in Firefox */
 }
@@ -398,202 +712,202 @@ button.ui-button::-moz-focus-inner {
 /** SelectCheckbox Menu **/
 
 .ui-selectcheckboxmenu {
-  display: inline-block;
-  position: relative;
-  width: auto;
-  zoom: 1;
-  cursor: pointer;
+  display: $_ui_selectcheckboxmenu___display;
+  position: $_ui_selectcheckboxmenu___position;
+  width: $_ui_selectcheckboxmenu___width;
+  zoom: $_ui_selectcheckboxmenu___zoom;
+  cursor: $_ui_selectcheckboxmenu___cursor;
 
   .ui-selectcheckboxmenu-trigger {
-    border-right: none;
-    border-top: none;
-    border-bottom: none;
-    cursor: pointer;
-    width: 16px;
-    height: 100%;
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding: 0 3px;
+    border-right: $_ui_selectcheckboxmenu__ui_selectcheckboxmenu_trigger___border_right;
+    border-top: $_ui_selectcheckboxmenu__ui_selectcheckboxmenu_trigger___border_top;
+    border-bottom: $_ui_selectcheckboxmenu__ui_selectcheckboxmenu_trigger___border_bottom;
+    cursor: $_ui_selectcheckboxmenu__ui_selectcheckboxmenu_trigger___cursor;
+    width: $_ui_selectcheckboxmenu__ui_selectcheckboxmenu_trigger___width;
+    height: $_ui_selectcheckboxmenu__ui_selectcheckboxmenu_trigger___height;
+    position: $_ui_selectcheckboxmenu__ui_selectcheckboxmenu_trigger___position;
+    right: $_ui_selectcheckboxmenu__ui_selectcheckboxmenu_trigger___right;
+    top: $_ui_selectcheckboxmenu__ui_selectcheckboxmenu_trigger___top;
+    padding: $_ui_selectcheckboxmenu__ui_selectcheckboxmenu_trigger___padding;
 
     .ui-icon {
-      margin-top: 3px;
+      margin-top: $_ui_selectcheckboxmenu__ui_selectcheckboxmenu_trigger__ui_icon___margin_top;
     }
   }
 
   .ui-selectcheckboxmenu-label {
-    display: block;
-    padding: 3px 26px 3px 5px;
-    width: auto;
-    border: none;
-    cursor: pointer;
+    display: $_ui_selectcheckboxmenu__ui_selectcheckboxmenu_label___display;
+    padding: $_ui_selectcheckboxmenu__ui_selectcheckboxmenu_label___padding;
+    width: $_ui_selectcheckboxmenu__ui_selectcheckboxmenu_label___width;
+    border: $_ui_selectcheckboxmenu__ui_selectcheckboxmenu_label___border;
+    cursor: $_ui_selectcheckboxmenu__ui_selectcheckboxmenu_label___cursor;
   }
 
   &.ui-state-disabled {
     .ui-selectcheckboxmenu-trigger, .ui-selectcheckboxmenu-label {
-      cursor: auto;
+      cursor: $_ui_selectcheckboxmenu_ui_state_disabled__ui_selectcheckboxmenu_trigger___ui_selectcheckboxmenu_ui_state_disabled__ui_selectcheckboxmenu_label___cursor;
     }
   }
 }
 
 .ui-selectcheckboxmenu-panel {
-  padding: 0.2em;
-  position: absolute;
-  overflow: hidden;
-  -moz-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
-  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
+  padding: $_ui_selectcheckboxmenu_panel___padding;
+  position: $_ui_selectcheckboxmenu_panel___position;
+  overflow: $_ui_selectcheckboxmenu_panel___overflow;
+  -moz-box-shadow: $_ui_selectcheckboxmenu_panel____moz_box_shadow;
+  -webkit-box-shadow: $_ui_selectcheckboxmenu_panel____webkit_box_shadow;
+  box-shadow: $_ui_selectcheckboxmenu_panel___box_shadow;
 
   .ui-selectcheckboxmenu-items-wrapper {
-    overflow: auto;
-    position: relative;
-    padding: 0.2em 0;
+    overflow: $_ui_selectcheckboxmenu_panel__ui_selectcheckboxmenu_items_wrapper___overflow;
+    position: $_ui_selectcheckboxmenu_panel__ui_selectcheckboxmenu_items_wrapper___position;
+    padding: $_ui_selectcheckboxmenu_panel__ui_selectcheckboxmenu_items_wrapper___padding;
   }
 
   .ui-selectcheckboxmenu-list {
-    border: 0 none;
+    border: $_ui_selectcheckboxmenu_panel__ui_selectcheckboxmenu_list___border;
   }
 
   .ui-selectcheckboxmenu-list-item {
-    border: 0px none;
-    cursor: pointer;
-    font-weight: normal;
-    margin: 1px 0;
-    padding: 3px 5px;
-    text-align: left;
-    white-space: nowrap;
-    display: block;
-    position: relative;
+    border: $_ui_selectcheckboxmenu_panel__ui_selectcheckboxmenu_list_item___border;
+    cursor: $_ui_selectcheckboxmenu_panel__ui_selectcheckboxmenu_list_item___cursor;
+    font-weight: $_ui_selectcheckboxmenu_panel__ui_selectcheckboxmenu_list_item___font_weight;
+    margin: $_ui_selectcheckboxmenu_panel__ui_selectcheckboxmenu_list_item___margin;
+    padding: $_ui_selectcheckboxmenu_panel__ui_selectcheckboxmenu_list_item___padding;
+    text-align: $_ui_selectcheckboxmenu_panel__ui_selectcheckboxmenu_list_item___text_align;
+    white-space: $_ui_selectcheckboxmenu_panel__ui_selectcheckboxmenu_list_item___white_space;
+    display: $_ui_selectcheckboxmenu_panel__ui_selectcheckboxmenu_list_item___display;
+    position: $_ui_selectcheckboxmenu_panel__ui_selectcheckboxmenu_list_item___position;
 
     .ui-chkbox {
-      position: absolute;
-      top: 50%;
-      margin-top: -8px;
+      position: $_ui_selectcheckboxmenu_panel__ui_selectcheckboxmenu_list_item__ui_chkbox___position;
+      top: $_ui_selectcheckboxmenu_panel__ui_selectcheckboxmenu_list_item__ui_chkbox___top;
+      margin-top: $_ui_selectcheckboxmenu_panel__ui_selectcheckboxmenu_list_item__ui_chkbox___margin_top;
     }
 
     label {
-      display: block;
-      padding-left: 2.2em;
+      display: $_ui_selectcheckboxmenu_panel__ui_selectcheckboxmenu_list_item_label___display;
+      padding-left: $_ui_selectcheckboxmenu_panel__ui_selectcheckboxmenu_list_item_label___padding_left;
     }
   }
 }
 
 .ui-selectcheckboxmenu-header {
-  margin-bottom: 0.3em;
-  padding: 0.3em 0 0.3em 0.4em;
+  margin-bottom: $_ui_selectcheckboxmenu_header___margin_bottom;
+  padding: $_ui_selectcheckboxmenu_header___padding;
 
   .ui-chkbox {
-    float: left;
-    cursor: pointer;
+    float: $_ui_selectcheckboxmenu_header__ui_chkbox___float;
+    cursor: $_ui_selectcheckboxmenu_header__ui_chkbox___cursor;
   }
 
   .ui-selectcheckboxmenu-filter-container {
-    float: left;
-    position: relative;
-    margin-left: 5px;
+    float: $_ui_selectcheckboxmenu_header__ui_selectcheckboxmenu_filter_container___float;
+    position: $_ui_selectcheckboxmenu_header__ui_selectcheckboxmenu_filter_container___position;
+    margin-left: $_ui_selectcheckboxmenu_header__ui_selectcheckboxmenu_filter_container___margin_left;
 
     .ui-icon {
-      position: absolute;
-      right: 5px;
-      top: 2px;
+      position: $_ui_selectcheckboxmenu_header__ui_selectcheckboxmenu_filter_container__ui_icon___position;
+      right: $_ui_selectcheckboxmenu_header__ui_selectcheckboxmenu_filter_container__ui_icon___right;
+      top: $_ui_selectcheckboxmenu_header__ui_selectcheckboxmenu_filter_container__ui_icon___top;
     }
   }
 
   .ui-inputfield {
-    padding: 1px 20px 1px 2px;
+    padding: $_ui_selectcheckboxmenu_header__ui_inputfield___padding;
   }
 
   span.ui-icon {
-    float: left;
+    float: $_ui_selectcheckboxmenu_header_span_ui_icon___float;
   }
 
   a {
     &.ui-selectcheckboxmenu-all, &.ui-selectcheckboxmenu-none {
-      float: left;
-      margin-right: 10px;
-      display: block;
+      float: $_ui_selectcheckboxmenu_header_a_ui_selectcheckboxmenu_all___ui_selectcheckboxmenu_header_a_ui_selectcheckboxmenu_none___float;
+      margin-right: $_ui_selectcheckboxmenu_header_a_ui_selectcheckboxmenu_all___ui_selectcheckboxmenu_header_a_ui_selectcheckboxmenu_none___margin_right;
+      display: $_ui_selectcheckboxmenu_header_a_ui_selectcheckboxmenu_all___ui_selectcheckboxmenu_header_a_ui_selectcheckboxmenu_none___display;
     }
   }
 
   .ui-selectcheckboxmenu-close {
-    float: right;
-    padding: 1px;
-    margin-right: 0.2em;
-    display: block;
+    float: $_ui_selectcheckboxmenu_header__ui_selectcheckboxmenu_close___float;
+    padding: $_ui_selectcheckboxmenu_header__ui_selectcheckboxmenu_close___padding;
+    margin-right: $_ui_selectcheckboxmenu_header__ui_selectcheckboxmenu_close___margin_right;
+    display: $_ui_selectcheckboxmenu_header__ui_selectcheckboxmenu_close___display;
 
     &.ui-state-hover {
-      padding: 0px;
+      padding: $_ui_selectcheckboxmenu_header__ui_selectcheckboxmenu_close_ui_state_hover___padding;
     }
   }
 }
 
 .ui-splitbutton {
-  position: relative;
-  padding-right: 2em;
+  position: $_ui_splitbutton___position;
+  padding-right: $_ui_splitbutton___padding_right;
 
   .ui-button.ui-splitbutton-menubutton {
-    width: 32px;
-    position: absolute;
-    top: 0px;
-    margin-left: -1px;
-    right: 0px;
+    width: $_ui_splitbutton__ui_button_ui_splitbutton_menubutton___width;
+    position: $_ui_splitbutton__ui_button_ui_splitbutton_menubutton___position;
+    top: $_ui_splitbutton__ui_button_ui_splitbutton_menubutton___top;
+    margin-left: $_ui_splitbutton__ui_button_ui_splitbutton_menubutton___margin_left;
+    right: $_ui_splitbutton__ui_button_ui_splitbutton_menubutton___right;
   }
 }
 
 /** IE Hacks **/
 
 div.ui-button, .ui-splitbutton {
-  display: inline-block;
-  zoom: 1;
+  display: $div_ui_button___ui_splitbutton___display;
+  zoom: $div_ui_button___ui_splitbutton___zoom;
 }
 
 /** Password **/
 
 .ui-password-panel {
-  padding: 4px 10px;
-  width: 150px;
-  margin-top: 2px;
+  padding: $_ui_password_panel___padding;
+  width: $_ui_password_panel___width;
+  margin-top: $_ui_password_panel___margin_top;
 
   .ui-password-meter {
-    height: 10px;
-    background: transparent url("forms/password-meter.png") no-repeat left top;
-    padding: 0;
-    margin: 0;
+    height: $_ui_password_panel__ui_password_meter___height;
+    background: $_ui_password_panel__ui_password_meter___background;
+    padding: $_ui_password_panel__ui_password_meter___padding;
+    margin: $_ui_password_panel__ui_password_meter___margin;
   }
 }
 
 .ui-password-info {
-  margin-top: 4px;
+  margin-top: $_ui_password_info___margin_top;
 }
 
 .ui-password-panel-overlay {
-  position: absolute;
+  position: $_ui_password_panel_overlay___position;
 }
 
 /* OutputLabel */
 
 .ui-outputlabel {
   &.ui-state-error {
-    border: 0 none;
+    border: $_ui_outputlabel_ui_state_error___border;
   }
 
   .ui-outputlabel-rfi {
-    margin-left: 0.4em;
+    margin-left: $_ui_outputlabel__ui_outputlabel_rfi___margin_left;
   }
 }
 
 /* SelectOneButton */
 
 .ui-selectonebutton, .ui-selectmanybutton {
-  display: inline-block;
-  padding: 1px;
+  display: $_ui_selectonebutton___ui_selectmanybutton___display;
+  padding: $_ui_selectonebutton___ui_selectmanybutton___padding;
 
   &.ui-state-error {
-    padding: 0px;
+    padding: $_ui_selectonebutton_ui_state_error___ui_selectmanybutton_ui_state_error___padding;
   }
 
   .ui-button.ui-state-focus {
-    outline: none;
+    outline: $_ui_selectonebutton__ui_button_ui_state_focus___ui_selectmanybutton__ui_button_ui_state_focus___outline;
   }
 }
 
@@ -603,141 +917,141 @@ div.ui-button, .ui-splitbutton {
 
 .ui-fluid {
   .ui-inputfield {
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
+    box-sizing: $_ui_fluid__ui_inputfield___box_sizing;
+    -webkit-box-sizing: $_ui_fluid__ui_inputfield____webkit_box_sizing;
+    -moz-box-sizing: $_ui_fluid__ui_inputfield____moz_box_sizing;
   }
 
   .ui-inputtext, .ui-inputtextarea {
-    width: 100%;
+    width: $_ui_fluid__ui_inputtext___ui_fluid__ui_inputtextarea___width;
   }
 
   .ui-selectonemenu {
-    width: 100%;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
+    width: $_ui_fluid__ui_selectonemenu___width;
+    box-sizing: $_ui_fluid__ui_selectonemenu___box_sizing;
+    -webkit-box-sizing: $_ui_fluid__ui_selectonemenu____webkit_box_sizing;
+    -moz-box-sizing: $_ui_fluid__ui_selectonemenu____moz_box_sizing;
 
     .ui-selectonemenu-trigger {
-      width: 32px;
-      padding: 0 6px;
-      box-sizing: border-box;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
+      width: $_ui_fluid__ui_selectonemenu__ui_selectonemenu_trigger___width;
+      padding: $_ui_fluid__ui_selectonemenu__ui_selectonemenu_trigger___padding;
+      box-sizing: $_ui_fluid__ui_selectonemenu__ui_selectonemenu_trigger___box_sizing;
+      -webkit-box-sizing: $_ui_fluid__ui_selectonemenu__ui_selectonemenu_trigger____webkit_box_sizing;
+      -moz-box-sizing: $_ui_fluid__ui_selectonemenu__ui_selectonemenu_trigger____moz_box_sizing;
     }
   }
 
   .ui-calendar {
-    width: 100%;
+    width: $_ui_fluid__ui_calendar___width;
 
     input {
-      width: 100%;
+      width: $_ui_fluid__ui_calendar_input___width;
     }
   }
 
   .ui-spinner {
-    width: 100%;
+    width: $_ui_fluid__ui_spinner___width;
 
     .ui-spinner-input {
-      padding-right: 36px;
-      width: 100%;
+      padding-right: $_ui_fluid__ui_spinner__ui_spinner_input___padding_right;
+      width: $_ui_fluid__ui_spinner__ui_spinner_input___width;
     }
 
     .ui-spinner-button {
-      width: auto;
+      width: $_ui_fluid__ui_spinner__ui_spinner_button___width;
 
       .ui-icon {
-        left: 6px;
+        left: $_ui_fluid__ui_spinner__ui_spinner_button__ui_icon___left;
       }
     }
   }
 
   .ui-autocomplete, .ui-autocomplete-input {
-    width: 100%;
+    width: $_ui_fluid__ui_autocomplete___ui_fluid__ui_autocomplete_input___width;
   }
 
   .ui-autocomplete .ui-autocomplete-dropdown.ui-button {
-    width: 2.4em;
+    width: $_ui_fluid__ui_autocomplete__ui_autocomplete_dropdown_ui_button___width;
   }
 
   .ui-inputmask, .ui-password, .ui-keyboard-input {
-    width: 100%;
+    width: $_ui_fluid__ui_inputmask___ui_fluid__ui_password___ui_fluid__ui_keyboard_input___width;
   }
 
   .ui-selectcheckboxmenu {
-    width: 100%;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
+    width: $_ui_fluid__ui_selectcheckboxmenu___width;
+    box-sizing: $_ui_fluid__ui_selectcheckboxmenu___box_sizing;
+    -webkit-box-sizing: $_ui_fluid__ui_selectcheckboxmenu____webkit_box_sizing;
+    -moz-box-sizing: $_ui_fluid__ui_selectcheckboxmenu____moz_box_sizing;
 
     .ui-selectcheckboxmenu-trigger .ui-icon {
-      margin-left: auto;
-      margin-right: auto;
+      margin-left: $_ui_fluid__ui_selectcheckboxmenu__ui_selectcheckboxmenu_trigger__ui_icon___margin_left;
+      margin-right: $_ui_fluid__ui_selectcheckboxmenu__ui_selectcheckboxmenu_trigger__ui_icon___margin_right;
     }
   }
 
   .ui-selectcheckboxmenu-trigger {
-    width: 32px;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
+    width: $_ui_fluid__ui_selectcheckboxmenu_trigger___width;
+    box-sizing: $_ui_fluid__ui_selectcheckboxmenu_trigger___box_sizing;
+    -webkit-box-sizing: $_ui_fluid__ui_selectcheckboxmenu_trigger____webkit_box_sizing;
+    -moz-box-sizing: $_ui_fluid__ui_selectcheckboxmenu_trigger____moz_box_sizing;
   }
 
   .ui-button {
-    width: 100%;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
+    width: $_ui_fluid__ui_button___width;
+    box-sizing: $_ui_fluid__ui_button___box_sizing;
+    -webkit-box-sizing: $_ui_fluid__ui_button____webkit_box_sizing;
+    -moz-box-sizing: $_ui_fluid__ui_button____moz_box_sizing;
   }
 
   .ui-buttonset {
-    width: 100%;
+    width: $_ui_fluid__ui_buttonset___width;
 
     &.ui-buttonset-1 .ui-button {
-      width: 100%;
+      width: $_ui_fluid__ui_buttonset_ui_buttonset_1__ui_button___width;
     }
 
     &.ui-buttonset-2 .ui-button {
-      width: 50%;
+      width: $_ui_fluid__ui_buttonset_ui_buttonset_2__ui_button___width;
     }
 
     &.ui-buttonset-3 .ui-button {
-      width: 33.3%;
+      width: $_ui_fluid__ui_buttonset_ui_buttonset_3__ui_button___width;
     }
 
     &.ui-buttonset-4 .ui-button {
-      width: 25%;
+      width: $_ui_fluid__ui_buttonset_ui_buttonset_4__ui_button___width;
     }
 
     &.ui-buttonset-5 .ui-button {
-      width: 20%;
+      width: $_ui_fluid__ui_buttonset_ui_buttonset_5__ui_button___width;
     }
 
     &.ui-buttonset-6 .ui-button {
-      width: 16.6%;
+      width: $_ui_fluid__ui_buttonset_ui_buttonset_6__ui_button___width;
     }
   }
 
   .ui-splitbutton {
-    width: 100%;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
+    width: $_ui_fluid__ui_splitbutton___width;
+    box-sizing: $_ui_fluid__ui_splitbutton___box_sizing;
+    -webkit-box-sizing: $_ui_fluid__ui_splitbutton____webkit_box_sizing;
+    -moz-box-sizing: $_ui_fluid__ui_splitbutton____moz_box_sizing;
 
     .ui-button {
-      width: 100%;
+      width: $_ui_fluid__ui_splitbutton__ui_button___width;
 
       &.ui-splitbutton-menubutton {
-        width: 32px;
-        box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
+        width: $_ui_fluid__ui_splitbutton__ui_button_ui_splitbutton_menubutton___width;
+        box-sizing: $_ui_fluid__ui_splitbutton__ui_button_ui_splitbutton_menubutton___box_sizing;
+        -webkit-box-sizing: $_ui_fluid__ui_splitbutton__ui_button_ui_splitbutton_menubutton____webkit_box_sizing;
+        -moz-box-sizing: $_ui_fluid__ui_splitbutton__ui_button_ui_splitbutton_menubutton____moz_box_sizing;
       }
     }
   }
 
   .ui-selectonelistbox, .ui-selectmanymenu {
-    width: 100%;
+    width: $_ui_fluid__ui_selectonelistbox___ui_fluid__ui_selectmanymenu___width;
   }
 }
 
@@ -768,7 +1082,7 @@ div.ui-button, .ui-splitbutton {
 @media (max-width: 640px) {
   .ui-fluid .ui-buttonset {
     &.ui-buttonset-1 .ui-button, &.ui-buttonset-2 .ui-button, &.ui-buttonset-3 .ui-button, &.ui-buttonset-4 .ui-button, &.ui-buttonset-5 .ui-button, &.ui-buttonset-6 .ui-button {
-      width: 100%;
+      width: $_ui_fluid__ui_buttonset_ui_buttonset_1__ui_button___ui_fluid__ui_buttonset_ui_buttonset_2__ui_button___ui_fluid__ui_buttonset_ui_buttonset_3__ui_button___ui_fluid__ui_buttonset_ui_buttonset_4__ui_button___ui_fluid__ui_buttonset_ui_buttonset_5__ui_button___ui_fluid__ui_buttonset_ui_buttonset_6__ui_button___width;
     }
   }
 }

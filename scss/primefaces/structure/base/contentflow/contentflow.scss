@@ -1,3 +1,117 @@
+$_ui_contentflow__flow__item_canvas_content___height: 100% !default;
+$_ui_contentflow__flow__item_canvas_content___width: 100% !default;
+$_ui_contentflow__flow__item_img_content___width: 100% !default;
+$_ui_contentflow__flow__item_img_reflection___width: 100% !default;
+$_ui_contentflow__flow__item_canvas_reflection___width: 100% !default;
+$_ui_contentflow__flow__item_active___cursor: pointer !default;
+$_ui_contentflow__flow__item__caption___font_size: 100% !default;
+$_ui_contentflow__flow__item__caption___font_weight: bold !default;
+$_ui_contentflow__flow__item__caption___text_align: center !default;
+$_ui_contentflow__flow__item__caption___color: white !default;
+$_ui_contentflow__flow__item__caption___max_height: 30% !default;
+$_ui_contentflow__flow__item__caption___bottom: 10% !default;
+$_ui_contentflow__flow__item__caption___background: url("contentflow/images/1x1_0.5_black.png") !default;
+$_ui_contentflow__flow__item__caption___width: 100% !default;
+$__html__ui_contentflow__flow__item__caption___background_image: none !default;
+$__html__ui_contentflow__flow__item__caption___filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src="contentflow/images/1x1_0.5_black.png") !default;
+$_ui_contentflow__flow__item__caption_a___text_decoration: none !default;
+$_ui_contentflow__flow__item__caption_a___color: white !default;
+$_ui_contentflow__flow__item__caption_a___font_style: italic !default;
+$_ui_contentflow__flow__item__caption_a___font_size: 0.8em !default;
+$_ui_contentflow__flow__item__caption_a_link___ui_contentflow__flow__item__caption_a_visited___ui_contentflow__flow__item__caption_a_active___text_decoration: none !default;
+$_ui_contentflow__flow__item__caption_a_link___ui_contentflow__flow__item__caption_a_visited___ui_contentflow__flow__item__caption_a_active___color: white !default;
+$_ui_contentflow__flow__item__caption_a_link___ui_contentflow__flow__item__caption_a_visited___ui_contentflow__flow__item__caption_a_active___font_style: italic !default;
+$_ui_contentflow__flow__item__caption_a_link___ui_contentflow__flow__item__caption_a_visited___ui_contentflow__flow__item__caption_a_active___font_size: 0.8em !default;
+$_ui_contentflow__flow__item__caption_a_hover___text_decoration: none !default;
+$_ui_contentflow__flow__item__caption_a_hover___color: white !default;
+$_ui_contentflow__flow__item__caption_a_hover___font_style: italic !default;
+$_ui_contentflow__flow__item__caption_a_hover___font_size: 0.8em !default;
+$_ui_contentflow__flow__item__caption_a_hover___text_decoration: underline !default;
+$_ui_contentflow__scrollbar___width: 50% !default;
+$_ui_contentflow__scrollbar___margin: 0px auto !default;
+$_ui_contentflow__scrollbar___margin_top: 10px !default;
+$_ui_contentflow__scrollbar___height: 16px !default;
+$_ui_contentflow__scrollbar___background: url("contentflow/images/scrollbar_white.png") left center repeat-x !default;
+$_ui_contentflow__scrollbar___position: relative !default;
+$_ui_contentflow__scrollbar___overflow: visible !default;
+$_ui_contentflow__scrollbar__slider___width: 16px !default;
+$_ui_contentflow__scrollbar__slider___height: 16px !default;
+$_ui_contentflow__scrollbar__slider___background: url("contentflow/images/scrollbar_white.png") center center no-repeat !default;
+$_ui_contentflow__scrollbar__slider___cursor: move !default;
+$__html__ui_contentflow__scrollbar__slider___background_image: none !default;
+$__html__ui_contentflow__scrollbar__slider__virtualSlider___filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src="contentflow/images/scrollbar_white.png") !default;
+$_ui_contentflow__scrollbar__slider__position___top: 120% !default;
+$_ui_contentflow__scrollbar__slider__position___font_size: 16px !default;
+$_ui_contentflow__scrollbar__slider__position___font_weight: bold !default;
+$_ui_contentflow__scrollbar__slider__position___color: silver !default;
+$_ui_contentflow__globalCaption___text_align: center !default;
+$_ui_contentflow__globalCaption___font_weight: bold !default;
+$_ui_contentflow__globalCaption___color: white !default;
+$_ui_contentflow__globalCaption___font_size: 14px !default;
+$_ui_contentflow__globalCaption___height: 20px !default;
+$_ui_contentflow__globalCaption___margin: 2em auto !default;
+$_ui_contentflow__globalCaption__caption_a___text_decoration: none !default;
+$_ui_contentflow__globalCaption__caption_a___color: white !default;
+$_ui_contentflow__globalCaption__caption_a___font_style: italic !default;
+$_ui_contentflow__globalCaption__caption_a___font_size: 0.8em !default;
+$_ui_contentflow__globalCaption__caption_a_link___ui_contentflow__globalCaption__caption_a_visited___ui_contentflow__globalCaption__caption_a_active___text_decoration: none !default;
+$_ui_contentflow__globalCaption__caption_a_link___ui_contentflow__globalCaption__caption_a_visited___ui_contentflow__globalCaption__caption_a_active___color: white !default;
+$_ui_contentflow__globalCaption__caption_a_link___ui_contentflow__globalCaption__caption_a_visited___ui_contentflow__globalCaption__caption_a_active___font_style: italic !default;
+$_ui_contentflow__globalCaption__caption_a_link___ui_contentflow__globalCaption__caption_a_visited___ui_contentflow__globalCaption__caption_a_active___font_size: 0.8em !default;
+$_ui_contentflow__globalCaption__caption_a_hover___text_decoration: none !default;
+$_ui_contentflow__globalCaption__caption_a_hover___color: white !default;
+$_ui_contentflow__globalCaption__caption_a_hover___font_style: italic !default;
+$_ui_contentflow__globalCaption__caption_a_hover___font_size: 0.8em !default;
+$_ui_contentflow__globalCaption__caption_a_hover___text_decoration: underline !default;
+$_ui_contentflow__loadIndicator___width: 100% !default;
+$_ui_contentflow__loadIndicator___height: 100% !default;
+$_ui_contentflow__loadIndicator___top: 0px !default;
+$_ui_contentflow__loadIndicator___left: 0px !default;
+$_ui_contentflow__loadIndicator___background: black !default;
+$_ui_contentflow__loadIndicator__indicator___background: url("contentflow/images/loader.gif") center center no-repeat !default;
+$_ui_contentflow__loadIndicator__indicator___width: 100% !default;
+$_ui_contentflow__loadIndicator__indicator___height: 100% !default;
+$__html__ui_contentflow__loadIndicator__indicator___height: 100px !default;
+$_ui_contentflow___position: relative !default;
+$_ui_contentflow___overflow: hidden !default;
+$_ui_contentflow_____margin: 0px !default;
+$_ui_contentflow_____padding: 0px !default;
+$_ui_contentflow_img____ms_interpolation_mode: bicubic !default;
+$_ui_contentflow__mouseoverCheckElement___position: absolute !default;
+$_ui_contentflow__mouseoverCheckElement___width: 0px !default;
+$_ui_contentflow__mouseoverCheckElement___height: 0px !default;
+$_ui_contentflow__mouseoverCheckElement___left: 0px !default;
+$_ui_contentflow__mouseoverCheckElement___visibility: hidden !default;
+$_ui_contentflow_hover__mouseoverCheckElement___left: 1px !default;
+$_ui_contentflow__flow___position: relative !default;
+$_ui_contentflow__flow___z_index: 0 !default;
+$_ui_contentflow__flow___visibility: hidden !default;
+$_ui_contentflow__flow___width: 100% !default;
+$_ui_contentflow__flow___margin: 0 auto !default;
+$_ui_contentflow__flow_hidden___visibility: hidden !default;
+$_ui_contentflow__flow__item___position: absolute !default;
+$_ui_contentflow__flow__item___visibility: hidden !default;
+$_ui_contentflow__flow__item___top: 0px !default;
+$_ui_contentflow__flow__item___left: 0px !default;
+$_ui_contentflow__flow__item__content___display: block !default;
+$_ui_contentflow__flow__item_div_content___width: 100% !default;
+$_ui_contentflow__flow__item_div_content___height: 100% !default;
+$_ui_contentflow__flow__item__label___display: none !default;
+$_ui_contentflow__flow__item__reflection___display: block !default;
+$_ui_contentflow__flow__item_canvas_reflection___margin_top: -1px !default;
+$_ui_contentflow__flow__item__caption___position: absolute !default;
+$_ui_contentflow__flow__item__caption___display: none !default;
+$_ui_contentflow__scrollbar___position: relative !default;
+$_ui_contentflow__scrollbar___z_index: 1 !default;
+$_ui_contentflow__scrollbar___visibility: hidden !default;
+$_ui_contentflow__scrollbar__slider___position: absolute !default;
+$__html__ui_contentflow__scrollbar__slider__virtualSlider___height: 100% !default;
+$_ui_contentflow__scrollbar__slider__position___position: absolute !default;
+$_ui_contentflow__scrollbar__slider__position___text_align: center !default;
+$_ui_contentflow__globalCaption___position: relative !default;
+$_ui_contentflow__globalCaption___z_index: 1 !default;
+$_ui_contentflow__loadIndicator___position: absolute !default;
+$_ui_contentflow__loadIndicator___z_index: 65000 !default;
 /* ========== ContentFlow ========== */
 /*
  * default style to look nice
@@ -12,8 +126,8 @@
     /*border: 1px solid red;*/
 
     canvas.content {
-      height: 100%;
-      width: 100%;
+      height: $_ui_contentflow__flow__item_canvas_content___height;
+      width: $_ui_contentflow__flow__item_canvas_content___width;
 
       /*border: 1px solid yellow;*/
     }
@@ -21,31 +135,31 @@
     img {
       &.content {
         /*border: 1px solid yellow;*/
-        width: 100%;
+        width: $_ui_contentflow__flow__item_img_content___width;
       }
 
       &.reflection {
-        width: 100%;
+        width: $_ui_contentflow__flow__item_img_reflection___width;
       }
     }
 
     canvas.reflection {
-      width: 100%;
+      width: $_ui_contentflow__flow__item_canvas_reflection___width;
     }
 
     &.active {
-      cursor: pointer;
+      cursor: $_ui_contentflow__flow__item_active___cursor;
     }
 
     .caption {
-      font-size: 100%;
-      font-weight: bold;
-      text-align: center;
-      color: white;
-      max-height: 30%;
-      bottom: 10%;
-      background: url("contentflow/images/1x1_0.5_black.png");
-      width: 100%;
+      font-size: $_ui_contentflow__flow__item__caption___font_size;
+      font-weight: $_ui_contentflow__flow__item__caption___font_weight;
+      text-align: $_ui_contentflow__flow__item__caption___text_align;
+      color: $_ui_contentflow__flow__item__caption___color;
+      max-height: $_ui_contentflow__flow__item__caption___max_height;
+      bottom: $_ui_contentflow__flow__item__caption___bottom;
+      background: $_ui_contentflow__flow__item__caption___background;
+      width: $_ui_contentflow__flow__item__caption___width;
     }
   }
 }
@@ -53,31 +167,31 @@
 /* ----- styling of items ----- */
 
 * html .ui-contentflow .flow .item .caption {
-  background-image: none;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src="contentflow/images/1x1_0.5_black.png");
+  background-image: $__html__ui_contentflow__flow__item__caption___background_image;
+  filter: $__html__ui_contentflow__flow__item__caption___filter;
 }
 
 .ui-contentflow {
   .flow .item {
     .caption a {
-      text-decoration: none;
-      color: white;
-      font-style: italic;
-      font-size: 0.8em;
+      text-decoration: $_ui_contentflow__flow__item__caption_a___text_decoration;
+      color: $_ui_contentflow__flow__item__caption_a___color;
+      font-style: $_ui_contentflow__flow__item__caption_a___font_style;
+      font-size: $_ui_contentflow__flow__item__caption_a___font_size;
 
       &:link, &:visited, &:active {
-        text-decoration: none;
-        color: white;
-        font-style: italic;
-        font-size: 0.8em;
+        text-decoration: $_ui_contentflow__flow__item__caption_a_link___ui_contentflow__flow__item__caption_a_visited___ui_contentflow__flow__item__caption_a_active___text_decoration;
+        color: $_ui_contentflow__flow__item__caption_a_link___ui_contentflow__flow__item__caption_a_visited___ui_contentflow__flow__item__caption_a_active___color;
+        font-style: $_ui_contentflow__flow__item__caption_a_link___ui_contentflow__flow__item__caption_a_visited___ui_contentflow__flow__item__caption_a_active___font_style;
+        font-size: $_ui_contentflow__flow__item__caption_a_link___ui_contentflow__flow__item__caption_a_visited___ui_contentflow__flow__item__caption_a_active___font_size;
       }
 
       &:hover {
-        text-decoration: none;
-        color: white;
-        font-style: italic;
-        font-size: 0.8em;
-        text-decoration: underline;
+        text-decoration: $_ui_contentflow__flow__item__caption_a_hover___text_decoration;
+        color: $_ui_contentflow__flow__item__caption_a_hover___color;
+        font-style: $_ui_contentflow__flow__item__caption_a_hover___font_style;
+        font-size: $_ui_contentflow__flow__item__caption_a_hover___font_size;
+        text-decoration: $_ui_contentflow__flow__item__caption_a_hover___text_decoration;
       }
     }
 
@@ -89,19 +203,19 @@
   }
 
   .scrollbar {
-    width: 50%;
-    margin: 0px auto;
-    margin-top: 10px;
-    height: 16px;
-    background: url("contentflow/images/scrollbar_white.png") left center repeat-x;
-    position: relative;
-    overflow: visible;
+    width: $_ui_contentflow__scrollbar___width;
+    margin: $_ui_contentflow__scrollbar___margin;
+    margin-top: $_ui_contentflow__scrollbar___margin_top;
+    height: $_ui_contentflow__scrollbar___height;
+    background: $_ui_contentflow__scrollbar___background;
+    position: $_ui_contentflow__scrollbar___position;
+    overflow: $_ui_contentflow__scrollbar___overflow;
 
     .slider {
-      width: 16px;
-      height: 16px;
-      background: url("contentflow/images/scrollbar_white.png") center center no-repeat;
-      cursor: move;
+      width: $_ui_contentflow__scrollbar__slider___width;
+      height: $_ui_contentflow__scrollbar__slider___height;
+      background: $_ui_contentflow__scrollbar__slider___background;
+      cursor: $_ui_contentflow__scrollbar__slider___cursor;
     }
   }
 }
@@ -111,63 +225,63 @@
 /* only for IE <= 6 and a alphatransparent slider image */
 
 * html .ui-contentflow .scrollbar .slider {
-  background-image: none;
+  background-image: $__html__ui_contentflow__scrollbar__slider___background_image;
 
   .virtualSlider {
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src="contentflow/images/scrollbar_white.png");
+    filter: $__html__ui_contentflow__scrollbar__slider__virtualSlider___filter;
   }
 }
 
 .ui-contentflow {
   .scrollbar .slider .position {
-    top: 120%;
-    font-size: 16px;
-    font-weight: bold;
-    color: silver;
+    top: $_ui_contentflow__scrollbar__slider__position___top;
+    font-size: $_ui_contentflow__scrollbar__slider__position___font_size;
+    font-weight: $_ui_contentflow__scrollbar__slider__position___font_weight;
+    color: $_ui_contentflow__scrollbar__slider__position___color;
   }
 
   .globalCaption {
-    text-align: center;
-    font-weight: bold;
-    color: white;
-    font-size: 14px;
-    height: 20px;
-    margin: 2em auto;
+    text-align: $_ui_contentflow__globalCaption___text_align;
+    font-weight: $_ui_contentflow__globalCaption___font_weight;
+    color: $_ui_contentflow__globalCaption___color;
+    font-size: $_ui_contentflow__globalCaption___font_size;
+    height: $_ui_contentflow__globalCaption___height;
+    margin: $_ui_contentflow__globalCaption___margin;
 
     .caption a {
-      text-decoration: none;
-      color: white;
-      font-style: italic;
-      font-size: 0.8em;
+      text-decoration: $_ui_contentflow__globalCaption__caption_a___text_decoration;
+      color: $_ui_contentflow__globalCaption__caption_a___color;
+      font-style: $_ui_contentflow__globalCaption__caption_a___font_style;
+      font-size: $_ui_contentflow__globalCaption__caption_a___font_size;
 
       &:link, &:visited, &:active {
-        text-decoration: none;
-        color: white;
-        font-style: italic;
-        font-size: 0.8em;
+        text-decoration: $_ui_contentflow__globalCaption__caption_a_link___ui_contentflow__globalCaption__caption_a_visited___ui_contentflow__globalCaption__caption_a_active___text_decoration;
+        color: $_ui_contentflow__globalCaption__caption_a_link___ui_contentflow__globalCaption__caption_a_visited___ui_contentflow__globalCaption__caption_a_active___color;
+        font-style: $_ui_contentflow__globalCaption__caption_a_link___ui_contentflow__globalCaption__caption_a_visited___ui_contentflow__globalCaption__caption_a_active___font_style;
+        font-size: $_ui_contentflow__globalCaption__caption_a_link___ui_contentflow__globalCaption__caption_a_visited___ui_contentflow__globalCaption__caption_a_active___font_size;
       }
 
       &:hover {
-        text-decoration: none;
-        color: white;
-        font-style: italic;
-        font-size: 0.8em;
-        text-decoration: underline;
+        text-decoration: $_ui_contentflow__globalCaption__caption_a_hover___text_decoration;
+        color: $_ui_contentflow__globalCaption__caption_a_hover___color;
+        font-style: $_ui_contentflow__globalCaption__caption_a_hover___font_style;
+        font-size: $_ui_contentflow__globalCaption__caption_a_hover___font_size;
+        text-decoration: $_ui_contentflow__globalCaption__caption_a_hover___text_decoration;
       }
     }
   }
 
   .loadIndicator {
-    width: 100%;
-    height: 100%;
-    top: 0px;
-    left: 0px;
-    background: black;
+    width: $_ui_contentflow__loadIndicator___width;
+    height: $_ui_contentflow__loadIndicator___height;
+    top: $_ui_contentflow__loadIndicator___top;
+    left: $_ui_contentflow__loadIndicator___left;
+    background: $_ui_contentflow__loadIndicator___background;
 
     .indicator {
-      background: url("contentflow/images/loader.gif") center center no-repeat;
-      width: 100%;
-      height: 100%;
+      background: $_ui_contentflow__loadIndicator__indicator___background;
+      width: $_ui_contentflow__loadIndicator__indicator___width;
+      height: $_ui_contentflow__loadIndicator__indicator___height;
     }
   }
 }
@@ -177,7 +291,7 @@
 /* ----- load indicator ----- */
 
 * html .ui-contentflow .loadIndicator .indicator {
-  height: 100px;
+  height: $__html__ui_contentflow__loadIndicator__indicator___height;
 }
 
 /* ================================= */
@@ -190,34 +304,34 @@
  */
 
 .ui-contentflow {
-  position: relative;
+  position: $_ui_contentflow___position;
 
   /* needed so overlay dimensions are constrained to the ui-contentflow */
-  overflow: hidden;
+  overflow: $_ui_contentflow___overflow;
 
   * {
-    margin: 0px;
-    padding: 0px;
+    margin: $_ui_contentflow_____margin;
+    padding: $_ui_contentflow_____padding;
 
     /*border: none;*/
   }
 
   img {
-    -ms-interpolation-mode: bicubic;
+    -ms-interpolation-mode: $_ui_contentflow_img____ms_interpolation_mode;
   }
 
   .mouseoverCheckElement {
-    position: absolute;
-    width: 0px;
-    height: 0px;
-    left: 0px;
+    position: $_ui_contentflow__mouseoverCheckElement___position;
+    width: $_ui_contentflow__mouseoverCheckElement___width;
+    height: $_ui_contentflow__mouseoverCheckElement___height;
+    left: $_ui_contentflow__mouseoverCheckElement___left;
 
     /*display: none;*/
-    visibility: hidden;
+    visibility: $_ui_contentflow__mouseoverCheckElement___visibility;
   }
 
   &:hover .mouseoverCheckElement {
-    left: 1px;
+    left: $_ui_contentflow_hover__mouseoverCheckElement___left;
 
     /*width: 1px;*/
     /*left: -1px;*/
@@ -225,62 +339,62 @@
   }
 
   .flow {
-    position: relative;
+    position: $_ui_contentflow__flow___position;
 
     /* needed  so that items can be positioned relative to flow*/
-    z-index: 0;
+    z-index: $_ui_contentflow__flow___z_index;
 
     /* need so every item has a z-index relative to the flow-box */
-    visibility: hidden;
+    visibility: $_ui_contentflow__flow___visibility;
 
     /* needed so that content is hidden while loading */
-    width: 100%;
+    width: $_ui_contentflow__flow___width;
 
     /* needed for IE6 */
-    margin: 0 auto;
+    margin: $_ui_contentflow__flow___margin;
 
     &.hidden {
-      visibility: hidden;
+      visibility: $_ui_contentflow__flow_hidden___visibility;
     }
 
     .item {
-      position: absolute;
+      position: $_ui_contentflow__flow__item___position;
 
       /* needed */
-      visibility: hidden;
-      top: 0px;
-      left: 0px;
+      visibility: $_ui_contentflow__flow__item___visibility;
+      top: $_ui_contentflow__flow__item___top;
+      left: $_ui_contentflow__flow__item___left;
 
       &.active {}
 
       .content {
-        display: block;
+        display: $_ui_contentflow__flow__item__content___display;
       }
 
       div.content {
-        width: 100%;
-        height: 100%;
+        width: $_ui_contentflow__flow__item_div_content___width;
+        height: $_ui_contentflow__flow__item_div_content___height;
       }
 
       .label {
-        display: none;
+        display: $_ui_contentflow__flow__item__label___display;
       }
 
       .reflection {
-        display: block;
+        display: $_ui_contentflow__flow__item__reflection___display;
       }
 
       canvas.reflection {
-        margin-top: -1px;
+        margin-top: $_ui_contentflow__flow__item_canvas_reflection___margin_top;
 
         /* for FF */
       }
 
       .caption {
-        position: absolute;
+        position: $_ui_contentflow__flow__item__caption___position;
 
         /* needed */
-        display: none;
+        display: $_ui_contentflow__flow__item__caption___display;
 
         /* needed to hide it on inactive items */
       }
@@ -294,16 +408,16 @@
   }
 
   .scrollbar {
-    position: relative;
+    position: $_ui_contentflow__scrollbar___position;
 
     /* needed for z-index */
-    z-index: 1;
+    z-index: $_ui_contentflow__scrollbar___z_index;
 
     /* set above flow */
-    visibility: hidden;
+    visibility: $_ui_contentflow__scrollbar___visibility;
 
     .slider {
-      position: absolute;
+      position: $_ui_contentflow__scrollbar__slider___position;
 
       /* needed */
     }
@@ -313,31 +427,31 @@
 /* ----- scrollbar ----- */
 
 * html .ui-contentflow .scrollbar .slider .virtualSlider {
-  height: 100%;
+  height: $__html__ui_contentflow__scrollbar__slider__virtualSlider___height;
 }
 
 .ui-contentflow {
   .scrollbar .slider .position {
-    position: absolute;
+    position: $_ui_contentflow__scrollbar__slider__position___position;
 
     /* needed */
-    text-align: center;
+    text-align: $_ui_contentflow__scrollbar__slider__position___text_align;
   }
 
   .globalCaption {
-    position: relative;
+    position: $_ui_contentflow__globalCaption___position;
 
     /* needed for z-index */
-    z-index: 1;
+    z-index: $_ui_contentflow__globalCaption___z_index;
 
     /* set above flow */
   }
 
   .loadIndicator {
-    position: absolute;
+    position: $_ui_contentflow__loadIndicator___position;
 
     /* needed */
-    z-index: 65000;
+    z-index: $_ui_contentflow__loadIndicator___z_index;
 
     /* set above everything */
   }

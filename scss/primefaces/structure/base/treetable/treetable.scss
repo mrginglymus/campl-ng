@@ -1,171 +1,253 @@
+$_ui_treetable_table___border_collapse: collapse !default;
+$_ui_treetable_table___width: 100% !default;
+$_ui_treetable_table___table_layout: fixed !default;
+$_ui_treetable__ui_treetable_header___ui_treetable__ui_treetable_footer___text_align: center !default;
+$_ui_treetable__ui_treetable_header___ui_treetable__ui_treetable_footer___padding: 4px 10px !default;
+$_ui_treetable__ui_treetable_header___border_bottom: 0px none !default;
+$_ui_treetable__ui_treetable_footer___border_top: 0px none !default;
+$_ui_treetable_th___ui_treetable_tfoot_td___text_align: center !default;
+$_ui_treetable_thead_th___ui_treetable_tbody_td___ui_treetable_tfoot_td___padding: 4px 10px !default;
+$_ui_treetable_thead_th___ui_treetable_tbody_td___ui_treetable_tfoot_td___overflow: hidden !default;
+$_ui_treetable_thead_th___ui_treetable_tbody_td___ui_treetable_tfoot_td___white_space: nowrap !default;
+$_ui_treetable_thead_th___ui_treetable_tbody_td___ui_treetable_tfoot_td___border_width: 1px !default;
+$_ui_treetable_thead_th___ui_treetable_tbody_td___ui_treetable_tfoot_td___border_style: solid !default;
+$_ui_treetable_tbody_td___border_color: inherit !default;
+$_ui_treetable__ui_treetable_toggler___float: left !default;
+$_ui_treetable__ui_treetable_toggler___margin_top: -2px !default;
+$_ui_treetable__ui_treetable_toggler___cursor: pointer !default;
+$_ui_treetable__ui_treetable_data_tr_ui_state_highlight___ui_treetable__ui_treetable_data_tr_ui_state_hover___cursor: pointer !default;
+$_ui_treetable_scrollable_body___overflow: auto !default;
+$_ui_treetable_scrollable_header___ui_treetable_scrollable_footer___overflow: hidden !default;
+$_ui_treetable_scrollable_header___ui_treetable_scrollable_footer___border: 0 none !default;
+$_ui_treetable_ui_treetable_scrollable_table___table_layout: fixed !default;
+$_ui_treetable_scrollable__ui_treetable_scrollable_header___ui_treetable_scrollable__ui_treetable_scrollable_footer___position: relative !default;
+$_ui_treetable__ui_treetable_data_tr_ui_state_hover___border_color: inherit !default;
+$_ui_treetable__ui_treetable_data_tr_ui_state_hover___font_weight: inherit !default;
+$_ui_treetable_resizable___padding_bottom: 1px !default;
+$_ui_treetable_resizable___overflow: auto !default;
+$_ui_treetable_ui_treetable_resizable_table___table_layout: fixed !default;
+$_ui_treetable__ui_column_resizer___width: 8px !default;
+$_ui_treetable__ui_column_resizer___height: 20px !default;
+$_ui_treetable__ui_column_resizer___padding: 0px !default;
+$_ui_treetable__ui_column_resizer___cursor: col-resize !default;
+$_ui_treetable__ui_column_resizer___background_image: url("spacer/dot_clear.gif") !default;
+$_ui_treetable__ui_column_resizer___margin: -4px -10px -4px 0px !default;
+$_ui_treetable__ui_column_resizer___float: right !default;
+$_ui_treetable__ui_column_resizer_helper___width: 1px !default;
+$_ui_treetable__ui_column_resizer_helper___position: absolute !default;
+$_ui_treetable__ui_column_resizer_helper___z_index: 10 !default;
+$_ui_treetable__ui_column_resizer_helper___display: none !default;
+$_ui_treetable__ui_chkbox___margin_right: 3px !default;
+$_ui_treetable__ui_treetable_indent___width: 16px !default;
+$_ui_treetable__ui_treetable_indent___height: 16px !default;
+$_ui_treetable__ui_treetable_indent___float: left !default;
+$_ui_treetable_scrollable_body___webkit_scrollbar____webkit_appearance: none !default;
+$_ui_treetable_scrollable_body___webkit_scrollbar___width: 15px !default;
+$_ui_treetable_scrollable_body___webkit_scrollbar___background_color: transparent !default;
+$_ui_treetable_scrollable_body___webkit_scrollbar_thumb___border_radius: 8px !default;
+$_ui_treetable_scrollable_body___webkit_scrollbar_thumb___border: 1px solid white !default;
+$_ui_treetable_scrollable_body___webkit_scrollbar_thumb___background_color: rgba(194, 194, 194, 0.5) !default;
+$_ui_treetable__ui_sortable_column___cursor: pointer !default;
+$_ui_treetable__ui_sortable_column_icon___display: inline-block !default;
+$_ui_treetable__ui_sortable_column_icon___margin: -3px 0px -3px 2px !default;
+$_ui_treetable__ui_chkbox_ui_selection___display: none !default;
+$_ui_treetable__ui_treetable_selectable_node__ui_chkbox_ui_selection___ui_treetable_ui_treetable_checkbox_all__ui_chkbox_ui_selection___display: inline-block !default;
+$_ui_treetable_scrollable_theadclone___height: 0px !default;
+$_ui_treetable_scrollable_theadclone_tr___height: 0px !default;
+$_ui_treetable_scrollable_theadclone_th_ui_state_default___height: 0px !default;
+$_ui_treetable_scrollable_theadclone_th_ui_state_default___border_bottom_width: 0px !default;
+$_ui_treetable_scrollable_theadclone_th_ui_state_default___border_top_width: 0px !default;
+$_ui_treetable_scrollable_theadclone_th_ui_state_default___padding_top: 0px !default;
+$_ui_treetable_scrollable_theadclone_th_ui_state_default___padding_bottom: 0px !default;
+$_ui_treetable_scrollable_theadclone_th_ui_state_default___outline: 0 none !default;
+$_ui_treetable_scrollable_theadclone_th_span___display: block !default;
+$_ui_treetable_scrollable_theadclone_th_span___height: 0px !default;
+$_ui_treetable_reflow__ui_treetable_data_td__ui_column_title___display: none !default;
+$_ui_treetable_reflow_thead_th___ui_treetable_reflow_tfoot_td___display: none !default;
+$_ui_treetable_reflow__ui_treetable_data_td___text_align: left !default;
+$_ui_treetable_reflow__ui_treetable_data_td___display: block !default;
+$_ui_treetable_reflow__ui_treetable_data_td___border: 0px none !default;
+$_ui_treetable_reflow__ui_treetable_data_td___width: 100% !default;
+$_ui_treetable_reflow__ui_treetable_data_td____webkit_box_sizing: border-box !default;
+$_ui_treetable_reflow__ui_treetable_data_td____moz_box_sizing: border-box !default;
+$_ui_treetable_reflow__ui_treetable_data_td___box_sizing: border-box !default;
+$_ui_treetable_reflow__ui_treetable_data_td___float: left !default;
+$_ui_treetable_reflow__ui_treetable_data_td___clear: left !default;
+$_ui_treetable_reflow__ui_treetable_data_ui_widget_content___border: 0px none !default;
+$_ui_treetable_reflow__ui_treetable_data_tr_ui_widget_content___border_left: 0px none !default;
+$_ui_treetable_reflow__ui_treetable_data_tr_ui_widget_content___border_right: 0px none !default;
+$_ui_treetable_reflow__ui_treetable_data_td__ui_column_title___padding: .4em !default;
+$_ui_treetable_reflow__ui_treetable_data_td__ui_column_title___min_width: 30% !default;
+$_ui_treetable_reflow__ui_treetable_data_td__ui_column_title___display: inline-block !default;
+$_ui_treetable_reflow__ui_treetable_data_td__ui_column_title___margin: -.4em 1em -.4em -.4em !default;
 .ui-treetable {
   table {
-    border-collapse: collapse;
-    width: 100%;
-    table-layout: fixed;
+    border-collapse: $_ui_treetable_table___border_collapse;
+    width: $_ui_treetable_table___width;
+    table-layout: $_ui_treetable_table___table_layout;
   }
 
   .ui-treetable-header, .ui-treetable-footer {
-    text-align: center;
-    padding: 4px 10px;
+    text-align: $_ui_treetable__ui_treetable_header___ui_treetable__ui_treetable_footer___text_align;
+    padding: $_ui_treetable__ui_treetable_header___ui_treetable__ui_treetable_footer___padding;
   }
 
   .ui-treetable-header {
-    border-bottom: 0px none;
+    border-bottom: $_ui_treetable__ui_treetable_header___border_bottom;
   }
 
   .ui-treetable-footer {
-    border-top: 0px none;
+    border-top: $_ui_treetable__ui_treetable_footer___border_top;
   }
 
   th, tfoot td {
-    text-align: center;
+    text-align: $_ui_treetable_th___ui_treetable_tfoot_td___text_align;
   }
 
   thead th, tbody td, tfoot td {
-    padding: 4px 10px;
-    overflow: hidden;
-    white-space: nowrap;
-    border-width: 1px;
-    border-style: solid;
+    padding: $_ui_treetable_thead_th___ui_treetable_tbody_td___ui_treetable_tfoot_td___padding;
+    overflow: $_ui_treetable_thead_th___ui_treetable_tbody_td___ui_treetable_tfoot_td___overflow;
+    white-space: $_ui_treetable_thead_th___ui_treetable_tbody_td___ui_treetable_tfoot_td___white_space;
+    border-width: $_ui_treetable_thead_th___ui_treetable_tbody_td___ui_treetable_tfoot_td___border_width;
+    border-style: $_ui_treetable_thead_th___ui_treetable_tbody_td___ui_treetable_tfoot_td___border_style;
   }
 
   tbody td {
-    border-color: inherit;
+    border-color: $_ui_treetable_tbody_td___border_color;
   }
 
   .ui-treetable-toggler {
-    float: left;
-    margin-top: -2px;
-    cursor: pointer;
+    float: $_ui_treetable__ui_treetable_toggler___float;
+    margin-top: $_ui_treetable__ui_treetable_toggler___margin_top;
+    cursor: $_ui_treetable__ui_treetable_toggler___cursor;
   }
 
   .ui-treetable-data tr {
     &.ui-state-highlight, &.ui-state-hover {
-      cursor: pointer;
+      cursor: $_ui_treetable__ui_treetable_data_tr_ui_state_highlight___ui_treetable__ui_treetable_data_tr_ui_state_hover___cursor;
     }
   }
 }
 
 .ui-treetable-scrollable-body {
-  overflow: auto;
+  overflow: $_ui_treetable_scrollable_body___overflow;
 }
 
 .ui-treetable-scrollable-header, .ui-treetable-scrollable-footer {
-  overflow: hidden;
-  border: 0 none;
+  overflow: $_ui_treetable_scrollable_header___ui_treetable_scrollable_footer___overflow;
+  border: $_ui_treetable_scrollable_header___ui_treetable_scrollable_footer___border;
 }
 
 .ui-treetable.ui-treetable-scrollable table {
-  table-layout: fixed;
+  table-layout: $_ui_treetable_ui_treetable_scrollable_table___table_layout;
 }
 
 .ui-treetable-scrollable {
   .ui-treetable-scrollable-header, .ui-treetable-scrollable-footer {
-    position: relative;
+    position: $_ui_treetable_scrollable__ui_treetable_scrollable_header___ui_treetable_scrollable__ui_treetable_scrollable_footer___position;
   }
 }
 
 .ui-treetable .ui-treetable-data tr.ui-state-hover {
-  border-color: inherit;
-  font-weight: inherit;
+  border-color: $_ui_treetable__ui_treetable_data_tr_ui_state_hover___border_color;
+  font-weight: $_ui_treetable__ui_treetable_data_tr_ui_state_hover___font_weight;
 }
 
 /** Resizable Columns **/
 
 .ui-treetable-resizable {
-  padding-bottom: 1px;
+  padding-bottom: $_ui_treetable_resizable___padding_bottom;
 
   /*fix for webkit overlow*/
-  overflow: auto;
+  overflow: $_ui_treetable_resizable___overflow;
 }
 
 .ui-treetable {
   &.ui-treetable-resizable table {
-    table-layout: fixed;
+    table-layout: $_ui_treetable_ui_treetable_resizable_table___table_layout;
   }
 
   .ui-column-resizer {
-    width: 8px;
-    height: 20px;
-    padding: 0px;
-    cursor: col-resize;
-    background-image: url("spacer/dot_clear.gif");
-    margin: -4px -10px -4px 0px;
-    float: right;
+    width: $_ui_treetable__ui_column_resizer___width;
+    height: $_ui_treetable__ui_column_resizer___height;
+    padding: $_ui_treetable__ui_column_resizer___padding;
+    cursor: $_ui_treetable__ui_column_resizer___cursor;
+    background-image: $_ui_treetable__ui_column_resizer___background_image;
+    margin: $_ui_treetable__ui_column_resizer___margin;
+    float: $_ui_treetable__ui_column_resizer___float;
   }
 
   .ui-column-resizer-helper {
-    width: 1px;
-    position: absolute;
-    z-index: 10;
-    display: none;
+    width: $_ui_treetable__ui_column_resizer_helper___width;
+    position: $_ui_treetable__ui_column_resizer_helper___position;
+    z-index: $_ui_treetable__ui_column_resizer_helper___z_index;
+    display: $_ui_treetable__ui_column_resizer_helper___display;
   }
 
   .ui-chkbox {
-    margin-right: 3px;
+    margin-right: $_ui_treetable__ui_chkbox___margin_right;
   }
 
   .ui-treetable-indent {
-    width: 16px;
-    height: 16px;
-    float: left;
+    width: $_ui_treetable__ui_treetable_indent___width;
+    height: $_ui_treetable__ui_treetable_indent___height;
+    float: $_ui_treetable__ui_treetable_indent___float;
   }
 }
 
 .ui-treetable-scrollable-body {
   &::-webkit-scrollbar {
-    -webkit-appearance: none;
-    width: 15px;
-    background-color: transparent;
+    -webkit-appearance: $_ui_treetable_scrollable_body___webkit_scrollbar____webkit_appearance;
+    width: $_ui_treetable_scrollable_body___webkit_scrollbar___width;
+    background-color: $_ui_treetable_scrollable_body___webkit_scrollbar___background_color;
   }
 
   &::-webkit-scrollbar-thumb {
-    border-radius: 8px;
-    border: 1px solid white;
-    background-color: rgba(194, 194, 194, 0.5);
+    border-radius: $_ui_treetable_scrollable_body___webkit_scrollbar_thumb___border_radius;
+    border: $_ui_treetable_scrollable_body___webkit_scrollbar_thumb___border;
+    background-color: $_ui_treetable_scrollable_body___webkit_scrollbar_thumb___background_color;
   }
 }
 
 .ui-treetable {
   .ui-sortable-column {
-    cursor: pointer;
+    cursor: $_ui_treetable__ui_sortable_column___cursor;
   }
 
   .ui-sortable-column-icon {
-    display: inline-block;
-    margin: -3px 0px -3px 2px;
+    display: $_ui_treetable__ui_sortable_column_icon___display;
+    margin: $_ui_treetable__ui_sortable_column_icon___margin;
   }
 
   .ui-chkbox.ui-selection {
-    display: none;
+    display: $_ui_treetable__ui_chkbox_ui_selection___display;
   }
 
   .ui-treetable-selectable-node .ui-chkbox.ui-selection, &.ui-treetable-checkbox-all .ui-chkbox.ui-selection {
-    display: inline-block;
+    display: $_ui_treetable__ui_treetable_selectable_node__ui_chkbox_ui_selection___ui_treetable_ui_treetable_checkbox_all__ui_chkbox_ui_selection___display;
   }
 }
 
 .ui-treetable-scrollable-theadclone {
-  height: 0px;
+  height: $_ui_treetable_scrollable_theadclone___height;
 
   tr {
-    height: 0px;
+    height: $_ui_treetable_scrollable_theadclone_tr___height;
   }
 
   th {
     &.ui-state-default {
-      height: 0px;
-      border-bottom-width: 0px;
-      border-top-width: 0px;
-      padding-top: 0px;
-      padding-bottom: 0px;
-      outline: 0 none;
+      height: $_ui_treetable_scrollable_theadclone_th_ui_state_default___height;
+      border-bottom-width: $_ui_treetable_scrollable_theadclone_th_ui_state_default___border_bottom_width;
+      border-top-width: $_ui_treetable_scrollable_theadclone_th_ui_state_default___border_top_width;
+      padding-top: $_ui_treetable_scrollable_theadclone_th_ui_state_default___padding_top;
+      padding-bottom: $_ui_treetable_scrollable_theadclone_th_ui_state_default___padding_bottom;
+      outline: $_ui_treetable_scrollable_theadclone_th_ui_state_default___outline;
     }
 
     span {
-      display: block;
-      height: 0px;
+      display: $_ui_treetable_scrollable_theadclone_th_span___display;
+      height: $_ui_treetable_scrollable_theadclone_th_span___height;
     }
   }
 }
@@ -173,42 +255,42 @@
 /** Reflow **/
 
 .ui-treetable-reflow .ui-treetable-data td .ui-column-title {
-  display: none;
+  display: $_ui_treetable_reflow__ui_treetable_data_td__ui_column_title___display;
 }
 
 @media (max-width: 640px) {
   .ui-treetable-reflow {
     thead th, tfoot td {
-      display: none;
+      display: $_ui_treetable_reflow_thead_th___ui_treetable_reflow_tfoot_td___display;
     }
 
     .ui-treetable-data {
       td {
-        text-align: left;
-        display: block;
-        border: 0px none;
-        width: 100%;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        float: left;
-        clear: left;
+        text-align: $_ui_treetable_reflow__ui_treetable_data_td___text_align;
+        display: $_ui_treetable_reflow__ui_treetable_data_td___display;
+        border: $_ui_treetable_reflow__ui_treetable_data_td___border;
+        width: $_ui_treetable_reflow__ui_treetable_data_td___width;
+        -webkit-box-sizing: $_ui_treetable_reflow__ui_treetable_data_td____webkit_box_sizing;
+        -moz-box-sizing: $_ui_treetable_reflow__ui_treetable_data_td____moz_box_sizing;
+        box-sizing: $_ui_treetable_reflow__ui_treetable_data_td___box_sizing;
+        float: $_ui_treetable_reflow__ui_treetable_data_td___float;
+        clear: $_ui_treetable_reflow__ui_treetable_data_td___clear;
       }
 
       &.ui-widget-content {
-        border: 0px none;
+        border: $_ui_treetable_reflow__ui_treetable_data_ui_widget_content___border;
       }
 
       tr.ui-widget-content {
-        border-left: 0px none;
-        border-right: 0px none;
+        border-left: $_ui_treetable_reflow__ui_treetable_data_tr_ui_widget_content___border_left;
+        border-right: $_ui_treetable_reflow__ui_treetable_data_tr_ui_widget_content___border_right;
       }
 
       td .ui-column-title {
-        padding: .4em;
-        min-width: 30%;
-        display: inline-block;
-        margin: -.4em 1em -.4em -.4em;
+        padding: $_ui_treetable_reflow__ui_treetable_data_td__ui_column_title___padding;
+        min-width: $_ui_treetable_reflow__ui_treetable_data_td__ui_column_title___min_width;
+        display: $_ui_treetable_reflow__ui_treetable_data_td__ui_column_title___display;
+        margin: $_ui_treetable_reflow__ui_treetable_data_td__ui_column_title___margin;
       }
     }
   }

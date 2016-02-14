@@ -1,3 +1,330 @@
+$_fc___direction: ltr !default;
+$_fc___text_align: left !default;
+$_fc_rtl___text_align: right !default;
+$body__fc___font_size: 1em !default;
+$_fc_unthemed_th___fc_unthemed_td___fc_unthemed_hr___fc_unthemed_thead___fc_unthemed_tbody___fc_unthemed__fc_row___border_color: #ddd !default;
+$_fc_unthemed__fc_popover___border_color: #ddd !default;
+$_fc_unthemed__fc_popover___background_color: #fff !default;
+$_fc_unthemed_hr___background: #eee !default;
+$_fc_unthemed__fc_popover__fc_header___background: #eee !default;
+$_fc_unthemed__fc_popover__fc_header__fc_close___color: #666 !default;
+$_fc_unthemed__fc_today___background: #fcf8e3 !default;
+$_fc_highlight___background: #bce8f1 !default;
+$_fc_highlight___opacity: .3 !default;
+$_fc_highlight___filter: alpha(opacity=30) !default;
+$_fc_bgevent___background: #8fdf82 !default;
+$_fc_bgevent___opacity: .3 !default;
+$_fc_bgevent___filter: alpha(opacity=30) !default;
+$_fc_nonbusiness___background: #ccc !default;
+$_fc_icon___display: inline-block !default;
+$_fc_icon___font_size: 2em !default;
+$_fc_icon___line_height: .5em !default;
+$_fc_icon___height: .5em !default;
+$_fc_icon___font_family: "Courier New", Courier, monospace !default;
+$_fc_icon_left_single_arrow_after___content: "\02039" !default;
+$_fc_icon_left_single_arrow_after___font_weight: bold !default;
+$_fc_icon_right_single_arrow_after___content: "\0203A" !default;
+$_fc_icon_right_single_arrow_after___font_weight: bold !default;
+$_fc_icon_left_double_arrow_after___content: "\000AB" !default;
+$_fc_icon_right_double_arrow_after___content: "\000BB" !default;
+$_fc_icon_x_after___content: "\000D7" !default;
+$_fc_button____moz_box_sizing: border-box !default;
+$_fc_button____webkit_box_sizing: border-box !default;
+$_fc_button___box_sizing: border-box !default;
+$_fc_button___margin: 0 !default;
+$_fc_button___height: 2.1em !default;
+$_fc_button___padding: 0 .6em !default;
+$_fc_button___font_size: 1em !default;
+$_fc_button___white_space: nowrap !default;
+$_fc_button___cursor: pointer !default;
+$_fc_button___moz_focus_inner___margin: 0 !default;
+$_fc_button___moz_focus_inner___padding: 0 !default;
+$_fc_state_default___border: 1px solid !default;
+$_fc_state_default_fc_corner_left___border_top_left_radius: 4px !default;
+$_fc_state_default_fc_corner_left___border_bottom_left_radius: 4px !default;
+$_fc_state_default_fc_corner_right___border_top_right_radius: 4px !default;
+$_fc_state_default_fc_corner_right___border_bottom_right_radius: 4px !default;
+$_fc_button__fc_icon___position: relative !default;
+$_fc_button__fc_icon___top: .05em !default;
+$_fc_button__fc_icon___margin: 0 .1em !default;
+$_fc_state_default___background_color: #f5f5f5 !default;
+$_fc_state_default___background_image: -moz-linear-gradient(top, #ffffff, #e6e6e6) !default;
+$_fc_state_default___background_image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6)) !default;
+$_fc_state_default___background_image: -webkit-linear-gradient(top, #ffffff, #e6e6e6) !default;
+$_fc_state_default___background_image: -o-linear-gradient(top, #ffffff, #e6e6e6) !default;
+$_fc_state_default___background_image: linear-gradient(to bottom, #ffffff, #e6e6e6) !default;
+$_fc_state_default___background_repeat: repeat-x !default;
+$_fc_state_default___border_color: #e6e6e6 #e6e6e6 #bfbfbf !default;
+$_fc_state_default___border_color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25) !default;
+$_fc_state_default___color: #333 !default;
+$_fc_state_default___text_shadow: 0 1px 1px rgba(255, 255, 255, 0.75) !default;
+$_fc_state_default___box_shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05) !default;
+$_fc_state_hover___fc_state_down___fc_state_active___fc_state_disabled___color: #333333 !default;
+$_fc_state_hover___fc_state_down___fc_state_active___fc_state_disabled___background_color: #e6e6e6 !default;
+$_fc_state_hover___color: #333333 !default;
+$_fc_state_hover___text_decoration: none !default;
+$_fc_state_hover___background_position: 0 -15px !default;
+$_fc_state_hover____webkit_transition: background-position 0.1s linear !default;
+$_fc_state_hover____moz_transition: background-position 0.1s linear !default;
+$_fc_state_hover____o_transition: background-position 0.1s linear !default;
+$_fc_state_hover___transition: background-position 0.1s linear !default;
+$_fc_state_down___fc_state_active___background_color: #cccccc !default;
+$_fc_state_down___fc_state_active___background_image: none !default;
+$_fc_state_down___fc_state_active___box_shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05) !default;
+$_fc_state_disabled___cursor: default !default;
+$_fc_state_disabled___background_image: none !default;
+$_fc_state_disabled___opacity: 0.65 !default;
+$_fc_state_disabled___filter: alpha(opacity=65) !default;
+$_fc_state_disabled___box_shadow: none !default;
+$_fc_button_group___display: inline-block !default;
+$_fc__fc_button_group_______float: left !default;
+$_fc__fc_button_group_______margin: 0 0 0 -1px !default;
+$_fc__fc_button_group____first_child___margin_left: 0 !default;
+$_fc_popover___position: absolute !default;
+$_fc_popover___box_shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !default;
+$_fc_popover__fc_header___padding: 2px 4px !default;
+$_fc_popover__fc_header__fc_title___margin: 0 2px !default;
+$_fc_popover__fc_header__fc_close___cursor: pointer !default;
+$_fc_ltr__fc_popover__fc_header__fc_title___float: left !default;
+$_fc_rtl__fc_popover__fc_header__fc_close___float: left !default;
+$_fc_rtl__fc_popover__fc_header__fc_title___float: right !default;
+$_fc_ltr__fc_popover__fc_header__fc_close___float: right !default;
+$_fc_unthemed__fc_popover___border_width: 1px !default;
+$_fc_unthemed__fc_popover___border_style: solid !default;
+$_fc_unthemed__fc_popover__fc_header__fc_close___font_size: 25px !default;
+$_fc_unthemed__fc_popover__fc_header__fc_close___margin_top: 4px !default;
+$_fc_popover____ui_widget_header____ui_widget_content___border_top: 0 !default;
+$_fc_hr___height: 0 !default;
+$_fc_hr___margin: 0 !default;
+$_fc_hr___padding: 0 0 2px !default;
+$_fc_hr___border_style: solid !default;
+$_fc_hr___border_width: 1px 0 !default;
+$_fc_clear___clear: both !default;
+$_fc_bg___fc_bgevent_skeleton___fc_highlight_skeleton___fc_helper_skeleton___position: absolute !default;
+$_fc_bg___fc_bgevent_skeleton___fc_highlight_skeleton___fc_helper_skeleton___top: 0 !default;
+$_fc_bg___fc_bgevent_skeleton___fc_highlight_skeleton___fc_helper_skeleton___left: 0 !default;
+$_fc_bg___fc_bgevent_skeleton___fc_highlight_skeleton___fc_helper_skeleton___right: 0 !default;
+$_fc_bg___bottom: 0 !default;
+$_fc_bg_table___height: 100% !default;
+$_fc_table___width: 100% !default;
+$_fc_table___table_layout: fixed !default;
+$_fc_table___border_collapse: collapse !default;
+$_fc_table___border_spacing: 0 !default;
+$_fc_table___font_size: 1em !default;
+$_fc_th___text_align: center !default;
+$_fc_th___border_style: solid !default;
+$_fc_th___border_width: 1px !default;
+$_fc_th___padding: 0 !default;
+$_fc_th___vertical_align: top !default;
+$_fc_td___border_style: solid !default;
+$_fc_td___border_width: 1px !default;
+$_fc_td___padding: 0 !default;
+$_fc_td___vertical_align: top !default;
+$_fc_td_fc_today___border_style: double !default;
+$_fc__fc_row___border_style: solid !default;
+$_fc__fc_row___border_width: 0 !default;
+$_fc_row___position: relative !default;
+$_fc_row_table___border_left: 0 hidden transparent !default;
+$_fc_row_table___border_right: 0 hidden transparent !default;
+$_fc_row_table___border_bottom: 0 hidden transparent !default;
+$_fc_row_first_child_table___border_top: 0 hidden transparent !default;
+$_fc_row__fc_bg___z_index: 1 !default;
+$_fc_row__fc_bgevent_skeleton___fc_row__fc_highlight_skeleton___bottom: 0 !default;
+$_fc_row__fc_bgevent_skeleton_table___height: 100% !default;
+$_fc_row__fc_highlight_skeleton_table___height: 100% !default;
+$_fc_row__fc_highlight_skeleton_td___border_color: transparent !default;
+$_fc_row__fc_bgevent_skeleton___z_index: 2 !default;
+$_fc_row__fc_bgevent_skeleton_td___border_color: transparent !default;
+$_fc_row__fc_highlight_skeleton___z_index: 3 !default;
+$_fc_row__fc_content_skeleton___position: relative !default;
+$_fc_row__fc_content_skeleton___z_index: 4 !default;
+$_fc_row__fc_content_skeleton___padding_bottom: 2px !default;
+$_fc_row__fc_helper_skeleton___z_index: 5 !default;
+$_fc_row__fc_content_skeleton_td___fc_row__fc_helper_skeleton_td___background: none !default;
+$_fc_row__fc_content_skeleton_td___fc_row__fc_helper_skeleton_td___border_color: transparent !default;
+$_fc_row__fc_content_skeleton_td___fc_row__fc_helper_skeleton_td___border_bottom: 0 !default;
+$_fc_row__fc_content_skeleton_tbody_td___fc_row__fc_helper_skeleton_tbody_td___border_top: 0 !default;
+$_fc_scroller___overflow_y: scroll !default;
+$_fc_scroller___overflow_x: hidden !default;
+$_fc_scroller_______position: relative !default;
+$_fc_scroller_______width: 100% !default;
+$_fc_scroller_______overflow: hidden !default;
+$_fc_event___position: relative !default;
+$_fc_event___display: block !default;
+$_fc_event___font_size: .85em !default;
+$_fc_event___line_height: 1.3 !default;
+$_fc_event___border_radius: 3px !default;
+$_fc_event___border: 1px solid #3a87ad !default;
+$_fc_event___background_color: #3a87ad !default;
+$_fc_event___font_weight: normal !default;
+$_fc_event___color: #fff !default;
+$_fc_event___text_decoration: none !default;
+$_fc_event_hover___color: #fff !default;
+$_fc_event_hover___text_decoration: none !default;
+$_ui_widget__fc_event___color: #fff !default;
+$_ui_widget__fc_event___text_decoration: none !default;
+$_fc_event_href____fc_event_fc_draggable___cursor: pointer !default;
+$_fc_not_allowed___cursor: not-allowed !default;
+$_fc_not_allowed__fc_event___cursor: not-allowed !default;
+$_fc_day_grid_event___margin: 1px 2px 0 !default;
+$_fc_day_grid_event___padding: 0 1px !default;
+$_fc_ltr__fc_day_grid_event_fc_not_start___fc_rtl__fc_day_grid_event_fc_not_end___margin_left: 0 !default;
+$_fc_ltr__fc_day_grid_event_fc_not_start___fc_rtl__fc_day_grid_event_fc_not_end___border_left_width: 0 !default;
+$_fc_ltr__fc_day_grid_event_fc_not_start___fc_rtl__fc_day_grid_event_fc_not_end___padding_left: 1px !default;
+$_fc_ltr__fc_day_grid_event_fc_not_start___fc_rtl__fc_day_grid_event_fc_not_end___border_top_left_radius: 0 !default;
+$_fc_ltr__fc_day_grid_event_fc_not_start___fc_rtl__fc_day_grid_event_fc_not_end___border_bottom_left_radius: 0 !default;
+$_fc_ltr__fc_day_grid_event_fc_not_end___fc_rtl__fc_day_grid_event_fc_not_start___margin_right: 0 !default;
+$_fc_ltr__fc_day_grid_event_fc_not_end___fc_rtl__fc_day_grid_event_fc_not_start___border_right_width: 0 !default;
+$_fc_ltr__fc_day_grid_event_fc_not_end___fc_rtl__fc_day_grid_event_fc_not_start___padding_right: 1px !default;
+$_fc_ltr__fc_day_grid_event_fc_not_end___fc_rtl__fc_day_grid_event_fc_not_start___border_top_right_radius: 0 !default;
+$_fc_ltr__fc_day_grid_event_fc_not_end___fc_rtl__fc_day_grid_event_fc_not_start___border_bottom_right_radius: 0 !default;
+$_fc_day_grid_event____fc_content___white_space: nowrap !default;
+$_fc_day_grid_event____fc_content___overflow: hidden !default;
+$_fc_day_grid_event__fc_time___font_weight: bold !default;
+$_fc_day_grid_event__fc_resizer___position: absolute !default;
+$_fc_day_grid_event__fc_resizer___top: 0 !default;
+$_fc_day_grid_event__fc_resizer___bottom: 0 !default;
+$_fc_day_grid_event__fc_resizer___width: 7px !default;
+$_fc_ltr__fc_day_grid_event__fc_resizer___right: -3px !default;
+$_fc_ltr__fc_day_grid_event__fc_resizer___cursor: e-resize !default;
+$_fc_rtl__fc_day_grid_event__fc_resizer___left: -3px !default;
+$_fc_rtl__fc_day_grid_event__fc_resizer___cursor: w-resize !default;
+$a_fc_more___margin: 1px 3px !default;
+$a_fc_more___font_size: .85em !default;
+$a_fc_more___cursor: pointer !default;
+$a_fc_more___text_decoration: none !default;
+$a_fc_more_hover___text_decoration: underline !default;
+$_fc_limited___display: none !default;
+$_fc_day_grid__fc_row___z_index: 1 !default;
+$_fc_more_popover___z_index: 2 !default;
+$_fc_more_popover___width: 220px !default;
+$_fc_more_popover__fc_event_container___padding: 10px !default;
+$_fc_toolbar___text_align: center !default;
+$_fc_toolbar___margin_bottom: 1em !default;
+$_fc_toolbar__fc_left___float: left !default;
+$_fc_toolbar__fc_right___float: right !default;
+$_fc_toolbar__fc_center___display: inline-block !default;
+$_fc__fc_toolbar___________float: left !default;
+$_fc__fc_toolbar___________margin_left: .75em !default;
+$_fc__fc_toolbar________first_child___margin_left: 0 !default;
+$_fc_toolbar_h2___margin: 0 !default;
+$_fc_toolbar_button___position: relative !default;
+$_fc_toolbar__fc_state_hover___fc_toolbar__ui_state_hover___z_index: 2 !default;
+$_fc_toolbar__fc_state_down___z_index: 3 !default;
+$_fc_toolbar__fc_state_active___fc_toolbar__ui_state_active___z_index: 4 !default;
+$_fc_toolbar_button_focus___z_index: 5 !default;
+$_fc_view_container______webkit_box_sizing: content-box !default;
+$_fc_view_container______moz_box_sizing: content-box !default;
+$_fc_view_container_____box_sizing: content-box !default;
+$_fc_view_container___before___fc_view_container___after____webkit_box_sizing: content-box !default;
+$_fc_view_container___before___fc_view_container___after____moz_box_sizing: content-box !default;
+$_fc_view_container___before___fc_view_container___after___box_sizing: content-box !default;
+$_fc_view___position: relative !default;
+$_fc_view___z_index: 1 !default;
+$_fc_view___table___position: relative !default;
+$_fc_view___table___z_index: 1 !default;
+$_fc_basicWeek_view__fc_content_skeleton___fc_basicDay_view__fc_content_skeleton___padding_top: 1px !default;
+$_fc_basicWeek_view__fc_content_skeleton___fc_basicDay_view__fc_content_skeleton___padding_bottom: 1em !default;
+$_fc_basic_view_tbody__fc_row___min_height: 4em !default;
+$_fc_row_fc_rigid___overflow: hidden !default;
+$_fc_row_fc_rigid__fc_content_skeleton___position: absolute !default;
+$_fc_row_fc_rigid__fc_content_skeleton___top: 0 !default;
+$_fc_row_fc_rigid__fc_content_skeleton___left: 0 !default;
+$_fc_row_fc_rigid__fc_content_skeleton___right: 0 !default;
+$_fc_basic_view__fc_week_number___fc_basic_view__fc_day_number___padding: 0 2px !default;
+$_fc_basic_view_td_fc_week_number_span___fc_basic_view_td_fc_day_number___padding_top: 2px !default;
+$_fc_basic_view_td_fc_week_number_span___fc_basic_view_td_fc_day_number___padding_bottom: 2px !default;
+$_fc_basic_view__fc_week_number___text_align: center !default;
+$_fc_basic_view__fc_week_number_span___display: inline-block !default;
+$_fc_basic_view__fc_week_number_span___min_width: 1.25em !default;
+$_fc_ltr__fc_basic_view__fc_day_number___text_align: right !default;
+$_fc_rtl__fc_basic_view__fc_day_number___text_align: left !default;
+$_fc_day_number_fc_other_month___opacity: 0.3 !default;
+$_fc_day_number_fc_other_month___filter: alpha(opacity=30) !default;
+$_fc_agenda_view__fc_day_grid___position: relative !default;
+$_fc_agenda_view__fc_day_grid___z_index: 2 !default;
+$_fc_agenda_view__fc_day_grid__fc_row___min_height: 3em !default;
+$_fc_agenda_view__fc_day_grid__fc_row__fc_content_skeleton___padding_top: 1px !default;
+$_fc_agenda_view__fc_day_grid__fc_row__fc_content_skeleton___padding_bottom: 1em !default;
+$_fc__fc_axis___vertical_align: middle !default;
+$_fc__fc_axis___padding: 0 4px !default;
+$_fc__fc_axis___white_space: nowrap !default;
+$_fc_ltr__fc_axis___text_align: right !default;
+$_fc_rtl__fc_axis___text_align: left !default;
+$_ui_widget_td_fc_axis___font_weight: normal !default;
+$_fc_time_grid_container___position: relative !default;
+$_fc_time_grid_container___z_index: 1 !default;
+$_fc_time_grid___position: relative !default;
+$_fc_time_grid___z_index: 1 !default;
+$_fc_time_grid___min_height: 100% !default;
+$_fc_time_grid_table___border: 0 hidden transparent !default;
+$_fc_time_grid____fc_bg___z_index: 1 !default;
+$_fc_time_grid__fc_slats___fc_time_grid___hr___position: relative !default;
+$_fc_time_grid__fc_slats___fc_time_grid___hr___z_index: 2 !default;
+$_fc_time_grid__fc_bgevent_skeleton___fc_time_grid__fc_content_skeleton___position: absolute !default;
+$_fc_time_grid__fc_bgevent_skeleton___fc_time_grid__fc_content_skeleton___top: 0 !default;
+$_fc_time_grid__fc_bgevent_skeleton___fc_time_grid__fc_content_skeleton___left: 0 !default;
+$_fc_time_grid__fc_bgevent_skeleton___fc_time_grid__fc_content_skeleton___right: 0 !default;
+$_fc_time_grid__fc_bgevent_skeleton___z_index: 3 !default;
+$_fc_time_grid__fc_highlight_skeleton___z_index: 4 !default;
+$_fc_time_grid__fc_content_skeleton___z_index: 5 !default;
+$_fc_time_grid__fc_helper_skeleton___z_index: 6 !default;
+$_fc_slats_td___height: 1.5em !default;
+$_fc_slats_td___border_bottom: 0 !default;
+$_fc_slats__fc_minor_td___border_top_style: dotted !default;
+$_fc_slats__ui_widget_content___background: none !default;
+$_fc_time_grid__fc_highlight_container___position: relative !default;
+$_fc_time_grid__fc_highlight___position: absolute !default;
+$_fc_time_grid__fc_highlight___left: 0 !default;
+$_fc_time_grid__fc_highlight___right: 0 !default;
+$_fc_time_grid__fc_event_container___fc_time_grid__fc_bgevent_container___position: relative !default;
+$_fc_ltr__fc_time_grid__fc_event_container___margin: 0 2.5% 0 2px !default;
+$_fc_rtl__fc_time_grid__fc_event_container___margin: 0 2px 0 2.5% !default;
+$_fc_time_grid__fc_event___position: absolute !default;
+$_fc_time_grid__fc_event___z_index: 1 !default;
+$_fc_time_grid__fc_bgevent___position: absolute !default;
+$_fc_time_grid__fc_bgevent___z_index: 1 !default;
+$_fc_time_grid__fc_bgevent___left: 0 !default;
+$_fc_time_grid__fc_bgevent___right: 0 !default;
+$_fc_time_grid_event___overflow: hidden !default;
+$_fc_time_grid_event_fc_not_start___border_top_width: 0 !default;
+$_fc_time_grid_event_fc_not_start___padding_top: 1px !default;
+$_fc_time_grid_event_fc_not_start___border_top_left_radius: 0 !default;
+$_fc_time_grid_event_fc_not_start___border_top_right_radius: 0 !default;
+$_fc_time_grid_event_fc_not_end___border_bottom_width: 0 !default;
+$_fc_time_grid_event_fc_not_end___padding_bottom: 1px !default;
+$_fc_time_grid_event_fc_not_end___border_bottom_left_radius: 0 !default;
+$_fc_time_grid_event_fc_not_end___border_bottom_right_radius: 0 !default;
+$_fc_time_grid_event____fc_content___position: relative !default;
+$_fc_time_grid_event____fc_content___z_index: 2 !default;
+$_fc_time_grid_event__fc_time___fc_time_grid_event__fc_title___padding: 0 1px !default;
+$_fc_time_grid_event__fc_time___font_size: .85em !default;
+$_fc_time_grid_event__fc_time___white_space: nowrap !default;
+$_fc_time_grid_event__fc_bg___z_index: 1 !default;
+$_fc_time_grid_event__fc_bg___background: #fff !default;
+$_fc_time_grid_event__fc_bg___opacity: .25 !default;
+$_fc_time_grid_event__fc_bg___filter: alpha(opacity=25) !default;
+$_fc_time_grid_event_fc_short__fc_content___white_space: nowrap !default;
+$_fc_time_grid_event_fc_short__fc_time___fc_time_grid_event_fc_short__fc_title___display: inline-block !default;
+$_fc_time_grid_event_fc_short__fc_time___fc_time_grid_event_fc_short__fc_title___vertical_align: top !default;
+$_fc_time_grid_event_fc_short__fc_time_span___display: none !default;
+$_fc_time_grid_event_fc_short__fc_time_before___content: attr(data-start) !default;
+$_fc_time_grid_event_fc_short__fc_time_after___content: "\000A0-\000A0" !default;
+$_fc_time_grid_event_fc_short__fc_title___font_size: .85em !default;
+$_fc_time_grid_event_fc_short__fc_title___padding: 0 !default;
+$_fc_time_grid_event__fc_resizer___position: absolute !default;
+$_fc_time_grid_event__fc_resizer___z_index: 3 !default;
+$_fc_time_grid_event__fc_resizer___left: 0 !default;
+$_fc_time_grid_event__fc_resizer___right: 0 !default;
+$_fc_time_grid_event__fc_resizer___bottom: 0 !default;
+$_fc_time_grid_event__fc_resizer___height: 8px !default;
+$_fc_time_grid_event__fc_resizer___overflow: hidden !default;
+$_fc_time_grid_event__fc_resizer___line_height: 8px !default;
+$_fc_time_grid_event__fc_resizer___font_size: 11px !default;
+$_fc_time_grid_event__fc_resizer___font_family: monospace !default;
+$_fc_time_grid_event__fc_resizer___text_align: center !default;
+$_fc_time_grid_event__fc_resizer___cursor: s-resize !default;
+$_fc_time_grid_event__fc_resizer_after___content: "=" !default;
 /*!
  * FullCalendar v2.2.5 Stylesheet
  * Docs & License: http://arshaw.com/fullcalendar/
@@ -5,17 +332,17 @@
  */
 
 .fc {
-  direction: ltr;
-  text-align: left;
+  direction: $_fc___direction;
+  text-align: $_fc___text_align;
 }
 
 .fc-rtl {
-  text-align: right;
+  text-align: $_fc_rtl___text_align;
 }
 
 body .fc {
   /* extra precedence to overcome jqui */
-  font-size: 1em;
+  font-size: $body__fc___font_size;
 }
 
 /* Colors
@@ -23,35 +350,35 @@ body .fc {
 
 .fc-unthemed {
   th, td, hr, thead, tbody, .fc-row {
-    border-color: #ddd;
+    border-color: $_fc_unthemed_th___fc_unthemed_td___fc_unthemed_hr___fc_unthemed_thead___fc_unthemed_tbody___fc_unthemed__fc_row___border_color;
   }
 
   .fc-popover {
-    border-color: #ddd;
-    background-color: #fff;
+    border-color: $_fc_unthemed__fc_popover___border_color;
+    background-color: $_fc_unthemed__fc_popover___background_color;
   }
 
   hr {
-    background: #eee;
+    background: $_fc_unthemed_hr___background;
   }
 
   .fc-popover .fc-header {
-    background: #eee;
+    background: $_fc_unthemed__fc_popover__fc_header___background;
 
     .fc-close {
-      color: #666;
+      color: $_fc_unthemed__fc_popover__fc_header__fc_close___color;
     }
   }
 
   .fc-today {
-    background: #fcf8e3;
+    background: $_fc_unthemed__fc_today___background;
   }
 }
 
 .fc-highlight {
   /* when user is selecting cells */
-  background: #bce8f1;
-  opacity: .3;
+  background: $_fc_highlight___background;
+  opacity: $_fc_highlight___opacity;
   filter: alpha(opacity = 30);
 
   /* for IE */
@@ -60,7 +387,7 @@ body .fc {
 .fc-bgevent {
   /* default look for background events */
   background: rgb(143, 223, 130);
-  opacity: .3;
+  opacity: $_fc_bgevent___opacity;
   filter: alpha(opacity = 30);
 
   /* for IE */
@@ -69,42 +396,42 @@ body .fc {
 .fc-nonbusiness {
   /* default look for non-business-hours areas */
   /* will inherit .fc-bgevent's styles */
-  background: #ccc;
+  background: $_fc_nonbusiness___background;
 }
 
 /* Icons (inline elements with styled text that mock arrow icons)
 --------------------------------------------------------------------------------------------------*/
 
 .fc-icon {
-  display: inline-block;
-  font-size: 2em;
-  line-height: .5em;
-  height: .5em;
+  display: $_fc_icon___display;
+  font-size: $_fc_icon___font_size;
+  line-height: $_fc_icon___line_height;
+  height: $_fc_icon___height;
 
   /* will make the total height 1em */
-  font-family: "Courier New", Courier, monospace;
+  font-family: $_fc_icon___font_family;
 }
 
 .fc-icon-left-single-arrow:after {
-  content: "\02039";
-  font-weight: bold;
+  content: $_fc_icon_left_single_arrow_after___content;
+  font-weight: $_fc_icon_left_single_arrow_after___font_weight;
 }
 
 .fc-icon-right-single-arrow:after {
-  content: "\0203A";
-  font-weight: bold;
+  content: $_fc_icon_right_single_arrow_after___content;
+  font-weight: $_fc_icon_right_single_arrow_after___font_weight;
 }
 
 .fc-icon-left-double-arrow:after {
-  content: "\000AB";
+  content: $_fc_icon_left_double_arrow_after___content;
 }
 
 .fc-icon-right-double-arrow:after {
-  content: "\000BB";
+  content: $_fc_icon_right_double_arrow_after___content;
 }
 
 .fc-icon-x:after {
-  content: "\000D7";
+  content: $_fc_icon_x_after___content;
 }
 
 /* Buttons (styled <button> tags, normalized to work cross-browser)
@@ -112,25 +439,25 @@ body .fc {
 
 .fc button {
   /* force height to include the border and padding */
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+  -moz-box-sizing: $_fc_button____moz_box_sizing;
+  -webkit-box-sizing: $_fc_button____webkit_box_sizing;
+  box-sizing: $_fc_button___box_sizing;
 
   /* dimensions */
-  margin: 0;
-  height: 2.1em;
-  padding: 0 .6em;
+  margin: $_fc_button___margin;
+  height: $_fc_button___height;
+  padding: $_fc_button___padding;
 
   /* text & cursor */
-  font-size: 1em;
+  font-size: $_fc_button___font_size;
 
   /* normalize */
-  white-space: nowrap;
-  cursor: pointer;
+  white-space: $_fc_button___white_space;
+  cursor: $_fc_button___cursor;
 
   &::-moz-focus-inner {
-    margin: 0;
-    padding: 0;
+    margin: $_fc_button___moz_focus_inner___margin;
+    padding: $_fc_button___moz_focus_inner___padding;
   }
 }
 
@@ -138,18 +465,18 @@ body .fc {
 
 .fc-state-default {
   /* non-theme */
-  border: 1px solid;
+  border: $_fc_state_default___border;
 
   &.fc-corner-left {
     /* non-theme */
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
+    border-top-left-radius: $_fc_state_default_fc_corner_left___border_top_left_radius;
+    border-bottom-left-radius: $_fc_state_default_fc_corner_left___border_bottom_left_radius;
   }
 
   &.fc-corner-right {
     /* non-theme */
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
+    border-top-right-radius: $_fc_state_default_fc_corner_right___border_top_right_radius;
+    border-bottom-right-radius: $_fc_state_default_fc_corner_right___border_bottom_right_radius;
   }
 }
 
@@ -157,11 +484,11 @@ body .fc {
 
 .fc button .fc-icon {
   /* non-theme */
-  position: relative;
-  top: .05em;
+  position: $_fc_button__fc_icon___position;
+  top: $_fc_button__fc_icon___top;
 
   /* seems to be a good adjustment across browsers */
-  margin: 0 .1em;
+  margin: $_fc_button__fc_icon___margin;
 }
 
 /*
@@ -170,54 +497,54 @@ body .fc {
 */
 
 .fc-state-default {
-  background-color: #f5f5f5;
-  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
-  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
-  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
-  background-repeat: repeat-x;
-  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  color: #333;
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  background-color: $_fc_state_default___background_color;
+  background-image: $_fc_state_default___background_image;
+  background-image: $_fc_state_default___background_image;
+  background-image: $_fc_state_default___background_image;
+  background-image: $_fc_state_default___background_image;
+  background-image: $_fc_state_default___background_image;
+  background-repeat: $_fc_state_default___background_repeat;
+  border-color: $_fc_state_default___border_color;
+  border-color: $_fc_state_default___border_color;
+  color: $_fc_state_default___color;
+  text-shadow: $_fc_state_default___text_shadow;
+  box-shadow: $_fc_state_default___box_shadow;
 }
 
 .fc-state-hover, .fc-state-down, .fc-state-active, .fc-state-disabled {
-  color: #333333;
-  background-color: #e6e6e6;
+  color: $_fc_state_hover___fc_state_down___fc_state_active___fc_state_disabled___color;
+  background-color: $_fc_state_hover___fc_state_down___fc_state_active___fc_state_disabled___background_color;
 }
 
 .fc-state-hover {
-  color: #333333;
-  text-decoration: none;
-  background-position: 0 -15px;
-  -webkit-transition: background-position 0.1s linear;
-  -moz-transition: background-position 0.1s linear;
-  -o-transition: background-position 0.1s linear;
-  transition: background-position 0.1s linear;
+  color: $_fc_state_hover___color;
+  text-decoration: $_fc_state_hover___text_decoration;
+  background-position: $_fc_state_hover___background_position;
+  -webkit-transition: $_fc_state_hover____webkit_transition;
+  -moz-transition: $_fc_state_hover____moz_transition;
+  -o-transition: $_fc_state_hover____o_transition;
+  transition: $_fc_state_hover___transition;
 }
 
 .fc-state-down, .fc-state-active {
-  background-color: #cccccc;
-  background-image: none;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  background-color: $_fc_state_down___fc_state_active___background_color;
+  background-image: $_fc_state_down___fc_state_active___background_image;
+  box-shadow: $_fc_state_down___fc_state_active___box_shadow;
 }
 
 .fc-state-disabled {
-  cursor: default;
-  background-image: none;
-  opacity: 0.65;
+  cursor: $_fc_state_disabled___cursor;
+  background-image: $_fc_state_disabled___background_image;
+  opacity: $_fc_state_disabled___opacity;
   filter: alpha(opacity = 65);
-  box-shadow: none;
+  box-shadow: $_fc_state_disabled___box_shadow;
 }
 
 /* Buttons Groups
 --------------------------------------------------------------------------------------------------*/
 
 .fc-button-group {
-  display: inline-block;
+  display: $_fc_button_group___display;
 }
 
 /*
@@ -228,13 +555,13 @@ previous button's border...
 .fc .fc-button-group > {
   * {
     /* extra precedence b/c buttons have margin set to zero */
-    float: left;
-    margin: 0 0 0 -1px;
+    float: $_fc__fc_button_group_______float;
+    margin: $_fc__fc_button_group_______margin;
   }
 
   :first-child {
     /* same */
-    margin-left: 0;
+    margin-left: $_fc__fc_button_group____first_child___margin_left;
   }
 }
 
@@ -242,56 +569,56 @@ previous button's border...
 --------------------------------------------------------------------------------------------------*/
 
 .fc-popover {
-  position: absolute;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  position: $_fc_popover___position;
+  box-shadow: $_fc_popover___box_shadow;
 
   .fc-header {
-    padding: 2px 4px;
+    padding: $_fc_popover__fc_header___padding;
 
     .fc-title {
-      margin: 0 2px;
+      margin: $_fc_popover__fc_header__fc_title___margin;
     }
 
     .fc-close {
-      cursor: pointer;
+      cursor: $_fc_popover__fc_header__fc_close___cursor;
     }
   }
 }
 
 .fc-ltr .fc-popover .fc-header .fc-title {
-  float: left;
+  float: $_fc_ltr__fc_popover__fc_header__fc_title___float;
 }
 
 .fc-rtl .fc-popover .fc-header {
   .fc-close {
-    float: left;
+    float: $_fc_rtl__fc_popover__fc_header__fc_close___float;
   }
 
   .fc-title {
-    float: right;
+    float: $_fc_rtl__fc_popover__fc_header__fc_title___float;
   }
 }
 
 .fc-ltr .fc-popover .fc-header .fc-close {
-  float: right;
+  float: $_fc_ltr__fc_popover__fc_header__fc_close___float;
 }
 
 /* unthemed */
 
 .fc-unthemed .fc-popover {
-  border-width: 1px;
-  border-style: solid;
+  border-width: $_fc_unthemed__fc_popover___border_width;
+  border-style: $_fc_unthemed__fc_popover___border_style;
 
   .fc-header .fc-close {
-    font-size: 25px;
-    margin-top: 4px;
+    font-size: $_fc_unthemed__fc_popover__fc_header__fc_close___font_size;
+    margin-top: $_fc_unthemed__fc_popover__fc_header__fc_close___margin_top;
   }
 }
 
 /* jqui themed */
 
 .fc-popover > .ui-widget-header + .ui-widget-content {
-  border-top: 0;
+  border-top: $_fc_popover____ui_widget_header____ui_widget_content___border_top;
 
   /* where they meet, let the header have the border */
 }
@@ -300,34 +627,34 @@ previous button's border...
 --------------------------------------------------------------------------------------------------*/
 
 .fc hr {
-  height: 0;
-  margin: 0;
-  padding: 0 0 2px;
+  height: $_fc_hr___height;
+  margin: $_fc_hr___margin;
+  padding: $_fc_hr___padding;
 
   /* height is unreliable across browsers, so use padding */
-  border-style: solid;
-  border-width: 1px 0;
+  border-style: $_fc_hr___border_style;
+  border-width: $_fc_hr___border_width;
 }
 
 .fc-clear {
-  clear: both;
+  clear: $_fc_clear___clear;
 }
 
 .fc-bg, .fc-bgevent-skeleton, .fc-highlight-skeleton, .fc-helper-skeleton {
   /* these element should always cling to top-left/right corners */
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  position: $_fc_bg___fc_bgevent_skeleton___fc_highlight_skeleton___fc_helper_skeleton___position;
+  top: $_fc_bg___fc_bgevent_skeleton___fc_highlight_skeleton___fc_helper_skeleton___top;
+  left: $_fc_bg___fc_bgevent_skeleton___fc_highlight_skeleton___fc_helper_skeleton___left;
+  right: $_fc_bg___fc_bgevent_skeleton___fc_highlight_skeleton___fc_helper_skeleton___right;
 }
 
 .fc-bg {
-  bottom: 0;
+  bottom: $_fc_bg___bottom;
 
   /* strech bg to bottom edge */
 
   table {
-    height: 100%;
+    height: $_fc_bg_table___height;
 
     /* strech bg to bottom edge */
   }
@@ -338,31 +665,31 @@ previous button's border...
 
 .fc {
   table {
-    width: 100%;
-    table-layout: fixed;
-    border-collapse: collapse;
-    border-spacing: 0;
-    font-size: 1em;
+    width: $_fc_table___width;
+    table-layout: $_fc_table___table_layout;
+    border-collapse: $_fc_table___border_collapse;
+    border-spacing: $_fc_table___border_spacing;
+    font-size: $_fc_table___font_size;
 
     /* normalize cross-browser */
   }
 
   th {
-    text-align: center;
-    border-style: solid;
-    border-width: 1px;
-    padding: 0;
-    vertical-align: top;
+    text-align: $_fc_th___text_align;
+    border-style: $_fc_th___border_style;
+    border-width: $_fc_th___border_width;
+    padding: $_fc_th___padding;
+    vertical-align: $_fc_th___vertical_align;
   }
 
   td {
-    border-style: solid;
-    border-width: 1px;
-    padding: 0;
-    vertical-align: top;
+    border-style: $_fc_td___border_style;
+    border-width: $_fc_td___border_width;
+    padding: $_fc_td___padding;
+    vertical-align: $_fc_td___vertical_align;
 
     &.fc-today {
-      border-style: double;
+      border-style: $_fc_td_fc_today___border_style;
 
       /* overcome neighboring borders */
     }
@@ -371,8 +698,8 @@ previous button's border...
   .fc-row {
     /* extra precedence to overcome themes w/ .ui-widget-content forcing a 1px border */
     /* no visible border by default. but make available if need be (scrollbar width compensation) */
-    border-style: solid;
-    border-width: 0;
+    border-style: $_fc__fc_row___border_style;
+    border-width: $_fc__fc_row___border_width;
   }
 }
 
@@ -383,87 +710,87 @@ previous button's border...
   table {
     /* don't put left/right border on anything within a fake row.
        the outer tbody will worry about this */
-    border-left: 0 hidden transparent;
-    border-right: 0 hidden transparent;
+    border-left: $_fc_row_table___border_left;
+    border-right: $_fc_row_table___border_right;
 
     /* no bottom borders on rows */
-    border-bottom: 0 hidden transparent;
+    border-bottom: $_fc_row_table___border_bottom;
   }
 
   &:first-child table {
-    border-top: 0 hidden transparent;
+    border-top: $_fc_row_first_child_table___border_top;
 
     /* no top border on first row */
   }
 
-  position: relative;
+  position: $_fc_row___position;
 
   .fc-bg {
-    z-index: 1;
+    z-index: $_fc_row__fc_bg___z_index;
   }
 
   .fc-bgevent-skeleton, .fc-highlight-skeleton {
-    bottom: 0;
+    bottom: $_fc_row__fc_bgevent_skeleton___fc_row__fc_highlight_skeleton___bottom;
 
     /* stretch skeleton to bottom of row */
   }
 
   .fc-bgevent-skeleton table {
-    height: 100%;
+    height: $_fc_row__fc_bgevent_skeleton_table___height;
 
     /* stretch skeleton to bottom of row */
   }
 
   .fc-highlight-skeleton {
     table {
-      height: 100%;
+      height: $_fc_row__fc_highlight_skeleton_table___height;
 
       /* stretch skeleton to bottom of row */
     }
 
     td {
-      border-color: transparent;
+      border-color: $_fc_row__fc_highlight_skeleton_td___border_color;
     }
   }
 
   .fc-bgevent-skeleton {
     td {
-      border-color: transparent;
+      border-color: $_fc_row__fc_bgevent_skeleton_td___border_color;
     }
 
-    z-index: 2;
+    z-index: $_fc_row__fc_bgevent_skeleton___z_index;
   }
 
   .fc-highlight-skeleton {
-    z-index: 3;
+    z-index: $_fc_row__fc_highlight_skeleton___z_index;
   }
 
   .fc-content-skeleton {
-    position: relative;
-    z-index: 4;
-    padding-bottom: 2px;
+    position: $_fc_row__fc_content_skeleton___position;
+    z-index: $_fc_row__fc_content_skeleton___z_index;
+    padding-bottom: $_fc_row__fc_content_skeleton___padding_bottom;
 
     /* matches the space above the events */
   }
 
   .fc-helper-skeleton {
-    z-index: 5;
+    z-index: $_fc_row__fc_helper_skeleton___z_index;
   }
 
   .fc-content-skeleton td, .fc-helper-skeleton td {
     /* see-through to the background below */
-    background: none;
+    background: $_fc_row__fc_content_skeleton_td___fc_row__fc_helper_skeleton_td___background;
 
     /* in case <td>s are globally styled */
-    border-color: transparent;
+    border-color: $_fc_row__fc_content_skeleton_td___fc_row__fc_helper_skeleton_td___border_color;
 
     /* don't put a border between events and/or the day number */
-    border-bottom: 0;
+    border-bottom: $_fc_row__fc_content_skeleton_td___fc_row__fc_helper_skeleton_td___border_bottom;
   }
 
   .fc-content-skeleton tbody td, .fc-helper-skeleton tbody td {
     /* don't put a border between event cells */
-    border-top: 0;
+    border-top: $_fc_row__fc_content_skeleton_tbody_td___fc_row__fc_helper_skeleton_tbody_td___border_top;
   }
 }
 
@@ -482,18 +809,18 @@ temporary rendered events).
 
 .fc-scroller {
   /* this class goes on elements for guaranteed vertical scrollbars */
-  overflow-y: scroll;
-  overflow-x: hidden;
+  overflow-y: $_fc_scroller___overflow_y;
+  overflow-x: $_fc_scroller___overflow_x;
 
   > * {
     /* we expect an immediate inner element */
-    position: relative;
+    position: $_fc_scroller_______position;
 
     /* re-scope all positions */
-    width: 100%;
+    width: $_fc_scroller_______width;
 
     /* hack to force re-sizing this inner element when scrollbars appear/disappear */
-    overflow: hidden;
+    overflow: $_fc_scroller_______overflow;
 
     /* don't let negative margins or absolute positioning create further scroll */
   }
@@ -503,37 +830,37 @@ temporary rendered events).
 --------------------------------------------------------------------------------------------------*/
 
 .fc-event {
-  position: relative;
+  position: $_fc_event___position;
 
   /* for resize handle and other inner positioning */
-  display: block;
+  display: $_fc_event___display;
 
   /* make the <a> tag block */
-  font-size: .85em;
-  line-height: 1.3;
-  border-radius: 3px;
-  border: 1px solid #3a87ad;
+  font-size: $_fc_event___font_size;
+  line-height: $_fc_event___line_height;
+  border-radius: $_fc_event___border_radius;
+  border: $_fc_event___border;
 
   /* default BORDER color */
-  background-color: #3a87ad;
+  background-color: $_fc_event___background_color;
 
   /* default BACKGROUND color */
-  font-weight: normal;
+  font-weight: $_fc_event___font_weight;
 
   /* undo jqui's ui-widget-header bold */
 
-  color: #fff;
+  color: $_fc_event___color;
 
   /* default TEXT color */
-  text-decoration: none;
+  text-decoration: $_fc_event___text_decoration;
 
   /* if <a> has an href */
 
   &:hover {
-    color: #fff;
+    color: $_fc_event_hover___color;
 
     /* default TEXT color */
-    text-decoration: none;
+    text-decoration: $_fc_event_hover___text_decoration;
 
     /* if <a> has an href */
   }
@@ -542,17 +869,17 @@ temporary rendered events).
 /* overpower some of bootstrap's and jqui's styles on <a> tags */
 
 .ui-widget .fc-event {
-  color: #fff;
+  color: $_ui_widget__fc_event___color;
 
   /* default TEXT color */
-  text-decoration: none;
+  text-decoration: $_ui_widget__fc_event___text_decoration;
 
   /* if <a> has an href */
 }
 
 .fc-event {
   &[href], &.fc-draggable {
-    cursor: pointer;
+    cursor: $_fc_event_href____fc_event_fc_draggable___cursor;
 
     /* give events with links and draggable events a hand mouse pointer */
   }
@@ -560,11 +887,11 @@ temporary rendered events).
 
 .fc-not-allowed {
   /* to override an event's custom cursor */
-  cursor: not-allowed;
+  cursor: $_fc_not_allowed___cursor;
 
   .fc-event {
     /* to override an event's custom cursor */
-    cursor: not-allowed;
+    cursor: $_fc_not_allowed__fc_event___cursor;
   }
 }
 
@@ -575,63 +902,63 @@ be a descendant of the grid when it is being dragged.
 */
 
 .fc-day-grid-event {
-  margin: 1px 2px 0;
+  margin: $_fc_day_grid_event___margin;
 
   /* spacing between events and edges */
-  padding: 0 1px;
+  padding: $_fc_day_grid_event___padding;
 }
 
 /* events that are continuing to/from another week. kill rounded corners and butt up against edge */
 
 .fc-ltr .fc-day-grid-event.fc-not-start, .fc-rtl .fc-day-grid-event.fc-not-end {
-  margin-left: 0;
-  border-left-width: 0;
-  padding-left: 1px;
+  margin-left: $_fc_ltr__fc_day_grid_event_fc_not_start___fc_rtl__fc_day_grid_event_fc_not_end___margin_left;
+  border-left-width: $_fc_ltr__fc_day_grid_event_fc_not_start___fc_rtl__fc_day_grid_event_fc_not_end___border_left_width;
+  padding-left: $_fc_ltr__fc_day_grid_event_fc_not_start___fc_rtl__fc_day_grid_event_fc_not_end___padding_left;
 
   /* replace the border with padding */
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-top-left-radius: $_fc_ltr__fc_day_grid_event_fc_not_start___fc_rtl__fc_day_grid_event_fc_not_end___border_top_left_radius;
+  border-bottom-left-radius: $_fc_ltr__fc_day_grid_event_fc_not_start___fc_rtl__fc_day_grid_event_fc_not_end___border_bottom_left_radius;
 }
 
 .fc-ltr .fc-day-grid-event.fc-not-end, .fc-rtl .fc-day-grid-event.fc-not-start {
-  margin-right: 0;
-  border-right-width: 0;
-  padding-right: 1px;
+  margin-right: $_fc_ltr__fc_day_grid_event_fc_not_end___fc_rtl__fc_day_grid_event_fc_not_start___margin_right;
+  border-right-width: $_fc_ltr__fc_day_grid_event_fc_not_end___fc_rtl__fc_day_grid_event_fc_not_start___border_right_width;
+  padding-right: $_fc_ltr__fc_day_grid_event_fc_not_end___fc_rtl__fc_day_grid_event_fc_not_start___padding_right;
 
   /* replace the border with padding */
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
+  border-top-right-radius: $_fc_ltr__fc_day_grid_event_fc_not_end___fc_rtl__fc_day_grid_event_fc_not_start___border_top_right_radius;
+  border-bottom-right-radius: $_fc_ltr__fc_day_grid_event_fc_not_end___fc_rtl__fc_day_grid_event_fc_not_start___border_bottom_right_radius;
 }
 
 .fc-day-grid-event {
   > .fc-content {
     /* force events to be one-line tall */
-    white-space: nowrap;
-    overflow: hidden;
+    white-space: $_fc_day_grid_event____fc_content___white_space;
+    overflow: $_fc_day_grid_event____fc_content___overflow;
   }
 
   .fc-time {
-    font-weight: bold;
+    font-weight: $_fc_day_grid_event__fc_time___font_weight;
   }
 
   .fc-resizer {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 7px;
+    position: $_fc_day_grid_event__fc_resizer___position;
+    top: $_fc_day_grid_event__fc_resizer___top;
+    bottom: $_fc_day_grid_event__fc_resizer___bottom;
+    width: $_fc_day_grid_event__fc_resizer___width;
   }
 }
 
 /* resize handle (outside of fc-content, so can go outside of bounds) */
 
 .fc-ltr .fc-day-grid-event .fc-resizer {
-  right: -3px;
-  cursor: e-resize;
+  right: $_fc_ltr__fc_day_grid_event__fc_resizer___right;
+  cursor: $_fc_ltr__fc_day_grid_event__fc_resizer___cursor;
 }
 
 .fc-rtl .fc-day-grid-event .fc-resizer {
-  left: -3px;
-  cursor: w-resize;
+  left: $_fc_rtl__fc_day_grid_event__fc_resizer___left;
+  cursor: $_fc_rtl__fc_day_grid_event__fc_resizer___cursor;
 }
 
 /* Event Limiting
@@ -640,35 +967,35 @@ be a descendant of the grid when it is being dragged.
 /* "more" link that represents hidden events */
 
 a.fc-more {
-  margin: 1px 3px;
-  font-size: .85em;
-  cursor: pointer;
-  text-decoration: none;
+  margin: $a_fc_more___margin;
+  font-size: $a_fc_more___font_size;
+  cursor: $a_fc_more___cursor;
+  text-decoration: $a_fc_more___text_decoration;
 
   &:hover {
-    text-decoration: underline;
+    text-decoration: $a_fc_more_hover___text_decoration;
   }
 }
 
 .fc-limited {
   /* rows and cells that are hidden because of a "more" link */
-  display: none;
+  display: $_fc_limited___display;
 }
 
 /* popover that appears when "more" link is clicked */
 
 .fc-day-grid .fc-row {
-  z-index: 1;
+  z-index: $_fc_day_grid__fc_row___z_index;
 
   /* make the "more" popover one higher than this */
 }
 
 .fc-more-popover {
-  z-index: 2;
-  width: 220px;
+  z-index: $_fc_more_popover___z_index;
+  width: $_fc_more_popover___width;
 
   .fc-event-container {
-    padding: 10px;
+    padding: $_fc_more_popover__fc_event_container___padding;
   }
 }
 
@@ -676,19 +1003,19 @@ a.fc-more {
 --------------------------------------------------------------------------------------------------*/
 
 .fc-toolbar {
-  text-align: center;
-  margin-bottom: 1em;
+  text-align: $_fc_toolbar___text_align;
+  margin-bottom: $_fc_toolbar___margin_bottom;
 
   .fc-left {
-    float: left;
+    float: $_fc_toolbar__fc_left___float;
   }
 
   .fc-right {
-    float: right;
+    float: $_fc_toolbar__fc_right___float;
   }
 
   .fc-center {
-    display: inline-block;
+    display: $_fc_toolbar__fc_center___display;
   }
 }
 
@@ -697,13 +1024,13 @@ a.fc-more {
 .fc .fc-toolbar > * > {
   * {
     /* extra precedence to override button border margins */
-    float: left;
-    margin-left: .75em;
+    float: $_fc__fc_toolbar___________float;
+    margin-left: $_fc__fc_toolbar___________margin_left;
   }
 
   :first-child {
     /* extra precedence to override button border margins */
-    margin-left: 0;
+    margin-left: $_fc__fc_toolbar________first_child___margin_left;
   }
 }
 
@@ -713,27 +1040,27 @@ a.fc-more {
 
 .fc-toolbar {
   h2 {
-    margin: 0;
+    margin: $_fc_toolbar_h2___margin;
   }
 
   button {
-    position: relative;
+    position: $_fc_toolbar_button___position;
   }
 
   .fc-state-hover, .ui-state-hover {
-    z-index: 2;
+    z-index: $_fc_toolbar__fc_state_hover___fc_toolbar__ui_state_hover___z_index;
   }
 
   .fc-state-down {
-    z-index: 3;
+    z-index: $_fc_toolbar__fc_state_down___z_index;
   }
 
   .fc-state-active, .ui-state-active {
-    z-index: 4;
+    z-index: $_fc_toolbar__fc_state_active___fc_toolbar__ui_state_active___z_index;
   }
 
   button:focus {
-    z-index: 5;
+    z-index: $_fc_toolbar_button_focus___z_index;
   }
 }
 
@@ -746,26 +1073,26 @@ a.fc-more {
 /* don't do this for the toolbar because we'll want bootstrap to style those buttons as some pt */
 
 .fc-view-container * {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
+  -webkit-box-sizing: $_fc_view_container______webkit_box_sizing;
+  -moz-box-sizing: $_fc_view_container______moz_box_sizing;
+  box-sizing: $_fc_view_container_____box_sizing;
 
   &:before, &:after {
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
+    -webkit-box-sizing: $_fc_view_container___before___fc_view_container___after____webkit_box_sizing;
+    -moz-box-sizing: $_fc_view_container___before___fc_view_container___after____moz_box_sizing;
+    box-sizing: $_fc_view_container___before___fc_view_container___after___box_sizing;
   }
 }
 
 .fc-view {
   /* so dragged elements can be above the view's main element */
-  position: relative;
-  z-index: 1;
+  position: $_fc_view___position;
+  z-index: $_fc_view___z_index;
 
   > table {
     /* so dragged elements can be above the view's main element */
-    position: relative;
-    z-index: 1;
+    position: $_fc_view___table___position;
+    z-index: $_fc_view___table___z_index;
   }
 }
 
@@ -776,16 +1103,16 @@ a.fc-more {
 
 .fc-basicWeek-view .fc-content-skeleton, .fc-basicDay-view .fc-content-skeleton {
   /* we are sure there are no day numbers in these views, so... */
-  padding-top: 1px;
+  padding-top: $_fc_basicWeek_view__fc_content_skeleton___fc_basicDay_view__fc_content_skeleton___padding_top;
 
   /* add a pixel to make sure there are 2px padding above events */
-  padding-bottom: 1em;
+  padding-bottom: $_fc_basicWeek_view__fc_content_skeleton___fc_basicDay_view__fc_content_skeleton___padding_bottom;
 
   /* ensure a space at bottom of cell for user selecting/clicking */
 }
 
 .fc-basic-view tbody .fc-row {
-  min-height: 4em;
+  min-height: $_fc_basic_view_tbody__fc_row___min_height;
 
   /* ensure that all rows are at least this tall */
 }
@@ -793,13 +1120,13 @@ a.fc-more {
 /* a "rigid" row will take up a constant amount of height because content-skeleton is absolute */
 
 .fc-row.fc-rigid {
-  overflow: hidden;
+  overflow: $_fc_row_fc_rigid___overflow;
 
   .fc-content-skeleton {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+    position: $_fc_row_fc_rigid__fc_content_skeleton___position;
+    top: $_fc_row_fc_rigid__fc_content_skeleton___top;
+    left: $_fc_row_fc_rigid__fc_content_skeleton___left;
+    right: $_fc_row_fc_rigid__fc_content_skeleton___right;
   }
 }
 
@@ -807,37 +1134,37 @@ a.fc-more {
 
 .fc-basic-view {
   .fc-week-number, .fc-day-number {
-    padding: 0 2px;
+    padding: $_fc_basic_view__fc_week_number___fc_basic_view__fc_day_number___padding;
   }
 
   td {
     &.fc-week-number span, &.fc-day-number {
-      padding-top: 2px;
-      padding-bottom: 2px;
+      padding-top: $_fc_basic_view_td_fc_week_number_span___fc_basic_view_td_fc_day_number___padding_top;
+      padding-bottom: $_fc_basic_view_td_fc_week_number_span___fc_basic_view_td_fc_day_number___padding_bottom;
     }
   }
 
   .fc-week-number {
-    text-align: center;
+    text-align: $_fc_basic_view__fc_week_number___text_align;
 
     span {
       /* work around the way we do column resizing and ensure a minimum width */
-      display: inline-block;
-      min-width: 1.25em;
+      display: $_fc_basic_view__fc_week_number_span___display;
+      min-width: $_fc_basic_view__fc_week_number_span___min_width;
     }
   }
 }
 
 .fc-ltr .fc-basic-view .fc-day-number {
-  text-align: right;
+  text-align: $_fc_ltr__fc_basic_view__fc_day_number___text_align;
 }
 
 .fc-rtl .fc-basic-view .fc-day-number {
-  text-align: left;
+  text-align: $_fc_rtl__fc_basic_view__fc_day_number___text_align;
 }
 
 .fc-day-number.fc-other-month {
-  opacity: 0.3;
+  opacity: $_fc_day_number_fc_other_month___opacity;
   filter: alpha(opacity = 30);
 
   /* for IE */
@@ -850,21 +1177,21 @@ a.fc-more {
 --------------------------------------------------------------------------------------------------*/
 
 .fc-agenda-view .fc-day-grid {
-  position: relative;
-  z-index: 2;
+  position: $_fc_agenda_view__fc_day_grid___position;
+  z-index: $_fc_agenda_view__fc_day_grid___z_index;
 
   /* so the "more.." popover will be over the time grid */
 
   .fc-row {
-    min-height: 3em;
+    min-height: $_fc_agenda_view__fc_day_grid__fc_row___min_height;
 
     /* all-day section will never get shorter than this */
 
     .fc-content-skeleton {
-      padding-top: 1px;
+      padding-top: $_fc_agenda_view__fc_day_grid__fc_row__fc_content_skeleton___padding_top;
 
       /* add a pixel to make sure there are 2px padding above events */
-      padding-bottom: 1em;
+      padding-bottom: $_fc_agenda_view__fc_day_grid__fc_row__fc_content_skeleton___padding_bottom;
 
       /* give space underneath events for clicking/selecting days */
     }
@@ -876,21 +1203,21 @@ a.fc-more {
 
 .fc .fc-axis {
   /* .fc to overcome default cell styles */
-  vertical-align: middle;
-  padding: 0 4px;
-  white-space: nowrap;
+  vertical-align: $_fc__fc_axis___vertical_align;
+  padding: $_fc__fc_axis___padding;
+  white-space: $_fc__fc_axis___white_space;
 }
 
 .fc-ltr .fc-axis {
-  text-align: right;
+  text-align: $_fc_ltr__fc_axis___text_align;
 }
 
 .fc-rtl .fc-axis {
-  text-align: left;
+  text-align: $_fc_rtl__fc_axis___text_align;
 }
 
 .ui-widget td.fc-axis {
-  font-weight: normal;
+  font-weight: $_ui_widget_td_fc_axis___font_weight;
 
   /* overcome jqui theme making it bold */
 }
@@ -900,54 +1227,54 @@ a.fc-more {
 
 .fc-time-grid-container {
   /* so slats/bg/content/etc positions get scoped within here */
-  position: relative;
-  z-index: 1;
+  position: $_fc_time_grid_container___position;
+  z-index: $_fc_time_grid_container___z_index;
 }
 
 .fc-time-grid {
   /* so slats/bg/content/etc positions get scoped within here */
-  position: relative;
-  z-index: 1;
-  min-height: 100%;
+  position: $_fc_time_grid___position;
+  z-index: $_fc_time_grid___z_index;
+  min-height: $_fc_time_grid___min_height;
 
   /* so if height setting is 'auto', .fc-bg stretches to fill height */
 
   table {
     /* don't put outer borders on slats/bg/content/etc */
-    border: 0 hidden transparent;
+    border: $_fc_time_grid_table___border;
   }
 
   > .fc-bg {
-    z-index: 1;
+    z-index: $_fc_time_grid____fc_bg___z_index;
   }
 
   .fc-slats, > hr {
     /* the <hr> AgendaView injects when grid is shorter than scroller */
-    position: relative;
-    z-index: 2;
+    position: $_fc_time_grid__fc_slats___fc_time_grid___hr___position;
+    z-index: $_fc_time_grid__fc_slats___fc_time_grid___hr___z_index;
   }
 
   .fc-bgevent-skeleton, .fc-content-skeleton {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+    position: $_fc_time_grid__fc_bgevent_skeleton___fc_time_grid__fc_content_skeleton___position;
+    top: $_fc_time_grid__fc_bgevent_skeleton___fc_time_grid__fc_content_skeleton___top;
+    left: $_fc_time_grid__fc_bgevent_skeleton___fc_time_grid__fc_content_skeleton___left;
+    right: $_fc_time_grid__fc_bgevent_skeleton___fc_time_grid__fc_content_skeleton___right;
   }
 
   .fc-bgevent-skeleton {
-    z-index: 3;
+    z-index: $_fc_time_grid__fc_bgevent_skeleton___z_index;
   }
 
   .fc-highlight-skeleton {
-    z-index: 4;
+    z-index: $_fc_time_grid__fc_highlight_skeleton___z_index;
   }
 
   .fc-content-skeleton {
-    z-index: 5;
+    z-index: $_fc_time_grid__fc_content_skeleton___z_index;
   }
 
   .fc-helper-skeleton {
-    z-index: 6;
+    z-index: $_fc_time_grid__fc_helper_skeleton___z_index;
   }
 }
 
@@ -956,19 +1283,19 @@ a.fc-more {
 
 .fc-slats {
   td {
-    height: 1.5em;
-    border-bottom: 0;
+    height: $_fc_slats_td___height;
+    border-bottom: $_fc_slats_td___border_bottom;
 
     /* each cell is responsible for its top border */
   }
 
   .fc-minor td {
-    border-top-style: dotted;
+    border-top-style: $_fc_slats__fc_minor_td___border_top_style;
   }
 
   .ui-widget-content {
     /* for jqui theme */
-    background: none;
+    background: $_fc_slats__ui_widget_content___background;
 
     /* see through to fc-bg */
   }
@@ -980,22 +1307,22 @@ a.fc-more {
 .fc-time-grid {
   .fc-highlight-container {
     /* a div within a cell within the fc-highlight-skeleton */
-    position: relative;
+    position: $_fc_time_grid__fc_highlight_container___position;
 
     /* scopes the left/right of the fc-highlight to be in the column */
   }
 
   .fc-highlight {
-    position: absolute;
-    left: 0;
-    right: 0;
+    position: $_fc_time_grid__fc_highlight___position;
+    left: $_fc_time_grid__fc_highlight___left;
+    right: $_fc_time_grid__fc_highlight___right;
 
     /* top and bottom will be in by JS */
   }
 
   .fc-event-container, .fc-bgevent-container {
     /* a div within a cell within the fc-bgevent-skeleton */
-    position: relative;
+    position: $_fc_time_grid__fc_event_container___fc_time_grid__fc_bgevent_container___position;
   }
 }
 
@@ -1004,31 +1331,31 @@ a.fc-more {
 
 .fc-ltr .fc-time-grid .fc-event-container {
   /* space on the sides of events for LTR (default) */
-  margin: 0 2.5% 0 2px;
+  margin: $_fc_ltr__fc_time_grid__fc_event_container___margin;
 }
 
 .fc-rtl .fc-time-grid .fc-event-container {
   /* space on the sides of events for RTL */
-  margin: 0 2px 0 2.5%;
+  margin: $_fc_rtl__fc_time_grid__fc_event_container___margin;
 }
 
 .fc-time-grid {
   .fc-event {
-    position: absolute;
-    z-index: 1;
+    position: $_fc_time_grid__fc_event___position;
+    z-index: $_fc_time_grid__fc_event___z_index;
 
     /* scope inner z-index's */
   }
 
   .fc-bgevent {
-    position: absolute;
-    z-index: 1;
+    position: $_fc_time_grid__fc_bgevent___position;
+    z-index: $_fc_time_grid__fc_bgevent___z_index;
 
     /* scope inner z-index's */
 
     /* background events always span full width */
-    left: 0;
-    right: 0;
+    left: $_fc_time_grid__fc_bgevent___left;
+    right: $_fc_time_grid__fc_bgevent___right;
   }
 }
 
@@ -1042,49 +1369,49 @@ be a descendant of the grid when it is being dragged.
   &.fc-not-start {
     /* events that are continuing from another day */
     /* replace space made by the top border with padding */
-    border-top-width: 0;
-    padding-top: 1px;
+    border-top-width: $_fc_time_grid_event_fc_not_start___border_top_width;
+    padding-top: $_fc_time_grid_event_fc_not_start___padding_top;
 
     /* remove top rounded corners */
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+    border-top-left-radius: $_fc_time_grid_event_fc_not_start___border_top_left_radius;
+    border-top-right-radius: $_fc_time_grid_event_fc_not_start___border_top_right_radius;
   }
 
   &.fc-not-end {
     /* replace space made by the top border with padding */
-    border-bottom-width: 0;
-    padding-bottom: 1px;
+    border-bottom-width: $_fc_time_grid_event_fc_not_end___border_bottom_width;
+    padding-bottom: $_fc_time_grid_event_fc_not_end___padding_bottom;
 
     /* remove bottom rounded corners */
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+    border-bottom-left-radius: $_fc_time_grid_event_fc_not_end___border_bottom_left_radius;
+    border-bottom-right-radius: $_fc_time_grid_event_fc_not_end___border_bottom_right_radius;
   }
 
-  overflow: hidden;
+  overflow: $_fc_time_grid_event___overflow;
 
   /* don't let the bg flow over rounded corners */
 
   > .fc-content {
     /* contains the time and title, but no bg and resizer */
-    position: relative;
-    z-index: 2;
+    position: $_fc_time_grid_event____fc_content___position;
+    z-index: $_fc_time_grid_event____fc_content___z_index;
 
     /* above the bg */
   }
 
   .fc-time, .fc-title {
-    padding: 0 1px;
+    padding: $_fc_time_grid_event__fc_time___fc_time_grid_event__fc_title___padding;
   }
 
   .fc-time {
-    font-size: .85em;
-    white-space: nowrap;
+    font-size: $_fc_time_grid_event__fc_time___font_size;
+    white-space: $_fc_time_grid_event__fc_time___white_space;
   }
 
   .fc-bg {
-    z-index: 1;
-    background: #fff;
-    opacity: .25;
+    z-index: $_fc_time_grid_event__fc_bg___z_index;
+    background: $_fc_time_grid_event__fc_bg___background;
+    opacity: $_fc_time_grid_event__fc_bg___opacity;
     filter: alpha(opacity = 25);
 
     /* for IE */
@@ -1093,63 +1420,63 @@ be a descendant of the grid when it is being dragged.
   &.fc-short {
     .fc-content {
       /* don't wrap to second line (now that contents will be inline) */
-      white-space: nowrap;
+      white-space: $_fc_time_grid_event_fc_short__fc_content___white_space;
     }
 
     .fc-time, .fc-title {
       /* put the time and title on the same line */
-      display: inline-block;
-      vertical-align: top;
+      display: $_fc_time_grid_event_fc_short__fc_time___fc_time_grid_event_fc_short__fc_title___display;
+      vertical-align: $_fc_time_grid_event_fc_short__fc_time___fc_time_grid_event_fc_short__fc_title___vertical_align;
     }
 
     .fc-time {
       span {
-        display: none;
+        display: $_fc_time_grid_event_fc_short__fc_time_span___display;
 
         /* don't display the full time text... */
       }
 
       &:before {
-        content: attr(data-start);
+        content: $_fc_time_grid_event_fc_short__fc_time_before___content;
 
         /* ...instead, display only the start time */
       }
 
       &:after {
-        content: "\000A0-\000A0";
+        content: $_fc_time_grid_event_fc_short__fc_time_after___content;
 
         /* seperate with a dash, wrapped in nbsp's */
       }
     }
 
     .fc-title {
-      font-size: .85em;
+      font-size: $_fc_time_grid_event_fc_short__fc_title___font_size;
 
       /* make the title text the same size as the time */
-      padding: 0;
+      padding: $_fc_time_grid_event_fc_short__fc_title___padding;
 
       /* undo padding from above */
     }
   }
 
   .fc-resizer {
-    position: absolute;
-    z-index: 3;
+    position: $_fc_time_grid_event__fc_resizer___position;
+    z-index: $_fc_time_grid_event__fc_resizer___z_index;
 
     /* above content */
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 8px;
-    overflow: hidden;
-    line-height: 8px;
-    font-size: 11px;
-    font-family: monospace;
-    text-align: center;
-    cursor: s-resize;
+    left: $_fc_time_grid_event__fc_resizer___left;
+    right: $_fc_time_grid_event__fc_resizer___right;
+    bottom: $_fc_time_grid_event__fc_resizer___bottom;
+    height: $_fc_time_grid_event__fc_resizer___height;
+    overflow: $_fc_time_grid_event__fc_resizer___overflow;
+    line-height: $_fc_time_grid_event__fc_resizer___line_height;
+    font-size: $_fc_time_grid_event__fc_resizer___font_size;
+    font-family: $_fc_time_grid_event__fc_resizer___font_family;
+    text-align: $_fc_time_grid_event__fc_resizer___text_align;
+    cursor: $_fc_time_grid_event__fc_resizer___cursor;
 
     &:after {
-      content: "=";
+      content: $_fc_time_grid_event__fc_resizer_after___content;
     }
   }
 }

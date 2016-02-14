@@ -117,7 +117,8 @@ module.exports = (grunt) ->
           'build/css/meta.min.css': 'scss/meta.scss'
       primefaces:
         options:
-          sass_options
+          sourcemap: 'inline'
+          style: 'expanded'
         files:
           'build/css/primefaces.min.css': 'scss/primefaces/primefaces.scss'
 

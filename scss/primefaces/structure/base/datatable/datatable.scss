@@ -1,238 +1,364 @@
+$_ui_datatable_table___border_collapse: collapse !default;
+$_ui_datatable_table___width: 100% !default;
+$_ui_datatable_table___table_layout: fixed !default;
+$_ui_datatable_tablewrapper___overflow: auto !default;
+$_ui_datatable__ui_datatable_header___ui_datatable__ui_datatable_footer___text_align: center !default;
+$_ui_datatable__ui_datatable_header___ui_datatable__ui_datatable_footer___padding: 4px 10px !default;
+$_ui_datatable__ui_datatable_header___border_bottom: 0px none !default;
+$_ui_datatable__ui_datatable_footer___border_top: 0px none !default;
+$_ui_datatable_thead_th___ui_datatable_tfoot_td___text_align: center !default;
+$_ui_datatable_thead_th___ui_datatable_tbody_td___padding: 4px 10px !default;
+$_ui_datatable_thead_th___ui_datatable_tbody_td___overflow: hidden !default;
+$_ui_datatable_thead_th___ui_datatable_tbody_td___border_width: 1px !default;
+$_ui_datatable_thead_th___ui_datatable_tbody_td___border_style: solid !default;
+$_ui_datatable_tfoot_td___ui_datatable_tfoot_th___padding: 4px 10px !default;
+$_ui_datatable_tfoot_td___ui_datatable_tfoot_th___overflow: hidden !default;
+$_ui_datatable_tfoot_td___ui_datatable_tfoot_th___border_width: 1px !default;
+$_ui_datatable_tfoot_td___ui_datatable_tfoot_th___border_style: solid !default;
+$_ui_datatable_tbody_ui_datatable_data___outline: 0 !default;
+$_ui_datatable_tbody_td___border_color: inherit !default;
+$_ui_datatable__ui_sortable_column___cursor: pointer !default;
+$_ui_datatable_div_ui_dt_c___position: relative !default;
+$_ui_datatable__ui_sortable_column_icon___display: inline-block !default;
+$_ui_datatable__ui_sortable_column_icon___margin: -3px 0px -3px 2px !default;
+$_ui_datatable__ui_column_filter___display: block !default;
+$_ui_datatable__ui_column_filter___width: 100px !default;
+$_ui_datatable__ui_column_filter___margin: auto !default;
+$_ui_datatable__ui_row_toggler___ui_datatable_tr_ui_state_highlight___cursor: pointer !default;
+$_ui_datatable__ui_selection_column__ui_chkbox_all___display: block !default;
+$_ui_datatable__ui_selection_column__ui_chkbox_all___margin: 0px auto !default;
+$_ui_datatable__ui_selection_column__ui_chkbox_all___width: 16px !default;
+$_ui_datatable__ui_selection_column__ui_chkbox_all___height: 16px !default;
+$_ui_datatable_scrollable_table___ui_datatable_sticky_table___table_layout: fixed !default;
+$_ui_datatable_scrollable_body___overflow: auto !default;
+$_ui_datatable_scrollable_header___ui_datatable_scrollable_footer___overflow: hidden !default;
+$_ui_datatable_scrollable_header___ui_datatable_scrollable_footer___border: 0px none !default;
+$_ui_datatable_scrollable__ui_datatable_scrollable_header___ui_datatable_scrollable__ui_datatable_scrollable_footer___position: relative !default;
+$_ui_datatable_scrollable__ui_datatable_scrollable_header_td___font_weight: normal !default;
+$_ui_datatable_scrollable_body___webkit_scrollbar____webkit_appearance: none !default;
+$_ui_datatable_scrollable_body___webkit_scrollbar___width: 15px !default;
+$_ui_datatable_scrollable_body___webkit_scrollbar___background_color: transparent !default;
+$_ui_datatable_scrollable_body___webkit_scrollbar_thumb___border_radius: 8px !default;
+$_ui_datatable_scrollable_body___webkit_scrollbar_thumb___border: 1px solid white !default;
+$_ui_datatable_scrollable_body___webkit_scrollbar_thumb___background_color: rgba(194, 194, 194, 0.5) !default;
+$_ui_datatable__ui_datatable_scrollable_body___min_height: 0% !default;
+$_ui_datatable__ui_datatable_data_tr_ui_state_hover___border_color: inherit !default;
+$_ui_datatable__ui_datatable_data_tr_ui_state_hover___font_weight: inherit !default;
+$_ui_datatable__ui_datatable_data_tr_ui_state_hover___cursor: pointer !default;
+$_ui_datatable_scrollable_theadclone___height: 0px !default;
+$_ui_datatable_scrollable_theadclone_tr___height: 0px !default;
+$_ui_datatable_scrollable_theadclone_th_ui_state_default___height: 0px !default;
+$_ui_datatable_scrollable_theadclone_th_ui_state_default___border_bottom_width: 0px !default;
+$_ui_datatable_scrollable_theadclone_th_ui_state_default___border_top_width: 0px !default;
+$_ui_datatable_scrollable_theadclone_th_ui_state_default___padding_top: 0px !default;
+$_ui_datatable_scrollable_theadclone_th_ui_state_default___padding_bottom: 0px !default;
+$_ui_datatable_scrollable_theadclone_th_ui_state_default___outline: 0 none !default;
+$_ui_datatable_scrollable_theadclone_th_span_ui_column_title___display: block !default;
+$_ui_datatable_scrollable_theadclone_th_span_ui_column_title___height: 0px !default;
+$_ui_datatable__ui_paginator___padding: 2px !default;
+$_ui_datatable__ui_cell_editor_input___display: none !default;
+$_ui_datatable__ui_row_editing__ui_cell_editor__ui_cell_editor_output___display: none !default;
+$_ui_datatable__ui_row_editing__ui_cell_editor__ui_cell_editor_input___display: block !default;
+$_ui_datatable__ui_row_editor_span___cursor: pointer !default;
+$_ui_datatable__ui_row_editor_span___float: left !default;
+$_ui_datatable__ui_row_editor__ui_icon_pencil___display: inline-block !default;
+$_ui_datatable__ui_row_editing__ui_row_editor__ui_icon_pencil___display: none !default;
+$_ui_datatable__ui_row_editor__ui_icon_check___ui_datatable__ui_row_editor__ui_icon_close___display: none !default;
+$_ui_datatable__ui_row_editing__ui_row_editor__ui_icon_check___ui_datatable__ui_row_editing__ui_row_editor__ui_icon_close___display: inline-block !default;
+$_ui_datatable__ui_datatable_data_tr_ui_row_editing_td_ui_editable_column___ui_datatable__ui_datatable_data_td_ui_cell_editing___padding: 0 !default;
+$_ui_datatable__ui_datatable_data_tr_ui_row_editing_td_ui_editable_column___ui_datatable__ui_datatable_data_td_ui_cell_editing___margin: 0 !default;
+$_ui_datatable__ui_column_resizer___position: absolute !default;
+$_ui_datatable__ui_column_resizer___top: 0px !default;
+$_ui_datatable__ui_column_resizer___right: 0px !default;
+$_ui_datatable__ui_column_resizer___margin: 0 !default;
+$_ui_datatable__ui_column_resizer___width: 8px !default;
+$_ui_datatable__ui_column_resizer___height: 20px !default;
+$_ui_datatable__ui_column_resizer___padding: 0px !default;
+$_ui_datatable__ui_column_resizer___cursor: col-resize !default;
+$_ui_datatable__ui_column_resizer___background_image: url("spacer/dot_clear.gif") !default;
+$_ui_datatable__ui_column_resizer___border: 1px solid transparent !default;
+$_ui_datatable__ui_filter_column__ui_column_resizer___height: 45px !default;
+$_ui_datatable__ui_column_resizer_helper___width: 1px !default;
+$_ui_datatable__ui_column_resizer_helper___position: absolute !default;
+$_ui_datatable__ui_column_resizer_helper___z_index: 10 !default;
+$_ui_datatable__ui_column_resizer_helper___display: none !default;
+$_ui_datatable_resizable___padding_bottom: 1px !default;
+$_ui_datatable_resizable___overflow: auto !default;
+$_ui_datatable_resizable_thead_th___ui_datatable_resizable_tbody_td___ui_datatable_resizable_tfoot_td___white_space: nowrap !default;
+$_ui_datatable_resizable_table___table_layout: fixed !default;
+$_ui_datatable_resizable_th_ui_resizable_column___background_clip: padding-box !default;
+$_ui_datatable_resizable_th_ui_resizable_column___position: relative !default;
+$_ui_datatable_rtl___direction: rtl !default;
+$_ui_datatable_rtl_ui_datatable_thead_th___ui_datatable_rtl_ui_datatable_tfoot_td___text_align: right !default;
+$_ui_datatable_table_ui_datatable_fs___width: auto !default;
+$_ui_datatable__ui_datatable_frozenlayout_left___ui_datatable__ui_datatable_frozenlayout_right___padding: 0 !default;
+$_ui_datatable__ui_datatable_frozenlayout_left___ui_datatable__ui_datatable_frozenlayout_right___border: 0 none !default;
+$_ui_datatable__ui_datatable_frozenlayout_left___ui_datatable__ui_datatable_frozenlayout_right___vertical_align: top !default;
+$_ui_datatable__ui_datatable_frozen_container___margin_right: -1px !default;
+$_ui_datatable_frozen_container__ui_datatable_scrollable_body___overflow: hidden !default;
+$_ui_datatable__ui_datatable_frozen_container__ui_row_toggler___ui_datatable__ui_datatable_frozen_container__ui_row_editor___margin_top: -2px !default;
+$_ui_datatable__ui_datatable_frozen_container__ui_row_toggler___ui_datatable__ui_datatable_frozen_container__ui_row_editor___margin_bottom: -2px !default;
+$_ui_datatable_frozenlayout_right__ui_datatable_empty_message_td___visibility: hidden !default;
+$_ui_datatable_reflow__ui_datatable_data_td_role__gridcell____ui_column_title___display: none !default;
+$_ui_datatable_reflow__ui_reflow_label___ui_datatable_reflow__ui_reflow_dropdown___margin_bottom: 10px !default;
+$_ui_datatable_reflow__ui_reflow_label___ui_datatable_reflow__ui_reflow_dropdown___display: none !default;
+$_ui_datatable_reflow_thead_th___ui_datatable_reflow_tfoot_td___display: none !default;
+$_ui_datatable_reflow__ui_datatable_data_td_role__gridcell_____text_align: left !default;
+$_ui_datatable_reflow__ui_datatable_data_td_role__gridcell_____display: block !default;
+$_ui_datatable_reflow__ui_datatable_data_td_role__gridcell_____border: 0px none !default;
+$_ui_datatable_reflow__ui_datatable_data_td_role__gridcell_____width: 100% !default;
+$_ui_datatable_reflow__ui_datatable_data_td_role__gridcell______webkit_box_sizing: border-box !default;
+$_ui_datatable_reflow__ui_datatable_data_td_role__gridcell______moz_box_sizing: border-box !default;
+$_ui_datatable_reflow__ui_datatable_data_td_role__gridcell_____box_sizing: border-box !default;
+$_ui_datatable_reflow__ui_datatable_data_td_role__gridcell_____float: left !default;
+$_ui_datatable_reflow__ui_datatable_data_td_role__gridcell_____clear: left !default;
+$_ui_datatable_reflow__ui_datatable_data_ui_widget_content___border: 0px none !default;
+$_ui_datatable_reflow__ui_datatable_data_tr_ui_widget_content___border_left: 0px none !default;
+$_ui_datatable_reflow__ui_datatable_data_tr_ui_widget_content___border_right: 0px none !default;
+$_ui_datatable_reflow__ui_datatable_data_td_role__gridcell____ui_column_title___padding: .4em !default;
+$_ui_datatable_reflow__ui_datatable_data_td_role__gridcell____ui_column_title___min_width: 30% !default;
+$_ui_datatable_reflow__ui_datatable_data_td_role__gridcell____ui_column_title___display: inline-block !default;
+$_ui_datatable_reflow__ui_datatable_data_td_role__gridcell____ui_column_title___margin: -.4em 1em -.4em -.4em !default;
+$_ui_datatable_reflow__ui_reflow_label___display: inline-block !default;
+$_ui_datatable_reflow__ui_reflow_dropdown___display: inline-block !default;
+$_ui_datatable_reflow__ui_reflow_dropdown___margin_left: 5px !default;
+$_ui_datatable_reflow__ui_reflow_dropdown___border_top_left_radius: 3px !default;
+$_ui_datatable_reflow__ui_reflow_dropdown___border_bottom_left_radius: 3px !default;
 .ui-datatable table {
-  border-collapse: collapse;
-  width: 100%;
-  table-layout: fixed;
+  border-collapse: $_ui_datatable_table___border_collapse;
+  width: $_ui_datatable_table___width;
+  table-layout: $_ui_datatable_table___table_layout;
 }
 
 .ui-datatable-tablewrapper {
-  overflow: auto;
+  overflow: $_ui_datatable_tablewrapper___overflow;
 }
 
 .ui-datatable {
   .ui-datatable-header, .ui-datatable-footer {
-    text-align: center;
-    padding: 4px 10px;
+    text-align: $_ui_datatable__ui_datatable_header___ui_datatable__ui_datatable_footer___text_align;
+    padding: $_ui_datatable__ui_datatable_header___ui_datatable__ui_datatable_footer___padding;
   }
 
   .ui-datatable-header {
-    border-bottom: 0px none;
+    border-bottom: $_ui_datatable__ui_datatable_header___border_bottom;
   }
 
   .ui-datatable-footer {
-    border-top: 0px none;
+    border-top: $_ui_datatable__ui_datatable_footer___border_top;
   }
 
   thead th, tfoot td {
-    text-align: center;
+    text-align: $_ui_datatable_thead_th___ui_datatable_tfoot_td___text_align;
   }
 
   thead th, tbody td {
-    padding: 4px 10px;
-    overflow: hidden;
-    border-width: 1px;
-    border-style: solid;
+    padding: $_ui_datatable_thead_th___ui_datatable_tbody_td___padding;
+    overflow: $_ui_datatable_thead_th___ui_datatable_tbody_td___overflow;
+    border-width: $_ui_datatable_thead_th___ui_datatable_tbody_td___border_width;
+    border-style: $_ui_datatable_thead_th___ui_datatable_tbody_td___border_style;
   }
 
   tfoot {
     td, th {
-      padding: 4px 10px;
-      overflow: hidden;
-      border-width: 1px;
-      border-style: solid;
+      padding: $_ui_datatable_tfoot_td___ui_datatable_tfoot_th___padding;
+      overflow: $_ui_datatable_tfoot_td___ui_datatable_tfoot_th___overflow;
+      border-width: $_ui_datatable_tfoot_td___ui_datatable_tfoot_th___border_width;
+      border-style: $_ui_datatable_tfoot_td___ui_datatable_tfoot_th___border_style;
     }
   }
 
   tbody {
     &.ui-datatable-data {
-      outline: 0;
+      outline: $_ui_datatable_tbody_ui_datatable_data___outline;
     }
 
     td {
-      border-color: inherit;
+      border-color: $_ui_datatable_tbody_td___border_color;
     }
   }
 
   .ui-sortable-column {
-    cursor: pointer;
+    cursor: $_ui_datatable__ui_sortable_column___cursor;
   }
 
   div.ui-dt-c {
-    position: relative;
+    position: $_ui_datatable_div_ui_dt_c___position;
   }
 
   .ui-sortable-column-icon {
-    display: inline-block;
-    margin: -3px 0px -3px 2px;
+    display: $_ui_datatable__ui_sortable_column_icon___display;
+    margin: $_ui_datatable__ui_sortable_column_icon___margin;
   }
 
   .ui-column-filter {
-    display: block;
-    width: 100px;
-    margin: auto;
+    display: $_ui_datatable__ui_column_filter___display;
+    width: $_ui_datatable__ui_column_filter___width;
+    margin: $_ui_datatable__ui_column_filter___margin;
   }
 
   .ui-row-toggler, tr.ui-state-highlight {
-    cursor: pointer;
+    cursor: $_ui_datatable__ui_row_toggler___ui_datatable_tr_ui_state_highlight___cursor;
   }
 
   .ui-selection-column .ui-chkbox-all {
-    display: block;
-    margin: 0px auto;
-    width: 16px;
-    height: 16px;
+    display: $_ui_datatable__ui_selection_column__ui_chkbox_all___display;
+    margin: $_ui_datatable__ui_selection_column__ui_chkbox_all___margin;
+    width: $_ui_datatable__ui_selection_column__ui_chkbox_all___width;
+    height: $_ui_datatable__ui_selection_column__ui_chkbox_all___height;
   }
 }
 
 /* Scrollable */
 
 .ui-datatable-scrollable table, .ui-datatable-sticky table {
-  table-layout: fixed;
+  table-layout: $_ui_datatable_scrollable_table___ui_datatable_sticky_table___table_layout;
 }
 
 .ui-datatable-scrollable-body {
-  overflow: auto;
+  overflow: $_ui_datatable_scrollable_body___overflow;
 }
 
 .ui-datatable-scrollable-header, .ui-datatable-scrollable-footer {
-  overflow: hidden;
-  border: 0px none;
+  overflow: $_ui_datatable_scrollable_header___ui_datatable_scrollable_footer___overflow;
+  border: $_ui_datatable_scrollable_header___ui_datatable_scrollable_footer___border;
 }
 
 .ui-datatable-scrollable {
   .ui-datatable-scrollable-header, .ui-datatable-scrollable-footer {
-    position: relative;
+    position: $_ui_datatable_scrollable__ui_datatable_scrollable_header___ui_datatable_scrollable__ui_datatable_scrollable_footer___position;
   }
 
   .ui-datatable-scrollable-header td {
-    font-weight: normal;
+    font-weight: $_ui_datatable_scrollable__ui_datatable_scrollable_header_td___font_weight;
   }
 }
 
 .ui-datatable-scrollable-body {
   &::-webkit-scrollbar {
-    -webkit-appearance: none;
-    width: 15px;
-    background-color: transparent;
+    -webkit-appearance: $_ui_datatable_scrollable_body___webkit_scrollbar____webkit_appearance;
+    width: $_ui_datatable_scrollable_body___webkit_scrollbar___width;
+    background-color: $_ui_datatable_scrollable_body___webkit_scrollbar___background_color;
   }
 
   &::-webkit-scrollbar-thumb {
-    border-radius: 8px;
-    border: 1px solid white;
-    background-color: rgba(194, 194, 194, 0.5);
+    border-radius: $_ui_datatable_scrollable_body___webkit_scrollbar_thumb___border_radius;
+    border: $_ui_datatable_scrollable_body___webkit_scrollbar_thumb___border;
+    background-color: $_ui_datatable_scrollable_body___webkit_scrollbar_thumb___background_color;
   }
 }
 
 .ui-datatable {
   .ui-datatable-scrollable-body {
-    min-height: 0%;
+    min-height: $_ui_datatable__ui_datatable_scrollable_body___min_height;
   }
 
   .ui-datatable-data tr.ui-state-hover {
-    border-color: inherit;
-    font-weight: inherit;
-    cursor: pointer;
+    border-color: $_ui_datatable__ui_datatable_data_tr_ui_state_hover___border_color;
+    font-weight: $_ui_datatable__ui_datatable_data_tr_ui_state_hover___font_weight;
+    cursor: $_ui_datatable__ui_datatable_data_tr_ui_state_hover___cursor;
   }
 }
 
 .ui-datatable-scrollable-theadclone {
-  height: 0px;
+  height: $_ui_datatable_scrollable_theadclone___height;
 
   tr {
-    height: 0px;
+    height: $_ui_datatable_scrollable_theadclone_tr___height;
   }
 
   th {
     &.ui-state-default {
-      height: 0px;
-      border-bottom-width: 0px;
-      border-top-width: 0px;
-      padding-top: 0px;
-      padding-bottom: 0px;
-      outline: 0 none;
+      height: $_ui_datatable_scrollable_theadclone_th_ui_state_default___height;
+      border-bottom-width: $_ui_datatable_scrollable_theadclone_th_ui_state_default___border_bottom_width;
+      border-top-width: $_ui_datatable_scrollable_theadclone_th_ui_state_default___border_top_width;
+      padding-top: $_ui_datatable_scrollable_theadclone_th_ui_state_default___padding_top;
+      padding-bottom: $_ui_datatable_scrollable_theadclone_th_ui_state_default___padding_bottom;
+      outline: $_ui_datatable_scrollable_theadclone_th_ui_state_default___outline;
     }
 
     span.ui-column-title {
-      display: block;
-      height: 0px;
+      display: $_ui_datatable_scrollable_theadclone_th_span_ui_column_title___display;
+      height: $_ui_datatable_scrollable_theadclone_th_span_ui_column_title___height;
     }
   }
 }
 
 .ui-datatable {
   .ui-paginator {
-    padding: 2px;
+    padding: $_ui_datatable__ui_paginator___padding;
   }
 
   .ui-cell-editor-input {
-    display: none;
+    display: $_ui_datatable__ui_cell_editor_input___display;
   }
 
   .ui-row-editing .ui-cell-editor {
     .ui-cell-editor-output {
-      display: none;
+      display: $_ui_datatable__ui_row_editing__ui_cell_editor__ui_cell_editor_output___display;
     }
 
     .ui-cell-editor-input {
-      display: block;
+      display: $_ui_datatable__ui_row_editing__ui_cell_editor__ui_cell_editor_input___display;
     }
   }
 
   .ui-row-editor {
     span {
-      cursor: pointer;
-      float: left;
+      cursor: $_ui_datatable__ui_row_editor_span___cursor;
+      float: $_ui_datatable__ui_row_editor_span___float;
     }
 
     .ui-icon-pencil {
-      display: inline-block;
+      display: $_ui_datatable__ui_row_editor__ui_icon_pencil___display;
     }
   }
 
   .ui-row-editing .ui-row-editor .ui-icon-pencil {
-    display: none;
+    display: $_ui_datatable__ui_row_editing__ui_row_editor__ui_icon_pencil___display;
   }
 
   .ui-row-editor {
     .ui-icon-check, .ui-icon-close {
-      display: none;
+      display: $_ui_datatable__ui_row_editor__ui_icon_check___ui_datatable__ui_row_editor__ui_icon_close___display;
     }
   }
 
   .ui-row-editing .ui-row-editor {
     .ui-icon-check, .ui-icon-close {
-      display: inline-block;
+      display: $_ui_datatable__ui_row_editing__ui_row_editor__ui_icon_check___ui_datatable__ui_row_editing__ui_row_editor__ui_icon_close___display;
     }
   }
 
   .ui-datatable-data {
     tr.ui-row-editing td.ui-editable-column, td.ui-cell-editing {
-      padding: 0;
-      margin: 0;
+      padding: $_ui_datatable__ui_datatable_data_tr_ui_row_editing_td_ui_editable_column___ui_datatable__ui_datatable_data_td_ui_cell_editing___padding;
+      margin: $_ui_datatable__ui_datatable_data_tr_ui_row_editing_td_ui_editable_column___ui_datatable__ui_datatable_data_td_ui_cell_editing___margin;
     }
   }
 
   .ui-column-resizer {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    margin: 0;
-    width: 8px;
-    height: 20px;
-    padding: 0px;
-    cursor: col-resize;
-    background-image: url("spacer/dot_clear.gif");
-    border: 1px solid transparent;
+    position: $_ui_datatable__ui_column_resizer___position;
+    top: $_ui_datatable__ui_column_resizer___top;
+    right: $_ui_datatable__ui_column_resizer___right;
+    margin: $_ui_datatable__ui_column_resizer___margin;
+    width: $_ui_datatable__ui_column_resizer___width;
+    height: $_ui_datatable__ui_column_resizer___height;
+    padding: $_ui_datatable__ui_column_resizer___padding;
+    cursor: $_ui_datatable__ui_column_resizer___cursor;
+    background-image: $_ui_datatable__ui_column_resizer___background_image;
+    border: $_ui_datatable__ui_column_resizer___border;
   }
 
   .ui-filter-column .ui-column-resizer {
-    height: 45px;
+    height: $_ui_datatable__ui_filter_column__ui_column_resizer___height;
   }
 
   .ui-column-resizer-helper {
-    width: 1px;
-    position: absolute;
-    z-index: 10;
-    display: none;
+    width: $_ui_datatable__ui_column_resizer_helper___width;
+    position: $_ui_datatable__ui_column_resizer_helper___position;
+    z-index: $_ui_datatable__ui_column_resizer_helper___z_index;
+    display: $_ui_datatable__ui_column_resizer_helper___display;
   }
 }
 
@@ -241,31 +367,31 @@
 /*resizer */
 
 .ui-datatable-resizable {
-  padding-bottom: 1px;
+  padding-bottom: $_ui_datatable_resizable___padding_bottom;
 
   /*fix for webkit overlow*/
-  overflow: auto;
+  overflow: $_ui_datatable_resizable___overflow;
 
   thead th, tbody td, tfoot td {
-    white-space: nowrap;
+    white-space: $_ui_datatable_resizable_thead_th___ui_datatable_resizable_tbody_td___ui_datatable_resizable_tfoot_td___white_space;
   }
 
   table {
-    table-layout: fixed;
+    table-layout: $_ui_datatable_resizable_table___table_layout;
   }
 
   th.ui-resizable-column {
-    background-clip: padding-box;
-    position: relative;
+    background-clip: $_ui_datatable_resizable_th_ui_resizable_column___background_clip;
+    position: $_ui_datatable_resizable_th_ui_resizable_column___position;
   }
 }
 
 .ui-datatable-rtl {
-  direction: rtl;
+  direction: $_ui_datatable_rtl___direction;
 
   &.ui-datatable {
     thead th, tfoot td {
-      text-align: right;
+      text-align: $_ui_datatable_rtl_ui_datatable_thead_th___ui_datatable_rtl_ui_datatable_tfoot_td___text_align;
     }
   }
 }
@@ -274,93 +400,93 @@
 
 .ui-datatable {
   table.ui-datatable-fs {
-    width: auto;
+    width: $_ui_datatable_table_ui_datatable_fs___width;
   }
 
   .ui-datatable-frozenlayout-left, .ui-datatable-frozenlayout-right {
-    padding: 0;
-    border: 0 none;
-    vertical-align: top;
+    padding: $_ui_datatable__ui_datatable_frozenlayout_left___ui_datatable__ui_datatable_frozenlayout_right___padding;
+    border: $_ui_datatable__ui_datatable_frozenlayout_left___ui_datatable__ui_datatable_frozenlayout_right___border;
+    vertical-align: $_ui_datatable__ui_datatable_frozenlayout_left___ui_datatable__ui_datatable_frozenlayout_right___vertical_align;
   }
 
   .ui-datatable-frozen-container {
-    margin-right: -1px;
+    margin-right: $_ui_datatable__ui_datatable_frozen_container___margin_right;
   }
 }
 
 .ui-datatable-frozen-container .ui-datatable-scrollable-body {
-  overflow: hidden;
+  overflow: $_ui_datatable_frozen_container__ui_datatable_scrollable_body___overflow;
 }
 
 .ui-datatable .ui-datatable-frozen-container {
   .ui-row-toggler, .ui-row-editor {
-    margin-top: -2px;
-    margin-bottom: -2px;
+    margin-top: $_ui_datatable__ui_datatable_frozen_container__ui_row_toggler___ui_datatable__ui_datatable_frozen_container__ui_row_editor___margin_top;
+    margin-bottom: $_ui_datatable__ui_datatable_frozen_container__ui_row_toggler___ui_datatable__ui_datatable_frozen_container__ui_row_editor___margin_bottom;
   }
 }
 
 .ui-datatable-frozenlayout-right .ui-datatable-empty-message td {
-  visibility: hidden;
+  visibility: $_ui_datatable_frozenlayout_right__ui_datatable_empty_message_td___visibility;
 }
 
 /** Reflow **/
 
 .ui-datatable-reflow {
   .ui-datatable-data td[role="gridcell"] .ui-column-title {
-    display: none;
+    display: $_ui_datatable_reflow__ui_datatable_data_td_role__gridcell____ui_column_title___display;
   }
 
   .ui-reflow-label, .ui-reflow-dropdown {
-    margin-bottom: 10px;
-    display: none;
+    margin-bottom: $_ui_datatable_reflow__ui_reflow_label___ui_datatable_reflow__ui_reflow_dropdown___margin_bottom;
+    display: $_ui_datatable_reflow__ui_reflow_label___ui_datatable_reflow__ui_reflow_dropdown___display;
   }
 }
 
 @media (max-width: 640px) {
   .ui-datatable-reflow {
     thead th, tfoot td {
-      display: none;
+      display: $_ui_datatable_reflow_thead_th___ui_datatable_reflow_tfoot_td___display;
     }
 
     .ui-datatable-data {
       td[role="gridcell"] {
-        text-align: left;
-        display: block;
-        border: 0px none;
-        width: 100%;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        float: left;
-        clear: left;
+        text-align: $_ui_datatable_reflow__ui_datatable_data_td_role__gridcell_____text_align;
+        display: $_ui_datatable_reflow__ui_datatable_data_td_role__gridcell_____display;
+        border: $_ui_datatable_reflow__ui_datatable_data_td_role__gridcell_____border;
+        width: $_ui_datatable_reflow__ui_datatable_data_td_role__gridcell_____width;
+        -webkit-box-sizing: $_ui_datatable_reflow__ui_datatable_data_td_role__gridcell______webkit_box_sizing;
+        -moz-box-sizing: $_ui_datatable_reflow__ui_datatable_data_td_role__gridcell______moz_box_sizing;
+        box-sizing: $_ui_datatable_reflow__ui_datatable_data_td_role__gridcell_____box_sizing;
+        float: $_ui_datatable_reflow__ui_datatable_data_td_role__gridcell_____float;
+        clear: $_ui_datatable_reflow__ui_datatable_data_td_role__gridcell_____clear;
       }
 
       &.ui-widget-content {
-        border: 0px none;
+        border: $_ui_datatable_reflow__ui_datatable_data_ui_widget_content___border;
       }
 
       tr.ui-widget-content {
-        border-left: 0px none;
-        border-right: 0px none;
+        border-left: $_ui_datatable_reflow__ui_datatable_data_tr_ui_widget_content___border_left;
+        border-right: $_ui_datatable_reflow__ui_datatable_data_tr_ui_widget_content___border_right;
       }
 
       td[role="gridcell"] .ui-column-title {
-        padding: .4em;
-        min-width: 30%;
-        display: inline-block;
-        margin: -.4em 1em -.4em -.4em;
+        padding: $_ui_datatable_reflow__ui_datatable_data_td_role__gridcell____ui_column_title___padding;
+        min-width: $_ui_datatable_reflow__ui_datatable_data_td_role__gridcell____ui_column_title___min_width;
+        display: $_ui_datatable_reflow__ui_datatable_data_td_role__gridcell____ui_column_title___display;
+        margin: $_ui_datatable_reflow__ui_datatable_data_td_role__gridcell____ui_column_title___margin;
       }
     }
 
     .ui-reflow-label {
-      display: inline-block;
+      display: $_ui_datatable_reflow__ui_reflow_label___display;
     }
 
     .ui-reflow-dropdown {
-      display: inline-block;
-      margin-left: 5px;
-      border-top-left-radius: 3px;
-      border-bottom-left-radius: 3px;
+      display: $_ui_datatable_reflow__ui_reflow_dropdown___display;
+      margin-left: $_ui_datatable_reflow__ui_reflow_dropdown___margin_left;
+      border-top-left-radius: $_ui_datatable_reflow__ui_reflow_dropdown___border_top_left_radius;
+      border-bottom-left-radius: $_ui_datatable_reflow__ui_reflow_dropdown___border_bottom_left_radius;
     }
   }
 }

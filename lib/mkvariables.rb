@@ -30,8 +30,10 @@ result.each do |node|
   if node.is_a? Sass::Tree::RuleNode
     base_rule_name = '$' + node.resolved_rules.to_s.gsub(/\W/, '_')
     node.children.each do |child|
-    	rule_name = base_rule_name + '___' + child.resolved_name.gsub(/\W/, '_');
-    	variables << Rule.new(child.line, rule_name, child.resolved_value)
+    	if child.is_a? Sass::Tree::PropNode
+	    	rule_name = base_rule_name + '___' + child.resolved_name.gsub(/\W/, '_');
+	    	variables << Rule.new(child.line, rule_name, child.resolved_value)
+	    end
     end
   end
 end

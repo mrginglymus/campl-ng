@@ -1,139 +1,204 @@
+$button_keypad_trigger___width: 25px !default;
+$button_keypad_trigger___padding: 0px !default;
+$img_keypad_trigger___margin: 2px !default;
+$img_keypad_trigger___vertical_align: middle !default;
+$_keypad_div___display: none !default;
+$_keypad_div___z_index: 10 !default;
+$_keypad_div___margin: 0 !default;
+$_keypad_div___padding: 0 !default;
+$_keypad_keyentry___display: none !default;
+$_keypad_inline___background_color: #f4f4f4 !default;
+$_keypad_inline___border: 1px solid #888 !default;
+$_keypad_inline___border_radius: 4px !default;
+$_keypad_inline____moz_border_radius: 4px !default;
+$_keypad_inline____webkit_border_radius: 4px !default;
+$_keypad_disabled___position: absolute !default;
+$_keypad_disabled___z_index: 100 !default;
+$_keypad_disabled___background_color: white !default;
+$_keypad_disabled___opacity: 0.5 !default;
+$_keypad_disabled___filter: alpha(opacity=50) !default;
+$_keypad_rtl___direction: rtl !default;
+$_keypad_prompt___clear: both !default;
+$_keypad_prompt___width: 100% !default;
+$_keypad_prompt___text_align: center !default;
+$_keypad_row___clear: both !default;
+$_keypad_row___float: left !default;
+$_keypad_row___width: 100% !default;
+$_keypad_space___float: left !default;
+$_keypad_space___margin: 2px !default;
+$_keypad_space___width: 24px !default;
+$__html__keypad_space___margin: 0px !default;
+$__html__keypad_space___width: 28px !default;
+$_keypad_half_space___float: left !default;
+$_keypad_half_space___margin: 1px !default;
+$_keypad_half_space___width: 12px !default;
+$__html__keypad_half_space___margin: 0px !default;
+$__html__keypad_half_space___width: 14px !default;
+$_keypad_key___float: left !default;
+$_keypad_key___margin: 2px !default;
+$_keypad_key___padding: 0px !default;
+$_keypad_key___width: 24px !default;
+$_keypad_key___background_color: #f4f4f4 !default;
+$_keypad_key___border_radius: 4px !default;
+$_keypad_key____moz_border_radius: 4px !default;
+$_keypad_key____webkit_border_radius: 4px !default;
+$_keypad_key___text_align: center !default;
+$_keypad_key___cursor: pointer !default;
+$_keypad_key_disabled____border: 2px outset !default;
+$_keypad_spacebar___width: 164px !default;
+$_keypad_enter___width: 52px !default;
+$_keypad_clear___keypad_back___keypad_close___keypad_shift___width: 52px !default;
+$_keypad_clear___keypad_back___keypad_close___keypad_shift___color: #fff !default;
+$_keypad_clear___keypad_back___keypad_close___keypad_shift___font_weight: bold !default;
+$_keypad_clear___background_color: #a00 !default;
+$_keypad_back___background_color: #00a !default;
+$_keypad_close___background_color: #0a0 !default;
+$_keypad_shift___background_color: #0aa !default;
+$_keypad_cover___display: none !default;
+$_keypad_cover___display____: block !default;
+$_keypad_cover___position: absolute !default;
+$_keypad_cover___z_index: -1 !default;
+$_keypad_cover___filter: mask() !default;
+$_keypad_cover___top: -4px !default;
+$_keypad_cover___left: -4px !default;
+$_keypad_cover___width: 125px !default;
+$_keypad_cover___height: 200px !default;
 /* Main style sheet for jQuery Keypad v1.2.4 */
 
 button.keypad-trigger {
-  width: 25px;
-  padding: 0px;
+  width: $button_keypad_trigger___width;
+  padding: $button_keypad_trigger___padding;
 }
 
 img.keypad-trigger {
-  margin: 2px;
-  vertical-align: middle;
+  margin: $img_keypad_trigger___margin;
+  vertical-align: $img_keypad_trigger___vertical_align;
 }
 
 #keypad-div {
-  display: none;
-  z-index: 10;
-  margin: 0;
-  padding: 0;
+  display: $_keypad_div___display;
+  z-index: $_keypad_div___z_index;
+  margin: $_keypad_div___margin;
+  padding: $_keypad_div___padding;
 }
 
 .keypad-keyentry {
-  display: none;
+  display: $_keypad_keyentry___display;
 }
 
 .keypad-inline {
-  background-color: #f4f4f4;
-  border: 1px solid #888;
-  border-radius: 4px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
+  background-color: $_keypad_inline___background_color;
+  border: $_keypad_inline___border;
+  border-radius: $_keypad_inline___border_radius;
+  -moz-border-radius: $_keypad_inline____moz_border_radius;
+  -webkit-border-radius: $_keypad_inline____webkit_border_radius;
 }
 
 .keypad-disabled {
-  position: absolute;
-  z-index: 100;
-  background-color: white;
-  opacity: 0.5;
+  position: $_keypad_disabled___position;
+  z-index: $_keypad_disabled___z_index;
+  background-color: $_keypad_disabled___background_color;
+  opacity: $_keypad_disabled___opacity;
   filter: alpha(opacity = 50);
 }
 
 .keypad-rtl {
-  direction: rtl;
+  direction: $_keypad_rtl___direction;
 }
 
 .keypad-prompt {
-  clear: both;
-  width: 100%;
-  text-align: center;
+  clear: $_keypad_prompt___clear;
+  width: $_keypad_prompt___width;
+  text-align: $_keypad_prompt___text_align;
 }
 
 .keypad-row {
-  clear: both;
-  float: left;
-  width: 100%;
+  clear: $_keypad_row___clear;
+  float: $_keypad_row___float;
+  width: $_keypad_row___width;
 }
 
 .keypad-space {
-  float: left;
-  margin: 2px;
-  width: 24px;
+  float: $_keypad_space___float;
+  margin: $_keypad_space___margin;
+  width: $_keypad_space___width;
 }
 
 * html .keypad-space {
   /* IE6 */
-  margin: 0px;
-  width: 28px;
+  margin: $__html__keypad_space___margin;
+  width: $__html__keypad_space___width;
 }
 
 .keypad-half-space {
-  float: left;
-  margin: 1px;
-  width: 12px;
+  float: $_keypad_half_space___float;
+  margin: $_keypad_half_space___margin;
+  width: $_keypad_half_space___width;
 }
 
 * html .keypad-half-space {
   /* IE6 */
-  margin: 0px;
-  width: 14px;
+  margin: $__html__keypad_half_space___margin;
+  width: $__html__keypad_half_space___width;
 }
 
 .keypad-key {
-  float: left;
-  margin: 2px;
-  padding: 0px;
-  width: 24px;
-  background-color: #f4f4f4;
-  border-radius: 4px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  text-align: center;
-  cursor: pointer;
+  float: $_keypad_key___float;
+  margin: $_keypad_key___margin;
+  padding: $_keypad_key___padding;
+  width: $_keypad_key___width;
+  background-color: $_keypad_key___background_color;
+  border-radius: $_keypad_key___border_radius;
+  -moz-border-radius: $_keypad_key____moz_border_radius;
+  -webkit-border-radius: $_keypad_key____webkit_border_radius;
+  text-align: $_keypad_key___text_align;
+  cursor: $_keypad_key___cursor;
 
   &[disabled] {
-    border: 2px outset;
+    border: $_keypad_key_disabled____border;
   }
 }
 
 .keypad-key-down {}
 
 .keypad-spacebar {
-  width: 164px;
+  width: $_keypad_spacebar___width;
 }
 
 .keypad-enter {
-  width: 52px;
+  width: $_keypad_enter___width;
 }
 
 .keypad-clear, .keypad-back, .keypad-close, .keypad-shift {
-  width: 52px;
-  color: #fff;
-  font-weight: bold;
+  width: $_keypad_clear___keypad_back___keypad_close___keypad_shift___width;
+  color: $_keypad_clear___keypad_back___keypad_close___keypad_shift___color;
+  font-weight: $_keypad_clear___keypad_back___keypad_close___keypad_shift___font_weight;
 }
 
 .keypad-clear {
-  background-color: #a00;
+  background-color: $_keypad_clear___background_color;
 }
 
 .keypad-back {
-  background-color: #00a;
+  background-color: $_keypad_back___background_color;
 }
 
 .keypad-close {
-  background-color: #0a0;
+  background-color: $_keypad_close___background_color;
 }
 
 .keypad-shift {
-  background-color: #0aa;
+  background-color: $_keypad_shift___background_color;
 }
 
 .keypad-cover {
-  display: none;
-  display/**/: block;
-  position: absolute;
-  z-index: -1;
-  filter: mask();
-  top: -4px;
-  left: -4px;
-  width: 125px;
-  height: 200px;
+  display: $_keypad_cover___display;
+  display/**/: $_keypad_cover___display____;
+  position: $_keypad_cover___position;
+  z-index: $_keypad_cover___z_index;
+  filter: $_keypad_cover___filter;
+  top: $_keypad_cover___top;
+  left: $_keypad_cover___left;
+  width: $_keypad_cover___width;
+  height: $_keypad_cover___height;
 }

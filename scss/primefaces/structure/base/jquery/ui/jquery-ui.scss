@@ -1,3 +1,253 @@
+$_ui_helper_hidden___display: none !default;
+$_ui_helper_hidden_accessible___border: 0 !default;
+$_ui_helper_hidden_accessible___clip: rect(0 0 0 0) !default;
+$_ui_helper_hidden_accessible___height: 0px !default;
+$_ui_helper_hidden_accessible___margin: -1px !default;
+$_ui_helper_hidden_accessible___overflow: hidden !default;
+$_ui_helper_hidden_accessible___padding: 0 !default;
+$_ui_helper_hidden_accessible___position: absolute !default;
+$_ui_helper_hidden_accessible___width: 0px !default;
+$_ui_helper_reset___margin: 0 !default;
+$_ui_helper_reset___padding: 0 !default;
+$_ui_helper_reset___border: 0 !default;
+$_ui_helper_reset___outline: 0 !default;
+$_ui_helper_reset___line_height: 1.3 !default;
+$_ui_helper_reset___text_decoration: none !default;
+$_ui_helper_reset___font_size: 100% !default;
+$_ui_helper_reset___list_style: none !default;
+$_ui_helper_clearfix___display: inline-block !default;
+$_ui_helper_clearfix_after___content: "." !default;
+$_ui_helper_clearfix_after___display: block !default;
+$_ui_helper_clearfix_after___height: 0 !default;
+$_ui_helper_clearfix_after___clear: both !default;
+$_ui_helper_clearfix_after___visibility: hidden !default;
+$__html__ui_helper_clearfix___height: 1% !default;
+$_ui_helper_clearfix___display: block !default;
+$_ui_helper_zfix___width: 100% !default;
+$_ui_helper_zfix___height: 100% !default;
+$_ui_helper_zfix___top: 0 !default;
+$_ui_helper_zfix___left: 0 !default;
+$_ui_helper_zfix___position: absolute !default;
+$_ui_helper_zfix___opacity: 0 !default;
+$_ui_helper_zfix___filter: Alpha(Opacity=0) !default;
+$_ui_state_disabled___cursor: default !important !default;
+$_ui_icon___display: block !default;
+$_ui_icon___text_indent: -99999px !default;
+$_ui_icon___overflow: hidden !default;
+$_ui_icon___background_repeat: no-repeat !default;
+$_ui_widget_overlay___position: absolute !default;
+$_ui_widget_overlay___top: 0 !default;
+$_ui_widget_overlay___left: 0 !default;
+$_ui_widget_overlay___width: 100% !default;
+$_ui_widget_overlay___height: 100% !default;
+$_ui_resizable___position: relative !default;
+$_ui_resizable_handle___position: absolute !default;
+$_ui_resizable_handle___font_size: 0.1px !default;
+$_ui_resizable_handle___display: block !default;
+$_ui_resizable_disabled__ui_resizable_handle___ui_resizable_autohide__ui_resizable_handle___display: none !default;
+$_ui_resizable_n___cursor: n-resize !default;
+$_ui_resizable_n___height: 7px !default;
+$_ui_resizable_n___width: 100% !default;
+$_ui_resizable_n___top: -5px !default;
+$_ui_resizable_n___left: 0 !default;
+$_ui_resizable_s___cursor: s-resize !default;
+$_ui_resizable_s___height: 7px !default;
+$_ui_resizable_s___width: 100% !default;
+$_ui_resizable_s___bottom: -5px !default;
+$_ui_resizable_s___left: 0 !default;
+$_ui_resizable_e___cursor: e-resize !default;
+$_ui_resizable_e___width: 7px !default;
+$_ui_resizable_e___right: -5px !default;
+$_ui_resizable_e___top: 0 !default;
+$_ui_resizable_e___height: 100% !default;
+$_ui_resizable_w___cursor: w-resize !default;
+$_ui_resizable_w___width: 7px !default;
+$_ui_resizable_w___left: -5px !default;
+$_ui_resizable_w___top: 0 !default;
+$_ui_resizable_w___height: 100% !default;
+$_ui_resizable_se___cursor: se-resize !default;
+$_ui_resizable_se___width: 12px !default;
+$_ui_resizable_se___height: 12px !default;
+$_ui_resizable_se___right: 1px !default;
+$_ui_resizable_se___bottom: 1px !default;
+$_ui_resizable_sw___cursor: sw-resize !default;
+$_ui_resizable_sw___width: 9px !default;
+$_ui_resizable_sw___height: 9px !default;
+$_ui_resizable_sw___left: -5px !default;
+$_ui_resizable_sw___bottom: -5px !default;
+$_ui_resizable_nw___cursor: nw-resize !default;
+$_ui_resizable_nw___width: 9px !default;
+$_ui_resizable_nw___height: 9px !default;
+$_ui_resizable_nw___left: -5px !default;
+$_ui_resizable_nw___top: -5px !default;
+$_ui_resizable_ne___cursor: ne-resize !default;
+$_ui_resizable_ne___width: 9px !default;
+$_ui_resizable_ne___height: 9px !default;
+$_ui_resizable_ne___right: -5px !default;
+$_ui_resizable_ne___top: -5px !default;
+$_ui_selectable_helper___position: absolute !default;
+$_ui_selectable_helper___z_index: 100 !default;
+$_ui_selectable_helper___border: 1px dotted black !default;
+$_ui_slider___position: relative !default;
+$_ui_slider___text_align: left !default;
+$_ui_slider__ui_slider_handle___position: absolute !default;
+$_ui_slider__ui_slider_handle___z_index: 2 !default;
+$_ui_slider__ui_slider_handle___width: 1.2em !default;
+$_ui_slider__ui_slider_handle___height: 1.2em !default;
+$_ui_slider__ui_slider_handle___cursor: default !default;
+$_ui_slider__ui_slider_range___position: absolute !default;
+$_ui_slider__ui_slider_range___z_index: 1 !default;
+$_ui_slider__ui_slider_range___font_size: .7em !default;
+$_ui_slider__ui_slider_range___display: block !default;
+$_ui_slider__ui_slider_range___border: 0 !default;
+$_ui_slider__ui_slider_range___background_position: 0 0 !default;
+$_ui_slider_horizontal___height: .8em !default;
+$_ui_slider_horizontal__ui_slider_handle___top: -.3em !default;
+$_ui_slider_horizontal__ui_slider_handle___margin_left: -.6em !default;
+$_ui_slider_horizontal__ui_slider_range___top: 0 !default;
+$_ui_slider_horizontal__ui_slider_range___height: 100% !default;
+$_ui_slider_horizontal__ui_slider_range_min___left: 0 !default;
+$_ui_slider_horizontal__ui_slider_range_max___right: 0 !default;
+$_ui_slider_vertical___width: .8em !default;
+$_ui_slider_vertical___height: 100px !default;
+$_ui_slider_vertical__ui_slider_handle___left: -.3em !default;
+$_ui_slider_vertical__ui_slider_handle___margin_left: 0 !default;
+$_ui_slider_vertical__ui_slider_handle___margin_bottom: -.6em !default;
+$_ui_slider_vertical__ui_slider_range___left: 0 !default;
+$_ui_slider_vertical__ui_slider_range___width: 100% !default;
+$_ui_slider_vertical__ui_slider_range_min___bottom: 0 !default;
+$_ui_slider_vertical__ui_slider_range_max___top: 0 !default;
+$_ui_datepicker___width: 17em !default;
+$_ui_datepicker___padding: .2em .2em 0 !default;
+$_ui_datepicker___display: none !default;
+$_ui_datepicker__ui_datepicker_header___position: relative !default;
+$_ui_datepicker__ui_datepicker_header___padding: .2em 0 !default;
+$_ui_datepicker__ui_datepicker_prev___ui_datepicker__ui_datepicker_next___position: absolute !default;
+$_ui_datepicker__ui_datepicker_prev___ui_datepicker__ui_datepicker_next___top: 2px !default;
+$_ui_datepicker__ui_datepicker_prev___ui_datepicker__ui_datepicker_next___width: 1.8em !default;
+$_ui_datepicker__ui_datepicker_prev___ui_datepicker__ui_datepicker_next___height: 1.8em !default;
+$_ui_datepicker__ui_datepicker_prev_hover___ui_datepicker__ui_datepicker_next_hover___top: 1px !default;
+$_ui_datepicker__ui_datepicker_prev___left: 2px !default;
+$_ui_datepicker__ui_datepicker_next___right: 2px !default;
+$_ui_datepicker__ui_datepicker_prev_hover___left: 1px !default;
+$_ui_datepicker__ui_datepicker_next_hover___right: 1px !default;
+$_ui_datepicker__ui_datepicker_prev_span___ui_datepicker__ui_datepicker_next_span___display: block !default;
+$_ui_datepicker__ui_datepicker_prev_span___ui_datepicker__ui_datepicker_next_span___position: absolute !default;
+$_ui_datepicker__ui_datepicker_prev_span___ui_datepicker__ui_datepicker_next_span___left: 50% !default;
+$_ui_datepicker__ui_datepicker_prev_span___ui_datepicker__ui_datepicker_next_span___margin_left: -8px !default;
+$_ui_datepicker__ui_datepicker_prev_span___ui_datepicker__ui_datepicker_next_span___top: 50% !default;
+$_ui_datepicker__ui_datepicker_prev_span___ui_datepicker__ui_datepicker_next_span___margin_top: -8px !default;
+$_ui_datepicker__ui_datepicker_title___margin: 0 2.3em !default;
+$_ui_datepicker__ui_datepicker_title___line_height: 1.8em !default;
+$_ui_datepicker__ui_datepicker_title___text_align: center !default;
+$_ui_datepicker__ui_datepicker_title_select___font_size: 1em !default;
+$_ui_datepicker__ui_datepicker_title_select___margin: 1px 0 !default;
+$_ui_datepicker_select_ui_datepicker_month_year___width: 100% !default;
+$_ui_datepicker_select_ui_datepicker_month___ui_datepicker_select_ui_datepicker_year___width: 49% !default;
+$_ui_datepicker_table___width: 100% !default;
+$_ui_datepicker_table___font_size: .9em !default;
+$_ui_datepicker_table___border_collapse: collapse !default;
+$_ui_datepicker_table___margin: 0 0 .4em !default;
+$_ui_datepicker_th___padding: .7em .3em !default;
+$_ui_datepicker_th___text_align: center !default;
+$_ui_datepicker_th___font_weight: bold !default;
+$_ui_datepicker_th___border: 0 !default;
+$_ui_datepicker_td___border: 0 !default;
+$_ui_datepicker_td___padding: 1px !default;
+$_ui_datepicker_td_span___ui_datepicker_td_a___display: block !default;
+$_ui_datepicker_td_span___ui_datepicker_td_a___padding: .2em !default;
+$_ui_datepicker_td_span___ui_datepicker_td_a___text_align: right !default;
+$_ui_datepicker_td_span___ui_datepicker_td_a___text_decoration: none !default;
+$_ui_datepicker__ui_datepicker_buttonpane___background_image: none !default;
+$_ui_datepicker__ui_datepicker_buttonpane___margin: .7em 0 0 0 !default;
+$_ui_datepicker__ui_datepicker_buttonpane___padding: 0 .2em !default;
+$_ui_datepicker__ui_datepicker_buttonpane___border_left: 0 !default;
+$_ui_datepicker__ui_datepicker_buttonpane___border_right: 0 !default;
+$_ui_datepicker__ui_datepicker_buttonpane___border_bottom: 0 !default;
+$_ui_datepicker__ui_datepicker_buttonpane_button___float: right !default;
+$_ui_datepicker__ui_datepicker_buttonpane_button___margin: .5em .2em .4em !default;
+$_ui_datepicker__ui_datepicker_buttonpane_button___cursor: pointer !default;
+$_ui_datepicker__ui_datepicker_buttonpane_button___padding: .2em .6em .3em .6em !default;
+$_ui_datepicker__ui_datepicker_buttonpane_button___width: auto !default;
+$_ui_datepicker__ui_datepicker_buttonpane_button___overflow: visible !default;
+$_ui_datepicker__ui_datepicker_buttonpane_button_ui_datepicker_current___float: left !default;
+$_ui_datepicker_ui_datepicker_multi___width: auto !default;
+$_ui_datepicker_multi__ui_datepicker_group___float: left !default;
+$_ui_datepicker_multi__ui_datepicker_group_table___width: 95% !default;
+$_ui_datepicker_multi__ui_datepicker_group_table___margin: 0 auto .4em !default;
+$_ui_datepicker_multi_2__ui_datepicker_group___width: 50% !default;
+$_ui_datepicker_multi_3__ui_datepicker_group___width: 33.3% !default;
+$_ui_datepicker_multi_4__ui_datepicker_group___width: 25% !default;
+$_ui_datepicker_multi__ui_datepicker_group_last__ui_datepicker_header___ui_datepicker_multi__ui_datepicker_group_middle__ui_datepicker_header___border_left_width: 0 !default;
+$_ui_datepicker_multi__ui_datepicker_buttonpane___clear: left !default;
+$_ui_datepicker_row_break___clear: both !default;
+$_ui_datepicker_row_break___width: 100% !default;
+$_ui_datepicker_row_break___font_size: 0em !default;
+$_ui_datepicker_rtl___direction: rtl !default;
+$_ui_datepicker_rtl__ui_datepicker_prev___right: 2px !default;
+$_ui_datepicker_rtl__ui_datepicker_prev___left: auto !default;
+$_ui_datepicker_rtl__ui_datepicker_next___left: 2px !default;
+$_ui_datepicker_rtl__ui_datepicker_next___right: auto !default;
+$_ui_datepicker_rtl__ui_datepicker_prev_hover___right: 1px !default;
+$_ui_datepicker_rtl__ui_datepicker_prev_hover___left: auto !default;
+$_ui_datepicker_rtl__ui_datepicker_next_hover___left: 1px !default;
+$_ui_datepicker_rtl__ui_datepicker_next_hover___right: auto !default;
+$_ui_datepicker_rtl__ui_datepicker_buttonpane___clear: right !default;
+$_ui_datepicker_rtl__ui_datepicker_buttonpane_button___float: left !default;
+$_ui_datepicker_rtl__ui_datepicker_buttonpane_button_ui_datepicker_current___float: right !default;
+$_ui_datepicker_rtl__ui_datepicker_group___float: right !default;
+$_ui_datepicker_rtl__ui_datepicker_group_last__ui_datepicker_header___ui_datepicker_rtl__ui_datepicker_group_middle__ui_datepicker_header___border_right_width: 0 !default;
+$_ui_datepicker_rtl__ui_datepicker_group_last__ui_datepicker_header___ui_datepicker_rtl__ui_datepicker_group_middle__ui_datepicker_header___border_left_width: 1px !default;
+$_ui_datepicker_cover___display: none !default;
+$_ui_datepicker_cover___display____: block !default;
+$_ui_datepicker_cover___position: absolute !default;
+$_ui_datepicker_cover___z_index: -1 !default;
+$_ui_datepicker_cover___filter: mask() !default;
+$_ui_datepicker_cover___top: -4px !default;
+$_ui_datepicker_cover___left: -4px !default;
+$_ui_datepicker_cover___width: 200px !default;
+$_ui_datepicker_cover___height: 200px !default;
+$_ui_timepicker_div__ui_widget_header___margin_bottom: 8px !default;
+$_ui_timepicker_div_dl___text_align: left !default;
+$_ui_timepicker_div_dl_dt___float: left !default;
+$_ui_timepicker_div_dl_dt___clear: left !default;
+$_ui_timepicker_div_dl_dt___padding: 0 0 0 5px !default;
+$_ui_timepicker_div_dl_dd___margin: 0 10px 10px 40% !default;
+$_ui_timepicker_div_td___font_size: 90% !default;
+$_ui_tpicker_grid_label___background: none !default;
+$_ui_tpicker_grid_label___border: none !default;
+$_ui_tpicker_grid_label___margin: 0 !default;
+$_ui_tpicker_grid_label___padding: 0 !default;
+$_ui_timepicker_div__ui_tpicker_unit_hide___display: none !default;
+$_ui_timepicker_div__ui_tpicker_time__ui_tpicker_time_input___background: none !default;
+$_ui_timepicker_div__ui_tpicker_time__ui_tpicker_time_input___color: inherit !default;
+$_ui_timepicker_div__ui_tpicker_time__ui_tpicker_time_input___border: none !default;
+$_ui_timepicker_div__ui_tpicker_time__ui_tpicker_time_input___outline: none !default;
+$_ui_timepicker_div__ui_tpicker_time__ui_tpicker_time_input___border_bottom: solid 1px #555 !default;
+$_ui_timepicker_div__ui_tpicker_time__ui_tpicker_time_input___width: 95% !default;
+$_ui_timepicker_div__ui_tpicker_time__ui_tpicker_time_input_focus___border_bottom_color: #aaa !default;
+$_ui_timepicker_rtl___direction: rtl !default;
+$_ui_timepicker_rtl_dl___text_align: right !default;
+$_ui_timepicker_rtl_dl___padding: 0 5px 0 0 !default;
+$_ui_timepicker_rtl_dl_dt___float: right !default;
+$_ui_timepicker_rtl_dl_dt___clear: right !default;
+$_ui_timepicker_rtl_dl_dd___margin: 0 40% 10px 10px !default;
+$_ui_timepicker_div_ui_timepicker_oneLine___padding_right: 2px !default;
+$_ui_timepicker_div_ui_timepicker_oneLine__ui_tpicker_time___ui_timepicker_div_ui_timepicker_oneLine_dt___display: none !default;
+$_ui_timepicker_div_ui_timepicker_oneLine__ui_tpicker_time_label___display: block !default;
+$_ui_timepicker_div_ui_timepicker_oneLine__ui_tpicker_time_label___padding_top: 2px !default;
+$_ui_timepicker_div_ui_timepicker_oneLine_dl___text_align: right !default;
+$_ui_timepicker_div_ui_timepicker_oneLine_dl_dd___display: inline-block !default;
+$_ui_timepicker_div_ui_timepicker_oneLine_dl_dd___margin: 0 !default;
+$_ui_timepicker_div_ui_timepicker_oneLine_dl_dd___div___display: inline-block !default;
+$_ui_timepicker_div_ui_timepicker_oneLine_dl_dd___div___margin: 0 !default;
+$_ui_timepicker_div_ui_timepicker_oneLine_dl_dd_ui_tpicker_minute_before___ui_timepicker_div_ui_timepicker_oneLine_dl_dd_ui_tpicker_second_before___content: ':' !default;
+$_ui_timepicker_div_ui_timepicker_oneLine_dl_dd_ui_tpicker_minute_before___ui_timepicker_div_ui_timepicker_oneLine_dl_dd_ui_tpicker_second_before___display: inline-block !default;
+$_ui_timepicker_div_ui_timepicker_oneLine_dl_dd_ui_tpicker_millisec_before___ui_timepicker_div_ui_timepicker_oneLine_dl_dd_ui_tpicker_microsec_before___content: '.' !default;
+$_ui_timepicker_div_ui_timepicker_oneLine_dl_dd_ui_tpicker_millisec_before___ui_timepicker_div_ui_timepicker_oneLine_dl_dd_ui_tpicker_microsec_before___display: inline-block !default;
+$_ui_timepicker_div_ui_timepicker_oneLine__ui_tpicker_unit_hide___display: none !default;
+$_ui_timepicker_div_ui_timepicker_oneLine__ui_tpicker_unit_hide_before___display: none !default;
+$_ui_datepicker_trigger_ui_button_icon_only__ui_button_text___padding: 0.3em !default;
 /*!
  * jQuery UI CSS Framework 1.8.20
  *
@@ -12,62 +262,62 @@
 ----------------------------------*/
 
 .ui-helper-hidden {
-  display: none;
+  display: $_ui_helper_hidden___display;
 }
 
 .ui-helper-hidden-accessible {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 0px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 0px;
+  border: $_ui_helper_hidden_accessible___border;
+  clip: $_ui_helper_hidden_accessible___clip;
+  height: $_ui_helper_hidden_accessible___height;
+  margin: $_ui_helper_hidden_accessible___margin;
+  overflow: $_ui_helper_hidden_accessible___overflow;
+  padding: $_ui_helper_hidden_accessible___padding;
+  position: $_ui_helper_hidden_accessible___position;
+  width: $_ui_helper_hidden_accessible___width;
 }
 
 .ui-helper-reset {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  line-height: 1.3;
-  text-decoration: none;
-  font-size: 100%;
-  list-style: none;
+  margin: $_ui_helper_reset___margin;
+  padding: $_ui_helper_reset___padding;
+  border: $_ui_helper_reset___border;
+  outline: $_ui_helper_reset___outline;
+  line-height: $_ui_helper_reset___line_height;
+  text-decoration: $_ui_helper_reset___text_decoration;
+  font-size: $_ui_helper_reset___font_size;
+  list-style: $_ui_helper_reset___list_style;
 }
 
 .ui-helper-clearfix {
   &:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
+    content: $_ui_helper_clearfix_after___content;
+    display: $_ui_helper_clearfix_after___display;
+    height: $_ui_helper_clearfix_after___height;
+    clear: $_ui_helper_clearfix_after___clear;
+    visibility: $_ui_helper_clearfix_after___visibility;
   }
 
-  display: inline-block;
+  display: $_ui_helper_clearfix___display;
 }
 
 /* required comment for clearfix to work in Opera \*/
 
 * html .ui-helper-clearfix {
-  height: 1%;
+  height: $__html__ui_helper_clearfix___height;
 }
 
 .ui-helper-clearfix {
-  display: block;
+  display: $_ui_helper_clearfix___display;
 }
 
 /* end clearfix */
 
 .ui-helper-zfix {
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  position: absolute;
-  opacity: 0;
+  width: $_ui_helper_zfix___width;
+  height: $_ui_helper_zfix___height;
+  top: $_ui_helper_zfix___top;
+  left: $_ui_helper_zfix___left;
+  position: $_ui_helper_zfix___position;
+  opacity: $_ui_helper_zfix___opacity;
   filter: Alpha(Opacity = 0);
 }
 
@@ -75,7 +325,7 @@
 ----------------------------------*/
 
 .ui-state-disabled {
-  cursor: default !important;
+  cursor: $_ui_state_disabled___cursor;
 }
 
 /* Icons
@@ -84,10 +334,10 @@
 /* states and images */
 
 .ui-icon {
-  display: block;
-  text-indent: -99999px;
-  overflow: hidden;
-  background-repeat: no-repeat;
+  display: $_ui_icon___display;
+  text-indent: $_ui_icon___text_indent;
+  overflow: $_ui_icon___overflow;
+  background-repeat: $_ui_icon___background_repeat;
 }
 
 /* Misc visuals
@@ -96,11 +346,11 @@
 /* Overlays */
 
 .ui-widget-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  position: $_ui_widget_overlay___position;
+  top: $_ui_widget_overlay___top;
+  left: $_ui_widget_overlay___left;
+  width: $_ui_widget_overlay___width;
+  height: $_ui_widget_overlay___height;
 }
 
 /*!
@@ -114,81 +364,81 @@
  */
 
 .ui-resizable {
-  position: relative;
+  position: $_ui_resizable___position;
 }
 
 .ui-resizable-handle {
-  position: absolute;
-  font-size: 0.1px;
-  display: block;
+  position: $_ui_resizable_handle___position;
+  font-size: $_ui_resizable_handle___font_size;
+  display: $_ui_resizable_handle___display;
 }
 
 .ui-resizable-disabled .ui-resizable-handle, .ui-resizable-autohide .ui-resizable-handle {
-  display: none;
+  display: $_ui_resizable_disabled__ui_resizable_handle___ui_resizable_autohide__ui_resizable_handle___display;
 }
 
 .ui-resizable-n {
-  cursor: n-resize;
-  height: 7px;
-  width: 100%;
-  top: -5px;
-  left: 0;
+  cursor: $_ui_resizable_n___cursor;
+  height: $_ui_resizable_n___height;
+  width: $_ui_resizable_n___width;
+  top: $_ui_resizable_n___top;
+  left: $_ui_resizable_n___left;
 }
 
 .ui-resizable-s {
-  cursor: s-resize;
-  height: 7px;
-  width: 100%;
-  bottom: -5px;
-  left: 0;
+  cursor: $_ui_resizable_s___cursor;
+  height: $_ui_resizable_s___height;
+  width: $_ui_resizable_s___width;
+  bottom: $_ui_resizable_s___bottom;
+  left: $_ui_resizable_s___left;
 }
 
 .ui-resizable-e {
-  cursor: e-resize;
-  width: 7px;
-  right: -5px;
-  top: 0;
-  height: 100%;
+  cursor: $_ui_resizable_e___cursor;
+  width: $_ui_resizable_e___width;
+  right: $_ui_resizable_e___right;
+  top: $_ui_resizable_e___top;
+  height: $_ui_resizable_e___height;
 }
 
 .ui-resizable-w {
-  cursor: w-resize;
-  width: 7px;
-  left: -5px;
-  top: 0;
-  height: 100%;
+  cursor: $_ui_resizable_w___cursor;
+  width: $_ui_resizable_w___width;
+  left: $_ui_resizable_w___left;
+  top: $_ui_resizable_w___top;
+  height: $_ui_resizable_w___height;
 }
 
 .ui-resizable-se {
-  cursor: se-resize;
-  width: 12px;
-  height: 12px;
-  right: 1px;
-  bottom: 1px;
+  cursor: $_ui_resizable_se___cursor;
+  width: $_ui_resizable_se___width;
+  height: $_ui_resizable_se___height;
+  right: $_ui_resizable_se___right;
+  bottom: $_ui_resizable_se___bottom;
 }
 
 .ui-resizable-sw {
-  cursor: sw-resize;
-  width: 9px;
-  height: 9px;
-  left: -5px;
-  bottom: -5px;
+  cursor: $_ui_resizable_sw___cursor;
+  width: $_ui_resizable_sw___width;
+  height: $_ui_resizable_sw___height;
+  left: $_ui_resizable_sw___left;
+  bottom: $_ui_resizable_sw___bottom;
 }
 
 .ui-resizable-nw {
-  cursor: nw-resize;
-  width: 9px;
-  height: 9px;
-  left: -5px;
-  top: -5px;
+  cursor: $_ui_resizable_nw___cursor;
+  width: $_ui_resizable_nw___width;
+  height: $_ui_resizable_nw___height;
+  left: $_ui_resizable_nw___left;
+  top: $_ui_resizable_nw___top;
 }
 
 .ui-resizable-ne {
-  cursor: ne-resize;
-  width: 9px;
-  height: 9px;
-  right: -5px;
-  top: -5px;
+  cursor: $_ui_resizable_ne___cursor;
+  width: $_ui_resizable_ne___width;
+  height: $_ui_resizable_ne___height;
+  right: $_ui_resizable_ne___right;
+  top: $_ui_resizable_ne___top;
 }
 
 /*!
@@ -202,9 +452,9 @@
  */
 
 .ui-selectable-helper {
-  position: absolute;
-  z-index: 100;
-  border: 1px dotted black;
+  position: $_ui_selectable_helper___position;
+  z-index: $_ui_selectable_helper___z_index;
+  border: $_ui_selectable_helper___border;
 }
 
 /*!
@@ -218,70 +468,70 @@
  */
 
 .ui-slider {
-  position: relative;
-  text-align: left;
+  position: $_ui_slider___position;
+  text-align: $_ui_slider___text_align;
 
   .ui-slider-handle {
-    position: absolute;
-    z-index: 2;
-    width: 1.2em;
-    height: 1.2em;
-    cursor: default;
+    position: $_ui_slider__ui_slider_handle___position;
+    z-index: $_ui_slider__ui_slider_handle___z_index;
+    width: $_ui_slider__ui_slider_handle___width;
+    height: $_ui_slider__ui_slider_handle___height;
+    cursor: $_ui_slider__ui_slider_handle___cursor;
   }
 
   .ui-slider-range {
-    position: absolute;
-    z-index: 1;
-    font-size: .7em;
-    display: block;
-    border: 0;
-    background-position: 0 0;
+    position: $_ui_slider__ui_slider_range___position;
+    z-index: $_ui_slider__ui_slider_range___z_index;
+    font-size: $_ui_slider__ui_slider_range___font_size;
+    display: $_ui_slider__ui_slider_range___display;
+    border: $_ui_slider__ui_slider_range___border;
+    background-position: $_ui_slider__ui_slider_range___background_position;
   }
 }
 
 .ui-slider-horizontal {
-  height: .8em;
+  height: $_ui_slider_horizontal___height;
 
   .ui-slider-handle {
-    top: -.3em;
-    margin-left: -.6em;
+    top: $_ui_slider_horizontal__ui_slider_handle___top;
+    margin-left: $_ui_slider_horizontal__ui_slider_handle___margin_left;
   }
 
   .ui-slider-range {
-    top: 0;
-    height: 100%;
+    top: $_ui_slider_horizontal__ui_slider_range___top;
+    height: $_ui_slider_horizontal__ui_slider_range___height;
   }
 
   .ui-slider-range-min {
-    left: 0;
+    left: $_ui_slider_horizontal__ui_slider_range_min___left;
   }
 
   .ui-slider-range-max {
-    right: 0;
+    right: $_ui_slider_horizontal__ui_slider_range_max___right;
   }
 }
 
 .ui-slider-vertical {
-  width: .8em;
-  height: 100px;
+  width: $_ui_slider_vertical___width;
+  height: $_ui_slider_vertical___height;
 
   .ui-slider-handle {
-    left: -.3em;
-    margin-left: 0;
-    margin-bottom: -.6em;
+    left: $_ui_slider_vertical__ui_slider_handle___left;
+    margin-left: $_ui_slider_vertical__ui_slider_handle___margin_left;
+    margin-bottom: $_ui_slider_vertical__ui_slider_handle___margin_bottom;
   }
 
   .ui-slider-range {
-    left: 0;
-    width: 100%;
+    left: $_ui_slider_vertical__ui_slider_range___left;
+    width: $_ui_slider_vertical__ui_slider_range___width;
   }
 
   .ui-slider-range-min {
-    bottom: 0;
+    bottom: $_ui_slider_vertical__ui_slider_range_min___bottom;
   }
 
   .ui-slider-range-max {
-    top: 0;
+    top: $_ui_slider_vertical__ui_slider_range_max___top;
   }
 }
 
@@ -296,239 +546,239 @@
  */
 
 .ui-datepicker {
-  width: 17em;
-  padding: .2em .2em 0;
-  display: none;
+  width: $_ui_datepicker___width;
+  padding: $_ui_datepicker___padding;
+  display: $_ui_datepicker___display;
 
   .ui-datepicker-header {
-    position: relative;
-    padding: .2em 0;
+    position: $_ui_datepicker__ui_datepicker_header___position;
+    padding: $_ui_datepicker__ui_datepicker_header___padding;
   }
 
   .ui-datepicker-prev, .ui-datepicker-next {
-    position: absolute;
-    top: 2px;
-    width: 1.8em;
-    height: 1.8em;
+    position: $_ui_datepicker__ui_datepicker_prev___ui_datepicker__ui_datepicker_next___position;
+    top: $_ui_datepicker__ui_datepicker_prev___ui_datepicker__ui_datepicker_next___top;
+    width: $_ui_datepicker__ui_datepicker_prev___ui_datepicker__ui_datepicker_next___width;
+    height: $_ui_datepicker__ui_datepicker_prev___ui_datepicker__ui_datepicker_next___height;
   }
 
   .ui-datepicker-prev-hover, .ui-datepicker-next-hover {
-    top: 1px;
+    top: $_ui_datepicker__ui_datepicker_prev_hover___ui_datepicker__ui_datepicker_next_hover___top;
   }
 
   .ui-datepicker-prev {
-    left: 2px;
+    left: $_ui_datepicker__ui_datepicker_prev___left;
   }
 
   .ui-datepicker-next {
-    right: 2px;
+    right: $_ui_datepicker__ui_datepicker_next___right;
   }
 
   .ui-datepicker-prev-hover {
-    left: 1px;
+    left: $_ui_datepicker__ui_datepicker_prev_hover___left;
   }
 
   .ui-datepicker-next-hover {
-    right: 1px;
+    right: $_ui_datepicker__ui_datepicker_next_hover___right;
   }
 
   .ui-datepicker-prev span, .ui-datepicker-next span {
-    display: block;
-    position: absolute;
-    left: 50%;
-    margin-left: -8px;
-    top: 50%;
-    margin-top: -8px;
+    display: $_ui_datepicker__ui_datepicker_prev_span___ui_datepicker__ui_datepicker_next_span___display;
+    position: $_ui_datepicker__ui_datepicker_prev_span___ui_datepicker__ui_datepicker_next_span___position;
+    left: $_ui_datepicker__ui_datepicker_prev_span___ui_datepicker__ui_datepicker_next_span___left;
+    margin-left: $_ui_datepicker__ui_datepicker_prev_span___ui_datepicker__ui_datepicker_next_span___margin_left;
+    top: $_ui_datepicker__ui_datepicker_prev_span___ui_datepicker__ui_datepicker_next_span___top;
+    margin-top: $_ui_datepicker__ui_datepicker_prev_span___ui_datepicker__ui_datepicker_next_span___margin_top;
   }
 
   .ui-datepicker-title {
-    margin: 0 2.3em;
-    line-height: 1.8em;
-    text-align: center;
+    margin: $_ui_datepicker__ui_datepicker_title___margin;
+    line-height: $_ui_datepicker__ui_datepicker_title___line_height;
+    text-align: $_ui_datepicker__ui_datepicker_title___text_align;
 
     select {
-      font-size: 1em;
-      margin: 1px 0;
+      font-size: $_ui_datepicker__ui_datepicker_title_select___font_size;
+      margin: $_ui_datepicker__ui_datepicker_title_select___margin;
     }
   }
 
   select {
     &.ui-datepicker-month-year {
-      width: 100%;
+      width: $_ui_datepicker_select_ui_datepicker_month_year___width;
     }
 
     &.ui-datepicker-month, &.ui-datepicker-year {
-      width: 49%;
+      width: $_ui_datepicker_select_ui_datepicker_month___ui_datepicker_select_ui_datepicker_year___width;
     }
   }
 
   table {
-    width: 100%;
-    font-size: .9em;
-    border-collapse: collapse;
-    margin: 0 0 .4em;
+    width: $_ui_datepicker_table___width;
+    font-size: $_ui_datepicker_table___font_size;
+    border-collapse: $_ui_datepicker_table___border_collapse;
+    margin: $_ui_datepicker_table___margin;
   }
 
   th {
-    padding: .7em .3em;
-    text-align: center;
-    font-weight: bold;
-    border: 0;
+    padding: $_ui_datepicker_th___padding;
+    text-align: $_ui_datepicker_th___text_align;
+    font-weight: $_ui_datepicker_th___font_weight;
+    border: $_ui_datepicker_th___border;
   }
 
   td {
-    border: 0;
-    padding: 1px;
+    border: $_ui_datepicker_td___border;
+    padding: $_ui_datepicker_td___padding;
 
     span, a {
-      display: block;
-      padding: .2em;
-      text-align: right;
-      text-decoration: none;
+      display: $_ui_datepicker_td_span___ui_datepicker_td_a___display;
+      padding: $_ui_datepicker_td_span___ui_datepicker_td_a___padding;
+      text-align: $_ui_datepicker_td_span___ui_datepicker_td_a___text_align;
+      text-decoration: $_ui_datepicker_td_span___ui_datepicker_td_a___text_decoration;
     }
   }
 
   .ui-datepicker-buttonpane {
-    background-image: none;
-    margin: .7em 0 0 0;
-    padding: 0 .2em;
-    border-left: 0;
-    border-right: 0;
-    border-bottom: 0;
+    background-image: $_ui_datepicker__ui_datepicker_buttonpane___background_image;
+    margin: $_ui_datepicker__ui_datepicker_buttonpane___margin;
+    padding: $_ui_datepicker__ui_datepicker_buttonpane___padding;
+    border-left: $_ui_datepicker__ui_datepicker_buttonpane___border_left;
+    border-right: $_ui_datepicker__ui_datepicker_buttonpane___border_right;
+    border-bottom: $_ui_datepicker__ui_datepicker_buttonpane___border_bottom;
 
     button {
-      float: right;
-      margin: .5em .2em .4em;
-      cursor: pointer;
-      padding: .2em .6em .3em .6em;
-      width: auto;
-      overflow: visible;
+      float: $_ui_datepicker__ui_datepicker_buttonpane_button___float;
+      margin: $_ui_datepicker__ui_datepicker_buttonpane_button___margin;
+      cursor: $_ui_datepicker__ui_datepicker_buttonpane_button___cursor;
+      padding: $_ui_datepicker__ui_datepicker_buttonpane_button___padding;
+      width: $_ui_datepicker__ui_datepicker_buttonpane_button___width;
+      overflow: $_ui_datepicker__ui_datepicker_buttonpane_button___overflow;
 
       &.ui-datepicker-current {
-        float: left;
+        float: $_ui_datepicker__ui_datepicker_buttonpane_button_ui_datepicker_current___float;
       }
     }
   }
 
   &.ui-datepicker-multi {
-    width: auto;
+    width: $_ui_datepicker_ui_datepicker_multi___width;
   }
 }
 
 /* with multiple calendars */
 
 .ui-datepicker-multi .ui-datepicker-group {
-  float: left;
+  float: $_ui_datepicker_multi__ui_datepicker_group___float;
 
   table {
-    width: 95%;
-    margin: 0 auto .4em;
+    width: $_ui_datepicker_multi__ui_datepicker_group_table___width;
+    margin: $_ui_datepicker_multi__ui_datepicker_group_table___margin;
   }
 }
 
 .ui-datepicker-multi-2 .ui-datepicker-group {
-  width: 50%;
+  width: $_ui_datepicker_multi_2__ui_datepicker_group___width;
 }
 
 .ui-datepicker-multi-3 .ui-datepicker-group {
-  width: 33.3%;
+  width: $_ui_datepicker_multi_3__ui_datepicker_group___width;
 }
 
 .ui-datepicker-multi-4 .ui-datepicker-group {
-  width: 25%;
+  width: $_ui_datepicker_multi_4__ui_datepicker_group___width;
 }
 
 .ui-datepicker-multi {
   .ui-datepicker-group-last .ui-datepicker-header, .ui-datepicker-group-middle .ui-datepicker-header {
-    border-left-width: 0;
+    border-left-width: $_ui_datepicker_multi__ui_datepicker_group_last__ui_datepicker_header___ui_datepicker_multi__ui_datepicker_group_middle__ui_datepicker_header___border_left_width;
   }
 
   .ui-datepicker-buttonpane {
-    clear: left;
+    clear: $_ui_datepicker_multi__ui_datepicker_buttonpane___clear;
   }
 }
 
 .ui-datepicker-row-break {
-  clear: both;
-  width: 100%;
-  font-size: 0em;
+  clear: $_ui_datepicker_row_break___clear;
+  width: $_ui_datepicker_row_break___width;
+  font-size: $_ui_datepicker_row_break___font_size;
 }
 
 /* RTL support */
 
 .ui-datepicker-rtl {
-  direction: rtl;
+  direction: $_ui_datepicker_rtl___direction;
 
   .ui-datepicker-prev {
-    right: 2px;
-    left: auto;
+    right: $_ui_datepicker_rtl__ui_datepicker_prev___right;
+    left: $_ui_datepicker_rtl__ui_datepicker_prev___left;
   }
 
   .ui-datepicker-next {
-    left: 2px;
-    right: auto;
+    left: $_ui_datepicker_rtl__ui_datepicker_next___left;
+    right: $_ui_datepicker_rtl__ui_datepicker_next___right;
   }
 
   .ui-datepicker-prev:hover {
-    right: 1px;
-    left: auto;
+    right: $_ui_datepicker_rtl__ui_datepicker_prev_hover___right;
+    left: $_ui_datepicker_rtl__ui_datepicker_prev_hover___left;
   }
 
   .ui-datepicker-next:hover {
-    left: 1px;
-    right: auto;
+    left: $_ui_datepicker_rtl__ui_datepicker_next_hover___left;
+    right: $_ui_datepicker_rtl__ui_datepicker_next_hover___right;
   }
 
   .ui-datepicker-buttonpane {
-    clear: right;
+    clear: $_ui_datepicker_rtl__ui_datepicker_buttonpane___clear;
 
     button {
-      float: left;
+      float: $_ui_datepicker_rtl__ui_datepicker_buttonpane_button___float;
 
       &.ui-datepicker-current {
-        float: right;
+        float: $_ui_datepicker_rtl__ui_datepicker_buttonpane_button_ui_datepicker_current___float;
       }
     }
   }
 
   .ui-datepicker-group {
-    float: right;
+    float: $_ui_datepicker_rtl__ui_datepicker_group___float;
   }
 
   .ui-datepicker-group-last .ui-datepicker-header, .ui-datepicker-group-middle .ui-datepicker-header {
-    border-right-width: 0;
-    border-left-width: 1px;
+    border-right-width: $_ui_datepicker_rtl__ui_datepicker_group_last__ui_datepicker_header___ui_datepicker_rtl__ui_datepicker_group_middle__ui_datepicker_header___border_right_width;
+    border-left-width: $_ui_datepicker_rtl__ui_datepicker_group_last__ui_datepicker_header___ui_datepicker_rtl__ui_datepicker_group_middle__ui_datepicker_header___border_left_width;
   }
 }
 
 /* IE6 IFRAME FIX (taken from datepicker 1.5.3 */
 
 .ui-datepicker-cover {
-  display: none;
+  display: $_ui_datepicker_cover___display;
 
   /*sorry for IE5*/
-  display/**/: block;
+  display/**/: $_ui_datepicker_cover___display____;
 
   /*sorry for IE5*/
-  position: absolute;
+  position: $_ui_datepicker_cover___position;
 
   /*must have*/
-  z-index: -1;
+  z-index: $_ui_datepicker_cover___z_index;
 
   /*must have*/
-  filter: mask();
+  filter: $_ui_datepicker_cover___filter;
 
   /*must have*/
-  top: -4px;
+  top: $_ui_datepicker_cover___top;
 
   /*must have*/
-  left: -4px;
+  left: $_ui_datepicker_cover___left;
 
   /*must have*/
-  width: 200px;
+  width: $_ui_datepicker_cover___width;
 
   /*must have*/
-  height: 200px;
+  height: $_ui_datepicker_cover___height;
 
   /*must have*/
 }
@@ -537,68 +787,68 @@
 
 .ui-timepicker-div {
   .ui-widget-header {
-    margin-bottom: 8px;
+    margin-bottom: $_ui_timepicker_div__ui_widget_header___margin_bottom;
   }
 
   dl {
-    text-align: left;
+    text-align: $_ui_timepicker_div_dl___text_align;
 
     dt {
-      float: left;
-      clear: left;
-      padding: 0 0 0 5px;
+      float: $_ui_timepicker_div_dl_dt___float;
+      clear: $_ui_timepicker_div_dl_dt___clear;
+      padding: $_ui_timepicker_div_dl_dt___padding;
     }
 
     dd {
-      margin: 0 10px 10px 40%;
+      margin: $_ui_timepicker_div_dl_dd___margin;
     }
   }
 
   td {
-    font-size: 90%;
+    font-size: $_ui_timepicker_div_td___font_size;
   }
 }
 
 .ui-tpicker-grid-label {
-  background: none;
-  border: none;
-  margin: 0;
-  padding: 0;
+  background: $_ui_tpicker_grid_label___background;
+  border: $_ui_tpicker_grid_label___border;
+  margin: $_ui_tpicker_grid_label___margin;
+  padding: $_ui_tpicker_grid_label___padding;
 }
 
 .ui-timepicker-div {
   .ui_tpicker_unit_hide {
-    display: none;
+    display: $_ui_timepicker_div__ui_tpicker_unit_hide___display;
   }
 
   .ui_tpicker_time .ui_tpicker_time_input {
-    background: none;
-    color: inherit;
-    border: none;
-    outline: none;
-    border-bottom: solid 1px #555;
-    width: 95%;
+    background: $_ui_timepicker_div__ui_tpicker_time__ui_tpicker_time_input___background;
+    color: $_ui_timepicker_div__ui_tpicker_time__ui_tpicker_time_input___color;
+    border: $_ui_timepicker_div__ui_tpicker_time__ui_tpicker_time_input___border;
+    outline: $_ui_timepicker_div__ui_tpicker_time__ui_tpicker_time_input___outline;
+    border-bottom: $_ui_timepicker_div__ui_tpicker_time__ui_tpicker_time_input___border_bottom;
+    width: $_ui_timepicker_div__ui_tpicker_time__ui_tpicker_time_input___width;
 
     &:focus {
-      border-bottom-color: #aaa;
+      border-bottom-color: $_ui_timepicker_div__ui_tpicker_time__ui_tpicker_time_input_focus___border_bottom_color;
     }
   }
 }
 
 .ui-timepicker-rtl {
-  direction: rtl;
+  direction: $_ui_timepicker_rtl___direction;
 
   dl {
-    text-align: right;
-    padding: 0 5px 0 0;
+    text-align: $_ui_timepicker_rtl_dl___text_align;
+    padding: $_ui_timepicker_rtl_dl___padding;
 
     dt {
-      float: right;
-      clear: right;
+      float: $_ui_timepicker_rtl_dl_dt___float;
+      clear: $_ui_timepicker_rtl_dl_dt___clear;
     }
 
     dd {
-      margin: 0 40% 10px 10px;
+      margin: $_ui_timepicker_rtl_dl_dd___margin;
     }
   }
 }
@@ -606,46 +856,46 @@
 /* Shortened version style */
 
 .ui-timepicker-div.ui-timepicker-oneLine {
-  padding-right: 2px;
+  padding-right: $_ui_timepicker_div_ui_timepicker_oneLine___padding_right;
 
   .ui_tpicker_time, dt {
-    display: none;
+    display: $_ui_timepicker_div_ui_timepicker_oneLine__ui_tpicker_time___ui_timepicker_div_ui_timepicker_oneLine_dt___display;
   }
 
   .ui_tpicker_time_label {
-    display: block;
-    padding-top: 2px;
+    display: $_ui_timepicker_div_ui_timepicker_oneLine__ui_tpicker_time_label___display;
+    padding-top: $_ui_timepicker_div_ui_timepicker_oneLine__ui_tpicker_time_label___padding_top;
   }
 
   dl {
-    text-align: right;
+    text-align: $_ui_timepicker_div_ui_timepicker_oneLine_dl___text_align;
 
     dd {
-      display: inline-block;
-      margin: 0;
+      display: $_ui_timepicker_div_ui_timepicker_oneLine_dl_dd___display;
+      margin: $_ui_timepicker_div_ui_timepicker_oneLine_dl_dd___margin;
 
       > div {
-        display: inline-block;
-        margin: 0;
+        display: $_ui_timepicker_div_ui_timepicker_oneLine_dl_dd___div___display;
+        margin: $_ui_timepicker_div_ui_timepicker_oneLine_dl_dd___div___margin;
       }
 
       &.ui_tpicker_minute:before, &.ui_tpicker_second:before {
-        content: ':';
-        display: inline-block;
+        content: $_ui_timepicker_div_ui_timepicker_oneLine_dl_dd_ui_tpicker_minute_before___ui_timepicker_div_ui_timepicker_oneLine_dl_dd_ui_tpicker_second_before___content;
+        display: $_ui_timepicker_div_ui_timepicker_oneLine_dl_dd_ui_tpicker_minute_before___ui_timepicker_div_ui_timepicker_oneLine_dl_dd_ui_tpicker_second_before___display;
       }
 
       &.ui_tpicker_millisec:before, &.ui_tpicker_microsec:before {
-        content: '.';
-        display: inline-block;
+        content: $_ui_timepicker_div_ui_timepicker_oneLine_dl_dd_ui_tpicker_millisec_before___ui_timepicker_div_ui_timepicker_oneLine_dl_dd_ui_tpicker_microsec_before___content;
+        display: $_ui_timepicker_div_ui_timepicker_oneLine_dl_dd_ui_tpicker_millisec_before___ui_timepicker_div_ui_timepicker_oneLine_dl_dd_ui_tpicker_microsec_before___display;
       }
     }
   }
 
   .ui_tpicker_unit_hide {
-    display: none;
+    display: $_ui_timepicker_div_ui_timepicker_oneLine__ui_tpicker_unit_hide___display;
 
     &:before {
-      display: none;
+      display: $_ui_timepicker_div_ui_timepicker_oneLine__ui_tpicker_unit_hide_before___display;
     }
   }
 }
@@ -653,5 +903,5 @@
 /* PrimeFaces Extensions */
 
 .ui-datepicker-trigger.ui-button-icon-only .ui-button-text {
-  padding: 0.3em;
+  padding: $_ui_datepicker_trigger_ui_button_icon_only__ui_button_text___padding;
 }
