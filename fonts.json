@@ -1,0 +1,14 @@
+{
+	"myriad": {
+		"font": "\"myriad-pro\", myriad, verdana, Arial, sans-serif",
+		"name": "Myriad Pro"
+	},
+	"raleway": {
+		"font": "'Raleway', verdana, Arial, sans-serif",
+		"name": "Raleway"
+	},
+	"opensans": {
+		"font": "'Open Sans', verdana, Arial, sans-serif",
+		"name": "Open Sans"
+	}
+}

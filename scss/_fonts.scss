@@ -1,0 +1,14 @@
+$fonts: get-fonts();
+
+@mixin fontextra-element() {
+  $element: &;
+  @each $name, $font in $fonts {
+    @at-root {
+      .font-#{$name} {
+        #{$element} {
+          font-family: map-get($font, 'font');
+        }
+      }
+    }
+  }
+}

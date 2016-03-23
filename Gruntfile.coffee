@@ -143,7 +143,10 @@ module.exports = (grunt) ->
           ]
       meta:
         files:
-          'build/js/theme_switcher.js': ['coffee/theme_switcher.coffee']
+          'build/js/meta.js': [
+            'coffee/theme_switcher.coffee',
+            'coffee/font_switcher.coffee'
+          ]
       test:
         options:
           bare: true
@@ -161,8 +164,8 @@ module.exports = (grunt) ->
         src: 'build/js/campl.js'
         dest: 'build/js/campl.min.js'
       meta:
-        src: 'build/js/theme_switcher.js'
-        dest: 'build/js/theme_switcher.min.js'
+        src: 'build/js/meta.js'
+        dest: 'build/js/meta.min.js'
       lib:
         files:
           'build/js/jquery.min.js': [

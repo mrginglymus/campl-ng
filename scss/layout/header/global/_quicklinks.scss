@@ -52,7 +52,7 @@
         display: block;
         border-bottom: $border-width solid #323232;
         font-size: 14px;
-        font-family: $font-family-sans-serif-extra;
+        @include fontextra-element();
         font-weight: 600;
 
         @include hover-focus {

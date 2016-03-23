@@ -8,6 +8,6 @@
   color: $gray-darker;
   padding: 0 6px 5px 0;
   font-weight: 400;
-  font-family: $font-family-sans-serif-extra;
+  @include fontextra-element();
   z-index: 1;
 }

@@ -1,5 +1,5 @@
 .global-header {
-  font-family: $font-family-sans-serif-extra;
+  @include fontextra-element();
   background-color: $black;
   padding: 0;
 

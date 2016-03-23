@@ -9,7 +9,7 @@
   border-top: $border-width solid $border-color;
   padding-left: 0;
   padding-right: 0;
-  font-family: $font-family-sans-serif-extra;
+  @include fontextra-element();
 
   @include media-breakpoint-up(md) {
     @include make-col-span(3);

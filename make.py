@@ -23,6 +23,9 @@ with open('themes.json') as f:
 
 with open('images.json') as f:
   env.globals['IMAGE_STYLES'] = json.loads(f.read(), object_pairs_hook=OrderedDict)
+
+with open('fonts.json') as f:
+	env.globals['FONTS'] = json.loads(f.read(), object_pairs_hook=OrderedDict)
   
 # add functions
 for f in FUNCTIONS:

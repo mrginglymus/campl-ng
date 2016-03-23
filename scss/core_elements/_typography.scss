@@ -8,11 +8,11 @@ h2 {
 }
 
 #{headings()} {
-  font-family: $font-family-sans-serif-extra;
+  @include fontextra-element();
 }
 
 .lite-heading {
-  font-family: $font-family-sans-serif-extra;
+  @include fontextra-element();
   font-weight: 300;
   font-size: 19px;
   line-height: 25px;
@@ -20,7 +20,7 @@ h2 {
 }
 
 .lite-heading-lg {
-  font-family: $font-family-sans-serif-extra;
+  @include fontextra-element();
   font-weight: 300;
   font-size: 30px;
   line-height: 38px;

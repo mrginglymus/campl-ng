@@ -28,7 +28,7 @@
         display: block;
         font-size: 18px;
         line-height: 24px;
-        font-family: $font-family-sans-serif-extra;
+        @include fontextra-element();
 
         @include hover-focus {
           color: $white;

@@ -1,9 +1,10 @@
 window.set_theme = (theme) ->
   Cookies.set 'theme', theme
-  clist = document.body.classList
-  if !!clist
-    clist.remove(clist.item(clist.length - 1))
-    clist.add "theme-#{theme}"
+  jQuery ($) ->
+    $("body").removeClass (index, css) ->
+      css.match (/(^|\s)theme-\S+/g) || []
+        .join ' '
+    .addClass "theme-#{theme}"
 
 jQuery ($) ->
   window.themes = $("a[data-toggle='theme']").map ->

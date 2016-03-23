@@ -52,7 +52,8 @@
 }
 
 .carousel-caption {
-  font-family: $font-family-sans-serif-extra;
+  @include fontextra-element();
+  //@include fontextra-element();
   bottom: 0;
   right: 102px;
   left: 20px;
@@ -92,7 +93,7 @@
   font-size: 40px;
   line-height: 48px;
   font-weight: 300;
-  font-family: $font-family-sans-serif-extra;
+  @include fontextra-element();
   text-align: center;
   color: $white;
   padding: $spacer;

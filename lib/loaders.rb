@@ -27,4 +27,9 @@ module Sass::Script::Functions
     nested_map_to_sass('./images.json')
   end
   declare :get_images, []
+
+  def get_fonts
+    nested_map_to_sass('./fonts.json')
+  end
+  declare :get_fonts, []
 end
