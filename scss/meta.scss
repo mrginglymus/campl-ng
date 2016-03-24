@@ -40,10 +40,17 @@ main .main-content {
 }
 
 @each $fontname, $font in $fonts {
-  .font-#{$fontname} {
-    .dropdown-menu [data-font="#{$fontname}"] {
-      @include theme-element(background-color, selected);
-      font-family: map-get($font, 'font') !important;
+  @each $colour, $theme in $themes {
+    .font-#{$fontname}.theme-#{$colour} {
+      [data-fontname="#{$fontname}"] {
+        background-color: map-get($theme, selected) !important;
+      }
     }
+  }
+}
+
+@each $fontname, $font in $fonts {
+  [data-fontname="#{$fontname}"] {
+    font-family: map-get($font, 'font') !important;
   }
 }
