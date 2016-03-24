@@ -18,9 +18,9 @@
         <ul class="list-unstyled vertical-menu-children">
           {% for _page in page.vertical_breadcrumb_children %}
             {% if _page[0] == page.title %}
-            <li><span>{{ _page[0] }}</span></li>
+            <li><span class="vertical-menu-child-bulleted">{{ _page[0] }}</span></li>
             {% else %}
-            <li><a href="{{ _page[1] }}">{{ _page[0] }}</a></li>
+            <li><a class="vertical-menu-child-bulleted" href="{{ _page[1] }}">{{ _page[0] }}</a></li>
             {% endif %}
           {% endfor %}
         </ul>
