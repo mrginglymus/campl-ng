@@ -3,7 +3,7 @@
 @mixin alert-style($colour) {
   border-color: $colour;
 
-  .row div:first-child {
+  .alert-title {
     color: $colour;
   }
 }
@@ -45,7 +45,7 @@
     padding: 2px;
   }
 
-  .row div:first-child {
+  .alert-title {
     font-weight: bold;
 
     @include media-breakpoint-up(md) {
