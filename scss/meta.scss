@@ -1,4 +1,5 @@
 @import "themes";
+@import "fonts";
 
 main .main-content {
   display: flex;
@@ -34,6 +35,15 @@ main .main-content {
 
     &:hover {
       background-color: #111111 !important;
+    }
+  }
+}
+
+@each $fontname, $font in $fonts {
+  .font-#{$fontname} {
+    .dropdown-menu [data-font="#{$fontname}"] {
+      @include theme-element(background-color, selected);
+      font-family: map-get($font, 'font') !important;
     }
   }
 }
