@@ -2,21 +2,25 @@
 	"myriad": {
 		"font": "\"myriad-pro\", myriad, verdana, Arial, sans-serif",
 		"name": "Myriad Pro",
+		"size": 1,
 		"src": "<script type=\"text/javascript\" src=\"//use.typekit.com/hyb5bko.js\"></script><script type=\"text/javascript\">try {Typekit.load();} catch (e) {}</script>"
 	},
 	"raleway": {
 		"font": "'Raleway', verdana, Arial, sans-serif",
 		"name": "Raleway",
+		"size": 0.9,
 		"src": "<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>"
 	},
 	"opensans": {
 		"font": "'Open Sans', verdana, Arial, sans-serif",
 		"name": "Open Sans",
+		"size": 0.9,
 		"src": "<link href='https://fonts.googleapis.com/css?family=Raleway:300,300italic,400italic,400,600,600italic' rel='stylesheet' type='text/css'>"
 	},
 	"noto": {
 		"font": "'Noto Sans', verdana, Arial, sans-serif",
 		"name": "Noto Sans",
+		"size": 0.9,
 		"src": "<link href='https://fonts.googleapis.com/css?family=Noto+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>"
 	}
 }

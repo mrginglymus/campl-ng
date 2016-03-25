@@ -4,7 +4,7 @@
   .navbar-local {
     @include theme-element(background-color, navbar);
     @include theme-element(border-color, page-background);
-    @include fontextra-element();
+    @include fontextra-element(14px);
     padding: 0;
     border-bottom: $border-width solid;
     border-top: $border-width solid;

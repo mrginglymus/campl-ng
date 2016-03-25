@@ -25,9 +25,8 @@
   }
 
   .teaser-title {
-    font-size: 14px;
     line-height: 20px;
-    @include fontextra-element();
+    @include fontextra-element(14px);
     font-weight: 600;
 
     a,

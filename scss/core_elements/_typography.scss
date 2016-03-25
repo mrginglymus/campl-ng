@@ -7,22 +7,40 @@ h2 {
   @include theme-element(color, page-background);
 }
 
-#{headings()} {
-  @include fontextra-element();
+h1 {
+  @include fontextra-element($font-size-h1);
+}
+
+h2 {
+  @include fontextra-element($font-size-h2);
+}
+
+h3 {
+  @include fontextra-element($font-size-h3);
+}
+
+h4 {
+  @include fontextra-element($font-size-h4);
+}
+
+h5 {
+  @include fontextra-element($font-size-h5);
+}
+
+h6 {
+  @include fontextra-element($font-size-h6);
 }
 
 .lite-heading {
-  @include fontextra-element();
+  @include fontextra-element(19px);
   font-weight: 300;
-  font-size: 19px;
   line-height: 25px;
   color: $gray-darker !important;
 }
 
 .lite-heading-lg {
-  @include fontextra-element();
+  @include fontextra-element(30px);
   font-weight: 300;
-  font-size: 30px;
   line-height: 38px;
   color: $gray-darker !important;
 }

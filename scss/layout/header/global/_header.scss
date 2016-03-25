@@ -1,5 +1,4 @@
 .global-header {
-  @include fontextra-element();
   background-color: $black;
   padding: 0;
 
@@ -34,7 +33,7 @@
       }
 
       .nav-link {
-        font-size: 14px;
+        @include fontextra-element(14px);
         line-height: 18px;
         font-weight: 600;
         color: $white !important;

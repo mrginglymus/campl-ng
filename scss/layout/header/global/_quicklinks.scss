@@ -51,8 +51,7 @@
         padding: 7px 7px 7px 16px;
         display: block;
         border-bottom: $border-width solid #323232;
-        font-size: 14px;
-        @include fontextra-element();
+        @include fontextra-element(14px);
         font-weight: 600;
 
         @include hover-focus {

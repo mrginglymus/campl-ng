@@ -4,10 +4,9 @@
   left: 0;
   background-color: $white;
   text-transform: uppercase;
-  font-size: 11px;
   color: $gray-darker;
   padding: 0 6px 5px 0;
   font-weight: 400;
-  @include fontextra-element();
+  @include fontextra-element(11px);
   z-index: 1;
 }

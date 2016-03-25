@@ -52,8 +52,7 @@
 }
 
 .carousel-caption {
-  @include fontextra-element();
-  //@include fontextra-element();
+  @include fontextra-element(19px);
   bottom: 0;
   right: 102px;
   left: 20px;
@@ -61,7 +60,6 @@
   background-color: rgba(0, 0, 0, 0.8);
   text-align: left;
   font-weight: 300;
-  font-size: 19px;
   line-height: 25px;
   padding-right: 80px;
 
@@ -90,10 +88,9 @@
 
 .carousel-text {
   @include theme-element(background-color, selected);
-  font-size: 40px;
   line-height: 48px;
   font-weight: 300;
-  @include fontextra-element();
+  @include fontextra-element(40px);
   text-align: center;
   color: $white;
   padding: $spacer;

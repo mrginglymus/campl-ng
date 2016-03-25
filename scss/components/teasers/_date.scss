@@ -5,19 +5,18 @@
     @include theme-element('background-color', selected);
     width: 55px;
     color: $white;
-    @include fontextra-element();
     text-align: center;
     float: left;
     margin-right: 10px;
 
     .date-teaser-date-day {
-      font-size: 30px;
+      @include fontextra-element(30px);
       line-height: 30px;
       font-weight: 700;
     }
 
     .date-teaser-date-month {
-      font-size: 17px;
+      @include fontextra-element(17px);
       line-height: 23px;
       font-weight: 300;
       text-transform: uppercase;
