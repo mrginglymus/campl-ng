@@ -12,10 +12,12 @@
   }
 }
 
-.table-bordered {
+.table-underscored {
   @include theme-element(border-bottom-color, selected);
   border-bottom: 2px solid;
+}
 
+.table-bordered {
   thead th {
     @include theme-element(background-color, selected);
     color: $white;
