@@ -1,0 +1,45 @@
+{% extends 'layout/page.html' %}
+
+{% block content %}
+
+<table class="table table-bordered table-underscored">
+
+	<thead>
+		<tr>
+			<th>Column 1</th>
+			<th style="width:33%;">Column 2</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr data-toggle="collapse" data-target="#row1" class="collapsed">
+			<td>
+				<span class="fa fa-fw fa-lg text-muted collapse-icon"> </span>
+				Click for more info
+				<div class="collapse" id="row1">
+					<div class="p-a-1">
+						<p>Some content</p>
+					</div>
+				</div>
+			</td>
+			<td>
+				Another cell
+			</td>
+		</tr>
+		<tr data-toggle="collapse" data-target="#row2" class="collapsed">
+			<td>
+				<span class="fa fa-fw fa-lg text-muted collapse-icon"> </span>
+				Click for more info
+				<div class="collapse" id="row2">
+					<div class="p-a-1">
+						<p>Some content</p>
+					</div>
+				</div>
+			</td>
+			<td>
+				Another cell
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+{% endblock %}

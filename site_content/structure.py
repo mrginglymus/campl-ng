@@ -68,6 +68,7 @@ pages = Pages([
     ]),
     Page('Content', children=[
       Page('Tables', 'pages/components/content/tables.html', scss=['core_elements/_tables.scss']),
+      Page('Collapse', 'pages/components/content/collapse.html', scss=['components/_collapse.scss']),
       Page('Alerts', 'pages/components/content/alerts.html', scss=['components/_alerts.scss']),
       Page('Well', 'pages/components/content/well.html', scss=['components/_well.scss']),
       Page('Date/Time Picker', 'pages/components/content/datetimepicker.html'),
