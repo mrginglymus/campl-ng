@@ -6,21 +6,20 @@
   margin: 0 $spacer $spacer;
 
   .teaser-image {
-    @include make-col();
-    @include make-col-span(5);
+    @include make-col(5);
 
     + .teaser-body {
-      @include make-col-span(7);
+      @include make-col(7);
     }
   }
 
   .teaser-body {
-    @include make-col();
+    @include make-col(12);
     padding: 15px;
     position: relative;
 
     &:first-child {
-      @include make-col-span(12);
+      @include make-col(12);
     }
   }
 
