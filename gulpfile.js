@@ -13,13 +13,18 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var modernizr = require('gulp-modernizr');
 var sequence = require('run-sequence');
+var python = require('python-shell');
 
 gulp.task('default', function(cb) {
-	sequence('clean', ['css', 'js'], 'modernizr', cb);
+	sequence('clean', ['assets', 'html'], cb);
 });
 
-gulp.task('css', function(cbs) {
-	sequence('glob', ['css-core', 'css-legacy', 'css-meta'], cbs);
+gulp.task('assets', function(cb) {
+	sequence(['css', 'js'], 'modernizr', cb);
+})
+
+gulp.task('css', function(cb) {
+	sequence('glob', ['css-core', 'css-legacy', 'css-meta'], cb);
 });
 
 gulp.task('js', [
@@ -28,6 +33,13 @@ gulp.task('js', [
 	'js-jquery',
 	'js-lib'
 ]);
+
+gulp.task('html', function() {
+	python.run('make.py', function (err) {
+	  if (err) throw err;
+	  console.log('finished');
+	});
+})
 
 
 gulp.task('clean', function() {
