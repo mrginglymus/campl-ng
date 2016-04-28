@@ -20,9 +20,13 @@ var sass_json_importer = require('node-sass-json-importer');
 var replace = require('gulp-replace');
 var uuid = require('node-uuid');
 var execSync = require('child_process').execSync;
+var webserver = require('gulp-webserver');
 
-gulp.task('default', function(cb) {
-	sequence('build', 'deploy', cb);
+gulp.task('default', ['build'])
+
+gulp.task('run', function() {
+	return gulp.src('build')
+		.pipe(webserver());
 })
 
 gulp.task('build', function(cb) {
@@ -45,7 +49,7 @@ gulp.task('js', [
 ]);
 
 gulp.task('html', function(cb) {
-	sequence('html-gen', 'root-url', cb);
+	sequence('html-gen', cb);
 })
 
 gulp.task('html-gen', function(cb) {
@@ -65,7 +69,7 @@ gulp.task('cache-images', function() {
 		.pipe(replace(/img src="(http.+?)"/g, function(match, img) {
 			u = uuid.v4();
 			r = execSync("wget -O build/images/" + u + " " + img);
-			return "img src=\"" + process.env.LOCAL_ROOT_URL + "/images/" + u + "\"";
+			return "img src=\"/images/" + u + "\"";
 		}))
 		.pipe(gulp.dest('build'));
 })
@@ -83,11 +87,6 @@ gulp.task('fonts', function() {
 gulp.task('favicon', function() {
 	return gulp.src('favicon.ico')
 		.pipe(gulp.dest('build'));
-})
-
-gulp.task('deploy', function() {
-	return gulp.src('build/**/*')
-		.pipe(gulp.dest(process.env.LOCAL_RELEASE_DIR));
 })
 
 

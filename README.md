@@ -18,8 +18,12 @@ To build, you will need to enter the virtual environment with
     
 Then you can run gulp
 
-    $ gulp build
+    (venv)$ gulp build
 
 To cache images locally (takes about a minute) run
 
-    $ gulp cache-images
+    (venv)$ gulp cache-images
+
+To run a local webserver to view the demo site (localhost:8000) run
+
+    (venv)$ gulp run

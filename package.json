@@ -28,6 +28,7 @@
     "gulp-sass-globbing": "0.0.2",
     "gulp-sourcemaps": "^2.0.0-alpha",
     "gulp-uglify": "^1.5.3",
+    "gulp-webserver": "^0.9.1",
     "multipipe": "^0.3.0",
     "node-sass-json-importer": "^1.0.6",
     "node-uuid": "^1.4.7",
