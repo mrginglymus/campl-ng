@@ -3,7 +3,7 @@
 .vertical-menu {
   @include make-col();
   @include make-col-span(12);
-  background: url("vertical-nav-background.png");
+  background: inline("vertical-nav-background.png");
   border-left: $border-width solid $border-color;
   border-right: $border-width solid $border-color;
   border-top: $border-width solid $border-color;

@@ -1,7 +1,7 @@
 
 
 blockquote {
-  background: url("quote-left.png") no-repeat top left;
+  background: inline("quote-left.png") no-repeat top left;
   padding: 0 0 0 25px;
   font-style: italic;
   margin: 18px 0;
@@ -16,7 +16,7 @@ blockquote {
   }
 
   p:last-of-type {
-    background: url("quote-right.png") no-repeat bottom right;
+    background: inline("quote-right.png") no-repeat bottom right;
 
   }
 

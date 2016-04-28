@@ -36,7 +36,7 @@
 
     a::after {
       @include theme-element(background-color, navbar);
-      background: url("link-bullet-white.png") no-repeat center center;
+      background: inline("link-bullet-white.png") no-repeat center center;
       content: "";
       color: $white;
       width: 33px;

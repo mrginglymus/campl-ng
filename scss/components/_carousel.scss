@@ -38,11 +38,11 @@
   }
 
   &.right {
-    background-image: url("carousel-right.png");
+    background-image: inline("carousel-right.png");
   }
 
   &.left {
-    background-image: url("carousel-left.png");
+    background-image: inline("carousel-left.png");
     left: auto;
     right: 51px;
 

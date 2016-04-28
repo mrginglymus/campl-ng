@@ -30,7 +30,7 @@
     "grunt-html": "^5.0.1",
     "grunt-http-server": "^1.13.0",
     "grunt-modernizr": "^1.0.0",
-    "grunt-postcss": "^0.6.0",
+    "grunt-postcss": "^0.8.0",
     "grunt-rsync": "^0.6.2",
     "grunt-sass-globbing": "^1.4.0",
     "grunt-scss-lint": "^0.3.8",

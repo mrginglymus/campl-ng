@@ -5,6 +5,7 @@ sass_options =
 
 uuid = require('node-uuid')
 execSync = require('child_process').execSync
+inliner = require('postcss-image-inliner')
 
 module.exports = (grunt) ->
 
@@ -108,21 +109,8 @@ module.exports = (grunt) ->
       core:
         src: 'build/css/campl.min.css'
         processors: [
-          require('postcss-image-inliner')(
+          inliner
             strict: true
-          )
-          ,
-          require('autoprefixer')
-            browsers: [
-              'Android 2.3',
-              'Android >= 4',
-              'Chrome >= 35',
-              'Firefox >= 31',
-              'Explorer >= 10',
-              'iOS >= 7',
-              'Opera >= 12',
-              'Safari >= 7.1'
-            ]
         ]
       legacy:
         src: 'build/css/campl.min.css'
