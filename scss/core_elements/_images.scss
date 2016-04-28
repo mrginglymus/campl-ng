@@ -1,3 +1,5 @@
+@import "../../images.json";
+
 .image-wrapper {
   display: block;
   position: relative;
@@ -13,8 +15,6 @@
     object-fit: cover;
   }
 }
-
-$images: get-images();
 
 @each $style, $map in $images {
   .image-wrapper-#{$style} {

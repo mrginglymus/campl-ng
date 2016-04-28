@@ -1,10 +1,10 @@
-@import "compass/css3/images";
+
 
 .vertical-menu-children {
   > li {
     a.vertical-menu-child-bulleted,
     span.vertical-menu-child-bulleted {
-      background: inline-image("link-bullet-black.png") no-repeat 0 50%;
+      background: inline("link-bullet-black.png") no-repeat 0 50%;
       padding-left: 15px;
     }
   }

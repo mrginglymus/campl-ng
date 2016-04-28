@@ -1,4 +1,5 @@
 {
+  "images":{
   "leading": {
     "width": 590,
     "height": 288,
@@ -34,4 +35,5 @@
     "height": 428,
     "description": "Cam Page Carousel"
   }
+}
 }

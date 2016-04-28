@@ -1,4 +1,6 @@
 {
+"themes": 
+  {
   "blue": {
     "dark-highlight":   "#002e55",
     "page-background":  "#003e74",
@@ -80,4 +82,5 @@
     "pale-tone":        "#404040",
     "pale-table-bg":    "#dfdfac"
   }
+}
 }
