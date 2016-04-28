@@ -1,16 +1,10 @@
-language: node_js
+language: python
 node_js:
-  - "4.1"
+  - "2.7"
 install:
-  - pip install --user -r py_requirements.txt
-  - npm install -g grunt-cli
-  - npm install
-  - bower install
-  - gem install sass
-  - gem install compass
+  - make install
 script:
-  - grunt build cache-images
-  - grunt test
+  - gulp build
 env:
   global:
     - LOCAL_ROOT_URL=""
