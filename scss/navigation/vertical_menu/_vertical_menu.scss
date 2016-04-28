@@ -1,9 +1,9 @@
-@import "compass/css3/images";
+
 
 .vertical-menu {
   @include make-col();
   @include make-col-span(12);
-  background: inline-image("vertical-nav-background.png");
+  background: url("vertical-nav-background.png");
   border-left: $border-width solid $border-color;
   border-right: $border-width solid $border-color;
   border-top: $border-width solid $border-color;

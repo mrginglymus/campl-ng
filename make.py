@@ -19,10 +19,10 @@ env = Environment(loader=FileSystemLoader('templates'))
 env.globals['SITE_NAME'] = 'CamPL-NG'
 
 with open('themes.json') as f:
-  env.globals['COLOURS'] = json.loads(f.read(), object_pairs_hook=OrderedDict)
+  env.globals['COLOURS'] = json.loads(f.read(), object_pairs_hook=OrderedDict)['themes']
 
 with open('images.json') as f:
-  env.globals['IMAGE_STYLES'] = json.loads(f.read(), object_pairs_hook=OrderedDict)
+  env.globals['IMAGE_STYLES'] = json.loads(f.read(), object_pairs_hook=OrderedDict)['images']
   
 # add functions
 for f in FUNCTIONS:

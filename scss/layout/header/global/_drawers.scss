@@ -1,10 +1,10 @@
-@import "compass/css3/images";
+
 
 .global-header-drawer-title {
   border-bottom: 1px solid #323232;
 
   a {
-    background: inline-image("link-bullet-white.png") no-repeat 0 50%;
+    background: url("link-bullet-white.png") no-repeat 0 50%;
     margin: $spacer;
     color: $white;
     display: inline-block;
@@ -21,7 +21,7 @@
   border-bottom: 1px solid #323232;
 
   a {
-    background: inline-image("close-lg.png") no-repeat 90% 50%;
+    background: url("close-lg.png") no-repeat 90% 50%;
     padding: 21px 15px;
     height: 57px;
     color: $white;
@@ -46,7 +46,7 @@
   }
 
   a {
-    background: inline-image("link-bullet-white.png") no-repeat 0 50%;
+    background: url("link-bullet-white.png") no-repeat 0 50%;
     padding-left: 10px;
     color: $white;
   }

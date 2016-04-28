@@ -1,7 +1,7 @@
-@import "compass/css3/images";
+
 
 blockquote {
-  background: inline-image("quote-left.png") no-repeat top left;
+  background: url("quote-left.png") no-repeat top left;
   padding: 0 0 0 25px;
   font-style: italic;
   margin: 18px 0;
@@ -16,7 +16,7 @@ blockquote {
   }
 
   p:last-of-type {
-    background: inline-image("quote-right.png") no-repeat bottom right;
+    background: url("quote-right.png") no-repeat bottom right;
 
   }
 

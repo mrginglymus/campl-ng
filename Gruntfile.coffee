@@ -1,8 +1,6 @@
 sass_options =
   sourcemap: 'inline',
-  trace: true,
-  require: './lib/loaders.rb',
-  compass: true,
+  importer: require('node-sass-json-importer'),
   style: 'compressed',
 
 uuid = require('node-uuid')
@@ -12,7 +10,7 @@ module.exports = (grunt) ->
 
   grunt.option('target', grunt.option('target') or 'local')
 
-  grunt.loadNpmTasks 'grunt-contrib-sass'
+  grunt.loadNpmTasks 'grunt-sass'
   grunt.loadNpmTasks 'grunt-contrib-clean'
   grunt.loadNpmTasks 'grunt-contrib-uglify'
   grunt.loadNpmTasks 'grunt-contrib-copy'
@@ -110,6 +108,10 @@ module.exports = (grunt) ->
       core:
         src: 'build/css/campl.min.css'
         processors: [
+          require('postcss-image-inliner')(
+            strict: true
+          )
+          ,
           require('autoprefixer')
             browsers: [
               'Android 2.3',

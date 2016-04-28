@@ -1,4 +1,4 @@
-@import "compass/css3/images";
+
 
 .global-footer,
 .local-footer {
@@ -10,7 +10,7 @@
 
     @include media-breakpoint-up(md) {
       &:not(:last-of-type) {
-        background: inline-image("footer-separator.png") 100% 0 repeat-y;
+        background: url("footer-separator.png") 100% 0 repeat-y;
       }
     }
   }
