@@ -1,25 +1,12 @@
 var gulp = require('gulp');
-var sass = require('gulp-sass');
-var globSass = require('gulp-sass-globbing');
-var autoprefixer = require('autoprefixer');
 var rename = require('gulp-rename');
 var sourcemaps = require('gulp-sourcemaps');
-var cssnano = require('gulp-cssnano');
 var del = require('del');
 var mirror = require('gulp-mirror');
 var pipe = require('multipipe');
-var coffee = require('gulp-coffee');
 var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
-var modernizr = require('gulp-modernizr');
 var sequence = require('run-sequence');
-var python = require('python-shell');
-var postcss = require('gulp-postcss');
-var assets = require('postcss-assets');
-var sass_json_importer = require('node-sass-json-importer');
 var replace = require('gulp-replace');
-var uuid = require('node-uuid');
-var execSync = require('child_process').execSync;
 var webserver = require('gulp-webserver');
 
 gulp.task('default', ['build'])
@@ -46,6 +33,8 @@ gulp.task('clean', function() {
 /************************************************************/
 /* Misc asset tasks                                         */
 /************************************************************/
+var uuid = require('node-uuid');
+var execSync = require('child_process').execSync;
 
 gulp.task('assets', function(cb) {
   sequence(['css', 'js', 'fonts', 'images', 'favicon'], 'modernizr', cb);
@@ -79,6 +68,7 @@ gulp.task('favicon', function() {
 /************************************************************/
 /* HTML Tasks                                               */
 /************************************************************/
+var python = require('python-shell');
 
 gulp.task('html', function(cb) {
   sequence('html-gen', cb);
@@ -99,6 +89,9 @@ gulp.task('root-url', function() {
 /************************************************************/
 /* JS Tasks                                                 */
 /************************************************************/
+var modernizr = require('gulp-modernizr');
+var uglify = require('gulp-uglify');
+var coffee = require('gulp-coffee');
 
 gulp.task('js', [
   'js-core',
@@ -209,6 +202,14 @@ gulp.task('modernizr', function() {
 /************************************************************/
 /* CSS Tasks                                                */
 /************************************************************/
+var globSass = require('gulp-sass-globbing');
+var sass = require('gulp-sass');
+var autoprefixer = require('autoprefixer');
+var postcss = require('gulp-postcss');
+var assets = require('postcss-assets');
+var sass_json_importer = require('node-sass-json-importer');
+var cssnano = require('gulp-cssnano');
+
 
 gulp.task('css', function(cb) {
   sequence('glob', ['css-core', 'css-legacy', 'css-meta'], cb);
@@ -286,4 +287,16 @@ gulp.task('css-legacy', function() {
 // build meta files
 gulp.task('css-meta', function() {
   return build_css('scss/meta.scss', browsers);
+})
+
+
+/************************************************************/
+/* Lint tasks                                               */
+/************************************************************/
+var sasslint = require('gulp-sass-lint');
+
+gulp.task('lint:sass', function() {
+  return gulp.src('scss/**/*.scss')
+    .pipe(sasslint())
+    .pipe(sasslint.format());
 })
