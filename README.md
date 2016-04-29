@@ -32,10 +32,10 @@ If you want to build so you can deploy to a non-root location, run build with th
 
     (venv) $ gulp build --root /campl-ng
 
+You can also run individual commands for each component, e.g. ``gulp css``, ``gulp js`` or ``gulp html``. ``html`` is the only command which is affected by the three optional arguments above.
+
 To run a local webserver to view the demo site (default [localhost:8000](http://localhost:8000)) run
 
     (venv)$ gulp run
 
 Specify port and host with ``--port <port>`` and ``--host <host>`` respectively
-
-You can also run individual commands for each component, e.g. ``gulp css``, ``gulp js`` or ``gulp html``. ``html`` is the only command which takes note of the two optional arguments above.
