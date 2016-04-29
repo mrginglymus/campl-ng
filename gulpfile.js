@@ -8,6 +8,12 @@ var concat = require('gulp-concat');
 var sequence = require('run-sequence');
 var replace = require('gulp-replace');
 var webserver = require('gulp-webserver');
+var argv = require('yargs')
+  .boolean('cache-images')
+  .alias('cache', 'cache-images')
+  .default('host', 'localhost')
+  .default('port', '8000')
+  .argv;
 
 gulp.task('default', ['build'])
 
@@ -15,20 +21,21 @@ gulp.task('default', ['build'])
 /* Entrypoint tasks                                         */
 /************************************************************/
 
-
 gulp.task('build', function(cb) {
   sequence('clean', ['assets', 'html'], cb);
 });
 
 gulp.task('run', function() {
   return gulp.src('build')
-    .pipe(webserver());
+    .pipe(webserver({
+      host: argv.host,
+      port: argv.port
+    }));
 })
 
 gulp.task('clean', function() {
   return del(['build/**/*']);
 })
-
 
 /************************************************************/
 /* Misc asset tasks                                         */
@@ -38,16 +45,6 @@ var execSync = require('child_process').execSync;
 
 gulp.task('assets', function(cb) {
   sequence(['css', 'js', 'fonts', 'images', 'favicon'], 'modernizr', cb);
-})
-
-gulp.task('cache-images', function() {
-  return gulp.src(['build/**/*.html', '!build/templates/**/*.html'])
-    .pipe(replace(/img src="(http.+?)"/g, function(match, img) {
-      u = uuid.v4();
-      r = execSync("wget -O build/images/" + u + " " + img);
-      return "img src=\"/images/" + u + "\"";
-    }))
-    .pipe(gulp.dest('build'));
 })
 
 gulp.task('images', function() {
@@ -71,19 +68,33 @@ gulp.task('favicon', function() {
 var python = require('python-shell');
 
 gulp.task('html', function(cb) {
-  sequence('html-gen', cb);
+  sequence('html-gen', 'cache-images', 'root-url', cb);
 })
 
 gulp.task('html-gen', function(cb) {
   python.run('make.py', cb);
 })
 
+gulp.task('cache-images', function() {
+  if (argv.cache) {
+    return gulp.src(['build/**/*.html', '!build/templates/**/*.html'])
+      .pipe(replace(/img src="(http.+?)"/g, function(match, img) {
+        u = uuid.v4();
+        r = execSync("wget -O build/images/" + u + " " + img);
+        return "img src=\"/images/" + u + "\"";
+      }))
+      .pipe(gulp.dest('build'));
+  }
+})
+
 gulp.task('root-url', function() {
-  return gulp.src(['build/**/*.html', '!build/templates/**/*', 'build/templates/**/index.html'])
-    .pipe(replace(/\=\"\/(?!\/)/g, function() {
-      return "=\"" + process.env.LOCAL_ROOT_URL + "/";
-    }))
-    .pipe(gulp.dest('build'));
+  if (argv.root) {
+    return gulp.src(['build/**/*.html', '!build/templates/**/*', 'build/templates/**/index.html'])
+      .pipe(replace(/\=\"\/(?!\/)/g, function() {
+        return "=\"" + argv.root + "/";
+      }))
+      .pipe(gulp.dest('build'));
+  }
 })
 
 /************************************************************/
