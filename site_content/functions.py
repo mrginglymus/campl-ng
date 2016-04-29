@@ -13,11 +13,9 @@ from time import mktime
 from jinja2.utils import generate_lorem_ipsum as lipsum
 from markupsafe import escape
 
+from make import IMAGE_SOURCE
+
 FEED = feedparser.parse('http://www.cam.ac.uk/news/feed?')
-
-IMAGE_SOURCE = "http://placehold.it/%sx%s"
-#IMAGE_SOURCE = "http://loremflickr.com/%s/%s/?user=cambridge%%20university"
-
 
 def random_image(width, height=None):
   if not height:
