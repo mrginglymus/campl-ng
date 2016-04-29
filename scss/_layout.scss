@@ -6,8 +6,6 @@
 @import "layout/footer/common";
 @import "layout/sidebar/related_links";
 @import "layout/sidebar/sidebar";
-@import "layout/footer/global/footer";
-@import "layout/footer/local/footer";
 @import "layout/header/global/drawers";
 @import "layout/header/global/header";
 @import "layout/header/global/offcanvas";
@@ -17,3 +15,5 @@
 @import "layout/header/local/header";
 @import "layout/header/local/subtitle";
 @import "layout/header/local/title";
+@import "layout/footer/global/footer";
+@import "layout/footer/local/footer";
