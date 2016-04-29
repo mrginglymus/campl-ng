@@ -24,6 +24,10 @@ To cache images locally (takes about a minute) run with the option ``--cache-ima
 
     (venv)$ gulp build --cache-images
 
+To use photos rather than placeholder images (slow to load) run with the option ``--photo`` ie.
+
+    (venv)$ gulp build --photo
+
 If you want to build so you can deploy to a non-root location, run build with the option ``--root`` e.g.
 
     (venv) $ gulp build --root /campl-ng
