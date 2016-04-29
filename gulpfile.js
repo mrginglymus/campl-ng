@@ -9,6 +9,7 @@ var sequence = require('run-sequence');
 var replace = require('gulp-replace');
 var webserver = require('gulp-webserver');
 var argv = require('yargs')
+  .boolean('photo')
   .boolean('cache-images')
   .alias('cache', 'cache-images')
   .default('host', 'localhost')
@@ -72,7 +73,14 @@ gulp.task('html', function(cb) {
 })
 
 gulp.task('html-gen', function(cb) {
-  python.run('make.py', cb);
+  if (argv.photo) {
+    var args = ['--photo']
+  } else {
+    var args = []
+  }
+  python.run('make.py', {
+    args: args
+  }, cb);
 })
 
 gulp.task('cache-images', function() {
