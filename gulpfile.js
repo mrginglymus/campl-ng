@@ -294,9 +294,20 @@ gulp.task('css-meta', function() {
 /* Lint tasks                                               */
 /************************************************************/
 var sasslint = require('gulp-sass-lint');
+var coffeelint = require('gulp-coffeelint');
 
-gulp.task('lint:sass', function() {
+gulp.task('lint', ['lint-sass', 'lint-coffee']);
+
+gulp.task('lint-sass', function() {
   return gulp.src('scss/**/*.scss')
     .pipe(sasslint())
     .pipe(sasslint.format());
+})
+
+gulp.task('lint-coffee', function() {
+  return gulp.src('coffee/**/*.coffee')
+    .pipe(coffeelint({
+      optFile: 'coffee/coffeelint.json'
+    }))
+    .pipe(coffeelint.reporter());
 })
