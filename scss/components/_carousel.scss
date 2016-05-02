@@ -2,7 +2,7 @@
   .carousel::after {
     @include theme-element(background-color, page-background);
     content: " ";
-    height: calc(100% - 50px);
+    height: calc(100% - 49px);
     width: 100vw;
     position: absolute;
     bottom: 50px;

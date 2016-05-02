@@ -7,7 +7,7 @@
       @include theme-element(background-color, page-background);
       content: " ";
       width: 100%; // not vw because scrollbars
-      height: calc(100% - 50px);
+      height: calc(100% - 49px);
       position: absolute;
       bottom: 50px;
       z-index: -1;
