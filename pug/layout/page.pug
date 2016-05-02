@@ -1,0 +1,10 @@
+extends ../base.pug
+
+block body
+  header
+    include header/global/header.pug
+    include header/local/header.pug
+    block subtitle
+      div.local-header.subtitle
+        div.container
+          if page.side_menu

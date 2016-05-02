@@ -69,7 +69,7 @@ gulp.task('favicon', function() {
 var python = require('python-shell');
 
 gulp.task('html', function(cb) {
-  sequence('html-gen', 'cache-images', 'root-url', cb);
+  sequence('pug', 'cache-images', 'root-url', cb);
 })
 
 gulp.task('html-gen', function(cb) {
@@ -329,4 +329,24 @@ gulp.task('lint-coffee', function() {
       optFile: 'coffee/coffeelint.json'
     }))
     .pipe(coffeelint.reporter());
+})
+
+/************************************************************/
+/* Pug tasks                                                */
+/************************************************************/
+var pug = require('gulp-pug')
+
+gulp.task('pug', function() {
+  require('coffee-script/register')
+  var pages = require('./site_content/structure.coffee')
+  pages.forEach(function(page) {
+    gulp.src('pug/' + page.source)
+      .pipe(pug({
+        data: {
+          page: page
+        }
+      }))
+      .pipe(rename("index.html"))
+      .pipe(gulp.dest('build' + page.get_url()));
+  });
 })
