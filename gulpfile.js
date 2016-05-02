@@ -42,10 +42,10 @@ gulp.task('clean', function() {
 /* Misc asset tasks                                         */
 /************************************************************/
 var uuid = require('node-uuid');
-var execSync = require('child_process').execSync;
+var webfont = require('gulp-google-webfonts')
 
 gulp.task('assets', function(cb) {
-  sequence(['css', 'js', 'fonts', 'images', 'favicon'], 'modernizr', cb);
+  sequence(['css', 'js', 'fonts', 'webfonts', 'images', 'favicon'], 'modernizr', cb);
 })
 
 gulp.task('images', function() {
@@ -56,6 +56,14 @@ gulp.task('images', function() {
 gulp.task('fonts', function() {
   return gulp.src('bower_components/font-awesome/fonts/*')
     .pipe(gulp.dest('build/fonts'));
+})
+
+gulp.task('webfonts', function() {
+  return gulp.src('fonts.list')
+    .pipe(webfont({
+      fontsDir: '../fonts'
+    }))
+    .pipe(gulp.dest('build/css'));
 })
 
 gulp.task('favicon', function() {
@@ -204,8 +212,7 @@ gulp.task('js-lib', function() {
     'bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js',
     'bower_components/hammerjs/hammer.js',
     'bower_components/jquery-hammerjs/jquery.hammer.js',
-    'bower_components/js-cookie/src/js.cookie.js',
-    'bower_components/webfontloader/webfontloader.js'
+    'bower_components/js-cookie/src/js.cookie.js'
   ])
   .pipe(sourcemaps.init())
   .pipe(concat('lib.js'))
