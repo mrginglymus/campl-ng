@@ -2,24 +2,32 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
+
     <title>CamPL-NG: {{ page.title }}</title>
- 
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="shortcut icon" href="/favicon.ico" />
-    
+
     <!--[if gte IE 10]><!--><link rel="stylesheet" href="/css/campl.min.css"><!--<![endif]-->
     <!--[if lte IE 9 ]>
       <link rel="stylesheet" href="/css/campl_legacy.min.css">
     <![endif]-->
+    <!--
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,700italic,700' rel='stylesheet' type='text/css'>
-    
+    -->
+
+    <script type="text/javascript">
+      WebFontConfig = {
+        google: { families: [ 'Open+Sans:400,300italic,300,400italic,700,700italic:latin' ] }
+      }
+    </script>
+
     <script type="text/javascript" src="/js/jquery.min.js"></script>
     <script type="text/javascript" src="/js/lib.min.js"></script>
     <script type="text/javascript" src="/js/campl.min.js"></script>
     <script type="text/javascript" src="/js/modernizr.min.js"></script>
-    
+
    {% include 'meta/head.html' %}
   </head>
   <body class="offcanvas offcanvas-left theme-turquoise">

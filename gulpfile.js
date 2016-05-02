@@ -204,7 +204,8 @@ gulp.task('js-lib', function() {
     'bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js',
     'bower_components/hammerjs/hammer.js',
     'bower_components/jquery-hammerjs/jquery.hammer.js',
-    'bower_components/js-cookie/src/js.cookie.js'
+    'bower_components/js-cookie/src/js.cookie.js',
+    'bower_components/webfontloader/webfontloader.js'
   ])
   .pipe(sourcemaps.init())
   .pipe(concat('lib.js'))
