@@ -67,9 +67,14 @@ gulp.task('favicon', function() {
 /* HTML Tasks                                               */
 /************************************************************/
 var python = require('python-shell');
+var download = require('gulp-download-stream');
 
 gulp.task('html', function(cb) {
-  sequence('html-gen', 'cache-images', 'root-url', cb);
+  if (argv.cache) {
+    return sequence('html-gen', 'cache-images', 'root-url', cb);
+  } else {
+    return sequence('html-gen', 'root-url', cb);
+  }
 })
 
 gulp.task('html-gen', function(cb) {
@@ -83,12 +88,26 @@ gulp.task('html-gen', function(cb) {
   }, cb);
 })
 
-gulp.task('cache-images', function() {
+var images = [];
+
+gulp.task('cache-images', function(cb) {
+  return sequence('find-images', 'download-images', cb);
+});
+
+gulp.task('download-images', function() {
+  return download(images)
+    .pipe(gulp.dest('build/images'))
+})
+
+gulp.task('find-images', function() {
   if (argv.cache) {
     return gulp.src(['build/**/*.html', '!build/templates/**/*.html'])
       .pipe(replace(/img src="(http.+?)"/g, function(match, img) {
         u = uuid.v4();
-        r = execSync("wget -O build/images/" + u + " " + img);
+        images.push({
+          file: u,
+          url: img
+        })
         return "img src=\"/images/" + u + "\"";
       }))
       .pipe(gulp.dest('build'));

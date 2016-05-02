@@ -20,6 +20,7 @@
     "gulp-coffeelint": "^0.6.0",
     "gulp-concat": "^2.6.0",
     "gulp-cssnano": "^2.1.2",
+    "gulp-download-stream": "0.0.13",
     "gulp-mirror": "^1.0.0",
     "gulp-modernizr": "^1.0.0-alpha",
     "gulp-postcss": "^6.1.0",
