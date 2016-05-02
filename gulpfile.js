@@ -124,7 +124,7 @@ gulp.task('find-images', function() {
 
 gulp.task('root-url', function() {
   if (argv.root) {
-    return gulp.src(['build/**/*.html', '!build/templates/**/*', 'build/templates/**/index.html'])
+    return gulp.src(['build/**/*.html'])
       .pipe(replace(/\=\"\/(?!\/)/g, function() {
         return "=\"" + argv.root + "/";
       }))
