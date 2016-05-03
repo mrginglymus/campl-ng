@@ -1,9 +1,6 @@
-
-
 .vertical-menu-children {
   > li {
-    a.vertical-menu-child-bulleted,
-    span.vertical-menu-child-bulleted {
+    .vertical-menu-child-bulleted {
       background: inline("link-bullet-black.png") no-repeat 0 50%;
       padding-left: 15px;
     }

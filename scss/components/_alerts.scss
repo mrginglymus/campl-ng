@@ -17,7 +17,7 @@
 
   @include media-breakpoint-up(md) {
     padding: 15px; // Actually the wide padding looks rubbish on narrow screens, especially when you have lots of error messages
-  
+
     &.alert-dismissable {
       padding-right: 38px;
     }

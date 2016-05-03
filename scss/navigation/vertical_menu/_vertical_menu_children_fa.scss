@@ -1,18 +1,13 @@
 .vertical-menu-children-fa {
+  @include media-breakpoint-down(sm) {
+    > li {
+      position: relative;
 
-	@include media-breakpoint-down(sm) {
-
-		&> li {
-			position: relative;
-
-			.fa {
-				position:absolute;
-				top: 0.2em;
-				left: -1.5em;
+      .fa {
+        position: absolute;
+        top: 0.2em;
+        left: -1.5em;
 			}
-
 		}
-
 	}
-
 }
