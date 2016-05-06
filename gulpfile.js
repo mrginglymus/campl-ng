@@ -54,7 +54,7 @@ gulp.task('images', function() {
 })
 
 gulp.task('fonts', function() {
-  return gulp.src('bower_components/font-awesome/fonts/*')
+  return gulp.src('node_modules/font-awesome/fonts/*')
     .pipe(gulp.dest('build/fonts'));
 })
 
