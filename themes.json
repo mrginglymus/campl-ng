@@ -1,83 +1,86 @@
 {
-  "blue": {
-    "dark-highlight":   "#002e55",
-    "page-background":  "#003e74",
-    "navbar":           "#004e8f",
-    "light-highlight":  "#005dab",
-    "selected":         "#0072cf",
-    "pale-tone":        "#68ace5",
-    "pale-table-bg":    "#d2e4f3"
-  },
-  "turquoise": {
-    "dark-highlight":   "#003a41",
-    "page-background":  "#106470",
-    "navbar":           "#0c5963",
-    "light-highlight":  "#1e7680",
-    "selected":         "#28828a",
-    "pale-tone":        "#91b9a4",
-    "pale-table-bg":    "#d2f3e1"
-  },
-  "purple": {
-    "dark-highlight":   "#35254a",
-    "page-background":  "#422e5d",
-    "navbar":           "#612d70",
-    "light-highlight":  "#782c7e",
-    "selected":         "#8f2b8c",
-    "pale-tone":        "#af95a3",
-    "pale-table-bg":    "#f4d3e5"
-  },
-  "green": {
-    "dark-highlight":   "#222f16",
-    "page-background":  "#304220",
-    "navbar":           "#355918",
-    "light-highlight":  "#4b7016",
-    "selected":         "#57831a",
-    "pale-tone":        "#aab300",
-    "pale-table-bg":    "#f4f6cd"
-  },
-  "orange": {
-    "dark-highlight":   "#772801",
-    "page-background":  "#c44101",
-    "navbar":           "#ab3901",
-    "light-highlight":  "#d45812",
-    "selected":         "#df671d",
-    "pale-tone":        "#f3bd48",
-    "pale-table-bg":    "#f5e7ca"
-  },
-  "red": {
-    "dark-highlight":   "#6c112a",
-    "page-background":  "#851735",
-    "navbar":           "#a51137",
-    "light-highlight":  "#be1741",
-    "selected":         "#d61746",
-    "pale-tone":        "#eb99a9",
-    "pale-table-bg":    "#f8e1e5"
-  },
-  "grey": {
-    "dark-highlight":   "#2f2f2f",
-    "page-background":  "#404040",
-    "navbar":           "#5f5f5f",
-    "light-highlight":  "#7d7777",
-    "selected":         "#8c8989",
-    "pale-tone":        "#eae8e8",
-    "pale-table-bg":    "#dbd9d9"
-  },
-  "lime": {
-    "dark-highlight":   "#4e6c16",
-    "page-background":  "#abb400",
-    "navbar":           "#404f24",
-    "light-highlight":  "#79791e",
-    "selected":         "#888b22",
-    "pale-tone":        "#5d6200",
-    "pale-table-bg":    "#dfdfac"
-  },
-  "blue-grey": {
-    "dark-highlight":   "#134374",
-    "page-background":  "#d2dde7",
-    "navbar":           "#5f5f5f",
-    "light-highlight":  "#7d7777",
-    "selected":         "#8c8989",
-    "pale-tone":        "#404040",
-    "pale-table-bg":    "#dfdfac"
+  "themes":
+  {
+    "blue": {
+      "dark-highlight":   "#002e55",
+      "page-background":  "#003e74",
+      "navbar":           "#004e8f",
+      "light-highlight":  "#005dab",
+      "selected":         "#0072cf",
+      "pale-tone":        "#68ace5",
+      "pale-table-bg":    "#d2e4f3"
+    },
+    "turquoise": {
+      "dark-highlight":   "#003a41",
+      "page-background":  "#106470",
+      "navbar":           "#0c5963",
+      "light-highlight":  "#1e7680",
+      "selected":         "#28828a",
+      "pale-tone":        "#91b9a4",
+      "pale-table-bg":    "#d2f3e1"
+    },
+    "purple": {
+      "dark-highlight":   "#35254a",
+      "page-background":  "#422e5d",
+      "navbar":           "#612d70",
+      "light-highlight":  "#782c7e",
+      "selected":         "#8f2b8c",
+      "pale-tone":        "#af95a3",
+      "pale-table-bg":    "#f4d3e5"
+    },
+    "green": {
+      "dark-highlight":   "#222f16",
+      "page-background":  "#304220",
+      "navbar":           "#355918",
+      "light-highlight":  "#4b7016",
+      "selected":         "#57831a",
+      "pale-tone":        "#aab300",
+      "pale-table-bg":    "#f4f6cd"
+    },
+    "orange": {
+      "dark-highlight":   "#772801",
+      "page-background":  "#c44101",
+      "navbar":           "#ab3901",
+      "light-highlight":  "#d45812",
+      "selected":         "#df671d",
+      "pale-tone":        "#f3bd48",
+      "pale-table-bg":    "#f5e7ca"
+    },
+    "red": {
+      "dark-highlight":   "#6c112a",
+      "page-background":  "#851735",
+      "navbar":           "#a51137",
+      "light-highlight":  "#be1741",
+      "selected":         "#d61746",
+      "pale-tone":        "#eb99a9",
+      "pale-table-bg":    "#f8e1e5"
+    },
+    "grey": {
+      "dark-highlight":   "#2f2f2f",
+      "page-background":  "#404040",
+      "navbar":           "#5f5f5f",
+      "light-highlight":  "#7d7777",
+      "selected":         "#8c8989",
+      "pale-tone":        "#eae8e8",
+      "pale-table-bg":    "#dbd9d9"
+    },
+    "lime": {
+      "dark-highlight":   "#4e6c16",
+      "page-background":  "#abb400",
+      "navbar":           "#404f24",
+      "light-highlight":  "#79791e",
+      "selected":         "#888b22",
+      "pale-tone":        "#5d6200",
+      "pale-table-bg":    "#dfdfac"
+    },
+    "blue-grey": {
+      "dark-highlight":   "#134374",
+      "page-background":  "#d2dde7",
+      "navbar":           "#5f5f5f",
+      "light-highlight":  "#7d7777",
+      "selected":         "#8c8989",
+      "pale-tone":        "#404040",
+      "pale-table-bg":    "#dfdfac"
+    }
   }
 }

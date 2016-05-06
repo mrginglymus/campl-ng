@@ -1,13 +1,12 @@
 [data-toggle="collapse"] {
 
-	cursor: pointer;
+  cursor: pointer;
 
-	.collapse-icon:before {
-		content: "\f0d7";
+  .collapse-icon::before {
+    content: "\f0d7";
 	}
 
-	&.collapsed .collapse-icon:before {
-		content: "\f0da";
+  &.collapsed .collapse-icon::before {
+    content: "\f0da";
 	}
-
 }

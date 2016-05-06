@@ -1,10 +1,8 @@
-@import "compass/css3/images";
-
 @include media-breakpoint-up(xl) {
   .carousel::after {
     @include theme-element(background-color, page-background);
     content: " ";
-    height: calc(100% - 50px);
+    height: calc(100% - 49px);
     width: 100vw;
     position: absolute;
     bottom: 50px;
@@ -40,11 +38,11 @@
   }
 
   &.right {
-    background-image: inline-image("carousel-right.png");
+    background-image: inline("carousel-right.png");
   }
 
   &.left {
-    background-image: inline-image("carousel-left.png");
+    background-image: inline("carousel-left.png");
     left: auto;
     right: 51px;
 

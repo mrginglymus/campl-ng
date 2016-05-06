@@ -1,5 +1,3 @@
-@import "compass/css3/images";
-
 .focus-on-teaser {
   @include theme-element(background-color, page-background);
   @include make-row();
@@ -37,7 +35,7 @@
 
     a::after {
       @include theme-element(background-color, navbar);
-      background: inline-image("link-bullet-white.png") no-repeat center center;
+      background: inline("link-bullet-white.png") no-repeat center center;
       content: "";
       color: $white;
       width: 33px;

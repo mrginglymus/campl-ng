@@ -1,4 +1,4 @@
-@import "compass/css3/images";
+
 
 .local-header {
   .navbar-local {
@@ -48,7 +48,7 @@
         }
 
         .dropdown-toggle {
-          background: inline-image("dropdown-indicator.png") no-repeat right 5px top 50%;
+          background: inline("dropdown-indicator.png") no-repeat right 5px top 50%;
           padding: 10px 40px 10px 10px;
 
           &::after {

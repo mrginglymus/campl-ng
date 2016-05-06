@@ -1,4 +1,4 @@
-$themes: get-themes();
+@import "../themes.json";
 
 @mixin theme-element($property, $variant, $important:"") {
   $element: &;
