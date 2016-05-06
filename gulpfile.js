@@ -8,6 +8,7 @@ var concat = require('gulp-concat');
 var sequence = require('run-sequence');
 var replace = require('gulp-replace');
 var webserver = require('gulp-webserver');
+var download = require('gulp-download-stream');
 var argv = require('yargs')
   .boolean('photo')
   .boolean('cache-images')
@@ -42,7 +43,6 @@ gulp.task('clean', function() {
 /* Misc asset tasks                                         */
 /************************************************************/
 var uuid = require('node-uuid');
-var webfont = require('gulp-google-webfonts');
 
 gulp.task('assets', function(cb) {
   sequence(['css', 'js', 'fonts', 'webfonts', 'images', 'favicon'], 'modernizr', cb);
@@ -58,24 +58,30 @@ gulp.task('fonts', function() {
     .pipe(gulp.dest('build/fonts'));
 })
 
-gulp.task('webfonts', function() {
-  return gulp.src('fonts.list')
-    .pipe(webfont({
-      fontsDir: '../fonts'
-    }))
-    .pipe(gulp.dest('build/css'));
-})
-
 gulp.task('favicon', function() {
   return gulp.src('favicon.ico')
     .pipe(gulp.dest('build'));
+})
+
+gulp.task('webfonts', function() {
+  return download('https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,700italic,700', {
+    headers: {
+      'User-Agent': 'Mozilla/4.0 (Windows NT 6.2; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/32.0.1667.0 Safari/537.36'
+    }
+  })
+    .pipe(rename('fonts.css'))
+    .pipe(replace(/url\(([^)]*)\/([^)]*)\)/g, function(match, src, file) {
+      download(src + '/' + file)
+        .pipe(gulp.dest('build/fonts'));
+      return 'url(../fonts/' + file + ')';
+    }))
+    .pipe(gulp.dest('build/css'));
 })
 
 /************************************************************/
 /* HTML Tasks                                               */
 /************************************************************/
 var python = require('python-shell');
-var download = require('gulp-download-stream');
 
 gulp.task('html', function(cb) {
   if (argv.cache) {

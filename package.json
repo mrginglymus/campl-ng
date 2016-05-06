@@ -22,7 +22,6 @@
     "gulp-concat": "^2.6.0",
     "gulp-cssnano": "^2.1.2",
     "gulp-download-stream": "0.0.13",
-    "gulp-google-webfonts": "0.0.12",
     "gulp-mirror": "^1.0.0",
     "gulp-modernizr": "^1.0.0-alpha",
     "gulp-postcss": "^6.1.0",
