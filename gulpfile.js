@@ -42,7 +42,7 @@ gulp.task('clean', function() {
 /* Misc asset tasks                                         */
 /************************************************************/
 var uuid = require('node-uuid');
-var webfont = require('gulp-google-webfonts')
+var webfont = require('gulp-google-webfonts');
 
 gulp.task('assets', function(cb) {
   sequence(['css', 'js', 'fonts', 'webfonts', 'images', 'favicon'], 'modernizr', cb);
@@ -166,7 +166,9 @@ gulp.task('js-core', function() {
         ),
         pipe(
           concat('campl.min.js'),
-          uglify()
+          uglify({
+            preserveComments: 'license'
+          })
         )
       )
     )
@@ -186,7 +188,9 @@ gulp.task('js-meta', function() {
         ),
         pipe(
           concat('meta.min.js'),
-          uglify()
+          uglify({
+            preserveComments: 'license'
+          })
         )
       )
     )
@@ -224,7 +228,9 @@ gulp.task('js-lib', function() {
       ),
       pipe(
         concat('lib.min.js'),
-        uglify()
+        uglify({
+          preserveComments: 'license'
+        })
       )
     )
   )
@@ -238,7 +244,9 @@ gulp.task('modernizr', function() {
       excludeTests: ['svg']
     }))
     .pipe(gulp.dest('build/js'))
-    .pipe(uglify())
+    .pipe(uglify({
+      preserveComments: 'license'
+    }))
     .pipe(rename({extname: '.min.js'}))
     .pipe(gulp.dest('build/js'))
 })
