@@ -35,9 +35,6 @@ $grid-breakpoints: (
 );
 
 $container-max-widths: (
-  sm: 100%,
-  md: 100%,
-  lg: 100%,
   xl: 1177px
 );
 
@@ -46,7 +43,7 @@ $grid-gutter-width: 0;
 // fonts
 
 $font-family-sans-serif:     verdana, Arial, sans-serif;
-$font-family-sans-serif-extra: "myriad-pro", myriad, verdana, Arial, sans-serif;
+$font-family-sans-serif-extra: "Open Sans", verdana, Arial, sans-serif;
 $font-family-serif: Georgia, "sans serif";
 $font-size-root:             12px;
 

@@ -1,5 +1,3 @@
-@import "compass/css3/images";
-
 @mixin alert-style($colour) {
   border-color: $colour;
 
@@ -19,7 +17,7 @@
 
   @include media-breakpoint-up(md) {
     padding: 15px; // Actually the wide padding looks rubbish on narrow screens, especially when you have lots of error messages
-  
+
     &.alert-dismissable {
       padding-right: 38px;
     }
@@ -66,7 +64,7 @@
   }
 
   .close {
-    background: rgba(255, 255, 255, 0.5) inline-image("alert-close.png") no-repeat 50% 50%;
+    background: rgba(255, 255, 255, 0.5) inline("alert-close.png") no-repeat 50% 50%;
     width: 23px;
     height: 23px;
     padding: 4px;

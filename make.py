@@ -10,34 +10,49 @@ from ordereddict import OrderedDict
 from jinja2 import FileSystemLoader, Environment
 import codecs
 
-from site_content.examples import EXAMPLES
-from site_content.functions import FUNCTIONS
-from site_content.structure import pages, front_page
+
+
+
+parser = argparse.ArgumentParser()
+parser.add_argument('--photo', dest='photo', action="store_true")
+
+args = parser.parse_args()
 
 env = Environment(loader=FileSystemLoader('templates'))
 
 env.globals['SITE_NAME'] = 'CamPL-NG'
 
-with open('themes.json') as f:
-  env.globals['COLOURS'] = json.loads(f.read(), object_pairs_hook=OrderedDict)
+if args.photo:
+  IMAGE_SOURCE = "http://loremflickr.com/%s/%s/?user=cambridge%%20university"
+else:
+  IMAGE_SOURCE = "http://placehold.it/%sx%s"
 
-with open('images.json') as f:
-  env.globals['IMAGE_STYLES'] = json.loads(f.read(), object_pairs_hook=OrderedDict)
-  
-# add functions
-for f in FUNCTIONS:
-  env.globals[f.func_name] = f
+def main():
+  from site_content.examples import EXAMPLES
+  from site_content.functions import FUNCTIONS
+  from site_content.structure import pages, front_page
 
-with open('site_content/links.json') as f:
-  env.globals['LINKS'] = json.loads(f.read(), object_pairs_hook=OrderedDict)
-  
-env.globals['EXAMPLES'] = EXAMPLES
+  with open('themes.json') as f:
+    env.globals['COLOURS'] = json.loads(f.read(), object_pairs_hook=OrderedDict)['themes']
 
-env.globals['MENU'] = pages
+  with open('images.json') as f:
+    env.globals['IMAGE_STYLES'] = json.loads(f.read(), object_pairs_hook=OrderedDict)['images']
+    
+  # add functions
+  for f in FUNCTIONS:
+    env.globals[f.func_name] = f
 
-for page in pages:
-  page.render(env)
+  with open('site_content/links.json') as f:
+    env.globals['LINKS'] = json.loads(f.read(), object_pairs_hook=OrderedDict)
+    
+  env.globals['EXAMPLES'] = EXAMPLES
 
-front_page.render(env)
+  env.globals['MENU'] = pages
 
+  for page in pages:
+    page.render(env)
 
+  front_page.render(env)
+
+if __name__== "__main__":
+  main()
