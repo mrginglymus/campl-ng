@@ -5,4 +5,4 @@ services:
     image: camplng
     command: ["bash"]
     volumes:
-      - .:/camplng/
+      - .:/home/camplng/
