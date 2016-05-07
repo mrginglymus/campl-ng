@@ -1,0 +1,8 @@
+version: '2'
+services:
+  camplng:
+    build: .
+    image: camplng
+    command: ["bash"]
+    volumes:
+      - .:/camplng/

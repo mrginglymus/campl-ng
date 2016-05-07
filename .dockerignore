@@ -1,0 +1,10 @@
+.sass-cache
+npm-debug.log
+.ruby-version
+local_settings.json
+*.pyc
+gh-pages/
+build
+node_modules
+local_settings.py
+bower_components
