@@ -39,12 +39,12 @@
 {% macro frontpage_carousel_item(article, image, items, loop) %}
 <div class="carousel-item{% if loop.first %} active{% endif %}">
   <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-8 col-xs-12">
       <a href="{{ article.link }}" class="image-wrapper image-wrapper-carousel-campage">
         <img src="{{ image }}" alt="{{ article.title }}">
       </a>
     </div>
-    <div class="col-md-4 carousel-text">
+    <div class="col-md-4 col-xs-12 carousel-text">
       "{{ ' '.join(article.body.split(' ')[:8]) }}"
     </div>
   </div>
@@ -72,4 +72,3 @@
   </a>
 </div>
 {% endmacro %}
-    
