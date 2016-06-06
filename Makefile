@@ -15,4 +15,4 @@ update:
 	. venv/bin/activate && bower install
 
 clean:
-	-rm -r .sass-cache bower_components build/* node_modules venv
+	-rm -r bower_components build/* node_modules venv 2> /dev/null || true

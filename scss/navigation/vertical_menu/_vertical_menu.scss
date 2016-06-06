@@ -1,8 +1,7 @@
 
 
 .vertical-menu {
-  @include make-col();
-  @include make-col-span(12);
+  @include make-col(12);
   background: inline("vertical-nav-background.png");
   border-left: $border-width solid $border-color;
   border-right: $border-width solid $border-color;
@@ -12,7 +11,7 @@
   font-family: $font-family-sans-serif-extra;
 
   @include media-breakpoint-up(md) {
-    @include make-col-span(3);
+    @include make-col(3);
   }
 }
 

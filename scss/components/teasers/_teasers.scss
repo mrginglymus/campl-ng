@@ -25,23 +25,20 @@
   @include make-row();
 
   .teaser-image {
-    @include make-col-span(3);
-    @include make-col();
+    @include make-col(3);
 
     + .teaser-body {
-      @include make-col-span(9);
+      @include make-col(9);
     }
   }
 
   .teaser-body {
-    @include make-col();
-
     &:first-child {
-      @include make-col-span(9);
+      @include make-col(9);
       @include make-col-offset(3);
 
       @include media-breakpoint-up(md) {
-        @include make-col-span(12);
+        @include make-col(12);
         @include make-col-offset(0);
       }
     }
@@ -52,15 +49,15 @@
   @include teaser-common();
 
   .teaser-image {
-    padding: 0 $spacer 0 0;
+    padding: 0 $spacer 0 0 !important;
 
     @include media-breakpoint-up(md) {
-      @include make-col-span(6);
+      @include make-col(6);
     }
 
     + .teaser-body {
       @include media-breakpoint-up(md) {
-        @include make-col-span(6);
+        @include make-col(6);
       }
     }
   }
@@ -75,10 +72,10 @@
     }
 
     @include media-breakpoint-up(md) {
-      @include make-col-span(12);
+      @include make-col(12);
 
       + .teaser-body {
-        @include make-col-span(12);
+        @include make-col(12);
         margin-top: $spacer;
       }
     }
@@ -89,8 +86,7 @@
   @include make-row();
 
   .teaser-image {
-    @include make-col();
-    @include make-col-span(12);
+    @include make-col(12);
 
     + .teaser-body {
       margin-top: $spacer;
@@ -98,7 +94,6 @@
   }
 
   .teaser-body {
-    @include make-col();
-    @include make-col-span(12);
+    @include make-col(12);
   }
 }
