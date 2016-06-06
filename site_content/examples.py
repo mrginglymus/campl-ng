@@ -1,4 +1,4 @@
-from functions import lipsum, random_image, random_article
+from .functions import lipsum, random_image, random_article
 from random import random
 import string
 

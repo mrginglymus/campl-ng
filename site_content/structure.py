@@ -1,4 +1,4 @@
-from pages import Page, Pages, SCSSPage, TemplatePage, FrontPage, CoffeePage
+from .pages import Page, Pages, SCSSPage, TemplatePage, FrontPage, CoffeePage
 from jinja2.utils import generate_lorem_ipsum as lipsum
 import os
 from ordereddict import OrderedDict
