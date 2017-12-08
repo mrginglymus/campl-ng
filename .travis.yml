@@ -4,4 +4,9 @@ node_js:
 install:
   - make install
 script:
-  - . venv/bin/activate && gulp build
+  - . venv/bin/activate && gulp build --root /campl-ng
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: build
+  github_token: $GITHUB_TOKEN
