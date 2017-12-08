@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>CamPL-NG: App</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/campl-ng/favicon.ico"/>
+
+    <link rel="stylesheet" href="/campl-ng/css/campl.min.css">
+
+    <link rel="stylesheet" href="/campl-ng/css/fonts.css"/>
+
+    <script type="text/javascript" src="/campl-ng/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/campl-ng/js/lib.min.js"></script>
+    <script type="text/javascript" src="/campl-ng/js/campl.min.js"></script>
+    <script type="text/javascript" src="/campl-ng/js/modernizr.min.js"></script>
+
+    <script type="text/javascript" src="/campl-ng/js/meta.min.js"></script>
+<link rel="stylesheet" href="/campl-ng/css/meta.min.css">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/monokai-sublime.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/languages/django.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/languages/scss.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/languages/coffeescript.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('pre code').each(function (i, block) {
+            hljs.highlightBlock(block);
+        });
+        $('span.hljs-keyword:contains("import") + span.hljs-string:not(:contains("lib")):not(:contains("compass"))').each(function (i, e) {
+            // special case for campl
+            $(e).html($(e).html().replace(/['"](campl)['"]/, '\'<a href="/campl-ng/stylesheets/campl.scss/">campl</a>\''));
+            $(e).html($(e).html().replace(/['"]((?:\w+\/)*)(\w+)['"]/, '\'<a href="/campl-ng/stylesheets/$1_$2.scss/">$1$2</a>\''));
+        });
+        $('span.hljs-template_tag:contains(".html")').each(function (i, e) {
+            $(e).html($(e).html().replace(/'(.*.html)'/, '\'<a href="/campl-ng/templates/$1/">$1</a>\''));
+        });
+    });
+</script>
+</head>
+<body class="offcanvas offcanvas-left theme-turquoise">
+
+    <header>
+        <div class="global-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <a href="http://www.cam.ac.uk/" class="navbar-brand">
+                            <img class="logo logo-sm" alt="University of Cambridge" src="/campl-ng/images/logo.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="local-header">
+            <div class="container p-a-1">
+                <p class="title">
+                    Referee Portal
+                </p>
+            </div>
+        </div>
+        <div class="local-header subtitle">
+            <div class="container">
+                <div class="col-md-12">
+                    <div class="p-a-1">
+                        <h1 class="app">Academic Reference for Miss Sarah Williams</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <div class="row">
+            <div class="col-md-12 main-content">
+                <div style="padding-top:5px;" class="clearfix">
+                    
+    
+    <div class="nav-stages-wrapper">
+        <ul class="nav nav-stages nav-pills" role="tablist">
+            
+                <li class="nav-item">
+                    <a
+                            class="nav-link active"
+                            role="tab"
+                            
+                                
+                            data-toggle="pill"
+                            href="#tab1"
+                                
+                            
+                    >Active</a>
+                </li>
+            
+                <li class="nav-item">
+                    <a
+                            class="nav-link"
+                            role="tab"
+                            
+                                
+                            data-toggle="pill"
+                            href="#tab2"
+                                
+                            
+                    >Link</a>
+                </li>
+            
+                <li class="nav-item">
+                    <a
+                            class="nav-link"
+                            role="tab"
+                            
+                                
+                            data-toggle="pill"
+                            href="#tab3"
+                                
+                            
+                    >Another Link</a>
+                </li>
+            
+        </ul>
+    </div>
+
+
+                </div>
+                <hr style="margin-top:5px;">
+                <div class="p-a-1">
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="local-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <p>This application is provided and managed by the <a href="http://www.admin.cam.ac.uk">Unified
+                            Administrative Service</a>.</p>
+                        <p>&copy; 2015 University of Cambridge</p>
+                    </div>
+                    <div class="col-md-4">
+                        <p class="text-muted">Version 0.4.0-SNAPSHOT (20150924-1109)</p>
+                        <p class="bg-danger">This is a DEVELOPMENT version of the system</p>
+                    </div>
+                    <div class="col-md-3">
+                        <h3><a href="/campl-ng/">Privacy and Cookie Policy</a></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>CamPL-NG: Tabs</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="/campl-ng/favicon.ico"/>
+
+    <link rel="stylesheet" href="/campl-ng/css/campl.min.css">
+
+    <link rel="stylesheet" href="/campl-ng/css/fonts.css"/>
+
+    <script type="text/javascript" src="/campl-ng/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/campl-ng/js/lib.min.js"></script>
+    <script type="text/javascript" src="/campl-ng/js/campl.min.js"></script>
+    <script type="text/javascript" src="/campl-ng/js/modernizr.min.js"></script>
+
+    <script type="text/javascript" src="/campl-ng/js/meta.min.js"></script>
+<link rel="stylesheet" href="/campl-ng/css/meta.min.css">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/monokai-sublime.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/languages/django.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/languages/scss.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/languages/coffeescript.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('pre code').each(function (i, block) {
+            hljs.highlightBlock(block);
+        });
+        $('span.hljs-keyword:contains("import") + span.hljs-string:not(:contains("lib")):not(:contains("compass"))').each(function (i, e) {
+            // special case for campl
+            $(e).html($(e).html().replace(/['"](campl)['"]/, '\'<a href="/campl-ng/stylesheets/campl.scss/">campl</a>\''));
+            $(e).html($(e).html().replace(/['"]((?:\w+\/)*)(\w+)['"]/, '\'<a href="/campl-ng/stylesheets/$1_$2.scss/">$1$2</a>\''));
+        });
+        $('span.hljs-template_tag:contains(".html")').each(function (i, e) {
+            $(e).html($(e).html().replace(/'(.*.html)'/, '\'<a href="/campl-ng/templates/$1/">$1</a>\''));
+        });
+    });
+</script>
+</head>
+<body class="offcanvas offcanvas-left theme-turquoise">
+
+    <header>
+        
+
+<nav class="navbar global-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-xs-12">
+                <a class="global-menu-button pull-xs-left hidden-md-up" href="#sidebar-offcanvas"
+                   data-toggle="offcanvas">
+                    <span class="fa fa-bars fa-2x"></span>
+                </a>
+                <a class="global-menu-button pull-xs-right hidden-md-up" href="#global-search-drawer"
+                   data-toggle="collapse">
+                    <span class="fa fa-search fa-2x"></span>
+                </a>
+                
+                    <a href="http://www.cam.ac.uk/" class="navbar-brand">
+                        <img class="logo logo-sm" alt="University of Cambridge" src="/campl-ng/images/logo.png">
+                    </a>
+                
+                <ul class="nav navbar-nav nav-global hidden-sm-down">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#global-header-drawer-study" data-toggle="tab"
+                           data-target="#global-header-drawer-study" data-parent="#global-header-drawers">Study at
+                            Cambridge</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#global-header-drawer-about" data-toggle="tab"
+                           data-target="#global-header-drawer-about" data-parent="#global-header-drawers">About the
+                            University</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://www.cam.ac.uk/research">Research at Cambridge</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-2 hidden-sm-down quicklinks-container">
+                <div class="dropdown" id="global-quicklinks">
+                    <a href="#global-quicklinks" data-toggle="dropdown">
+                        <span>Quick links</span>
+                        <span class="quicklinks-dropdown-toggle"><span class="fa fa-caret-down fa-lg"></span></span>
+                    </a>
+                    <div class="dropdown-menu">
+                        
+                            <a class="dropdown-item" href="http://www.cam.ac.uk/for-staff">For staff</a>
+                        
+                            <a class="dropdown-item" href="http://www.admin.cam.ac.uk/students/gateway">For current students</a>
+                        
+                            <a class="dropdown-item" href="http://www.alumni.cam.ac.uk/">For alumni</a>
+                        
+                            <a class="dropdown-item" href="http://www.cam.ac.uk/for-business">For business</a>
+                        
+                            <a class="dropdown-item" href="http://www.cam.ac.uk/colleges-and-departments">Colleges & departments</a>
+                        
+                            <a class="dropdown-item" href="http://www.cam.ac.uk/libraries-and-facilities">Libraries & facilities</a>
+                        
+                            <a class="dropdown-item" href="http://www.cam.ac.uk/museums-and-collections">Museums & collections</a>
+                        
+                            <a class="dropdown-item" href="http://www.cam.ac.uk/email-and-phone-search">Email & phone search</a>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 col-xs-12 collapse navbar-toggleable-sm" id="global-search-drawer">
+                <form action="http://search.cam.ac.uk/web" method="get">
+                    <div class="input-group global-search">
+                        <input class="form-control" type="text" placeholder="Search" name="query">
+                        <button type="submit" class="input-group-addon"><span class="fa fa-search fa-lg">&nbsp;</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</nav>
+<div id="global-header-drawers" class="collapse">
+    <div class="tab-content global-header-drawer sidebar-offcanvas">
+        
+    <div id="global-header-drawer-study" role="tabpanel" class="tab-pane fade">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-11 col-xs-12 global-header-drawer-title">
+                    <a href="http://www.cam.ac.uk/study-at-cambridge">Study at Cambridge</a>
+                </div>
+                <div class="col-md-1 global-header-close hidden-sm-down">
+                    <a href="#global-header-drawers" data-target="#global-header-drawers"
+                       data-toggle="collapse">Close</a>
+                </div>
+            </div>
+            <div class="row">
+                
+                    <div class="col-md-4 col-xs-12">
+                        <ul class="global-header-list">
+                            
+                                <li>
+                                    <a href="http://www.undergraduate.study.cam.ac.uk">Undergraduate</a>
+                                    
+                                        <ul class="global-header-sublist">
+                                            
+                                                <li>
+                                                    <a href="http://www.undergraduate.study.cam.ac.uk/courses">Courses</a>
+                                                </li>
+                                            
+                                                <li>
+                                                    <a href="http://www.undergraduate.study.cam.ac.uk/applying">Applying</a>
+                                                </li>
+                                            
+                                                <li>
+                                                    <a href="http://www.undergraduate.study.cam.ac.uk/events/cambridge-open-days">Events and open days</a>
+                                                </li>
+                                            
+                                                <li>
+                                                    <a href="http://www.undergraduate.study.cam.ac.uk/finance">Fees and finance</a>
+                                                </li>
+                                            
+                                                <li>
+                                                    <a href="http://www.becambridge.com">Student blogs and videos</a>
+                                                </li>
+                                            
+                                        </ul>
+                                    
+                                </li>
+                            
+                        </ul>
+                    </div>
+                
+                    <div class="col-md-4 col-xs-12">
+                        <ul class="global-header-list">
+                            
+                                <li>
+                                    <a href="http://www.graduate.study.cam.ac.uk">Graduate</a>
+                                    
+                                        <ul class="global-header-sublist">
+                                            
+                                                <li>
+                                                    <a href="http://www.graduate.study.cam.ac.uk/why-cambridge/welcome-vice-chancellor">Why Cambridge</a>
+                                                </li>
+                                            
+                                                <li>
+                                                    <a href="http://www.graduate.study.cam.ac.uk/ourses">Course directory</a>
+                                                </li>
+                                            
+                                                <li>
+                                                    <a href="http://www.graduate.study.cam.ac.uk/how-do-i-apply">How to apply</a>
+                                                </li>
+                                            
+                                                <li>
+                                                    <a href="http://www.admin.cam.ac.uk/students/studentregistry/fees">Fees and funding</a>
+                                                </li>
+                                            
+                                                <li>
+                                                    <a href="http://www.graduate.study.cam.ac.uk/faqs/applicant">Frequently asked questions</a>
+                                                </li>
+                                            
+                                        </ul>
+                                    
+                                </li>
+                            
+                        </ul>
+                    </div>
+                
+                    <div class="col-md-4 col-xs-12">
+                        <ul class="global-header-list">
+                            
+                                <li>
+                                    <a href="http://www.internationalstudents.cam.ac.uk">International Students</a>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <a href="http://www.ice.cam.ac.uk">Continuing education</a>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <a href="http://www.epe.admin.cam.ac.uk">Executive and professional education</a>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <a href="http://www.epe.admin.cam.ac.uk">Courses in education</a>
+                                    
+                                </li>
+                            
+                        </ul>
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+
+        
+    <div id="global-header-drawer-about" role="tabpanel" class="tab-pane fade">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-11 col-xs-12 global-header-drawer-title">
+                    <a href="http://www.cam.ac.uk/about-the-university">About the University</a>
+                </div>
+                <div class="col-md-1 global-header-close hidden-sm-down">
+                    <a href="#global-header-drawers" data-target="#global-header-drawers"
+                       data-toggle="collapse">Close</a>
+                </div>
+            </div>
+            <div class="row">
+                
+                    <div class="col-md-4 col-xs-12">
+                        <ul class="global-header-list">
+                            
+                                <li>
+                                    <a href="http://www.cam.ac.uk/about-the-university/how-the-university-and-colleges-work">How the University and Colleges work</a>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <a href="http://www.cam.ac.uk/about-the-university/history">History</a>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <a href="http://www.cam.ac.uk/about-the-university/visiting-the-university">Visiting the University</a>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <a href="http://www.cam.ac.uk/about-the-university/term-dates-and-calendars">Term dates and calendars</a>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <a href="http://map.cam.ac.uk">Map</a>
+                                    
+                                </li>
+                            
+                        </ul>
+                    </div>
+                
+                    <div class="col-md-4 col-xs-12">
+                        <ul class="global-header-list">
+                            
+                                <li>
+                                    <a href="http://www.cam.ac.uk/media-relations">Media relations</a>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <a href="http://www.cam.ac.uk/video-and-audio">Video and audio</a>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <a href="http://webservices.admin.cam.ac.uk/fae/">Find an expert</a>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <a href="http://www.cam.ac.uk/about-the-university/publications">Publications</a>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <a href="http://www.cam.ac.uk/global-cambridge">Global Cambridge</a>
+                                    
+                                </li>
+                            
+                        </ul>
+                    </div>
+                
+                    <div class="col-md-4 col-xs-12">
+                        <ul class="global-header-list">
+                            
+                                <li>
+                                    <a href="http://www.cam.ac.uk/news">News</a>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <a href="http://www.admin.cam.ac.uk/whatson">Events</a>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <a href="http://www.cam.ac.uk/public-engagement">Public engagement</a>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <a href="http://www.jobs.cam.ac.uk">Jobs</a>
+                                    
+                                </li>
+                            
+                                <li>
+                                    <a href="https://www.philanthropy.cam.ac.uk">Give to Cambridge</a>
+                                    
+                                </li>
+                            
+                        </ul>
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+
+        <div class="hidden-md-up">
+            <ul class="global-header-offcanvas-quicklinks global-header-list">
+                <li>
+                    <a href="http://www.cam.ac.uk/research">Research at Cambridge</a>
+                </li>
+                
+                    <li>
+                        <a href="http://www.cam.ac.uk/for-staff">For staff</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://www.admin.cam.ac.uk/students/gateway">For current students</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://www.alumni.cam.ac.uk/">For alumni</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://www.cam.ac.uk/for-business">For business</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://www.cam.ac.uk/colleges-and-departments">Colleges & departments</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://www.cam.ac.uk/libraries-and-facilities">Libraries & facilities</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://www.cam.ac.uk/museums-and-collections">Museums & collections</a>
+                    </li>
+                
+                    <li>
+                        <a href="http://www.cam.ac.uk/email-and-phone-search">Email & phone search</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+        <div class="local-header">
+    <a class="local-menu-button pull-xs-right hidden-md-up" href="#vertical-menu" data-toggle="collapse">
+        <span class="fa fa-bars fa-2x"></span>
+    </a>
+    <div class="container p-a-1">
+        
+    <div class="hidden-sm-down">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="http://www.cam.ac.uk/"><span class="fa fa-home fa-lg">&nbsp;</span></a>
+            </li>
+            
+                
+                    <li class="breadcrumb-item">
+                        <a href="/campl-ng/">Campl-NG</a>
+                    </li>
+                
+            
+                
+                    <li class="breadcrumb-item active">
+                        In Page Components
+                    </li>
+                
+            
+                
+                    <li class="breadcrumb-item active">
+                        Navigation
+                    </li>
+                
+            
+                
+                    <li class="breadcrumb-item active">
+                        Tabs
+                    </li>
+                
+            
+        </ol>
+    </div>
+
+        <div>
+            <p class="title">CamPL-NG</p>
+        </div>
+    </div>
+</div>
+<div class="local-header">
+    <nav class="navbar navbar-local container hidden-sm-down">
+    <div>
+        <ul class="nav navbar-nav nav-local">
+            <li class="nav-item">
+                <a class="nav-link" href="/campl-ng/">Home</a>
+            </li>
+            
+                
+                    <li class="nav-item">
+                        <a class="nav-link" href="/campl-ng/about">About</a>
+                    </li>
+                
+            
+                
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                            Page Layouts
+                        </a>
+                        <ul class="dropdown-menu">
+                            
+                            
+                                <li>
+                                    <a href="/campl-ng/page_layouts/app" class="dropdown-item">App</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/campl-ng/page_layouts/cambridge_front_page" class="dropdown-item">Cambridge Front Page</a>
+                                </li>
+                            
+                        </ul>
+                    </li>
+                
+            
+                
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                            Core Elements
+                        </a>
+                        <ul class="dropdown-menu">
+                            
+                            
+                                <li>
+                                    <a href="/campl-ng/core_elements/typography" class="dropdown-item">Typography</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/campl-ng/core_elements/links_and_buttons" class="dropdown-item">Links and Buttons</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/campl-ng/core_elements/forms" class="dropdown-item">Forms</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/campl-ng/core_elements/lists" class="dropdown-item">Lists</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/campl-ng/core_elements/images" class="dropdown-item">Images</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/campl-ng/core_elements/embedded_media" class="dropdown-item">Embedded Media</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/campl-ng/core_elements/themes" class="dropdown-item">Themes</a>
+                                </li>
+                            
+                        </ul>
+                    </li>
+                
+            
+                
+                    <li class="nav-item active dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                            In Page Components
+                        </a>
+                        <ul class="dropdown-menu">
+                            
+                            
+                                <li>
+                                    <a href="/campl-ng/in_page_components/navigation/tabs" class="dropdown-item">Navigation</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/campl-ng/in_page_components/content/tables" class="dropdown-item">Content</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/campl-ng/in_page_components/teasers" class="dropdown-item">Teasers</a>
+                                </li>
+                            
+                        </ul>
+                    </li>
+                
+            
+                
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                            Templates
+                        </a>
+                        <ul class="dropdown-menu">
+                            
+                            
+                                <li>
+                                    <a href="/campl-ng/templates/base.html" class="dropdown-item">base.html</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/campl-ng/templates/components/alerts.html" class="dropdown-item">Components</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/campl-ng/templates/layout/app.html" class="dropdown-item">Layout</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/campl-ng/templates/meta/head.html" class="dropdown-item">Meta</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/campl-ng/templates/navigation/breadcrumb.html" class="dropdown-item">Navigation</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/campl-ng/templates/pages/about.html" class="dropdown-item">Pages</a>
+                                </li>
+                            
+                        </ul>
+                    </li>
+                
+            
+                
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                            Stylesheets
+                        </a>
+                        <ul class="dropdown-menu">
+                            
+                            
+                                <li>
+                                    <a href="/campl-ng/stylesheets/_components.scss" class="dropdown-item">components.scss</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/campl-ng/stylesheets/_core_elements.scss" class="dropdown-item">core_elements.scss</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/campl-ng/stylesheets/_layout.scss" class="dropdown-item">layout.scss</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/campl-ng/stylesheets/_navigation.scss" class="dropdown-item">navigation.scss</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/campl-ng/stylesheets/_themes.scss" class="dropdown-item">themes.scss</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/campl-ng/stylesheets/_variables.scss" class="dropdown-item">variables.scss</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/campl-ng/stylesheets/campl.scss" class="dropdown-item">campl.scss</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/campl-ng/stylesheets/meta.scss" class="dropdown-item">meta.scss</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/campl-ng/stylesheets/components/_alerts.scss" class="dropdown-item">Components</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/campl-ng/stylesheets/core_elements/_blockquote.scss" class="dropdown-item">Core Elements</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/campl-ng/stylesheets/layout/_cam_page.scss" class="dropdown-item">Layout</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/campl-ng/stylesheets/navigation/_breadcrumb.scss" class="dropdown-item">Navigation</a>
+                                </li>
+                            
+                        </ul>
+                    </li>
+                
+            
+                
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                            Scripts
+                        </a>
+                        <ul class="dropdown-menu">
+                            
+                            
+                                <li>
+                                    <a href="/campl-ng/scripts/carousel.coffee" class="dropdown-item">carousel.coffee</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/campl-ng/scripts/flexbox.coffee" class="dropdown-item">flexbox.coffee</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/campl-ng/scripts/menu.coffee" class="dropdown-item">menu.coffee</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/campl-ng/scripts/object_fit.coffee" class="dropdown-item">object_fit.coffee</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/campl-ng/scripts/select_tab.coffee" class="dropdown-item">select_tab.coffee</a>
+                                </li>
+                            
+                                <li>
+                                    <a href="/campl-ng/scripts/theme_switcher.coffee" class="dropdown-item">theme_switcher.coffee</a>
+                                </li>
+                            
+                        </ul>
+                    </li>
+                
+            
+            <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+        Theme Switcher
+    </a>
+    <ul class="dropdown-menu">
+        
+            <li>
+                <a href="#" class="dropdown-item" data-toggle="theme" data-colour="blue">Blue</a>
+            </li>
+        
+            <li>
+                <a href="#" class="dropdown-item" data-toggle="theme" data-colour="turquoise">Turquoise</a>
+            </li>
+        
+            <li>
+                <a href="#" class="dropdown-item" data-toggle="theme" data-colour="purple">Purple</a>
+            </li>
+        
+            <li>
+                <a href="#" class="dropdown-item" data-toggle="theme" data-colour="green">Green</a>
+            </li>
+        
+            <li>
+                <a href="#" class="dropdown-item" data-toggle="theme" data-colour="orange">Orange</a>
+            </li>
+        
+            <li>
+                <a href="#" class="dropdown-item" data-toggle="theme" data-colour="red">Red</a>
+            </li>
+        
+            <li>
+                <a href="#" class="dropdown-item" data-toggle="theme" data-colour="grey">Grey</a>
+            </li>
+        
+            <li>
+                <a href="#" class="dropdown-item" data-toggle="theme" data-colour="lime">Lime</a>
+            </li>
+        
+            <li>
+                <a href="#" class="dropdown-item" data-toggle="theme" data-colour="blue-grey">Blue-Grey</a>
+            </li>
+        
+        <li>
+            <a class="dropdown-item" href="#disco">
+                <span class="fa fa-random">&nbsp;</span> Shuffle
+            </a>
+        </li>
+    </ul>
+</li>
+        </ul>
+    </div>
+</nav>
+</div>
+        
+            <div class="local-header subtitle">
+            <div class="container">
+                
+                    <div class="col-md-9 offset-md-3">
+                
+                <div class="p-a-1">
+                    <h1>Tabs</h1>
+                </div>
+                </div>
+                </div>
+            </div>
+        
+        
+        
+            
+        
+
+        
+
+        
+            
+        
+    </header>
+    <main class="container">
+        <div class="row">
+            <div class="vertical-menu vertical-menu-inset collapse navbar-toggleable-sm"
+     id="vertical-menu">
+    <ul class="nav nav-pills nav-stacked nav-side vertical-menu-ancestors">
+        
+            <li class="nav-item">
+                <a class="nav-link" href="/campl-ng/">Campl-NG</a>
+            </li>
+        
+            <li class="nav-item">
+                <a class="nav-link" href="/campl-ng/in_page_components/navigation/tabs">In Page Components</a>
+            </li>
+        
+    </ul>
+    <ul class="list-unstyled vertical-menu-siblings">
+        
+            <li class="vertical-menu-parent">
+                
+                    <span>Navigation</span>
+                
+                
+                    <ul class="list-unstyled vertical-menu-children">
+                        
+                            
+                                <li><span class="vertical-menu-child-bulleted">Tabs</span></li>
+                            
+                        
+                            
+                                <li><a class="vertical-menu-child-bulleted" href="/campl-ng/in_page_components/navigation/pills">Pills</a>
+                                </li>
+                            
+                        
+                            
+                                <li><a class="vertical-menu-child-bulleted" href="/campl-ng/in_page_components/navigation/pills_(stacked)">Pills (Stacked)</a>
+                                </li>
+                            
+                        
+                            
+                                <li><a class="vertical-menu-child-bulleted" href="/campl-ng/in_page_components/navigation/stages">Stages</a>
+                                </li>
+                            
+                        
+                            
+                                <li><a class="vertical-menu-child-bulleted" href="/campl-ng/in_page_components/navigation/pagination">Pagination</a>
+                                </li>
+                            
+                        
+                            
+                                <li><a class="vertical-menu-child-bulleted" href="/campl-ng/in_page_components/navigation/a_to_z">A to Z</a>
+                                </li>
+                            
+                        
+                            
+                                <li><a class="vertical-menu-child-bulleted" href="/campl-ng/in_page_components/navigation/search">Search</a>
+                                </li>
+                            
+                        
+                    </ul>
+                
+            </li>
+        
+        
+            
+        
+            
+                <li>
+                    <a href="/campl-ng/in_page_components/content/tables">Content</a>
+                </li>
+            
+        
+            
+                <li>
+                    <a href="/campl-ng/in_page_components/teasers">Teasers</a>
+                </li>
+            
+        
+    </ul>
+</div>
+            <div class="col-md-6 col-xs-12 main-content">
+                
+                
+                
+                
+                    <div class="p-a-1">
+                        
+    
+    
+    <div class="nav-tabs-wrapper">
+        <ul class="nav nav-tabs " role="tablist">
+            
+                <li class="nav-item">
+                    <a
+                            class="nav-link active"
+                            role="tab"
+                            
+                                
+                            data-toggle="tab"
+                            href="#tab1"
+                                
+                            
+                    >Active</a>
+                </li>
+            
+                <li class="nav-item">
+                    <a
+                            class="nav-link"
+                            role="tab"
+                            
+                                
+                            data-toggle="tab"
+                            href="#tab2"
+                                
+                            
+                    >Link</a>
+                </li>
+            
+                <li class="nav-item">
+                    <a
+                            class="nav-link"
+                            role="tab"
+                            
+                                
+                            data-toggle="tab"
+                            href="#tab3"
+                                
+                            
+                    >Another Link</a>
+                </li>
+            
+                <li class="nav-item">
+                    <a
+                            class="nav-link disabled"
+                            role="tab"
+                            
+                    >Disabled</a>
+                </li>
+            
+        </ul>
+    </div>
+
+
+    <div class="p-t-1">
+        
+    <div class="tab-content">
+        
+            
+                <div role="tabpanel" class="tab-pane active" id="tab1">
+                    <p>Congue aliquam eleifend rutrum nec elit mauris dictumst, morbi ante fringilla penatibus mi arcu, ridiculus sollicitudin nisl suscipit, tincidunt facilisi nulla vehicula. Sagittis fringilla cras tempor fringilla dui, ut interdum mauris facilisi sociis, hac non quis aptent torquent, ultrices nisl aliquet gravida aptent, augue pharetra. Amet rhoncus euismod nonummy nullam nisi commodo scelerisque, luctus.</p>
+<p>Quam primis taciti non justo pretium, ornare pretium potenti consectetuer erat sociosqu, natoque vivamus quisque ornare cursus, semper quam augue torquent. Euismod nunc tempus augue, mollis mi condimentum class odio, fames sagittis cursus faucibus eleifend congue, natoque ornare tortor ligula mus ipsum,. Imperdiet cursus ad commodo congue pede tellus, consectetuer curabitur.</p>
+                </div>
+            
+        
+            
+                <div role="tabpanel" class="tab-pane" id="tab2">
+                    <p>Commodo tincidunt leo rhoncus commodo, nisl congue nullam ornare quis posuere scelerisque, justo et nonummy condimentum potenti, et sapien porttitor sed aliquet varius. Urna pede nisi nullam pede, parturient primis rutrum felis auctor gravida, per tristique elementum pellentesque quisque, ridiculus pharetra convallis. Urna ullamcorper lectus urna proin, turpis placerat ad dictum porttitor eros, a amet dictumst bibendum nascetur, phasellus nec neque tempor,. Hendrerit maecenas rhoncus dui molestie conubia, leo nonummy lectus tincidunt eu, lorem facilisi parturient vestibulum. Phasellus blandit.</p>
+<p>Duis platea quis eget elementum litora lacus, a dui primis nunc, cras a lectus in mollis, dictum sem nostra inceptos. Pharetra ultrices tempus viverra sociosqu, risus varius.</p>
+                </div>
+            
+        
+            
+                <div role="tabpanel" class="tab-pane" id="tab3">
+                    <p>Nam habitant per lacus hac pulvinar, leo quis felis at, elementum in senectus orci feugiat felis, penatibus dolor dapibus laoreet. Fusce dignissim dictum pede arcu placerat odio, tempus platea porta convallis adipiscing, nam aptent accumsan sapien ante, in tincidunt. Egestas sapien urna potenti, faucibus congue parturient vehicula lobortis risus, turpis suspendisse integer.</p>
+<p>Ultrices proin fermentum morbi adipiscing, blandit consectetuer lacinia potenti massa ante diam, conubia urna tempor sodales habitasse, in interdum ultricies. Suscipit eget interdum cubilia dis, malesuada nisi aliquet pulvinar ac rutrum id, nullam tellus mattis gravida placerat.</p>
+                </div>
+            
+        
+            
+        
+    </div>
+
+    </div>
+
+                    </div>
+                
+            </div>
+            
+                <div class="col-md-3 col-xs-12 sidebar">
+                    <div class="p-a-1">
+                        
+                            <div class="heading-container">
+                                <h2 class="lite-heading">Sources</h2>
+                            </div>
+                            
+    <ul class="related-links">
+        
+            <li><a href="/campl-ng/templates/pages/components/navigation/tabs.html/">pages > components > navigation > tabs.html</a></li>
+        
+            <li><a href="/campl-ng/stylesheets/components/navigation/_nav.scss/">components > navigation > _nav.scss</a></li>
+        
+    </ul>
+
+                        
+                    </div>
+                </div>
+            
+        </div>
+    </main>
+    <footer>
+        <div class="local-footer">
+    <div class="container">
+        <div class="row">
+            
+                <div class="col-md-3 col-xs-12">
+                    
+                        <h3><a href="#">About the Faculty</a></h3>
+                        
+                            <ul class="list-unstyled hidden-sm-down">
+                                
+                                    <li>
+                                        <a href="#">Lorem ipsum dolor</a>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="#">Sit amet</a>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="#">Consectetur adipisicing elit</a>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="#">Sed do eiusmod</a>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="#">Tempor Incididunt</a>
+                                    </li>
+                                
+                            </ul>
+                        
+                    
+                        <h3><a href="#">Research</a></h3>
+                        
+                            <ul class="list-unstyled hidden-sm-down">
+                                
+                                    <li>
+                                        <a href="#">Ut labore et dolore</a>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="#">Ut enim ad minim veniam</a>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="#">Magna aliqua</a>
+                                    </li>
+                                
+                            </ul>
+                        
+                    
+                </div>
+            
+                <div class="col-md-3 col-xs-12">
+                    
+                        <h3><a href="#">About the University</a></h3>
+                        
+                            <ul class="list-unstyled hidden-sm-down">
+                                
+                                    <li>
+                                        <a href="#">Quis nostrud exercitation</a>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="#">Ullamco laboris nisi</a>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="#">Ut aliquip ex ea commodo</a>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="#">Duis aute irure dolor</a>
+                                    </li>
+                                
+                            </ul>
+                        
+                    
+                        <h3><a href="#">Libraries & facilities</a></h3>
+                        
+                            <ul class="list-unstyled hidden-sm-down">
+                                
+                                    <li>
+                                        <a href="#">In reprehenderit in voluptate</a>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="#">Velit esse cillum dolore</a>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="#">Eu fugiat nulla pariatur</a>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="#">Duis aute irure dolor</a>
+                                    </li>
+                                
+                            </ul>
+                        
+                    
+                </div>
+            
+                <div class="col-md-3 col-xs-12">
+                    
+                        <h3><a href="#">Graduate</a></h3>
+                        
+                            <ul class="list-unstyled hidden-sm-down">
+                                
+                                    <li>
+                                        <a href="#">Excepteur sint occaecat</a>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="#">Cupidatat non proident</a>
+                                    </li>
+                                
+                            </ul>
+                        
+                    
+                </div>
+            
+                <div class="col-md-3 col-xs-12">
+                    
+                        <h3><a href="#">Subjects</a></h3>
+                        
+                            <ul class="list-unstyled hidden-sm-down">
+                                
+                                    <li>
+                                        <a href="#">Sunt in culpa qui officia</a>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="#">Deserunt mollit anim</a>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="#">Id est laborum</a>
+                                    </li>
+                                
+                                    <li>
+                                        <a href="#">Duis aute irure dolor</a>
+                                    </li>
+                                
+                            </ul>
+                        
+                    
+                </div>
+            
+        </div>
+    </div>
+</div>
+        <div class="global-footer">
+    <div class="container">
+        <div class="row">
+            
+                <div class="col-md-3 col-xs-12">
+                    
+                        <img class="logo logo-sm" alt="University of Cambridge" src="/campl-ng/images/logo.png">
+                        <p>&copy; 2015 University of Cambridge</p>
+                    
+                    <ul class="list-unstyled">
+                        
+                            <li>
+                                <a href="http://www.cam.ac.uk/university-a-z">University A-Z</a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://www.cam.ac.uk/contact-the-university">Contact the University</a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://www.cam.ac.uk/about-this-site/accessibility">Accessibility</a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://www.admin.cam.ac.uk/univ/information/foi/">Freedom of information</a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://www.cam.ac.uk/about-this-site/terms-and-conditions">Terms and conditions</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            
+                <div class="col-md-3 col-xs-12">
+                    
+                        <h3><a href="http://www.cam.ac.uk/study-at-cambridge">Study at Cambridge</a></h3>
+                    
+                    <ul class="list-unstyled">
+                        
+                            <li>
+                                <a href="http://www.study.cam.ac.uk/undergraduate/">Undergraduate</a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://www.admin.cam.ac.uk/students/gradadmissions/prospec/">Graduate</a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://www.cam.ac.uk/about-the-university/international-cambridge/studying-at-cambridge">International students</a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://www.ice.cam.ac.uk/">Continuing education</a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://www.admin.cam.ac.uk/offices/education/epe/">Executive and professional education</a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://www.educ.cam.ac.uk/">Courses in education</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            
+                <div class="col-md-3 col-xs-12">
+                    
+                        <h3><a href="http://www.cam.ac.uk/about-the-university">About the University</a></h3>
+                    
+                    <ul class="list-unstyled">
+                        
+                            <li>
+                                <a href="http://www.cam.ac.uk/about-the-university/how-the-university-and-colleges-work">How the University and Colleges work</a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://www.cam.ac.uk/about-the-university/visiting-the-university">Visiting the University</a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://map.cam.ac.uk/">Map</a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://www.cam.ac.uk/news">News</a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://www.admin.cam.ac.uk/whatson">Events</a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://www.jobs.cam.ac.uk/">Jobs</a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://www.philanthropy.cam.ac.uk/">Giving to Cambridge</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            
+                <div class="col-md-3 col-xs-12">
+                    
+                        <h3><a href="http://www.cam.ac.uk/research">Research at Cambridge</a></h3>
+                    
+                    <ul class="list-unstyled">
+                        
+                            <li>
+                                <a href="http://www.cam.ac.uk/research/news">News</a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://www.cam.ac.uk/research/features">Features</a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://www.cam.ac.uk/research/discussion">Discussion</a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://www.cam.ac.uk/research/spotlight-on">Spotlight on...</a>
+                            </li>
+                        
+                            <li>
+                                <a href="http://www.cam.ac.uk/research/research-at-cambridge">About research at Cambridge</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            
+        </div>
+    </div>
+</div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+main .main-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  main .main-content > pre {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    margin: 0; }
+    main .main-content > pre > code {
+      -webkit-box-flex: 1;
+      -webkit-flex-grow: 1;
+          -ms-flex-positive: 1;
+              flex-grow: 1;
+      font-size: 1.2em;
+      padding: 20px; }
+
+.dropdown-menu [data-colour="blue"] {
+  background-color: #005dab !important; }
+  .dropdown-menu [data-colour="blue"]:hover {
+    background-color: #003e74 !important; }
+
+.dropdown-menu [data-colour="turquoise"] {
+  background-color: #1e7680 !important; }
+  .dropdown-menu [data-colour="turquoise"]:hover {
+    background-color: #106470 !important; }
+
+.dropdown-menu [data-colour="purple"] {
+  background-color: #782c7e !important; }
+  .dropdown-menu [data-colour="purple"]:hover {
+    background-color: #422e5d !important; }
+
+.dropdown-menu [data-colour="green"] {
+  background-color: #4b7016 !important; }
+  .dropdown-menu [data-colour="green"]:hover {
+    background-color: #304220 !important; }
+
+.dropdown-menu [data-colour="orange"] {
+  background-color: #d45812 !important; }
+  .dropdown-menu [data-colour="orange"]:hover {
+    background-color: #c44101 !important; }
+
+.dropdown-menu [data-colour="red"] {
+  background-color: #be1741 !important; }
+  .dropdown-menu [data-colour="red"]:hover {
+    background-color: #851735 !important; }
+
+.dropdown-menu [data-colour="grey"] {
+  background-color: #7d7777 !important; }
+  .dropdown-menu [data-colour="grey"]:hover {
+    background-color: #404040 !important; }
+
+.dropdown-menu [data-colour="lime"] {
+  background-color: #79791e !important; }
+  .dropdown-menu [data-colour="lime"]:hover {
+    background-color: #abb400 !important; }
+
+.dropdown-menu [data-colour="blue-grey"] {
+  background-color: #7d7777 !important; }
+  .dropdown-menu [data-colour="blue-grey"]:hover {
+    background-color: #d2dde7 !important; }
+
+.dropdown-menu [href="#disco"] {
+  background-color: #000000 !important; }
+  .dropdown-menu [href="#disco"]:hover {
+    background-color: #111111 !important; }
+
+/*# sourceMappingURL=meta.css.map */
