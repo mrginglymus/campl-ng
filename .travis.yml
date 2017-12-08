@@ -4,7 +4,7 @@ node_js:
 install:
   - make install
 script:
-  - . venv/bin/activate && gulp build --root /campl-ng
+  - . venv/bin/activate && gulp build --root /campl-ng --photo
 deploy:
   provider: pages
   skip_cleanup: true

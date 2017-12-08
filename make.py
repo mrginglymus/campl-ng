@@ -16,7 +16,7 @@ env = Environment(loader=FileSystemLoader('templates'))
 env.globals['SITE_NAME'] = 'CamPL-NG'
 
 if args.photo:
-    IMAGE_SOURCE = "http://loremflickr.com/%s/%s/?user=cambridge%%20university"
+    IMAGE_SOURCE = "http://lorempixel.com/%s/%s"
 else:
     IMAGE_SOURCE = "http://placehold.it/%sx%s"
 
