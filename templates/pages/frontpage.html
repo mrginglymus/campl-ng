@@ -2,30 +2,30 @@
 {% import 'components/teasers/teasers.html' as teasers %}
 
 {% block unwrapped_content %}
-<div class="row">
-  <div class="col-md-8 teaser-list">
-    {{ teasers.horizontal_teaser(random_article(), random_image(256)) }}
-    {{ teasers.horizontal_teaser(random_article()) }}
-    {{ teasers.horizontal_teaser(random_article(), random_image(256), type='video') }}
-  </div>
-  <div class="col-md-4 teaser-list">
-    <div class="heading-container heading-container-padding"><h2 class="lite-heading">Latest News</h2></div>
-    {{ teasers.news_teaser(random_article()) }}
-    {{ teasers.news_teaser(random_article()) }}
-    <div class="p-a-1 clearfix"><a class="secondary-cta pull-xs-right" href="" >View all news</a></div>
-  </div>
-</div>
+    <div class="row">
+        <div class="col-md-8 teaser-list">
+            {{ teasers.horizontal_teaser(random_article(), random_image(256)) }}
+            {{ teasers.horizontal_teaser(random_article()) }}
+            {{ teasers.horizontal_teaser(random_article(), random_image(256), type='video') }}
+        </div>
+        <div class="col-md-4 teaser-list">
+            <div class="heading-container heading-container-padding"><h2 class="lite-heading">Latest News</h2></div>
+            {{ teasers.news_teaser(random_article()) }}
+            {{ teasers.news_teaser(random_article()) }}
+            <div class="p-a-1 clearfix"><a class="secondary-cta pull-xs-right" href="">View all news</a></div>
+        </div>
+    </div>
 {% endblock %}
 
 {% block sidebar_content %}
-<div class="heading-container">
-  <h2 class="lite-heading">Upcoming Events</h2>
-</div>
-<ul class="related-links">
-  <li>{{ teasers.date_teaser(random_article()) }}</li>
-  <li>{{ teasers.date_teaser(random_article()) }}</li>
-  <li>{{ teasers.date_teaser(random_article()) }}</li>
-</ul>
-<div class="clearfix m-b-1"><a class="secondary-cta pull-xs-right" href="" >View all events</a></div>
-{{ teasers.promo_teaser(random_article(), random_image(349,126)) }}
+    <div class="heading-container">
+        <h2 class="lite-heading">Upcoming Events</h2>
+    </div>
+    <ul class="related-links">
+        <li>{{ teasers.date_teaser(random_article()) }}</li>
+        <li>{{ teasers.date_teaser(random_article()) }}</li>
+        <li>{{ teasers.date_teaser(random_article()) }}</li>
+    </ul>
+    <div class="clearfix m-b-1"><a class="secondary-cta pull-xs-right" href="">View all events</a></div>
+    {{ teasers.promo_teaser(random_article(), random_image(349,126)) }}
 {% endblock %}

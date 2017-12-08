@@ -3,82 +3,82 @@
 {% from 'components/alerts.html' import alert_info, alert_success, alert_warning, alert_danger, alert %}
 
 {% block unwrapped_content %}
-<div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="top_success">
-    {{ alert_success('Success', random_sentence(5, 10), top=true) }}
-  </div>
-  <div role="tabpanel" class="tab-pane" id="top_danger">
-    {{ alert_danger('Warning', random_sentence(10, 20), top=true) }}
-  </div>
-  <div role="tabpanel" class="tab-pane" id="top_warning">
-    {{ alert_warning('Alert', random_sentence(10, 20), top=true) }}
-  </div>
-  <div role="tabpanel" class="tab-pane" id="top_info">
-    {{ alert_info('Information', random_sentence(10, 20), top=true) }}
-  </div>
-  <div role="tabpanel" class="tab-pane" id="top_dismissable">
-    {{ alert_success('Success', random_sentence(10, 20), top=true, dismissable=true) }}
-  </div>
-</div>
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="top_success">
+            {{ alert_success('Success', random_sentence(5, 10), top=true) }}
+        </div>
+        <div role="tabpanel" class="tab-pane" id="top_danger">
+            {{ alert_danger('Warning', random_sentence(10, 20), top=true) }}
+        </div>
+        <div role="tabpanel" class="tab-pane" id="top_warning">
+            {{ alert_warning('Alert', random_sentence(10, 20), top=true) }}
+        </div>
+        <div role="tabpanel" class="tab-pane" id="top_info">
+            {{ alert_info('Information', random_sentence(10, 20), top=true) }}
+        </div>
+        <div role="tabpanel" class="tab-pane" id="top_dismissable">
+            {{ alert_success('Success', random_sentence(10, 20), top=true, dismissable=true) }}
+        </div>
+    </div>
 {% endblock %}
 
 {% block content %}
-<div class="clearfix" style="padding: 20px 0;">
-  <ul class="nav nav-pills" role="tablist">
-    <li class="nav-item">
-      <a class="nav-link active" href="#top_success" role="tab" data-toggle="tab">Success</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#top_danger" role="tab" data-toggle="tab">Danger</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#top_warning" role="tab" data-toggle="tab">Warning</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#top_info" role="tab" data-toggle="tab">Info</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#top_dismissable" role="tab" data-toggle="tab">Dismissable</a>
-    </li>
-  </ul>
-</div>
+    <div class="clearfix" style="padding: 20px 0;">
+        <ul class="nav nav-pills" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" href="#top_success" role="tab" data-toggle="tab">Success</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#top_danger" role="tab" data-toggle="tab">Danger</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#top_warning" role="tab" data-toggle="tab">Warning</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#top_info" role="tab" data-toggle="tab">Info</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#top_dismissable" role="tab" data-toggle="tab">Dismissable</a>
+            </li>
+        </ul>
+    </div>
 
-<div class="clearfix" style="padding: 20px 0;">
-  <ul class="nav nav-pills" role="tablist">
-    <li class="nav-item">
-      <a class="nav-link active" href="#success" role="tab" data-toggle="tab">Success</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#danger" role="tab" data-toggle="tab">Danger</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#warning" role="tab" data-toggle="tab">Warning</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#info" role="tab" data-toggle="tab">Info</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#dismissable" role="tab" data-toggle="tab">Dismissable</a>
-    </li>
-  </ul>
-</div>
+    <div class="clearfix" style="padding: 20px 0;">
+        <ul class="nav nav-pills" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" href="#success" role="tab" data-toggle="tab">Success</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#danger" role="tab" data-toggle="tab">Danger</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#warning" role="tab" data-toggle="tab">Warning</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#info" role="tab" data-toggle="tab">Info</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#dismissable" role="tab" data-toggle="tab">Dismissable</a>
+            </li>
+        </ul>
+    </div>
 
-<div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="success">
-    {{ alert_success('Success', random_sentence(5, 10)) }}
-  </div>
-  <div role="tabpanel" class="tab-pane" id="danger">
-    {{ alert_danger('Warning', random_sentence(10, 20)) }}
-  </div>
-  <div role="tabpanel" class="tab-pane" id="warning">
-    {{ alert_warning('Alert', random_sentence(10, 20)) }}
-  </div>
-  <div role="tabpanel" class="tab-pane" id="info">
-    {{ alert_info('Information', random_sentence(10, 20)) }}
-  </div>
-  <div role="tabpanel" class="tab-pane" id="dismissable">
-    {{ alert_success('Success', random_sentence(10, 20), dismissable=true) }}
-  </div>
-</div>
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="success">
+            {{ alert_success('Success', random_sentence(5, 10)) }}
+        </div>
+        <div role="tabpanel" class="tab-pane" id="danger">
+            {{ alert_danger('Warning', random_sentence(10, 20)) }}
+        </div>
+        <div role="tabpanel" class="tab-pane" id="warning">
+            {{ alert_warning('Alert', random_sentence(10, 20)) }}
+        </div>
+        <div role="tabpanel" class="tab-pane" id="info">
+            {{ alert_info('Information', random_sentence(10, 20)) }}
+        </div>
+        <div role="tabpanel" class="tab-pane" id="dismissable">
+            {{ alert_success('Success', random_sentence(10, 20), dismissable=true) }}
+        </div>
+    </div>
 
 {% endblock %}

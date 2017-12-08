@@ -1,32 +1,34 @@
 {% macro alert(title, message, type, icon, top=false, dismissable=false) %}
-<div class="alert alert-{{ type }}{% if top %} alert-top{% endif %}{% if dismissable %} alert-dismissable fade in{% endif %}" role="alert">
-  {% if dismissable %}
-  <div class="close pull-xs-right" data-dismiss="alert">&nbsp;</div>
-  {% endif %}
-  <div class="row">
-    <div class="col-md-4 alert-title">
-      <span class="fa fa-{{ icon }}"></span>
-      <span>{{ title }}:</span>
+    <div class="alert alert-
+            {{ type }}{% if top %} alert-top{% endif %}{% if dismissable %} alert-dismissable fade in{% endif %}"
+         role="alert">
+        {% if dismissable %}
+            <div class="close pull-xs-right" data-dismiss="alert">&nbsp;</div>
+        {% endif %}
+        <div class="row">
+            <div class="col-md-4 alert-title">
+                <span class="fa fa-{{ icon }}"></span>
+                <span>{{ title }}:</span>
+            </div>
+            <div class="col-md-8">
+                {{ message }}
+            </div>
+        </div>
     </div>
-    <div class="col-md-8">
-      {{ message }}
-    </div>
-  </div>
-</div>
 {% endmacro %}
 
 {% macro alert_success(title, message, top=false, dismissable=false) %}
-  {{ alert(title, message, 'success', 'check-circle', top, dismissable) }}
+    {{ alert(title, message, 'success', 'check-circle', top, dismissable) }}
 {% endmacro %}
 
 {% macro alert_warning(title, message, top=false, dismissable=false) %}
-  {{ alert(title, message, 'warning', 'exclamation-triangle', top, dismissable) }}
+    {{ alert(title, message, 'warning', 'exclamation-triangle', top, dismissable) }}
 {% endmacro %}
 
 {% macro alert_danger(title, message, top=false, dismissable=false) %}
-  {{ alert(title, message, 'danger', 'exclamation-circle', top, dismissable) }}
+    {{ alert(title, message, 'danger', 'exclamation-circle', top, dismissable) }}
 {% endmacro %}
 
 {% macro alert_info(title, message, top=false, dismissable=false) %}
-  {{ alert(title, message, 'info', 'info-circle', top, dismissable) }}
+    {{ alert(title, message, 'info', 'info-circle', top, dismissable) }}
 {% endmacro %}

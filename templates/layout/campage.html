@@ -4,84 +4,84 @@
 {% from 'components/teasers/teasers.html' import focus_on_teaser, tagged_teaser, news_teaser %}
 
 {% block body %}
-  <header>
-    {% include 'layout/header/global/header.html' %}
-    <div class="local-header">
-      <div class="container p-a-1">
-        <a href="http://www.cam.ac.uk/" class="main-logo">
-          <img class="logo logo-lg" alt="University of Cambridge" src="/images/logo.png">
-        </a>
-      </div>
-    </div>
-    <div class="container">
-      {{ frontpage_carousel(EXAMPLES.CAMPAGE_CAROUSEL) }}
-    </div>
-  </header>
-  <main class="container">
-    <div class="row">
-      <div class="col-md-8">
-        <div class="p-b-1">
-          <div class="heading-container heading-container-padding">
-            <h2 class="lite-heading-lg lite-heading-themed">Focus on</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6 col-xs-12">
-            {{ focus_on_teaser(random_article(), random_image(153, 137)) }}
-          </div>
-          <div class="col-md-6 col-xs-12">
-            {{ focus_on_teaser(random_article(), random_image(153, 137)) }}
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6 col-xs-12">
-            {{ focus_on_teaser(random_article(), random_image(153, 137)) }}
-          </div>
-          <div class="col-md-6 col-xs-12">
-            {{ focus_on_teaser(random_article(), random_image(153, 137)) }}
-          </div>
-        </div>
-        <div class="heading-container heading-container-padding">
-          <h2 class="lite-heading-lg lite-heading-themed">What's happening</h2>
-        </div>
-        <div class="teaser-list m-t-0">
-          <div class="teaser-row">
-            <div class="row">
-              <div class="col-md-6 col-xs-12 teaser-list">
-                {{ tagged_teaser(random_article(), random_image(349,183), random_word()) }}
-              </div>
-              <div class="col-md-6 col-xs-12 teaser-list">
-                {{ tagged_teaser(random_article(), random_image(349,183), random_word()) }}
-              </div>
+    <header>
+        {% include 'layout/header/global/header.html' %}
+        <div class="local-header">
+            <div class="container p-a-1">
+                <a href="http://www.cam.ac.uk/" class="main-logo">
+                    <img class="logo logo-lg" alt="University of Cambridge" src="/images/logo.png">
+                </a>
             </div>
-          </div>
-          <div class="teaser-row">
-            <div class="row">
-              <div class="col-md-6 col-xs-12 teaser-list">
-                {{ tagged_teaser(random_article(), random_image(349,183), random_word()) }}
-              </div>
-              <div class="col-md-6 col-xs-12 teaser-list">
-                {{ tagged_teaser(random_article(), random_image(349,183), random_word()) }}
-              </div>
+        </div>
+        <div class="container">
+            {{ frontpage_carousel(EXAMPLES.CAMPAGE_CAROUSEL) }}
+        </div>
+    </header>
+    <main class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="p-b-1">
+                    <div class="heading-container heading-container-padding">
+                        <h2 class="lite-heading-lg lite-heading-themed">Focus on</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-xs-12">
+                        {{ focus_on_teaser(random_article(), random_image(153, 137)) }}
+                    </div>
+                    <div class="col-md-6 col-xs-12">
+                        {{ focus_on_teaser(random_article(), random_image(153, 137)) }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-xs-12">
+                        {{ focus_on_teaser(random_article(), random_image(153, 137)) }}
+                    </div>
+                    <div class="col-md-6 col-xs-12">
+                        {{ focus_on_teaser(random_article(), random_image(153, 137)) }}
+                    </div>
+                </div>
+                <div class="heading-container heading-container-padding">
+                    <h2 class="lite-heading-lg lite-heading-themed">What's happening</h2>
+                </div>
+                <div class="teaser-list m-t-0">
+                    <div class="teaser-row">
+                        <div class="row">
+                            <div class="col-md-6 col-xs-12 teaser-list">
+                                {{ tagged_teaser(random_article(), random_image(349,183), random_word()) }}
+                            </div>
+                            <div class="col-md-6 col-xs-12 teaser-list">
+                                {{ tagged_teaser(random_article(), random_image(349,183), random_word()) }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="teaser-row">
+                        <div class="row">
+                            <div class="col-md-6 col-xs-12 teaser-list">
+                                {{ tagged_teaser(random_article(), random_image(349,183), random_word()) }}
+                            </div>
+                            <div class="col-md-6 col-xs-12 teaser-list">
+                                {{ tagged_teaser(random_article(), random_image(349,183), random_word()) }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
+            <div class="col-md-4 col-xs-12 sidebar">
+                <div class="heading-container heading-container-padding">
+                    <h2 class="lite-heading-lg">Latest news</h2>
+                </div>
+                <div class="teaser-list">
+                    {{ news_teaser(random_article()) }}
+                    {{ news_teaser(random_article()) }}
+                    {{ news_teaser(random_article()) }}
+                    <div><a class="secondary-cta pull-xs-right" href="">View all news</a></div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="col-md-4 col-xs-12 sidebar">
-        <div class="heading-container heading-container-padding">
-          <h2 class="lite-heading-lg">Latest news</h2>
-        </div>
-        <div class="teaser-list">
-          {{ news_teaser(random_article()) }}
-          {{ news_teaser(random_article()) }}
-          {{ news_teaser(random_article()) }}
-          <div><a class="secondary-cta pull-xs-right" href="" >View all news</a></div>
-        </div>
-      </div>
-    </div>
-  </main>
-  <footer>
-    {% include 'layout/footer/local/footer.html' %}
-    {% include 'layout/footer/global/footer.html' %}
-  </footer>
+    </main>
+    <footer>
+        {% include 'layout/footer/local/footer.html' %}
+        {% include 'layout/footer/global/footer.html' %}
+    </footer>
 {% endblock %}

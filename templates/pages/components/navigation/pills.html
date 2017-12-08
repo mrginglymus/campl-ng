@@ -5,16 +5,16 @@
 
 {% block content %}
 
-<div class="clearfix">
-  {{ nav_pills(EXAMPLES.NAV_ITEMS, local=true) }}
-</div>
-<div class="p-t-1">
-  {{ tabs(EXAMPLES.NAV_ITEMS) }}
-</div>
+    <div class="clearfix">
+        {{ nav_pills(EXAMPLES.NAV_ITEMS, local=true) }}
+    </div>
+    <div class="p-t-1">
+        {{ tabs(EXAMPLES.NAV_ITEMS) }}
+    </div>
 
 
-<h2>Usage</h2>
-<pre><code class="django">{% raw %}{{ nav(EXAMPLES.NAV_ITEMS, 'pill', local=true) }}{% endraw %}</code></pre>
+    <h2>Usage</h2>
+    <pre><code class="django">{% raw %}{{ nav(EXAMPLES.NAV_ITEMS, 'pill', local=true) }}{% endraw %}</code></pre>
 
 
 {% endblock %}

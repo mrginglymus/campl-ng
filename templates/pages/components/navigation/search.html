@@ -3,10 +3,10 @@
 {% from 'components/navigation/search.html' import inpage_search %}
 
 {% block unwrapped_content %}
-{{ inpage_search() }}
+    {{ inpage_search() }}
 {% endblock %}
 
 {% block content %}
-<h2>Source</h2>
-{{ print_macro(inpage_search) }}
+    <h2>Source</h2>
+    {{ print_macro(inpage_search) }}
 {% endblock %}

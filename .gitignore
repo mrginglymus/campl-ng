@@ -9,3 +9,4 @@ node_modules
 local_settings.py
 bower_components
 venv
+.idea

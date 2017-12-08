@@ -7,17 +7,17 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/languages/scss.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/languages/coffeescript.min.js"></script>
 <script type="text/javascript">
-  $(document).ready(function() {
-    $('pre code').each(function(i, block) {
-      hljs.highlightBlock(block);
+    $(document).ready(function () {
+        $('pre code').each(function (i, block) {
+            hljs.highlightBlock(block);
+        });
+        $('span.hljs-keyword:contains("import") + span.hljs-string:not(:contains("lib")):not(:contains("compass"))').each(function (i, e) {
+            // special case for campl
+            $(e).html($(e).html().replace(/['"](campl)['"]/, '\'<a href="/stylesheets/campl.scss/">campl</a>\''));
+            $(e).html($(e).html().replace(/['"]((?:\w+\/)*)(\w+)['"]/, '\'<a href="/stylesheets/$1_$2.scss/">$1$2</a>\''));
+        });
+        $('span.hljs-template_tag:contains(".html")').each(function (i, e) {
+            $(e).html($(e).html().replace(/'(.*.html)'/, '\'<a href="/templates/$1/">$1</a>\''));
+        });
     });
-    $('span.hljs-keyword:contains("import") + span.hljs-string:not(:contains("lib")):not(:contains("compass"))').each( function(i, e) {
-      // special case for campl
-      $(e).html($(e).html().replace(/['"](campl)['"]/, '\'<a href="/stylesheets/campl.scss/">campl</a>\''));
-      $(e).html($(e).html().replace(/['"]((?:\w+\/)*)(\w+)['"]/, '\'<a href="/stylesheets/$1_$2.scss/">$1$2</a>\''));
-    });
-    $('span.hljs-template_tag:contains(".html")').each( function(i, e) {
-      $(e).html($(e).html().replace(/'(.*.html)'/, '\'<a href="/templates/$1/">$1</a>\''));
-    });
-  });
 </script>

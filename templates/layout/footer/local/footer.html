@@ -1,22 +1,22 @@
 <div class="local-footer">
-  <div class="container">
-    <div class="row">
-      {% for column in EXAMPLES.LOCAL_FOOTER_LINKS %}
-      <div class="col-md-3 col-xs-12">
-        {% for menu in column %}
-          <h3><a href="#">{{ menu.header }}</a></h3>
-          {% if menu.links %}
-          <ul class="list-unstyled hidden-sm-down">
-            {% for link in menu.links %}
-            <li>
-              <a href="#">{{ link }}</a>
-            </li>
+    <div class="container">
+        <div class="row">
+            {% for column in EXAMPLES.LOCAL_FOOTER_LINKS %}
+                <div class="col-md-3 col-xs-12">
+                    {% for menu in column %}
+                        <h3><a href="#">{{ menu.header }}</a></h3>
+                        {% if menu.links %}
+                            <ul class="list-unstyled hidden-sm-down">
+                                {% for link in menu.links %}
+                                    <li>
+                                        <a href="#">{{ link }}</a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    {% endfor %}
+                </div>
             {% endfor %}
-          </ul>
-          {% endif %}
-        {% endfor %}
-      </div>
-      {% endfor %}
+        </div>
     </div>
-  </div>
 </div>
