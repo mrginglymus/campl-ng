@@ -273,7 +273,7 @@ var cssnano = require('gulp-cssnano');
 
 
 gulp.task('css', function (cb) {
-    sequence('glob', ['css-core', 'css-legacy', 'css-meta'], cb);
+    sequence('glob', ['css-core', 'css-meta'], cb);
 });
 
 // browsers to use for autoprefixer
@@ -338,11 +338,6 @@ function build_css(src, browsers) {
 // Build css
 gulp.task('css-core', function () {
     return build_css('scss/campl.scss', browsers);
-});
-
-// Build legacy (non-flexbox version) css
-gulp.task('css-legacy', function () {
-    return build_css('scss/campl_legacy.scss', ['Explorer 9']);
 });
 
 // build meta files
