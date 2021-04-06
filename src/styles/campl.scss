@@ -1,5 +1,4 @@
-
- // Core variables and mixins
+// Core variables and mixins
 @import "themes";
 @import "variables";
 
@@ -8,7 +7,7 @@
 // Utility classes
 @import "../../lib/bootstrap/scss/utilities";
 
-@import "../node_modules/font-awesome/scss/font-awesome";
+@import "~font-awesome/scss/font-awesome";
 
 // Bootstrap Datetimepicker
 

@@ -2307,6 +2307,12 @@ __metadata:
   languageName: node
   linkType: hard
 
+"campl-ng@link:src::locator=campl-ng%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "campl-ng@link:src::locator=campl-ng%40workspace%3A."
+  languageName: node
+  linkType: soft
+
 "campl-ng@workspace:.":
   version: 0.0.0-use.local
   resolution: "campl-ng@workspace:."
@@ -2315,6 +2321,7 @@ __metadata:
     "@babel/preset-env": ^7.13.12
     babel-loader: ^8.2.2
     bootstrap: "link:lib/bootstrap"
+    campl-ng: "link:src"
     case-sensitive-paths-webpack-plugin: ^2.4.0
     copy-webpack-plugin: ^8.1.1
     core-js: ^3.10.0
@@ -2324,10 +2331,12 @@ __metadata:
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
     eslint-plugin-unicorn: ^29.0.0
+    font-awesome: 4.7.0
     hammerjs: 2.0.6
     jquery-hammerjs: 2.0.0
     js-cookie: 2.1.0
     mini-css-extract-plugin: ^1.4.0
+    node-sass-json-importer: ^4.3.0
     regenerator-runtime: ^0.13.7
     sass: ^1.32.8
     sass-loader: ^11.0.1
@@ -3857,6 +3866,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"font-awesome@npm:4.7.0":
+  version: 4.7.0
+  resolution: "font-awesome@npm:4.7.0"
+  checksum: 332215ef40b90cb33be5a8b571e99388050976b626b40d79dfdfa8387bbcecde67d4d7d14f66f4263481761e6498d9885723e4a1263380cf4968df8f720ad06d
+  languageName: node
+  linkType: hard
+
 "for-in@npm:^1.0.2":
   version: 1.0.2
   resolution: "for-in@npm:1.0.2"
@@ -5023,6 +5039,13 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
+"is-there@npm:^4.4.4":
+  version: 4.5.1
+  resolution: "is-there@npm:4.5.1"
+  checksum: 0edda4f03fb1e76bbc910cc8d1b8182442d6e658be20dcf90aa6b133b26c2c8ca7ab655ffcc88234372925dc055b962f6de35f440bd5f7026b6611dd9e668206
+  languageName: node
+  linkType: hard
+
 "is-typedarray@npm:^1.0.0":
   version: 1.0.0
   resolution: "is-typedarray@npm:1.0.0"
@@ -5206,7 +5229,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"json5@npm:^2.1.2":
+"json5@npm:^2.1.1, json5@npm:^2.1.2":
   version: 2.2.0
   resolution: "json5@npm:2.2.0"
   dependencies:
@@ -5385,7 +5408,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"lodash@npm:^4.17.11, lodash@npm:^4.17.14, lodash@npm:^4.17.19, lodash@npm:^4.17.20, lodash@npm:^4.17.21":
+"lodash@npm:^4.17.11, lodash@npm:^4.17.14, lodash@npm:^4.17.15, lodash@npm:^4.17.19, lodash@npm:^4.17.20, lodash@npm:^4.17.21":
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
   checksum: 4983720b9abca930a4a46f18db163d7dad8dd00dbed6db0cc7b499b33b717cce69f80928b27bbb1ff2cbd3b19d251ee90669a8b5ea466072ca81c2ebe91e7468
@@ -5979,6 +6002,19 @@ fsevents@~2.3.1:
   version: 1.1.71
   resolution: "node-releases@npm:1.1.71"
   checksum: 9e283003f1deafd0ca7f9bbde9c4b5b05d880ca165217f5227b37406626d6689a246a5c4c72f9a8512be65cd51b13cc7d0f5d8bc68ad36089b620f1810292340
+  languageName: node
+  linkType: hard
+
+"node-sass-json-importer@npm:^4.3.0":
+  version: 4.3.0
+  resolution: "node-sass-json-importer@npm:4.3.0"
+  dependencies:
+    is-there: ^4.4.4
+    json5: ^2.1.1
+    lodash: ^4.17.15
+  peerDependencies:
+    node-sass: ">=3.5.3"
+  checksum: ebf12e3ec9b5eb31c43aa570960419cd8b89f3aba682f5c496b18e385117825c79710752c48acb51a1c122af4a7f1f4215c341724a584ebb073e622fa45341c9
   languageName: node
   linkType: hard
 
