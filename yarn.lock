@@ -1901,6 +1901,12 @@ __metadata:
   languageName: node
   linkType: hard
 
+"bootstrap@link:lib/bootstrap::locator=campl-ng%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "bootstrap@link:lib/bootstrap::locator=campl-ng%40workspace%3A."
+  languageName: node
+  linkType: soft
+
 "brace-expansion@npm:^1.1.7":
   version: 1.1.11
   resolution: "brace-expansion@npm:1.1.11"
@@ -2016,9 +2022,11 @@ __metadata:
     "@babel/core": ^7.13.14
     "@babel/preset-env": ^7.13.12
     babel-loader: ^8.2.2
+    bootstrap: "link:lib/bootstrap"
     case-sensitive-paths-webpack-plugin: ^2.4.0
     core-js: ^3.10.0
     css-loader: ^5.2.0
+    datetimepicker: "link:lib/datetimepicker"
     eslint: ^7.23.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
@@ -2350,6 +2358,12 @@ __metadata:
   checksum: 673783eda1f89af3faefc0e4b833f40621f484ce102a23396e7a65cc4c42798bd91ee3656c8b04a0a5ca38d40ada5bc8663e4541c380a7a81af2de5b2322e443
   languageName: node
   linkType: hard
+
+"datetimepicker@link:lib/datetimepicker::locator=campl-ng%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "datetimepicker@link:lib/datetimepicker::locator=campl-ng%40workspace%3A."
+  languageName: node
+  linkType: soft
 
 "debug@npm:4, debug@npm:^4.0.0, debug@npm:^4.0.1, debug@npm:^4.1.0, debug@npm:^4.1.1, debug@npm:^4.3.1":
   version: 4.3.2
