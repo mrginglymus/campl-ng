@@ -4,7 +4,7 @@
   $element: &;
   @each $colour, $map in $themes {
     @at-root {
-      .theme-#{$colour} {
+      .theme-#{"" + $colour} {
         #{$element} {
           #{$property}: map-get($map, $variant) #{$important};
         }
