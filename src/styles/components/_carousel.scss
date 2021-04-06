@@ -1,0 +1,101 @@
+@include media-breakpoint-up(xl) {
+  .carousel::after {
+    @include theme-element(background-color, page-background);
+    content: " ";
+    height: calc(100% - 49px);
+    width: 100vw;
+    position: absolute;
+    bottom: 50px;
+    left: calc(#{map-get($container-max-widths, xl) / 2} - 50vw);
+    z-index: -1;
+  }
+}
+
+.carousel-control.carousel-control-campage {
+  background-color: $black !important;
+
+  &:hover {
+    background-color: $black !important;
+  }
+}
+
+.carousel-control {
+  // have to be this specific in order to override bootstrap defaults
+  &.left,
+  &.right {
+    @include theme-element(background-color, selected);
+    height: 50px;
+    width: 50px;
+    top: auto;
+    filter: none;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:hover {
+      @include theme-element(background-color, navbar);
+      opacity: 1;
+    }
+  }
+
+  &.right {
+    background-image: inline("carousel-right.png");
+  }
+
+  &.left {
+    background-image: inline("carousel-left.png");
+    left: auto;
+    right: 51px;
+
+  }
+}
+
+.carousel-caption {
+  font-family: $font-family-sans-serif-extra;
+  bottom: 0;
+  right: 102px;
+  left: 20px;
+  padding: 12px 16px 13px;
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: left;
+  font-weight: 300;
+  font-size: 19px;
+  line-height: 25px;
+  padding-right: 80px;
+
+  @include media-breakpoint-down(sm) {
+    left: 0;
+    right: 0;
+  }
+
+  a {
+    color: $white;
+
+    @include hover-focus {
+      text-decoration: none;
+    }
+  }
+
+  .carousel-page {
+    font-family: $font-family-sans-serif;
+    line-height: 18px;
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    font-size: 12px;
+  }
+}
+
+.carousel-text {
+  @include theme-element(background-color, selected);
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 300;
+  font-family: $font-family-sans-serif-extra;
+  text-align: center;
+  color: $white;
+  padding: $spacer;
+
+  @include media-breakpoint-down(sm) {
+    padding: 20px 60px;
+  }
+}
