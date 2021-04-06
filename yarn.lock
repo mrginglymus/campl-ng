@@ -2031,11 +2031,15 @@ __metadata:
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
     eslint-plugin-unicorn: ^29.0.0
+    hammerjs: 2.0.6
+    jquery-hammerjs: 2.0.0
+    js-cookie: 2.1.0
     mini-css-extract-plugin: ^1.4.0
     regenerator-runtime: ^0.13.7
     sass: ^1.32.8
     sass-loader: ^11.0.1
     stylelint: ^13.12.0
+    tether: 1.1.1
     webpack: ^5.30.0
     webpack-bundle-analyzer: ^4.4.0
     webpack-cli: ^4.6.0
@@ -3258,6 +3262,20 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
+"hammerjs@npm:2.0.6":
+  version: 2.0.6
+  resolution: "hammerjs@npm:2.0.6"
+  checksum: 5a025dda3b024708027f8e91b48e20ace9ff850f5b836a61144d81697e2602015847120f64a8892cba1656fea6edd52d02ff3a4cc4beede7f649d00b09c98d31
+  languageName: node
+  linkType: hard
+
+"hammerjs@npm:2.0.x":
+  version: 2.0.8
+  resolution: "hammerjs@npm:2.0.8"
+  checksum: 68178494e20c711ca4beefd644a57d09452436697e511c6777836ed184d5c96d9a92c001a7bb51eb2fa98220f814a7d79606dbd44ed569adad7d0c9d32d4ba77
+  languageName: node
+  linkType: hard
+
 "hard-rejection@npm:^2.1.0":
   version: 2.1.0
   resolution: "hard-rejection@npm:2.1.0"
@@ -3790,6 +3808,30 @@ fsevents@~2.3.1:
     merge-stream: ^2.0.0
     supports-color: ^7.0.0
   checksum: 5eb349833b5e9750ce8700388961dfd5d5e207c913122221e418e48b9cda3c17b0fb418f6a90f1614cfdc3ca836158b720c5dc1de82cb1e708266b4d76e31a38
+  languageName: node
+  linkType: hard
+
+"jquery-hammerjs@npm:2.0.0":
+  version: 2.0.0
+  resolution: "jquery-hammerjs@npm:2.0.0"
+  dependencies:
+    hammerjs: 2.0.x
+    jquery: 2.1.x
+  checksum: 66fc0fa0c009c848f570a253fde653055de80b374170f04bc6fbcba75371ef36d9f05067ded98108d51cd7ebb1d3bb5ef164a33ff01ce51527af1eda848bf3ee
+  languageName: node
+  linkType: hard
+
+"jquery@npm:2.1.x":
+  version: 2.1.4
+  resolution: "jquery@npm:2.1.4"
+  checksum: bde181038366c3fa20b638d4904a80bfbf481013b8bbe601a955f29be7a41166bfa19ea57948b7992ff9533e553d6ee90ed37d150c780bd16c7d41125d4fb7a8
+  languageName: node
+  linkType: hard
+
+"js-cookie@npm:2.1.0":
+  version: 2.1.0
+  resolution: "js-cookie@npm:2.1.0"
+  checksum: f496bf71398f641bc51b93cfa6d978ec0b935505c44438e473404545f4b39d747804d30bf3acec4cef3a2188651cd09657637622a25be6eb498969594f61690a
   languageName: node
   linkType: hard
 
@@ -5956,6 +5998,13 @@ fsevents@~2.3.1:
   bin:
     terser: bin/terser
   checksum: 55348dd25452f0a1690040f943a890dc3e33b8711b1c0592ef1114b2eca51d6ec8db8f8f769f1483b088575c07f44b7e92b3dda5f430ff6fa8c2ebd461db26f9
+  languageName: node
+  linkType: hard
+
+"tether@npm:1.1.1":
+  version: 1.1.1
+  resolution: "tether@npm:1.1.1"
+  checksum: de257333d6d3f19458a643a8f87388fff39f39d6fa0828b829b0eeb25ebd85f7733db91ba3bd1726b7735d6d1f73802e106bac9904e70e664fbad1a78fb360e9
   languageName: node
   linkType: hard
 
