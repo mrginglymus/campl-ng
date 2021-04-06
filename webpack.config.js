@@ -87,6 +87,9 @@ module.exports = (env, argv = {}) => {
         resolve: {
             extensions: ['.js', '.json']
         },
-        bail: !WATCH
+        bail: !WATCH,
+        devServer: {
+            contentBase: OUTPUT_PATH
+        }
     }
 }
