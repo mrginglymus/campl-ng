@@ -23,6 +23,7 @@
     "core-js": "^3.10.0",
     "css-loader": "^5.2.0",
     "datetimepicker": "link:lib/datetimepicker",
+    "file-loader": "^6.2.0",
     "font-awesome": "4.7.0",
     "hammerjs": "2.0.6",
     "jquery-hammerjs": "2.0.0",
