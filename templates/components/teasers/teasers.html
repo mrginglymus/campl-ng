@@ -54,7 +54,7 @@
 {% macro news_teaser(article) %}
     <div class="news-teaser">
         <h3 class="teaser-title"><a href="{{ article.link }}">{{ article.title }}</a></h3>
-        <span class="teaser-date">{{ article.date.strftime('%-d %B %Y') }}</span>
+        <span class="teaser-date">{{ article.date.strftime('%d %B %Y') }}</span>
         <p class="teaser-text">{{ article.body }}</p>
     </div>
 {% endmacro %}
@@ -92,7 +92,7 @@
     <div class="date-teaser">
         <div class="date-teaser-date">
             <div class="date-teaser-date-day">
-                {{ article.date.strftime('%-d') }}
+                {{ article.date.strftime('%d') }}
             </div>
             <div class="date-teaser-date-month">
                 {{ article.date.strftime('%b') }}

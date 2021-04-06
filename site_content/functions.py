@@ -59,7 +59,7 @@ def random_date(raw=False):
 def print_macro(context, macro):
     p = pathlib.Path(macro._func.__code__.co_filename)
     env = context.environment
-    t = env.loader.get_source(env, str(p.relative_to(*p.parts[:1])))[0]
+    t = env.loader.get_source(env, str(p.relative_to(*p.parts[:1])).replace('\\', '/'))[0]
     res = re.search(
         '({%% macro %s\(.*?{%% endmacro %%})' % macro.name,
         t, re.S

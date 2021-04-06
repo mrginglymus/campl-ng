@@ -207,7 +207,7 @@ class TemplatePage(Page):
             template_file = os.path.join(*self.url.split('/')[2:])
             context = {
                 'page': self,
-                'template': env.loader.get_source(env, template_file)[0],
+                'template': env.loader.get_source(env, template_file.replace('\\', '/'))[0],
                 'template_references': template_to_tuple(
                     TEMPLATE_REFERENCES.get(template_file, [])
                 ),
