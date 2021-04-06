@@ -1,28 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta
+        http-equiv="Content-Type"
+        content="text/html; charset=UTF-8"
+    >
 
     <title>CamPL-NG: {{ page.title }}</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <link rel="shortcut icon" href="/favicon.ico"/>
+    <link
+        rel="shortcut icon"
+        href="/favicon.ico"
+    />
 
-    <link rel="stylesheet" href="/css/campl.css">
+    <link
+        rel="stylesheet"
+        href="/css/campl.css"
+    >
 
-    <link rel="stylesheet" href="/css/fonts.css"/>
+    <!--    <link-->
+    <!--        rel="stylesheet"-->
+    <!--        href="/css/fonts.css"-->
+    <!--    />-->
 
-    <script type="text/javascript" src="/js/jquery.js"></script>
-    <script type="text/javascript" src="/js/lib.js"></script>
-    <script type="text/javascript" src="/js/campl.js"></script>
-    <script type="text/javascript" src="/js/modernizr.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-2.1.4.min.js"
+        integrity="sha256-8WqyJLuWKRBVhxXIL1jBDD7SDxU936oZkCnxQbWwJVw="
+        crossorigin="anonymous"
+    ></script>
+
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.1.1/js/tether.min.js"
+        integrity="sha512-0WTv9iIZ+8oNl9LVPcamfEOmF9RKIjP+XM/7XIhaungGwCpFV5cCxtvctf5PG/cBidHscIl2kEb0x+3SYXcZJw=="
+        crossorigin="anonymous"
+    ></script>
+
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"
+        integrity="sha512-AKqjMvj9WYcM8rpwsyA8izqEFGXmlr+RkggCmA0Gr1UkBjQWZKC+NpVcQ6YYPglNSpLko1b4lrNaBF8sAwd1ZA=="
+        crossorigin="anonymous"
+    ></script>
+
+    <!--    <script type="text/javascript" src="/js/lib.js"></script>-->
+    <script
+        type="text/javascript"
+        src="/js/campl.js"
+    ></script>
+    <!--    <script type="text/javascript" src="/js/modernizr.js"></script>-->
 
     {% include 'meta/head.html' %}
 </head>
 <body class="offcanvas offcanvas-left theme-turquoise">
 {% block body %}
-    Hello, world
+Hello, world
 {% endblock %}
 </body>
 </html>

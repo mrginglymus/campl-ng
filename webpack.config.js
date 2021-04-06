@@ -38,6 +38,9 @@ module.exports = (env, argv = {}) => {
         devtool: MODE === 'production' ? 'source-map' : 'inline-source-map',
         amd: false,
         stats: 'minimal',
+        externals: {
+            jquery: 'jQuery',
+        },
         plugins: [
             new MiniCssExtractPlugin({
                 filename: path.join(RELATIVE_JS_OUTPUT, 'css', '[name].css'),
@@ -57,6 +60,10 @@ module.exports = (env, argv = {}) => {
         ],
         module: {
             rules: [
+                {
+                    test:/\.coffee$/,
+                    loader: 'coffee-loader',
+                },
                 {
                     test: /\.js$/,
                     exclude: /node_modules/,
