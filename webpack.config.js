@@ -1,6 +1,8 @@
 /* eslint-env node */
 
 const path = require('path');
+
+const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
@@ -39,6 +41,12 @@ module.exports = (env, argv = {}) => {
             new MiniCssExtractPlugin({
                 filename: path.join(RELATIVE_JS_OUTPUT, 'css', '[name].css'),
                 chunkFilename: path.join(RELATIVE_JS_OUTPUT, 'css', '[name].css'),
+            }),
+            new CopyPlugin({
+                patterns: [
+                    {from: path.join(SRC_ROOT, 'favicon.ico'), to: OUTPUT_PATH},
+                    {from: path.join(SRC_ROOT, 'images', 'logo.png'), to: path.join(OUTPUT_PATH, 'images', 'logo.png')}
+                ]
             }),
             new CaseSensitivePathsPlugin(),
             new BundleAnalyzerPlugin({
