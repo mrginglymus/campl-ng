@@ -106,6 +106,10 @@ module.exports = (env, argv = {}) => {
                             }
                         }
                     ]
+                },
+                {
+                    test: /\.png$/,
+                    type: 'asset',
                 }
             ]
         },

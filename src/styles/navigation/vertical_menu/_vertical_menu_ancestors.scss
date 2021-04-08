@@ -15,12 +15,12 @@
       background-color: #efefef;
 
       &::after {
-        background-image: inline("vertical-breadcrumb-arrow-hover.png");
+        background-image: url("../images/vertical-breadcrumb-arrow-hover.png");
       }
     }
 
     &::after {
-      background-image: inline("vertical-breadcrumb-arrow.png");
+      background-image: url("../images/vertical-breadcrumb-arrow.png");
       content: "";
       background-repeat: no-repeat;
       height: 15px;
@@ -32,7 +32,7 @@
     }
 
     .nav-link {
-      background: inline("vertical-breadcrumb-arrow-up.png") no-repeat 95% 50%;
+      background: url("../images/vertical-breadcrumb-arrow-up.png") no-repeat 95% 50%;
       color: #999999 !important;
       font-size: 14px;
       line-height: 16px;

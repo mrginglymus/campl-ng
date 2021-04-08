@@ -2,7 +2,7 @@
 
 .vertical-menu {
   @include make-col(12);
-  background: inline("vertical-nav-background.png");
+  background: url("../images/vertical-nav-background.png");
   border-left: $border-width solid $border-color;
   border-right: $border-width solid $border-color;
   border-top: $border-width solid $border-color;
