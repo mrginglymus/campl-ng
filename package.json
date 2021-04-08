@@ -15,6 +15,7 @@
   "dependencies": {
     "@babel/core": "^7.13.14",
     "@babel/preset-env": "^7.13.12",
+    "@fontsource/open-sans": "^4.2.2",
     "babel-loader": "^8.2.2",
     "bootstrap": "link:lib/bootstrap",
     "campl-ng": "link:src",

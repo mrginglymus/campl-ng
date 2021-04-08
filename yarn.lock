@@ -1199,6 +1199,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fontsource/open-sans@npm:^4.2.2":
+  version: 4.2.2
+  resolution: "@fontsource/open-sans@npm:4.2.2"
+  checksum: d2db6807a9adf6bec9dedb31356c26ab5e31d284e65e93530b028b8d8ba89efecff75733fe278283fff1fafd3583123fdd3884ff13290bd19c40ff56a26ae00c
+  languageName: node
+  linkType: hard
+
 "@nodelib/fs.scandir@npm:2.1.4":
   version: 2.1.4
   resolution: "@nodelib/fs.scandir@npm:2.1.4"
@@ -2326,6 +2333,7 @@ __metadata:
   dependencies:
     "@babel/core": ^7.13.14
     "@babel/preset-env": ^7.13.12
+    "@fontsource/open-sans": ^4.2.2
     babel-loader: ^8.2.2
     bootstrap: "link:lib/bootstrap"
     campl-ng: "link:src"
