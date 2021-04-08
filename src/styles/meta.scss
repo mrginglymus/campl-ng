@@ -20,7 +20,7 @@ main .main-content {
 
 .dropdown-menu {
   @each $colour, $theme in $themes {
-    [data-colour="#{$colour}"] {
+    [data-colour="#{"" + $colour}"] {
       background-color: map-get($theme, light-highlight) !important;
 
       &:hover {

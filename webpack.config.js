@@ -20,6 +20,7 @@ module.exports = (env, argv = {}) => {
 
     const entrypoints = {
         campl: 'campl.js',
+        demo: 'demo.js',
     };
 
     return {
