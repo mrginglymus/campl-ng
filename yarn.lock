@@ -2356,7 +2356,6 @@ __metadata:
     jquery-hammerjs: 2.0.0
     js-cookie: 2.1.0
     mini-css-extract-plugin: ^1.4.0
-    moment: 2.19.3
     node-sass-json-importer: ^4.3.0
     regenerator-runtime: ^0.13.7
     sass: ^1.32.8
@@ -5920,13 +5919,6 @@ fsevents@~2.3.1:
   bin:
     mkdirp: bin/cmd.js
   checksum: 1aa3a6a2d7514f094a91329ec09994f5d32d2955a4985ecbb3d86f2aaeafc4aa11521f98d606144c1d49cd9835004d9a73342709b8c692c92e59eacf37412468
-  languageName: node
-  linkType: hard
-
-"moment@npm:2.19.3":
-  version: 2.19.3
-  resolution: "moment@npm:2.19.3"
-  checksum: b08e76c984709fae166522ad2fc706c2fb06996043b7b22117d5c3b4fae27a24ae7d5c2812cfbaf9592de6392e1082d241c13d9860b008dccfeb2f03842ca14a
   languageName: node
   linkType: hard
 
