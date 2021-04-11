@@ -1,3 +1,5 @@
+import Cookies from 'js-cookie';
+
 jQuery ($) ->
   $("#global-header-drawers").on 'hidden.bs.collapse', ->
     $("#global-header-drawers div.tab-pane.active").removeClass "active"

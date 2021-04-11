@@ -23,11 +23,6 @@
         href="/css/campl.css"
     >
 
-    <!--    <link-->
-    <!--        rel="stylesheet"-->
-    <!--        href="/css/fonts.css"-->
-    <!--    />-->
-
     <script
         src="https://code.jquery.com/jquery-2.1.4.min.js"
         integrity="sha256-8WqyJLuWKRBVhxXIL1jBDD7SDxU936oZkCnxQbWwJVw="
@@ -49,17 +44,9 @@
     ></script>
 
     <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.0/js.cookie.min.js"
-        integrity="sha512-NS3X04nRiFsTNQ+1MyS724cvhI8Npr1LfTRbYReR5zaUQGL1Nem2ct5OmSbiMRAG79bqfHnybbTSjNt/DGSgCQ=="
-        crossorigin="anonymous"
-    ></script>
-
-    <!--    <script type="text/javascript" src="/js/lib.js"></script>-->
-    <script
         type="text/javascript"
         src="/js/campl.js"
     ></script>
-    <!--    <script type="text/javascript" src="/js/modernizr.js"></script>-->
 
     {% include 'demo/head.html' %}
 </head>
@@ -67,5 +54,6 @@
 {% block body %}
 Hello, world
 {% endblock %}
+{% include 'demo/foot.html' %}
 </body>
 </html>
