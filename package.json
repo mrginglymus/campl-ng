@@ -19,6 +19,7 @@
     "babel-loader": "^8.2.2",
     "bootstrap": "link:lib/bootstrap",
     "campl-ng": "link:src",
+    "campl-ng-demo": "link:demo",
     "case-sensitive-paths-webpack-plugin": "^2.4.0",
     "coffee-loader": "^2.0.0",
     "coffeescript": "^2.5.1",

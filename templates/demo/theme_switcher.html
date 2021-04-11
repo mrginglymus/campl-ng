@@ -1,0 +1,17 @@
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+        Theme Switcher
+    </a>
+    <ul class="dropdown-menu">
+        {% for colour, theme in COLOURS.items() %}
+            <li>
+                <a href="#" class="dropdown-item" data-toggle="theme" data-colour="{{ colour }}">{{ colour|title }}</a>
+            </li>
+        {% endfor %}
+        <li>
+            <a class="dropdown-item" href="#disco">
+                <span class="fa fa-random">&nbsp;</span> Shuffle
+            </a>
+        </li>
+    </ul>
+</li>

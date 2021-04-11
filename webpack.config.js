@@ -19,17 +19,15 @@ module.exports = (env, argv = {}) => {
     const WATCH = argv.watch || false;
 
     const entrypoints = {
-        campl: 'campl.js',
-        demo: 'demo.js',
+        campl: path.join(__dirname, 'src', 'scripts', 'campl.js'),
+        demo: path.join(__dirname, 'demo', 'scripts', 'demo.js'),
     };
 
     return {
         mode: MODE,
         target: 'web',
         entry: Object.entries(entrypoints).reduce((acc, [name, file]) => {
-            acc[name] = [
-                path.join(SRC_ROOT, 'scripts', file),
-            ];
+            acc[name] = [file];
             return acc;
         }, {}),
         output: {

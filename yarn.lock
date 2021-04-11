@@ -2321,6 +2321,12 @@ __metadata:
   languageName: node
   linkType: hard
 
+"campl-ng-demo@link:demo::locator=campl-ng%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "campl-ng-demo@link:demo::locator=campl-ng%40workspace%3A."
+  languageName: node
+  linkType: soft
+
 "campl-ng@link:src::locator=campl-ng%40workspace%3A.":
   version: 0.0.0-use.local
   resolution: "campl-ng@link:src::locator=campl-ng%40workspace%3A."
@@ -2337,6 +2343,7 @@ __metadata:
     babel-loader: ^8.2.2
     bootstrap: "link:lib/bootstrap"
     campl-ng: "link:src"
+    campl-ng-demo: "link:demo"
     case-sensitive-paths-webpack-plugin: ^2.4.0
     coffee-loader: ^2.0.0
     coffeescript: ^2.5.1

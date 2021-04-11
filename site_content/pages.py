@@ -179,7 +179,7 @@ class SCSSPage(Page):
                     os.path.join('scss', *self.url.split('/')[2:]), 'r'
             ) as scss_file:
                 scss = scss_file.read()
-            template = env.get_template('meta/stylesheet.html')
+            template = env.get_template('demo/stylesheet.html')
             context = {
                 'page': self,
                 'scss': scss,
@@ -203,7 +203,7 @@ class TemplatePage(Page):
 
     def render(self, env):
         if self.source:
-            template = env.get_template('meta/template.html')
+            template = env.get_template('demo/template.html')
             template_file = os.path.join(*self.url.split('/')[2:])
             context = {
                 'page': self,
@@ -239,7 +239,7 @@ class CoffeePage(Page):
                     os.path.join('coffee', *self.url.split('/')[2:]), 'r'
             ) as coffee_file:
                 coffee = coffee_file.read()
-            template = env.get_template('meta/script.html')
+            template = env.get_template('demo/script.html')
             context = {
                 'page': self,
                 'coffee': coffee,
