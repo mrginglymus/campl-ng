@@ -3,13 +3,13 @@ extends ../base
 block body
     header
         include ./header/global/header
-        // include layout/header/local/header
+        include ./header/local/header
 
     main.container
         div.row
-            // include navigation/vertical-menu
+            // todo: include navigation/vertical-menu
             div.col-md-9.main-content
-                // carousel
+                // todo: +carousel
                 block unwrapped_content
                     div.p-a-1
                         block content
@@ -18,6 +18,6 @@ block body
                     block sidebar_content
 
     footer
-        // include layout/header/global/footer
-        // include layout/header/local/footer
+        include ./footer/local/footer
+        include ./footer/global/footer
 

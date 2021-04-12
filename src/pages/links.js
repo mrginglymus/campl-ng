@@ -131,8 +131,133 @@ const aboutDrawer = {
     ]
 }
 
+const globalFooterLinks = [
+    {
+        header: {},
+        links: [
+            {
+                title: "University A-Z",
+                link: "http://www.cam.ac.uk/university-a-z"
+            },
+            {
+                title: "Contact the University",
+                link: "http://www.cam.ac.uk/contact-the-university"
+            },
+            {
+                title: "Accessibility",
+                link: "http://www.cam.ac.uk/about-this-site/accessibility"
+            },
+            {
+                title: "Freedom of information",
+                link: "http://www.admin.cam.ac.uk/univ/information/foi/"
+            },
+            {
+                title: "Terms and conditions",
+                link: "http://www.cam.ac.uk/about-this-site/terms-and-conditions"
+            }
+        ]
+    },
+    {
+        header: {
+            title: "Study at Cambridge",
+            link: "http://www.cam.ac.uk/study-at-cambridge"
+        },
+        links: [
+            {
+                title: "Undergraduate",
+                link: "http://www.study.cam.ac.uk/undergraduate/"
+            },
+            {
+                title: "Graduate",
+                link: "http://www.admin.cam.ac.uk/students/gradadmissions/prospec/"
+            },
+            {
+                title: "International students",
+                link: "http://www.cam.ac.uk/about-the-university/international-cambridge/studying-at-cambridge"
+            },
+            {
+                title: "Continuing education",
+                link: "http://www.ice.cam.ac.uk/"
+            },
+            {
+                title: "Executive and professional education",
+                link: "http://www.admin.cam.ac.uk/offices/education/epe/"
+            },
+            {
+                title: "Courses in education",
+                link: "http://www.educ.cam.ac.uk/"
+            }
+        ]
+    },
+    {
+        header: {
+            title: "About the University",
+            link: "http://www.cam.ac.uk/about-the-university"
+        },
+        links: [
+            {
+                title: "How the University and Colleges work",
+                link: "http://www.cam.ac.uk/about-the-university/how-the-university-and-colleges-work"
+            },
+            {
+                title: "Visiting the University",
+                link: "http://www.cam.ac.uk/about-the-university/visiting-the-university"
+            },
+            {
+                title: "Map",
+                link: "http://map.cam.ac.uk/"
+            },
+            {
+                title: "News",
+                link: "http://www.cam.ac.uk/news"
+            },
+            {
+                title: "Events",
+                link: "http://www.admin.cam.ac.uk/whatson"
+            },
+            {
+                title: "Jobs",
+                link: "http://www.jobs.cam.ac.uk/"
+            },
+            {
+                title: "Giving to Cambridge",
+                link: "http://www.philanthropy.cam.ac.uk/"
+            }
+        ]
+    },
+    {
+        header: {
+            title: "Research at Cambridge",
+            link: "http://www.cam.ac.uk/research"
+        },
+        links: [
+            {
+                title: "News",
+                link: "http://www.cam.ac.uk/research/news"
+            },
+            {
+                title: "Features",
+                link: "http://www.cam.ac.uk/research/features"
+            },
+            {
+                title: "Discussion",
+                link: "http://www.cam.ac.uk/research/discussion"
+            },
+            {
+                title: "Spotlight on...",
+                link: "http://www.cam.ac.uk/research/spotlight-on"
+            },
+            {
+                title: "About research at Cambridge",
+                link: "http://www.cam.ac.uk/research/research-at-cambridge"
+            }
+        ]
+    }
+]
+
 module.exports = {
     quicklinks,
     studyDrawer,
-    aboutDrawer
+    aboutDrawer,
+    globalFooterLinks
 }
