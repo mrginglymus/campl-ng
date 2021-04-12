@@ -38,7 +38,7 @@ templates = get_directory_structure('templates', 'html')['templates']
 
 template_pages = list(shuffle_dirs(templates, TemplatePage))
 
-coffee = {} # get_directory_structure('coffee', 'coffee')['coffee']
+coffee = get_directory_structure(os.path.join('src', 'scripts'), 'js')['scripts']
 
 coffee_pages = list(shuffle_dirs(coffee, CoffeePage))
 

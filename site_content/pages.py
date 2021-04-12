@@ -236,7 +236,7 @@ class CoffeePage(Page):
     def render(self, env):
         if self.source:
             with open(
-                    os.path.join('coffee', *self.url.split('/')[2:]), 'r'
+                    os.path.join('src', 'scripts', *self.url.split('/')[2:]), 'r'
             ) as coffee_file:
                 coffee = coffee_file.read()
             template = env.get_template('demo/script.html')
