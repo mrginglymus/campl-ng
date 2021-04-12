@@ -2356,6 +2356,7 @@ __metadata:
     eslint-plugin-unicorn: ^29.0.0
     file-loader: ^6.2.0
     font-awesome: 4.7.0
+    highlight.js: ^10.7.2
     jquery: 2.1.4
     js-cookie: 2.1.0
     mini-css-extract-plugin: ^1.4.0
@@ -4327,6 +4328,13 @@ fsevents@~2.3.1:
   dependencies:
     function-bind: ^1.1.1
   checksum: c686e15300d41364486c099a9259d9c418022c294244843dcd712c4c286ff839d4f23a25413baa28c4d2c1e828afc2aaab70f685400b391533980223c71fa1ca
+  languageName: node
+  linkType: hard
+
+"highlight.js@npm:^10.7.2":
+  version: 10.7.2
+  resolution: "highlight.js@npm:10.7.2"
+  checksum: 8208e010011298abc7be9d7f69946a408d9a9b62f88000e76672aa53cee91399d188bc6a8c33cf41323e137e0e03ff8f16ac934bdc53673747658808ea62a7ac
   languageName: node
   linkType: hard
 
