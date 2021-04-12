@@ -4,6 +4,8 @@ class Page {
         this.source = source;
         this.children = children;
         this.options = options
+        this.isFrontPage = false
+        this.horizontalBreadcrumb = [['Campl-NG', '/']]
     }
 
     get destination() {
@@ -16,6 +18,12 @@ class Page {
 }
 
 class FrontPage extends Page {
+
+    constructor(title, source = null, children = [], options = {}) {
+        super(title, source, children, options);
+        this.isFrontPage = true
+    }
+
     get destination() {
         return 'index.html'
     }

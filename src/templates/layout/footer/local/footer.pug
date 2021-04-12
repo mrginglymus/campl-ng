@@ -5,9 +5,9 @@ div.local-footer
                 div.col-md-3.col-xs-12
                     for menu in column
                         h3
-                            a(href="#") #{menu.header}
+                            a(href="#")= menu.header
                         if menu.links
                             ul.list-unstyled.hidden-sm-down
                                 for link in menu.links
                                     li
-                                        a(href="#") #{link}
+                                        a(href="#")= link
