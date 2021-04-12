@@ -25,7 +25,7 @@
         }
 
         &.nav-item-right {
-          @include pull-right;
+          float: right !important;
 
           .nav-link {
             border-left: $border-width solid;
