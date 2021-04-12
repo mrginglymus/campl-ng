@@ -1,6 +1,3 @@
 [submodule "lib/bootstrap"]
 	path = lib/bootstrap
 	url = https://github.com/mrginglymus/bootstrap.git
-[submodule "lib/datetimepicker"]
-	path = lib/datetimepicker
-	url = https://github.com/mrginglymus/bootstrap-datetimepicker.git

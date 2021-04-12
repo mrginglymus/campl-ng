@@ -20,6 +20,7 @@ module.exports = (env, argv = {}) => {
 
     const entrypoints = {
         campl: path.join(__dirname, 'src', 'scripts', 'campl.js'),
+        datetimepicker: path.join(__dirname, 'src', 'scripts', 'datetimepicker.js'),
         demo: path.join(__dirname, 'demo', 'scripts', 'demo.js'),
     };
 

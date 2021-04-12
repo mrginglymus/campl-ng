@@ -2144,13 +2144,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bootstrap@link:lib/bootstrap::locator=campl-ng%40workspace%3A.":
-  version: 0.0.0-use.local
-  resolution: "bootstrap@link:lib/bootstrap::locator=campl-ng%40workspace%3A."
+"bootstrap@npm:4.0.0-alpha.5":
+  version: 4.0.0-alpha.5
+  resolution: "bootstrap@npm:4.0.0-alpha.5"
+  dependencies:
+    jquery: 1.9.1 - 3
+    tether: ^1.3.7
+  checksum: abaa9980881642afac562151c40fae24eb1794bd8ac2be41ebac0bfea8630fe9b06d13dc2bfc453946084516a926039f1e9a89cbbba030c6cd9d82dbd4de3090
   languageName: node
-  linkType: soft
+  linkType: hard
 
-"bootstrap@npm:^3.0":
+"bootstrap@npm:^3.3":
   version: 3.4.1
   resolution: "bootstrap@npm:3.4.1"
   checksum: 5c1f8e5fc8971ee7eb88573777efea999c79cae98fadb521959d5996a678cabf9415d349c3739c3c8c8bbf965ae48aae8480b61719c70dd41c1335ea68a9af2e
@@ -2341,15 +2345,14 @@ __metadata:
     "@babel/preset-env": ^7.13.12
     "@fontsource/open-sans": ^4.2.2
     babel-loader: ^8.2.2
-    bootstrap: "link:lib/bootstrap"
+    bootstrap: 4.0.0-alpha.5
     campl-ng: "link:src"
     campl-ng-demo: "link:demo"
     case-sensitive-paths-webpack-plugin: ^2.4.0
     copy-webpack-plugin: ^8.1.1
     core-js: ^3.10.0
     css-loader: ^5.2.0
-    datetimepicker: "link:lib/datetimepicker"
-    eonasdan-bootstrap-datetimepicker: 4.7.14
+    eonasdan-bootstrap-datetimepicker: "patch:eonasdan-bootstrap-datetimepicker@4.17.43#./patches/eonasdan-bootstrap-datetimepicker.patch"
     eslint: ^7.23.0
     eslint-import-resolver-node: ^0.3.4
     eslint-plugin-import: ^2.22.1
@@ -2850,12 +2853,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"datetimepicker@link:lib/datetimepicker::locator=campl-ng%40workspace%3A.":
-  version: 0.0.0-use.local
-  resolution: "datetimepicker@link:lib/datetimepicker::locator=campl-ng%40workspace%3A."
-  languageName: node
-  linkType: soft
-
 "debug@npm:2.6.9, debug@npm:^2.2.0, debug@npm:^2.3.3, debug@npm:^2.6.9":
   version: 2.6.9
   resolution: "debug@npm:2.6.9"
@@ -3234,14 +3231,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eonasdan-bootstrap-datetimepicker@npm:4.7.14":
-  version: 4.7.14
-  resolution: "eonasdan-bootstrap-datetimepicker@npm:4.7.14"
+eonasdan-bootstrap-datetimepicker@4.17.43:
+  version: 4.17.43
+  resolution: "eonasdan-bootstrap-datetimepicker@npm:4.17.43"
   dependencies:
-    bootstrap: ^3.0
-    jquery: latest
-    moment: ^2.9.0
-  checksum: 387da9a372204b606a79bb46bc259f45cb08bfad13dd1cec949326d220cf34d187165316f7e9b94c53a66f20f78275d74e05519ca95f5609b5020fde0306a490
+    bootstrap: ^3.3
+    jquery: ^1.8.3 || ^2.0
+    moment: ^2.10
+    moment-timezone: ^0.4.0
+  checksum: dfd3b6b33d3a6b9db9fffdd91ecad33f4678340e699631d31dc4cb1b4f96bc302103df02ca09a14231b91d2849e44cc40d917441a99047c43d85f97071a67148
+  languageName: node
+  linkType: hard
+
+"eonasdan-bootstrap-datetimepicker@patch:eonasdan-bootstrap-datetimepicker@4.17.43#./patches/eonasdan-bootstrap-datetimepicker.patch::locator=campl-ng%40workspace%3A.":
+  version: 4.17.43
+  resolution: "eonasdan-bootstrap-datetimepicker@patch:eonasdan-bootstrap-datetimepicker@npm%3A4.17.43#./patches/eonasdan-bootstrap-datetimepicker.patch::version=4.17.43&hash=bcd9c5&locator=campl-ng%40workspace%3A."
+  dependencies:
+    bootstrap: ^3.3
+    jquery: ^1.8.3 || ^2.0
+    moment: ^2.10
+    moment-timezone: ^0.4.0
+  checksum: d77da52b425cd719802c3530ed61cecc1388bd281a1ffffede094aaa4ad23578e80cee575f479f97641dda654af55a8ae885baed70a3ea5151b88364a2ad7724
   languageName: node
   linkType: hard
 
@@ -5154,6 +5164,13 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
+"jquery@npm:1.9.1 - 3":
+  version: 3.6.0
+  resolution: "jquery@npm:3.6.0"
+  checksum: a0a819022a1bdff5efa79bbd9d4d7352de5bd32dabe42108e6ec0797238dba36c09c108e0eea2724f5d03acc1b30ee87d76bec80e15b9510106532292ebe6ba4
+  languageName: node
+  linkType: hard
+
 "jquery@npm:2.1.4":
   version: 2.1.4
   resolution: "jquery@npm:2.1.4"
@@ -5161,10 +5178,10 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"jquery@npm:latest":
-  version: 3.6.0
-  resolution: "jquery@npm:3.6.0"
-  checksum: a0a819022a1bdff5efa79bbd9d4d7352de5bd32dabe42108e6ec0797238dba36c09c108e0eea2724f5d03acc1b30ee87d76bec80e15b9510106532292ebe6ba4
+"jquery@npm:^1.8.3 || ^2.0":
+  version: 2.2.4
+  resolution: "jquery@npm:2.2.4"
+  checksum: ea9064a4e0697b1e03ee273602ef05a6b97c2ded0da57a290702b2ddb46c98442bb18b12beea0a645834c804e005feac5016c19e181b4648aea3ca4187627925
   languageName: node
   linkType: hard
 
@@ -5888,7 +5905,16 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"moment@npm:^2.9.0":
+"moment-timezone@npm:^0.4.0":
+  version: 0.4.1
+  resolution: "moment-timezone@npm:0.4.1"
+  dependencies:
+    moment: ">= 2.6.0"
+  checksum: 012e4db3a1510a0f31f522b8543899cc543ec7a9ea6f74c7731301364230f9c9c142f337a7ca4ce432513ee9f0a7784b20f22e42f1e61e96b4e969bbd0a002a2
+  languageName: node
+  linkType: hard
+
+"moment@npm:>= 2.6.0, moment@npm:^2.10":
   version: 2.29.1
   resolution: "moment@npm:2.29.1"
   checksum: 86729013febf7160de5b93da69273dd304d674b0224f9544b3abd09a87671ddd2cdd57598261ce57588910d63747ffd5590965e83c790d8bf327083c0e0a06e0
@@ -8291,6 +8317,13 @@ fsevents@~2.3.1:
   version: 1.1.1
   resolution: "tether@npm:1.1.1"
   checksum: de257333d6d3f19458a643a8f87388fff39f39d6fa0828b829b0eeb25ebd85f7733db91ba3bd1726b7735d6d1f73802e106bac9904e70e664fbad1a78fb360e9
+  languageName: node
+  linkType: hard
+
+"tether@npm:^1.3.7":
+  version: 1.4.7
+  resolution: "tether@npm:1.4.7"
+  checksum: c60d742a0626dca753771526d3f977bfd19e20674557a5f56fc5c5adf828ed10ac294d609c400e2916eea30b48b1c67c71138103e020125a48ea5f0c56254493
   languageName: node
   linkType: hard
 
