@@ -176,7 +176,7 @@ class SCSSPage(Page):
     def render(self, env):
         if self.source:
             with open(
-                    os.path.join('scss', *self.url.split('/')[2:]), 'r'
+                    os.path.join('src', 'styles', *self.url.split('/')[2:]), 'r'
             ) as scss_file:
                 scss = scss_file.read()
             template = env.get_template('demo/stylesheet.html')

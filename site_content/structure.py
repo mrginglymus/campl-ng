@@ -30,7 +30,7 @@ def shuffle_dirs(dir, cls):
             yield cls(p, p)
 
 
-scss = {}  # get_directory_structure('scss', 'scss')['scss']
+scss = get_directory_structure(os.path.join('src', 'styles'), 'scss')['styles']
 
 scss_pages = list(shuffle_dirs(scss, SCSSPage))
 
