@@ -33,6 +33,7 @@
     "js-cookie": "2.1.0",
     "mini-css-extract-plugin": "^1.4.0",
     "node-sass-json-importer": "^4.3.0",
+    "pug": "^3.0.2",
     "sass": "^1.32.8",
     "sass-loader": "^11.0.1",
     "tether": "1.4.7",
