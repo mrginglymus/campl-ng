@@ -27,7 +27,7 @@ module.exports = (env, argv = {}) => {
         mode: MODE,
         target: 'web',
         entry: Object.entries(entrypoints).reduce((acc, [name, file]) => {
-            acc[name] = [file];
+            acc[name] = ['core-js/stable', file];
             return acc;
         }, {}),
         output: {
@@ -60,7 +60,7 @@ module.exports = (env, argv = {}) => {
         module: {
             rules: [
                 {
-                    test:/\.coffee$/,
+                    test: /\.coffee$/,
                     loader: 'coffee-loader',
                 },
                 {
@@ -70,7 +70,11 @@ module.exports = (env, argv = {}) => {
                         {
                             loader: 'babel-loader',
                             options: {
-                                presets: ['@babel/preset-env'],
+                                presets: [['@babel/preset-env', {
+                                    targets: {
+                                        browsers: '> 1%, IE 11, not dead',
+                                    }
+                                }]],
                             }
                         }
                     ]

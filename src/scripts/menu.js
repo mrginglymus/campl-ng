@@ -1,10 +1,8 @@
 import Cookies from 'js-cookie';
 
 $("#global-header-drawers").on('hidden.bs.collapse', () => {
-    $("#global-header-drawers div.tab-pane.active").removeClass
-    "active"
-    $(".global-header a.nav-link.active").removeClass
-    "active"
+    $("#global-header-drawers div.tab-pane.active").removeClass("active")
+    $(".global-header a.nav-link.active").removeClass("active")
 });
 
 $(".global-header [data-parent='#global-header-drawers']").on('shown.bs.tab', () => {
