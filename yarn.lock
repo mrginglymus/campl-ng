@@ -2366,11 +2366,13 @@ __metadata:
     sass: ^1.32.8
     sass-loader: ^11.0.1
     stylelint: ^13.12.0
-    tether: 1.1.1
+    tether: 1.4.7
     webpack: ^5.30.0
     webpack-bundle-analyzer: ^4.4.0
     webpack-cli: ^4.6.0
     webpack-dev-server: ^3.11.2
+  peerDependencies:
+    jquery: 2.1.4
   languageName: unknown
   linkType: soft
 
@@ -8298,14 +8300,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"tether@npm:1.1.1":
-  version: 1.1.1
-  resolution: "tether@npm:1.1.1"
-  checksum: de257333d6d3f19458a643a8f87388fff39f39d6fa0828b829b0eeb25ebd85f7733db91ba3bd1726b7735d6d1f73802e106bac9904e70e664fbad1a78fb360e9
-  languageName: node
-  linkType: hard
-
-"tether@npm:^1.1.1":
+"tether@npm:1.4.7, tether@npm:^1.1.1":
   version: 1.4.7
   resolution: "tether@npm:1.4.7"
   checksum: c60d742a0626dca753771526d3f977bfd19e20674557a5f56fc5c5adf828ed10ac294d609c400e2916eea30b48b1c67c71138103e020125a48ea5f0c56254493
