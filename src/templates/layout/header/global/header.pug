@@ -1,0 +1,67 @@
+mixin globalHeaderDrawer(id, drawer)
+    div.tab-pane.fade(role="tabpanel", id=`global-header-drawer-${id}`)
+        div.container
+            div.row
+                div.col-md-11.col-xs-12.global-header-drawer-title
+                    a(href=drawer.link) #{drawer.title}
+                div.col-md-1.global-header-close.hidden-sm-down
+                    a(href="#global-header-drawers", data-target="#global-header-drawers" data-toggle="collapse") Close
+            div.row
+                for column in drawer.links
+                    div.col-md-4.col-xs-12
+                        ul.global-header-list
+                            for menu in column
+                                li
+                                    a(href=menu.link) #{menu.title}
+                                    if menu.links
+                                        ul.global-header-sublist
+                                            for link, title in menu.links
+                                                li
+                                                    a(href=link) #{title}
+
+nav.navbar.global-header
+    div.container
+        div.row
+            div.col-md-8.col-xs-12
+                a.global-menu-button.pull-xs-left.hidden-md-up(href="#sidebar-offcanvas", data-toggle="offcanvas")
+                    span.fa.fa-bars.fa-2x
+                a.global-menu-button.pull-xs-right.hidden-md-up(href="#global-search-drawer", data-toggle="collapse")
+                    span.fa.fa-search.fa-2x
+                unless CAM_PAGE
+                    a.navbar-brand(href="http://www.cam.ac.uk")
+                        img.logo.logo-sm(alt="University of Cambridge", src="/images/logo.png")
+                ul.nav.navbar-nav.nav-global.hidden-sm-down
+                    li.nav-item
+                        a.nav-link(href='#global-header-drawer-study' data-toggle='tab' data-target='#global-header-drawer-study' data-parent='#global-header-drawers')
+                            | Study at Cambridge
+                    li.nav-item
+                        a.nav-link(href='#global-header-drawer-about' data-toggle='tab' data-target='#global-header-drawer-about' data-parent='#global-header-drawers')
+                            | About the University
+                    li.nav-item
+                        a.nav-link(href='http://www.cam.ac.uk/research') Research at Cambridge
+            div.col-md-2.hidden-sm-down.quicklinks-container
+                div#global-quicklinks.dropdown
+                    a(href='#global-quicklinks' data-toggle='dropdown')
+                        span Quick links
+                        span.quicklinks-dropdown-toggle
+                            span.fa.fa-caret-down.fa-lg
+                    div.dropdown-menu
+                        for link, title in links.quicklinks
+                            a.dropdown-item(href=link) #{title}
+            div#global-search-drawer.col-md-2.col-xs-12.collapse.navbar-toggleable-sm
+                form(action='http://search.cam.ac.uk/web' method='get')
+                    div.input-group.global-search
+                        input.form-control(type='text' placeholder='Search' name='query')
+                        button.input-group-addon(type='submit')
+                            span.fa.fa-search.fa-lg
+div#global-header-drawers.collapse
+    div.tab-content.global-header-drawer.sidebar-offcanvas
+        +globalHeaderDrawer('study', links.studyDrawer)
+        +globalHeaderDrawer('about', links.aboutDrawer)
+        .hidden-md-up
+            ul.global-header-offcanvas-quicklinks.global-header-list
+                li
+                    a(href='http://www.cam.ac.uk/research') Research at Cambridge
+                for link, title in links.quicklinks
+                    li
+                    a(href=link) #{title}
