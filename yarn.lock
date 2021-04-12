@@ -2358,9 +2358,7 @@ __metadata:
     eslint-plugin-unicorn: ^29.0.0
     file-loader: ^6.2.0
     font-awesome: 4.7.0
-    hammerjs: 2.0.6
     jquery: 2.1.4
-    jquery-hammerjs: 2.0.0
     js-cookie: 2.1.0
     mini-css-extract-plugin: ^1.4.0
     node-sass-json-importer: ^4.3.0
@@ -4258,20 +4256,6 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"hammerjs@npm:2.0.6":
-  version: 2.0.6
-  resolution: "hammerjs@npm:2.0.6"
-  checksum: 5a025dda3b024708027f8e91b48e20ace9ff850f5b836a61144d81697e2602015847120f64a8892cba1656fea6edd52d02ff3a4cc4beede7f649d00b09c98d31
-  languageName: node
-  linkType: hard
-
-"hammerjs@npm:2.0.x":
-  version: 2.0.8
-  resolution: "hammerjs@npm:2.0.8"
-  checksum: 68178494e20c711ca4beefd644a57d09452436697e511c6777836ed184d5c96d9a92c001a7bb51eb2fa98220f814a7d79606dbd44ed569adad7d0c9d32d4ba77
-  languageName: node
-  linkType: hard
-
 "handle-thing@npm:^2.0.0":
   version: 2.0.1
   resolution: "handle-thing@npm:2.0.1"
@@ -5185,17 +5169,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"jquery-hammerjs@npm:2.0.0":
-  version: 2.0.0
-  resolution: "jquery-hammerjs@npm:2.0.0"
-  dependencies:
-    hammerjs: 2.0.x
-    jquery: 2.1.x
-  checksum: 66fc0fa0c009c848f570a253fde653055de80b374170f04bc6fbcba75371ef36d9f05067ded98108d51cd7ebb1d3bb5ef164a33ff01ce51527af1eda848bf3ee
-  languageName: node
-  linkType: hard
-
-"jquery@npm:2.1.4, jquery@npm:2.1.x":
+"jquery@npm:2.1.4":
   version: 2.1.4
   resolution: "jquery@npm:2.1.4"
   checksum: bde181038366c3fa20b638d4904a80bfbf481013b8bbe601a955f29be7a41166bfa19ea57948b7992ff9533e553d6ee90ed37d150c780bd16c7d41125d4fb7a8
