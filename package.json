@@ -4,9 +4,9 @@
   "version": "0.1.2-alpha1",
   "homepage": "http://people.ds.cam.ac.uk/wac26/campl-ng/",
   "author": "Bill Collins <bill@bill.works>",
-    "browserslist": [
-        "defaults"
-    ],
+  "browserslist": [
+    "defaults"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mrginglymus/campl-ng.git"
@@ -24,8 +24,6 @@
     "campl-ng": "link:src",
     "campl-ng-demo": "link:demo",
     "case-sensitive-paths-webpack-plugin": "^2.4.0",
-    "coffee-loader": "^2.0.0",
-    "coffeescript": "^2.5.1",
     "copy-webpack-plugin": "^8.1.1",
     "core-js": "^3.10.0",
     "css-loader": "^5.2.0",
@@ -37,7 +35,6 @@
     "js-cookie": "2.1.0",
     "mini-css-extract-plugin": "^1.4.0",
     "node-sass-json-importer": "^4.3.0",
-    "regenerator-runtime": "^0.13.7",
     "sass": "^1.32.8",
     "sass-loader": "^11.0.1",
     "tether": "1.1.1",

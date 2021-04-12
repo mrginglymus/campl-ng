@@ -60,10 +60,6 @@ module.exports = (env, argv = {}) => {
         module: {
             rules: [
                 {
-                    test: /\.coffee$/,
-                    loader: 'coffee-loader',
-                },
-                {
                     test: /\.js$/,
                     exclude: /node_modules/,
                     use: [

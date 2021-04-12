@@ -2345,8 +2345,6 @@ __metadata:
     campl-ng: "link:src"
     campl-ng-demo: "link:demo"
     case-sensitive-paths-webpack-plugin: ^2.4.0
-    coffee-loader: ^2.0.0
-    coffeescript: ^2.5.1
     copy-webpack-plugin: ^8.1.1
     core-js: ^3.10.0
     css-loader: ^5.2.0
@@ -2362,7 +2360,6 @@ __metadata:
     js-cookie: 2.1.0
     mini-css-extract-plugin: ^1.4.0
     node-sass-json-importer: ^4.3.0
-    regenerator-runtime: ^0.13.7
     sass: ^1.32.8
     sass-loader: ^11.0.1
     stylelint: ^13.12.0
@@ -2558,26 +2555,6 @@ __metadata:
   version: 1.1.0
   resolution: "code-point-at@npm:1.1.0"
   checksum: 7d9837296e0f1c00239c88542f5a3e0bad11e45d3d0e8d9d097901fe54722dd5d2c006969077a287be8648a202c43f74e096f17552cbd897568308fba7b87ac0
-  languageName: node
-  linkType: hard
-
-"coffee-loader@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "coffee-loader@npm:2.0.0"
-  peerDependencies:
-    coffeescript: ">= 2.0.0"
-    webpack: ^5.0.0
-  checksum: 01e9513556fe993c3d44473e2806205b7d4eeed1a707719725cde7445587743b91b7f9c75d7c82c591ebfed844cf2f0d1c33c4c4a203cda51fbd9e58b264c920
-  languageName: node
-  linkType: hard
-
-"coffeescript@npm:^2.5.1":
-  version: 2.5.1
-  resolution: "coffeescript@npm:2.5.1"
-  bin:
-    cake: bin/cake
-    coffee: bin/coffee
-  checksum: a2fb59193851d4e8fc1eef8792efc30a7491eef667b910a7046a1628cdd735d7c9a64f3b55be34d96a305744b845d90614d2d73a152662c2d9e2d291916e3a33
   languageName: node
   linkType: hard
 
@@ -7101,7 +7078,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"regenerator-runtime@npm:^0.13.4, regenerator-runtime@npm:^0.13.7":
+"regenerator-runtime@npm:^0.13.4":
   version: 0.13.8
   resolution: "regenerator-runtime@npm:0.13.8"
   checksum: 20178f5753f181d59691e5c3b4c59a2769987f75c7ccf325777673b5478acca61a553b10e895585086c222f72f5ee428090acf50320264de4b79f630f7388653
