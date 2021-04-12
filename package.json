@@ -4,6 +4,9 @@
   "version": "0.1.2-alpha1",
   "homepage": "http://people.ds.cam.ac.uk/wac26/campl-ng/",
   "author": "Bill Collins <bill@bill.works>",
+  "scripts": {
+    "build": "node ./build.js"
+  },
   "browserslist": [
     "defaults"
   ],
