@@ -30,12 +30,9 @@ class Articles {
 const articles = new Articles();
 
 function randomImage(width, height) {
-    if (!height) {
-        height = width
-    }
-    height = Math.floor(height * (Math.random() + 1))
+    height = Math.floor(height || width * (Math.random() + 1))
     width = Math.floor(width * (Math.random() + 1))
-    return `//placehold.it/${width}x${height}`;
+    return `//picsum.photos/${width}/${height}`;
 }
 
 const localFooterLinks = [
