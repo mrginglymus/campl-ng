@@ -1,0 +1,25 @@
+mixin carouselItem(article, image, items, index)
+    div.carousel-item(class=`${index===0 ? 'active' : ''}`)
+        if article.link
+            a.image-wrapper.image-wrapper-carousel(href=article.link)
+                img(src=image, alt=article.title)
+        else
+            div.image-wrapper.image-wrapper-carousel
+                img(src=image, alt=article.title)
+        div.carousel-caption
+            if article.link
+                a(href=article.link)= article.title
+            else
+                span= article.title
+            span.carousel-page #{index + 1} of #{items.length}
+
+mixin carousel(items)
+    div.carousel.slide#front-page-carousel(data-ride='carousel')
+        div.carousel-inner(role='listbox')
+            for item, index in items
+                +carouselItem(item[0], item[1], items, index)
+        a.left.carousel-control.hidden-sm-down(href='#front-page-carousel' role='button' data-slide='prev')
+            span.sr-only Previous
+        a.right.carousel-control.hidden-sm-down(href='#front-page-carousel' role='button' data-slide='next')
+            span.sr-only Next
+

@@ -1,3 +1,39 @@
+const Parser = require('rss-parser');
+
+class Articles {
+
+    constructor() {
+        this.articles = []
+    }
+
+    async populate() {
+        const parser = new Parser()
+        const feed = await parser.parseURL('http://www.cam.ac.uk/news/feed')
+        this.articles = feed.items
+    }
+
+    randomArticle() {
+        const article = this.articles[Math.floor(Math.random() * this.articles.length)]
+        return {
+            title: article.title,
+            link: article.link,
+            body: article.contentSnippet,
+            date: new Date(article.pubDate)
+        }
+    }
+}
+
+const articles = new Articles();
+
+function randomImage(width, height) {
+    if (!height) {
+        height = width
+    }
+    height = Math.floor(height * (Math.random() + 1))
+    width = Math.floor(width * (Math.random() + 1))
+    return `//placehold.it/${width}x${height}`;
+}
+
 const localFooterLinks = [
     [
         {
@@ -61,6 +97,16 @@ const localFooterLinks = [
     ]
 ]
 
+function makeCarousel() {
+    return [
+        [articles.randomArticle(), randomImage(885, 432)],
+        [articles.randomArticle(), randomImage(885, 432)],
+        [articles.randomArticle(), randomImage(885, 432)]
+    ]
+}
+
 module.exports = {
-    localFooterLinks
+    localFooterLinks,
+    makeCarousel,
+    articles
 }

@@ -10,13 +10,16 @@ const examples = require('campl-ng/pages/examples');
 const themes = require('./themes.json').themes
 const siteName = 'CamPL-NG';
 
-function renderPage(page) {
-    const template = pug.compileFile(path.join('src', 'pages', `${page.source}.pug`));
-    const rendered = template({page, links, siteName, examples, menu: pages, themes});
-    fs.writeFileSync(path.join('build', page.destination), rendered);
-}
 
-pages.forEach(renderPage);
+examples.articles.populate().then(() => {
+    function renderPage(page) {
+        const template = pug.compileFile(path.join('src', 'pages', `${page.source}.pug`));
+        const rendered = template({page, links, siteName, examples, menu: pages, themes});
+        fs.writeFileSync(path.join('build', page.destination), rendered);
+    }
 
-renderPage(frontPage);
+    pages.forEach(renderPage);
+
+    renderPage(frontPage);
+})
 
