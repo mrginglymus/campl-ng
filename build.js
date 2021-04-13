@@ -10,6 +10,7 @@ const {pages, frontPage} = require('campl-ng/pages/content')
 const links = require('campl-ng/pages/links');
 const examples = require('campl-ng/pages/examples');
 const themes = require('./themes.json').themes
+const imageStyles = require('./images.json').images
 const siteName = 'CamPL-NG';
 
 const lorem = new LoremIpsum()
@@ -20,7 +21,7 @@ function lipsum(paragraphs) {
 
 examples.articles.populate().then(() => {
 
-    const context = {links, siteName, examples, menu: pages, themes, moment, lipsum}
+    const context = {links, siteName, examples, menu: pages, themes, moment, lipsum, imageStyles}
 
     pages.forEach(p => p.updateUrl())
 

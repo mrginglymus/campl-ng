@@ -1,0 +1,53 @@
+extends ../../templates/layout/page
+
+block content
+    h6 Unordered list
+    ul
+        li Unordered list
+        li list item 2
+        li list item 3
+    h6 Nested list
+    ul
+        li Unordered list
+        li
+            | list item 2
+            ul
+                li Unordered list
+                li
+                    | list item 2
+                    ul
+                        li Unordered list
+                        li
+                            | list item 2
+                            ul
+                                li Unordered list
+                                li list item 2
+                                li list item 3
+                        li list item 3
+                li list item 3
+        li list item 3
+    h6 Ordered list
+    ol
+        li Ordered list
+        li list item 2
+        li list item 3
+    h6 Uppercase Roman
+    ol(style='list-style-type: upper-roman;')
+        li Ordered list
+        li list item 2
+        li list item 3
+    h6 Lowercase Roman
+    ol(style='list-style-type: lower-roman;')
+        li Ordered list
+        li list item 2
+        li list item 3
+    h6 Uppercase alphabetical
+    ol(style='list-style-type: upper-alpha;')
+        li Ordered list
+        li list item 2
+        li list item 3
+    h6 Lowercase alphabetical
+    ol(style='list-style-type: lower-alpha;')
+        li Ordered list
+        li list item 2
+        li list item 3

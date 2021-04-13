@@ -11,7 +11,9 @@ module.exports = {
                 new Page('Links and Buttons', 'core_elements/links_and_buttons', {
                     scss: ['core_elements/_buttons.scss']
                 }),
-                new Page('Forms', 'core_elements/forms')
+                new Page('Forms', 'core_elements/forms'),
+                new Page('Lists', 'core_elements/lists'),
+                new Page('Images', 'core_elements/images'),
             ]
         })
     ],
