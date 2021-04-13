@@ -7,7 +7,7 @@ class Page {
     constructor(title, source = null, options = {}) {
         this.title = title;
         this.source = source;
-        this._url = `/${this.title.toLowerCase().replace(' ', '_')}`
+        this._url = `/${this.title.toLowerCase().replace(/ /g, '_')}`
         this.children = options.children || [];
         this.scss = options.scss || [];
         this.hasSideMenu = true

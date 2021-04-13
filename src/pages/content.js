@@ -7,6 +7,9 @@ module.exports = {
             children: [
                 new Page('Typography', 'core_elements/typography', {
                     scss: ['core_elements/_typography.scss', 'core_elements/_blockquote.scss']
+                }),
+                new Page('Links and Buttons', 'core_elements/links_and_buttons', {
+                    scss: ['core_elements/_buttons.scss']
                 })
             ]
         })
