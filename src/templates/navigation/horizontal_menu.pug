@@ -4,7 +4,7 @@ nav.navbar.navbar-local.container.hidden-sm-down
             li.nav-item
                 a.nav-link(href='/') Home
             for item in menu
-                if item.children
+                if item.children.length > 0
                     li.nav-item.dropdown(class=`${ (!page.isFrontPage && item.title===page.horizontalBreadcrumb[1][0]) ? 'active' : '' }`)
                         a.nav-link.dropdown-toggle(href='#' data-toggle='dropdown')= item.title
                         ul.dropdown-menu

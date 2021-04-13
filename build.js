@@ -13,14 +13,15 @@ const siteName = 'CamPL-NG';
 
 
 examples.articles.populate().then(() => {
-    function renderPage(page) {
-        const template = pug.compileFile(path.join('src', 'pages', `${page.source}.pug`));
-        const rendered = template({page, links, siteName, examples, menu: pages, themes, moment});
-        fs.writeFileSync(path.join('build', page.destination), rendered);
-    }
 
-    pages.forEach(renderPage);
+    const context = {links, siteName, examples, menu: pages, themes, moment}
 
-    renderPage(frontPage);
+    pages.forEach(p => p.updateUrl())
+
+    pages.forEach(p => p.updateBreadcrumbs(pages))
+
+    pages.forEach(p => p.render(context));
+
+    frontPage.render(context);
 })
 

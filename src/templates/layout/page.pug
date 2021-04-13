@@ -1,0 +1,14 @@
+extends ../base
+
+block body
+    header
+        include ../layout/header/global/header
+        include ../layout/header/local/header
+
+        block subtitle
+            div.local-header.subtitle
+            div.container
+                div(class=`${page.hasSideMenu ? 'col-md-9 offset-md-3' : 'col-md-12'}`)
+                    div.p-a-1
+                        h1= page.title
+
