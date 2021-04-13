@@ -1,8 +1,11 @@
 const {Page, FrontPage} = require('./page')
+const {randomImage} = require('./examples')
 
 module.exports = {
     pages: [
-        new Page('About', 'about'),
+        new Page('About', 'about', {
+            image: randomImage(590, 310)
+        }),
         new Page('Core Elements', null, {
             children: [
                 new Page('Typography', 'core_elements/typography', {

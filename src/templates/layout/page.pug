@@ -20,9 +20,9 @@ block body
         div.row
             include ../navigation/vertical_menu
             div.col-xs-12.main-content(class=`col-md-${contentColumns}`)
-                if image
+                if page.image
                     div.image-wrapper.image-wrapper-leading
-                        img(src=image)
+                        img(src=page.image)
                 block unwrapped_content
                     div.p-a-1
                         block content

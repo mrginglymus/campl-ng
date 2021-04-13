@@ -10,6 +10,7 @@ class Page {
         this._url = `/${this.title.toLowerCase().replace(/ /g, '_')}`
         this.children = options.children || [];
         this.scss = options.scss || [];
+        this.image = options.image || null;
         this.hasSideMenu = true
         this.isFrontPage = false
         this.horizontalBreadcrumb = [['Campl-NG', '/']]
