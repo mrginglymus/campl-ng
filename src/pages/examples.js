@@ -1,4 +1,8 @@
 const Parser = require('rss-parser');
+const {LoremIpsum,} = require('lorem-ipsum')
+
+const lorem = new LoremIpsum()
+lorem.format = 'html'
 
 class Articles {
 
@@ -110,10 +114,39 @@ const videos = {
     "4by3": "//www.youtube.com/embed/8-QNAwUdHUQ",
 }
 
+const navItems = [
+    {
+        'title': 'Active',
+        'id': 'tab1',
+        'disabled': false,
+        'active': true,
+        'content': lorem.generateParagraphs(2),
+    },
+    {
+        'title': 'Link',
+        'id': 'tab2',
+        'disabled': false,
+        'active': false,
+        'content': lorem.generateParagraphs(2),
+    },
+    {
+        'title': 'Another Link',
+        'id': 'tab3',
+        'disabled': false,
+        'active': false,
+        'content': lorem.generateParagraphs(2),
+    },
+    {
+        'title': 'Disabled',
+        'disabled': true
+    }
+]
+
 module.exports = {
     localFooterLinks,
     makeCarousel,
     articles,
     randomImage,
-    videos
+    videos,
+    navItems
 }

@@ -17,6 +17,17 @@ module.exports = {
                 new Page('Embedded Media', 'core_elements/embedded_media'),
                 new Page('Themes', 'core_elements/themes'),
             ]
+        }),
+        new Page('In Page Components', null, {
+            children: [
+                new Page('Navigation', null, {
+                    children: [
+                        new Page('Tabs', 'components/navigation/tabs', {scss: ['components/navigation/_nav.scss']}),
+                        new Page('Pills', 'components/navigation/pills', {scss: ['components/navigation/_nav.scss']}),
+                        new Page('Pills (Stacked)', 'components/navigation/pills_stacked', {scss: ['components/navigation/_nav.scss']}),
+                    ]
+                })
+            ]
         })
     ],
     frontPage: new FrontPage('Home', 'frontpage')
