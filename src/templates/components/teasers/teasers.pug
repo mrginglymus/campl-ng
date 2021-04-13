@@ -1,0 +1,23 @@
+include ./common
+
+mixin promoTeaser(article, image)
+    div.promo-teaser
+        h3.teaser-title
+            a(href=article.link)= article.title
+        div.teaser-image
+            a.image-wrapper.image-wrapper-promo
+                img(src=image, alt=article.title)
+        div.teaser-body
+            p.teaser-text= article.body
+            a.secondary-cta.teaser-link(href=article.href) Read more
+
+mixin horizontalTeaser(article, image, type)
+    div.teaser.horizontal-teaser
+        if image
+            div.teaser-image
+                +teaserImage(article, image, type)
+            div.teaser-body
+                +teaserBody(article, type)
+        else
+            div.teaser-body
+                +teaserBody(article, type)

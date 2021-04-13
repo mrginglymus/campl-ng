@@ -1,0 +1,14 @@
+mixin teaserImage(article, image, type)
+    a.image-wrapper.image-wrapper-square(href=article.link)
+        if type
+            span(class=`teaser-image-${type}`)
+        img(src=image)
+
+mixin teaserBody(article, type)
+    h3.teaser-title
+        a(href=article.link)= article.title
+    p= article.body
+    if type
+        a.secondary-cta(href=article.link) Read more
+    else
+        a.btn.btn-primary.btn-cta(href=article.link) Read more

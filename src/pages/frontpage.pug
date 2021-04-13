@@ -1,9 +1,13 @@
 extends ../templates/layout/frontpage
 
+include ../templates/components/teasers/teasers
+
 block unwrapped_content
     div.row
         div.col-md-8.teaser-list
-            //todo: teasers
+            +horizontalTeaser(examples.articles.randomArticle(), examples.randomImage(256))
+            +horizontalTeaser(examples.articles.randomArticle())
+            +horizontalTeaser(examples.articles.randomArticle(), examples.randomImage(256), 'video')
         div.col-md-4.teaser-list
             div.heading-container.heading-container-padding
                 h2.lite-heading Latest News

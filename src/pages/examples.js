@@ -17,7 +17,7 @@ class Articles {
         return {
             title: article.title,
             link: article.link,
-            body: article.contentSnippet,
+            body: article.contentSnippet.split('.')[0] + '.',
             date: new Date(article.pubDate)
         }
     }
@@ -108,5 +108,6 @@ function makeCarousel() {
 module.exports = {
     localFooterLinks,
     makeCarousel,
-    articles
+    articles,
+    randomImage
 }
