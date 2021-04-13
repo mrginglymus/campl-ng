@@ -1,5 +1,7 @@
 extends ../base
 
+include ./sidebar/related_links
+
 block body
     header
         include ../layout/header/global/header
@@ -7,8 +9,30 @@ block body
 
         block subtitle
             div.local-header.subtitle
-            div.container
-                div(class=`${page.hasSideMenu ? 'col-md-9 offset-md-3' : 'col-md-12'}`)
-                    div.p-a-1
-                        h1= page.title
+                div.container
+                    div(class=`${page.hasSideMenu ? 'col-md-9 offset-md-3' : 'col-md-12'}`)
+                        div.p-a-1
+                            h1= page.title
 
+        - let contentColumns = 9
+        - if (page.hasSideMenu) { contentColumns -= 3}
+    main.container
+        div.row
+            include ../navigation/vertical_menu
+            div.col-xs-12.main-content(class=`col-md-${contentColumns}`)
+                if image
+                    div.image-wrapper.image-wrapper-leading
+                        img(src=image)
+                block unwrapped_content
+                    div.p-a-1
+                        block content
+            div.col-md-3.col-xs-12.sidebar
+                div.p-a-1
+                    block sidebar_content
+                        if page.type==='page'
+                            div.heading-container
+                                h2.lite-heading Sources
+                            +relatedLinks(page.sourcesLinks)
+    footer
+        include ../layout/footer/local/footer
+        include ../layout/footer/global/footer

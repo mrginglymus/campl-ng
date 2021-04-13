@@ -2393,6 +2393,7 @@ __metadata:
     font-awesome: 4.7.0
     highlight.js: ^10.7.2
     js-cookie: 2.1.0
+    lorem-ipsum: ^2.0.3
     mini-css-extract-plugin: ^1.4.0
     moment: ^2.29.1
     node-sass-json-importer: ^4.3.0
@@ -2656,7 +2657,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:^2.20.0":
+"commander@npm:^2.17.1, commander@npm:^2.20.0":
   version: 2.20.3
   resolution: "commander@npm:2.20.3"
   checksum: b73428e97de7624323f81ba13f8ed9271de487017432d18b4da3f07cfc528ad754bbd199004bd5d14e0ccd67d1fdfe0ec8dbbd4c438b401df3c4cc387bfd1daa
@@ -5571,6 +5572,17 @@ fsevents@~2.3.1:
   version: 2.0.4
   resolution: "longest-streak@npm:2.0.4"
   checksum: ba5ebac14700c0a5f88a312be789b651c35bfed84bd5e2b4f04ac0898add697c36ede401d0b17dfaac0956171027b61ad49ad866ac949ae1d36f9e4ced60cbe1
+  languageName: node
+  linkType: hard
+
+"lorem-ipsum@npm:^2.0.3":
+  version: 2.0.3
+  resolution: "lorem-ipsum@npm:2.0.3"
+  dependencies:
+    commander: ^2.17.1
+  bin:
+    lorem-ipsum: dist/bin/lorem-ipsum.bin.js
+  checksum: 0b930e8f864c2c8f9f5168096e9b300756bc95d7f9c95a1ae83e3d978eab5e6452e496a7058b3bcf12b8966117e1c19de46d305ef6165d33aec4a647246c0ded
   languageName: node
   linkType: hard
 

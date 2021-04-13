@@ -49,6 +49,7 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-unicorn": "^29.0.0",
     "highlight.js": "^10.7.2",
+    "lorem-ipsum": "^2.0.3",
     "moment": "^2.29.1",
     "rss-parser": "^3.12.0",
     "stylelint": "^13.12.0",
