@@ -25,6 +25,8 @@ module.exports = {
                         new Page('Tabs', 'components/navigation/tabs', {scss: ['components/navigation/_nav.scss']}),
                         new Page('Pills', 'components/navigation/pills', {scss: ['components/navigation/_nav.scss']}),
                         new Page('Pills (Stacked)', 'components/navigation/pills_stacked', {scss: ['components/navigation/_nav.scss']}),
+                        new Page('Stages', 'components/navigation/stages', {scss: ['components/navigation/_nav.scss']}),
+                        new Page('Pagination', 'components/navigation/pagination', {scss: ['components/navigation/_pagination.scss']}),
                     ]
                 })
             ]
