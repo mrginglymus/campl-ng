@@ -9,7 +9,7 @@ mixin promoTeaser(article, image)
                 img(src=image, alt=article.title)
         div.teaser-body
             p.teaser-text= article.body
-            a.secondary-cta.teaser-link(href=article.href) Read more
+            a.secondary-cta.teaser-link(href=article.link) Read more
 
 mixin horizontalTeaser(article, image, type)
     div.teaser.horizontal-teaser
@@ -21,3 +21,49 @@ mixin horizontalTeaser(article, image, type)
         else
             div.teaser-body
                 +teaserBody(article, type)
+
+
+mixin verticalTeaser(article, image, type)
+    div.teaser.vertical-teaser
+        if image
+            div.teaser-image
+                +teaserImage(article, image, type)
+            div.teaser-body
+                +teaserBody(article, type)
+        else
+            div.teaser-body
+                +teaserBody(article, type)
+
+mixin newsTeaser(article)
+    div.news-teaser
+        h3.teaser-title
+            a(href=article.link)= article.title
+        span.teaser-date= moment(article.date).format('D MMMM YYYY')
+        p.teaser-text= article.body
+
+mixin focusOnTeaser(article, image)
+    div.focus-on-teaser
+        if image
+            div.teaser-image
+                a.image-wrapper.image-wrapper-focuson(href=article.link)
+                    img(src=image, alt=article.title)
+        div.teaser-body
+            h3.teaser-title
+                a(href=article.link)= article.title
+
+mixin taggedTeaser(article, image, tag)
+    div.teaser.wide-vertical-teaser
+        div.teaser-image
+            a.image-wrapper.image-wrapper-teaser-wide(href=article.link)
+                span.teaser-tag= tag
+                img(src=image, alt=article.title)
+        div.teaser-body
+            +teaserBody(article)
+
+mixin dateTeaser(article)
+    div.date-teaser
+        div.date-teaser-date
+            div.date-teaser-date-day= moment(article.date).format('DD')
+            div.date-teaser-date-month= moment(article.date).format('MMM')
+        div.date-teaser-text
+            a(href=article.link)= article.title.split(' ').slice(0, 5).join(' ')

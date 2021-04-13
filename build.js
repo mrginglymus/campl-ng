@@ -3,6 +3,7 @@
 const pug = require('pug');
 const path = require('path');
 const fs = require('fs')
+const moment = require('moment');
 
 const {pages, frontPage} = require('campl-ng/pages/content')
 const links = require('campl-ng/pages/links');
@@ -14,7 +15,7 @@ const siteName = 'CamPL-NG';
 examples.articles.populate().then(() => {
     function renderPage(page) {
         const template = pug.compileFile(path.join('src', 'pages', `${page.source}.pug`));
-        const rendered = template({page, links, siteName, examples, menu: pages, themes});
+        const rendered = template({page, links, siteName, examples, menu: pages, themes, moment});
         fs.writeFileSync(path.join('build', page.destination), rendered);
     }
 

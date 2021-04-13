@@ -2394,6 +2394,7 @@ __metadata:
     highlight.js: ^10.7.2
     js-cookie: 2.1.0
     mini-css-extract-plugin: ^1.4.0
+    moment: ^2.29.1
     node-sass-json-importer: ^4.3.0
     pug: ^3.0.2
     rss-parser: ^3.12.0
@@ -5995,7 +5996,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"moment@npm:>= 2.6.0, moment@npm:^2.10":
+"moment@npm:>= 2.6.0, moment@npm:^2.10, moment@npm:^2.29.1":
   version: 2.29.1
   resolution: "moment@npm:2.29.1"
   checksum: 86729013febf7160de5b93da69273dd304d674b0224f9544b3abd09a87671ddd2cdd57598261ce57588910d63747ffd5590965e83c790d8bf327083c0e0a06e0
