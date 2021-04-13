@@ -1,5 +1,6 @@
 const {Page, FrontPage} = require('./page')
 
-module.exports = [
-    new FrontPage('Home', 'frontpage')
-]
+module.exports = {
+    pages: [],
+    frontPage: new FrontPage('Home', 'frontpage')
+}

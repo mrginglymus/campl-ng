@@ -1,0 +1,10 @@
+li.nav-item.dropdown
+    a.nav-link.dropdown-toggle(href='#' data-toggle='dropdown') Theme Switcher
+    ul.dropdown-menu
+        for theme, colour in themes
+            li(style='text-transform: capitalize')
+                a.dropdown-item(href='#' data-toggle='theme' data-colour=colour)= colour
+        li
+            a.dropdown-item(href='#disco')
+                span.fa.fa-random &nbsp;
+                span Shuffle
