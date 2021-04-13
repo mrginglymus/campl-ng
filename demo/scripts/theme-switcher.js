@@ -11,7 +11,6 @@ function setTheme(theme) {
 
 const themes = [...document.querySelectorAll('a[data-toggle="theme"]')].map(a => a.dataset.colour);
 
-
 setTheme(Cookies.get('theme') || 'turquoise');
 
 document.querySelectorAll('a[data-toggle="theme"]').forEach($el => {
@@ -42,3 +41,8 @@ $discoButton.addEventListener('mouseup', e => {
     }
     e.preventDefault();
 })
+
+$('#theme_swatches').find(`a[href="#${Cookies.get('theme')}"]`).tab('show');
+$('#theme_swatches').find('a[data-toggle="pill"]').on('show.bs.tab', function () {
+    setTheme($(this).data('colour'));
+});

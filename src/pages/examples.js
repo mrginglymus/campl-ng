@@ -105,9 +105,15 @@ function makeCarousel() {
     ]
 }
 
+const videos = {
+    "16by9": "//www.youtube.com/embed/Nz8gqWsSpm8",
+    "4by3": "//www.youtube.com/embed/8-QNAwUdHUQ",
+}
+
 module.exports = {
     localFooterLinks,
     makeCarousel,
     articles,
-    randomImage
+    randomImage,
+    videos
 }

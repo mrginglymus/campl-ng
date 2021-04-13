@@ -1,0 +1,9 @@
+extends ../../templates/layout/page
+
+block content
+    h2 16 by 9
+    .embed-responsive.embed-responsive-16by9.m-b-1
+        iframe.embed-responsive-item(src=examples.videos['16by9'], frameborder='0', allowfullscreen='')
+    h2 4 by 3
+    .embed-responsive.embed-responsive-4by3
+        iframe.embed-responsive-item(src=examples.videos['4by3'], frameborder='0', allowfullscreen='')

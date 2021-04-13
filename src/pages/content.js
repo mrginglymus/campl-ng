@@ -14,6 +14,8 @@ module.exports = {
                 new Page('Forms', 'core_elements/forms'),
                 new Page('Lists', 'core_elements/lists'),
                 new Page('Images', 'core_elements/images'),
+                new Page('Embedded Media', 'core_elements/embedded_media'),
+                new Page('Themes', 'core_elements/themes'),
             ]
         })
     ],
