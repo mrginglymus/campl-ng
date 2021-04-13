@@ -10,7 +10,8 @@ module.exports = {
                 }),
                 new Page('Links and Buttons', 'core_elements/links_and_buttons', {
                     scss: ['core_elements/_buttons.scss']
-                })
+                }),
+                new Page('Forms', 'core_elements/forms')
             ]
         })
     ],

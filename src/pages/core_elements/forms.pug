@@ -1,0 +1,183 @@
+extends ../../templates/layout/page
+
+block content
+    form(action='')
+        legend Standard form elements
+        fieldset.form-group
+            label(for='input') Input
+            input#input.form-control(type='text' value='Basic input')
+        fieldset.form-group
+            label(for='textarea') Textarea
+            textarea#textarea.form-control(rows='3' cols='')
+        fieldset.form-group
+            label(for='select') Select
+            select#select.form-control
+                option 1
+                option 2
+                option 3
+                option 4
+                option 5
+        label Checkboxes
+        fieldset.form-group
+            .checkbox
+                label
+                    input(type='checkbox')
+                    |  Option one
+            .checkbox
+                label
+                    input(type='checkbox')
+                    |  Option two
+            .checkbox
+                label
+                    input(type='checkbox')
+                    |  Option three
+        label Inline Checkboxes
+        fieldset.form-group
+            .checkbox-inline
+                label
+                    input(type='checkbox')
+                    |  1
+            .checkbox-inline
+                label
+                    input(type='checkbox')
+                    |  2
+            .checkbox-inline
+                label
+                    input(type='checkbox')
+                    |  3
+        label Radio Buttons
+        fieldset.form-group
+            .radio-inline
+                label
+                    input(name='radio' type='radio')
+                    |  Option one
+            .radio-inline
+                label
+                    input(name='radio' type='radio')
+                    |  Option two
+        label Custom Radio Buttons
+        fieldset.form-group
+            |
+            |
+            .radio-inline.input-btn
+                input#cradioone(name='cradio' type='radio')
+                label.btn.btn-input(for='cradioone') Option one
+            |
+            |
+            .radio-inline.input-btn
+                input#cradiotwo(name='cradio' type='radio')
+                label.btn.btn-input(for='cradiotwo') Option two
+        label Custom Checkboxes
+        fieldset.form-group
+            |
+            |
+            .checkbox-inline.input-btn
+                input#ccheckone(name='ccheck' type='checkbox')
+                label.btn.btn-input(for='ccheckone') Option one
+            |
+            |
+            .checkbox-inline.input-btn
+                input#cchecktwo(name='ccheck' type='checkbox')
+                label.btn.btn-input(for='cchecktwo') Option two
+            |
+            |
+            .checkbox-inline.input-btn
+                input#ccheckthree(name='ccheck' type='checkbox')
+                label.btn.btn-input(for='ccheckthree') Option three
+        p.text-muted
+            | This is an example of guidance text to give supplementary information to the user about
+            | completion of the form.
+        button.btn.btn-secondary(type='button') Button
+        |
+        |
+        button.btn.btn-secondary(type='reset') Reset
+        |
+        |
+        button.btn.btn-secondary Cancel
+        |
+        |
+        button.btn.btn-primary.btn-cta(type='submit') Submit
+    form(action='')
+        legend Form field variants
+        fieldset.form-group
+            label(for='block-input') Block level input
+            input#block-input.form-control(type='text' value='Stretching to fill container')
+        .row
+            fieldset.form-group.col-xs-2
+                label(for='campl-input-mini') Input mini
+                input#campl-input-mini.form-control(type='text' value='Mini')
+        .row
+            fieldset.form-group.col-xs-3
+                label(for='campl-input-small') Input small
+                input#campl-input-small.form-control(type='text' value='Mini')
+        .row
+            fieldset.form-group.col-xs-4
+                label(for='campl-input-medium') Input medium
+                input#campl-input-medium.form-control(type='text' value='Mini')
+        .row
+            fieldset.form-group.col-xs-6
+                label(for='campl-input-large') Input large
+                input#campl-input-large.form-control(type='text' value='Mini')
+        .row
+            fieldset.form-group.col-xs-8
+                label(for='campl-input-xlarge') Input extra large
+                input#campl-input-xlarge.form-control(type='text' value='Mini')
+    form(action='')
+        legend Form field action states
+        fieldset.form-group
+            label(for='disabledInput') Disabled input
+            input#disabledInput.form-control(type='text' placeholder='Disabled input here…' disabled='')
+        label Disabled checkbox
+        fieldset.form-group
+            .checkbox
+                label
+                    input(type='checkbox' disabled='')
+                    |  This is a disabled checkbox
+        .form-group
+            label Uneditable input
+            .form-control Some value here
+        fieldset.form-group
+            label Uneditable textarea
+            textarea.form-control(disabled='')
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        fieldset.form-group
+            label(for='readinput') Disabled input
+            input#readinput.form-control(type='text' value='xyz' readonly='')
+        button.btn.btn-secondary(type='button' disabled='') Disabled Button
+    form(action='')
+        legend Form state Visual indicators
+        .form-group.has-warning
+            label.form-control-label(for='inputWarning') Input with warning
+            input#inputwarning.form-control(type='text')
+            span.help-block Something my have gone wrong
+        .form-group.has-warning
+            label.form-control-label Textarea
+            textarea.form-control
+        .form-group.has-warning
+            label.form-control-label Select
+            select.form-control
+                option 1
+                option 2
+                option 3
+                option 4
+                option 5
+        label Checkboxes
+        fieldset.form-group.has-warning
+            .checkbox
+                label
+                    input(type='checkbox')
+                    |  Option one
+        label Radio buttons
+        fieldset.form-group.has-warning
+            .radio
+                label
+                    input(type='radio')
+                    |  Option one
+        .form-group.has-error
+            label.form-control-label(for='inputWarning') Input with error
+            input#inputwarning.form-control(type='text')
+            span.help-block Please correct the error
+        .form-group.has-success
+            label.form-control-label(for='inputWarning') Input with success
+            input#inputwarning.form-control(type='text')
+            span.help-block This is a success message
