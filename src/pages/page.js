@@ -6,6 +6,10 @@ class Page {
         this.options = options
         this.isFrontPage = false
         this.horizontalBreadcrumb = [['Campl-NG', '/']]
+        this.verticalBreadcrumb = []
+        this.verticalBreadcrumbParent = null
+        this.verticalBreadcrumbChildren = null
+        this.verticalBreadcrumbSiblings = []
     }
 
     get destination() {
