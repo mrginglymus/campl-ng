@@ -30,7 +30,8 @@ module.exports = {
                         new Page('Pills (Stacked)', 'components/navigation/pills_stacked', {scss: ['components/navigation/_nav.scss']}),
                         new Page('Stages', 'components/navigation/stages', {scss: ['components/navigation/_nav.scss']}),
                         new Page('Pagination', 'components/navigation/pagination', {scss: ['components/navigation/_pagination.scss']}),
-                        new Page('A to Z', 'components/navigation/atoz', {scss: ['components/navigation/_atoz.scss'], hasSideMenu: false, hasSideBar: false}),
+                        new Page('A to Z', 'components/navigation/atoz', {scss: ['components/navigation/_atoz.scss'], hasSideMenu: false}),
+                        new Page('Search', 'components/navigation/search', {scss: ['components/navigation/_search.scss']}),
                     ]
                 })
             ]
