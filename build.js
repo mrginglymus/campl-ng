@@ -23,9 +23,13 @@ function randomSentence() {
     return lorem.generateSentences(1)
 }
 
+function randomWord() {
+    return lorem.generateWords(1)
+}
+
 examples.articles.populate().then(() => {
 
-    const context = {links, siteName, examples, menu: pages, themes, moment, lipsum, randomSentence, imageStyles}
+    const context = {links, siteName, examples, menu: pages, themes, moment, lipsum, randomSentence, randomWord, imageStyles}
 
     pages.forEach(p => p.updateUrl())
 

@@ -98,11 +98,11 @@ const localFooterLinks = [
     ]
 ]
 
-function makeCarousel() {
+function makeCarousel(width, height) {
     return [
-        [articles.randomArticle(), randomImage(885, 432)],
-        [articles.randomArticle(), randomImage(885, 432)],
-        [articles.randomArticle(), randomImage(885, 432)]
+        [articles.randomArticle(), randomImage(width, height)],
+        [articles.randomArticle(), randomImage(width, height)],
+        [articles.randomArticle(), randomImage(width, height)]
     ]
 }
 

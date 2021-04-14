@@ -6,6 +6,12 @@ module.exports = {
         new Page('About', 'about', {
             image: randomImage(590, 310)
         }),
+        new Page('Page Layouts', null, {
+            children: [
+                new Page('App', 'layout/app'),
+                new Page('Cambridge Front Page', 'layout/campage'),
+            ]
+        }),
         new Page('Core Elements', null, {
             children: [
                 new Page('Typography', 'core_elements/typography', {
