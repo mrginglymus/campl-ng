@@ -1,9 +1,5 @@
 /* eslint-env: node */
 
-const pug = require('pug');
-const path = require('path');
-const fs = require('fs')
-const {LoremIpsum} = require('lorem-ipsum')
 const moment = require('moment');
 
 const {pages, frontPage} = require('campl-ng/pages/content')
@@ -13,23 +9,19 @@ const themes = require('./themes.json').themes
 const imageStyles = require('./images.json').images
 const siteName = 'CamPL-NG';
 
-const lorem = new LoremIpsum()
 
-function lipsum(paragraphs) {
-    return lorem.generateParagraphs(paragraphs);
-}
-
-function randomSentence() {
-    return lorem.generateSentences(1)
-}
-
-function randomWord() {
-    return lorem.generateWords(1)
-}
 
 examples.articles.populate().then(() => {
 
-    const context = {links, siteName, examples, menu: pages, themes, moment, lipsum, randomSentence, randomWord, imageStyles}
+    const context = {
+        examples,
+        links,
+        siteName,
+        menu: pages,
+        themes,
+        moment,
+        imageStyles
+    }
 
     pages.forEach(p => p.updateUrl())
 

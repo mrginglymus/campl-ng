@@ -1,8 +1,8 @@
 const Parser = require('rss-parser');
 const {LoremIpsum,} = require('lorem-ipsum')
 
-const lorem = new LoremIpsum()
-lorem.format = 'html'
+const htmlLorem = new LoremIpsum()
+htmlLorem.format = 'html'
 
 class Articles {
 
@@ -117,21 +117,21 @@ const navItems = [
         'id': 'tab1',
         'disabled': false,
         'active': true,
-        'content': lorem.generateParagraphs(2),
+        'content': htmlLorem.generateParagraphs(2),
     },
     {
         'title': 'Link',
         'id': 'tab2',
         'disabled': false,
         'active': false,
-        'content': lorem.generateParagraphs(2),
+        'content': htmlLorem.generateParagraphs(2),
     },
     {
         'title': 'Another Link',
         'id': 'tab3',
         'disabled': false,
         'active': false,
-        'content': lorem.generateParagraphs(2),
+        'content': htmlLorem.generateParagraphs(2),
     },
     {
         'title': 'Disabled',
@@ -141,12 +141,26 @@ const navItems = [
 
 const aToZ = [...Array(26)].map(_ => String.fromCharCode(i++), i = 65).map(letter => ({
     letter,
-    content: Math.random() > 0.2 ? lorem.generateParagraphs(5) : null,
+    content: Math.random() > 0.2 ? htmlLorem.generateParagraphs(5) : null,
     active: false
 }))
 
-aToZ[0].content = lorem.generateParagraphs(5)
+aToZ[0].content = htmlLorem.generateParagraphs(5)
 aToZ[0].active = true
+
+const lorem = new LoremIpsum()
+
+function lipsum(paragraphs) {
+    return lorem.generateParagraphs(paragraphs);
+}
+
+function randomSentence() {
+    return lorem.generateSentences(1)
+}
+
+function randomWord() {
+    return lorem.generateWords(1)
+}
 
 module.exports = {
     localFooterLinks,
@@ -155,5 +169,8 @@ module.exports = {
     randomImage,
     videos,
     navItems,
-    aToZ
+    aToZ,
+    lipsum,
+    randomSentence,
+    randomWord
 }

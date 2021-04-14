@@ -5,15 +5,15 @@ include ../../../templates/components/alerts
 prepend unwrapped_content
     div.tab-content
         div.tab-pane.active#top_success(role='tabpanel')
-            +alertSuccess('Success', randomSentence(), true, false)
+            +alertSuccess('Success', examples.randomSentence(), true, false)
         div.tab-pane#top_danger(role='tabpanel')
-            +alertDanger('Danger', randomSentence(), true, false)
+            +alertDanger('Danger', examples.randomSentence(), true, false)
         div.tab-pane#top_warning(role='tabpanel')
-            +alertWarning('Warning', randomSentence(), true, false)
+            +alertWarning('Warning', examples.randomSentence(), true, false)
         div.tab-pane#top_info(role='tabpanel')
-            +alertInfo('Information', randomSentence(), true, false)
+            +alertInfo('Information', examples.randomSentence(), true, false)
         div.tab-pane#top_dismissable(role='tabpanel')
-            +alertSuccess('Success', randomSentence(), true, true)
+            +alertSuccess('Success', examples.randomSentence(), true, true)
 
 block content
     div.clearfix.p-y-1
@@ -34,12 +34,12 @@ block content
 
     div.tab-content
         div.tab-pane.active#success(role='tabpanel')
-            +alertSuccess('Success', randomSentence(), false, false)
+            +alertSuccess('Success', examples.randomSentence(), false, false)
         div.tab-pane#danger(role='tabpanel')
-            +alertDanger('Danger', randomSentence(), false, false)
+            +alertDanger('Danger', examples.randomSentence(), false, false)
         div.tab-pane#warning(role='tabpanel')
-            +alertWarning('Warning', randomSentence(), false, false)
+            +alertWarning('Warning', examples.randomSentence(), false, false)
         div.tab-pane#info(role='tabpanel')
-            +alertInfo('Information', randomSentence(), false, false)
+            +alertInfo('Information', examples.randomSentence(), false, false)
         div.tab-pane#dismissable(role='tabpanel')
-            +alertSuccess('Success', randomSentence(), false, true)
+            +alertSuccess('Success', examples.randomSentence(), false, true)
