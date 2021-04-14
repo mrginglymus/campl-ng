@@ -1,0 +1,45 @@
+extends ../../../templates/layout/page
+
+include ../../../templates/components/alerts
+
+prepend unwrapped_content
+    div.tab-content
+        div.tab-pane.active#top_success(role='tabpanel')
+            +alertSuccess('Success', randomSentence(), true, false)
+        div.tab-pane#top_danger(role='tabpanel')
+            +alertDanger('Danger', randomSentence(), true, false)
+        div.tab-pane#top_warning(role='tabpanel')
+            +alertWarning('Warning', randomSentence(), true, false)
+        div.tab-pane#top_info(role='tabpanel')
+            +alertInfo('Information', randomSentence(), true, false)
+        div.tab-pane#top_dismissable(role='tabpanel')
+            +alertSuccess('Success', randomSentence(), true, true)
+
+block content
+    div.clearfix.p-y-1
+        ul.nav.nav-pills(role='tablist')
+            li.nav-item: a.nav-link.active(href='#top_success', role='tab', data-toggle='tab') Success
+            li.nav-item: a.nav-link(href='#top_danger', role='tab', data-toggle='tab') Danger
+            li.nav-item: a.nav-link(href='#top_warning', role='tab', data-toggle='tab') Warning
+            li.nav-item: a.nav-link(href='#top_info', role='tab', data-toggle='tab') Info
+            li.nav-item: a.nav-link(href='#top_dismissable', role='tab', data-toggle='tab') Dismissable
+
+    div.clearfix.p-y-1
+        ul.nav.nav-pills(role='tablist')
+            li.nav-item: a.nav-link.active(href='#success', role='tab', data-toggle='tab') Success
+            li.nav-item: a.nav-link(href='#danger', role='tab', data-toggle='tab') Danger
+            li.nav-item: a.nav-link(href='#warning', role='tab', data-toggle='tab') Warning
+            li.nav-item: a.nav-link(href='#info', role='tab', data-toggle='tab') Info
+            li.nav-item: a.nav-link(href='#dismissable', role='tab', data-toggle='tab') Dismissable
+
+    div.tab-content
+        div.tab-pane.active#success(role='tabpanel')
+            +alertSuccess('Success', randomSentence(), false, false)
+        div.tab-pane#danger(role='tabpanel')
+            +alertDanger('Danger', randomSentence(), false, false)
+        div.tab-pane#warning(role='tabpanel')
+            +alertWarning('Warning', randomSentence(), false, false)
+        div.tab-pane#info(role='tabpanel')
+            +alertInfo('Information', randomSentence(), false, false)
+        div.tab-pane#dismissable(role='tabpanel')
+            +alertSuccess('Success', randomSentence(), false, true)

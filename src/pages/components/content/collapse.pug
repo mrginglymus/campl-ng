@@ -1,0 +1,25 @@
+extends ../../../templates/layout/page
+
+block content
+    table.table.table-bordered.table-underscored
+        thead
+            tr
+                th Column 1
+                th(style='width:33%;') Column 2
+        tbody
+            tr.collapsed(data-toggle='collapse' data-target='#row1')
+                td
+                    span.fa.fa-fw.fa-lg.text-muted.collapse-icon
+                    | Click for more info
+                    div#row1.collapse
+                        div.p-a-1
+                            p Some content
+                td Another cell
+            tr.collapsed(data-toggle='collapse' data-target='#row2')
+                td
+                    span.fa.fa-fw.fa-lg.text-muted.collapse-icon
+                    | Click for more info
+                    div#row2.collapse
+                        div.p-a-1
+                            p Some content
+                td Another cell

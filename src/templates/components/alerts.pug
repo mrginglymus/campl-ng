@@ -1,0 +1,21 @@
+mixin alert(title, message, type, icon, top, dismissable)
+    div.alert(role='alert', class=`alert-${type} ${top ? 'alert-top' : ''} ${dismissable ? 'alert-dismissable fade in' : ''}`)
+        if dismissable
+            div.close.pull-xs-right(data-dismiss='alert') &nbsp;
+        div.row
+            div.col-md-4.alert-title
+                span.fa(class=`fa-${icon}`)
+                span= title
+            div.col-md-8=message
+
+mixin alertSuccess(title, message, top, dismissable)
+    +alert(title, message, 'success', 'check-circle', top, dismissable)
+
+mixin alertWarning(title, message, top, dismissable)
+    +alert(title, message, 'warning', 'exclamation-triangle', top, dismissable)
+
+mixin alertDanger(title, message, top, dismissable)
+    +alert(title, message, 'danger', 'exclamation-circle', top, dismissable)
+
+mixin alertInfo(title, message, top, dismissable)
+    +alert(title, message, 'info', 'info-circle', top, dismissable)

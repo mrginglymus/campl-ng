@@ -33,6 +33,13 @@ module.exports = {
                         new Page('A to Z', 'components/navigation/atoz', {scss: ['components/navigation/_atoz.scss'], hasSideMenu: false}),
                         new Page('Search', 'components/navigation/search', {scss: ['components/navigation/_search.scss']}),
                     ]
+                }),
+                new Page('Content', null, {
+                    children: [
+                        new Page('Tables', 'components/content/tables', {scss: ['core_elements/_tables.scss']}),
+                        new Page('Collapse', 'components/content/collapse', {scss: ['core_elements/_collapse.scss']}),
+                        new Page('Alerts', 'components/content/alerts', {scss: ['core_elements/_alerts.scss']}),
+                    ]
                 })
             ]
         })

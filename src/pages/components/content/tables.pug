@@ -1,0 +1,87 @@
+extends ../../../templates/layout/page
+
+block content
+    script(type="text/javascript")
+        | jQuery(function ($) {
+        |   $('input[name="tabletoggle"]').change(function () {
+        |     $('#table').toggleClass($(this).val());
+        |    });
+        |  });
+
+    fieldset.form-group
+        .checkbox-inline.input-btn
+            input#tabletoggleborder(name='tabletoggle' type='checkbox' value='table-bordered')
+            label.btn.btn-input(for='tabletoggleborder') Bordered
+        |
+        |
+        .checkbox-inline.input-btn
+            input#tabletogglestripe(name='tabletoggle' type='checkbox' value='table-striped')
+            label.btn.btn-input(for='tabletogglestripe') Striped
+        |
+        |
+        .checkbox-inline.input-btn
+            input#tabletoggleunderscore(name='tabletoggle' type='checkbox' value='table-underscored')
+            label.btn.btn-input(for='tabletoggleunderscore') Underscored
+        |
+        |
+        .checkbox-inline.input-btn
+            input#tabletogglehover(name='tabletoggle' type='checkbox' value='table-hover')
+            label.btn.btn-input(for='tabletogglehover') Hover
+    table#table.table
+        thead
+            tr
+                th Title
+                th Salary
+                th Reference
+                th Closes
+        tbody
+            tr
+                th(scope='row')
+                    a(href='http://www.jobs.cam.ac.uk/job/531/' target='_blank')
+                        | Associate Specialty Director in Palliative
+                        | Care
+                    br
+                    | Department of Public Health and Primary Care, The Primary Care Unit
+                td &pound;30,992-&pound;53,663 pa
+                td SN00445
+                td 27 August 2012
+            tr
+                th(scope='row')
+                    a(href='http://www.jobs.cam.ac.uk/job/154/' target='_blank')
+                        | Clinical Lecturer in
+                        | Anaesthesia
+                    br
+                    | Department of Medicine, Division of Anaesthesia
+                td &pound;30,992-&pound;53,663 pa
+                td RU00119
+                td 20 August 2012
+            tr
+                th(scope='row')
+                    a(href='http://www.jobs.cam.ac.uk/job/507/' target='_blank')
+                        | Clinical Lecturer in Medical Genetics or
+                        | Public Health
+                    br
+                    | Department of Public Health and Primary Care, The Primary Care Unit
+                td &pound;30,992-&pound;53,663 pa
+                td SN00423
+                td 27 August 2012
+            tr
+                th(scope='row')
+                    a(href='http://www.jobs.cam.ac.uk/job/170/' target='_blank')
+                        | Clinical Lecturer in Medical
+                        | Oncology
+                    br
+                    | Department of Oncology
+                td &pound;30,992-&pound;53,663 pa
+                td RD00131
+                td 5 October 2012
+            tr
+                th(scope='row')
+                    a(href='http://www.jobs.cam.ac.uk/job/-16982/' target='_blank')
+                        | Lecturer in
+                        | Criminology
+                    br
+                    | Institute of Criminology
+                td &pound;37,012-&pound;46,846 pa
+                td JL16982
+                td 31 July 2012

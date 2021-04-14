@@ -19,9 +19,13 @@ function lipsum(paragraphs) {
     return lorem.generateParagraphs(paragraphs);
 }
 
+function randomSentence() {
+    return lorem.generateSentences(1)
+}
+
 examples.articles.populate().then(() => {
 
-    const context = {links, siteName, examples, menu: pages, themes, moment, lipsum, imageStyles}
+    const context = {links, siteName, examples, menu: pages, themes, moment, lipsum, randomSentence, imageStyles}
 
     pages.forEach(p => p.updateUrl())
 
