@@ -45,7 +45,7 @@ module.exports = {
                 }),
                 new Page('Teasers', 'components/teasers/teasers', {
                     children: [
-
+                        new Page('Teaser Examples', 'components/teasers/examples', {hasSideMenu: false})
                     ]
                 })
             ]
