@@ -5,13 +5,22 @@ const path = require('path');
 
 class Page {
     constructor(title, source = null, options = {}) {
+        options = {
+            children: [],
+            scss: [],
+            image: null,
+            hasSideMenu: true,
+            hasSideBar: true,
+            ...options
+        }
+
         this.title = title;
         this.source = source;
         this._url = `/${this.title.toLowerCase().replace(/ /g, '_')}`
-        this.children = options.children || [];
-        this.scss = options.scss || [];
-        this.image = options.image || null;
-        this.hasSideMenu = true
+        this.children = options.children;
+        this.scss = options.scss;
+        this.image = options.image;
+        this.hasSideMenu = options.hasSideMenu
         this.isFrontPage = false
         this.horizontalBreadcrumb = [['Campl-NG', '/']]
         this.verticalBreadcrumb = []

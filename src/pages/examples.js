@@ -139,11 +139,21 @@ const navItems = [
     }
 ]
 
+const aToZ = [...Array(26)].map(_ => String.fromCharCode(i++), i = 65).map(letter => ({
+    letter,
+    content: Math.random() > 0.2 ? lorem.generateParagraphs(5) : null,
+    active: false
+}))
+
+aToZ[0].content = lorem.generateParagraphs(5)
+aToZ[0].active = true
+
 module.exports = {
     localFooterLinks,
     makeCarousel,
     articles,
     randomImage,
     videos,
-    navItems
+    navItems,
+    aToZ
 }
