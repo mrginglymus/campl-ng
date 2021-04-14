@@ -10,7 +10,7 @@
     margin-right: 15px;
   }
 
-  input {
+  .form-control, .form-control:focus {
     background-color: #343434;
     color: $white;
     font-family: $font-family-sans-serif;
@@ -18,7 +18,7 @@
     padding: 7px 8px;
   }
 
-  .input-group-addon {
+  .input-group-append .btn {
     background-color: #434343;
     border: 0;
     color: #a3a3a3;
