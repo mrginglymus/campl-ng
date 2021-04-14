@@ -11,7 +11,7 @@ block body
             div.local-header.subtitle
                 div.container
                     div(class=`${page.hasSideMenu ? 'col-md-9 offset-md-3' : 'col-md-12'}`)
-                        div.p-a-1
+                        div.p-3
                             h1= page.title
 
         - let contentColumns = 9
@@ -24,10 +24,10 @@ block body
                     div.image-wrapper.image-wrapper-leading
                         img(src=page.image)
                 block unwrapped_content
-                    div.p-a-1
+                    div.p-3
                         block content
             div.col-md-3.col-xs-12.sidebar
-                div.p-a-1
+                div.p-3
                     block sidebar_content
                         if page.type==='page'
                             div.heading-container
