@@ -1,4 +1,4 @@
-div#vertical-menu.vertical-menu.vertical-menu-inset.collapse(class=`${page.hasSideMenu ? 'navbar-toggleable-sm' : 'hidden-md-up'}`)
+div#vertical-menu.vertical-menu.vertical-menu-inset.collapse(class=`${page.hasSideMenu ? 'navbar-toggleable-sm' : 'd-md-none'}`)
     ul.nav.nav-pills.nav-stacked.nav-side.vertical-menu-ancestors
         for item in page.verticalBreadcrumb
             li.nav-item

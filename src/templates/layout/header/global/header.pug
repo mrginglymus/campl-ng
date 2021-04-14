@@ -23,9 +23,9 @@ nav.navbar.global-header
     div.container
         div.row
             div.col-md-8.col-xs-12
-                a.global-menu-button.pull-xs-left.hidden-md-up(href="#sidebar-offcanvas", data-toggle="offcanvas")
+                a.global-menu-button.pull-xs-left.d-md-none(href="#sidebar-offcanvas", data-toggle="offcanvas")
                     span.fa.fa-bars.fa-2x
-                a.global-menu-button.pull-xs-right.hidden-md-up(href="#global-search-drawer", data-toggle="collapse")
+                a.global-menu-button.pull-xs-right.d-md-none(href="#global-search-drawer", data-toggle="collapse")
                     span.fa.fa-search.fa-2x
                 unless CAM_PAGE
                     a.navbar-brand(href="http://www.cam.ac.uk")
@@ -58,7 +58,7 @@ div#global-header-drawers.collapse
     div.tab-content.global-header-drawer.sidebar-offcanvas
         +globalHeaderDrawer('study', links.studyDrawer)
         +globalHeaderDrawer('about', links.aboutDrawer)
-        .hidden-md-up
+        .d-md-none
             ul.global-header-offcanvas-quicklinks.global-header-list
                 li
                     a(href='http://www.cam.ac.uk/research') Research at Cambridge

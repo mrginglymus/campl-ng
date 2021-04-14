@@ -9,7 +9,7 @@ mixin atoz(content)
                                 a.nav-link(href=`#atoz_${item.letter}`, role='tab', data-toggle='tab', class=`${item.active ? 'active' : ''}`)= item.letter
                             else
                                 span= item.letter
-            div.hidden-md-up
+            div.d-md-none
                 select.form-control(data-toggle='tab')
                     for item in content
                         if item.content
