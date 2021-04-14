@@ -4,7 +4,7 @@ include ../../../templates/components/navigation/nav
 include ../../../templates/components/navigation/tabs
 
 prepend unwrapped_content
-    div.p-x-1
+    div.px-3
         +navStages(examples.navItems.filter(i => !i.disabled), true)
 
 block content
