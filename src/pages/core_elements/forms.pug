@@ -146,38 +146,36 @@ block content
         button.btn.btn-secondary(type='button' disabled='') Disabled Button
     form(action='')
         legend Form state Visual indicators
-        .form-group.has-warning
+        .form-group
             label.form-control-label(for='inputWarning') Input with warning
-            input#inputwarning.form-control(type='text')
-            span.help-block Something my have gone wrong
-        .form-group.has-warning
+            input#inputwarning.form-control.is-invalid(type='text')
+            span.invalid-feedback Something my have gone wrong
+        .form-group
             label.form-control-label Textarea
-            textarea.form-control
-        .form-group.has-warning
+            textarea.form-control.is-invalid
+        .form-group
             label.form-control-label Select
-            select.form-control
+            select.form-control.is-invalid
                 option 1
                 option 2
                 option 3
                 option 4
                 option 5
         label Checkboxes
-        fieldset.form-group.has-warning
-            .checkbox
-                label
-                    input(type='checkbox')
-                    |  Option one
+        fieldset.form-group
+            .form-check
+                input(type='checkbox').form-check-input.is-invalid
+                label.form-check-label Option one
         label Radio buttons
-        fieldset.form-group.has-warning
-            .radio
-                label
-                    input(type='radio')
-                    |  Option one
-        .form-group.has-error
+        fieldset.form-group.is-invalid
+            .form-check
+                input(type='radio').is-invalid.form-check-input
+                label.form-check-label Option one
+        .form-group
             label.form-control-label(for='inputWarning') Input with error
-            input#inputwarning.form-control(type='text')
-            span.help-block Please correct the error
-        .form-group.has-success
+            input#inputinvalid.form-control(type='text').is-invalid
+            span.invalid-feedback Please correct the error
+        .form-group
             label.form-control-label(for='inputWarning') Input with success
-            input#inputwarning.form-control(type='text')
-            span.help-block This is a success message
+            input#inputvalid.form-control(type='text').is-valid
+            span.valid-feedback This is a success message
