@@ -32,6 +32,12 @@
   }
 }
 
+.btn-secondary {
+  color: $btn-secondary-color;
+  background-color: $btn-secondary-bg;
+  border-color: $btn-secondary-border;
+}
+
 .secondary-cta {
   background: url("../images/secondary-cta-chevron.png") no-repeat 100% 50%;
   padding-right: 10px;
