@@ -4,6 +4,6 @@ import './menu';
 import './object-fit';
 import './select-tab';
 
-window.Tether = require('tether');
+window.popper = require('popper.js');
 
 require('bootstrap')

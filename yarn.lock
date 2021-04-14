@@ -2176,13 +2176,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bootstrap@github:twbs/bootstrap#commit=3de570a8e58e6e56d16e88ed27120283e593b87f":
-  version: 4.0.0-alpha.2
-  resolution: "bootstrap@https://github.com/twbs/bootstrap.git#commit=3de570a8e58e6e56d16e88ed27120283e593b87f"
-  dependencies:
-    jquery: 1.9.1 - 2
-    tether: ^1.1.1
-  checksum: a7ce37acde100e929e1d02f7a5b962e1d56c20c3e1f13d9f86b796e371589fac0a25e0171855056d6629e94b72015c9476204c2cecf813c16e928233d81f0d02
+"bootstrap@npm:4.6.0":
+  version: 4.6.0
+  resolution: "bootstrap@npm:4.6.0"
+  peerDependencies:
+    jquery: 1.9.1 - 3
+    popper.js: ^1.16.1
+  checksum: 66019b6969b997eb3bcec7276010263df643b2607db00dbbd13f451d6f6d57fa5b563cd9712a4814024e5489faf5e2d73c553a1ebea1b61d0e1ab766e4805229
   languageName: node
   linkType: hard
 
@@ -2377,7 +2377,7 @@ __metadata:
     "@babel/preset-env": ^7.13.12
     "@fontsource/open-sans": ^4.2.2
     babel-loader: ^8.2.2
-    bootstrap: "github:twbs/bootstrap#commit=3de570a8e58e6e56d16e88ed27120283e593b87f"
+    bootstrap: 4.6.0
     campl-ng: "link:src"
     campl-ng-demo: "link:demo"
     case-sensitive-paths-webpack-plugin: ^2.4.0
@@ -2397,12 +2397,12 @@ __metadata:
     mini-css-extract-plugin: ^1.4.0
     moment: ^2.29.1
     node-sass-json-importer: ^4.3.0
+    popper.js: 1.16.1
     pug: ^3.0.2
     rss-parser: ^3.12.0
     sass: ^1.32.8
     sass-loader: ^11.0.1
     stylelint: ^13.12.0
-    tether: 1.4.7
     webpack: ^5.30.0
     webpack-bundle-analyzer: ^4.4.0
     webpack-cli: ^4.6.0
@@ -5244,7 +5244,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"jquery@npm:1.9.1 - 2, jquery@npm:^1.8.3 || ^2.0":
+"jquery@npm:^1.8.3 || ^2.0":
   version: 2.2.4
   resolution: "jquery@npm:2.2.4"
   checksum: ea9064a4e0697b1e03ee273602ef05a6b97c2ded0da57a290702b2ddb46c98442bb18b12beea0a645834c804e005feac5016c19e181b4648aea3ca4187627925
@@ -6761,6 +6761,13 @@ fsevents@~2.3.1:
   version: 8.0.0
   resolution: "pluralize@npm:8.0.0"
   checksum: 5251b470a0c8e5181ac7e1d61028553f90cb2c85c34b8e468cea269ae715499524546c2c3681029ef5697d86c54bfb12e49388f5cc6082051e84f5888588f4ec
+  languageName: node
+  linkType: hard
+
+"popper.js@npm:1.16.1":
+  version: 1.16.1
+  resolution: "popper.js@npm:1.16.1"
+  checksum: eb53806fb7680e31c7d1db096f95438a40a7cb869f7ee0e27100c0860f11583a0d322606c6073618e7fe8865f834ec36482901b547256d9a0cf2b22434bca75d
   languageName: node
   linkType: hard
 
@@ -8557,13 +8564,6 @@ fsevents@~2.3.1:
   bin:
     terser: bin/terser
   checksum: 55348dd25452f0a1690040f943a890dc3e33b8711b1c0592ef1114b2eca51d6ec8db8f8f769f1483b088575c07f44b7e92b3dda5f430ff6fa8c2ebd461db26f9
-  languageName: node
-  linkType: hard
-
-"tether@npm:1.4.7, tether@npm:^1.1.1":
-  version: 1.4.7
-  resolution: "tether@npm:1.4.7"
-  checksum: c60d742a0626dca753771526d3f977bfd19e20674557a5f56fc5c5adf828ed10ac294d609c400e2916eea30b48b1c67c71138103e020125a48ea5f0c56254493
   languageName: node
   linkType: hard
 
