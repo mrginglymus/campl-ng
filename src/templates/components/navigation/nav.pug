@@ -1,6 +1,6 @@
 mixin _nav(items, type, dataToggle, stacked, local, extraClasses)
     div(class=`nav-${type}-wrapper`)
-        ul.nav(class=`nav-${type}${stacked ? ' nav-stacked' : ''} ${extraClasses}`, role='tablist')
+        ul.nav(class=`nav-${type}${stacked ? ' nav-stacked' : ''} ${extraClasses ? extraClasses : ''}`, role='tablist')
             for item in items
                 li.nav-item
                     if item.disabled
@@ -16,7 +16,7 @@ mixin navPills(items, local)
     +_nav(items, 'pills', 'pill', false, local)
 
 mixin navPillsStacked(items, local)
-    +_nav(items, 'pills', 'pill', true, local)
+    +_nav(items, 'pills', 'pill', true, local, 'flex-column px-2')
 
 mixin navStages(items, local)
     +_nav(items, 'stages', 'pill', false, local, 'nav-pills')

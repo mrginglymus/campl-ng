@@ -4,8 +4,8 @@ include ../../../templates/components/navigation/nav
 include ../../../templates/components/navigation/tabs
 
 block content
-    div.clearfix
-        +navPillsStacked(examples.navItems, true)
-
-    div.pt-3
-        +tabs(examples.navItems)
+    div.row
+        div.col-md-3
+            +navPillsStacked(examples.navItems, true)
+        div.col-md-9
+            +tabs(examples.navItems)
