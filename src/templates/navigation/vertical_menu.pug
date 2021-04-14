@@ -1,5 +1,5 @@
-div#vertical-menu.vertical-menu.vertical-menu-inset.collapse(class=`${page.hasSideMenu ? 'navbar-toggleable-sm' : 'd-md-none'}`)
-    ul.nav.nav-pills.nav-stacked.nav-side.vertical-menu-ancestors
+div#vertical-menu.vertical-menu.vertical-menu-inset(class=`${page.hasSideMenu ? 'navbar-toggleable-sm' : 'd-md-none'}`)
+    ul.nav.nav-pills.flex-column.nav-side.vertical-menu-ancestors
         for item in page.verticalBreadcrumb
             li.nav-item
                 a.nav-link(href=item[1])= item[0]
