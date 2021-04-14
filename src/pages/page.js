@@ -30,10 +30,21 @@ class Page {
         this.type = 'page'
     }
 
+    getTemplate() {
+        return path.join('src', 'pages', `${this.source}.pug`)
+    }
+
+    getContext(context) {
+        return {
+            ...context,
+            page: this
+        }
+    }
+
     render(context) {
         if (this.source) {
-            const template = pug.compileFile(path.join('src', 'pages', `${this.source}.pug`));
-            const rendered = template({...context, page: this});
+            const template = pug.compileFile(this.getTemplate());
+            const rendered = template(this.getContext(context));
             fs.mkdirSync(path.join('build', path.dirname(this.destination)), {recursive: true})
             fs.writeFileSync(path.join('build', this.destination), rendered);
         }
@@ -132,7 +143,26 @@ class FrontPage extends Page {
     }
 }
 
+class ScssPage extends Page {
+    constructor(title, source = null, children = []) {
+        super(title, source, children);
+        this.type = 'scss';
+    }
+
+    getTemplate() {
+        return path.join('demo', 'templates', 'stylesheet.pug');
+    }
+
+    getContext(context) {
+        return {
+            ...super.getContext(context),
+            scss: fs.readFileSync(this.source)
+        };
+    }
+}
+
 module.exports = {
     FrontPage,
-    Page
+    Page,
+    ScssPage
 }

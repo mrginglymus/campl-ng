@@ -1,5 +1,20 @@
-const {Page, FrontPage} = require('./page')
+const path = require('path');
+const fs = require('fs');
+
+const {Page, FrontPage, ScssPage} = require('./page')
 const {randomImage} = require('./examples')
+
+function* getPages(dir, extension, ctor) {
+    const list = fs.readdirSync(dir)
+    for (const item of list) {
+        const stat = fs.statSync(path.join(dir, item))
+        if (stat.isDirectory()) {
+            yield new ctor(item, null, {children: [...getPages(path.join(dir, item), extension, ctor)]})
+        } else if (item.endsWith(extension)) {
+            yield new ctor(item, path.join(dir, item))
+        }
+    }
+}
 
 module.exports = {
     pages: [
@@ -55,6 +70,9 @@ module.exports = {
                     ]
                 })
             ]
+        }),
+        new Page('Stylesheets', null, {
+            children: [...getPages(path.join('src', 'styles'), '.scss', ScssPage)]
         })
     ],
     frontPage: new FrontPage('Home', 'frontpage')
