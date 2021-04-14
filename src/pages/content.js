@@ -42,6 +42,11 @@ module.exports = {
                         new Page('Well', 'components/content/well', {scss: ['core_elements/_well.scss']}),
                         new Page('Date Time Picker', 'components/content/date_time_picker'),
                     ]
+                }),
+                new Page('Teasers', 'components/teasers/teasers', {
+                    children: [
+
+                    ]
                 })
             ]
         })

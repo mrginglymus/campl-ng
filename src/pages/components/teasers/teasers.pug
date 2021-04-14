@@ -1,0 +1,139 @@
+extends ../../../templates/layout/page
+
+block content
+    - const article = examples.articles.randomArticle()
+    - const image = examples.randomImage(400, 400)
+
+    script(type='text/javascript').
+        jQuery(function($) {
+            var te = $("#teaser-example");
+            var tm = $('#teaser-media');
+            $('#tag').keyup(function() {
+                if ($(this).val()) {
+                    te.find('.teaser-tag').show().html($(this).val());
+                } else {
+                    te.find('.teaser-tag').hide();
+                }
+            });
+            $('[name="teasertype"]').change(function() {
+                te.find('.teaser-image a').removeClass().addClass('image-wrapper').addClass($(this).data('image-style'));
+                te.parent().css('max-width', $(this).data('max-width'));
+                var teaser_type = $(this).val();
+                te.removeClass().addClass(teaser_type);
+                if (teaser_type !== 'focus-on-teaser') {
+                    $('.teaser-text').show();
+                } else {
+                    $('.teaser-text').hide();
+                }
+                if (teaser_type !== 'promo-teaser') {
+                    $('.teaser-title.over').hide();
+                    $('.teaser-title.under').show();
+                    te.css('border', '');
+                } else {
+                    $('.teaser-title.under').hide();
+                    $('.teaser-title.over').show();
+                    te.css('border', '20px solid #f3f3f3');
+                }
+                if (teaser_type !== 'news-teaser') {
+                    $('.teaser-date').hide();
+                    tm.show();
+                    $('.teaser-tag').css('visibility', 'visible');
+                } else {
+                    $('.teaser-date').show();
+                    tm.hide();
+                    $('.teaser-tag').css('visibility', 'hidden');
+                }
+                if (teaser_type !== 'news-teaser' && teaser_type !== 'focus-on-teaser') {
+                    $('#teaser-example-link').show();
+                } else {
+                    $('#teaser-example-link').hide();
+                }
+            });
+            $('[name="linktype"]').change(function() {
+                $('#teaser-example-link').removeClass().addClass($(this).val()).addClass('teaser-link');
+            });
+            $('[name="mediatype"]').change(function() {
+                tm.removeClass();
+                if ($(this).val()) {
+                    tm.addClass($(this).val());
+                }
+            });
+        });
+    h2 Teaser Builder
+    .form-group.row
+        label.col-sm-2.form-control-label Teaser:
+        .col-sm-10
+            .radio-inline.input-btn
+                input#vertical-teaser(name='teasertype' type='radio' value='teaser vertical-teaser' checked='' data-image-style='image-wrapper-square' data-max-width='300px')
+                label.btn.btn-input(for='vertical-teaser') Vertical Teaser
+            |
+            |
+            .radio-inline.input-btn
+                input#horizontal-teaser(name='teasertype' type='radio' value='teaser horizontal-teaser' data-image-style='image-wrapper-square' data-max-width='450px')
+                label.btn.btn-input(for='horizontal-teaser') Horizontal Teaser
+            |
+            |
+            .radio-inline.input-btn
+                input#wide-vertical-teaser(name='teasertype' type='radio' value='teaser wide-vertical-teaser' data-image-style='image-wrapper-teaser-wide' data-max-width='375px')
+                label.btn.btn-input(for='wide-vertical-teaser') Wide Vertical Teaser
+            |
+            |
+            .radio-inline.input-btn
+                input#focus-on-teaser(name='teasertype' type='radio' value='focus-on-teaser' data-image-style='image-wrapper-focuson' data-max-width='450px')
+                label.btn.btn-input(for='focus-on-teaser') Focus On Teaser
+            |
+            |
+            .radio-inline.input-btn
+                input#promo-teaser(name='teasertype' type='radio' value='promo-teaser' data-image-style='image-wrapper-promo' data-max-width='300px')
+                label.btn.btn-input(for='promo-teaser') Focus On Teaser
+            |
+            |
+            .radio-inline.input-btn
+                input#news-teaser(name='teasertype' type='radio' value='news-teaser' data-image-style='' data-max-width='160px;')
+                label.btn.btn-input(for='news-teaser') News Teaser
+    .form-group.row
+        label.col-sm-2.form-control-label Link:
+        .col-sm-10
+            .radio-inline.input-btn
+                input#primary(name='linktype' type='radio' value='btn btn-primary btn-cta' checked='')
+                label.btn.btn-input(for='primary') Primary Link
+            |
+            |
+            .radio-inline.input-btn
+                input#secondary(name='linktype' type='radio' value='secondary-cta')
+                label.btn.btn-input(for='secondary') Secondary Link
+    .form-group.row
+        label.col-sm-2.form-control-label(for='input') Tag:
+        .col-sm-10
+            input#tag.form-control(type='text' value='')
+    .form-group.row
+        label.col-sm-2.form-control-label Media:
+        .col-sm-10
+            .radio-inline.input-btn
+                input#none(name='mediatype' type='radio' value='' checked='')
+                label.btn.btn-input(for='none') None
+            |
+            |
+            .radio-inline.input-btn
+                input#video(name='mediatype' type='radio' value='teaser-image-video')
+                label.btn.btn-input(for='video') Video
+            |
+            |
+            .radio-inline.input-btn
+                input#audio(name='mediatype' type='radio' value='teaser-image-audio')
+                label.btn.btn-input(for='audio') Audio
+    div(style='max-width: 300px; margin: 0 auto;')
+        #teaser-example.teaser.vertical-teaser
+            h3.teaser-title.over(style='display:none;')
+                a(href=article.link)= article.title
+            .teaser-image
+                a#teaser-example-image.image-wrapper.image-wrapper-square(href=article.link)
+                    span.teaser-tag(style='display:none;')
+                    span#teaser-media
+                    img(src=image alt=article.title)
+            .teaser-body
+                h3.teaser-title.under
+                    a(href=article.link)= article.title
+                span.teaser-date(style='display:none;')= moment(article.date).format('D MMMM YYYY')
+                p.teaser-text= article.body
+                a#teaser-example-link.btn.btn-primary.btn-cta.teaser-link(href=article.link) Read more
