@@ -18,9 +18,9 @@ mixin carousel(items)
         div.carousel-inner(role='listbox')
             for item, index in items
                 +carouselItem(item[0], item[1], items, index)
-        a.left.carousel-control.hidden-sm-down(href='#front-page-carousel' role='button' data-slide='prev')
+        a.left.carousel-control.d-none.d-lg-block(href='#front-page-carousel' role='button' data-slide='prev')
             span.sr-only Previous
-        a.right.carousel-control.hidden-sm-down(href='#front-page-carousel' role='button' data-slide='next')
+        a.right.carousel-control.d-none.d-lg-block(href='#front-page-carousel' role='button' data-slide='next')
             span.sr-only Next
 
 mixin frontpageCarouselItem(article, image, items, index)
@@ -39,7 +39,7 @@ mixin frontpageCarousel(items)
         div.carousel-inner(role='listbox')
             for item, index in items
                 +frontpageCarouselItem(item[0], item[1], items, index)
-        a.left.carousel-control.carousel-control-campage.hidden-sm-down(href='#front-page-carousel' role='button' data-slide='prev')
+        a.left.carousel-control.carousel-control-campage.d-none.d-lg-block(href='#front-page-carousel' role='button' data-slide='prev')
             span.sr-only Previous
-        a.right.carousel-control.carousel-control-campage.hidden-sm-down(href='#front-page-carousel' role='button' data-slide='next')
+        a.right.carousel-control.carousel-control-campage.d-none.d-lg-block(href='#front-page-carousel' role='button' data-slide='next')
             span.sr-only Next
