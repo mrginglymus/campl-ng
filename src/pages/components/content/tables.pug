@@ -1,12 +1,12 @@
 extends ../../../templates/layout/page
 
 block content
-    script(type="text/javascript")
-        | jQuery(function ($) {
-        |   $('input[name="tabletoggle"]').change(function () {
-        |     $('#table').toggleClass($(this).val());
-        |    });
-        |  });
+    script(type="text/javascript").
+        jQuery(function ($) {
+          $('input[name="tabletoggle"]').change(function () {
+            $('#table').toggleClass($(this).val());
+           });
+         });
 
     fieldset.form-group
         .checkbox-inline.input-btn

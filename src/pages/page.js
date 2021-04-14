@@ -34,6 +34,7 @@ class Page {
         if (this.source) {
             const template = pug.compileFile(path.join('src', 'pages', `${this.source}.pug`));
             const rendered = template({...context, page: this});
+            fs.mkdirSync(path.join('build', path.dirname(this.destination)), {recursive: true})
             fs.writeFileSync(path.join('build', this.destination), rendered);
         }
         this.children.forEach(c => c.render(context));

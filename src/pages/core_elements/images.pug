@@ -3,15 +3,15 @@ extends ../../templates/layout/page
 
 
 block content
-    script(type='text/javascript')
-        | jQuery(function ($) {
-        |   var id = $('#image-demo')
-        |   $('input[name="imagetoggle"]').change(function () {
-        |       id.css('max-width', $(this).data('max-width'));
-        |       id.find('div').removeClass().addClass('image-wrapper').addClass($(this).val());
-        |   });
-        |   $('#view-original').attr('href', id.find('img').attr('src'));
-        | });
+    script(type='text/javascript').
+        jQuery(function ($) {
+          var id = $('#image-demo')
+          $('input[name="imagetoggle"]').change(function () {
+              id.css('max-width', $(this).data('max-width'));
+              id.find('div').removeClass().addClass('image-wrapper').addClass($(this).val());
+          });
+          $('#view-original').attr('href', id.find('img').attr('src'));
+        });
 
     - const exampleImage = examples.randomImage(1000, 1000)
 

@@ -39,6 +39,8 @@ module.exports = {
                         new Page('Tables', 'components/content/tables', {scss: ['core_elements/_tables.scss']}),
                         new Page('Collapse', 'components/content/collapse', {scss: ['core_elements/_collapse.scss']}),
                         new Page('Alerts', 'components/content/alerts', {scss: ['core_elements/_alerts.scss']}),
+                        new Page('Well', 'components/content/well', {scss: ['core_elements/_well.scss']}),
+                        new Page('Date Time Picker', 'components/content/date_time_picker'),
                     ]
                 })
             ]
