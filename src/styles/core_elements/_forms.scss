@@ -1,0 +1,5 @@
+input {
+  &:disabled, &.disabled {
+    cursor: not-allowed;
+  }
+}
