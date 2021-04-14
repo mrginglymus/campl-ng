@@ -1,7 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 
-const {Page, FrontPage, ScssPage} = require('./page')
+const {Page, FrontPage, ScssPage, JavascriptPage, PugPage} = require('./page')
 const {randomImage} = require('./examples')
 
 function* getPages(dir, extension, ctor) {
@@ -71,8 +71,17 @@ module.exports = {
                 })
             ]
         }),
+        new Page('Templates', null, {
+            children: [...getPages(path.join('src', 'templates'), '.pug', PugPage),
+                new Page('Pages', null, {
+                    children: [...getPages(path.join('src', 'pages'), '.pug', PugPage)]
+                })]
+        }),
         new Page('Stylesheets', null, {
             children: [...getPages(path.join('src', 'styles'), '.scss', ScssPage)]
+        }),
+        new Page('Scripts', null, {
+            children: [...getPages(path.join('src', 'scripts'), '.js', JavascriptPage)]
         })
     ],
     frontPage: new FrontPage('Home', 'frontpage')

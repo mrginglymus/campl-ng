@@ -117,7 +117,7 @@ class Page {
         return [
             {
                 title: ['pages', ...this.source.split('/')].join(' > ') + '.pug',
-                link: `/templates/${this.source}/`
+                link: `/templates/pages/${this.source}.pug/`
             }, ...this.scss.map(scss => ({
                 title: ['styles', ...scss.split('/')].join(' > '),
                 link: `/stylesheets/${scss}/`
@@ -156,13 +156,54 @@ class ScssPage extends Page {
     getContext(context) {
         return {
             ...super.getContext(context),
-            scss: fs.readFileSync(this.source)
+            src: fs.readFileSync(this.source)
         };
+    }
+}
+
+class JavascriptPage extends Page {
+    constructor(title, source = null, children = []) {
+        super(title, source, children);
+        this.type = 'javascript';
+    }
+
+
+    getTemplate() {
+        return path.join('demo', 'templates', 'script.pug')
+    }
+
+
+    getContext(context) {
+        return {
+            ...super.getContext(context),
+            src: fs.readFileSync(this.source)
+        }
+    }
+}
+
+class PugPage extends Page {
+    constructor(title, source = null, children = []) {
+        super(title, source, children);
+        this.type = 'pug';
+    }
+
+    getTemplate() {
+        return path.join('demo', 'templates', 'pug.pug')
+    }
+
+
+    getContext(context) {
+        return {
+            ...super.getContext(context),
+            src: fs.readFileSync(this.source).toString()
+        }
     }
 }
 
 module.exports = {
     FrontPage,
     Page,
-    ScssPage
+    ScssPage,
+    JavascriptPage,
+    PugPage
 }

@@ -1,15 +1,11 @@
 import hljs from 'highlight.js/lib/core';
-import  django from 'highlight.js/lib/languages/django';
-import  xml from 'highlight.js/lib/languages/xml';
 import  scss from 'highlight.js/lib/languages/scss';
 import  javascript from 'highlight.js/lib/languages/javascript';
 
 import 'highlight.js/scss/monokai-sublime.scss'
 
-hljs.registerLanguage('django', django);
 hljs.registerLanguage('scss', scss);
 hljs.registerLanguage('javascript', javascript)
-hljs.registerLanguage('xml', xml)
 
 import 'campl-ng-demo/styles/demo.scss';
 
