@@ -4,6 +4,5 @@ import './menu';
 import './object-fit';
 import './select-tab';
 
-window.popper = require('popper.js');
-
-require('bootstrap');
+import 'popper.js';
+import 'bootstrap';
