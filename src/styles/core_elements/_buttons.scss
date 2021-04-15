@@ -44,7 +44,7 @@
 .btn-input {
   border: 1px solid #cccccc;
   font-weight: normal;
-  padding-left: 2em;
+  padding-left: 1.5rem;
 
   @include hover-focus {
     background-color: #ebebeb;
@@ -54,16 +54,17 @@
 
 .input-btn {
   margin-left: 0;
-  padding-left: 0;
+  margin-right: 0;
+  margin-bottom: 0.5em;
 
   + .input-btn {
     margin-left: 0;
   }
 
-  input {
-    margin: 0 !important;
-    left: 0.6em;
-    top: 20%;
+  .form-check-input {
+    position: absolute;
+    margin: 0;
+    left: 0.5rem;
   }
 
   :checked + .btn-input {

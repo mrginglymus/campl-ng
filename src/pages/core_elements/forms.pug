@@ -19,71 +19,63 @@ block content
                 option 5
         label Checkboxes
         fieldset.form-group
-            .checkbox
-                label
-                    input(type='checkbox')
-                    |  Option one
-            .checkbox
-                label
-                    input(type='checkbox')
-                    |  Option two
-            .checkbox
-                label
-                    input(type='checkbox')
-                    |  Option three
+            .form-check
+                input(type='checkbox')#eg1.form-check-input
+                label.form-check-label(for='eg1') Option one
+            .form-check
+                input(type='checkbox')#eg2.form-check-input
+                label.form-check-label(for='eg2') Option two
+            .form-check
+                input(type='checkbox')#eg3.form-check-input
+                label.form-check-label(for='eg3') Option three
         label Inline Checkboxes
         fieldset.form-group
-            .checkbox-inline
-                label
-                    input(type='checkbox')
-                    |  1
-            .checkbox-inline
-                label
-                    input(type='checkbox')
-                    |  2
-            .checkbox-inline
-                label
-                    input(type='checkbox')
-                    |  3
+            .form-check.form-check-inline
+                input(type='checkbox')#eg4.form-check-input
+                label.form-check-label(for='eg4') 1
+            .form-check.form-check-inline
+                input(type='checkbox')#eg5.form-check-input
+                label.form-check-label(for='eg5') 2
+            .form-check.form-check-inline
+                input(type='checkbox')#eg6.form-check-input
+                label.form-check-label(for='eg6') 3
         label Radio Buttons
         fieldset.form-group
-            .radio-inline
-                label
-                    input(name='radio' type='radio')
-                    |  Option one
-            .radio-inline
-                label
-                    input(name='radio' type='radio')
-                    |  Option two
+            .form-check.form-check-inline
+                input(name='radio' type='radio')#eg7.form-check-input
+                label.form-check-label(for='eg7') Option one
+            .form-check.form-check-inline
+                input(name='radio' type='radio')#eg8.form-check-inputs
+                label.form-check-label(for='eg8') Option two
         label Custom Radio Buttons
         fieldset.form-group
             |
             |
-            .radio-inline.input-btn
-                input#cradioone(name='cradio' type='radio')
-                label.btn.btn-input(for='cradioone') Option one
+            .form-check.form-check-inline.input-btn
+                input.form-check-input#cradioone(name='cradio' type='radio')
+                label.form-check-label.btn.btn-input(for='cradioone') Option one
             |
             |
-            .radio-inline.input-btn
-                input#cradiotwo(name='cradio' type='radio')
-                label.btn.btn-input(for='cradiotwo') Option two
+            .form-check.form-check-inline.input-btn
+                input.form-check-input#cradiotwo(name='cradio' type='radio')
+                label.form-check-label.btn.btn-input(for='cradiotwo') Option two
         label Custom Checkboxes
         fieldset.form-group
             |
             |
-            .checkbox-inline.input-btn
-                input#ccheckone(name='ccheck' type='checkbox')
-                label.btn.btn-input(for='ccheckone') Option one
+            .form-check.form-check-inline.input-btn
+                input.form-check-input#ccheckone(name='ccheck' type='checkbox')
+                label.form-check-label.btn.btn-input(for='ccheckone') Option one
             |
             |
-            .checkbox-inline.input-btn
-                input#cchecktwo(name='ccheck' type='checkbox')
-                label.btn.btn-input(for='cchecktwo') Option two
+            .form-check.form-check-inline.input-btn
+                input.form-check-input#cchecktwo(name='ccheck' type='checkbox')
+                label.form-check-label.btn.btn-input(for='cchecktwo') Option two
             |
             |
-            .checkbox-inline.input-btn
-                input#ccheckthree(name='ccheck' type='checkbox')
-                label.btn.btn-input(for='ccheckthree') Option three
+            .form-check.form-check-inline.input-btn
+                input.form-check-input#ccheckthree(name='ccheck' type='checkbox')
+                label.form-check-label.btn.btn-input(for='ccheckthree') Option three
         p.text-muted
             | This is an example of guidance text to give supplementary information to the user about
             | completion of the form.

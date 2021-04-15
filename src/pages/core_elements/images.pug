@@ -20,9 +20,9 @@ block content
     fieldset.form-group
         - let first = null
         for imageStyle, imageStyleName in imageStyles
-            div.radio-inline.input-btn
-                input(name='imagetoggle', type='radio', id=`imagetoggle${imageStyleName}`, data-max-width=`${imageStyle.width}px`, checked=first===null, value=`image-wrapper-${imageStyleName}`)
-                label.btn.btn-input(for=`imagetoggle${imageStyleName}`) #{imageStyle.description} #[small #{imageStyle.width} by #{imageStyle.height}]
+            div.form-check.form-check-inline.input-btn
+                input.form-check-input(name='imagetoggle', type='radio', id=`imagetoggle${imageStyleName}`, data-max-width=`${imageStyle.width}px`, checked=first===null, value=`image-wrapper-${imageStyleName}`)
+                label.form-check-label.btn.btn-input(for=`imagetoggle${imageStyleName}`) #{imageStyle.description} #[small #{imageStyle.width} by #{imageStyle.height}]
             |
             |
             - if (first === null) { first = imageStyleName }

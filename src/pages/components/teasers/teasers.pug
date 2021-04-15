@@ -61,67 +61,67 @@ block content
         });
     h2 Teaser Builder
     .form-group.row
-        label.col-sm-2.form-control-label Teaser:
+        label.col-sm-2.col-form-label Teaser:
         .col-sm-10
-            .radio-inline.input-btn
-                input#vertical-teaser(name='teasertype' type='radio' value='teaser vertical-teaser' checked='' data-image-style='image-wrapper-square' data-max-width='300px')
-                label.btn.btn-input(for='vertical-teaser') Vertical Teaser
+            .form-check.form-check-inline.input-btn
+                input.form-check-input#vertical-teaser(name='teasertype' type='radio' value='teaser vertical-teaser' checked='' data-image-style='image-wrapper-square' data-max-width='300px')
+                label.form-check-label.btn.btn-input(for='vertical-teaser') Vertical Teaser
             |
             |
-            .radio-inline.input-btn
-                input#horizontal-teaser(name='teasertype' type='radio' value='teaser horizontal-teaser' data-image-style='image-wrapper-square' data-max-width='450px')
-                label.btn.btn-input(for='horizontal-teaser') Horizontal Teaser
+            .form-check.form-check-inline.input-btn
+                input.form-check-input#horizontal-teaser(name='teasertype' type='radio' value='teaser horizontal-teaser' data-image-style='image-wrapper-square' data-max-width='450px')
+                label.form-check-label.btn.btn-input(for='horizontal-teaser') Horizontal Teaser
             |
             |
-            .radio-inline.input-btn
-                input#wide-vertical-teaser(name='teasertype' type='radio' value='teaser wide-vertical-teaser' data-image-style='image-wrapper-teaser-wide' data-max-width='375px')
-                label.btn.btn-input(for='wide-vertical-teaser') Wide Vertical Teaser
+            .form-check.form-check-inline.input-btn
+                input.form-check-input#wide-vertical-teaser(name='teasertype' type='radio' value='teaser wide-vertical-teaser' data-image-style='image-wrapper-teaser-wide' data-max-width='375px')
+                label.form-check-label.btn.btn-input(for='wide-vertical-teaser') Wide Vertical Teaser
             |
             |
-            .radio-inline.input-btn
-                input#focus-on-teaser(name='teasertype' type='radio' value='focus-on-teaser' data-image-style='image-wrapper-focuson' data-max-width='450px')
-                label.btn.btn-input(for='focus-on-teaser') Focus On Teaser
+            .form-check.form-check-inline.input-btn
+                input.form-check-input#focus-on-teaser(name='teasertype' type='radio' value='focus-on-teaser' data-image-style='image-wrapper-focuson' data-max-width='450px')
+                label.form-check-label.btn.btn-input(for='focus-on-teaser') Focus On Teaser
             |
             |
-            .radio-inline.input-btn
-                input#promo-teaser(name='teasertype' type='radio' value='promo-teaser' data-image-style='image-wrapper-promo' data-max-width='300px')
-                label.btn.btn-input(for='promo-teaser') Focus On Teaser
+            .form-check.form-check-inline.input-btn
+                input.form-check-input#promo-teaser(name='teasertype' type='radio' value='promo-teaser' data-image-style='image-wrapper-promo' data-max-width='300px')
+                label.form-check-label.btn.btn-input(for='promo-teaser') Focus On Teaser
             |
             |
-            .radio-inline.input-btn
-                input#news-teaser(name='teasertype' type='radio' value='news-teaser' data-image-style='' data-max-width='160px;')
-                label.btn.btn-input(for='news-teaser') News Teaser
+            .form-check.form-check-inline.input-btn
+                input.form-check-input#news-teaser(name='teasertype' type='radio' value='news-teaser' data-image-style='' data-max-width='160px;')
+                label.form-check-label.btn.btn-input(for='news-teaser') News Teaser
     .form-group.row
-        label.col-sm-2.form-control-label Link:
+        label.col-sm-2.col-form-label Link:
         .col-sm-10
-            .radio-inline.input-btn
-                input#primary(name='linktype' type='radio' value='btn btn-primary btn-cta' checked='')
-                label.btn.btn-input(for='primary') Primary Link
+            .form-check.form-check-inline.input-btn
+                input.form-check-input#primary(name='linktype' type='radio' value='btn btn-primary btn-cta' checked='')
+                label.form-check-label.btn.btn-input(for='primary') Primary Link
             |
             |
-            .radio-inline.input-btn
-                input#secondary(name='linktype' type='radio' value='secondary-cta')
-                label.btn.btn-input(for='secondary') Secondary Link
+            .form-check.form-check-inline.input-btn
+                input.form-check-input#secondary(name='linktype' type='radio' value='secondary-cta')
+                label.form-check-label.btn.btn-input(for='secondary') Secondary Link
     .form-group.row
-        label.col-sm-2.form-control-label(for='input') Tag:
+        label.col-sm-2.col-form-label(for='tag') Tag:
         .col-sm-10
             input#tag.form-control(type='text' value='')
     .form-group.row
-        label.col-sm-2.form-control-label Media:
+        label.col-sm-2.col-form-label Media:
         .col-sm-10
-            .radio-inline.input-btn
-                input#none(name='mediatype' type='radio' value='' checked='')
-                label.btn.btn-input(for='none') None
+            .form-check.form-check-inline.input-btn
+                input.form-check-input#none(name='mediatype' type='radio' value='' checked='')
+                label.form-check-label.btn.btn-input(for='none') None
             |
             |
-            .radio-inline.input-btn
-                input#video(name='mediatype' type='radio' value='teaser-image-video')
-                label.btn.btn-input(for='video') Video
+            .form-check.form-check-inline.input-btn
+                input.form-check-input#video(name='mediatype' type='radio' value='teaser-image-video')
+                label.form-check-label.btn.btn-input(for='video') Video
             |
             |
-            .radio-inline.input-btn
-                input#audio(name='mediatype' type='radio' value='teaser-image-audio')
-                label.btn.btn-input(for='audio') Audio
+            .form-check.form-check-inline.input-btn
+                input.form-check-input#audio(name='mediatype' type='radio' value='teaser-image-audio')
+                label.form-check-label.btn.btn-input(for='audio') Audio
     div(style='max-width: 300px; margin: 0 auto;')
         #teaser-example.teaser.vertical-teaser
             h3.teaser-title.over(style='display:none;')
