@@ -33,11 +33,7 @@
 }
 
 .btn-secondary {
-  &, &:disabled {
-    color: $btn-secondary-color;
-    background-color: $btn-secondary-bg;
-    border-color: $btn-secondary-border;
-  }
+  @include button-variant($btn-secondary-bg, $btn-secondary-border);
 }
 
 .secondary-cta {
