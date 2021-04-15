@@ -1,6 +1,9 @@
 const pug = require('pug');
 const fs = require('fs');
 const path = require('path');
+const puglex = require('pug-lexer');
+const pugparse = require('pug-parser');
+const pugwalk = require('pug-walk');
 
 
 class Page {
@@ -193,9 +196,25 @@ class PugPage extends Page {
 
 
     getContext(context) {
+
+        const includes = []
+
+        const src = fs.readFileSync(this.source).toString()
+
+        pugwalk(pugparse(puglex(src)), node => {
+            if (['Include', 'RawInclude', 'Extends'].includes(node.type)) {
+                const parts = path.join(path.dirname(this.source), node.file.path).split(path.sep).slice(1);
+                includes.push({
+                    title: parts.join(' > '),
+                    link: `/${parts.join('/')}.pug/`
+                })
+            }
+        })
+
         return {
             ...super.getContext(context),
-            src: fs.readFileSync(this.source).toString()
+            src,
+            includes
         }
     }
 }
