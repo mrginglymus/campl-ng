@@ -2,11 +2,11 @@
 
 const path = require('path');
 
+const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const JsonImporter = require('node-sass-json-importer');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const SRC_ROOT = path.join(__dirname, 'src');
 
@@ -120,5 +120,5 @@ module.exports = (env, argv = {}) => {
         devServer: {
             contentBase: OUTPUT_PATH
         }
-    }
-}
+    };
+};

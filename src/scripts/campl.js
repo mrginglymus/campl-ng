@@ -6,4 +6,4 @@ import './select-tab';
 
 window.popper = require('popper.js');
 
-require('bootstrap')
+require('bootstrap');

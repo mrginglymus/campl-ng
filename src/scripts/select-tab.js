@@ -1,3 +1,3 @@
 $("select[data-toggle='tab']").change(function() {
-    $(`[href='${$(this).val()}']`).tab('show')
+    $(`[href='${$(this).val()}']`).tab('show');
 });

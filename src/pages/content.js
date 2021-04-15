@@ -1,17 +1,17 @@
-const path = require('path');
 const fs = require('fs');
+const path = require('path');
 
-const {Page, FrontPage, ScssPage, JavascriptPage, PugPage} = require('./page')
-const {randomImage} = require('./examples')
+const {randomImage} = require('./examples');
+const {Page, FrontPage, ScssPage, JavascriptPage, PugPage} = require('./page');
 
 function* getPages(dir, extension, ctor) {
-    const list = fs.readdirSync(dir)
+    const list = fs.readdirSync(dir);
     for (const item of list) {
-        const stat = fs.statSync(path.join(dir, item))
+        const stat = fs.statSync(path.join(dir, item));
         if (stat.isDirectory()) {
-            yield new ctor(item, null, {children: [...getPages(path.join(dir, item), extension, ctor)]})
+            yield new ctor(item, null, {children: [...getPages(path.join(dir, item), extension, ctor)]});
         } else if (item.endsWith(extension)) {
-            yield new ctor(item, path.join(dir, item))
+            yield new ctor(item, path.join(dir, item));
         }
     }
 }
@@ -85,4 +85,4 @@ module.exports = {
         })
     ],
     frontPage: new FrontPage('Home', 'frontpage')
-}
+};

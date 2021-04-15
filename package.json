@@ -5,7 +5,8 @@
   "homepage": "http://people.ds.cam.ac.uk/wac26/campl-ng/",
   "author": "Bill Collins <bill@bill.works>",
   "scripts": {
-    "build": "node ./build.js"
+    "build": "node ./build.js",
+    "lint:js": "eslint --report-unused-disable-directives *.js src"
   },
   "browserslist": [
     "defaults"
