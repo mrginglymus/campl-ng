@@ -2,40 +2,36 @@
 
 [![Build Status](https://travis-ci.org/mrginglymus/campl-ng.svg?branch=master)](https://travis-ci.org/mrginglymus/campl-ng)
 
-## Requirements
+## Build Requirements
 
-Python, with virtualenv
+* [Git LFS](https://git-lfs.github.com/) - to check out (included with recent windows git installs, possibly an extra package on linux)
+* [Yarn](https://yarnpkg.com/) - to build and test (included with recent node installs (I believe), or available standalone on windows via choco)
 
 ## Install
 
-To install the dependencies, run ``make install``. This will install (within a virtual environment) node and all the package dependencies
+```shell
+$ yarn install
+```
 
-## Build
+## Build Assets
 
-To build, you will need to enter the virtual environment with 
+```shell
+$ yarn webpack --progress
+```
 
-    $ source venv/bin/activate
-    
-Then you can run gulp
+This will output assets to `build/`. The production assets are `campl.js`, `campl.css`, plus everything in `fonts/` and `images/`.
 
-    (venv)$ gulp build
+## Demo site
 
-To cache images locally (takes about a minute) run with the option ``--cache-images`` i.e.
+The demo site can be built with
 
-    (venv)$ gulp build --cache-images
+```shell
+$ yarn build
+```
 
-To use photos rather than placeholder images (slow to load) run with the option ``--photo`` ie.
+This will output a static html site to the `build/` directory. This directory can be served however you like, or
+by using
 
-    (venv)$ gulp build --photo
-
-If you want to build so you can deploy to a non-root location, run build with the option ``--root`` e.g.
-
-    (venv) $ gulp build --root /campl-ng
-
-You can also run individual commands for each component, e.g. ``gulp css``, ``gulp js`` or ``gulp html``. ``html`` is the only command which is affected by the three optional arguments above.
-
-To run a local webserver to view the demo site (default [localhost:8000](http://localhost:8000)) run
-
-    (venv)$ gulp run
-
-Specify port and host with ``--port <port>`` and ``--host <host>`` respectively
+```shell
+$ yarn serve
+```
