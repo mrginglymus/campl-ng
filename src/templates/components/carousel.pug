@@ -1,0 +1,45 @@
+mixin carouselItem(article, image, items, index)
+    div.carousel-item(class=`${index===0 ? 'active' : ''}`)
+        if article.link
+            a.image-wrapper.image-wrapper-carousel(href=article.link)
+                img(src=image, alt=article.title)
+        else
+            div.image-wrapper.image-wrapper-carousel
+                img(src=image, alt=article.title)
+        div.carousel-caption
+            if article.link
+                a(href=article.link)= article.title
+            else
+                span= article.title
+            span.carousel-page #{index + 1} of #{items.length}
+
+mixin carousel(items)
+    div.carousel.slide#front-page-carousel(data-ride='carousel')
+        div.carousel-inner(role='listbox')
+            for item, index in items
+                +carouselItem(item[0], item[1], items, index)
+        a.left.carousel-control.carousel-control-prev.d-none.d-md-block(href='#front-page-carousel' role='button' data-slide='prev')
+            span.sr-only Previous
+        a.right.carousel-control.carousel-control-next.d-none.d-md-block(href='#front-page-carousel' role='button' data-slide='next')
+            span.sr-only Next
+
+mixin frontpageCarouselItem(article, image, items, index)
+    div.carousel-item(class=`${index===0 ? 'active' : ''}`)
+        div.row
+            div.col-md-8.col-xs-12
+                a.image-wrapper.image-wrapper-carousel-campage(href=article.link)
+                    img(src=image, alt=article.title)
+            div.col-md-4.col-xs-12.carousel-text= article.body.split(' ').slice(0, 8).join(' ')
+        div.carousel-caption
+            a(href=article.link)= article.title
+            span.carousel-page #{index + 1} of #{items.length}
+
+mixin frontpageCarousel(items)
+    div#front-page-carousel.carousel.slide(data-ride='carousel')
+        div.carousel-inner(role='listbox')
+            for item, index in items
+                +frontpageCarouselItem(item[0], item[1], items, index)
+        a.left.carousel-control.carousel-control-prev.carousel-control-campage.d-none.d-md-block(href='#front-page-carousel' role='button' data-slide='prev')
+            span.sr-only Previous
+        a.right.carousel-control.carousel-control-next.carousel-control-campage.d-none.d-md-block(href='#front-page-carousel' role='button' data-slide='next')
+            span.sr-only Next

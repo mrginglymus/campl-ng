@@ -1,0 +1,11 @@
+extends ../../../templates/layout/page
+
+include ../../../templates/components/navigation/nav
+include ../../../templates/components/navigation/tabs
+
+block content
+    div.row
+        div.col-md-3
+            +navPillsStacked(examples.navItems, true)
+        div.col-md-9
+            +tabs(examples.navItems)

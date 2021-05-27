@@ -1,0 +1,10 @@
+extends ../../../templates/layout/page
+
+include ../../../templates/components/navigation/nav
+include ../../../templates/components/navigation/tabs
+
+block content
+    div.clearfix
+        +navPills(examples.navItems, true)
+    div.pt-3
+        +tabs(examples.navItems)

@@ -1,0 +1,11 @@
+if page && !page.isFrontPage && page.horizontalBreadcrumb
+    div.d-none.d-md-block
+        ol.breadcrumb
+            li.breadcrumb-item
+                a(href="http://www.cam.ac.uk")
+                    span.fa.fa-home.fa-lg &nbsp;
+            for crumb, idx in page.horizontalBreadcrumb
+                if crumb[1] && idx !== (page.horizontalBreadcrumb.length - 1)
+                    li.breadcrumb-item: a(href=crumb[1])= crumb[0]
+                else
+                    li.breadcrumb-item.active= crumb[0]

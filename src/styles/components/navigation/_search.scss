@@ -1,0 +1,16 @@
+.inpage-search-container {
+  background-color: #e4e4e4;
+  padding: 20px;
+
+  .inpage-search {
+    .form-control {
+      height: 3rem;
+    }
+
+    .input-group-append .btn {
+      background-color: $black;
+      color: $white;
+      padding: 9px;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@import "../../themes.json";
+
+@mixin theme-element($property, $variant, $important:"") {
+  $element: &;
+  @each $colour, $map in $themes {
+    @at-root {
+      .theme-#{"" + $colour} {
+        #{$element} {
+          #{$property}: map-get($map, $variant) #{$important};
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@import "./variables";
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/utilities";
+
+$bs-datetimepicker-active-bg: #888888;
+$bs-datetimepicker-text-shadow: none;
+
+//todo: @import "~eonasdan-bootstrap-datetimepicker/src/sass/bootstrap-datetimepicker";

@@ -1,0 +1,50 @@
+extends ../../templates/layout/page
+
+block content
+    h1 Heading 1
+    p= examples.lipsum(1)
+    h2 Heading 2
+    p= examples.lipsum(1)
+    h3 Heading 3
+    p= examples.lipsum(1)
+    h4 Heading 4
+    p= examples.lipsum(1)
+    h5 Heading 5
+    p= examples.lipsum(1)
+    h6 Heading 6
+    p= examples.lipsum(1)
+
+    h3 Blockquote
+
+    blockquote
+        p 'Tis better to have loved and lost then never to have loved at all
+        cite William Shakespare
+
+    blockquote
+        p
+            | 'Tis better to have loved and lost then never to have loved at all. Lorem ipsum dolor sit amet, consectetur
+            | adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        p= examples.lipsum(1)
+        cite William Shakespeare
+
+    h3 Horizontal rule
+    hr
+
+    h3 Inline links
+    p
+        | Lorem ipsum dolor sit amet, #[a(href='#') consectetur adipisicing elit], sed do eiusmod tempor incididunt ut
+        | labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        | aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+        | fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+        | anim id est laborum.
+
+    h3 Miscellaneous inline text treatment
+    p
+        | Lorem #[strong strong] sit amet, #[em emphasis], sed do eiusmod tempor #[sub sub text] et dolore magna aliqua.
+        | #[sup super text], quis nostrud #[abbr abbreviation] ullamco.
+    p
+        | Lorem #[small small], consectetur adipisicing elit, #[dfn definition] incididunt ut labore #[ins insert].
+        | Ut enim ad minim veniam, #[mark mark] laboris nisi ut aliquip ex ea.
+
+    h3 Address
+    address 24 acacia avenue, birmingham, B1 4BX

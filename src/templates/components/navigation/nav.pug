@@ -1,0 +1,22 @@
+mixin _nav(items, type, dataToggle, stacked, local, extraClasses)
+    div(class=`nav-${type}-wrapper`)
+        ul.nav(class=`nav-${type}${stacked ? ' nav-stacked' : ''} ${extraClasses ? extraClasses : ''}`, role='tablist')
+            for item in items
+                li.nav-item
+                    if item.disabled
+                        span.nav-link.disabled(role='tab')= item.title
+                    else
+                        a.nav-link(class=`${item.active ? 'active' : ''}`, role='tab', data-toggle=`${local ? dataToggle : null}`,
+                            href=`${local ? '#' + item.id : item.link}`)= item.title
+
+mixin navTabs(items, local)
+    +_nav(items, 'tabs', 'tab', false, local)
+
+mixin navPills(items, local)
+    +_nav(items, 'pills', 'pill', false, local)
+
+mixin navPillsStacked(items, local)
+    +_nav(items, 'pills', 'pill', true, local, 'flex-column px-2')
+
+mixin navStages(items, local)
+    +_nav(items, 'stages', 'pill', false, local, 'nav-pills')

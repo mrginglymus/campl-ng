@@ -1,0 +1,20 @@
+extends ../../templates/layout/page
+
+block content
+    p There are #{Object.keys(themes).length} themes available.
+
+    div.nav-pills-wrapper
+        ul.nav.nav-pills#theme_swatches(role='tablist')
+            for name in Object.keys(themes)
+                li.nav-item(style='text-transform: capitalize'): a.nav-link(role='tab', data-toggle='pill', href=`#${name}`, data-colour=name)= name
+
+    div.tab-content
+        for theme, name in themes
+            div.tab-pane(role='tabpanel', id=name)
+                table.table.mb-3
+                    tbody
+                        for colour, variant in theme
+                            tr
+                                th(style='width: 25%')= variant
+                                td(style='width: 25%')= colour
+                                td(style=`width: 50%; background-color: ${colour}`)

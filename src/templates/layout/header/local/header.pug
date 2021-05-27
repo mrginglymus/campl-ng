@@ -1,0 +1,10 @@
+div.local-header.d-flex
+    div.container.p-3
+        include ../../../navigation/breadcrumb
+        div
+            p.title= siteName
+    a.local-menu-button.d-md-none(href="#vertical-menu", data-toggle="collapse")
+        span.fa.fa-bars.fa-2x
+
+div.local-header
+    include ../../../navigation/horizontal_menu

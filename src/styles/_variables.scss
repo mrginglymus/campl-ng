@@ -1,0 +1,115 @@
+
+// brand colours
+$gray-darker:               #171717;
+
+$brand-success:             #55a51c;
+$brand-info:                #0072cf;
+$brand-warning:             #ea7125;
+$brand-danger:              #ff0000;
+
+$white:                     #ffffff;
+$black:                     #000000;
+
+
+// yay flexbox
+$enable-flex:               true !default;
+
+// boo rounded
+$enable-rounded:            false;
+
+$spacer: 20px;
+
+// body colour
+$body-color:                 $gray-darker;
+
+$border-color: #e4e4e4;
+
+// grids
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 480px,
+  md: 768px,
+  lg: 980px,
+  xl: 1200px,
+);
+
+$container-max-widths: (
+  xl: 1177px
+);
+
+$grid-gutter-width: 0;
+
+// fonts
+
+$font-family-sans-serif:     verdana, Arial, sans-serif;
+$font-family-sans-serif-extra: "Open Sans", verdana, Arial, sans-serif;
+$font-family-serif: Georgia, "sans serif";
+$font-size-base:             0.75rem;
+
+// headings
+
+$h1-font-size:               36px;
+$h2-font-size:               19px;
+$h3-font-size:               17px;
+$h4-font-size:               15px;
+$h5-font-size:               14px;
+$h6-font-size:               13px;
+
+$headings-font-weight:       600;
+
+// border radius, to be sure
+
+$border-radius:          0;
+$border-radius-lg:       0;
+$border-radius-sm:       0;
+
+// tables
+
+$table-bg-hover:                #e4e4e4;
+
+$table-border-color:            $border-color;
+
+// buttons
+
+$btn-font-weight:                600;
+$btn-primary-bg:                 #171717;
+$btn-secondary-color:            $black;
+$btn-secondary-bg:               #e4e4e4;
+$btn-secondary-border:           #999999;
+
+// pagination
+
+$pagination-padding-x:                7px;
+$pagination-padding-y:                5px;
+
+$pagination-color:                     #171717;
+$pagination-border:                    #d6d6d6;
+
+$pagination-hover-color:               $black;
+$pagination-hover-bg:                  #f2f2f2;
+$pagination-hover-border:              #d6d6d6;
+
+$pagination-active-color:              $black;
+$pagination-active-bg:                 #f2f2f2;
+$pagination-active-border:             #d6d6d6;
+
+// cards
+$card-border-width: 1px;
+$card-border-radius: 0;
+
+// breadcrumbs
+
+$breadcrumb-padding-x: 6px;
+
+$breadcrumb-bg:                 inherit;
+$breadcrumb-divider-color:      $white;
+$breadcrumb-active-color:       $white;
+
+// carousel
+
+$carousel-text-shadow:                        0;
+$carousel-control-width:                      25px;
+$carousel-control-opacity:                    1;
+
+$fa-font-path:        "~font-awesome/fonts";

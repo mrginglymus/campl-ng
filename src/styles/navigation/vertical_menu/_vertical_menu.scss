@@ -1,0 +1,23 @@
+
+
+.vertical-menu {
+  @include make-col(12);
+  background: url("../images/vertical-nav-background.png");
+  border-left: $border-width solid $border-color;
+  border-right: $border-width solid $border-color;
+  border-top: $border-width solid $border-color;
+  padding-left: 0;
+  padding-right: 0;
+  font-family: $font-family-sans-serif-extra;
+  z-index: 1;
+
+  @include media-breakpoint-up(md) {
+    @include make-col(3);
+  }
+}
+
+.vertical-menu-inset {
+  @include media-breakpoint-up(md) {
+    margin-top: -50px;
+  }
+}

@@ -1,0 +1,8 @@
+.vertical-menu-children {
+  > li {
+    .vertical-menu-child-bulleted {
+      background: url("../images/link-bullet-black.png") no-repeat 0 50%;
+      padding-left: 15px;
+    }
+  }
+}

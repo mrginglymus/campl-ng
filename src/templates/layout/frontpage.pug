@@ -1,0 +1,25 @@
+extends ../base
+
+include ../../templates/components/carousel
+
+block body
+    header
+        include ./header/global/header
+        include ./header/local/header
+
+    main.container
+        div.row
+            include ../navigation/vertical_menu
+            div.col-md-9.main-content
+                +carousel(examples.makeCarousel(885, 432))
+                block unwrapped_content
+                    div.p-3
+                        block content
+            div.col-md-3.sidebar
+                div.p-3
+                    block sidebar_content
+
+    footer
+        include ./footer/local/footer
+        include ./footer/global/footer
+

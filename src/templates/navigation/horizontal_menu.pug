@@ -1,0 +1,20 @@
+nav.navbar.navbar-local.container.d-none.d-md-flex.navbar-expand-md
+    div
+        ul.nav.navbar-nav.nav-local
+            li.nav-item
+                a.nav-link(href='/') Home
+            for item in menu
+                if item.children.length > 0
+                    li.nav-item.dropdown(class=`${ (!page.isFrontPage && item.title===page.horizontalBreadcrumb[1][0]) ? 'active' : '' }`)
+                        a.nav-link.dropdown-toggle(href='#' data-toggle='dropdown')= item.title
+                        ul.dropdown-menu
+                            if item.source
+                                li
+                                    a.dropdown-item(href=item.url) #{item.title} - Overview
+                            for child in item.children
+                                li
+                                    a.dropdown-item(href=child.url)= child.title
+                else
+                    li.nav-item.dropdown(class=`${ (!page.isFrontPage && item.title===page.horizontalBreadcrumb[1][0]) ? 'active' : '' }`)
+                        a.nav-link(href=item.url)= item.title
+            include ../../../demo/templates/theme_switcher

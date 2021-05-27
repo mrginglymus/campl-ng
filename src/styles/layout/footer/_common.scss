@@ -1,0 +1,17 @@
+
+
+.global-footer,
+.local-footer {
+  padding: $spacer 0;
+
+  [class*='col-'] {
+    padding-left: $spacer;
+    padding-right: $spacer;
+
+    @include media-breakpoint-up(md) {
+      &:not(:last-of-type) {
+        background: url("../images/footer-separator.png") 100% 0 repeat-y;
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+extends ../../templates/base
+
+include ../../templates/components/carousel
+include ../../templates/components/teasers/teasers
+
+block body
+    header
+        include ../../templates/layout/header/global/header
+        .local-header
+            .container.p-3
+                a.main-logo(href='http://www.cam.ac.uk/')
+                    img.logo.logo-lg(alt='University of Cambridge' src='/images/logo.png')
+        .container
+            +frontpageCarousel(examples.makeCarousel(785, 428))
+
+    main.container
+        .row
+            .col-md-8
+                .pb-3
+                    .heading-container.heading-container-padding
+                        h2.lite-heading-lg.lite-heading-themed Focus on
+                .row
+                    .col-md-6.col-xs-12
+                        +focusOnTeaser(examples.articles.randomArticle(), examples.randomImage(153, 137))
+                    .col-md-6.col-xs-12
+                        +focusOnTeaser(examples.articles.randomArticle(), examples.randomImage(153, 137))
+                .row
+                    .col-md-6.col-xs-12
+                        +focusOnTeaser(examples.articles.randomArticle(), examples.randomImage(153, 137))
+                    .col-md-6.col-xs-12
+                        +focusOnTeaser(examples.articles.randomArticle(), examples.randomImage(153, 137))
+                .heading-container.heading-container-padding
+                    h2.lite-heading-lg.lite-heading-themed What's happening
+                .teaser-list.mt-0
+                    .teaser-row
+                        .row
+                            .col-md-6.col-xs-12.teaser-list
+                                +taggedTeaser(examples.articles.randomArticle(), examples.randomImage(349, 183), examples.randomWord())
+                            .col-md-6.col-xs-12.teaser-list
+                                +taggedTeaser(examples.articles.randomArticle(), examples.randomImage(349, 183), examples.randomWord())
+                    .teaser-row
+                        .row
+                            .col-md-6.col-xs-12.teaser-list
+                                +taggedTeaser(examples.articles.randomArticle(), examples.randomImage(349, 183), examples.randomWord())
+                            .col-md-6.col-xs-12.teaser-list
+                                +taggedTeaser(examples.articles.randomArticle(), examples.randomImage(349, 183), examples.randomWord())
+            .col-md-4.col-xs-12.sidebar
+                .heading-container.heading-container-padding
+                    h2.lite-heading-lg Latest news
+                .teaser-list
+                    +newsTeaser(examples.articles.randomArticle())
+                    +newsTeaser(examples.articles.randomArticle())
+                    +newsTeaser(examples.articles.randomArticle())
+                    div.p-3
+                        a.secondary-cta.pull-xs-right(href='') View all news
+    footer
+        include ../../templates/layout/footer/local/footer
+        include ../../templates/layout/footer/global/footer

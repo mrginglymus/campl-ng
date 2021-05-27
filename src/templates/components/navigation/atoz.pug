@@ -1,0 +1,16 @@
+mixin atoz(content)
+    div.local-header.subtitle
+        div.container.atoz
+            div.d-none.d-md-block
+                ul(role='tablist')
+                    for item in content
+                        li.nav-item
+                            if item.content
+                                a.nav-link(href=`#atoz_${item.letter}`, role='tab', data-toggle='tab', class=`${item.active ? 'active' : ''}`)= item.letter
+                            else
+                                span= item.letter
+            div.d-md-none
+                select.form-control(data-toggle='tab')
+                    for item in content
+                        if item.content
+                            option(value=`#atoz_${item.letter}`, selected=item.active)

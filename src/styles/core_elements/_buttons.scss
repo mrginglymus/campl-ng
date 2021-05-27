@@ -1,0 +1,86 @@
+
+
+.btn-cta,
+.btn-vcard {
+  font-weight: normal;
+  background-color: $gray-darker;
+  border-color: $gray-darker;
+  background-repeat: no-repeat;
+
+  @include hover-focus-active {
+    background-color: #454545 !important;
+    border-color: #454545 !important;
+  }
+}
+
+.btn-cta {
+  background-image: url("../images/primary-cta-chevron.png") !important;
+  background-position: right 11px top 50%;
+  padding: 5px 25px 5px 10px;
+}
+
+.btn-vcard {
+  background-image: url("../images/download.png") !important;
+  padding-right: 30px;
+  background-position: right 5px top 50%;
+
+  &::before {
+    @include fa-icon();
+    content: $fa-var-user;
+    position: relative;
+    right: 5px;
+  }
+}
+
+.btn-secondary {
+  @include button-variant($btn-secondary-bg, $btn-secondary-border);
+}
+
+.secondary-cta {
+  background: url("../images/secondary-cta-chevron.png") no-repeat 100% 50%;
+  padding-right: 10px;
+}
+
+.btn-input {
+  border: 1px solid #cccccc;
+  font-weight: normal;
+  padding-left: 1.5rem;
+
+  @include hover-focus {
+    background-color: #ebebeb;
+    border-color: #adadad;
+  }
+}
+
+.input-btn {
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0.5em;
+
+  + .input-btn {
+    margin-left: 0;
+  }
+
+  .form-check-input {
+    position: absolute;
+    margin: 0;
+    left: 0.5rem;
+  }
+
+  :checked + .btn-input {
+    @include theme-element(background-color, selected);
+    @include theme-element(border-color, light-highlight);
+    color: #ffffff;
+
+    @include hover-focus {
+      @include theme-element(background-color, light-highlight);
+      @include theme-element(border-color, navbar);
+    }
+  }
+}
+
+.btn {
+  &:disabled, &.disabled {
+    cursor: not-allowed;
+  }
+}

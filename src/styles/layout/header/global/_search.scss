@@ -1,0 +1,26 @@
+.global-search {
+  padding: 15px 0;
+
+  @include media-breakpoint-down(sm) {
+    padding: 15px;
+    background-color: #3b3b3b;
+  }
+
+  @include media-breakpoint-up(md) {
+    margin-right: 15px;
+  }
+
+  .form-control, .form-control:focus {
+    background-color: #343434;
+    color: $white;
+    font-family: $font-family-sans-serif;
+    border: 0;
+    padding: 7px 8px;
+  }
+
+  .input-group-append .btn {
+    background-color: #434343;
+    border: 0;
+    color: #a3a3a3;
+  }
+}

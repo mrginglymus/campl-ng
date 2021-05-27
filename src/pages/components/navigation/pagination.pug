@@ -1,0 +1,34 @@
+extends ../../../templates/layout/page
+
+block content
+    nav
+        ul.pagination
+            li.page-item.active
+                a.page-link(href='#') 1
+            li.page-item
+                a.page-link(href='#') 2
+            li.page-item
+                span.elipsis.page-link ...
+            li.page-item
+                a.page-link(href='#') 21
+            li.page-item.next
+                a.page-link(href='#')
+                    span.fa.fa-angle-right.fa-lg
+    nav
+        ul.pagination
+            li.page-item.previous
+                a.page-link(href='#')
+                    span.fa.fa-angle-left.fa-lg(aria-hidden='true')
+            li.page-item.page-item
+                a.page-link(href='#') 1
+            li.page-item.active
+                a.page-link(href='#') 2
+            li.page-item
+                a.page-link(href='#') 3
+            li.page-item
+                a.page-link(href='#') 4
+            li.page-item
+                a.page-link(href='#') 5
+            li.next.page-item
+                a.page-link(href='#')
+                    span.fa.fa-angle-right.fa-lg

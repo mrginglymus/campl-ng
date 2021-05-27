@@ -1,0 +1,5 @@
+mixin tabs(items)
+    div.tab-content
+        for item in items
+            unless item.disabled
+                div.tab-pane(role='tabpanel', id=item.id, class=`${item.active ? 'active' : ''}`)!= item.content

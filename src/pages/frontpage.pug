@@ -1,0 +1,31 @@
+extends ../templates/layout/frontpage
+
+include ../templates/components/teasers/teasers
+
+block unwrapped_content
+    div.row
+        div.col-md-8.teaser-list
+            +horizontalTeaser(examples.articles.randomArticle(), examples.randomImage(256))
+            +horizontalTeaser(examples.articles.randomArticle())
+            +horizontalTeaser(examples.articles.randomArticle(), examples.randomImage(256), 'video')
+        div.col-md-4.teaser-list
+            div.heading-container.heading-container-padding
+                h2.lite-heading Latest News
+            +newsTeaser(examples.articles.randomArticle())
+            +newsTeaser(examples.articles.randomArticle())
+            div.p-3.clearfix
+                a.secondary-cta.pull-xs-right(href="") View all news
+
+block sidebar_content
+    div.heading-container
+        h2.lite-heading Upcoming Events
+    ul.related-links
+        li
+            +dateTeaser(examples.articles.randomArticle())
+        li
+            +dateTeaser(examples.articles.randomArticle())
+        li
+            +dateTeaser(examples.articles.randomArticle())
+    div.clearfix.mb-3
+        a.secondary-cta.pull-xs-right(href="") View all events
+    +promoTeaser(examples.articles.randomArticle(), examples.randomImage(349, 126))

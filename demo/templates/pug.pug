@@ -1,0 +1,12 @@
+extends ../../src/templates/layout/page
+
+include ../../src/templates/layout/sidebar/related_links
+
+block unwrapped_content
+    pre: code.pug!= src
+
+block sidebar_content
+    if includes.length
+        div.heading-container
+            h2.lite-heading Template References
+        +relatedLinks(includes)

@@ -1,0 +1,14 @@
+extends ../../../templates/layout/page
+
+include ../../../templates/components/navigation/atoz
+
+block subtitle
+    +atoz(examples.aToZ)
+
+block content
+    div.tab-content
+        for item in examples.aToZ
+            if item.content
+                div.tab-pane(id=`atoz_${item.letter}`, role='tabpanel', class=(item.active ? 'active' : null))
+                    h2 #{item.letter} is for&hellip;
+                    !=item.content

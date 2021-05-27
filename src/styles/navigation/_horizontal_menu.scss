@@ -1,0 +1,81 @@
+
+
+.local-header {
+  .navbar-local {
+    @include theme-element(background-color, navbar);
+    @include theme-element(border-color, page-background);
+    font-family: $font-family-sans-serif-extra;
+    padding: 0;
+    border-bottom: $border-width solid;
+    border-top: $border-width solid;
+
+    .nav {
+      margin-top: -1px;
+
+      .nav-item {
+        margin-left: 0;
+        margin-bottom: -1px;
+
+        &.active .nav-link {
+          @include theme-element(background-color, selected);
+        }
+
+        &:not(.nav-item-right) .nav-link {
+          border-right: $border-width solid;
+        }
+
+        &.nav-item-right {
+          float: right !important;
+
+          .nav-link {
+            border-left: $border-width solid;
+          }
+        }
+
+        .nav-link {
+          @include theme-element(background-color, navbar);
+          @include theme-element(border-color, page-background);
+          border-bottom: $border-width solid;
+          border-top: $border-width solid;
+          color: $white !important;
+          padding: 10px 20px;
+          font-size: 14px;
+          font-weight: normal;
+
+          @include hover-focus {
+            @include theme-element(background-color, dark-highlight);
+          }
+        }
+
+        .dropdown-toggle {
+          background: url("../images/dropdown-indicator.png") no-repeat right 5px top 50%;
+          padding: 10px 40px 10px 10px;
+
+          &::after {
+            content: none;
+          }
+        }
+
+        .dropdown-menu {
+          @include theme-element(background-color, dark-highlight);
+          margin-top: -$border-width;
+          margin-left: -$border-width;
+          border-top: 0;
+          padding: 0;
+          font-size: 14px;
+
+          a {
+            @include theme-element(border-top-color, page-background);
+            border-top: $border-width solid;
+            padding: 10px;
+            color: $white;
+
+            @include hover-focus {
+              @include theme-element(background-color, navbar);
+            }
+          }
+        }
+      }
+    }
+  }
+}

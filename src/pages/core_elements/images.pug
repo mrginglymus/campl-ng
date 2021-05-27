@@ -1,0 +1,34 @@
+extends ../../templates/layout/page
+
+
+
+block content
+    script(type='text/javascript').
+        jQuery(function ($) {
+          var id = $('#image-demo')
+          $('input[name="imagetoggle"]').change(function () {
+              id.css('max-width', $(this).data('max-width'));
+              id.find('div').removeClass().addClass('image-wrapper').addClass($(this).val());
+          });
+          $('#view-original').attr('href', id.find('img').attr('src'));
+        });
+
+    - const exampleImage = examples.randomImage(1000, 1000)
+
+    p.lead Images are centered and resized to fit their container with the correct aspect ratio
+
+    fieldset.form-group
+        - let first = null
+        for imageStyle, imageStyleName in imageStyles
+            div.form-check.form-check-inline.input-btn
+                input.form-check-input(name='imagetoggle', type='radio', id=`imagetoggle${imageStyleName}`, data-max-width=`${imageStyle.width}px`, checked=first===null, value=`image-wrapper-${imageStyleName}`)
+                label.form-check-label.btn.btn-input(for=`imagetoggle${imageStyleName}`) #{imageStyle.description} #[small #{imageStyle.width} by #{imageStyle.height}]
+            |
+            |
+            - if (first === null) { first = imageStyleName }
+
+    div#image-demo(style=`max-width: ${imageStyles[first].width}px`)
+        div.image-wrapper(class=`image-wrapper-${first}`)
+            img(src=exampleImage)
+
+    p: a.secondary-cta#view-original(href='#') View Original

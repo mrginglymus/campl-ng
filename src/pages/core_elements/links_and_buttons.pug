@@ -1,0 +1,62 @@
+extends ../../templates/layout/page
+
+block content
+    h2 Inline links
+    p
+        a(href='') consectetur adipisicing elit
+
+    h3 Links with icons
+    p
+        span.fa.fa-print &nbsp;
+        a(href='') Print icon
+    p
+        span.fa.fa-lock &nbsp;
+        a(href='') Locked document icon
+    p
+        span.fa.fa-question-circle &nbsp;
+        a(href='') Help icon
+    p
+        span.fa.fa-info-circle &nbsp;
+        a(href='') Information icon
+    p
+        span.fa.fa-file-excel-o &nbsp;
+        a(href='') Excel icon
+    p
+        span.fa.fa-file-pdf-o &nbsp;
+        a(href='') PDF icon
+    p
+        span.fa.fa-file-word-o &nbsp;
+        a(href='') Word Document icon
+
+    p External link
+    p
+        a(href='http://www.google.com') Lorem ipsum dolor sit amet
+
+    h3 Links within body text
+    p Lorem ipsum dolor sit amet, consectetur adipisicing elit, #[a(href='') #[span.campl-icon.campl-excel-icon Ut enim ad minim veniam sed do eiusmod]] tempor
+        | incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, #[a(href='http://www.google.com') Lorem ipsum dolor sit amet]
+        | ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis #[a(href='') consectetur adipisicing elit]
+        | in voluptate velit esse.
+
+    h2 Primary call to action
+    p
+        a.btn.btn-primary.btn-cta(href='#') Read more
+    p
+        a.btn.btn-primary.btn-vcard(href='') Download vCard
+
+    h2 Secondary call to action
+    p
+        a.secondary-cta(href='') View all news
+
+    h2 Primary and secondary form buttons
+    div.campl-form-actions
+        button.btn.btn-secondary(type='button') Button
+        |
+        |
+        button.btn.btn-secondary(type='reset') Reset
+        |
+        |
+        button.btn.btn-secondary Cancel
+        |
+        |
+        button.btn.btn-primary.btn-cta(type='submit') Submit

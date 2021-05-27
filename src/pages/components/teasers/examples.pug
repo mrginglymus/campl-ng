@@ -1,0 +1,46 @@
+extends ../../../templates/layout/page
+
+include ../../../templates/components/teasers/teasers
+
+block unwrapped_content
+    div.row
+        div.col-md-8.teaser-list
+            +horizontalTeaser(examples.articles.randomArticle(), examples.randomImage(256))
+            +horizontalTeaser(examples.articles.randomArticle())
+            div.teaser-row
+                div.row
+                    div.col-md-4.col-xs-12.teaser-list
+                        +verticalTeaser(examples.articles.randomArticle(), examples.randomImage(256), 'audio')
+                    div.col-md-4.col-xs-12.teaser-list
+                        +verticalTeaser(examples.articles.randomArticle(), examples.randomImage(256), 'video')
+                    div.col-md-4.col-xs-12.teaser-list
+                        +verticalTeaser(examples.articles.randomArticle(), examples.randomImage(256))
+            +horizontalTeaser(examples.articles.randomArticle(), examples.randomImage(256), 'video')
+            div.teaser.p-3
+                div.embed-responsive.embed-responsive-16by9
+                    iframe.embed-responsive-item(src=examples.videos['16by9'], frameborder=0, allowfullscreen=true)
+            div.teaser-row
+                div.row
+                    div.col-md-6.teaser-list
+                        +verticalTeaser(examples.articles.randomArticle(), examples.randomImage(256))
+                    div.col-md-6.teaser-list
+                        +verticalTeaser(examples.articles.randomArticle())
+                        +verticalTeaser(examples.articles.randomArticle())
+        div.col-md-4.teaser-list
+            +verticalTeaser(examples.articles.randomArticle(), examples.randomImage(256))
+            +verticalTeaser(examples.articles.randomArticle())
+            +newsTeaser(examples.articles.randomArticle())
+            +newsTeaser(examples.articles.randomArticle())
+
+block sidebar_content
+    div.mb-3
+        +promoTeaser(examples.articles.randomArticle(), examples.randomImage(349, 126))
+    +promoTeaser(examples.articles.randomArticle(), examples.randomImage(349, 126))
+
+    div.heading-container.mt-3
+        h2.lite-heading Upcoming Events
+
+    ul.related-links
+        li: +dateTeaser(examples.articles.randomArticle())
+        li: +dateTeaser(examples.articles.randomArticle())
+        li: +dateTeaser(examples.articles.randomArticle())

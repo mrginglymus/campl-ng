@@ -1,0 +1,15 @@
+div.global-footer
+    div.container
+        div.row
+            for column in links.globalFooterLinks
+                div.col-md-3.col-xs-12
+                    if column.header
+                        h3
+                            a(href=column.header.link)= column.header.title
+                    else
+                        img.logo.logo-sm(alt='University of Cambridge' src='/images/logo.png')
+                        p &copy; 2015 University of Cambridge
+                    ul.list-unstyled
+                        for link in column.links
+                            li
+                                a(href=link.link)= link.title

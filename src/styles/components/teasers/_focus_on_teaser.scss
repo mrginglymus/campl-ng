@@ -1,0 +1,53 @@
+.focus-on-teaser {
+  @include theme-element(background-color, page-background);
+  @include make-row();
+  margin: 0 $spacer $spacer;
+
+  .teaser-image {
+    @include make-col(5);
+
+    + .teaser-body {
+      @include make-col(7);
+    }
+  }
+
+  .teaser-body {
+    @include make-col(12);
+    padding: 15px;
+    position: relative;
+
+    &:first-child {
+      @include make-col(12);
+    }
+  }
+
+  .teaser-title {
+    font-size: 14px;
+    line-height: 20px;
+    font-family: $font-family-sans-serif-extra;
+    font-weight: 600;
+    padding: 0 $spacer;
+
+    a,
+    a:hover {
+      color: $white;
+      text-decoration: none;
+    }
+
+    a::after {
+      @include theme-element(background-color, navbar);
+      background: url("../images/link-bullet-white.png") no-repeat center center;
+      content: "";
+      color: $white;
+      width: 33px;
+      height: 33px;
+      right: 0;
+      bottom: 0;
+      position: absolute;
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+}
