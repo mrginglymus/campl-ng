@@ -1,6 +1,15 @@
 {
   "themes":
   {
+    "pace": {
+      "dark-highlight":   "#0B2128",
+      "page-background":  "#133844",
+      "navbar":           "#1C5264",
+      "light-highlight":  "#216278",
+      "selected":         "#216278",
+      "pale-tone":        "#EBEDFB",
+      "pale-table-bg":    "#EBEDFB"
+    },
     "blue": {
       "dark-highlight":   "#002e55",
       "page-background":  "#003e74",
